@@ -1,0 +1,794 @@
+https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Coding style¶
+Please follow these coding standards when writing code for inclusion in Django.
+
+Pre-commit checks¶
+pre-commit is a framework for managing pre-commit
+hooks. These hooks help to identify simple issues before committing code for
+review. By checking for these issues before code review it allows the reviewer
+to focus on the change itself, and it can also help to reduce the number of CI
+runs.
+To use the tool, first install pre-commit and then the git hooks:
+
+
+/
+
+
+
+
+
+
+...\> py -m pip install pre-commit
+...\> pre-commit install
+
+
+
+On the first commit pre-commit will install the hooks, these are
+installed in their own environments and will take a short while to
+install on the first run. Subsequent checks will be significantly faster.
+If an error is found an appropriate error message will be displayed.
+If the error was with black or isort then the tool will go ahead and
+fix them for you. Review the changes and re-stage for commit if you are happy
+with them.
+
+
+Python style¶
+
+All files should be formatted using the black auto-formatter. This
+will be run by pre-commit if that is configured.
+The project repository includes an .editorconfig file. We recommend using
+a text editor with EditorConfig support to avoid indentation and
+whitespace issues. The Python files use 4 spaces for indentation and the HTML
+files use 2 spaces.
+Unless otherwise specified, follow PEP 8.
+Use flake8 to check for problems in this area. Note that our
+.flake8 file excludes some errors that we don’t consider as gross
+violations. Remember that PEP 8 is only a guide, so respect the style of
+the surrounding code as a primary goal.
+An exception to PEP 8 is our rules on line lengths. We allow up to 88
+characters in code, as this is the line length used by black.
+Documentation, comments, and docstrings should be wrapped at 79 characters.
+These limits are checked when flake8 is run.
+
+String variable interpolation may use
+%-formatting, f-strings, or str.format() as appropriate, with the goal of
+maximizing code readability.
+Final judgments of readability are left to the Merger’s discretion. As a
+guide, f-strings should use only plain variable and property access, with
+prior local variable assignment for more complex cases:
+
+f-strings should not be used for any string that may require translation,
+including error and logging messages. In general format() is more
+verbose, so the other formatting methods are preferred.
+Don’t waste time doing unrelated refactoring of existing code to adjust the
+formatting method.
+
+Avoid use of “we” in comments, e.g. “Loop over” rather than “We loop over”.
+Use underscores, not camelCase, for variable, function and method names
+(i.e. poll.get_unique_voters(), not poll.getUniqueVoters()).
+Use InitialCaps for class names (or for factory functions that
+return classes).
+In docstrings, follow the style of existing docstrings and PEP 257.
+In tests, use assertRaisesMessage() and
+assertWarnsMessage() instead of
+assertRaises() and
+assertWarns() so you can check the exception or
+warning message. Use assertRaisesRegex() and
+assertWarnsRegex() only if you need regular
+expression matching.
+Use assertIs(…, True/False) for testing
+boolean values, rather than assertTrue() and
+assertFalse(), so you can check the actual boolean
+value, not the truthiness of the expression.
+
+In test docstrings, state the expected behavior that each test demonstrates.
+Don’t include preambles such as “Tests that” or “Ensures that”.
+Reserve ticket references for obscure issues where the ticket has additional
+details that can’t be easily described in docstrings or comments. Include the
+ticket number at the end of a sentence like this:
+
+
+Where applicable, use unpacking generalizations compliant with PEP 448,
+such as merging mappings ({**x, **y}) or sequences ([*a, *b]). This
+improves performance, readability, and maintainability while reducing errors.
+
+
+
+Imports¶
+
+Use isort to automate import sorting using the guidelines below.
+Quick start:
+
+
+/
+
+
+
+
+
+
+...\> py -m pip install "isort >= 7.0.0"
+...\> isort .
+
+
+
+This runs isort recursively from your current directory, modifying any
+files that don’t conform to the guidelines. If you need to have imports out
+of order (to avoid a circular import, for example) use a comment like this:
+
+
+Put imports in these groups: future, standard library, third-party libraries,
+other Django components, local Django component, try/excepts. Sort lines in
+each group alphabetically by the full module name. Place all
+import module statements before from module import objects in each
+section. Use absolute imports for other Django components and a one-dot
+relative import (from .foo import Bar) for local components. Avoid
+multi-dot relative imports.
+On each line, alphabetize the items with the upper case items grouped before
+the lowercase items.
+Break long lines using parentheses and indent continuation lines by 4 spaces.
+Include a trailing comma after the last import and put the closing
+parenthesis on its own line.
+Use a single blank line between the last import and any module level code,
+and use two blank lines above the first function or class.
+For example (comments are for explanatory purposes only):
+
+
+
+
+
+Use convenience imports whenever available. For example, do this
+
+instead of:
+
+
+
+
+
+Template style¶
+Follow the below rules in Django template code.
+
+{% extends %} should be the first non-comment line.
+Do this:
+{% extends "base.html" %}
+
+{% block content %}
+  <h1 class="font-semibold text-xl">
+    {{ pages.title }}
+  </h1>
+{% endblock content %}
+
+
+Or this:
+{# This is a comment #}
+{% extends "base.html" %}
+
+{% block content %}
+  <h1 class="font-semibold text-xl">
+    {{ pages.title }}
+  </h1>
+{% endblock content %}
+
+
+Don’t do this:
+{% load i18n %}
+{% extends "base.html" %}
+
+{% block content %}
+  <h1 class="font-semibold text-xl">
+    {{ pages.title }}
+  </h1>
+{% endblock content %}
+
+
+
+Put exactly one space between {{, variable contents, and }}.
+Do this:
+{{ user }}
+
+
+Don’t do this:
+{{user}}
+
+
+
+In {% load ... %}, list libraries in alphabetical order.
+Do this:
+{% load i18n l10 tz %}
+
+
+Don’t do this:
+{% load l10 i18n tz %}
+
+
+
+Put exactly one space between {%, tag contents, and %}.
+Do this:
+{% load humanize %}
+
+
+Don’t do this:
+{%load humanize%}
+
+
+
+Put the {% block %} tag name in the {% endblock %} tag if it is not
+on the same line.
+Do this:
+{% block header %}
+
+  Code goes here
+
+{% endblock header %}
+
+
+Don’t do this:
+{% block header %}
+
+  Code goes here
+
+{% endblock %}
+
+
+
+Inside curly braces, separate tokens by single spaces, except for around the
+. for attribute access and the | for a filter.
+Do this:
+{% if user.name|lower == "admin" %}
+
+
+Don’t do this:
+{% if user . name | lower  ==  "admin" %}
+
+{{ user.name | upper }}
+
+
+
+Within a template using {% extends %}, avoid indenting top-level
+{% block %} tags.
+Do this:
+{% extends "base.html" %}
+
+{% block content %}
+
+
+Don’t do this:
+{% extends "base.html" %}
+
+  {% block content %}
+  ...
+
+
+
+
+
+
+View style¶
+
+In Django views, the first parameter in a view function should be called
+request.
+Do this:
+
+Don’t do this:
+
+
+
+
+
+Model style¶
+
+Field names should be all lowercase, using underscores instead of
+camelCase.
+Do this:
+
+Don’t do this:
+
+
+The class Meta should appear after the fields are defined, with
+a single blank line separating the fields and the class definition.
+Do this:
+
+Don’t do this:
+
+
+The order of model inner classes and standard methods should be as
+follows (noting that these are not all required):
+
+All database fields
+Custom manager attributes
+class Meta
+def __str__() and other Python magic methods
+def save()
+def get_absolute_url()
+Any custom methods
+
+
+If choices is defined for a given model field, define each choice as a
+mapping, with an all-uppercase name as a class attribute on the model.
+Example:
+
+Alternatively, consider using Enumeration types:
+
+
+
+
+
+Use of django.conf.settings¶
+Modules should not in general use settings stored in django.conf.settings
+at the top level (i.e. evaluated when the module is imported). The explanation
+for this is as follows:
+Manual configuration of settings (i.e. not relying on the
+DJANGO_SETTINGS_MODULE environment variable) is allowed and possible
+as follows:
+
+However, if any setting is accessed before the settings.configure line,
+this will not work. (Internally, settings is a LazyObject which
+configures itself automatically when the settings are accessed if it has not
+already been configured).
+So, if there is a module containing some code as follows:
+
+…then importing this module will cause the settings object to be configured.
+That means that the ability for third parties to import the module at the top
+level is incompatible with the ability to configure the settings object
+manually, or makes it very difficult in some circumstances.
+Instead of the above code, a level of laziness or indirection must be used,
+such as django.utils.functional.LazyObject,
+django.utils.functional.lazy() or lambda.
+
+
+Miscellaneous¶
+
+Mark all strings for internationalization; see the i18n
+documentation for details.
+Remove import statements that are no longer used when you change code.
+flake8 will identify these imports for you. If an unused import needs
+to remain for backwards-compatibility, mark the end of with # NOQA to
+silence the flake8 warning.
+Systematically remove all trailing whitespaces from your code as those
+add unnecessary bytes, add visual clutter to the patches and can also
+occasionally cause unnecessary merge conflicts. Some IDE’s can be
+configured to automatically remove them and most VCS tools can be set to
+highlight them in diff outputs.
+Please don’t put your name in the code you contribute. Our policy is to
+keep contributors’ names in the AUTHORS file distributed with Django
+– not scattered throughout the codebase itself. Feel free to include a
+change to the AUTHORS file in your patch if you make more than a
+single trivial change.
+
+
+
+JavaScript style¶
+For details about the JavaScript code style used by Django, see
+JavaScript code.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Coding style¶
+Please follow these coding standards when writing code for inclusion in Django.
+
+Pre-commit checks¶
+pre-commit is a framework for managing pre-commit
+hooks. These hooks help to identify simple issues before committing code for
+review. By checking for these issues before code review it allows the reviewer
+to focus on the change itself, and it can also help to reduce the number of CI
+runs.
+To use the tool, first install pre-commit and then the git hooks:
+
+
+/
+
+
+
+
+
+
+...\> py -m pip install pre-commit
+...\> pre-commit install
+
+
+
+On the first commit pre-commit will install the hooks, these are
+installed in their own environments and will take a short while to
+install on the first run. Subsequent checks will be significantly faster.
+If an error is found an appropriate error message will be displayed.
+If the error was with black or isort then the tool will go ahead and
+fix them for you. Review the changes and re-stage for commit if you are happy
+with them.
+
+
+Python style¶
+
+All files should be formatted using the black auto-formatter. This
+will be run by pre-commit if that is configured.
+The project repository includes an .editorconfig file. We recommend using
+a text editor with EditorConfig support to avoid indentation and
+whitespace issues. The Python files use 4 spaces for indentation and the HTML
+files use 2 spaces.
+Unless otherwise specified, follow PEP 8.
+Use flake8 to check for problems in this area. Note that our
+.flake8 file excludes some errors that we don’t consider as gross
+violations. Remember that PEP 8 is only a guide, so respect the style of
+the surrounding code as a primary goal.
+An exception to PEP 8 is our rules on line lengths. We allow up to 88
+characters in code, as this is the line length used by black.
+Documentation, comments, and docstrings should be wrapped at 79 characters.
+These limits are checked when flake8 is run.
+
+String variable interpolation may use
+%-formatting, f-strings, or str.format() as appropriate, with the goal of
+maximizing code readability.
+Final judgments of readability are left to the Merger’s discretion. As a
+guide, f-strings should use only plain variable and property access, with
+prior local variable assignment for more complex cases:
+
+f-strings should not be used for any string that may require translation,
+including error and logging messages. In general format() is more
+verbose, so the other formatting methods are preferred.
+Don’t waste time doing unrelated refactoring of existing code to adjust the
+formatting method.
+
+Avoid use of “we” in comments, e.g. “Loop over” rather than “We loop over”.
+Use underscores, not camelCase, for variable, function and method names
+(i.e. poll.get_unique_voters(), not poll.getUniqueVoters()).
+Use InitialCaps for class names (or for factory functions that
+return classes).
+In docstrings, follow the style of existing docstrings and PEP 257.
+In tests, use assertRaisesMessage() and
+assertWarnsMessage() instead of
+assertRaises() and
+assertWarns() so you can check the exception or
+warning message. Use assertRaisesRegex() and
+assertWarnsRegex() only if you need regular
+expression matching.
+Use assertIs(…, True/False) for testing
+boolean values, rather than assertTrue() and
+assertFalse(), so you can check the actual boolean
+value, not the truthiness of the expression.
+
+In test docstrings, state the expected behavior that each test demonstrates.
+Don’t include preambles such as “Tests that” or “Ensures that”.
+Reserve ticket references for obscure issues where the ticket has additional
+details that can’t be easily described in docstrings or comments. Include the
+ticket number at the end of a sentence like this:
+
+
+Where applicable, use unpacking generalizations compliant with PEP 448,
+such as merging mappings ({**x, **y}) or sequences ([*a, *b]). This
+improves performance, readability, and maintainability while reducing errors.
+
+
+
+Imports¶
+
+Use isort to automate import sorting using the guidelines below.
+Quick start:
+
+
+/
+
+
+
+
+
+
+...\> py -m pip install "isort >= 7.0.0"
+...\> isort .
+
+
+
+This runs isort recursively from your current directory, modifying any
+files that don’t conform to the guidelines. If you need to have imports out
+of order (to avoid a circular import, for example) use a comment like this:
+
+
+Put imports in these groups: future, standard library, third-party libraries,
+other Django components, local Django component, try/excepts. Sort lines in
+each group alphabetically by the full module name. Place all
+import module statements before from module import objects in each
+section. Use absolute imports for other Django components and a one-dot
+relative import (from .foo import Bar) for local components. Avoid
+multi-dot relative imports.
+On each line, alphabetize the items with the upper case items grouped before
+the lowercase items.
+Break long lines using parentheses and indent continuation lines by 4 spaces.
+Include a trailing comma after the last import and put the closing
+parenthesis on its own line.
+Use a single blank line between the last import and any module level code,
+and use two blank lines above the first function or class.
+For example (comments are for explanatory purposes only):
+
+
+
+
+
+Use convenience imports whenever available. For example, do this
+
+instead of:
+
+
+
+
+
+Template style¶
+Follow the below rules in Django template code.
+
+{% extends %} should be the first non-comment line.
+Do this:
+{% extends "base.html" %}
+
+{% block content %}
+  <h1 class="font-semibold text-xl">
+    {{ pages.title }}
+  </h1>
+{% endblock content %}
+
+
+Or this:
+{# This is a comment #}
+{% extends "base.html" %}
+
+{% block content %}
+  <h1 class="font-semibold text-xl">
+    {{ pages.title }}
+  </h1>
+{% endblock content %}
+
+
+Don’t do this:
+{% load i18n %}
+{% extends "base.html" %}
+
+{% block content %}
+  <h1 class="font-semibold text-xl">
+    {{ pages.title }}
+  </h1>
+{% endblock content %}
+
+
+
+Put exactly one space between {{, variable contents, and }}.
+Do this:
+{{ user }}
+
+
+Don’t do this:
+{{user}}
+
+
+
+In {% load ... %}, list libraries in alphabetical order.
+Do this:
+{% load i18n l10 tz %}
+
+
+Don’t do this:
+{% load l10 i18n tz %}
+
+
+
+Put exactly one space between {%, tag contents, and %}.
+Do this:
+{% load humanize %}
+
+
+Don’t do this:
+{%load humanize%}
+
+
+
+Put the {% block %} tag name in the {% endblock %} tag if it is not
+on the same line.
+Do this:
+{% block header %}
+
+  Code goes here
+
+{% endblock header %}
+
+
+Don’t do this:
+{% block header %}
+
+  Code goes here
+
+{% endblock %}
+
+
+
+Inside curly braces, separate tokens by single spaces, except for around the
+. for attribute access and the | for a filter.
+Do this:
+{% if user.name|lower == "admin" %}
+
+
+Don’t do this:
+{% if user . name | lower  ==  "admin" %}
+
+{{ user.name | upper }}
+
+
+
+Within a template using {% extends %}, avoid indenting top-level
+{% block %} tags.
+Do this:
+{% extends "base.html" %}
+
+{% block content %}
+
+
+Don’t do this:
+{% extends "base.html" %}
+
+  {% block content %}
+  ...
+
+
+
+
+
+
+View style¶
+
+In Django views, the first parameter in a view function should be called
+request.
+Do this:
+
+Don’t do this:
+
+
+
+
+
+Model style¶
+
+Field names should be all lowercase, using underscores instead of
+camelCase.
+Do this:
+
+Don’t do this:
+
+
+The class Meta should appear after the fields are defined, with
+a single blank line separating the fields and the class definition.
+Do this:
+
+Don’t do this:
+
+
+The order of model inner classes and standard methods should be as
+follows (noting that these are not all required):
+
+All database fields
+Custom manager attributes
+class Meta
+def __str__() and other Python magic methods
+def save()
+def get_absolute_url()
+Any custom methods
+
+
+If choices is defined for a given model field, define each choice as a
+mapping, with an all-uppercase name as a class attribute on the model.
+Example:
+
+Alternatively, consider using Enumeration types:
+
+
+
+
+
+Use of django.conf.settings¶
+Modules should not in general use settings stored in django.conf.settings
+at the top level (i.e. evaluated when the module is imported). The explanation
+for this is as follows:
+Manual configuration of settings (i.e. not relying on the
+DJANGO_SETTINGS_MODULE environment variable) is allowed and possible
+as follows:
+
+However, if any setting is accessed before the settings.configure line,
+this will not work. (Internally, settings is a LazyObject which
+configures itself automatically when the settings are accessed if it has not
+already been configured).
+So, if there is a module containing some code as follows:
+
+…then importing this module will cause the settings object to be configured.
+That means that the ability for third parties to import the module at the top
+level is incompatible with the ability to configure the settings object
+manually, or makes it very difficult in some circumstances.
+Instead of the above code, a level of laziness or indirection must be used,
+such as django.utils.functional.LazyObject,
+django.utils.functional.lazy() or lambda.
+
+
+Miscellaneous¶
+
+Mark all strings for internationalization; see the i18n
+documentation for details.
+Remove import statements that are no longer used when you change code.
+flake8 will identify these imports for you. If an unused import needs
+to remain for backwards-compatibility, mark the end of with # NOQA to
+silence the flake8 warning.
+Systematically remove all trailing whitespaces from your code as those
+add unnecessary bytes, add visual clutter to the patches and can also
+occasionally cause unnecessary merge conflicts. Some IDE’s can be
+configured to automatically remove them and most VCS tools can be set to
+highlight them in diff outputs.
+Please don’t put your name in the code you contribute. Our policy is to
+keep contributors’ names in the AUTHORS file distributed with Django
+– not scattered throughout the codebase itself. Feel free to include a
+change to the AUTHORS file in your patch if you make more than a
+single trivial change.
+
+
+
+JavaScript style¶
+For details about the JavaScript code style used by Django, see
+JavaScript code.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

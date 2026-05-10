@@ -1,0 +1,174 @@
+https://docs.djangoproject.com/en/3.1/topics/db/examples/many_to_one/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Many-to-one relationships¶
+To define a many-to-one relationship, use ForeignKey:
+
+What follows are examples of operations that can be performed using the Python
+API facilities.
+Create a few Reporters:
+
+Create an Article:
+
+Note that you must save an object before it can be assigned to a foreign key
+relationship. For example, creating an Article with unsaved Reporter
+raises ValueError:
+
+Article objects have access to their related Reporter objects:
+
+Create an Article via the Reporter object:
+
+Create a new article:
+
+Add the same article to a different article set - check that it moves:
+
+Adding an object of the wrong type raises TypeError:
+
+Note that in the last example the article has moved from John to Paul.
+Related managers support field lookups as well.
+The API automatically follows relationships as far as you need.
+Use double underscores to separate relationships.
+This works as many levels deep as you want. There’s no limit. For example:
+
+Exact match is implied here:
+
+Query twice over the related field. This translates to an AND condition in the
+WHERE clause:
+
+For the related lookup you can supply a primary key value or pass the related
+object explicitly:
+
+You can also use a queryset instead of a literal list of instances:
+
+Querying in the opposite direction:
+
+Counting in the opposite direction works in conjunction with distinct():
+
+Queries can go round in circles:
+
+If you delete a reporter, their articles will be deleted (assuming that the
+ForeignKey was defined with django.db.models.ForeignKey.on_delete set to
+CASCADE, which is the default):
+
+You can delete using a JOIN in the query:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Many-to-one relationships¶
+To define a many-to-one relationship, use ForeignKey:
+
+What follows are examples of operations that can be performed using the Python
+API facilities.
+Create a few Reporters:
+
+Create an Article:
+
+Note that you must save an object before it can be assigned to a foreign key
+relationship. For example, creating an Article with unsaved Reporter
+raises ValueError:
+
+Article objects have access to their related Reporter objects:
+
+Create an Article via the Reporter object:
+
+Create a new article:
+
+Add the same article to a different article set - check that it moves:
+
+Adding an object of the wrong type raises TypeError:
+
+Note that in the last example the article has moved from John to Paul.
+Related managers support field lookups as well.
+The API automatically follows relationships as far as you need.
+Use double underscores to separate relationships.
+This works as many levels deep as you want. There’s no limit. For example:
+
+Exact match is implied here:
+
+Query twice over the related field. This translates to an AND condition in the
+WHERE clause:
+
+For the related lookup you can supply a primary key value or pass the related
+object explicitly:
+
+You can also use a queryset instead of a literal list of instances:
+
+Querying in the opposite direction:
+
+Counting in the opposite direction works in conjunction with distinct():
+
+Queries can go round in circles:
+
+If you delete a reporter, their articles will be deleted (assuming that the
+ForeignKey was defined with django.db.models.ForeignKey.on_delete set to
+CASCADE, which is the default):
+
+You can delete using a JOIN in the query:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

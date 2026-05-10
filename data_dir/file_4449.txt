@@ -1,0 +1,84 @@
+https://docs.djangoproject.com/en/2.0/howto/jython/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Django on Jython¶
+Jython is an implementation of Python that runs on the Java platform (JVM).
+If you want to use Jython (which supports only Python 2.7 at the time of this
+writing), you must use Django 1.11.x (the last series to support Python 2).
+Jython support may be readded to Django if a Python 3 compatible Jython is
+released.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Django on Jython¶
+Jython is an implementation of Python that runs on the Java platform (JVM).
+If you want to use Jython (which supports only Python 2.7 at the time of this
+writing), you must use Django 1.11.x (the last series to support Python 2).
+Jython support may be readded to Django if a Python 3 compatible Jython is
+released.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

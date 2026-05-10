@@ -1,0 +1,510 @@
+https://docs.djangoproject.com/en/1.11/ref/contrib/gis/geoip/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Geolocation with GeoIP¶
+
+Deprecated since version 1.9: This module is deprecated in favor of django.contrib.gis.geoip2, which supports IPv6 and the GeoLite2 database
+format.
+
+The GeoIP object is a ctypes wrapper for the
+MaxMind GeoIP C API. [1]
+In order to perform IP-based geolocation, the GeoIP object requires
+the GeoIP C library and either the GeoIP Country or City
+datasets in binary format (the CSV files will not work!).  These datasets may be
+downloaded from MaxMind.  Grab the GeoLiteCountry/GeoIP.dat.gz and
+GeoLiteCity.dat.gz files and unzip them in a directory corresponding to what
+you set GEOIP_PATH with in your settings.  See the example and
+reference below for more details.
+
+Example¶
+Assuming you have the GeoIP C library installed, here is an example of its
+usage:
+
+
+
+GeoIP Settings¶
+
+GEOIP_PATH¶
+A string specifying the directory where the GeoIP data files are
+located.  This setting is required unless manually specified
+with path keyword when initializing the GeoIP object.
+
+
+GEOIP_LIBRARY_PATH¶
+A string specifying the location of the GeoIP C library.  Typically,
+this setting is only used if the GeoIP C library is in a non-standard
+location (e.g., /home/sue/lib/libGeoIP.so).
+
+
+GEOIP_COUNTRY¶
+The basename to use for the GeoIP country data file.
+Defaults to 'GeoIP.dat'.
+
+
+GEOIP_CITY¶
+The basename to use for the GeoIP city data file.
+Defaults to 'GeoLiteCity.dat'.
+
+
+
+GeoIP API¶
+
+
+class GeoIP(path=None, cache=0, country=None, city=None)[source]¶
+
+The GeoIP object does not require any parameters to use the default
+settings.  However, at the very least the GEOIP_PATH setting
+should be set with the path of the location of your GeoIP data sets.  The
+following initialization keywords may be used to customize any of the
+defaults.
+
+
+
+
+
+
+Keyword Arguments
+Description
+
+
+
+path
+Base directory to where GeoIP data is located or the
+full path to where the city or country data files
+(.dat) are located.  Assumes that both the city and
+country data sets are located in this directory;
+overrides the GEOIP_PATH settings attribute.
+
+cache
+The cache settings when opening up the GeoIP datasets,
+and may be an integer in (0, 1, 2, 4) corresponding to
+the GEOIP_STANDARD, GEOIP_MEMORY_CACHE,
+GEOIP_CHECK_CACHE, and GEOIP_INDEX_CACHE
+GeoIPOptions C API settings, respectively.
+Defaults to 0 (GEOIP_STANDARD).
+
+country
+The name of the GeoIP country data file.  Defaults
+to GeoIP.dat.  Setting this keyword overrides the
+GEOIP_COUNTRY settings attribute.
+
+city
+The name of the GeoIP city data file.  Defaults to
+GeoLiteCity.dat.  Setting this keyword overrides
+the GEOIP_CITY settings attribute.
+
+
+
+
+
+GeoIP Methods¶
+
+Querying¶
+All the following querying routines may take either a string IP address
+or a fully qualified domain name (FQDN).  For example, both
+'205.186.163.125' and 'djangoproject.com' would be valid query
+parameters.
+
+
+GeoIP.city(query)[source]¶
+
+Returns a dictionary of city information for the given query.  Some
+of the values in the dictionary may be undefined (None).
+
+
+GeoIP.country(query)[source]¶
+
+Returns a dictionary with the country code and country for the given
+query.
+
+
+GeoIP.country_code(query)[source]¶
+
+Returns only the country code corresponding to the query.
+
+
+GeoIP.country_name(query)[source]¶
+
+Returns only the country name corresponding to the query.
+
+
+Coordinate Retrieval¶
+
+
+GeoIP.coords(query)[source]¶
+
+Returns a coordinate tuple of (longitude, latitude).
+
+
+GeoIP.lon_lat(query)[source]¶
+
+Returns a coordinate tuple of (longitude, latitude).
+
+
+GeoIP.lat_lon(query)[source]¶
+
+Returns a coordinate tuple of (latitude, longitude),
+
+
+GeoIP.geos(query)[source]¶
+
+Returns a django.contrib.gis.geos.Point object corresponding to the query.
+
+
+Database Information¶
+
+
+GeoIP.country_info¶
+
+This property returns information about the GeoIP country database.
+
+
+GeoIP.city_info¶
+
+This property returns information about the GeoIP city database.
+
+
+GeoIP.info¶
+
+This property returns information about all GeoIP databases (both city
+and country), and the version of the GeoIP C library (if supported).
+
+
+GeoIP-Python API compatibility methods¶
+These methods exist to ease compatibility with any code using MaxMind’s
+existing Python API.
+
+
+classmethod GeoIP.open(path, cache)[source]¶
+
+This classmethod instantiates the GeoIP object from the given database path
+and given cache setting.
+
+
+GeoIP.region_by_addr(query)¶
+
+
+
+GeoIP.region_by_name(query)¶
+
+
+
+GeoIP.record_by_addr(query)¶
+
+
+
+GeoIP.record_by_name(query)¶
+
+
+
+GeoIP.country_code_by_addr(query)¶
+
+
+
+GeoIP.country_code_by_name(query)¶
+
+
+
+GeoIP.country_name_by_addr(query)¶
+
+
+
+GeoIP.country_name_by_name(query)¶
+
+
+
+
+
+[1]GeoIP(R) is a registered trademark of MaxMind, LLC of Boston, Massachusetts.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Geolocation with GeoIP¶
+
+Deprecated since version 1.9: This module is deprecated in favor of django.contrib.gis.geoip2, which supports IPv6 and the GeoLite2 database
+format.
+
+The GeoIP object is a ctypes wrapper for the
+MaxMind GeoIP C API. [1]
+In order to perform IP-based geolocation, the GeoIP object requires
+the GeoIP C library and either the GeoIP Country or City
+datasets in binary format (the CSV files will not work!).  These datasets may be
+downloaded from MaxMind.  Grab the GeoLiteCountry/GeoIP.dat.gz and
+GeoLiteCity.dat.gz files and unzip them in a directory corresponding to what
+you set GEOIP_PATH with in your settings.  See the example and
+reference below for more details.
+
+Example¶
+Assuming you have the GeoIP C library installed, here is an example of its
+usage:
+
+
+
+GeoIP Settings¶
+
+GEOIP_PATH¶
+A string specifying the directory where the GeoIP data files are
+located.  This setting is required unless manually specified
+with path keyword when initializing the GeoIP object.
+
+
+GEOIP_LIBRARY_PATH¶
+A string specifying the location of the GeoIP C library.  Typically,
+this setting is only used if the GeoIP C library is in a non-standard
+location (e.g., /home/sue/lib/libGeoIP.so).
+
+
+GEOIP_COUNTRY¶
+The basename to use for the GeoIP country data file.
+Defaults to 'GeoIP.dat'.
+
+
+GEOIP_CITY¶
+The basename to use for the GeoIP city data file.
+Defaults to 'GeoLiteCity.dat'.
+
+
+
+GeoIP API¶
+
+
+class GeoIP(path=None, cache=0, country=None, city=None)[source]¶
+
+The GeoIP object does not require any parameters to use the default
+settings.  However, at the very least the GEOIP_PATH setting
+should be set with the path of the location of your GeoIP data sets.  The
+following initialization keywords may be used to customize any of the
+defaults.
+
+
+
+
+
+
+Keyword Arguments
+Description
+
+
+
+path
+Base directory to where GeoIP data is located or the
+full path to where the city or country data files
+(.dat) are located.  Assumes that both the city and
+country data sets are located in this directory;
+overrides the GEOIP_PATH settings attribute.
+
+cache
+The cache settings when opening up the GeoIP datasets,
+and may be an integer in (0, 1, 2, 4) corresponding to
+the GEOIP_STANDARD, GEOIP_MEMORY_CACHE,
+GEOIP_CHECK_CACHE, and GEOIP_INDEX_CACHE
+GeoIPOptions C API settings, respectively.
+Defaults to 0 (GEOIP_STANDARD).
+
+country
+The name of the GeoIP country data file.  Defaults
+to GeoIP.dat.  Setting this keyword overrides the
+GEOIP_COUNTRY settings attribute.
+
+city
+The name of the GeoIP city data file.  Defaults to
+GeoLiteCity.dat.  Setting this keyword overrides
+the GEOIP_CITY settings attribute.
+
+
+
+
+
+GeoIP Methods¶
+
+Querying¶
+All the following querying routines may take either a string IP address
+or a fully qualified domain name (FQDN).  For example, both
+'205.186.163.125' and 'djangoproject.com' would be valid query
+parameters.
+
+
+GeoIP.city(query)[source]¶
+
+Returns a dictionary of city information for the given query.  Some
+of the values in the dictionary may be undefined (None).
+
+
+GeoIP.country(query)[source]¶
+
+Returns a dictionary with the country code and country for the given
+query.
+
+
+GeoIP.country_code(query)[source]¶
+
+Returns only the country code corresponding to the query.
+
+
+GeoIP.country_name(query)[source]¶
+
+Returns only the country name corresponding to the query.
+
+
+Coordinate Retrieval¶
+
+
+GeoIP.coords(query)[source]¶
+
+Returns a coordinate tuple of (longitude, latitude).
+
+
+GeoIP.lon_lat(query)[source]¶
+
+Returns a coordinate tuple of (longitude, latitude).
+
+
+GeoIP.lat_lon(query)[source]¶
+
+Returns a coordinate tuple of (latitude, longitude),
+
+
+GeoIP.geos(query)[source]¶
+
+Returns a django.contrib.gis.geos.Point object corresponding to the query.
+
+
+Database Information¶
+
+
+GeoIP.country_info¶
+
+This property returns information about the GeoIP country database.
+
+
+GeoIP.city_info¶
+
+This property returns information about the GeoIP city database.
+
+
+GeoIP.info¶
+
+This property returns information about all GeoIP databases (both city
+and country), and the version of the GeoIP C library (if supported).
+
+
+GeoIP-Python API compatibility methods¶
+These methods exist to ease compatibility with any code using MaxMind’s
+existing Python API.
+
+
+classmethod GeoIP.open(path, cache)[source]¶
+
+This classmethod instantiates the GeoIP object from the given database path
+and given cache setting.
+
+
+GeoIP.region_by_addr(query)¶
+
+
+
+GeoIP.region_by_name(query)¶
+
+
+
+GeoIP.record_by_addr(query)¶
+
+
+
+GeoIP.record_by_name(query)¶
+
+
+
+GeoIP.country_code_by_addr(query)¶
+
+
+
+GeoIP.country_code_by_name(query)¶
+
+
+
+GeoIP.country_name_by_addr(query)¶
+
+
+
+GeoIP.country_name_by_name(query)¶
+
+
+
+
+
+[1]GeoIP(R) is a registered trademark of MaxMind, LLC of Boston, Massachusetts.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

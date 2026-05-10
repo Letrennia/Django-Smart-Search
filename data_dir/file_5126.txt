@@ -1,0 +1,270 @@
+https://docs.djangoproject.com/en/1.8/ref/models/database-functions/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Database Functions¶
+
+New in Django 1.8. 
+The classes documented below provide a way for users to use functions provided
+by the underlying database as annotations, aggregations, or filters in Django.
+Functions are also expressions, so they can be used and
+combined with other expressions like aggregate functions.
+We’ll be using the following model in examples of each function:
+
+We don’t usually recommend allowing null=True for CharField since this
+allows the field to have two “empty values”, but it’s important for the
+Coalesce example below.
+
+Coalesce¶
+
+
+class Coalesce(*expressions, **extra)[source]¶
+
+Accepts a list of at least two field names or expressions and returns the
+first non-null value (note that an empty string is not considered a null
+value). Each argument must be of a similar type, so mixing text and numbers
+will result in a database error.
+Usage examples:
+
+
+Warning
+A Python value passed to Coalesce on MySQL may be converted to an
+incorrect type unless explicitly cast to the correct database type:
+>>> from django.db.models.expressions import RawSQL
+>>> from django.utils import timezone
+>>> now = timezone.now()
+>>> now_sql = RawSQL("cast(%s as datetime)", (now,))
+>>> Coalesce('updated', now_sql)
+
+
+
+
+
+Concat¶
+
+
+class Concat(*expressions, **extra)[source]¶
+
+Accepts a list of at least two text fields or expressions and returns the
+concatenated text. Each argument must be of a text or char type. If you want
+to concatenate a TextField() with a CharField(), then be sure to tell
+Django that the output_field should be a TextField(). This is also
+required when concatenating a Value as in the example below.
+This function will never have a null result. On backends where a null argument
+results in the entire expression being null, Django will ensure that each null
+part is converted to an empty string first.
+Usage example:
+
+
+
+Length¶
+
+
+class Length(expression, **extra)[source]¶
+
+Accepts a single text field or expression and returns the number of characters
+the value has. If the expression is null, then the length will also be null.
+Usage example:
+
+
+
+Lower¶
+
+
+class Lower(expression, **extra)[source]¶
+
+Accepts a single text field or expression and returns the lowercase
+representation.
+Usage example:
+
+
+
+Substr¶
+
+
+class Substr(expression, pos, length=None, **extra)[source]¶
+
+Returns a substring of length length from the field or expression starting
+at position pos. The position is 1-indexed, so the position must be greater
+than 0. If length is None, then the rest of the string will be returned.
+Usage example:
+
+
+
+Upper¶
+
+
+class Upper(expression, **extra)[source]¶
+
+Accepts a single text field or expression and returns the uppercase
+representation.
+Usage example:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Database Functions¶
+
+New in Django 1.8. 
+The classes documented below provide a way for users to use functions provided
+by the underlying database as annotations, aggregations, or filters in Django.
+Functions are also expressions, so they can be used and
+combined with other expressions like aggregate functions.
+We’ll be using the following model in examples of each function:
+
+We don’t usually recommend allowing null=True for CharField since this
+allows the field to have two “empty values”, but it’s important for the
+Coalesce example below.
+
+Coalesce¶
+
+
+class Coalesce(*expressions, **extra)[source]¶
+
+Accepts a list of at least two field names or expressions and returns the
+first non-null value (note that an empty string is not considered a null
+value). Each argument must be of a similar type, so mixing text and numbers
+will result in a database error.
+Usage examples:
+
+
+Warning
+A Python value passed to Coalesce on MySQL may be converted to an
+incorrect type unless explicitly cast to the correct database type:
+>>> from django.db.models.expressions import RawSQL
+>>> from django.utils import timezone
+>>> now = timezone.now()
+>>> now_sql = RawSQL("cast(%s as datetime)", (now,))
+>>> Coalesce('updated', now_sql)
+
+
+
+
+
+Concat¶
+
+
+class Concat(*expressions, **extra)[source]¶
+
+Accepts a list of at least two text fields or expressions and returns the
+concatenated text. Each argument must be of a text or char type. If you want
+to concatenate a TextField() with a CharField(), then be sure to tell
+Django that the output_field should be a TextField(). This is also
+required when concatenating a Value as in the example below.
+This function will never have a null result. On backends where a null argument
+results in the entire expression being null, Django will ensure that each null
+part is converted to an empty string first.
+Usage example:
+
+
+
+Length¶
+
+
+class Length(expression, **extra)[source]¶
+
+Accepts a single text field or expression and returns the number of characters
+the value has. If the expression is null, then the length will also be null.
+Usage example:
+
+
+
+Lower¶
+
+
+class Lower(expression, **extra)[source]¶
+
+Accepts a single text field or expression and returns the lowercase
+representation.
+Usage example:
+
+
+
+Substr¶
+
+
+class Substr(expression, pos, length=None, **extra)[source]¶
+
+Returns a substring of length length from the field or expression starting
+at position pos. The position is 1-indexed, so the position must be greater
+than 0. If length is None, then the rest of the string will be returned.
+Usage example:
+
+
+
+Upper¶
+
+
+class Upper(expression, **extra)[source]¶
+
+Accepts a single text field or expression and returns the uppercase
+representation.
+Usage example:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

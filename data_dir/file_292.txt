@@ -1,0 +1,204 @@
+https://docs.djangoproject.com/en/6.0/howto/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+How-to guides¶
+Practical guides covering common tasks and problems.
+
+Models, data and databases¶
+
+
+How to provide initial data for models
+How to integrate Django with a legacy database
+How to create custom model fields
+How to create database migrations
+How to write custom lookups
+
+
+
+
+Templates and output¶
+
+
+How to create CSV output
+How to create PDF files
+How to override templates
+How to implement a custom template backend
+How to create custom template tags and filters
+
+
+
+
+Project configuration and management¶
+
+
+How to manage static files (e.g. images, JavaScript, CSS)
+How to configure and use logging
+How to manage error reporting
+How to delete a Django application
+
+
+
+
+Installing, deploying and upgrading¶
+
+
+How to upgrade Django to a newer version
+How to install Django on Windows
+How to deploy Django
+How to deploy static files
+
+
+
+
+Other guides¶
+
+
+How to authenticate using REMOTE_USER
+How to use Django’s Content Security Policy
+How to use Django’s CSRF protection
+How to write a custom storage class
+How to create custom django-admin commands
+How to customize the shell command
+
+
+
+See also
+The Django community aggregator, where we aggregate content from the
+global Django community. Many writers in the aggregator write this sort of
+how-to material.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+How-to guides¶
+Practical guides covering common tasks and problems.
+
+Models, data and databases¶
+
+
+How to provide initial data for models
+How to integrate Django with a legacy database
+How to create custom model fields
+How to create database migrations
+How to write custom lookups
+
+
+
+
+Templates and output¶
+
+
+How to create CSV output
+How to create PDF files
+How to override templates
+How to implement a custom template backend
+How to create custom template tags and filters
+
+
+
+
+Project configuration and management¶
+
+
+How to manage static files (e.g. images, JavaScript, CSS)
+How to configure and use logging
+How to manage error reporting
+How to delete a Django application
+
+
+
+
+Installing, deploying and upgrading¶
+
+
+How to upgrade Django to a newer version
+How to install Django on Windows
+How to deploy Django
+How to deploy static files
+
+
+
+
+Other guides¶
+
+
+How to authenticate using REMOTE_USER
+How to use Django’s Content Security Policy
+How to use Django’s CSRF protection
+How to write a custom storage class
+How to create custom django-admin commands
+How to customize the shell command
+
+
+
+See also
+The Django community aggregator, where we aggregate content from the
+global Django community. Many writers in the aggregator write this sort of
+how-to material.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

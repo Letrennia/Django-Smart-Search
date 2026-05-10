@@ -1,0 +1,98 @@
+https://docs.djangoproject.com/en/2.1/internals/contributing/writing-code/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Writing code¶
+So you’d like to write some code to improve Django. Awesome! Browse the
+following sections to find out how to give your code patches the best
+chances to be included in Django core:
+
+
+Coding style
+Unit tests
+Submitting patches
+Working with Git and GitHub
+JavaScript
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Writing code¶
+So you’d like to write some code to improve Django. Awesome! Browse the
+following sections to find out how to give your code patches the best
+chances to be included in Django core:
+
+
+Coding style
+Unit tests
+Submitting patches
+Working with Git and GitHub
+JavaScript
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

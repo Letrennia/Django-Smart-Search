@@ -1,0 +1,184 @@
+https://docs.djangoproject.com/en/1.8/ref/contrib/postgres/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+django.contrib.postgres¶
+
+New in Django 1.8. 
+PostgreSQL has a number of features which are not shared by the other databases
+Django supports. This optional module contains model fields and form fields for
+a number of PostgreSQL specific data types.
+Psycopg2 2.5 or higher is required.
+
+Note
+Django is, and will continue to be, a database-agnostic web framework. We
+would encourage those writing reusable applications for the Django
+community to write database-agnostic code where practical. However, we
+recognize that real world projects written using Django need not be
+database-agnostic. In fact, once a project reaches a given size changing
+the underlying data store is already a significant challenge and is likely
+to require changing the code base in some ways to handle differences
+between the data stores.
+Django provides support for a number of data types which will
+only work with PostgreSQL. There is no fundamental reason why (for example)
+a contrib.mysql module does not exist, except that PostgreSQL has the
+richest feature set of the supported databases so its users have the most
+to gain.
+
+
+
+PostgreSQL specific model fields
+ArrayField
+HStoreField
+Range Fields
+
+
+PostgreSQL specific form fields and widgets
+SimpleArrayField
+SplitArrayField
+HStoreField
+Range Fields
+Widgets
+
+
+PostgreSQL specific lookups
+Unaccent
+
+
+Database migration operations
+CreateExtension
+HStoreExtension
+UnaccentExtension
+
+
+Validators
+KeysValidator
+Range validators
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+django.contrib.postgres¶
+
+New in Django 1.8. 
+PostgreSQL has a number of features which are not shared by the other databases
+Django supports. This optional module contains model fields and form fields for
+a number of PostgreSQL specific data types.
+Psycopg2 2.5 or higher is required.
+
+Note
+Django is, and will continue to be, a database-agnostic web framework. We
+would encourage those writing reusable applications for the Django
+community to write database-agnostic code where practical. However, we
+recognize that real world projects written using Django need not be
+database-agnostic. In fact, once a project reaches a given size changing
+the underlying data store is already a significant challenge and is likely
+to require changing the code base in some ways to handle differences
+between the data stores.
+Django provides support for a number of data types which will
+only work with PostgreSQL. There is no fundamental reason why (for example)
+a contrib.mysql module does not exist, except that PostgreSQL has the
+richest feature set of the supported databases so its users have the most
+to gain.
+
+
+
+PostgreSQL specific model fields
+ArrayField
+HStoreField
+Range Fields
+
+
+PostgreSQL specific form fields and widgets
+SimpleArrayField
+SplitArrayField
+HStoreField
+Range Fields
+Widgets
+
+
+PostgreSQL specific lookups
+Unaccent
+
+
+Database migration operations
+CreateExtension
+HStoreExtension
+UnaccentExtension
+
+
+Validators
+KeysValidator
+Range validators
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

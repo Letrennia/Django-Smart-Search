@@ -1,0 +1,1486 @@
+https://docs.djangoproject.com/en/1.10/ref/forms/widgets/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Widgets¶
+A widget is Django’s representation of an HTML input element. The widget
+handles the rendering of the HTML, and the extraction of data from a GET/POST
+dictionary that corresponds to the widget.
+
+Tip
+Widgets should not be confused with the form fields.
+Form fields deal with the logic of input validation and are used directly
+in templates. Widgets deal with rendering of HTML form input elements on
+the web page and extraction of raw submitted data. However, widgets do
+need to be assigned to form fields.
+
+
+Specifying widgets¶
+Whenever you specify a field on a form, Django will use a default widget
+that is appropriate to the type of data that is to be displayed. To find
+which widget is used on which field, see the documentation about
+Built-in Field classes.
+However, if you want to use a different widget for a field, you can
+just use the widget argument on the field definition. For
+example:
+
+This would specify a form with a comment that uses a larger Textarea
+widget, rather than the default TextInput widget.
+
+
+Setting arguments for widgets¶
+Many widgets have optional extra arguments; they can be set when defining the
+widget on the field. In the following example, the
+years attribute is set for a
+SelectDateWidget:
+
+See the Built-in widgets for more information about which widgets
+are available and which arguments they accept.
+
+
+Widgets inheriting from the Select widget¶
+Widgets inheriting from the Select widget deal with choices. They
+present the user with a list of options to choose from. The different widgets
+present this choice differently; the Select widget itself uses a
+<select> HTML list representation, while RadioSelect uses radio
+buttons.
+Select widgets are used by default on ChoiceField fields. The
+choices displayed on the widget are inherited from the ChoiceField and
+changing ChoiceField.choices will update Select.choices. For
+example:
+
+Widgets which offer a choices attribute can however be used
+with fields which are not based on choice – such as a CharField –
+but it is recommended to use a ChoiceField-based field when the
+choices are inherent to the model and not just the representational widget.
+
+
+Customizing widget instances¶
+When Django renders a widget as HTML, it only renders very minimal markup -
+Django doesn’t add class names, or any other widget-specific attributes. This
+means, for example, that all TextInput widgets will appear the same
+on your Web pages.
+There are two ways to customize widgets: per widget instance and per widget class.
+
+Styling widget instances¶
+If you want to make one widget instance look different from another, you will
+need to specify additional attributes at the time when the widget object is
+instantiated and assigned to a form field (and perhaps add some rules to your
+CSS files).
+For example, take the following simple form:
+
+This form will include three default TextInput widgets, with default
+rendering – no CSS class, no extra attributes. This means that the input boxes
+provided for each widget will be rendered exactly the same:
+
+On a real Web page, you probably don’t want every widget to look the same. You
+might want a larger input element for the comment, and you might want the
+‘name’ widget to have some special CSS class. It is also possible to specify
+the ‘type’ attribute to take advantage of the new HTML5 input types.  To do
+this, you use the Widget.attrs argument when creating the widget:
+
+Django will then include the extra attributes in the rendered output:
+
+You can also set the HTML id using attrs. See
+BoundField.id_for_label for an example.
+
+
+Styling widget classes¶
+With widgets, it is possible to add assets (css and javascript)
+and more deeply customize their appearance and behavior.
+In a nutshell, you will need to subclass the widget and either
+define a “Media” inner class or
+create a “media” property.
+These methods involve somewhat advanced Python programming and are described in
+detail in the Form Assets topic guide.
+
+
+
+Base widget classes¶
+Base widget classes Widget and MultiWidget are subclassed by
+all the built-in widgets and may serve as a
+foundation for custom widgets.
+
+Widget¶
+
+
+class Widget(attrs=None)[source]¶
+This abstract class cannot be rendered, but provides the basic attribute
+attrs.  You may also implement or override the
+render() method on custom widgets.
+
+
+attrs¶
+A dictionary containing HTML attributes to be set on the rendered
+widget.
+
+If you assign a value of True or False to an attribute,
+it will be rendered as an HTML5 boolean attribute:
+
+
+
+
+supports_microseconds¶
+An attribute that defaults to True. If set to False, the
+microseconds part of datetime and
+time values will be set to 0.
+
+New in Django 1.9: In older versions, this attribute was only defined on the date
+and time widgets (as False).
+
+
+
+
+format_value(value)¶
+Cleans and returns a value for use in the widget template. value
+isn’t guaranteed to be valid input, therefore subclass implementations
+should program defensively.
+
+Changed in Django 1.10: In older versions, this method is a private API named
+_format_value(). The old name will work until Django 2.0.
+
+
+
+
+id_for_label(self, id_)[source]¶
+Returns the HTML ID attribute of this widget for use by a <label>,
+given the ID of the field. Returns None if an ID isn’t available.
+This hook is necessary because some widgets have multiple HTML
+elements and, thus, multiple IDs. In that case, this method should
+return an ID value that corresponds to the first ID in the widget’s
+tags.
+
+
+
+render(name, value, attrs=None)[source]¶
+Returns HTML for the widget, as a Unicode string. This method must be
+implemented by the subclass, otherwise NotImplementedError will be
+raised.
+The ‘value’ given is not guaranteed to be valid input, therefore
+subclass implementations should program defensively.
+
+
+
+value_from_datadict(data, files, name)[source]¶
+Given a dictionary of data and this widget’s name, returns the value
+of this widget. files may contain data coming from
+request.FILES. Returns None
+if a value wasn’t provided. Note also that value_from_datadict may
+be called more than once during handling of form data, so if you
+customize it and add expensive processing, you should implement some
+caching mechanism yourself.
+
+
+
+value_omitted_from_data(data, files, name)[source]¶
+
+New in Django 1.10.2. 
+Given data and files dictionaries and this widget’s name,
+returns whether or not there’s data or files for the widget.
+The method’s result affects whether or not a field in a model form
+falls back to its default.
+Special cases are CheckboxInput,
+CheckboxSelectMultiple, and
+SelectMultiple, which always return
+False because an unchecked checkbox and unselected
+<select multiple> don’t appear in the data of an HTML form
+submission, so it’s unknown whether or not the user submitted a value.
+
+
+
+use_required_attribute(initial)[source]¶
+
+New in Django 1.10.1. 
+Given a form field’s initial value, returns whether or not the
+widget can be rendered with the required HTML attribute. Forms use
+this method along with Field.required and Form.use_required_attribute to determine whether or not
+to display the required attribute for each field.
+By default, returns False for hidden widgets and True
+otherwise. Special cases are ClearableFileInput,
+which returns False when initial is not set, and
+CheckboxSelectMultiple, which always returns
+False because browser validation would require all checkboxes to be
+checked instead of at least one.
+Override this method in custom widgets that aren’t compatible with
+browser validation. For example, a WSYSIWG text editor widget backed by
+a hidden textarea element may want to always return False to
+avoid browser validation on the hidden field.
+
+
+
+
+MultiWidget¶
+
+
+class MultiWidget(widgets, attrs=None)[source]¶
+A widget that is composed of multiple widgets.
+MultiWidget works hand in hand with the
+MultiValueField.
+MultiWidget has one required argument:
+
+
+widgets¶
+An iterable containing the widgets needed.
+
+And one required method:
+
+
+decompress(value)[source]¶
+This method takes a single “compressed” value from the field and
+returns a list of “decompressed” values. The input value can be
+assumed valid, but not necessarily non-empty.
+This method must be implemented by the subclass, and since the
+value may be empty, the implementation must be defensive.
+The rationale behind “decompression” is that it is necessary to “split”
+the combined value of the form field into the values for each widget.
+An example of this is how SplitDateTimeWidget turns a
+datetime value into a list with date and time split
+into two separate values:
+
+
+Tip
+Note that MultiValueField has a
+complementary method compress()
+with the opposite responsibility - to combine cleaned values of
+all member fields into one.
+
+
+Other methods that may be useful to override include:
+
+
+render(name, value, attrs=None)[source]¶
+Argument value is handled differently in this method from the
+subclasses of Widget because it has to figure out how to
+split a single value for display in multiple widgets.
+The value argument used when rendering can be one of two things:
+
+A list.
+A single value (e.g., a string) that is the “compressed” representation
+of a list of values.
+
+If value is a list, the output of render() will
+be a concatenation of rendered child widgets. If value is not a
+list, it will first be processed by the method
+decompress() to create the list and then rendered.
+When render() executes its HTML rendering, each value in the list
+is rendered with the corresponding widget – the first value is
+rendered in the first widget, the second value is rendered in the
+second widget, etc.
+Unlike in the single value widgets, method render()
+need not be implemented in the subclasses.
+
+
+
+format_output(rendered_widgets)[source]¶
+Given a list of rendered widgets (as strings), returns a Unicode string
+representing the HTML for the whole lot.
+This hook allows you to format the HTML design of the widgets any way
+you’d like.
+
+Here’s an example widget which subclasses MultiWidget to display
+a date with the day, month, and year in different select boxes. This widget
+is intended to be used with a DateField rather than
+a MultiValueField, thus we have implemented
+value_from_datadict():
+
+The constructor creates several Select widgets in a tuple. The
+super class uses this tuple to setup the widget.
+The format_output() method is fairly vanilla here (in
+fact, it’s the same as what’s been implemented as the default for
+MultiWidget), but the idea is that you could add custom HTML between
+the widgets should you wish.
+The required method decompress() breaks up a
+datetime.date value into the day, month, and year values corresponding
+to each widget. Note how the method handles the case where value is
+None.
+The default implementation of value_from_datadict() returns
+a list of values corresponding to each Widget.  This is appropriate
+when using a MultiWidget with a MultiValueField,
+but since we want to use this widget with a DateField
+which takes a single value, we have overridden this method to combine the
+data of all the subwidgets into a datetime.date. The method extracts
+data from the POST dictionary and constructs and validates the date.
+If it is valid, we return the string, otherwise, we return an empty string
+which will cause form.is_valid to return False.
+
+
+
+
+Built-in widgets¶
+Django provides a representation of all the basic HTML widgets, plus some
+commonly used groups of widgets in the django.forms.widgets module,
+including the input of text, various checkboxes
+and selectors, uploading files,
+and handling of multi-valued input.
+
+Widgets handling input of text¶
+These widgets make use of the HTML elements input and textarea.
+
+TextInput¶
+
+
+class TextInput[source]¶
+Text input: <input type="text" ...>
+
+
+
+NumberInput¶
+
+
+class NumberInput[source]¶
+Text input: <input type="number" ...>
+Beware that not all browsers support entering localized numbers in
+number input types. Django itself avoids using them for fields having
+their localize property set to True.
+
+
+
+EmailInput¶
+
+
+class EmailInput[source]¶
+Text input: <input type="email" ...>
+
+
+
+URLInput¶
+
+
+class URLInput[source]¶
+Text input: <input type="url" ...>
+
+
+
+PasswordInput¶
+
+
+class PasswordInput[source]¶
+Password input: <input type='password' ...>
+Takes one optional argument:
+
+
+render_value¶
+Determines whether the widget will have a value filled in when the
+form is re-displayed after a validation error (default is False).
+
+
+
+
+HiddenInput¶
+
+
+class HiddenInput[source]¶
+Hidden input: <input type='hidden' ...>
+Note that there also is a MultipleHiddenInput widget that
+encapsulates a set of hidden input elements.
+
+
+
+DateInput¶
+
+
+class DateInput[source]¶
+Date input as a simple text box: <input type='text' ...>
+Takes same arguments as TextInput, with one more optional argument:
+
+
+format¶
+The format in which this field’s initial value will be displayed.
+
+If no format argument is provided, the default format is the first
+format found in DATE_INPUT_FORMATS and respects
+Format localization.
+
+
+
+DateTimeInput¶
+
+
+class DateTimeInput[source]¶
+Date/time input as a simple text box: <input type='text' ...>
+Takes same arguments as TextInput, with one more optional argument:
+
+
+format¶
+The format in which this field’s initial value will be displayed.
+
+If no format argument is provided, the default format is the first
+format found in DATETIME_INPUT_FORMATS and respects
+Format localization.
+By default, the microseconds part of the time value is always set to 0.
+If microseconds are required, use a subclass with the
+supports_microseconds attribute set to True.
+
+
+
+TimeInput¶
+
+
+class TimeInput[source]¶
+Time input as a simple text box: <input type='text' ...>
+Takes same arguments as TextInput, with one more optional argument:
+
+
+format¶
+The format in which this field’s initial value will be displayed.
+
+If no format argument is provided, the default format is the first
+format found in TIME_INPUT_FORMATS and respects
+Format localization.
+For the treatment of microseconds, see DateTimeInput.
+
+
+
+Textarea¶
+
+
+class Textarea[source]¶
+Text area: <textarea>...</textarea>
+
+
+
+
+Selector and checkbox widgets¶
+
+CheckboxInput¶
+
+
+class CheckboxInput[source]¶
+Checkbox: <input type='checkbox' ...>
+Takes one optional argument:
+
+
+check_test¶
+A callable that takes the value of the CheckboxInput and returns
+True if the checkbox should be checked for that value.
+
+
+
+
+Select¶
+
+
+class Select[source]¶
+Select widget: <select><option ...>...</select>
+
+
+choices¶
+This attribute is optional when the form field does not have a
+choices attribute. If it does, it will override anything you set
+here when the attribute is updated on the Field.
+
+
+
+
+NullBooleanSelect¶
+
+
+class NullBooleanSelect[source]¶
+Select widget with options ‘Unknown’, ‘Yes’ and ‘No’
+
+
+
+SelectMultiple¶
+
+
+class SelectMultiple[source]¶
+Similar to Select, but allows multiple selection:
+<select multiple='multiple'>...</select>
+
+
+
+RadioSelect¶
+
+
+class RadioSelect[source]¶
+Similar to Select, but rendered as a list of radio buttons within
+<li> tags:
+<ul>
+  <li><input type='radio' name='...'></li>
+  ...
+</ul>
+
+
+For more granular control over the generated markup, you can loop over the
+radio buttons in the template. Assuming a form myform with a field
+beatles that uses a RadioSelect as its widget:
+{% for radio in myform.beatles %}
+<div class="myradio">
+    {{ radio }}
+</div>
+{% endfor %}
+
+
+This would generate the following HTML:
+<div class="myradio">
+    <label for="id_beatles_0"><input id="id_beatles_0" name="beatles" type="radio" value="john" required /> John</label>
+</div>
+<div class="myradio">
+    <label for="id_beatles_1"><input id="id_beatles_1" name="beatles" type="radio" value="paul" required /> Paul</label>
+</div>
+<div class="myradio">
+    <label for="id_beatles_2"><input id="id_beatles_2" name="beatles" type="radio" value="george" required /> George</label>
+</div>
+<div class="myradio">
+    <label for="id_beatles_3"><input id="id_beatles_3" name="beatles" type="radio" value="ringo" required /> Ringo</label>
+</div>
+
+
+That included the <label> tags. To get more granular, you can use each
+radio button’s tag, choice_label and id_for_label attributes.
+For example, this template…
+{% for radio in myform.beatles %}
+    <label for="{{ radio.id_for_label }}">
+        {{ radio.choice_label }}
+        <span class="radio">{{ radio.tag }}</span>
+    </label>
+{% endfor %}
+
+
+…will result in the following HTML:
+<label for="id_beatles_0">
+    John
+    <span class="radio"><input id="id_beatles_0" name="beatles" type="radio" value="john" required /></span>
+</label>
+
+<label for="id_beatles_1">
+    Paul
+    <span class="radio"><input id="id_beatles_1" name="beatles" type="radio" value="paul" required /></span>
+</label>
+
+<label for="id_beatles_2">
+    George
+    <span class="radio"><input id="id_beatles_2" name="beatles" type="radio" value="george" required /></span>
+</label>
+
+<label for="id_beatles_3">
+    Ringo
+    <span class="radio"><input id="id_beatles_3" name="beatles" type="radio" value="ringo" required /></span>
+</label>
+
+
+If you decide not to loop over the radio buttons – e.g., if your template
+simply includes {{ myform.beatles }} – they’ll be output in a <ul>
+with <li> tags, as above.
+The outer <ul> container receives the id attribute of the widget,
+if defined, or BoundField.auto_id otherwise.
+When looping over the radio buttons, the label and input tags include
+for and id attributes, respectively. Each radio button has an
+id_for_label attribute to output the element’s ID.
+
+
+
+CheckboxSelectMultiple¶
+
+
+class CheckboxSelectMultiple[source]¶
+Similar to SelectMultiple, but rendered as a list of check
+buttons:
+<ul>
+  <li><input type='checkbox' name='...' ></li>
+  ...
+</ul>
+
+
+The outer <ul> container receives the id attribute of the widget,
+if defined, or BoundField.auto_id otherwise.
+
+Like RadioSelect, you can loop over the individual checkboxes for the
+widget’s choices. Unlike RadioSelect, the checkboxes won’t include the
+required HTML attribute if the field is required because browser validation
+would require all checkboxes to be checked instead of at least one.
+When looping over the checkboxes, the label and input tags include
+for and id attributes, respectively. Each checkbox has an
+id_for_label attribute to output the element’s ID.
+
+
+
+File upload widgets¶
+
+FileInput¶
+
+
+class FileInput[source]¶
+File upload input: <input type='file' ...>
+
+
+
+ClearableFileInput¶
+
+
+class ClearableFileInput[source]¶
+File upload input: <input type='file' ...>, with an additional checkbox
+input to clear the field’s value, if the field is not required and has
+initial data.
+
+
+
+
+Composite widgets¶
+
+MultipleHiddenInput¶
+
+
+class MultipleHiddenInput[source]¶
+Multiple <input type='hidden' ...> widgets.
+A widget that handles multiple hidden widgets for fields that have a list
+of values.
+
+
+choices¶
+This attribute is optional when the form field does not have a
+choices attribute. If it does, it will override anything you set
+here when the attribute is updated on the Field.
+
+
+
+
+SplitDateTimeWidget¶
+
+
+class SplitDateTimeWidget[source]¶
+Wrapper (using MultiWidget) around two widgets: DateInput
+for the date, and TimeInput for the time. Must be used with
+SplitDateTimeField rather than DateTimeField.
+SplitDateTimeWidget has two optional attributes:
+
+
+date_format¶
+Similar to DateInput.format
+
+
+
+time_format¶
+Similar to TimeInput.format
+
+
+
+
+SplitHiddenDateTimeWidget¶
+
+
+class SplitHiddenDateTimeWidget[source]¶
+Similar to SplitDateTimeWidget, but uses HiddenInput for
+both date and time.
+
+
+
+SelectDateWidget¶
+
+
+class SelectDateWidget[source]¶
+Wrapper around three Select widgets: one each for
+month, day, and year.
+Takes several optional arguments:
+
+
+years¶
+An optional list/tuple of years to use in the “year” select box.
+The default is a list containing the current year and the next 9 years.
+
+
+
+months¶
+An optional dict of months to use in the “months” select box.
+The keys of the dict correspond to the month number (1-indexed) and
+the values are the displayed months:
+
+
+
+
+empty_label¶
+If the DateField is not required,
+SelectDateWidget will have an empty choice at the top of the
+list (which is --- by default). You can change the text of this
+label with the empty_label attribute. empty_label can be a
+string, list, or tuple. When a string is used, all select
+boxes will each have an empty choice with this label. If empty_label
+is a list or tuple of 3 string elements, the select boxes will
+have their own custom label. The labels should be in this order
+('year_label', 'month_label', 'day_label').
+
+
+
+Changed in Django 1.9: This widget used to be located in the django.forms.extras.widgets
+package. It is now defined in django.forms.widgets and like the
+other widgets it can be imported directly from django.forms.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Widgets¶
+A widget is Django’s representation of an HTML input element. The widget
+handles the rendering of the HTML, and the extraction of data from a GET/POST
+dictionary that corresponds to the widget.
+
+Tip
+Widgets should not be confused with the form fields.
+Form fields deal with the logic of input validation and are used directly
+in templates. Widgets deal with rendering of HTML form input elements on
+the web page and extraction of raw submitted data. However, widgets do
+need to be assigned to form fields.
+
+
+Specifying widgets¶
+Whenever you specify a field on a form, Django will use a default widget
+that is appropriate to the type of data that is to be displayed. To find
+which widget is used on which field, see the documentation about
+Built-in Field classes.
+However, if you want to use a different widget for a field, you can
+just use the widget argument on the field definition. For
+example:
+
+This would specify a form with a comment that uses a larger Textarea
+widget, rather than the default TextInput widget.
+
+
+Setting arguments for widgets¶
+Many widgets have optional extra arguments; they can be set when defining the
+widget on the field. In the following example, the
+years attribute is set for a
+SelectDateWidget:
+
+See the Built-in widgets for more information about which widgets
+are available and which arguments they accept.
+
+
+Widgets inheriting from the Select widget¶
+Widgets inheriting from the Select widget deal with choices. They
+present the user with a list of options to choose from. The different widgets
+present this choice differently; the Select widget itself uses a
+<select> HTML list representation, while RadioSelect uses radio
+buttons.
+Select widgets are used by default on ChoiceField fields. The
+choices displayed on the widget are inherited from the ChoiceField and
+changing ChoiceField.choices will update Select.choices. For
+example:
+
+Widgets which offer a choices attribute can however be used
+with fields which are not based on choice – such as a CharField –
+but it is recommended to use a ChoiceField-based field when the
+choices are inherent to the model and not just the representational widget.
+
+
+Customizing widget instances¶
+When Django renders a widget as HTML, it only renders very minimal markup -
+Django doesn’t add class names, or any other widget-specific attributes. This
+means, for example, that all TextInput widgets will appear the same
+on your Web pages.
+There are two ways to customize widgets: per widget instance and per widget class.
+
+Styling widget instances¶
+If you want to make one widget instance look different from another, you will
+need to specify additional attributes at the time when the widget object is
+instantiated and assigned to a form field (and perhaps add some rules to your
+CSS files).
+For example, take the following simple form:
+
+This form will include three default TextInput widgets, with default
+rendering – no CSS class, no extra attributes. This means that the input boxes
+provided for each widget will be rendered exactly the same:
+
+On a real Web page, you probably don’t want every widget to look the same. You
+might want a larger input element for the comment, and you might want the
+‘name’ widget to have some special CSS class. It is also possible to specify
+the ‘type’ attribute to take advantage of the new HTML5 input types.  To do
+this, you use the Widget.attrs argument when creating the widget:
+
+Django will then include the extra attributes in the rendered output:
+
+You can also set the HTML id using attrs. See
+BoundField.id_for_label for an example.
+
+
+Styling widget classes¶
+With widgets, it is possible to add assets (css and javascript)
+and more deeply customize their appearance and behavior.
+In a nutshell, you will need to subclass the widget and either
+define a “Media” inner class or
+create a “media” property.
+These methods involve somewhat advanced Python programming and are described in
+detail in the Form Assets topic guide.
+
+
+
+Base widget classes¶
+Base widget classes Widget and MultiWidget are subclassed by
+all the built-in widgets and may serve as a
+foundation for custom widgets.
+
+Widget¶
+
+
+class Widget(attrs=None)[source]¶
+This abstract class cannot be rendered, but provides the basic attribute
+attrs.  You may also implement or override the
+render() method on custom widgets.
+
+
+attrs¶
+A dictionary containing HTML attributes to be set on the rendered
+widget.
+
+If you assign a value of True or False to an attribute,
+it will be rendered as an HTML5 boolean attribute:
+
+
+
+
+supports_microseconds¶
+An attribute that defaults to True. If set to False, the
+microseconds part of datetime and
+time values will be set to 0.
+
+New in Django 1.9: In older versions, this attribute was only defined on the date
+and time widgets (as False).
+
+
+
+
+format_value(value)¶
+Cleans and returns a value for use in the widget template. value
+isn’t guaranteed to be valid input, therefore subclass implementations
+should program defensively.
+
+Changed in Django 1.10: In older versions, this method is a private API named
+_format_value(). The old name will work until Django 2.0.
+
+
+
+
+id_for_label(self, id_)[source]¶
+Returns the HTML ID attribute of this widget for use by a <label>,
+given the ID of the field. Returns None if an ID isn’t available.
+This hook is necessary because some widgets have multiple HTML
+elements and, thus, multiple IDs. In that case, this method should
+return an ID value that corresponds to the first ID in the widget’s
+tags.
+
+
+
+render(name, value, attrs=None)[source]¶
+Returns HTML for the widget, as a Unicode string. This method must be
+implemented by the subclass, otherwise NotImplementedError will be
+raised.
+The ‘value’ given is not guaranteed to be valid input, therefore
+subclass implementations should program defensively.
+
+
+
+value_from_datadict(data, files, name)[source]¶
+Given a dictionary of data and this widget’s name, returns the value
+of this widget. files may contain data coming from
+request.FILES. Returns None
+if a value wasn’t provided. Note also that value_from_datadict may
+be called more than once during handling of form data, so if you
+customize it and add expensive processing, you should implement some
+caching mechanism yourself.
+
+
+
+value_omitted_from_data(data, files, name)[source]¶
+
+New in Django 1.10.2. 
+Given data and files dictionaries and this widget’s name,
+returns whether or not there’s data or files for the widget.
+The method’s result affects whether or not a field in a model form
+falls back to its default.
+Special cases are CheckboxInput,
+CheckboxSelectMultiple, and
+SelectMultiple, which always return
+False because an unchecked checkbox and unselected
+<select multiple> don’t appear in the data of an HTML form
+submission, so it’s unknown whether or not the user submitted a value.
+
+
+
+use_required_attribute(initial)[source]¶
+
+New in Django 1.10.1. 
+Given a form field’s initial value, returns whether or not the
+widget can be rendered with the required HTML attribute. Forms use
+this method along with Field.required and Form.use_required_attribute to determine whether or not
+to display the required attribute for each field.
+By default, returns False for hidden widgets and True
+otherwise. Special cases are ClearableFileInput,
+which returns False when initial is not set, and
+CheckboxSelectMultiple, which always returns
+False because browser validation would require all checkboxes to be
+checked instead of at least one.
+Override this method in custom widgets that aren’t compatible with
+browser validation. For example, a WSYSIWG text editor widget backed by
+a hidden textarea element may want to always return False to
+avoid browser validation on the hidden field.
+
+
+
+
+MultiWidget¶
+
+
+class MultiWidget(widgets, attrs=None)[source]¶
+A widget that is composed of multiple widgets.
+MultiWidget works hand in hand with the
+MultiValueField.
+MultiWidget has one required argument:
+
+
+widgets¶
+An iterable containing the widgets needed.
+
+And one required method:
+
+
+decompress(value)[source]¶
+This method takes a single “compressed” value from the field and
+returns a list of “decompressed” values. The input value can be
+assumed valid, but not necessarily non-empty.
+This method must be implemented by the subclass, and since the
+value may be empty, the implementation must be defensive.
+The rationale behind “decompression” is that it is necessary to “split”
+the combined value of the form field into the values for each widget.
+An example of this is how SplitDateTimeWidget turns a
+datetime value into a list with date and time split
+into two separate values:
+
+
+Tip
+Note that MultiValueField has a
+complementary method compress()
+with the opposite responsibility - to combine cleaned values of
+all member fields into one.
+
+
+Other methods that may be useful to override include:
+
+
+render(name, value, attrs=None)[source]¶
+Argument value is handled differently in this method from the
+subclasses of Widget because it has to figure out how to
+split a single value for display in multiple widgets.
+The value argument used when rendering can be one of two things:
+
+A list.
+A single value (e.g., a string) that is the “compressed” representation
+of a list of values.
+
+If value is a list, the output of render() will
+be a concatenation of rendered child widgets. If value is not a
+list, it will first be processed by the method
+decompress() to create the list and then rendered.
+When render() executes its HTML rendering, each value in the list
+is rendered with the corresponding widget – the first value is
+rendered in the first widget, the second value is rendered in the
+second widget, etc.
+Unlike in the single value widgets, method render()
+need not be implemented in the subclasses.
+
+
+
+format_output(rendered_widgets)[source]¶
+Given a list of rendered widgets (as strings), returns a Unicode string
+representing the HTML for the whole lot.
+This hook allows you to format the HTML design of the widgets any way
+you’d like.
+
+Here’s an example widget which subclasses MultiWidget to display
+a date with the day, month, and year in different select boxes. This widget
+is intended to be used with a DateField rather than
+a MultiValueField, thus we have implemented
+value_from_datadict():
+
+The constructor creates several Select widgets in a tuple. The
+super class uses this tuple to setup the widget.
+The format_output() method is fairly vanilla here (in
+fact, it’s the same as what’s been implemented as the default for
+MultiWidget), but the idea is that you could add custom HTML between
+the widgets should you wish.
+The required method decompress() breaks up a
+datetime.date value into the day, month, and year values corresponding
+to each widget. Note how the method handles the case where value is
+None.
+The default implementation of value_from_datadict() returns
+a list of values corresponding to each Widget.  This is appropriate
+when using a MultiWidget with a MultiValueField,
+but since we want to use this widget with a DateField
+which takes a single value, we have overridden this method to combine the
+data of all the subwidgets into a datetime.date. The method extracts
+data from the POST dictionary and constructs and validates the date.
+If it is valid, we return the string, otherwise, we return an empty string
+which will cause form.is_valid to return False.
+
+
+
+
+Built-in widgets¶
+Django provides a representation of all the basic HTML widgets, plus some
+commonly used groups of widgets in the django.forms.widgets module,
+including the input of text, various checkboxes
+and selectors, uploading files,
+and handling of multi-valued input.
+
+Widgets handling input of text¶
+These widgets make use of the HTML elements input and textarea.
+
+TextInput¶
+
+
+class TextInput[source]¶
+Text input: <input type="text" ...>
+
+
+
+NumberInput¶
+
+
+class NumberInput[source]¶
+Text input: <input type="number" ...>
+Beware that not all browsers support entering localized numbers in
+number input types. Django itself avoids using them for fields having
+their localize property set to True.
+
+
+
+EmailInput¶
+
+
+class EmailInput[source]¶
+Text input: <input type="email" ...>
+
+
+
+URLInput¶
+
+
+class URLInput[source]¶
+Text input: <input type="url" ...>
+
+
+
+PasswordInput¶
+
+
+class PasswordInput[source]¶
+Password input: <input type='password' ...>
+Takes one optional argument:
+
+
+render_value¶
+Determines whether the widget will have a value filled in when the
+form is re-displayed after a validation error (default is False).
+
+
+
+
+HiddenInput¶
+
+
+class HiddenInput[source]¶
+Hidden input: <input type='hidden' ...>
+Note that there also is a MultipleHiddenInput widget that
+encapsulates a set of hidden input elements.
+
+
+
+DateInput¶
+
+
+class DateInput[source]¶
+Date input as a simple text box: <input type='text' ...>
+Takes same arguments as TextInput, with one more optional argument:
+
+
+format¶
+The format in which this field’s initial value will be displayed.
+
+If no format argument is provided, the default format is the first
+format found in DATE_INPUT_FORMATS and respects
+Format localization.
+
+
+
+DateTimeInput¶
+
+
+class DateTimeInput[source]¶
+Date/time input as a simple text box: <input type='text' ...>
+Takes same arguments as TextInput, with one more optional argument:
+
+
+format¶
+The format in which this field’s initial value will be displayed.
+
+If no format argument is provided, the default format is the first
+format found in DATETIME_INPUT_FORMATS and respects
+Format localization.
+By default, the microseconds part of the time value is always set to 0.
+If microseconds are required, use a subclass with the
+supports_microseconds attribute set to True.
+
+
+
+TimeInput¶
+
+
+class TimeInput[source]¶
+Time input as a simple text box: <input type='text' ...>
+Takes same arguments as TextInput, with one more optional argument:
+
+
+format¶
+The format in which this field’s initial value will be displayed.
+
+If no format argument is provided, the default format is the first
+format found in TIME_INPUT_FORMATS and respects
+Format localization.
+For the treatment of microseconds, see DateTimeInput.
+
+
+
+Textarea¶
+
+
+class Textarea[source]¶
+Text area: <textarea>...</textarea>
+
+
+
+
+Selector and checkbox widgets¶
+
+CheckboxInput¶
+
+
+class CheckboxInput[source]¶
+Checkbox: <input type='checkbox' ...>
+Takes one optional argument:
+
+
+check_test¶
+A callable that takes the value of the CheckboxInput and returns
+True if the checkbox should be checked for that value.
+
+
+
+
+Select¶
+
+
+class Select[source]¶
+Select widget: <select><option ...>...</select>
+
+
+choices¶
+This attribute is optional when the form field does not have a
+choices attribute. If it does, it will override anything you set
+here when the attribute is updated on the Field.
+
+
+
+
+NullBooleanSelect¶
+
+
+class NullBooleanSelect[source]¶
+Select widget with options ‘Unknown’, ‘Yes’ and ‘No’
+
+
+
+SelectMultiple¶
+
+
+class SelectMultiple[source]¶
+Similar to Select, but allows multiple selection:
+<select multiple='multiple'>...</select>
+
+
+
+RadioSelect¶
+
+
+class RadioSelect[source]¶
+Similar to Select, but rendered as a list of radio buttons within
+<li> tags:
+<ul>
+  <li><input type='radio' name='...'></li>
+  ...
+</ul>
+
+
+For more granular control over the generated markup, you can loop over the
+radio buttons in the template. Assuming a form myform with a field
+beatles that uses a RadioSelect as its widget:
+{% for radio in myform.beatles %}
+<div class="myradio">
+    {{ radio }}
+</div>
+{% endfor %}
+
+
+This would generate the following HTML:
+<div class="myradio">
+    <label for="id_beatles_0"><input id="id_beatles_0" name="beatles" type="radio" value="john" required /> John</label>
+</div>
+<div class="myradio">
+    <label for="id_beatles_1"><input id="id_beatles_1" name="beatles" type="radio" value="paul" required /> Paul</label>
+</div>
+<div class="myradio">
+    <label for="id_beatles_2"><input id="id_beatles_2" name="beatles" type="radio" value="george" required /> George</label>
+</div>
+<div class="myradio">
+    <label for="id_beatles_3"><input id="id_beatles_3" name="beatles" type="radio" value="ringo" required /> Ringo</label>
+</div>
+
+
+That included the <label> tags. To get more granular, you can use each
+radio button’s tag, choice_label and id_for_label attributes.
+For example, this template…
+{% for radio in myform.beatles %}
+    <label for="{{ radio.id_for_label }}">
+        {{ radio.choice_label }}
+        <span class="radio">{{ radio.tag }}</span>
+    </label>
+{% endfor %}
+
+
+…will result in the following HTML:
+<label for="id_beatles_0">
+    John
+    <span class="radio"><input id="id_beatles_0" name="beatles" type="radio" value="john" required /></span>
+</label>
+
+<label for="id_beatles_1">
+    Paul
+    <span class="radio"><input id="id_beatles_1" name="beatles" type="radio" value="paul" required /></span>
+</label>
+
+<label for="id_beatles_2">
+    George
+    <span class="radio"><input id="id_beatles_2" name="beatles" type="radio" value="george" required /></span>
+</label>
+
+<label for="id_beatles_3">
+    Ringo
+    <span class="radio"><input id="id_beatles_3" name="beatles" type="radio" value="ringo" required /></span>
+</label>
+
+
+If you decide not to loop over the radio buttons – e.g., if your template
+simply includes {{ myform.beatles }} – they’ll be output in a <ul>
+with <li> tags, as above.
+The outer <ul> container receives the id attribute of the widget,
+if defined, or BoundField.auto_id otherwise.
+When looping over the radio buttons, the label and input tags include
+for and id attributes, respectively. Each radio button has an
+id_for_label attribute to output the element’s ID.
+
+
+
+CheckboxSelectMultiple¶
+
+
+class CheckboxSelectMultiple[source]¶
+Similar to SelectMultiple, but rendered as a list of check
+buttons:
+<ul>
+  <li><input type='checkbox' name='...' ></li>
+  ...
+</ul>
+
+
+The outer <ul> container receives the id attribute of the widget,
+if defined, or BoundField.auto_id otherwise.
+
+Like RadioSelect, you can loop over the individual checkboxes for the
+widget’s choices. Unlike RadioSelect, the checkboxes won’t include the
+required HTML attribute if the field is required because browser validation
+would require all checkboxes to be checked instead of at least one.
+When looping over the checkboxes, the label and input tags include
+for and id attributes, respectively. Each checkbox has an
+id_for_label attribute to output the element’s ID.
+
+
+
+File upload widgets¶
+
+FileInput¶
+
+
+class FileInput[source]¶
+File upload input: <input type='file' ...>
+
+
+
+ClearableFileInput¶
+
+
+class ClearableFileInput[source]¶
+File upload input: <input type='file' ...>, with an additional checkbox
+input to clear the field’s value, if the field is not required and has
+initial data.
+
+
+
+
+Composite widgets¶
+
+MultipleHiddenInput¶
+
+
+class MultipleHiddenInput[source]¶
+Multiple <input type='hidden' ...> widgets.
+A widget that handles multiple hidden widgets for fields that have a list
+of values.
+
+
+choices¶
+This attribute is optional when the form field does not have a
+choices attribute. If it does, it will override anything you set
+here when the attribute is updated on the Field.
+
+
+
+
+SplitDateTimeWidget¶
+
+
+class SplitDateTimeWidget[source]¶
+Wrapper (using MultiWidget) around two widgets: DateInput
+for the date, and TimeInput for the time. Must be used with
+SplitDateTimeField rather than DateTimeField.
+SplitDateTimeWidget has two optional attributes:
+
+
+date_format¶
+Similar to DateInput.format
+
+
+
+time_format¶
+Similar to TimeInput.format
+
+
+
+
+SplitHiddenDateTimeWidget¶
+
+
+class SplitHiddenDateTimeWidget[source]¶
+Similar to SplitDateTimeWidget, but uses HiddenInput for
+both date and time.
+
+
+
+SelectDateWidget¶
+
+
+class SelectDateWidget[source]¶
+Wrapper around three Select widgets: one each for
+month, day, and year.
+Takes several optional arguments:
+
+
+years¶
+An optional list/tuple of years to use in the “year” select box.
+The default is a list containing the current year and the next 9 years.
+
+
+
+months¶
+An optional dict of months to use in the “months” select box.
+The keys of the dict correspond to the month number (1-indexed) and
+the values are the displayed months:
+
+
+
+
+empty_label¶
+If the DateField is not required,
+SelectDateWidget will have an empty choice at the top of the
+list (which is --- by default). You can change the text of this
+label with the empty_label attribute. empty_label can be a
+string, list, or tuple. When a string is used, all select
+boxes will each have an empty choice with this label. If empty_label
+is a list or tuple of 3 string elements, the select boxes will
+have their own custom label. The labels should be in this order
+('year_label', 'month_label', 'day_label').
+
+
+
+Changed in Django 1.9: This widget used to be located in the django.forms.extras.widgets
+package. It is now defined in django.forms.widgets and like the
+other widgets it can be imported directly from django.forms.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

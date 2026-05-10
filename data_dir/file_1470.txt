@@ -1,0 +1,634 @@
+https://docs.djangoproject.com/en/5.0/ref/models/constraints/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Constraints reference¶
+The classes defined in this module create database constraints. They are added
+in the model Meta.constraints
+option.
+
+Referencing built-in constraints
+Constraints are defined in django.db.models.constraints, but for
+convenience they’re imported into django.db.models. The standard
+convention is to use from django.db import models and refer to the
+constraints as models.<Foo>Constraint.
+
+
+Constraints in abstract base classes
+You must always specify a unique name for the constraint. As such, you
+cannot normally specify a constraint on an abstract base class, since the
+Meta.constraints option is
+inherited by subclasses, with exactly the same values for the attributes
+(including name) each time. To work around name collisions, part of the
+name may contain '%(app_label)s' and '%(class)s', which are
+replaced, respectively, by the lowercased app label and class name of the
+concrete model. For example CheckConstraint(check=Q(age__gte=18),
+name='%(app_label)s_%(class)s_is_adult').
+
+
+Validation of Constraints
+Constraints are checked during the model validation.
+
+
+Validation of Constraints with JSONField
+Constraints containing JSONField may not raise
+validation errors as key, index, and path transforms have many
+database-specific caveats. This may be fully supported later.
+You should always check that there are no log messages, in the
+django.db.models logger, like “Got a database error calling check() on
+…” to confirm it’s validated properly.
+
+
+BaseConstraint¶
+
+
+class BaseConstraint(*name, violation_error_code=None, violation_error_message=None)[source]¶
+Base class for all constraints. Subclasses must implement
+constraint_sql(), create_sql(), remove_sql() and
+validate() methods.
+
+Deprecated since version 5.0: Support for passing positional arguments is deprecated.
+
+
+All constraints have the following parameters in common:
+
+name¶
+
+
+BaseConstraint.name¶
+
+The name of the constraint. You must always specify a unique name for the
+constraint.
+
+
+violation_error_code¶
+
+New in Django 5.0. 
+
+
+BaseConstraint.violation_error_code¶
+
+The error code used when ValidationError is raised during
+model validation. Defaults to None.
+
+
+violation_error_message¶
+
+
+BaseConstraint.violation_error_message¶
+
+The error message used when ValidationError is raised during
+model validation. Defaults to
+"Constraint “%(name)s” is violated.".
+
+
+validate()¶
+
+
+BaseConstraint.validate(model, instance, exclude=None, using=DEFAULT_DB_ALIAS)[source]¶
+
+Validates that the constraint, defined on model, is respected on the
+instance. This will do a query on the database to ensure that the
+constraint is respected. If fields in the exclude list are needed to
+validate the constraint, the constraint is ignored.
+Raise a ValidationError if the constraint is violated.
+This method must be implemented by a subclass.
+
+
+
+CheckConstraint¶
+
+
+class CheckConstraint(*, check, name, violation_error_code=None, violation_error_message=None)[source]¶
+Creates a check constraint in the database.
+
+
+check¶
+
+
+CheckConstraint.check¶
+
+A Q object or boolean Expression that
+specifies the check you want the constraint to enforce.
+For example, CheckConstraint(check=Q(age__gte=18), name='age_gte_18')
+ensures the age field is never less than 18.
+
+Expression order
+Q argument order is not necessarily preserved, however the order of
+Q expressions themselves are preserved. This may be important for
+databases that preserve check constraint expression order for performance
+reasons. For example, use the following format if order matters:
+
+
+
+Oracle
+Checks with nullable fields on Oracle must include a condition allowing for
+NULL values in order for validate()
+to behave the same as check constraints validation. For example, if age
+is a nullable field:
+
+
+
+
+
+UniqueConstraint¶
+
+
+class UniqueConstraint(*expressions, fields=(), name=None, condition=None, deferrable=None, include=None, opclasses=(), nulls_distinct=None, violation_error_code=None, violation_error_message=None)[source]¶
+Creates a unique constraint in the database.
+
+
+expressions¶
+
+
+UniqueConstraint.expressions¶
+
+Positional argument *expressions allows creating functional unique
+constraints on expressions and database functions.
+For example:
+
+creates a unique constraint on the lowercased value of the name field in
+descending order and the category field in the default ascending order.
+Functional unique constraints have the same database restrictions as
+Index.expressions.
+
+
+fields¶
+
+
+UniqueConstraint.fields¶
+
+A list of field names that specifies the unique set of columns you want the
+constraint to enforce.
+For example, UniqueConstraint(fields=['room', 'date'],
+name='unique_booking') ensures each room can only be booked once for each
+date.
+
+
+condition¶
+
+
+UniqueConstraint.condition¶
+
+A Q object that specifies the condition you want the constraint to
+enforce.
+For example:
+
+ensures that each user only has one draft.
+These conditions have the same database restrictions as
+Index.condition.
+
+
+deferrable¶
+
+
+UniqueConstraint.deferrable¶
+
+Set this parameter to create a deferrable unique constraint. Accepted values
+are Deferrable.DEFERRED or Deferrable.IMMEDIATE. For example:
+
+By default constraints are not deferred. A deferred constraint will not be
+enforced until the end of the transaction. An immediate constraint will be
+enforced immediately after every command.
+
+MySQL, MariaDB, and SQLite.
+Deferrable unique constraints are ignored on MySQL, MariaDB, and SQLite as
+neither supports them.
+
+
+Warning
+Deferred unique constraints may lead to a performance penalty.
+
+
+
+include¶
+
+
+UniqueConstraint.include¶
+
+A list or tuple of the names of the fields to be included in the covering
+unique index as non-key columns. This allows index-only scans to be used for
+queries that select only included fields (include)
+and filter only by unique fields (fields).
+For example:
+
+will allow filtering on room and date, also selecting full_name,
+while fetching data only from the index.
+Unique constraints with non-key columns are ignored for databases besides
+PostgreSQL.
+Non-key columns have the same database restrictions as Index.include.
+
+
+opclasses¶
+
+
+UniqueConstraint.opclasses¶
+
+The names of the PostgreSQL operator classes to use for
+this unique index. If you require a custom operator class, you must provide one
+for each field in the index.
+For example:
+
+creates a unique index on username using varchar_pattern_ops.
+opclasses are ignored for databases besides PostgreSQL.
+
+
+nulls_distinct¶
+
+New in Django 5.0. 
+
+
+UniqueConstraint.nulls_distinct¶
+
+Whether rows containing NULL values covered by the unique constraint should
+be considered distinct from each other. The default value is None which
+uses the database default which is True on most backends.
+For example:
+
+creates a unique constraint that only allows one row to store a NULL value
+in the ordering column.
+Unique constraints with nulls_distinct are ignored for databases besides
+PostgreSQL 15+.
+
+
+violation_error_code¶
+
+New in Django 5.0. 
+
+
+UniqueConstraint.violation_error_code¶
+
+The error code used when ValidationError is raised during
+model validation. Defaults to None.
+This code is not used for UniqueConstraints with
+fields and without a
+condition. Such UniqueConstraints have the
+same error code as constraints defined with Field.unique or in
+Meta.unique_together.
+
+
+violation_error_message¶
+
+
+UniqueConstraint.violation_error_message¶
+
+The error message used when ValidationError is raised during
+model validation. Defaults to
+BaseConstraint.violation_error_message.
+This message is not used for UniqueConstraints with
+fields and without a
+condition. Such UniqueConstraints show the
+same message as constraints defined with
+Field.unique or in
+Meta.unique_together.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Constraints reference¶
+The classes defined in this module create database constraints. They are added
+in the model Meta.constraints
+option.
+
+Referencing built-in constraints
+Constraints are defined in django.db.models.constraints, but for
+convenience they’re imported into django.db.models. The standard
+convention is to use from django.db import models and refer to the
+constraints as models.<Foo>Constraint.
+
+
+Constraints in abstract base classes
+You must always specify a unique name for the constraint. As such, you
+cannot normally specify a constraint on an abstract base class, since the
+Meta.constraints option is
+inherited by subclasses, with exactly the same values for the attributes
+(including name) each time. To work around name collisions, part of the
+name may contain '%(app_label)s' and '%(class)s', which are
+replaced, respectively, by the lowercased app label and class name of the
+concrete model. For example CheckConstraint(check=Q(age__gte=18),
+name='%(app_label)s_%(class)s_is_adult').
+
+
+Validation of Constraints
+Constraints are checked during the model validation.
+
+
+Validation of Constraints with JSONField
+Constraints containing JSONField may not raise
+validation errors as key, index, and path transforms have many
+database-specific caveats. This may be fully supported later.
+You should always check that there are no log messages, in the
+django.db.models logger, like “Got a database error calling check() on
+…” to confirm it’s validated properly.
+
+
+BaseConstraint¶
+
+
+class BaseConstraint(*name, violation_error_code=None, violation_error_message=None)[source]¶
+Base class for all constraints. Subclasses must implement
+constraint_sql(), create_sql(), remove_sql() and
+validate() methods.
+
+Deprecated since version 5.0: Support for passing positional arguments is deprecated.
+
+
+All constraints have the following parameters in common:
+
+name¶
+
+
+BaseConstraint.name¶
+
+The name of the constraint. You must always specify a unique name for the
+constraint.
+
+
+violation_error_code¶
+
+New in Django 5.0. 
+
+
+BaseConstraint.violation_error_code¶
+
+The error code used when ValidationError is raised during
+model validation. Defaults to None.
+
+
+violation_error_message¶
+
+
+BaseConstraint.violation_error_message¶
+
+The error message used when ValidationError is raised during
+model validation. Defaults to
+"Constraint “%(name)s” is violated.".
+
+
+validate()¶
+
+
+BaseConstraint.validate(model, instance, exclude=None, using=DEFAULT_DB_ALIAS)[source]¶
+
+Validates that the constraint, defined on model, is respected on the
+instance. This will do a query on the database to ensure that the
+constraint is respected. If fields in the exclude list are needed to
+validate the constraint, the constraint is ignored.
+Raise a ValidationError if the constraint is violated.
+This method must be implemented by a subclass.
+
+
+
+CheckConstraint¶
+
+
+class CheckConstraint(*, check, name, violation_error_code=None, violation_error_message=None)[source]¶
+Creates a check constraint in the database.
+
+
+check¶
+
+
+CheckConstraint.check¶
+
+A Q object or boolean Expression that
+specifies the check you want the constraint to enforce.
+For example, CheckConstraint(check=Q(age__gte=18), name='age_gte_18')
+ensures the age field is never less than 18.
+
+Expression order
+Q argument order is not necessarily preserved, however the order of
+Q expressions themselves are preserved. This may be important for
+databases that preserve check constraint expression order for performance
+reasons. For example, use the following format if order matters:
+
+
+
+Oracle
+Checks with nullable fields on Oracle must include a condition allowing for
+NULL values in order for validate()
+to behave the same as check constraints validation. For example, if age
+is a nullable field:
+
+
+
+
+
+UniqueConstraint¶
+
+
+class UniqueConstraint(*expressions, fields=(), name=None, condition=None, deferrable=None, include=None, opclasses=(), nulls_distinct=None, violation_error_code=None, violation_error_message=None)[source]¶
+Creates a unique constraint in the database.
+
+
+expressions¶
+
+
+UniqueConstraint.expressions¶
+
+Positional argument *expressions allows creating functional unique
+constraints on expressions and database functions.
+For example:
+
+creates a unique constraint on the lowercased value of the name field in
+descending order and the category field in the default ascending order.
+Functional unique constraints have the same database restrictions as
+Index.expressions.
+
+
+fields¶
+
+
+UniqueConstraint.fields¶
+
+A list of field names that specifies the unique set of columns you want the
+constraint to enforce.
+For example, UniqueConstraint(fields=['room', 'date'],
+name='unique_booking') ensures each room can only be booked once for each
+date.
+
+
+condition¶
+
+
+UniqueConstraint.condition¶
+
+A Q object that specifies the condition you want the constraint to
+enforce.
+For example:
+
+ensures that each user only has one draft.
+These conditions have the same database restrictions as
+Index.condition.
+
+
+deferrable¶
+
+
+UniqueConstraint.deferrable¶
+
+Set this parameter to create a deferrable unique constraint. Accepted values
+are Deferrable.DEFERRED or Deferrable.IMMEDIATE. For example:
+
+By default constraints are not deferred. A deferred constraint will not be
+enforced until the end of the transaction. An immediate constraint will be
+enforced immediately after every command.
+
+MySQL, MariaDB, and SQLite.
+Deferrable unique constraints are ignored on MySQL, MariaDB, and SQLite as
+neither supports them.
+
+
+Warning
+Deferred unique constraints may lead to a performance penalty.
+
+
+
+include¶
+
+
+UniqueConstraint.include¶
+
+A list or tuple of the names of the fields to be included in the covering
+unique index as non-key columns. This allows index-only scans to be used for
+queries that select only included fields (include)
+and filter only by unique fields (fields).
+For example:
+
+will allow filtering on room and date, also selecting full_name,
+while fetching data only from the index.
+Unique constraints with non-key columns are ignored for databases besides
+PostgreSQL.
+Non-key columns have the same database restrictions as Index.include.
+
+
+opclasses¶
+
+
+UniqueConstraint.opclasses¶
+
+The names of the PostgreSQL operator classes to use for
+this unique index. If you require a custom operator class, you must provide one
+for each field in the index.
+For example:
+
+creates a unique index on username using varchar_pattern_ops.
+opclasses are ignored for databases besides PostgreSQL.
+
+
+nulls_distinct¶
+
+New in Django 5.0. 
+
+
+UniqueConstraint.nulls_distinct¶
+
+Whether rows containing NULL values covered by the unique constraint should
+be considered distinct from each other. The default value is None which
+uses the database default which is True on most backends.
+For example:
+
+creates a unique constraint that only allows one row to store a NULL value
+in the ordering column.
+Unique constraints with nulls_distinct are ignored for databases besides
+PostgreSQL 15+.
+
+
+violation_error_code¶
+
+New in Django 5.0. 
+
+
+UniqueConstraint.violation_error_code¶
+
+The error code used when ValidationError is raised during
+model validation. Defaults to None.
+This code is not used for UniqueConstraints with
+fields and without a
+condition. Such UniqueConstraints have the
+same error code as constraints defined with Field.unique or in
+Meta.unique_together.
+
+
+violation_error_message¶
+
+
+UniqueConstraint.violation_error_message¶
+
+The error message used when ValidationError is raised during
+model validation. Defaults to
+BaseConstraint.violation_error_message.
+This message is not used for UniqueConstraints with
+fields and without a
+condition. Such UniqueConstraints show the
+same message as constraints defined with
+Field.unique or in
+Meta.unique_together.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

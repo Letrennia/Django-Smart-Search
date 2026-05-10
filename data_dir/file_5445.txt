@@ -1,0 +1,304 @@
+https://docs.djangoproject.com/en/1.11/ref/class-based-views/generic-display/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Generic display views¶
+The two following generic class-based views are designed to display data. On
+many projects they are typically the most commonly used views.
+
+DetailView¶
+
+
+class django.views.generic.detail.DetailView¶
+While this view is executing, self.object will contain the object that
+the view is operating upon.
+Ancestors (MRO)
+This view inherits methods and attributes from the following views:
+
+django.views.generic.detail.SingleObjectTemplateResponseMixin
+django.views.generic.base.TemplateResponseMixin
+django.views.generic.detail.BaseDetailView
+django.views.generic.detail.SingleObjectMixin
+django.views.generic.base.View
+
+Method Flowchart
+
+dispatch()
+http_method_not_allowed()
+get_template_names()
+get_slug_field()
+get_queryset()
+get_object()
+get_context_object_name()
+get_context_data()
+get()
+render_to_response()
+
+Example myapp/views.py:
+
+Example myapp/urls.py:
+
+Example myapp/article_detail.html:
+<h1>{{ object.headline }}</h1>
+<p>{{ object.content }}</p>
+<p>Reporter: {{ object.reporter }}</p>
+<p>Published: {{ object.pub_date|date }}</p>
+<p>Date: {{ now|date }}</p>
+
+
+
+
+
+ListView¶
+
+
+class django.views.generic.list.ListView¶
+A page representing a list of objects.
+While this view is executing, self.object_list will contain the list of
+objects (usually, but not necessarily a queryset) that the view is
+operating upon.
+Ancestors (MRO)
+This view inherits methods and attributes from the following views:
+
+django.views.generic.list.MultipleObjectTemplateResponseMixin
+django.views.generic.base.TemplateResponseMixin
+django.views.generic.list.BaseListView
+django.views.generic.list.MultipleObjectMixin
+django.views.generic.base.View
+
+Method Flowchart
+
+dispatch()
+http_method_not_allowed()
+get_template_names()
+get_queryset()
+get_context_object_name()
+get_context_data()
+get()
+render_to_response()
+
+Example views.py:
+
+Example myapp/urls.py:
+
+Example myapp/article_list.html:
+<h1>Articles</h1>
+<ul>
+{% for article in object_list %}
+    <li>{{ article.pub_date|date }} - {{ article.headline }}</li>
+{% empty %}
+    <li>No articles yet.</li>
+{% endfor %}
+</ul>
+
+
+
+
+
+class django.views.generic.list.BaseListView¶
+A base view for displaying a list of objects. It is not intended to be used
+directly, but rather as a parent class of the
+django.views.generic.list.ListView or other views representing
+lists of objects.
+Ancestors (MRO)
+This view inherits methods and attributes from the following views:
+
+django.views.generic.list.MultipleObjectMixin
+django.views.generic.base.View
+
+Methods
+
+
+get(request, *args, **kwargs)¶
+Adds object_list to the context. If
+allow_empty
+is True then display an empty list. If
+allow_empty is
+False then raise a 404 error.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Generic display views¶
+The two following generic class-based views are designed to display data. On
+many projects they are typically the most commonly used views.
+
+DetailView¶
+
+
+class django.views.generic.detail.DetailView¶
+While this view is executing, self.object will contain the object that
+the view is operating upon.
+Ancestors (MRO)
+This view inherits methods and attributes from the following views:
+
+django.views.generic.detail.SingleObjectTemplateResponseMixin
+django.views.generic.base.TemplateResponseMixin
+django.views.generic.detail.BaseDetailView
+django.views.generic.detail.SingleObjectMixin
+django.views.generic.base.View
+
+Method Flowchart
+
+dispatch()
+http_method_not_allowed()
+get_template_names()
+get_slug_field()
+get_queryset()
+get_object()
+get_context_object_name()
+get_context_data()
+get()
+render_to_response()
+
+Example myapp/views.py:
+
+Example myapp/urls.py:
+
+Example myapp/article_detail.html:
+<h1>{{ object.headline }}</h1>
+<p>{{ object.content }}</p>
+<p>Reporter: {{ object.reporter }}</p>
+<p>Published: {{ object.pub_date|date }}</p>
+<p>Date: {{ now|date }}</p>
+
+
+
+
+
+ListView¶
+
+
+class django.views.generic.list.ListView¶
+A page representing a list of objects.
+While this view is executing, self.object_list will contain the list of
+objects (usually, but not necessarily a queryset) that the view is
+operating upon.
+Ancestors (MRO)
+This view inherits methods and attributes from the following views:
+
+django.views.generic.list.MultipleObjectTemplateResponseMixin
+django.views.generic.base.TemplateResponseMixin
+django.views.generic.list.BaseListView
+django.views.generic.list.MultipleObjectMixin
+django.views.generic.base.View
+
+Method Flowchart
+
+dispatch()
+http_method_not_allowed()
+get_template_names()
+get_queryset()
+get_context_object_name()
+get_context_data()
+get()
+render_to_response()
+
+Example views.py:
+
+Example myapp/urls.py:
+
+Example myapp/article_list.html:
+<h1>Articles</h1>
+<ul>
+{% for article in object_list %}
+    <li>{{ article.pub_date|date }} - {{ article.headline }}</li>
+{% empty %}
+    <li>No articles yet.</li>
+{% endfor %}
+</ul>
+
+
+
+
+
+class django.views.generic.list.BaseListView¶
+A base view for displaying a list of objects. It is not intended to be used
+directly, but rather as a parent class of the
+django.views.generic.list.ListView or other views representing
+lists of objects.
+Ancestors (MRO)
+This view inherits methods and attributes from the following views:
+
+django.views.generic.list.MultipleObjectMixin
+django.views.generic.base.View
+
+Methods
+
+
+get(request, *args, **kwargs)¶
+Adds object_list to the context. If
+allow_empty
+is True then display an empty list. If
+allow_empty is
+False then raise a 404 error.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,138 @@
+https://docs.djangoproject.com/en/2.2/ref/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+API Reference¶
+
+
+Applications
+System check framework
+Built-in class-based views API
+Clickjacking Protection
+contrib packages
+Cross Site Request Forgery protection
+Databases
+django-admin and manage.py
+Running management commands from your code
+Django Exceptions
+File handling
+Forms
+Middleware
+Migration Operations
+Models
+Request and response objects
+SchemaEditor
+Settings
+Signals
+Templates
+TemplateResponse and SimpleTemplateResponse
+Unicode data
+django.urls utility functions
+django.urls functions for use in URLconfs
+django.conf.urls functions for use in URLconfs
+Django Utils
+Validators
+Built-in Views
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+API Reference¶
+
+
+Applications
+System check framework
+Built-in class-based views API
+Clickjacking Protection
+contrib packages
+Cross Site Request Forgery protection
+Databases
+django-admin and manage.py
+Running management commands from your code
+Django Exceptions
+File handling
+Forms
+Middleware
+Migration Operations
+Models
+Request and response objects
+SchemaEditor
+Settings
+Signals
+Templates
+TemplateResponse and SimpleTemplateResponse
+Unicode data
+django.urls utility functions
+django.urls functions for use in URLconfs
+django.conf.urls functions for use in URLconfs
+Django Utils
+Validators
+Built-in Views
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
