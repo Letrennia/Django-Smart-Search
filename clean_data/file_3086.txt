@@ -1,0 +1,173 @@
+https://docs.djangoproject.com/en/3.1/internals/contributing/
+Contributing to Django 
+Django is a community that lives on its volunteers. As it keeps growing, we
+always need more people to help others. As soon as you learn Django, you can
+contribute in many ways:
+Join the Django forum. This forum is a place for discussing the Django
+framework and applications and projects that use it. This is also a good
+place to ask and answer any questions related to installing, using, or
+contributing to Django.
+Join the django-users mailing list and answer questions. This
+mailing list has a huge audience, and we really want to maintain a
+friendly and helpful atmosphere. If you're new to the Django community,
+you should read the posting guidelines.
+Join the #django IRC channel on Libera.Chat and answer questions. By
+explaining Django to other users, you're going to learn a lot about the
+framework yourself.
+Blog about Django. We syndicate all the Django blogs we know about on
+the community page; if you'd like to see your blog on that page you
+can register it here.
+Contribute to open-source Django projects, write some documentation, or
+release your own code as an open-source pluggable application. The
+ecosystem of pluggable applications is a big strength of Django, help us
+build it!
+If you think working with Django is fun, wait until you start working on
+it. We're passionate about helping Django users make the jump to contributing
+members of the community, so there are several ways you can help Django's
+development:
+Report bugs in our ticket tracker.
+Join the django-developers mailing list and share your ideas for how
+to improve Django. We're always open to suggestions. You can also interact
+on the #django-dev IRC channel.
+Submit patches for new and/or
+fixed behavior. If you're looking for a way to get started contributing
+to Django read the Writing your first patch for Django tutorial and have a look at the
+easy pickings tickets. The Patch review checklist will also be
+helpful.
+Improve the documentation or
+write unit tests.
+Triage tickets and review patches created by
+other users.
+Really, ANYONE can do something to help make Django better and greater!
+Browse the following sections to find out how:
+Advice for new contributors
+First steps
+Guidelines
+FAQ
+Reporting bugs and requesting features
+Reporting bugs
+Reporting user interface bugs and features
+Requesting features
+How we make decisions
+Triaging tickets
+Triage workflow
+Triage stages
+Other triage attributes
+Closing Tickets
+How can I help with triaging?
+Bisecting a regression
+Writing code
+Coding style
+Unit tests
+Submitting patches
+Working with Git and GitHub
+JavaScript
+Writing documentation
+Getting the raw documentation
+Getting started with Sphinx
+How the documentation is organized
+Writing style
+Commonly used terms
+Django-specific terminology
+Guidelines for reStructuredText files
+Django-specific markup
+Documenting new features
+Minimizing images
+An example
+Spelling check
+Translating documentation
+django-admin man page
+Localizing Django
+Translations
+Formats
+Documentation
+Committing code
+Handling pull requests
+Committing guidelines
+Reverting commits
+Contributing to Django 
+Django is a community that lives on its volunteers. As it keeps growing, we
+always need more people to help others. As soon as you learn Django, you can
+contribute in many ways:
+Join the Django forum. This forum is a place for discussing the Django
+framework and applications and projects that use it. This is also a good
+place to ask and answer any questions related to installing, using, or
+contributing to Django.
+Join the django-users mailing list and answer questions. This
+mailing list has a huge audience, and we really want to maintain a
+friendly and helpful atmosphere. If you're new to the Django community,
+you should read the posting guidelines.
+Join the #django IRC channel on Libera.Chat and answer questions. By
+explaining Django to other users, you're going to learn a lot about the
+framework yourself.
+Blog about Django. We syndicate all the Django blogs we know about on
+the community page; if you'd like to see your blog on that page you
+can register it here.
+Contribute to open-source Django projects, write some documentation, or
+release your own code as an open-source pluggable application. The
+ecosystem of pluggable applications is a big strength of Django, help us
+build it!
+If you think working with Django is fun, wait until you start working on
+it. We're passionate about helping Django users make the jump to contributing
+members of the community, so there are several ways you can help Django's
+development:
+Report bugs in our ticket tracker.
+Join the django-developers mailing list and share your ideas for how
+to improve Django. We're always open to suggestions. You can also interact
+on the #django-dev IRC channel.
+Submit patches for new and/or
+fixed behavior. If you're looking for a way to get started contributing
+to Django read the Writing your first patch for Django tutorial and have a look at the
+easy pickings tickets. The Patch review checklist will also be
+helpful.
+Improve the documentation or
+write unit tests.
+Triage tickets and review patches created by
+other users.
+Really, ANYONE can do something to help make Django better and greater!
+Browse the following sections to find out how:
+Advice for new contributors
+First steps
+Guidelines
+FAQ
+Reporting bugs and requesting features
+Reporting bugs
+Reporting user interface bugs and features
+Requesting features
+How we make decisions
+Triaging tickets
+Triage workflow
+Triage stages
+Other triage attributes
+Closing Tickets
+How can I help with triaging?
+Bisecting a regression
+Writing code
+Coding style
+Unit tests
+Submitting patches
+Working with Git and GitHub
+JavaScript
+Writing documentation
+Getting the raw documentation
+Getting started with Sphinx
+How the documentation is organized
+Writing style
+Commonly used terms
+Django-specific terminology
+Guidelines for reStructuredText files
+Django-specific markup
+Documenting new features
+Minimizing images
+An example
+Spelling check
+Translating documentation
+django-admin man page
+Localizing Django
+Translations
+Formats
+Documentation
+Committing code
+Handling pull requests
+Committing guidelines
+Reverting commits

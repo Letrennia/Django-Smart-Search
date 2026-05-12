@@ -1,0 +1,91 @@
+https://docs.djangoproject.com/en/1.11/topics/db/examples/many_to_many/
+Many-to-many relationships 
+To define a many-to-many relationship, use
+ManyToManyField.
+In this example, an Article can be published in multiple Publication
+objects, and a Publication has multiple Article objects:
+What follows are examples of operations that can be performed using the Python
+API facilities. Note that if you are using an intermediate model for a many-to-many relationship, some of the related
+manager's methods are disabled, so some of these examples won't work with such
+models.
+Create a couple of Publications:
+Create an Article:
+You can't associate it with a Publication until it's been saved:
+Save it!
+Associate the Article with a Publication:
+Create another Article, and set it to appear in both Publications:
+Adding a second time is OK:
+Adding an object of the wrong type raises TypeError:
+Create and add a Publication to an Article in one step using
+create():
+Article objects have access to their related Publication objects:
+Publication objects have access to their related Article objects:
+Many-to-many relationships can be queried using lookups across
+relationships:
+The count() function respects
+distinct() as well:
+Reverse m2m queries are supported (i.e., starting at the table that doesn't have
+a ManyToManyField):
+Excluding a related item works as you would expect, too (although the SQL
+involved is a little complex):
+If we delete a Publication, its Articles won't be able to access it:
+If we delete an Article, its Publications won't be able to access it:
+Adding via the 'other' end of an m2m:
+Adding via the other end using keywords:
+Removing Publication from an Article:
+And from the other end:
+Relation sets can be set:
+Relation sets can be cleared:
+And you can clear from the other end:
+Recreate the Article and Publication we have deleted:
+Bulk delete some Publications - references to deleted publications should
+go:
+Bulk delete some articles - references to deleted objects should go:
+After the delete(), the
+QuerySet cache needs to be cleared, and the
+referenced objects should be gone:
+Many-to-many relationships 
+To define a many-to-many relationship, use
+ManyToManyField.
+In this example, an Article can be published in multiple Publication
+objects, and a Publication has multiple Article objects:
+What follows are examples of operations that can be performed using the Python
+API facilities. Note that if you are using an intermediate model for a many-to-many relationship, some of the related
+manager's methods are disabled, so some of these examples won't work with such
+models.
+Create a couple of Publications:
+Create an Article:
+You can't associate it with a Publication until it's been saved:
+Save it!
+Associate the Article with a Publication:
+Create another Article, and set it to appear in both Publications:
+Adding a second time is OK:
+Adding an object of the wrong type raises TypeError:
+Create and add a Publication to an Article in one step using
+create():
+Article objects have access to their related Publication objects:
+Publication objects have access to their related Article objects:
+Many-to-many relationships can be queried using lookups across
+relationships:
+The count() function respects
+distinct() as well:
+Reverse m2m queries are supported (i.e., starting at the table that doesn't have
+a ManyToManyField):
+Excluding a related item works as you would expect, too (although the SQL
+involved is a little complex):
+If we delete a Publication, its Articles won't be able to access it:
+If we delete an Article, its Publications won't be able to access it:
+Adding via the 'other' end of an m2m:
+Adding via the other end using keywords:
+Removing Publication from an Article:
+And from the other end:
+Relation sets can be set:
+Relation sets can be cleared:
+And you can clear from the other end:
+Recreate the Article and Publication we have deleted:
+Bulk delete some Publications - references to deleted publications should
+go:
+Bulk delete some articles - references to deleted objects should go:
+After the delete(), the
+QuerySet cache needs to be cleared, and the
+referenced objects should be gone:

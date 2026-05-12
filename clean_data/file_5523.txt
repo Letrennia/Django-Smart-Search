@@ -1,0 +1,31 @@
+https://docs.djangoproject.com/en/1.11/ref/models/
+Models 
+Model API reference. For introductory material, see Models.
+Model field reference
+Field attribute reference
+Model index reference
+Model _meta API
+Related objects reference
+Model class reference
+Model Meta options
+Model instance reference
+QuerySet API reference
+Lookup API reference
+Query Expressions
+Conditional Expressions
+Database Functions
+Models 
+Model API reference. For introductory material, see Models.
+Model field reference
+Field attribute reference
+Model index reference
+Model _meta API
+Related objects reference
+Model class reference
+Model Meta options
+Model instance reference
+QuerySet API reference
+Lookup API reference
+Query Expressions
+Conditional Expressions
+Database Functions

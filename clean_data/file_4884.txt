@@ -1,0 +1,297 @@
+https://docs.djangoproject.com/en/1.8/internals/team/
+Django Software Foundation
+Teams
+    
+    The following teams are groups of people who support the Django project and the Django Software Foundation. Apart from the Django Fellows, who are paid contractors, all of these contributors are volunteers. Most teams are distinct, contactable groups with their own set of goals. Some roles are also listed, such as Mergers and Releasers, which are individuals with elevated permissions rather than formal teams. For an overview of how the Django Project is organized and the principles that guide it, see the  organization and principles  page.
+  
+Accessibility team 
+The Accessibility team encourages projects maintained by the Django Software Foundation to be accessible to as many people as possible, particularly those with disabilities that make using the web more difficult. For more information, see the accessibility team charter. Find us on: Accessibility on the forum, #accessibility on Discord, or if neither work for you use the Contact us page.
+Eliana Rosselli
+Rahmat Akintola
+Sage Abdullah
+Saptak Sengupta
+Sarah Abderemane
+Thibaud Colas
+Tom Carrick
+Code of Conduct working group 
+The Code of Conduct WG handles reports of violations to the Django Code of Conduct. Please report violations to conduct@djangoproject.com. If the report involves a member of the Code of Conduct WG, you may instead contact the chair, Dan Ryan (d@dryan.com), or the vice chair, Elena Williams (ele.wil@gmail.com). For more information, see the Code of Conduct documentation.
+Ariane Djeupang
+Dan Ryan
+Elena Williams
+Jeff Triplett
+Natalia Bidart
+Priya Pahwa
+Thibaud Colas
+Django Fellows 
+Django Fellows are paid contractors, funded by the DSF, who help maintain and manage the Django project. They handle essential tasks like triaging tickets, reviewing and merging community patches, managing and publishing releases, and ensuring security issues are resolved quickly. By supporting the community's contributions and keeping releases on schedule, Fellows help Django remain stable and actively developed. See the Django Fellowship Program for more details.
+Jacob Walls
+Natalia Bidart
+Sarah Boyce
+Events support working group 
+The Events Support working group supports organizers of Django-related events globally, including DjangoCon conferences. For more information, see the events support charter. Find us on: Events on the forum and #events-organization on Discord.
+Benjamin Balder Bach
+Cagil Ulusahin Sonmez
+David Vaz
+Paolo Melchiorre
+Theresa Seyram Agbenyegah
+Thibaud Colas
+Fellowship working group 
+The Fellowship Working Group manages the Django Fellowship Program. For more information, view the Fellowship WG charter.
+Andrew Godwin
+Carlton Gibson
+Jeff Triplett
+Tom Carrick
+Fundraising working group 
+The Fundraising Working Group coordinates fundraising efforts, particularly around corporate and major donations. For more information, view the Fundraising WG charter.
+Abigail Afi Gbadago
+Catherine Holmes
+Chris Adams
+Eliana Rosselli
+Jacob Kaplan-Moss
+Priya Pahwa
+Sarah Abderemane
+Stephanie Goulet
+Thibaud Colas
+Tom Carrick
+Mergers 
+Mergers take care of merging pull requests to the Django Git repository. For more information, see the Mergers role and prerogatives.
+Claude Paroz
+Jacob Walls
+Mariusz Felisiak
+Natalia Bidart
+Sarah Boyce
+Online Community working group 
+The Online Community Working Group supports the official community platforms and those in elevated roles on those platforms. For more information, view the Online Community WG charter.
+Andy Miller
+Ben Cardy
+Dan Ryan
+Natalia Bidart
+Patryk Bratkowski
+Tom Carrick
+Ops team 
+The ops team maintains Django's infrastructure like the Django Project server, Trac instance, and continuous integration infrastructure.
+The ops team is sufficiently staffed at this time. Membership is by invitation. As needed, the team may make a call for help on the django-developers mailing list.
+Baptiste Mispelon
+Mariusz Felisiak
+Markus Holtermann
+Natalia Bidart
+Sarah Boyce
+Tobias McNulty
+Releasers 
+Releasers take care of building Django releases. For more information, see the Releasers role and prerogatives.
+Jacob Walls
+Mariusz Felisiak
+Natalia Bidart
+Sarah Boyce
+Security team 
+The security team is responsible for Django's security policies. It handles private reports of security issues.
+Membership is by invitation.
+Adam Johnson
+Jacob Walls
+Jake Howard
+Mariusz Felisiak
+Markus Holtermann
+Michael Manfre
+Natalia Bidart
+Paul McMillan
+Sarah Boyce
+Shai Berger
+Simon Charette
+Social Media Working Group 
+The Social Media Working Group manages Django's official social media profiles on behalf of the Django Software Foundation. For more information, view the Social Media WG charter.
+Benjamin Balder Bach
+Bhuvnesh Sharma
+Cory Zue
+Jason Judkins
+Sarah Abderemane
+Sarah Boyce
+Thibaud Colas
+Steering Council 
+The Steering Council is a group of experienced contributors, whose goal is twofold - to safeguard big decisions that affect Django projects at a fundamental level, and to help shepherd the project's future direction. For more information, see the Steering Council role and prerogatives.
+Carlton Gibson
+Emmanuelle Delescolle
+Frank Wiles
+Lily Foote
+Tim Schilling
+Triage & review team 
+The triage & review team assists with the processing of pull requests. For more information, see the DEP-10 definition of the Triage & review team.
+Clifford Gama
+David Sanders
+David Smith
+Hasan Ramezani
+Jacob Walls
+JaeHyuck Sa
+Lilian Tran
+Lily Foote
+Mariusz Felisiak
+Mike Edmunds
+Natalia Bidart
+Nick Pope
+Raffaella Suardini
+Sarah Boyce
+SiHyunLee
+Simon Charette
+Tim Graham
+Website working group 
+The Website Working Group maintains the website codebase, and liaises with the ops team for production infrastructure considerations.. For more information, view the Website WG charter.
+Adam Zapletal
+Alex Gómez
+Baptiste Mispelon
+Jason Judkins
+Mark Walker
+Paolo Melchiorre
+Ronald Maravanyika
+Sanyam Khurana
+Saptak Sengupta
+Sarah Abderemane
+Storm Heg
+Tobias McNulty
+Ülgen Sarıkavak
+Django Software Foundation
+Teams
+    
+    The following teams are groups of people who support the Django project and the Django Software Foundation. Apart from the Django Fellows, who are paid contractors, all of these contributors are volunteers. Most teams are distinct, contactable groups with their own set of goals. Some roles are also listed, such as Mergers and Releasers, which are individuals with elevated permissions rather than formal teams. For an overview of how the Django Project is organized and the principles that guide it, see the  organization and principles  page.
+  
+Accessibility team 
+The Accessibility team encourages projects maintained by the Django Software Foundation to be accessible to as many people as possible, particularly those with disabilities that make using the web more difficult. For more information, see the accessibility team charter. Find us on: Accessibility on the forum, #accessibility on Discord, or if neither work for you use the Contact us page.
+Eliana Rosselli
+Rahmat Akintola
+Sage Abdullah
+Saptak Sengupta
+Sarah Abderemane
+Thibaud Colas
+Tom Carrick
+Code of Conduct working group 
+The Code of Conduct WG handles reports of violations to the Django Code of Conduct. Please report violations to conduct@djangoproject.com. If the report involves a member of the Code of Conduct WG, you may instead contact the chair, Dan Ryan (d@dryan.com), or the vice chair, Elena Williams (ele.wil@gmail.com). For more information, see the Code of Conduct documentation.
+Ariane Djeupang
+Dan Ryan
+Elena Williams
+Jeff Triplett
+Natalia Bidart
+Priya Pahwa
+Thibaud Colas
+Django Fellows 
+Django Fellows are paid contractors, funded by the DSF, who help maintain and manage the Django project. They handle essential tasks like triaging tickets, reviewing and merging community patches, managing and publishing releases, and ensuring security issues are resolved quickly. By supporting the community's contributions and keeping releases on schedule, Fellows help Django remain stable and actively developed. See the Django Fellowship Program for more details.
+Jacob Walls
+Natalia Bidart
+Sarah Boyce
+Events support working group 
+The Events Support working group supports organizers of Django-related events globally, including DjangoCon conferences. For more information, see the events support charter. Find us on: Events on the forum and #events-organization on Discord.
+Benjamin Balder Bach
+Cagil Ulusahin Sonmez
+David Vaz
+Paolo Melchiorre
+Theresa Seyram Agbenyegah
+Thibaud Colas
+Fellowship working group 
+The Fellowship Working Group manages the Django Fellowship Program. For more information, view the Fellowship WG charter.
+Andrew Godwin
+Carlton Gibson
+Jeff Triplett
+Tom Carrick
+Fundraising working group 
+The Fundraising Working Group coordinates fundraising efforts, particularly around corporate and major donations. For more information, view the Fundraising WG charter.
+Abigail Afi Gbadago
+Catherine Holmes
+Chris Adams
+Eliana Rosselli
+Jacob Kaplan-Moss
+Priya Pahwa
+Sarah Abderemane
+Stephanie Goulet
+Thibaud Colas
+Tom Carrick
+Mergers 
+Mergers take care of merging pull requests to the Django Git repository. For more information, see the Mergers role and prerogatives.
+Claude Paroz
+Jacob Walls
+Mariusz Felisiak
+Natalia Bidart
+Sarah Boyce
+Online Community working group 
+The Online Community Working Group supports the official community platforms and those in elevated roles on those platforms. For more information, view the Online Community WG charter.
+Andy Miller
+Ben Cardy
+Dan Ryan
+Natalia Bidart
+Patryk Bratkowski
+Tom Carrick
+Ops team 
+The ops team maintains Django's infrastructure like the Django Project server, Trac instance, and continuous integration infrastructure.
+The ops team is sufficiently staffed at this time. Membership is by invitation. As needed, the team may make a call for help on the django-developers mailing list.
+Baptiste Mispelon
+Mariusz Felisiak
+Markus Holtermann
+Natalia Bidart
+Sarah Boyce
+Tobias McNulty
+Releasers 
+Releasers take care of building Django releases. For more information, see the Releasers role and prerogatives.
+Jacob Walls
+Mariusz Felisiak
+Natalia Bidart
+Sarah Boyce
+Security team 
+The security team is responsible for Django's security policies. It handles private reports of security issues.
+Membership is by invitation.
+Adam Johnson
+Jacob Walls
+Jake Howard
+Mariusz Felisiak
+Markus Holtermann
+Michael Manfre
+Natalia Bidart
+Paul McMillan
+Sarah Boyce
+Shai Berger
+Simon Charette
+Social Media Working Group 
+The Social Media Working Group manages Django's official social media profiles on behalf of the Django Software Foundation. For more information, view the Social Media WG charter.
+Benjamin Balder Bach
+Bhuvnesh Sharma
+Cory Zue
+Jason Judkins
+Sarah Abderemane
+Sarah Boyce
+Thibaud Colas
+Steering Council 
+The Steering Council is a group of experienced contributors, whose goal is twofold - to safeguard big decisions that affect Django projects at a fundamental level, and to help shepherd the project's future direction. For more information, see the Steering Council role and prerogatives.
+Carlton Gibson
+Emmanuelle Delescolle
+Frank Wiles
+Lily Foote
+Tim Schilling
+Triage & review team 
+The triage & review team assists with the processing of pull requests. For more information, see the DEP-10 definition of the Triage & review team.
+Clifford Gama
+David Sanders
+David Smith
+Hasan Ramezani
+Jacob Walls
+JaeHyuck Sa
+Lilian Tran
+Lily Foote
+Mariusz Felisiak
+Mike Edmunds
+Natalia Bidart
+Nick Pope
+Raffaella Suardini
+Sarah Boyce
+SiHyunLee
+Simon Charette
+Tim Graham
+Website working group 
+The Website Working Group maintains the website codebase, and liaises with the ops team for production infrastructure considerations.. For more information, view the Website WG charter.
+Adam Zapletal
+Alex Gómez
+Baptiste Mispelon
+Jason Judkins
+Mark Walker
+Paolo Melchiorre
+Ronald Maravanyika
+Sanyam Khurana
+Saptak Sengupta
+Sarah Abderemane
+Storm Heg
+Tobias McNulty
+Ülgen Sarıkavak

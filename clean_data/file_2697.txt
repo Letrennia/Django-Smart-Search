@@ -1,0 +1,83 @@
+https://docs.djangoproject.com/en/3.2/internals/mailing-lists/
+Mailing lists 
+Important
+Please report security issues only to
+security@djangoproject.com.  This is a private list only open to
+long-time, highly trusted Django developers, and its archives are
+not public. For further details, please see our security
+policies.
+Django has several official mailing lists on Google Groups that are open to
+anyone.
+django-users 
+This is the right place if you are looking to ask any question regarding the
+installation, usage, or debugging of Django.
+Note
+If it's the first time you send an email to this list, your email must be
+accepted first so don't worry if your message does not appear instantly.
+django-users mailing archive
+django-users subscription email address
+django-users posting email
+django-developers 
+The discussion about the development of Django itself takes place here.
+Before asking a question about how to contribute, read
+Contributing to Django. Many frequently asked questions are
+answered there.
+Note
+Please make use of
+django-users mailing list if you want
+to ask for tech support, doing so in this list is inappropriate.
+django-developers mailing archive
+django-developers subscription email address
+django-developers posting email
+django-announce 
+A (very) low-traffic list for announcing upcoming security releases, new releases of Django, and security advisories.
+django-announce mailing archive
+django-announce subscription email address
+django-announce posting email
+django-updates 
+All the ticket updates are mailed automatically to this list, which is tracked
+by developers and interested community members.
+django-updates mailing archive
+django-updates subscription email address
+django-updates posting email
+Mailing lists 
+Important
+Please report security issues only to
+security@djangoproject.com.  This is a private list only open to
+long-time, highly trusted Django developers, and its archives are
+not public. For further details, please see our security
+policies.
+Django has several official mailing lists on Google Groups that are open to
+anyone.
+django-users 
+This is the right place if you are looking to ask any question regarding the
+installation, usage, or debugging of Django.
+Note
+If it's the first time you send an email to this list, your email must be
+accepted first so don't worry if your message does not appear instantly.
+django-users mailing archive
+django-users subscription email address
+django-users posting email
+django-developers 
+The discussion about the development of Django itself takes place here.
+Before asking a question about how to contribute, read
+Contributing to Django. Many frequently asked questions are
+answered there.
+Note
+Please make use of
+django-users mailing list if you want
+to ask for tech support, doing so in this list is inappropriate.
+django-developers mailing archive
+django-developers subscription email address
+django-developers posting email
+django-announce 
+A (very) low-traffic list for announcing upcoming security releases, new releases of Django, and security advisories.
+django-announce mailing archive
+django-announce subscription email address
+django-announce posting email
+django-updates 
+All the ticket updates are mailed automatically to this list, which is tracked
+by developers and interested community members.
+django-updates mailing archive
+django-updates subscription email address
+django-updates posting email

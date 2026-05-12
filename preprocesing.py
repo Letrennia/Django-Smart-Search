@@ -1,48 +1,127 @@
-import ftfy # fixes text for you <3
+import os
 import re
 
-with open("data_dir/file_667.txt", "r", encoding="utf-8") as file:
-    content = file.read()
-    # print(content)
+import ftfy # fixes text for you <3
 
-# Thatâ€™s it! -> That's it!
-clean = ftfy.fix_text(content)
+input_dir = "data_dir"
+output_dir = "clean_data"
 
-# Techniczne specjalne słowa
-keywords = list(dict.fromkeys(re.findall(r"([A-Za-z0-9_. ]+)¶", content)))
-print(keywords)
-# Metody, funkjce
-methods = list(dict.fromkeys(re.findall(r"\b[A-Za-z_][A-Za-z0-9_]*\(\)", content)))
-print(methods)
+os.makedirs(output_dir, exist_ok=True)
 
-# ¶ -> u00b6
-clean = clean.replace("\u00b6", " ")
+all = set()
+all_keywords = set()
+all_themes = set()
+all_methods = set()
 
-# print(hex(ord("")))
-# print(hex(ord("")))
+count_keywords = {}
+count_themes = {}
 
-# Tak nie działa, trzeba ręcznie
-#  -> u29c4, 0xf17a
-#  -> 0xf179
-clean = clean.replace("/", " ")
-clean = clean.replace("", " ")
-clean = clean.replace("", " ")
-clean = clean.replace("For example:", "")
-clean = clean.replace("Usage examples:", "")
+for filename in os.listdir(input_dir):
 
-clean = re.sub(r"\.\.\.\\>", "", clean)
-# clean = re.sub(r"(?<!\n)\n(?!\n)", " ", clean)
-clean = re.sub(r"\n+", "\n", clean)
+    if not filename.endswith(".txt"):
+        continue
 
-# Kod
-clean = re.sub(r"^>>>.*(?:\n|$)", "", clean, flags=re.MULTILINE)
-clean = re.sub(r"function\s+\w*\s*\([^)]*\)\s*\{[\s\S]*?\}", "", clean)
-clean = re.sub(r"const\s+\w+\s*=\s*[\s\S]*?(;|\n\s*\n)", "", clean)
-clean = re.sub(r"fetch\([\s\S]*?\)\.then\([\s\S]*?\}\);?","",clean)
+    input_path = os.path.join(input_dir, filename)
 
-# html
-# clean = re.sub(r"<form[\s\S]*?</form>", "", clean)
-# clean = re.sub(r"<style[\s\S]*?</style>", "", clean)
-# clean = re.sub(r"<script[\s\S]*?</script>", "", clean)
+    with open(input_path, "r", encoding="utf-8") as file:
+        content = file.read()
 
-print(clean)
+    # Thatâ€™s it! -> That's it!
+    clean = ftfy.fix_text(content)
+
+    all.update(re.findall(r"([A-Za-z0-9_. ]+)¶", content))
+
+    file_keywords = []
+    file_themes = []
+
+    for thing in all:
+        thing = thing.strip()
+        if len(thing.split()) == 1:
+            all_keywords.add(thing)
+            file_keywords.append(thing)
+        else:
+            all_themes.add(thing)
+            file_themes.append(thing)
+
+    count_keywords[filename] = len(file_keywords)
+    count_themes[filename] = len(file_themes)
+
+    all_methods.update(re.findall(r"\b[A-Za-z_][A-Za-z0-9_]*\(\)", content))
+
+    # ¶ -> u00b6
+    clean = clean.replace("\u00b6", " ")
+
+    # Znaczki/Logo windowsa, linuxa i maca
+    clean = clean.replace("/", " ")
+    clean = clean.replace("", " ")
+    clean = clean.replace("", " ")
+
+    # Usunięcie luźnych zdań pozostałych po usunięciu kodu
+    clean = clean.replace("For example:", "")
+    clean = clean.replace("Usage examples:", "")
+    clean = clean.replace("Example usage:", "")
+    clean = clean.replace("This example would return this HTML:", "")
+
+    # Zdania
+    sentences = re.findall(r"[^?.!?]+[?.]", clean)
+
+    # Terminal
+    clean = re.sub(r"\.\.\.\\>", "", clean)
+
+    # Usunięcie zbędnych enterów -> zmniejszenie pliku
+    clean = re.sub(r"\n+", "\n", clean)
+
+    # Kod
+    clean = re.sub(r"^>>>.*(?:\n|$)", "", clean, flags=re.MULTILINE)
+    clean = re.sub(r"function\s+\w*\s*\([^)]*\)\s*\{[\s\S]*?\}", "", clean)
+    clean = re.sub(r"const\s+\w+\s*=\s*[\s\S]*?(;|\n\s*\n)", "", clean)
+    clean = re.sub(r"fetch\([\s\S]*?\)\.then\([\s\S]*?\}\);?", "", clean)
+
+    # html
+    clean = re.sub(r"<p[\s\S]*?</p>", "", clean)
+    # clean = re.sub(r"<style[\s\S]*?</style>", "", clean)
+    # clean = re.sub(r"<script[\s\S]*?</script>", "", clean)
+
+    output_path = os.path.join(output_dir, filename)
+
+    with open(output_path, "w", encoding="utf-8") as file:
+        file.write(clean)
+
+all_methods = sorted(all_methods)
+all_keywords = sorted(all_keywords)
+all_themes = sorted(all_themes)
+
+print("Minimum keywords: ", min(count_keywords.values()))
+print("Minimum themes: ", min(count_themes.values()))
+
+print("Maximum keywords: ", max(count_keywords.values()))
+print("Maximum themes: ", max(count_themes.values()))
+
+print("Avg keywords:", sum(count_keywords.values()) / len(count_keywords.values()))
+print("Avg themes:", sum(count_themes.values()) / len(count_themes.values()))
+
+with open("keywords.txt", "w", encoding="utf-8") as file:
+    file.write("\n".join(all_keywords))
+
+with open("themes.txt", "w", encoding="utf-8") as file:
+    file.write("\n".join(all_themes))
+
+with open("methods.txt", "w", encoding="utf-8") as file:
+    file.write("\n".join(all_methods))
+
+count_words = 0
+mini = 60000
+maks = 0
+
+for sentence in sentences:
+    words = re.findall(r"\b\w+\b", sentence)
+    mini = len(words) if len(words) < mini else mini
+    maks = len(words) if len(words) >= maks else maks
+    count_words += len(words)
+
+print("Minimalna ilość słów w zdaniu:", mini)
+print("Maksumalna ilość słów w zdaniu:", maks)
+print("Avg słów w zdaniu: ", count_words / len(sentences))
+
+# print(all_keywords)
+# print(all_methods)

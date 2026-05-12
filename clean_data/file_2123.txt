@@ -1,0 +1,23 @@
+https://docs.djangoproject.com/en/4.1/_modules/django/contrib/sessions/exceptions/
+Source code for django.contrib.sessions.exceptions
+from django.core.exceptions import BadRequest, SuspiciousOperation
+class InvalidSessionKey(SuspiciousOperation):
+    """Invalid characters in session key"""
+    pass
+class SuspiciousSession(SuspiciousOperation):
+    """The session may be tampered with"""
+    pass
+[docs]class SessionInterrupted(BadRequest):
+    """The session was interrupted."""
+    pass
+Source code for django.contrib.sessions.exceptions
+from django.core.exceptions import BadRequest, SuspiciousOperation
+class InvalidSessionKey(SuspiciousOperation):
+    """Invalid characters in session key"""
+    pass
+class SuspiciousSession(SuspiciousOperation):
+    """The session may be tampered with"""
+    pass
+[docs]class SessionInterrupted(BadRequest):
+    """The session was interrupted."""
+    pass

@@ -1,0 +1,207 @@
+https://docs.djangoproject.com/en/4.1/topics/http/shortcuts/
+Django shortcut functions 
+The package django.shortcuts collects helper functions and classes that
+"span" multiple levels of MVC. In other words, these functions/classes
+introduce controlled coupling for convenience's sake.
+render() 
+render(request, template_name, context=None, content_type=None, status=None, using=None) 
+Combines a given template with a given context dictionary and returns an
+HttpResponse object with that rendered text.
+Django does not provide a shortcut function which returns a
+TemplateResponse because the constructor
+of TemplateResponse offers the same level
+of convenience as render().
+Required arguments 
+requestThe request object used to generate this response.
+template_nameThe full name of a template to use or sequence of template names. If a
+sequence is given, the first template that exists will be used. See the
+template loading documentation for more
+information on how templates are found.
+Optional arguments 
+contextA dictionary of values to add to the template context. By default, this
+is an empty dictionary. If a value in the dictionary is callable, the
+view will call it just before rendering the template.
+content_typeThe MIME type to use for the resulting document. Defaults to
+'text/html'.
+statusThe status code for the response. Defaults to 200.
+usingThe NAME of a template engine to use for
+loading the template.
+Example 
+The following example renders the template myapp/index.html with the
+MIME type application/xhtml+xml:
+This example is equivalent to:
+redirect() 
+redirect(to, *args, permanent=False, **kwargs) 
+Returns an HttpResponseRedirect to the appropriate URL
+for the arguments passed.
+The arguments could be:
+A model: the model's get_absolute_url()
+function will be called.
+A view name, possibly with arguments: reverse() will be
+used to reverse-resolve the name.
+An absolute or relative URL, which will be used as-is for the redirect
+location.
+By default issues a temporary redirect; pass permanent=True to issue a
+permanent redirect.
+Examples 
+You can use the redirect() function in a number of ways.
+By passing some object; that object's
+get_absolute_url() method will be called
+to figure out the redirect URL:
+By passing the name of a view and optionally some positional or
+keyword arguments; the URL will be reverse resolved using the
+reverse() method:
+By passing a hardcoded URL to redirect to:
+This also works with full URLs:
+By default, redirect() returns a temporary redirect. All of the above
+forms accept a permanent argument; if set to True a permanent redirect
+will be returned:
+get_object_or_404() 
+get_object_or_404(klass, *args, **kwargs) 
+Calls get() on a given model manager,
+but it raises Http404 instead of the model's
+DoesNotExist exception.
+Arguments 
+klassA Model class,
+a Manager,
+or a QuerySet instance from which to get
+the object.
+*argsQ objects.
+**kwargsLookup parameters, which should be in the format accepted by get() and
+filter().
+Example 
+The following example gets the object with the primary key of 1 from
+MyModel:
+This example is equivalent to:
+The most common use case is to pass a Model, as
+shown above. However, you can also pass a
+QuerySet instance:
+The above example is a bit contrived since it's equivalent to doing:
+but it can be useful if you are passed the queryset variable from somewhere
+else.
+Finally, you can also use a Manager. This is useful
+for example if you have a
+custom manager:
+You can also use
+related managers:
+Note: As with get(), a
+MultipleObjectsReturned exception
+will be raised if more than one object is found.
+get_list_or_404() 
+get_list_or_404(klass, *args, **kwargs) 
+Returns the result of filter() on a
+given model manager cast to a list, raising Http404 if
+the resulting list is empty.
+Arguments 
+klassA Model, Manager or
+QuerySet instance from which to get the
+list.
+*argsQ objects.
+**kwargsLookup parameters, which should be in the format accepted by get() and
+filter().
+Example 
+The following example gets all published objects from MyModel:
+This example is equivalent to:
+Django shortcut functions 
+The package django.shortcuts collects helper functions and classes that
+"span" multiple levels of MVC. In other words, these functions/classes
+introduce controlled coupling for convenience's sake.
+render() 
+render(request, template_name, context=None, content_type=None, status=None, using=None) 
+Combines a given template with a given context dictionary and returns an
+HttpResponse object with that rendered text.
+Django does not provide a shortcut function which returns a
+TemplateResponse because the constructor
+of TemplateResponse offers the same level
+of convenience as render().
+Required arguments 
+requestThe request object used to generate this response.
+template_nameThe full name of a template to use or sequence of template names. If a
+sequence is given, the first template that exists will be used. See the
+template loading documentation for more
+information on how templates are found.
+Optional arguments 
+contextA dictionary of values to add to the template context. By default, this
+is an empty dictionary. If a value in the dictionary is callable, the
+view will call it just before rendering the template.
+content_typeThe MIME type to use for the resulting document. Defaults to
+'text/html'.
+statusThe status code for the response. Defaults to 200.
+usingThe NAME of a template engine to use for
+loading the template.
+Example 
+The following example renders the template myapp/index.html with the
+MIME type application/xhtml+xml:
+This example is equivalent to:
+redirect() 
+redirect(to, *args, permanent=False, **kwargs) 
+Returns an HttpResponseRedirect to the appropriate URL
+for the arguments passed.
+The arguments could be:
+A model: the model's get_absolute_url()
+function will be called.
+A view name, possibly with arguments: reverse() will be
+used to reverse-resolve the name.
+An absolute or relative URL, which will be used as-is for the redirect
+location.
+By default issues a temporary redirect; pass permanent=True to issue a
+permanent redirect.
+Examples 
+You can use the redirect() function in a number of ways.
+By passing some object; that object's
+get_absolute_url() method will be called
+to figure out the redirect URL:
+By passing the name of a view and optionally some positional or
+keyword arguments; the URL will be reverse resolved using the
+reverse() method:
+By passing a hardcoded URL to redirect to:
+This also works with full URLs:
+By default, redirect() returns a temporary redirect. All of the above
+forms accept a permanent argument; if set to True a permanent redirect
+will be returned:
+get_object_or_404() 
+get_object_or_404(klass, *args, **kwargs) 
+Calls get() on a given model manager,
+but it raises Http404 instead of the model's
+DoesNotExist exception.
+Arguments 
+klassA Model class,
+a Manager,
+or a QuerySet instance from which to get
+the object.
+*argsQ objects.
+**kwargsLookup parameters, which should be in the format accepted by get() and
+filter().
+Example 
+The following example gets the object with the primary key of 1 from
+MyModel:
+This example is equivalent to:
+The most common use case is to pass a Model, as
+shown above. However, you can also pass a
+QuerySet instance:
+The above example is a bit contrived since it's equivalent to doing:
+but it can be useful if you are passed the queryset variable from somewhere
+else.
+Finally, you can also use a Manager. This is useful
+for example if you have a
+custom manager:
+You can also use
+related managers:
+Note: As with get(), a
+MultipleObjectsReturned exception
+will be raised if more than one object is found.
+get_list_or_404() 
+get_list_or_404(klass, *args, **kwargs) 
+Returns the result of filter() on a
+given model manager cast to a list, raising Http404 if
+the resulting list is empty.
+Arguments 
+klassA Model, Manager or
+QuerySet instance from which to get the
+list.
+*argsQ objects.
+**kwargsLookup parameters, which should be in the format accepted by get() and
+filter().
+Example 
+The following example gets all published objects from MyModel:
+This example is equivalent to:

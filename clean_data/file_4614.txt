@@ -1,0 +1,13 @@
+https://docs.djangoproject.com/en/2.0/_modules/django/urls/exceptions/
+Source code for django.urls.exceptions
+from django.http import Http404
+[docs]class Resolver404(Http404):
+    pass
+[docs]class NoReverseMatch(Exception):
+    pass
+Source code for django.urls.exceptions
+from django.http import Http404
+[docs]class Resolver404(Http404):
+    pass
+[docs]class NoReverseMatch(Exception):
+    pass

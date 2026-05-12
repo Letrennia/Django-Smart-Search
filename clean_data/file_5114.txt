@@ -1,0 +1,67 @@
+https://docs.djangoproject.com/en/1.8/ref/forms/
+Forms 
+Detailed form API reference. For introductory material, see the
+Working with forms topic guide.
+The Forms API
+Bound and unbound forms
+Using forms to validate data
+Dynamic initial values
+Checking which form data has changed
+Accessing the fields from the form
+Accessing "clean" data
+Outputting forms as HTML
+Binding uploaded files to a form
+Subclassing forms
+Prefixes for forms
+Form fields
+Core field arguments
+Checking if the field data has changed
+Built-in Field classes
+Slightly complex built-in Field classes
+Fields which handle relationships
+Creating custom fields
+Model Form Functions
+Formset Functions
+Widgets
+Specifying widgets
+Setting arguments for widgets
+Widgets inheriting from the Select widget
+Customizing widget instances
+Base Widget classes
+Built-in widgets
+Form and field validation
+Raising ValidationError
+Using validation in practice
+Forms 
+Detailed form API reference. For introductory material, see the
+Working with forms topic guide.
+The Forms API
+Bound and unbound forms
+Using forms to validate data
+Dynamic initial values
+Checking which form data has changed
+Accessing the fields from the form
+Accessing "clean" data
+Outputting forms as HTML
+Binding uploaded files to a form
+Subclassing forms
+Prefixes for forms
+Form fields
+Core field arguments
+Checking if the field data has changed
+Built-in Field classes
+Slightly complex built-in Field classes
+Fields which handle relationships
+Creating custom fields
+Model Form Functions
+Formset Functions
+Widgets
+Specifying widgets
+Setting arguments for widgets
+Widgets inheriting from the Select widget
+Customizing widget instances
+Base Widget classes
+Built-in widgets
+Form and field validation
+Raising ValidationError
+Using validation in practice

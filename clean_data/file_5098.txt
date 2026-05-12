@@ -1,0 +1,35 @@
+https://docs.djangoproject.com/en/1.8/ref/contrib/postgres/operations/
+Database migration operations 
+All of these operations are available from
+the django.contrib.postgres.operations module.
+CreateExtension 
+class CreateExtension(name)[source] 
+An Operation subclass which installs PostgreSQL extensions.
+name 
+This is a required argument. The name of the extension to be installed.
+HStoreExtension 
+class HStoreExtension[source] 
+A subclass of CreateExtension
+which will install the hstore extension and also immediately set up the
+connection to interpret hstore data.
+UnaccentExtension 
+class UnaccentExtension[source] 
+A subclass of CreateExtension
+which will install the unaccent extension.
+Database migration operations 
+All of these operations are available from
+the django.contrib.postgres.operations module.
+CreateExtension 
+class CreateExtension(name)[source] 
+An Operation subclass which installs PostgreSQL extensions.
+name 
+This is a required argument. The name of the extension to be installed.
+HStoreExtension 
+class HStoreExtension[source] 
+A subclass of CreateExtension
+which will install the hstore extension and also immediately set up the
+connection to interpret hstore data.
+UnaccentExtension 
+class UnaccentExtension[source] 
+A subclass of CreateExtension
+which will install the unaccent extension.

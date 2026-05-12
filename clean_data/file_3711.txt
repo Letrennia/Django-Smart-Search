@@ -1,0 +1,29 @@
+https://docs.djangoproject.com/en/2.2/_modules/django/contrib/postgres/fields/citext/
+Source code for django.contrib.postgres.fields.citext
+from django.db.models import CharField, EmailField, TextField
+__all__ = ['CICharField', 'CIEmailField', 'CIText', 'CITextField']
+[docs]class CIText:
+    def get_internal_type(self):
+        return 'CI' + super().get_internal_type()
+    def db_type(self, connection):
+        return 'citext'
+[docs]class CICharField(CIText, CharField):
+    pass
+[docs]class CIEmailField(CIText, EmailField):
+    pass
+[docs]class CITextField(CIText, TextField):
+    pass
+Source code for django.contrib.postgres.fields.citext
+from django.db.models import CharField, EmailField, TextField
+__all__ = ['CICharField', 'CIEmailField', 'CIText', 'CITextField']
+[docs]class CIText:
+    def get_internal_type(self):
+        return 'CI' + super().get_internal_type()
+    def db_type(self, connection):
+        return 'citext'
+[docs]class CICharField(CIText, CharField):
+    pass
+[docs]class CIEmailField(CIText, EmailField):
+    pass
+[docs]class CITextField(CIText, TextField):
+    pass

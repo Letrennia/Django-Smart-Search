@@ -1,0 +1,29 @@
+https://docs.djangoproject.com/en/1.8/ref/files/
+File handling 
+The File object
+The File Class
+The ContentFile Class
+The ImageFile Class
+Additional methods on files attached to objects
+File storage API
+Getting the current storage class
+The FileSystemStorage Class
+The Storage Class
+Uploaded Files and Upload Handlers
+Uploaded files
+Built-in upload handlers
+Writing custom upload handlers
+File handling 
+The File object
+The File Class
+The ContentFile Class
+The ImageFile Class
+Additional methods on files attached to objects
+File storage API
+Getting the current storage class
+The FileSystemStorage Class
+The Storage Class
+Uploaded Files and Upload Handlers
+Uploaded files
+Built-in upload handlers
+Writing custom upload handlers

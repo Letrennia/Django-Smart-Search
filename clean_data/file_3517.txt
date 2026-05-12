@@ -1,0 +1,1259 @@
+https://docs.djangoproject.com/en/3.0/ref/models/database-functions/
+Database Functions 
+The classes documented below provide a way for users to use functions provided
+by the underlying database as annotations, aggregations, or filters in Django.
+Functions are also expressions, so they can be used and
+combined with other expressions like aggregate functions.
+We'll be using the following model in examples of each function:
+We don't usually recommend allowing null=True for CharField since this
+allows the field to have two "empty values", but it's important for the
+Coalesce example below.
+Comparison and conversion functions 
+Cast 
+class Cast(expression, output_field) 
+Forces the result type of expression to be the one from output_field.
+Usage example:
+Coalesce 
+class Coalesce(*expressions, **extra) 
+Accepts a list of at least two field names or expressions and returns the
+first non-null value (note that an empty string is not considered a null
+value). Each argument must be of a similar type, so mixing text and numbers
+will result in a database error.
+Warning
+A Python value passed to Coalesce on MySQL may be converted to an
+incorrect type unless explicitly cast to the correct database type:
+Greatest 
+class Greatest(*expressions, **extra) 
+Accepts a list of at least two field names or expressions and returns the
+greatest value. Each argument must be of a similar type, so mixing text and
+numbers will result in a database error.
+Usage example:
+annotated_comment.last_updated will be the most recent of blog.modified
+and comment.modified.
+Warning
+The behavior of Greatest when one or more expression may be null
+varies between databases:
+PostgreSQL: Greatest will return the largest non-null expression,
+or null if all expressions are null.
+SQLite, Oracle, and MySQL: If any expression is null, Greatest
+will return null.
+The PostgreSQL behavior can be emulated using Coalesce if you know
+a sensible minimum value to provide as a default.
+Least 
+class Least(*expressions, **extra) 
+Accepts a list of at least two field names or expressions and returns the
+least value. Each argument must be of a similar type, so mixing text and numbers
+will result in a database error.
+Warning
+The behavior of Least when one or more expression may be null
+varies between databases:
+PostgreSQL: Least will return the smallest non-null expression,
+or null if all expressions are null.
+SQLite, Oracle, and MySQL: If any expression is null, Least
+will return null.
+The PostgreSQL behavior can be emulated using Coalesce if you know
+a sensible maximum value to provide as a default.
+NullIf 
+class NullIf(expression1, expression2) 
+New in Django 2.2. 
+Accepts two expressions and returns None if they are equal, otherwise
+returns expression1.
+Caveats on Oracle
+Due to an Oracle convention, this
+function returns the empty string instead of None when the expressions
+are of type CharField.
+Passing Value(None) to expression1 is prohibited on Oracle since
+Oracle doesn't accept NULL as the first argument.
+Date functions 
+We'll be using the following model in examples of each function:
+Extract 
+class Extract(expression, lookup_name=None, tzinfo=None, **extra) 
+Extracts a component of a date as a number.
+Takes an expression representing a DateField, DateTimeField,
+TimeField, or DurationField and a lookup_name, and returns the part
+of the date referenced by lookup_name as an IntegerField.
+Django usually uses the databases' extract function, so you may use any
+lookup_name that your database supports. A tzinfo subclass, usually
+provided by pytz, can be passed to extract a value in a specific timezone.
+Given the datetime 2015-06-15 23:30:01.000321+00:00, the built-in
+lookup_names return:
+"year": 2015
+"iso_year": 2015
+"quarter": 2
+"month": 6
+"day": 15
+"week": 25
+"week_day": 2
+"hour": 23
+"minute": 30
+"second": 1
+If a different timezone like Australia/Melbourne is active in Django, then
+the datetime is converted to the timezone before the value is extracted. The
+timezone offset for Melbourne in the example date above is +10:00. The values
+returned when this timezone is active will be the same as above except for:
+"day": 16
+"week_day": 3
+"hour": 9
+week_day values
+The week_day lookup_type is calculated differently from most
+databases and from Python's standard functions. This function will return
+1 for Sunday, 2 for Monday, through 7 for Saturday.
+The equivalent calculation in Python is:
+week values
+The week lookup_type is calculated based on ISO-8601, i.e.,
+a week starts on a Monday. The first week of a year is the one that
+contains the year's first Thursday, i.e. the first week has the majority
+(four or more) of its days in the year. The value returned is in the range
+1 to 52 or 53.
+Each lookup_name above has a corresponding Extract subclass (listed
+below) that should typically be used instead of the more verbose equivalent,
+e.g. use ExtractYear(...) rather than Extract(..., lookup_name='year').
+Usage example:
+DateField extracts 
+class ExtractYear(expression, tzinfo=None, **extra) 
+lookup_name = 'year'
+class ExtractIsoYear(expression, tzinfo=None, **extra) 
+New in Django 2.2. 
+Returns the ISO-8601 week-numbering year.
+lookup_name = 'iso_year'
+class ExtractMonth(expression, tzinfo=None, **extra) 
+lookup_name = 'month'
+class ExtractDay(expression, tzinfo=None, **extra) 
+lookup_name = 'day'
+class ExtractWeekDay(expression, tzinfo=None, **extra) 
+lookup_name = 'week_day'
+class ExtractWeek(expression, tzinfo=None, **extra) 
+lookup_name = 'week'
+class ExtractQuarter(expression, tzinfo=None, **extra) 
+lookup_name = 'quarter'
+These are logically equivalent to Extract('date_field', lookup_name). Each
+class is also a Transform registered on DateField and DateTimeField
+as __(lookup_name), e.g. __year.
+Since DateFields don't have a time component, only Extract subclasses
+that deal with date-parts can be used with DateField:
+DateTimeField extracts 
+In addition to the following, all extracts for DateField listed above may
+also be used on DateTimeFields .
+class ExtractHour(expression, tzinfo=None, **extra) 
+lookup_name = 'hour'
+class ExtractMinute(expression, tzinfo=None, **extra) 
+lookup_name = 'minute'
+class ExtractSecond(expression, tzinfo=None, **extra) 
+lookup_name = 'second'
+These are logically equivalent to Extract('datetime_field', lookup_name).
+Each class is also a Transform registered on DateTimeField as
+__(lookup_name), e.g. __minute.
+DateTimeField examples:
+When USE_TZ is True then datetimes are stored in the database
+in UTC. If a different timezone is active in Django, the datetime is converted
+to that timezone before the value is extracted. The example below converts to
+the Melbourne timezone (UTC +10:00), which changes the day, weekday, and hour
+values that are returned:
+Explicitly passing the timezone to the Extract function behaves in the same
+way, and takes priority over an active timezone:
+Now 
+class Now 
+Returns the database server's current date and time when the query is executed,
+typically using the SQL CURRENT_TIMESTAMP.
+Usage example:
+PostgreSQL considerations
+On PostgreSQL, the SQL CURRENT_TIMESTAMP returns the time that the
+current transaction started. Therefore for cross-database compatibility,
+Now() uses STATEMENT_TIMESTAMP instead. If you need the transaction
+timestamp, use django.contrib.postgres.functions.TransactionNow.
+Trunc 
+class Trunc(expression, kind, output_field=None, tzinfo=None, is_dst=None, **extra) 
+Truncates a date up to a significant component.
+When you only care if something happened in a particular year, hour, or day,
+but not the exact second, then Trunc (and its subclasses) can be useful to
+filter or aggregate your data. For example, you can use Trunc to calculate
+the number of sales per day.
+Trunc takes a single expression, representing a DateField,
+TimeField, or DateTimeField, a kind representing a date or time
+part, and an output_field that's either DateTimeField(),
+TimeField(), or DateField(). It returns a datetime, date, or time
+depending on output_field, with fields up to kind set to their minimum
+value. If output_field is omitted, it will default to the output_field
+of expression. A tzinfo subclass, usually provided by pytz, can be
+passed to truncate a value in a specific timezone.
+The is_dst parameter indicates whether or not pytz should interpret
+nonexistent and ambiguous datetimes in daylight saving time. By default (when
+is_dst=None), pytz raises an exception for such datetimes.
+New in Django 3.0: The is_dst parameter was added.
+Given the datetime 2015-06-15 14:30:50.000321+00:00, the built-in kinds
+return:
+"year": 2015-01-01 00:00:00+00:00
+"quarter": 2015-04-01 00:00:00+00:00
+"month": 2015-06-01 00:00:00+00:00
+"week": 2015-06-15 00:00:00+00:00
+"day": 2015-06-15 00:00:00+00:00
+"hour": 2015-06-15 14:00:00+00:00
+"minute": 2015-06-15 14:30:00+00:00
+"second": 2015-06-15 14:30:50+00:00
+If a different timezone like Australia/Melbourne is active in Django, then
+the datetime is converted to the new timezone before the value is truncated.
+The timezone offset for Melbourne in the example date above is +10:00. The
+values returned when this timezone is active will be:
+"year": 2015-01-01 00:00:00+11:00
+"quarter": 2015-04-01 00:00:00+10:00
+"month": 2015-06-01 00:00:00+10:00
+"week": 2015-06-16 00:00:00+10:00
+"day": 2015-06-16 00:00:00+10:00
+"hour": 2015-06-16 00:00:00+10:00
+"minute": 2015-06-16 00:30:00+10:00
+"second": 2015-06-16 00:30:50+10:00
+The year has an offset of +11:00 because the result transitioned into daylight
+saving time.
+Each kind above has a corresponding Trunc subclass (listed below) that
+should typically be used instead of the more verbose equivalent,
+e.g. use TruncYear(...) rather than Trunc(..., kind='year').
+The subclasses are all defined as transforms, but they aren't registered with
+any fields, because the obvious lookup names are already reserved by the
+Extract subclasses.
+Usage example:
+DateField truncation 
+class TruncYear(expression, output_field=None, tzinfo=None, is_dst=None, **extra) 
+kind = 'year'
+class TruncMonth(expression, output_field=None, tzinfo=None, is_dst=None, **extra) 
+kind = 'month'
+class TruncWeek(expression, output_field=None, tzinfo=None, is_dst=None, **extra) 
+Truncates to midnight on the Monday of the week.
+kind = 'week'
+class TruncQuarter(expression, output_field=None, tzinfo=None, is_dst=None, **extra) 
+kind = 'quarter'
+These are logically equivalent to Trunc('date_field', kind). They truncate
+all parts of the date up to kind which allows grouping or filtering dates
+with less precision. expression can have an output_field of either
+DateField or DateTimeField.
+Since DateFields don't have a time component, only Trunc subclasses
+that deal with date-parts can be used with DateField:
+DateTimeField truncation 
+class TruncDate(expression, **extra) 
+lookup_name = 'date'
+output_field = DateField()
+TruncDate casts expression to a date rather than using the built-in SQL
+truncate function. It's also registered as a transform on  DateTimeField as
+__date.
+class TruncTime(expression, **extra) 
+lookup_name = 'time'
+output_field = TimeField()
+TruncTime casts expression to a time rather than using the built-in SQL
+truncate function. It's also registered as a transform on DateTimeField as
+__time.
+class TruncDay(expression, output_field=None, tzinfo=None, is_dst=None, **extra) 
+kind = 'day'
+class TruncHour(expression, output_field=None, tzinfo=None, is_dst=None, **extra) 
+kind = 'hour'
+class TruncMinute(expression, output_field=None, tzinfo=None, is_dst=None, **extra) 
+kind = 'minute'
+class TruncSecond(expression, output_field=None, tzinfo=None, is_dst=None, **extra) 
+kind = 'second'
+These are logically equivalent to Trunc('datetime_field', kind). They
+truncate all parts of the date up to kind and allow grouping or filtering
+datetimes with less precision. expression must have an output_field of
+DateTimeField.
+Usage example:
+TimeField truncation 
+class TruncHour(expression, output_field=None, tzinfo=None, is_dst=None, **extra)
+kind = 'hour'
+class TruncMinute(expression, output_field=None, tzinfo=None, is_dst=None, **extra)
+kind = 'minute'
+class TruncSecond(expression, output_field=None, tzinfo=None, is_dst=None, **extra)
+kind = 'second'
+These are logically equivalent to Trunc('time_field', kind). They truncate
+all parts of the time up to kind which allows grouping or filtering times
+with less precision. expression can have an output_field of either
+TimeField or DateTimeField.
+Since TimeFields don't have a date component, only Trunc subclasses
+that deal with time-parts can be used with TimeField:
+Math Functions 
+New in Django 2.2. 
+We'll be using the following model in math function examples:
+Abs 
+class Abs(expression, **extra) 
+Returns the absolute value of a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+ACos 
+class ACos(expression, **extra) 
+Returns the arccosine of a numeric field or expression. The expression value
+must be within the range -1 to 1.
+Usage example:
+It can also be registered as a transform. 
+ASin 
+class ASin(expression, **extra) 
+Returns the arcsine of a numeric field or expression. The expression value must
+be in the range -1 to 1.
+Usage example:
+It can also be registered as a transform. 
+ATan 
+class ATan(expression, **extra) 
+Returns the arctangent of a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+ATan2 
+class ATan2(expression1, expression2, **extra) 
+Returns the arctangent of expression1 / expression2.
+Usage example:
+Ceil 
+class Ceil(expression, **extra) 
+Returns the smallest integer greater than or equal to a numeric field or
+expression.
+Usage example:
+It can also be registered as a transform. 
+Cos 
+class Cos(expression, **extra) 
+Returns the cosine  of a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+Cot 
+class Cot(expression, **extra) 
+Returns the cotangent of a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+Degrees 
+class Degrees(expression, **extra) 
+Converts a numeric field or expression from radians to degrees.
+Usage example:
+It can also be registered as a transform. 
+Exp 
+class Exp(expression, **extra) 
+Returns the value of e (the natural logarithm base) raised to the power of
+a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+Floor 
+class Floor(expression, **extra) 
+Returns the largest integer value not greater than a numeric field or
+expression.
+Usage example:
+It can also be registered as a transform. 
+Ln 
+class Ln(expression, **extra) 
+Returns the natural logarithm a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+Log 
+class Log(expression1, expression2, **extra) 
+Accepts two numeric fields or expressions and returns the logarithm of
+the first to base of the second.
+Usage example:
+Mod 
+class Mod(expression1, expression2, **extra) 
+Accepts two numeric fields or expressions and returns the remainder of
+the first divided by the second (modulo operation).
+Usage example:
+Pi 
+class Pi(**extra) 
+Returns the value of the mathematical constant π.
+Power 
+class Power(expression1, expression2, **extra) 
+Accepts two numeric fields or expressions and returns the value of the first
+raised to the power of the second.
+Usage example:
+Radians 
+class Radians(expression, **extra) 
+Converts a numeric field or expression from degrees to radians.
+Usage example:
+It can also be registered as a transform. 
+Round 
+class Round(expression, **extra) 
+Rounds a numeric field or expression to the nearest integer. Whether half
+values are rounded up or down depends on the database.
+Usage example:
+It can also be registered as a transform. 
+Sign 
+class Sign(expression, **extra) 
+New in Django 3.0. 
+Returns the sign (-1, 0, 1) of a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+Sin 
+class Sin(expression, **extra) 
+Returns the sine of a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+Sqrt 
+class Sqrt(expression, **extra) 
+Returns the square root of a nonnegative numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+Tan 
+class Tan(expression, **extra) 
+Returns the tangent of a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+Text functions 
+Chr 
+class Chr(expression, **extra) 
+Accepts a numeric field or expression and returns the text representation of
+the expression as a single character. It works the same as Python's chr()
+function.
+Like Length, it can be registered as a transform on IntegerField.
+The default lookup name is chr.
+Usage example:
+Concat 
+class Concat(*expressions, **extra) 
+Accepts a list of at least two text fields or expressions and returns the
+concatenated text. Each argument must be of a text or char type. If you want
+to concatenate a TextField() with a CharField(), then be sure to tell
+Django that the output_field should be a TextField(). Specifying an
+output_field is also required when concatenating a Value as in the
+example below.
+This function will never have a null result. On backends where a null argument
+results in the entire expression being null, Django will ensure that each null
+part is converted to an empty string first.
+Usage example:
+Left 
+class Left(expression, length, **extra) 
+Returns the first length characters of the given text field or expression.
+Usage example:
+Length 
+class Length(expression, **extra) 
+Accepts a single text field or expression and returns the number of characters
+the value has. If the expression is null, then the length will also be null.
+Usage example:
+It can also be registered as a transform. 
+Lower 
+class Lower(expression, **extra) 
+Accepts a single text field or expression and returns the lowercase
+representation.
+It can also be registered as a transform as described in Length.
+Usage example:
+LPad 
+class LPad(expression, length, fill_text=Value(' '), **extra) 
+Returns the value of the given text field or expression padded on the left side
+with fill_text so that the resulting value is length characters long.
+The default fill_text is a space.
+Usage example:
+LTrim 
+class LTrim(expression, **extra) 
+Similar to Trim, but removes only leading
+spaces.
+MD5 
+class MD5(expression, **extra) 
+New in Django 3.0. 
+Accepts a single text field or expression and returns the MD5 hash of the
+string.
+It can also be registered as a transform as described in Length.
+Usage example:
+Ord 
+class Ord(expression, **extra) 
+Accepts a single text field or expression and returns the Unicode code point
+value for the first character of that expression. It works similar to Python's
+ord() function, but an exception isn't raised if the expression is more
+than one character long.
+It can also be registered as a transform as described in Length.
+The default lookup name is ord.
+Usage example:
+Repeat 
+class Repeat(expression, number, **extra) 
+Returns the value of the given text field or expression repeated number
+times.
+Usage example:
+Replace 
+class Replace(expression, text, replacement=Value(''), **extra) 
+Replaces all occurrences of text with replacement in expression.
+The default replacement text is the empty string. The arguments to the function
+are case-sensitive.
+Usage example:
+Reverse 
+class Reverse(expression, **extra) 
+New in Django 2.2. 
+Accepts a single text field or expression and returns the characters of that
+expression in reverse order.
+It can also be registered as a transform as described in Length. The
+default lookup name is reverse.
+Usage example:
+Right 
+class Right(expression, length, **extra) 
+Returns the last length characters of the given text field or expression.
+Usage example:
+RPad 
+class RPad(expression, length, fill_text=Value(' '), **extra) 
+Similar to LPad, but pads on the right
+side.
+RTrim 
+class RTrim(expression, **extra) 
+Similar to Trim, but removes only trailing
+spaces.
+SHA1, SHA224, SHA256, SHA384, and SHA512 
+class SHA1(expression, **extra) 
+class SHA224(expression, **extra) 
+class SHA256(expression, **extra) 
+class SHA384(expression, **extra) 
+class SHA512(expression, **extra) 
+New in Django 3.0. 
+Accepts a single text field or expression and returns the particular hash of
+the string.
+They can also be registered as transforms as described in Length.
+Usage example:
+PostgreSQL
+The pgcrypto extension must be installed. You can use the
+CryptoExtension migration
+operation to install it.
+Oracle
+Oracle doesn't support the SHA224 function.
+StrIndex 
+class StrIndex(string, substring, **extra) 
+Returns a positive integer corresponding to the 1-indexed position of the first
+occurrence of substring inside string, or 0 if substring is not
+found.
+Usage example:
+Warning
+In MySQL, a database table's collation determines
+whether string comparisons (such as the expression and substring of
+this function) are case-sensitive. Comparisons are case-insensitive by
+default.
+Substr 
+class Substr(expression, pos, length=None, **extra) 
+Returns a substring of length length from the field or expression starting
+at position pos. The position is 1-indexed, so the position must be greater
+than 0. If length is None, then the rest of the string will be returned.
+Usage example:
+Trim 
+class Trim(expression, **extra) 
+Returns the value of the given text field or expression with leading and
+trailing spaces removed.
+Usage example:
+Upper 
+class Upper(expression, **extra) 
+Accepts a single text field or expression and returns the uppercase
+representation.
+It can also be registered as a transform as described in Length.
+Usage example:
+Window functions 
+There are a number of functions to use in a
+Window expression for computing the rank
+of elements or the Ntile of some rows.
+CumeDist 
+class CumeDist(*expressions, **extra) 
+Calculates the cumulative distribution of a value within a window or partition.
+The cumulative distribution is defined as the number of rows preceding or
+peered with the current row divided by the total number of rows in the frame.
+DenseRank 
+class DenseRank(*expressions, **extra) 
+Equivalent to Rank but does not have gaps.
+FirstValue 
+class FirstValue(expression, **extra) 
+Returns the value evaluated at the row that's the first row of the window
+frame, or None if no such value exists.
+Lag 
+class Lag(expression, offset=1, default=None, **extra) 
+Calculates the value offset by offset, and if no row exists there, returns
+default.
+default must have the same type as the expression, however, this is
+only validated by the database and not in Python.
+MariaDB and default
+MariaDB doesn't support
+the default parameter.
+LastValue 
+class LastValue(expression, **extra) 
+Comparable to FirstValue, it calculates the last value in a given
+frame clause.
+Lead 
+class Lead(expression, offset=1, default=None, **extra) 
+Calculates the leading value in a given frame. Both
+offset and default are evaluated with respect to the current row.
+default must have the same type as the expression, however, this is
+only validated by the database and not in Python.
+MariaDB and default
+MariaDB doesn't support
+the default parameter.
+NthValue 
+class NthValue(expression, nth=1, **extra) 
+Computes the row relative to the offset nth (must be a positive value)
+within the window. Returns None if no row exists.
+Some databases may handle a nonexistent nth-value differently. For example,
+Oracle returns an empty string rather than None for character-based
+expressions. Django doesn't do any conversions in these cases.
+Ntile 
+class Ntile(num_buckets=1, **extra) 
+Calculates a partition for each of the rows in the frame clause, distributing
+numbers as evenly as possible between 1 and num_buckets. If the rows don't
+divide evenly into a number of buckets, one or more buckets will be represented
+more frequently.
+PercentRank 
+class PercentRank(*expressions, **extra) 
+Computes the percentile rank of the rows in the frame clause. This
+computation is equivalent to evaluating:
+The following table explains the calculation for the percentile rank of a row:
+Row #
+Value
+Rank
+Calculation
+Percent Rank
+1
+15
+1
+(1-1)/(7-1)
+0.0000
+2
+20
+2
+(2-1)/(7-1)
+0.1666
+3
+20
+2
+(2-1)/(7-1)
+0.1666
+4
+20
+2
+(2-1)/(7-1)
+0.1666
+5
+30
+5
+(5-1)/(7-1)
+0.6666
+6
+30
+5
+(5-1)/(7-1)
+0.6666
+7
+40
+7
+(7-1)/(7-1)
+1.0000
+Rank 
+class Rank(*expressions, **extra) 
+Comparable to RowNumber, this function ranks rows in the window. The
+computed rank contains gaps. Use DenseRank to compute rank without
+gaps.
+RowNumber 
+class RowNumber(*expressions, **extra) 
+Computes the row number according to the ordering of either the frame clause
+or the ordering of the whole query if there is no partitioning of the
+window frame.
+Database Functions 
+The classes documented below provide a way for users to use functions provided
+by the underlying database as annotations, aggregations, or filters in Django.
+Functions are also expressions, so they can be used and
+combined with other expressions like aggregate functions.
+We'll be using the following model in examples of each function:
+We don't usually recommend allowing null=True for CharField since this
+allows the field to have two "empty values", but it's important for the
+Coalesce example below.
+Comparison and conversion functions 
+Cast 
+class Cast(expression, output_field) 
+Forces the result type of expression to be the one from output_field.
+Usage example:
+Coalesce 
+class Coalesce(*expressions, **extra) 
+Accepts a list of at least two field names or expressions and returns the
+first non-null value (note that an empty string is not considered a null
+value). Each argument must be of a similar type, so mixing text and numbers
+will result in a database error.
+Warning
+A Python value passed to Coalesce on MySQL may be converted to an
+incorrect type unless explicitly cast to the correct database type:
+Greatest 
+class Greatest(*expressions, **extra) 
+Accepts a list of at least two field names or expressions and returns the
+greatest value. Each argument must be of a similar type, so mixing text and
+numbers will result in a database error.
+Usage example:
+annotated_comment.last_updated will be the most recent of blog.modified
+and comment.modified.
+Warning
+The behavior of Greatest when one or more expression may be null
+varies between databases:
+PostgreSQL: Greatest will return the largest non-null expression,
+or null if all expressions are null.
+SQLite, Oracle, and MySQL: If any expression is null, Greatest
+will return null.
+The PostgreSQL behavior can be emulated using Coalesce if you know
+a sensible minimum value to provide as a default.
+Least 
+class Least(*expressions, **extra) 
+Accepts a list of at least two field names or expressions and returns the
+least value. Each argument must be of a similar type, so mixing text and numbers
+will result in a database error.
+Warning
+The behavior of Least when one or more expression may be null
+varies between databases:
+PostgreSQL: Least will return the smallest non-null expression,
+or null if all expressions are null.
+SQLite, Oracle, and MySQL: If any expression is null, Least
+will return null.
+The PostgreSQL behavior can be emulated using Coalesce if you know
+a sensible maximum value to provide as a default.
+NullIf 
+class NullIf(expression1, expression2) 
+New in Django 2.2. 
+Accepts two expressions and returns None if they are equal, otherwise
+returns expression1.
+Caveats on Oracle
+Due to an Oracle convention, this
+function returns the empty string instead of None when the expressions
+are of type CharField.
+Passing Value(None) to expression1 is prohibited on Oracle since
+Oracle doesn't accept NULL as the first argument.
+Date functions 
+We'll be using the following model in examples of each function:
+Extract 
+class Extract(expression, lookup_name=None, tzinfo=None, **extra) 
+Extracts a component of a date as a number.
+Takes an expression representing a DateField, DateTimeField,
+TimeField, or DurationField and a lookup_name, and returns the part
+of the date referenced by lookup_name as an IntegerField.
+Django usually uses the databases' extract function, so you may use any
+lookup_name that your database supports. A tzinfo subclass, usually
+provided by pytz, can be passed to extract a value in a specific timezone.
+Given the datetime 2015-06-15 23:30:01.000321+00:00, the built-in
+lookup_names return:
+"year": 2015
+"iso_year": 2015
+"quarter": 2
+"month": 6
+"day": 15
+"week": 25
+"week_day": 2
+"hour": 23
+"minute": 30
+"second": 1
+If a different timezone like Australia/Melbourne is active in Django, then
+the datetime is converted to the timezone before the value is extracted. The
+timezone offset for Melbourne in the example date above is +10:00. The values
+returned when this timezone is active will be the same as above except for:
+"day": 16
+"week_day": 3
+"hour": 9
+week_day values
+The week_day lookup_type is calculated differently from most
+databases and from Python's standard functions. This function will return
+1 for Sunday, 2 for Monday, through 7 for Saturday.
+The equivalent calculation in Python is:
+week values
+The week lookup_type is calculated based on ISO-8601, i.e.,
+a week starts on a Monday. The first week of a year is the one that
+contains the year's first Thursday, i.e. the first week has the majority
+(four or more) of its days in the year. The value returned is in the range
+1 to 52 or 53.
+Each lookup_name above has a corresponding Extract subclass (listed
+below) that should typically be used instead of the more verbose equivalent,
+e.g. use ExtractYear(...) rather than Extract(..., lookup_name='year').
+Usage example:
+DateField extracts 
+class ExtractYear(expression, tzinfo=None, **extra) 
+lookup_name = 'year'
+class ExtractIsoYear(expression, tzinfo=None, **extra) 
+New in Django 2.2. 
+Returns the ISO-8601 week-numbering year.
+lookup_name = 'iso_year'
+class ExtractMonth(expression, tzinfo=None, **extra) 
+lookup_name = 'month'
+class ExtractDay(expression, tzinfo=None, **extra) 
+lookup_name = 'day'
+class ExtractWeekDay(expression, tzinfo=None, **extra) 
+lookup_name = 'week_day'
+class ExtractWeek(expression, tzinfo=None, **extra) 
+lookup_name = 'week'
+class ExtractQuarter(expression, tzinfo=None, **extra) 
+lookup_name = 'quarter'
+These are logically equivalent to Extract('date_field', lookup_name). Each
+class is also a Transform registered on DateField and DateTimeField
+as __(lookup_name), e.g. __year.
+Since DateFields don't have a time component, only Extract subclasses
+that deal with date-parts can be used with DateField:
+DateTimeField extracts 
+In addition to the following, all extracts for DateField listed above may
+also be used on DateTimeFields .
+class ExtractHour(expression, tzinfo=None, **extra) 
+lookup_name = 'hour'
+class ExtractMinute(expression, tzinfo=None, **extra) 
+lookup_name = 'minute'
+class ExtractSecond(expression, tzinfo=None, **extra) 
+lookup_name = 'second'
+These are logically equivalent to Extract('datetime_field', lookup_name).
+Each class is also a Transform registered on DateTimeField as
+__(lookup_name), e.g. __minute.
+DateTimeField examples:
+When USE_TZ is True then datetimes are stored in the database
+in UTC. If a different timezone is active in Django, the datetime is converted
+to that timezone before the value is extracted. The example below converts to
+the Melbourne timezone (UTC +10:00), which changes the day, weekday, and hour
+values that are returned:
+Explicitly passing the timezone to the Extract function behaves in the same
+way, and takes priority over an active timezone:
+Now 
+class Now 
+Returns the database server's current date and time when the query is executed,
+typically using the SQL CURRENT_TIMESTAMP.
+Usage example:
+PostgreSQL considerations
+On PostgreSQL, the SQL CURRENT_TIMESTAMP returns the time that the
+current transaction started. Therefore for cross-database compatibility,
+Now() uses STATEMENT_TIMESTAMP instead. If you need the transaction
+timestamp, use django.contrib.postgres.functions.TransactionNow.
+Trunc 
+class Trunc(expression, kind, output_field=None, tzinfo=None, is_dst=None, **extra) 
+Truncates a date up to a significant component.
+When you only care if something happened in a particular year, hour, or day,
+but not the exact second, then Trunc (and its subclasses) can be useful to
+filter or aggregate your data. For example, you can use Trunc to calculate
+the number of sales per day.
+Trunc takes a single expression, representing a DateField,
+TimeField, or DateTimeField, a kind representing a date or time
+part, and an output_field that's either DateTimeField(),
+TimeField(), or DateField(). It returns a datetime, date, or time
+depending on output_field, with fields up to kind set to their minimum
+value. If output_field is omitted, it will default to the output_field
+of expression. A tzinfo subclass, usually provided by pytz, can be
+passed to truncate a value in a specific timezone.
+The is_dst parameter indicates whether or not pytz should interpret
+nonexistent and ambiguous datetimes in daylight saving time. By default (when
+is_dst=None), pytz raises an exception for such datetimes.
+New in Django 3.0: The is_dst parameter was added.
+Given the datetime 2015-06-15 14:30:50.000321+00:00, the built-in kinds
+return:
+"year": 2015-01-01 00:00:00+00:00
+"quarter": 2015-04-01 00:00:00+00:00
+"month": 2015-06-01 00:00:00+00:00
+"week": 2015-06-15 00:00:00+00:00
+"day": 2015-06-15 00:00:00+00:00
+"hour": 2015-06-15 14:00:00+00:00
+"minute": 2015-06-15 14:30:00+00:00
+"second": 2015-06-15 14:30:50+00:00
+If a different timezone like Australia/Melbourne is active in Django, then
+the datetime is converted to the new timezone before the value is truncated.
+The timezone offset for Melbourne in the example date above is +10:00. The
+values returned when this timezone is active will be:
+"year": 2015-01-01 00:00:00+11:00
+"quarter": 2015-04-01 00:00:00+10:00
+"month": 2015-06-01 00:00:00+10:00
+"week": 2015-06-16 00:00:00+10:00
+"day": 2015-06-16 00:00:00+10:00
+"hour": 2015-06-16 00:00:00+10:00
+"minute": 2015-06-16 00:30:00+10:00
+"second": 2015-06-16 00:30:50+10:00
+The year has an offset of +11:00 because the result transitioned into daylight
+saving time.
+Each kind above has a corresponding Trunc subclass (listed below) that
+should typically be used instead of the more verbose equivalent,
+e.g. use TruncYear(...) rather than Trunc(..., kind='year').
+The subclasses are all defined as transforms, but they aren't registered with
+any fields, because the obvious lookup names are already reserved by the
+Extract subclasses.
+Usage example:
+DateField truncation 
+class TruncYear(expression, output_field=None, tzinfo=None, is_dst=None, **extra) 
+kind = 'year'
+class TruncMonth(expression, output_field=None, tzinfo=None, is_dst=None, **extra) 
+kind = 'month'
+class TruncWeek(expression, output_field=None, tzinfo=None, is_dst=None, **extra) 
+Truncates to midnight on the Monday of the week.
+kind = 'week'
+class TruncQuarter(expression, output_field=None, tzinfo=None, is_dst=None, **extra) 
+kind = 'quarter'
+These are logically equivalent to Trunc('date_field', kind). They truncate
+all parts of the date up to kind which allows grouping or filtering dates
+with less precision. expression can have an output_field of either
+DateField or DateTimeField.
+Since DateFields don't have a time component, only Trunc subclasses
+that deal with date-parts can be used with DateField:
+DateTimeField truncation 
+class TruncDate(expression, **extra) 
+lookup_name = 'date'
+output_field = DateField()
+TruncDate casts expression to a date rather than using the built-in SQL
+truncate function. It's also registered as a transform on  DateTimeField as
+__date.
+class TruncTime(expression, **extra) 
+lookup_name = 'time'
+output_field = TimeField()
+TruncTime casts expression to a time rather than using the built-in SQL
+truncate function. It's also registered as a transform on DateTimeField as
+__time.
+class TruncDay(expression, output_field=None, tzinfo=None, is_dst=None, **extra) 
+kind = 'day'
+class TruncHour(expression, output_field=None, tzinfo=None, is_dst=None, **extra) 
+kind = 'hour'
+class TruncMinute(expression, output_field=None, tzinfo=None, is_dst=None, **extra) 
+kind = 'minute'
+class TruncSecond(expression, output_field=None, tzinfo=None, is_dst=None, **extra) 
+kind = 'second'
+These are logically equivalent to Trunc('datetime_field', kind). They
+truncate all parts of the date up to kind and allow grouping or filtering
+datetimes with less precision. expression must have an output_field of
+DateTimeField.
+Usage example:
+TimeField truncation 
+class TruncHour(expression, output_field=None, tzinfo=None, is_dst=None, **extra)
+kind = 'hour'
+class TruncMinute(expression, output_field=None, tzinfo=None, is_dst=None, **extra)
+kind = 'minute'
+class TruncSecond(expression, output_field=None, tzinfo=None, is_dst=None, **extra)
+kind = 'second'
+These are logically equivalent to Trunc('time_field', kind). They truncate
+all parts of the time up to kind which allows grouping or filtering times
+with less precision. expression can have an output_field of either
+TimeField or DateTimeField.
+Since TimeFields don't have a date component, only Trunc subclasses
+that deal with time-parts can be used with TimeField:
+Math Functions 
+New in Django 2.2. 
+We'll be using the following model in math function examples:
+Abs 
+class Abs(expression, **extra) 
+Returns the absolute value of a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+ACos 
+class ACos(expression, **extra) 
+Returns the arccosine of a numeric field or expression. The expression value
+must be within the range -1 to 1.
+Usage example:
+It can also be registered as a transform. 
+ASin 
+class ASin(expression, **extra) 
+Returns the arcsine of a numeric field or expression. The expression value must
+be in the range -1 to 1.
+Usage example:
+It can also be registered as a transform. 
+ATan 
+class ATan(expression, **extra) 
+Returns the arctangent of a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+ATan2 
+class ATan2(expression1, expression2, **extra) 
+Returns the arctangent of expression1 / expression2.
+Usage example:
+Ceil 
+class Ceil(expression, **extra) 
+Returns the smallest integer greater than or equal to a numeric field or
+expression.
+Usage example:
+It can also be registered as a transform. 
+Cos 
+class Cos(expression, **extra) 
+Returns the cosine  of a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+Cot 
+class Cot(expression, **extra) 
+Returns the cotangent of a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+Degrees 
+class Degrees(expression, **extra) 
+Converts a numeric field or expression from radians to degrees.
+Usage example:
+It can also be registered as a transform. 
+Exp 
+class Exp(expression, **extra) 
+Returns the value of e (the natural logarithm base) raised to the power of
+a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+Floor 
+class Floor(expression, **extra) 
+Returns the largest integer value not greater than a numeric field or
+expression.
+Usage example:
+It can also be registered as a transform. 
+Ln 
+class Ln(expression, **extra) 
+Returns the natural logarithm a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+Log 
+class Log(expression1, expression2, **extra) 
+Accepts two numeric fields or expressions and returns the logarithm of
+the first to base of the second.
+Usage example:
+Mod 
+class Mod(expression1, expression2, **extra) 
+Accepts two numeric fields or expressions and returns the remainder of
+the first divided by the second (modulo operation).
+Usage example:
+Pi 
+class Pi(**extra) 
+Returns the value of the mathematical constant π.
+Power 
+class Power(expression1, expression2, **extra) 
+Accepts two numeric fields or expressions and returns the value of the first
+raised to the power of the second.
+Usage example:
+Radians 
+class Radians(expression, **extra) 
+Converts a numeric field or expression from degrees to radians.
+Usage example:
+It can also be registered as a transform. 
+Round 
+class Round(expression, **extra) 
+Rounds a numeric field or expression to the nearest integer. Whether half
+values are rounded up or down depends on the database.
+Usage example:
+It can also be registered as a transform. 
+Sign 
+class Sign(expression, **extra) 
+New in Django 3.0. 
+Returns the sign (-1, 0, 1) of a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+Sin 
+class Sin(expression, **extra) 
+Returns the sine of a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+Sqrt 
+class Sqrt(expression, **extra) 
+Returns the square root of a nonnegative numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+Tan 
+class Tan(expression, **extra) 
+Returns the tangent of a numeric field or expression.
+Usage example:
+It can also be registered as a transform. 
+Text functions 
+Chr 
+class Chr(expression, **extra) 
+Accepts a numeric field or expression and returns the text representation of
+the expression as a single character. It works the same as Python's chr()
+function.
+Like Length, it can be registered as a transform on IntegerField.
+The default lookup name is chr.
+Usage example:
+Concat 
+class Concat(*expressions, **extra) 
+Accepts a list of at least two text fields or expressions and returns the
+concatenated text. Each argument must be of a text or char type. If you want
+to concatenate a TextField() with a CharField(), then be sure to tell
+Django that the output_field should be a TextField(). Specifying an
+output_field is also required when concatenating a Value as in the
+example below.
+This function will never have a null result. On backends where a null argument
+results in the entire expression being null, Django will ensure that each null
+part is converted to an empty string first.
+Usage example:
+Left 
+class Left(expression, length, **extra) 
+Returns the first length characters of the given text field or expression.
+Usage example:
+Length 
+class Length(expression, **extra) 
+Accepts a single text field or expression and returns the number of characters
+the value has. If the expression is null, then the length will also be null.
+Usage example:
+It can also be registered as a transform. 
+Lower 
+class Lower(expression, **extra) 
+Accepts a single text field or expression and returns the lowercase
+representation.
+It can also be registered as a transform as described in Length.
+Usage example:
+LPad 
+class LPad(expression, length, fill_text=Value(' '), **extra) 
+Returns the value of the given text field or expression padded on the left side
+with fill_text so that the resulting value is length characters long.
+The default fill_text is a space.
+Usage example:
+LTrim 
+class LTrim(expression, **extra) 
+Similar to Trim, but removes only leading
+spaces.
+MD5 
+class MD5(expression, **extra) 
+New in Django 3.0. 
+Accepts a single text field or expression and returns the MD5 hash of the
+string.
+It can also be registered as a transform as described in Length.
+Usage example:
+Ord 
+class Ord(expression, **extra) 
+Accepts a single text field or expression and returns the Unicode code point
+value for the first character of that expression. It works similar to Python's
+ord() function, but an exception isn't raised if the expression is more
+than one character long.
+It can also be registered as a transform as described in Length.
+The default lookup name is ord.
+Usage example:
+Repeat 
+class Repeat(expression, number, **extra) 
+Returns the value of the given text field or expression repeated number
+times.
+Usage example:
+Replace 
+class Replace(expression, text, replacement=Value(''), **extra) 
+Replaces all occurrences of text with replacement in expression.
+The default replacement text is the empty string. The arguments to the function
+are case-sensitive.
+Usage example:
+Reverse 
+class Reverse(expression, **extra) 
+New in Django 2.2. 
+Accepts a single text field or expression and returns the characters of that
+expression in reverse order.
+It can also be registered as a transform as described in Length. The
+default lookup name is reverse.
+Usage example:
+Right 
+class Right(expression, length, **extra) 
+Returns the last length characters of the given text field or expression.
+Usage example:
+RPad 
+class RPad(expression, length, fill_text=Value(' '), **extra) 
+Similar to LPad, but pads on the right
+side.
+RTrim 
+class RTrim(expression, **extra) 
+Similar to Trim, but removes only trailing
+spaces.
+SHA1, SHA224, SHA256, SHA384, and SHA512 
+class SHA1(expression, **extra) 
+class SHA224(expression, **extra) 
+class SHA256(expression, **extra) 
+class SHA384(expression, **extra) 
+class SHA512(expression, **extra) 
+New in Django 3.0. 
+Accepts a single text field or expression and returns the particular hash of
+the string.
+They can also be registered as transforms as described in Length.
+Usage example:
+PostgreSQL
+The pgcrypto extension must be installed. You can use the
+CryptoExtension migration
+operation to install it.
+Oracle
+Oracle doesn't support the SHA224 function.
+StrIndex 
+class StrIndex(string, substring, **extra) 
+Returns a positive integer corresponding to the 1-indexed position of the first
+occurrence of substring inside string, or 0 if substring is not
+found.
+Usage example:
+Warning
+In MySQL, a database table's collation determines
+whether string comparisons (such as the expression and substring of
+this function) are case-sensitive. Comparisons are case-insensitive by
+default.
+Substr 
+class Substr(expression, pos, length=None, **extra) 
+Returns a substring of length length from the field or expression starting
+at position pos. The position is 1-indexed, so the position must be greater
+than 0. If length is None, then the rest of the string will be returned.
+Usage example:
+Trim 
+class Trim(expression, **extra) 
+Returns the value of the given text field or expression with leading and
+trailing spaces removed.
+Usage example:
+Upper 
+class Upper(expression, **extra) 
+Accepts a single text field or expression and returns the uppercase
+representation.
+It can also be registered as a transform as described in Length.
+Usage example:
+Window functions 
+There are a number of functions to use in a
+Window expression for computing the rank
+of elements or the Ntile of some rows.
+CumeDist 
+class CumeDist(*expressions, **extra) 
+Calculates the cumulative distribution of a value within a window or partition.
+The cumulative distribution is defined as the number of rows preceding or
+peered with the current row divided by the total number of rows in the frame.
+DenseRank 
+class DenseRank(*expressions, **extra) 
+Equivalent to Rank but does not have gaps.
+FirstValue 
+class FirstValue(expression, **extra) 
+Returns the value evaluated at the row that's the first row of the window
+frame, or None if no such value exists.
+Lag 
+class Lag(expression, offset=1, default=None, **extra) 
+Calculates the value offset by offset, and if no row exists there, returns
+default.
+default must have the same type as the expression, however, this is
+only validated by the database and not in Python.
+MariaDB and default
+MariaDB doesn't support
+the default parameter.
+LastValue 
+class LastValue(expression, **extra) 
+Comparable to FirstValue, it calculates the last value in a given
+frame clause.
+Lead 
+class Lead(expression, offset=1, default=None, **extra) 
+Calculates the leading value in a given frame. Both
+offset and default are evaluated with respect to the current row.
+default must have the same type as the expression, however, this is
+only validated by the database and not in Python.
+MariaDB and default
+MariaDB doesn't support
+the default parameter.
+NthValue 
+class NthValue(expression, nth=1, **extra) 
+Computes the row relative to the offset nth (must be a positive value)
+within the window. Returns None if no row exists.
+Some databases may handle a nonexistent nth-value differently. For example,
+Oracle returns an empty string rather than None for character-based
+expressions. Django doesn't do any conversions in these cases.
+Ntile 
+class Ntile(num_buckets=1, **extra) 
+Calculates a partition for each of the rows in the frame clause, distributing
+numbers as evenly as possible between 1 and num_buckets. If the rows don't
+divide evenly into a number of buckets, one or more buckets will be represented
+more frequently.
+PercentRank 
+class PercentRank(*expressions, **extra) 
+Computes the percentile rank of the rows in the frame clause. This
+computation is equivalent to evaluating:
+The following table explains the calculation for the percentile rank of a row:
+Row #
+Value
+Rank
+Calculation
+Percent Rank
+1
+15
+1
+(1-1)/(7-1)
+0.0000
+2
+20
+2
+(2-1)/(7-1)
+0.1666
+3
+20
+2
+(2-1)/(7-1)
+0.1666
+4
+20
+2
+(2-1)/(7-1)
+0.1666
+5
+30
+5
+(5-1)/(7-1)
+0.6666
+6
+30
+5
+(5-1)/(7-1)
+0.6666
+7
+40
+7
+(7-1)/(7-1)
+1.0000
+Rank 
+class Rank(*expressions, **extra) 
+Comparable to RowNumber, this function ranks rows in the window. The
+computed rank contains gaps. Use DenseRank to compute rank without
+gaps.
+RowNumber 
+class RowNumber(*expressions, **extra) 
+Computes the row number according to the ordering of either the frame clause
+or the ordering of the whole query if there is no partitioning of the
+window frame.

@@ -1,0 +1,9 @@
+https://docs.djangoproject.com/en/3.0/topics/db/examples/
+Examples of model relationship API usage 
+Many-to-many relationships
+Many-to-one relationships
+One-to-one relationships
+Examples of model relationship API usage 
+Many-to-many relationships
+Many-to-one relationships
+One-to-one relationships

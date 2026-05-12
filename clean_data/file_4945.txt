@@ -1,0 +1,17 @@
+https://docs.djangoproject.com/en/1.8/_modules/django/contrib/sites/middleware/
+Source code for django.contrib.sites.middleware
+from .shortcuts import get_current_site
+[docs]class CurrentSiteMiddleware(object):
+    """
+    Middleware that sets `site` attribute to request object.
+    """
+    def process_request(self, request):
+        request.site = get_current_site(request)
+Source code for django.contrib.sites.middleware
+from .shortcuts import get_current_site
+[docs]class CurrentSiteMiddleware(object):
+    """
+    Middleware that sets `site` attribute to request object.
+    """
+    def process_request(self, request):
+        request.site = get_current_site(request)

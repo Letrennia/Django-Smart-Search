@@ -1,0 +1,757 @@
+https://docs.djangoproject.com/en/3.0/ref/contrib/postgres/fields/
+PostgreSQL specific model fields 
+All of these fields are available from the django.contrib.postgres.fields
+module.
+Indexing these fields 
+Index and Field.db_index both create a
+B-tree index, which isn't particularly helpful when querying complex data types.
+Indexes such as GinIndex and
+GistIndex are better suited, though
+the index choice is dependent on the queries that you're using. Generally, GiST
+may be a good choice for the range fields and
+HStoreField, and GIN may be helpful for ArrayField and
+JSONField.
+ArrayField 
+class ArrayField(base_field, size=None, **options) 
+A field for storing lists of data. Most field types can be used, and you
+pass another field instance as the base_field. You may also specify a size. ArrayField can be nested to store multi-dimensional
+arrays.
+If you give the field a default, ensure
+it's a callable such as list (for an empty default) or a callable that
+returns a list (such as a function). Incorrectly using default=[]
+creates a mutable default that is shared between all instances of
+ArrayField.
+base_field 
+This is a required argument.
+Specifies the underlying data type and behavior for the array. It
+should be an instance of a subclass of
+Field. For example, it could be an
+IntegerField or a
+CharField. Most field types are permitted,
+with the exception of those handling relational data
+(ForeignKey,
+OneToOneField and
+ManyToManyField).
+It is possible to nest array fields - you can specify an instance of
+ArrayField as the base_field. 
+Transformation of values between the database and the model, validation
+of data and configuration, and serialization are all delegated to the
+underlying base field.
+size 
+This is an optional argument.
+If passed, the array will have a maximum size as specified. This will
+be passed to the database, although PostgreSQL at present does not
+enforce the restriction.
+Note
+When nesting ArrayField, whether you use the size parameter or not,
+PostgreSQL requires that the arrays are rectangular:
+If irregular shapes are required, then the underlying field should be made
+nullable and the values padded with None.
+Querying ArrayField 
+There are a number of custom lookups and transforms for ArrayField.
+We will use the following example model:
+contains 
+The contains lookup is overridden on ArrayField. The
+returned objects will be those where the values passed are a subset of the
+data. It uses the SQL operator @>. 
+contained_by 
+This is the inverse of the contains lookup -
+the objects returned will be those where the data is a subset of the values
+passed. It uses the SQL operator <@. 
+overlap 
+Returns objects where the data shares any results with the values passed. Uses
+the SQL operator &&. 
+len 
+Returns the length of the array. The lookups available afterwards are those
+available for IntegerField. 
+Index transforms 
+Index transforms index into the array. Any non-negative integer can be used.
+There are no errors if it exceeds the size of the
+array. The lookups available after the transform are those from the
+base_field. 
+Note
+PostgreSQL uses 1-based indexing for array fields when writing raw SQL.
+However these indexes and those used in slices
+use 0-based indexing to be consistent with Python.
+Slice transforms 
+Slice transforms take a slice of the array. Any two non-negative integers can
+be used, separated by a single underscore. The lookups available after the
+transform do not change. 
+Note
+PostgreSQL uses 1-based indexing for array fields when writing raw SQL.
+However these slices and those used in indexes
+use 0-based indexing to be consistent with Python.
+Multidimensional arrays with indexes and slices
+PostgreSQL has some rather esoteric behavior when using indexes and slices
+on multidimensional arrays. It will always work to use indexes to reach
+down to the final underlying data, but most other slices behave strangely
+at the database level and cannot be supported in a logical, consistent
+fashion by Django.
+CIText fields 
+class CIText(**options) 
+A mixin to create case-insensitive text fields backed by the citext type.
+Read about the performance considerations prior to using it.
+To use citext, use the CITextExtension operation to
+setup the citext extension in
+PostgreSQL before the first CreateModel migration operation.
+If you're using an ArrayField
+of CIText fields, you must add 'django.contrib.postgres' in your
+INSTALLED_APPS, otherwise field values will appear as strings
+like '{thoughts,django}'.
+Several fields that use the mixin are provided:
+class CICharField(**options) 
+class CIEmailField(**options) 
+class CITextField(**options) 
+These fields subclass CharField,
+EmailField, and
+TextField, respectively.
+max_length won't be enforced in the database since citext behaves
+similar to PostgreSQL's text type.
+HStoreField 
+class HStoreField(**options) 
+A field for storing key-value pairs. The Python data type used is a
+dict. Keys must be strings, and values may be either strings or nulls
+(None in Python).
+To use this field, you'll need to:
+Add 'django.contrib.postgres' in your INSTALLED_APPS.
+Setup the hstore extension in
+PostgreSQL.
+You'll see an error like can't adapt type 'dict' if you skip the first
+step, or type "hstore" does not exist if you skip the second.
+Note
+On occasions it may be useful to require or restrict the keys which are
+valid for a given field. This can be done using the
+KeysValidator.
+Querying HStoreField 
+In addition to the ability to query by key, there are a number of custom
+lookups available for HStoreField.
+We will use the following example model:
+Key lookups 
+To query based on a given key, you can use that key as the lookup name:
+You can chain other lookups after key lookups:
+If the key you wish to query by clashes with the name of another lookup, you
+need to use the hstorefield.contains lookup instead.
+Warning
+Since any string could be a key in a hstore value, any lookup other than
+those listed below will be interpreted as a key lookup. No errors are
+raised. Be extra careful for typing mistakes, and always check your queries
+work as you intend.
+contains 
+The contains lookup is overridden on
+HStoreField. The returned objects are
+those where the given dict of key-value pairs are all contained in the
+field. It uses the SQL operator @>. 
+contained_by 
+This is the inverse of the contains lookup -
+the objects returned will be those where the key-value pairs on the object are
+a subset of those in the value passed. It uses the SQL operator <@. For
+example:
+has_key 
+Returns objects where the given key is in the data. Uses the SQL operator
+?. 
+has_any_keys 
+Returns objects where any of the given keys are in the data. Uses the SQL
+operator ?|. 
+has_keys 
+Returns objects where all of the given keys are in the data. Uses the SQL operator
+?&. 
+keys 
+Returns objects where the array of keys is the given value. Note that the order
+is not guaranteed to be reliable, so this transform is mainly useful for using
+in conjunction with lookups on
+ArrayField. Uses the SQL function
+akeys(). 
+values 
+Returns objects where the array of values is the given value. Note that the
+order is not guaranteed to be reliable, so this transform is mainly useful for
+using in conjunction with lookups on
+ArrayField. Uses the SQL function
+avalues(). 
+JSONField 
+class JSONField(encoder=None, **options) 
+A field for storing JSON encoded data. In Python the data is represented in
+its Python native format: dictionaries, lists, strings, numbers, booleans
+and None.
+encoder 
+An optional JSON-encoding class to serialize data types not supported
+by the standard JSON serializer (datetime, uuid, etc.). For
+example, you can use the
+DjangoJSONEncoder class or any
+other json.JSONEncoder subclass.
+When the value is retrieved from the database, it will be in the format
+chosen by the custom encoder (most often a string), so you'll need to
+take extra steps to convert the value back to the initial data type
+(Model.from_db() and
+Field.from_db_value()
+are two possible hooks for that purpose). Your deserialization may need
+to account for the fact that you can't be certain of the input type.
+For example, you run the risk of returning a datetime that was
+actually a string that just happened to be in the same format chosen
+for datetimes.
+If you give the field a default, ensure
+it's a callable such as dict (for an empty default) or a callable that
+returns a dict (such as a function). Incorrectly using default={}
+creates a mutable default that is shared between all instances of
+JSONField.
+Note
+PostgreSQL has two native JSON based data types: json and jsonb.
+The main difference between them is how they are stored and how they can be
+queried. PostgreSQL's json field is stored as the original string
+representation of the JSON and must be decoded on the fly when queried
+based on keys. The jsonb field is stored based on the actual structure
+of the JSON which allows indexing. The trade-off is a small additional cost
+on writing to the jsonb field. JSONField uses jsonb.
+Querying JSONField 
+We will use the following example model:
+Key, index, and path lookups 
+To query based on a given dictionary key, use that key as the lookup name:
+Multiple keys can be chained together to form a path lookup:
+If the key is an integer, it will be interpreted as an index lookup in an
+array:
+If the key you wish to query by clashes with the name of another lookup, use
+the jsonfield.contains lookup instead.
+If only one key or index is used, the SQL operator -> is used. If multiple
+operators are used then the #> operator is used.
+To query for null in JSON data, use None as a value:
+To query for missing keys, use the isnull lookup:
+Warning
+Since any string could be a key in a JSON object, any lookup other than
+those listed below will be interpreted as a key lookup. No errors are
+raised. Be extra careful for typing mistakes, and always check your queries
+work as you intend.
+Containment and key operations 
+JSONField shares lookups relating to
+containment and keys with HStoreField.
+contains (accepts any JSON rather than
+just a dictionary of strings)
+contained_by (accepts any JSON
+rather than just a dictionary of strings)
+has_key
+has_any_keys
+has_keys
+Range Fields 
+There are five range field types, corresponding to the built-in range types in
+PostgreSQL. These fields are used to store a range of values; for example the
+start and end timestamps of an event, or the range of ages an activity is
+suitable for.
+All of the range fields translate to psycopg2 Range objects in Python, but also accept tuples as input if no bounds
+information is necessary. The default is lower bound included, upper bound
+excluded; that is, [).
+IntegerRangeField 
+class IntegerRangeField(**options) 
+Stores a range of integers. Based on an
+IntegerField. Represented by an int4range in
+the database and a NumericRange in
+Python.
+Regardless of the bounds specified when saving the data, PostgreSQL always
+returns a range in a canonical form that includes the lower bound and
+excludes the upper bound; that is [).
+BigIntegerRangeField 
+class BigIntegerRangeField(**options) 
+Stores a range of large integers. Based on a
+BigIntegerField. Represented by an int8range
+in the database and a NumericRange in
+Python.
+Regardless of the bounds specified when saving the data, PostgreSQL always
+returns a range in a canonical form that includes the lower bound and
+excludes the upper bound; that is [).
+DecimalRangeField 
+class DecimalRangeField(**options) 
+New in Django 2.2. 
+Stores a range of floating point values. Based on a
+DecimalField. Represented by a numrange in
+the database and a NumericRange in
+Python.
+FloatRangeField 
+class FloatRangeField(**options) 
+Stores a range of floating point values. Based on a
+FloatField. Represented by a numrange in the
+database and a NumericRange in Python.
+Deprecated since version 2.2: Use DecimalRangeField instead.
+DateTimeRangeField 
+class DateTimeRangeField(**options) 
+Stores a range of timestamps. Based on a
+DateTimeField. Represented by a tstzrange in
+the database and a DateTimeTZRange in
+Python.
+DateRangeField 
+class DateRangeField(**options) 
+Stores a range of dates. Based on a
+DateField. Represented by a daterange in the
+database and a DateRange in Python.
+Regardless of the bounds specified when saving the data, PostgreSQL always
+returns a range in a canonical form that includes the lower bound and
+excludes the upper bound; that is [).
+Querying Range Fields 
+There are a number of custom lookups and transforms for range fields. They are
+available on all the above fields, but we will use the following example
+model:
+We will also use the following example objects:
+and NumericRange:
+Containment functions 
+As with other PostgreSQL fields, there are three standard containment
+operators: contains, contained_by and overlap, using the SQL
+operators @>, <@, and && respectively.
+contains 
+contained_by 
+The contained_by lookup is also available on the non-range field types:
+IntegerField,
+BigIntegerField,
+FloatField, DateField,
+and DateTimeField. 
+overlap 
+Comparison functions 
+Range fields support the standard lookups: lt, gt,
+lte and gte. These are not particularly helpful - they
+compare the lower bounds first and then the upper bounds only if necessary.
+This is also the strategy used to order by a range field. It is better to use
+the specific range comparison operators.
+fully_lt 
+The returned ranges are strictly less than the passed range. In other words,
+all the points in the returned range are less than all those in the passed
+range.
+fully_gt 
+The returned ranges are strictly greater than the passed range. In other words,
+the all the points in the returned range are greater than all those in the
+passed range.
+not_lt 
+The returned ranges do not contain any points less than the passed range, that
+is the lower bound of the returned range is at least the lower bound of the
+passed range.
+not_gt 
+The returned ranges do not contain any points greater than the passed range, that
+is the upper bound of the returned range is at most the upper bound of the
+passed range.
+adjacent_to 
+The returned ranges share a bound with the passed range.
+Querying using the bounds 
+There are three transforms available for use in queries. You can extract the
+lower or upper bound, or query based on emptiness.
+startswith 
+Returned objects have the given lower bound. Can be chained to valid lookups
+for the base field.
+endswith 
+Returned objects have the given upper bound. Can be chained to valid lookups
+for the base field.
+isempty 
+Returned objects are empty ranges. Can be chained to valid lookups for a
+BooleanField.
+Defining your own range types 
+PostgreSQL allows the definition of custom range types. Django's model and form
+field implementations use base classes below, and psycopg2 provides a
+register_range() to allow use of custom range
+types.
+class RangeField(**options) 
+Base class for model range fields.
+base_field 
+The model field class to use.
+range_type 
+The psycopg2 range type to use.
+form_field 
+The form field class to use. Should be a subclass of
+django.contrib.postgres.forms.BaseRangeField.
+class django.contrib.postgres.forms.BaseRangeField 
+Base class for form range fields.
+base_field 
+The form field to use.
+range_type 
+The psycopg2 range type to use.
+Range operators 
+New in Django 3.0. 
+class RangeOperators 
+PostgreSQL provides a set of SQL operators that can be used together with the
+range data types (see the PostgreSQL documentation for the full details of
+range operators). This class is meant as a
+convenient method to avoid typos. The operator names overlap with the names of
+corresponding lookups.
+RangeBoundary() expressions 
+New in Django 3.0. 
+class RangeBoundary(inclusive_lower=True, inclusive_upper=False) 
+inclusive_lower 
+If True (default), the lower bound is inclusive '[', otherwise
+it's exclusive '('.
+inclusive_upper 
+If False (default), the upper bound is exclusive ')', otherwise
+it's inclusive ']'.
+A RangeBoundary() expression represents the range boundaries. It can be
+used with a custom range functions that expected boundaries, for example to
+define ExclusionConstraint. See
+the PostgreSQL documentation for the full details.
+PostgreSQL specific model fields 
+All of these fields are available from the django.contrib.postgres.fields
+module.
+Indexing these fields 
+Index and Field.db_index both create a
+B-tree index, which isn't particularly helpful when querying complex data types.
+Indexes such as GinIndex and
+GistIndex are better suited, though
+the index choice is dependent on the queries that you're using. Generally, GiST
+may be a good choice for the range fields and
+HStoreField, and GIN may be helpful for ArrayField and
+JSONField.
+ArrayField 
+class ArrayField(base_field, size=None, **options) 
+A field for storing lists of data. Most field types can be used, and you
+pass another field instance as the base_field. You may also specify a size. ArrayField can be nested to store multi-dimensional
+arrays.
+If you give the field a default, ensure
+it's a callable such as list (for an empty default) or a callable that
+returns a list (such as a function). Incorrectly using default=[]
+creates a mutable default that is shared between all instances of
+ArrayField.
+base_field 
+This is a required argument.
+Specifies the underlying data type and behavior for the array. It
+should be an instance of a subclass of
+Field. For example, it could be an
+IntegerField or a
+CharField. Most field types are permitted,
+with the exception of those handling relational data
+(ForeignKey,
+OneToOneField and
+ManyToManyField).
+It is possible to nest array fields - you can specify an instance of
+ArrayField as the base_field. 
+Transformation of values between the database and the model, validation
+of data and configuration, and serialization are all delegated to the
+underlying base field.
+size 
+This is an optional argument.
+If passed, the array will have a maximum size as specified. This will
+be passed to the database, although PostgreSQL at present does not
+enforce the restriction.
+Note
+When nesting ArrayField, whether you use the size parameter or not,
+PostgreSQL requires that the arrays are rectangular:
+If irregular shapes are required, then the underlying field should be made
+nullable and the values padded with None.
+Querying ArrayField 
+There are a number of custom lookups and transforms for ArrayField.
+We will use the following example model:
+contains 
+The contains lookup is overridden on ArrayField. The
+returned objects will be those where the values passed are a subset of the
+data. It uses the SQL operator @>. 
+contained_by 
+This is the inverse of the contains lookup -
+the objects returned will be those where the data is a subset of the values
+passed. It uses the SQL operator <@. 
+overlap 
+Returns objects where the data shares any results with the values passed. Uses
+the SQL operator &&. 
+len 
+Returns the length of the array. The lookups available afterwards are those
+available for IntegerField. 
+Index transforms 
+Index transforms index into the array. Any non-negative integer can be used.
+There are no errors if it exceeds the size of the
+array. The lookups available after the transform are those from the
+base_field. 
+Note
+PostgreSQL uses 1-based indexing for array fields when writing raw SQL.
+However these indexes and those used in slices
+use 0-based indexing to be consistent with Python.
+Slice transforms 
+Slice transforms take a slice of the array. Any two non-negative integers can
+be used, separated by a single underscore. The lookups available after the
+transform do not change. 
+Note
+PostgreSQL uses 1-based indexing for array fields when writing raw SQL.
+However these slices and those used in indexes
+use 0-based indexing to be consistent with Python.
+Multidimensional arrays with indexes and slices
+PostgreSQL has some rather esoteric behavior when using indexes and slices
+on multidimensional arrays. It will always work to use indexes to reach
+down to the final underlying data, but most other slices behave strangely
+at the database level and cannot be supported in a logical, consistent
+fashion by Django.
+CIText fields 
+class CIText(**options) 
+A mixin to create case-insensitive text fields backed by the citext type.
+Read about the performance considerations prior to using it.
+To use citext, use the CITextExtension operation to
+setup the citext extension in
+PostgreSQL before the first CreateModel migration operation.
+If you're using an ArrayField
+of CIText fields, you must add 'django.contrib.postgres' in your
+INSTALLED_APPS, otherwise field values will appear as strings
+like '{thoughts,django}'.
+Several fields that use the mixin are provided:
+class CICharField(**options) 
+class CIEmailField(**options) 
+class CITextField(**options) 
+These fields subclass CharField,
+EmailField, and
+TextField, respectively.
+max_length won't be enforced in the database since citext behaves
+similar to PostgreSQL's text type.
+HStoreField 
+class HStoreField(**options) 
+A field for storing key-value pairs. The Python data type used is a
+dict. Keys must be strings, and values may be either strings or nulls
+(None in Python).
+To use this field, you'll need to:
+Add 'django.contrib.postgres' in your INSTALLED_APPS.
+Setup the hstore extension in
+PostgreSQL.
+You'll see an error like can't adapt type 'dict' if you skip the first
+step, or type "hstore" does not exist if you skip the second.
+Note
+On occasions it may be useful to require or restrict the keys which are
+valid for a given field. This can be done using the
+KeysValidator.
+Querying HStoreField 
+In addition to the ability to query by key, there are a number of custom
+lookups available for HStoreField.
+We will use the following example model:
+Key lookups 
+To query based on a given key, you can use that key as the lookup name:
+You can chain other lookups after key lookups:
+If the key you wish to query by clashes with the name of another lookup, you
+need to use the hstorefield.contains lookup instead.
+Warning
+Since any string could be a key in a hstore value, any lookup other than
+those listed below will be interpreted as a key lookup. No errors are
+raised. Be extra careful for typing mistakes, and always check your queries
+work as you intend.
+contains 
+The contains lookup is overridden on
+HStoreField. The returned objects are
+those where the given dict of key-value pairs are all contained in the
+field. It uses the SQL operator @>. 
+contained_by 
+This is the inverse of the contains lookup -
+the objects returned will be those where the key-value pairs on the object are
+a subset of those in the value passed. It uses the SQL operator <@. For
+example:
+has_key 
+Returns objects where the given key is in the data. Uses the SQL operator
+?. 
+has_any_keys 
+Returns objects where any of the given keys are in the data. Uses the SQL
+operator ?|. 
+has_keys 
+Returns objects where all of the given keys are in the data. Uses the SQL operator
+?&. 
+keys 
+Returns objects where the array of keys is the given value. Note that the order
+is not guaranteed to be reliable, so this transform is mainly useful for using
+in conjunction with lookups on
+ArrayField. Uses the SQL function
+akeys(). 
+values 
+Returns objects where the array of values is the given value. Note that the
+order is not guaranteed to be reliable, so this transform is mainly useful for
+using in conjunction with lookups on
+ArrayField. Uses the SQL function
+avalues(). 
+JSONField 
+class JSONField(encoder=None, **options) 
+A field for storing JSON encoded data. In Python the data is represented in
+its Python native format: dictionaries, lists, strings, numbers, booleans
+and None.
+encoder 
+An optional JSON-encoding class to serialize data types not supported
+by the standard JSON serializer (datetime, uuid, etc.). For
+example, you can use the
+DjangoJSONEncoder class or any
+other json.JSONEncoder subclass.
+When the value is retrieved from the database, it will be in the format
+chosen by the custom encoder (most often a string), so you'll need to
+take extra steps to convert the value back to the initial data type
+(Model.from_db() and
+Field.from_db_value()
+are two possible hooks for that purpose). Your deserialization may need
+to account for the fact that you can't be certain of the input type.
+For example, you run the risk of returning a datetime that was
+actually a string that just happened to be in the same format chosen
+for datetimes.
+If you give the field a default, ensure
+it's a callable such as dict (for an empty default) or a callable that
+returns a dict (such as a function). Incorrectly using default={}
+creates a mutable default that is shared between all instances of
+JSONField.
+Note
+PostgreSQL has two native JSON based data types: json and jsonb.
+The main difference between them is how they are stored and how they can be
+queried. PostgreSQL's json field is stored as the original string
+representation of the JSON and must be decoded on the fly when queried
+based on keys. The jsonb field is stored based on the actual structure
+of the JSON which allows indexing. The trade-off is a small additional cost
+on writing to the jsonb field. JSONField uses jsonb.
+Querying JSONField 
+We will use the following example model:
+Key, index, and path lookups 
+To query based on a given dictionary key, use that key as the lookup name:
+Multiple keys can be chained together to form a path lookup:
+If the key is an integer, it will be interpreted as an index lookup in an
+array:
+If the key you wish to query by clashes with the name of another lookup, use
+the jsonfield.contains lookup instead.
+If only one key or index is used, the SQL operator -> is used. If multiple
+operators are used then the #> operator is used.
+To query for null in JSON data, use None as a value:
+To query for missing keys, use the isnull lookup:
+Warning
+Since any string could be a key in a JSON object, any lookup other than
+those listed below will be interpreted as a key lookup. No errors are
+raised. Be extra careful for typing mistakes, and always check your queries
+work as you intend.
+Containment and key operations 
+JSONField shares lookups relating to
+containment and keys with HStoreField.
+contains (accepts any JSON rather than
+just a dictionary of strings)
+contained_by (accepts any JSON
+rather than just a dictionary of strings)
+has_key
+has_any_keys
+has_keys
+Range Fields 
+There are five range field types, corresponding to the built-in range types in
+PostgreSQL. These fields are used to store a range of values; for example the
+start and end timestamps of an event, or the range of ages an activity is
+suitable for.
+All of the range fields translate to psycopg2 Range objects in Python, but also accept tuples as input if no bounds
+information is necessary. The default is lower bound included, upper bound
+excluded; that is, [).
+IntegerRangeField 
+class IntegerRangeField(**options) 
+Stores a range of integers. Based on an
+IntegerField. Represented by an int4range in
+the database and a NumericRange in
+Python.
+Regardless of the bounds specified when saving the data, PostgreSQL always
+returns a range in a canonical form that includes the lower bound and
+excludes the upper bound; that is [).
+BigIntegerRangeField 
+class BigIntegerRangeField(**options) 
+Stores a range of large integers. Based on a
+BigIntegerField. Represented by an int8range
+in the database and a NumericRange in
+Python.
+Regardless of the bounds specified when saving the data, PostgreSQL always
+returns a range in a canonical form that includes the lower bound and
+excludes the upper bound; that is [).
+DecimalRangeField 
+class DecimalRangeField(**options) 
+New in Django 2.2. 
+Stores a range of floating point values. Based on a
+DecimalField. Represented by a numrange in
+the database and a NumericRange in
+Python.
+FloatRangeField 
+class FloatRangeField(**options) 
+Stores a range of floating point values. Based on a
+FloatField. Represented by a numrange in the
+database and a NumericRange in Python.
+Deprecated since version 2.2: Use DecimalRangeField instead.
+DateTimeRangeField 
+class DateTimeRangeField(**options) 
+Stores a range of timestamps. Based on a
+DateTimeField. Represented by a tstzrange in
+the database and a DateTimeTZRange in
+Python.
+DateRangeField 
+class DateRangeField(**options) 
+Stores a range of dates. Based on a
+DateField. Represented by a daterange in the
+database and a DateRange in Python.
+Regardless of the bounds specified when saving the data, PostgreSQL always
+returns a range in a canonical form that includes the lower bound and
+excludes the upper bound; that is [).
+Querying Range Fields 
+There are a number of custom lookups and transforms for range fields. They are
+available on all the above fields, but we will use the following example
+model:
+We will also use the following example objects:
+and NumericRange:
+Containment functions 
+As with other PostgreSQL fields, there are three standard containment
+operators: contains, contained_by and overlap, using the SQL
+operators @>, <@, and && respectively.
+contains 
+contained_by 
+The contained_by lookup is also available on the non-range field types:
+IntegerField,
+BigIntegerField,
+FloatField, DateField,
+and DateTimeField. 
+overlap 
+Comparison functions 
+Range fields support the standard lookups: lt, gt,
+lte and gte. These are not particularly helpful - they
+compare the lower bounds first and then the upper bounds only if necessary.
+This is also the strategy used to order by a range field. It is better to use
+the specific range comparison operators.
+fully_lt 
+The returned ranges are strictly less than the passed range. In other words,
+all the points in the returned range are less than all those in the passed
+range.
+fully_gt 
+The returned ranges are strictly greater than the passed range. In other words,
+the all the points in the returned range are greater than all those in the
+passed range.
+not_lt 
+The returned ranges do not contain any points less than the passed range, that
+is the lower bound of the returned range is at least the lower bound of the
+passed range.
+not_gt 
+The returned ranges do not contain any points greater than the passed range, that
+is the upper bound of the returned range is at most the upper bound of the
+passed range.
+adjacent_to 
+The returned ranges share a bound with the passed range.
+Querying using the bounds 
+There are three transforms available for use in queries. You can extract the
+lower or upper bound, or query based on emptiness.
+startswith 
+Returned objects have the given lower bound. Can be chained to valid lookups
+for the base field.
+endswith 
+Returned objects have the given upper bound. Can be chained to valid lookups
+for the base field.
+isempty 
+Returned objects are empty ranges. Can be chained to valid lookups for a
+BooleanField.
+Defining your own range types 
+PostgreSQL allows the definition of custom range types. Django's model and form
+field implementations use base classes below, and psycopg2 provides a
+register_range() to allow use of custom range
+types.
+class RangeField(**options) 
+Base class for model range fields.
+base_field 
+The model field class to use.
+range_type 
+The psycopg2 range type to use.
+form_field 
+The form field class to use. Should be a subclass of
+django.contrib.postgres.forms.BaseRangeField.
+class django.contrib.postgres.forms.BaseRangeField 
+Base class for form range fields.
+base_field 
+The form field to use.
+range_type 
+The psycopg2 range type to use.
+Range operators 
+New in Django 3.0. 
+class RangeOperators 
+PostgreSQL provides a set of SQL operators that can be used together with the
+range data types (see the PostgreSQL documentation for the full details of
+range operators). This class is meant as a
+convenient method to avoid typos. The operator names overlap with the names of
+corresponding lookups.
+RangeBoundary() expressions 
+New in Django 3.0. 
+class RangeBoundary(inclusive_lower=True, inclusive_upper=False) 
+inclusive_lower 
+If True (default), the lower bound is inclusive '[', otherwise
+it's exclusive '('.
+inclusive_upper 
+If False (default), the upper bound is exclusive ')', otherwise
+it's inclusive ']'.
+A RangeBoundary() expression represents the range boundaries. It can be
+used with a custom range functions that expected boundaries, for example to
+define ExclusionConstraint. See
+the PostgreSQL documentation for the full details.
