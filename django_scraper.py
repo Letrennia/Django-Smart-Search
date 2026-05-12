@@ -20,7 +20,6 @@ num = 1
 for url in all_urls:
     django_text = requests.get(url, verify=False).text
     django_soup = BeautifulSoup(django_text, 'lxml')
-    # print(django_soup)
 
     for tag in django_soup(['nav', 'footer', 'head', 'header']):
         tag.decompose()
@@ -31,7 +30,9 @@ for url in all_urls:
     for tag in django_soup.find_all('div', class_=['doc-floating-warning', 'skip-link', 'container container--flex container--flex--wrap--mobile',
                                                    'highlight-default notranslate', 'highlight-apache notranslate', 'highlight-pycon notranslate',
                                                    'highlight-console notranslate', 'highlight-text notranslate', 'code-block-caption',
-                                                   'highlight-python notranslate']):
+                                                   'highlight-python notranslate', 'highlight-html+django notranslate',
+                                                   'highlight-javascript notranslate', 'highlight-html+jinja notranslate',
+                                                   'last highlight-default notranslate']):
         tag.decompose()
 
     for tag in django_soup.find_all('div', id=['billboard', 'version-switcher']):
@@ -58,6 +59,8 @@ for url in all_urls:
         f.write(text)
 
     num+=1
+
+
     # print(text)
     # print(url)
 
