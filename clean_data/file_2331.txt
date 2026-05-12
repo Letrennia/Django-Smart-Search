@@ -230,7 +230,6 @@ requestAn optional HttpRequest that will be available
 during the template's rendering process.
 usingAn optional template engine NAME. The
 search for the template will be restricted to that engine.
-Usage example:
 See also the render() shortcut which calls
 render_to_string() and feeds the result into an
 HttpResponse suitable for returning from a view.
@@ -577,7 +576,6 @@ requestAn optional HttpRequest that will be available
 during the template's rendering process.
 usingAn optional template engine NAME. The
 search for the template will be restricted to that engine.
-Usage example:
 See also the render() shortcut which calls
 render_to_string() and feeds the result into an
 HttpResponse suitable for returning from a view.

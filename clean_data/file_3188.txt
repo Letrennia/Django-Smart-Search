@@ -33,12 +33,10 @@ BoolAnd
 class BoolAnd(expression, filter=None, **extra) 
 Returns True, if all input values are true, None if all values are
 null or if there are no values, otherwise False .
-Usage example:
 BoolOr 
 class BoolOr(expression, filter=None, **extra) 
 Returns True if at least one input value is true, None if all
 values are null or if there are no values, otherwise False.
-Usage example:
 JSONBAgg 
 class JSONBAgg(expressions, filter=None, **extra) 
 Returns the input values as a JSON array.
@@ -153,12 +151,10 @@ BoolAnd
 class BoolAnd(expression, filter=None, **extra) 
 Returns True, if all input values are true, None if all values are
 null or if there are no values, otherwise False .
-Usage example:
 BoolOr 
 class BoolOr(expression, filter=None, **extra) 
 Returns True if at least one input value is true, None if all
 values are null or if there are no values, otherwise False.
-Usage example:
 JSONBAgg 
 class JSONBAgg(expressions, filter=None, **extra) 
 Returns the input values as a JSON array.

@@ -12,13 +12,13 @@ Comparison and conversion functions
 Cast 
 class Cast(expression, output_field)[source] 
 Forces the result type of expression to be the one from output_field.
-Usage example:
 Coalesce 
 class Coalesce(*expressions, **extra)[source] 
 Accepts a list of at least two field names or expressions and returns the
 first non-null value (note that an empty string is not considered a null
 value). Each argument must be of a similar type, so mixing text and numbers
 will result in a database error.
+Usage examples:
 Warning
 A Python value passed to Coalesce on MySQL may be converted to an
 incorrect type unless explicitly cast to the correct database type:
@@ -27,7 +27,6 @@ class Greatest(*expressions, **extra)[source]
 Accepts a list of at least two field names or expressions and returns the
 greatest value. Each argument must be of a similar type, so mixing text and
 numbers will result in a database error.
-Usage example:
 annotated_comment.last_updated will be the most recent of blog.modified
 and comment.modified.
 Warning
@@ -97,7 +96,6 @@ contains the year's first Thursday, i.e. the first week has the majority
 Each lookup_name above has a corresponding Extract subclass (listed
 below) that should typically be used instead of the more verbose equivalent,
 e.g. use ExtractYear(...) rather than Extract(..., lookup_name='year').
-Usage example:
 DateField extracts 
 class ExtractYear(expression, tzinfo=None, **extra)[source] 
 lookup_name = 'year'
@@ -142,7 +140,6 @@ Now
 class Now[source] 
 Returns the database server's current date and time when the query is executed,
 typically using the SQL CURRENT_TIMESTAMP.
-Usage example:
 PostgreSQL considerations
 On PostgreSQL, the SQL CURRENT_TIMESTAMP returns the time that the
 current transaction started. Therefore for cross-database compatibility,
@@ -191,7 +188,6 @@ e.g. use TruncYear(...) rather than Trunc(..., kind='year').
 The subclasses are all defined as transforms, but they aren't registered with
 any fields, because the obvious lookup names are already reserved by the
 Extract subclasses.
-Usage example:
 DateField truncation 
 class TruncYear(expression, output_field=None, tzinfo=None, **extra)[source] 
 kind = 'year'
@@ -232,7 +228,6 @@ These are logically equivalent to Trunc('datetime_field', kind). They
 truncate all parts of the date up to kind and allow grouping or filtering
 datetimes with less precision. expression must have an output_field of
 DateTimeField.
-Usage example:
 TimeField truncation 
 New in Django 1.11. 
 class TruncHour(expression, output_field=None, tzinfo=None, **extra)[source]
@@ -259,26 +254,22 @@ example below.
 This function will never have a null result. On backends where a null argument
 results in the entire expression being null, Django will ensure that each null
 part is converted to an empty string first.
-Usage example:
 Length 
 class Length(expression, **extra)[source] 
 Accepts a single text field or expression and returns the number of characters
 the value has. If the expression is null, then the length will also be null.
-Usage example:
 It can also be registered as a transform. 
 Lower 
 class Lower(expression, **extra)[source] 
 Accepts a single text field or expression and returns the lowercase
 representation.
 It can also be registered as a transform as described in Length.
-Usage example:
 StrIndex 
 class StrIndex(string, substring, **extra)[source] 
 New in Django 2.0. 
 Returns a positive integer corresponding to the 1-indexed position of the first
 occurrence of substring inside string, or 0 if substring is not
 found.
-Usage example:
 Warning
 In MySQL, a database table's collation determines
 whether string comparisons (such as the expression and substring of
@@ -289,13 +280,11 @@ class Substr(expression, pos, length=None, **extra)[source]
 Returns a substring of length length from the field or expression starting
 at position pos. The position is 1-indexed, so the position must be greater
 than 0. If length is None, then the rest of the string will be returned.
-Usage example:
 Upper 
 class Upper(expression, **extra)[source] 
 Accepts a single text field or expression and returns the uppercase
 representation.
 It can also be registered as a transform as described in Length.
-Usage example:
 Window functions 
 New in Django 2.0. 
 There are a number of functions to use in a
@@ -410,13 +399,13 @@ Comparison and conversion functions
 Cast 
 class Cast(expression, output_field)[source] 
 Forces the result type of expression to be the one from output_field.
-Usage example:
 Coalesce 
 class Coalesce(*expressions, **extra)[source] 
 Accepts a list of at least two field names or expressions and returns the
 first non-null value (note that an empty string is not considered a null
 value). Each argument must be of a similar type, so mixing text and numbers
 will result in a database error.
+Usage examples:
 Warning
 A Python value passed to Coalesce on MySQL may be converted to an
 incorrect type unless explicitly cast to the correct database type:
@@ -425,7 +414,6 @@ class Greatest(*expressions, **extra)[source]
 Accepts a list of at least two field names or expressions and returns the
 greatest value. Each argument must be of a similar type, so mixing text and
 numbers will result in a database error.
-Usage example:
 annotated_comment.last_updated will be the most recent of blog.modified
 and comment.modified.
 Warning
@@ -495,7 +483,6 @@ contains the year's first Thursday, i.e. the first week has the majority
 Each lookup_name above has a corresponding Extract subclass (listed
 below) that should typically be used instead of the more verbose equivalent,
 e.g. use ExtractYear(...) rather than Extract(..., lookup_name='year').
-Usage example:
 DateField extracts 
 class ExtractYear(expression, tzinfo=None, **extra)[source] 
 lookup_name = 'year'
@@ -540,7 +527,6 @@ Now
 class Now[source] 
 Returns the database server's current date and time when the query is executed,
 typically using the SQL CURRENT_TIMESTAMP.
-Usage example:
 PostgreSQL considerations
 On PostgreSQL, the SQL CURRENT_TIMESTAMP returns the time that the
 current transaction started. Therefore for cross-database compatibility,
@@ -589,7 +575,6 @@ e.g. use TruncYear(...) rather than Trunc(..., kind='year').
 The subclasses are all defined as transforms, but they aren't registered with
 any fields, because the obvious lookup names are already reserved by the
 Extract subclasses.
-Usage example:
 DateField truncation 
 class TruncYear(expression, output_field=None, tzinfo=None, **extra)[source] 
 kind = 'year'
@@ -630,7 +615,6 @@ These are logically equivalent to Trunc('datetime_field', kind). They
 truncate all parts of the date up to kind and allow grouping or filtering
 datetimes with less precision. expression must have an output_field of
 DateTimeField.
-Usage example:
 TimeField truncation 
 New in Django 1.11. 
 class TruncHour(expression, output_field=None, tzinfo=None, **extra)[source]
@@ -657,26 +641,22 @@ example below.
 This function will never have a null result. On backends where a null argument
 results in the entire expression being null, Django will ensure that each null
 part is converted to an empty string first.
-Usage example:
 Length 
 class Length(expression, **extra)[source] 
 Accepts a single text field or expression and returns the number of characters
 the value has. If the expression is null, then the length will also be null.
-Usage example:
 It can also be registered as a transform. 
 Lower 
 class Lower(expression, **extra)[source] 
 Accepts a single text field or expression and returns the lowercase
 representation.
 It can also be registered as a transform as described in Length.
-Usage example:
 StrIndex 
 class StrIndex(string, substring, **extra)[source] 
 New in Django 2.0. 
 Returns a positive integer corresponding to the 1-indexed position of the first
 occurrence of substring inside string, or 0 if substring is not
 found.
-Usage example:
 Warning
 In MySQL, a database table's collation determines
 whether string comparisons (such as the expression and substring of
@@ -687,13 +667,11 @@ class Substr(expression, pos, length=None, **extra)[source]
 Returns a substring of length length from the field or expression starting
 at position pos. The position is 1-indexed, so the position must be greater
 than 0. If length is None, then the rest of the string will be returned.
-Usage example:
 Upper 
 class Upper(expression, **extra)[source] 
 Accepts a single text field or expression and returns the uppercase
 representation.
 It can also be registered as a transform as described in Length.
-Usage example:
 Window functions 
 New in Django 2.0. 
 There are a number of functions to use in a

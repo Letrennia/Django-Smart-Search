@@ -1922,7 +1922,6 @@ Returns an arbitrary value from the non-null input values.
 Default alias: <field>__anyvalue
 Return type: same as input field, or output_field if supplied. If the
 queryset or grouping is empty, default is returned.
-Usage example:
 Supported on SQLite, MySQL, Oracle, and PostgreSQL 16+.
 MySQL with ONLY_FULL_GROUP_BY enabled
 When the ONLY_FULL_GROUP_BY SQL mode is enabled on MySQL it may be
@@ -3997,7 +3996,6 @@ Returns an arbitrary value from the non-null input values.
 Default alias: <field>__anyvalue
 Return type: same as input field, or output_field if supplied. If the
 queryset or grouping is empty, default is returned.
-Usage example:
 Supported on SQLite, MySQL, Oracle, and PostgreSQL 16+.
 MySQL with ONLY_FULL_GROUP_BY enabled
 When the ONLY_FULL_GROUP_BY SQL mode is enabled on MySQL it may be

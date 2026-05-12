@@ -237,7 +237,6 @@ during the template's rendering process.
 using
 An optional template engine NAME. The
 search for the template will be restricted to that engine.
-Usage example:
 See also the render() shortcut which calls
 render_to_string() and feeds the result into an
 HttpResponse suitable for returning from a view.
@@ -591,7 +590,6 @@ during the template's rendering process.
 using
 An optional template engine NAME. The
 search for the template will be restricted to that engine.
-Usage example:
 See also the render() shortcut which calls
 render_to_string() and feeds the result into an
 HttpResponse suitable for returning from a view.

@@ -93,12 +93,10 @@ TrigramSimilarity
 class TrigramSimilarity(expression, string, **extra) 
 Accepts a field name or expression, and a string or expression. Returns the
 trigram similarity between the two arguments.
-Usage example:
 TrigramDistance 
 class TrigramDistance(expression, string, **extra) 
 Accepts a field name or expression, and a string or expression. Returns the
 trigram distance between the two arguments.
-Usage example:
 Full text search 
 The database functions in the django.contrib.postgres.search module ease
 the use of PostgreSQL's full text search engine.
@@ -193,9 +191,7 @@ TrigramSimilarity
 class TrigramSimilarity(expression, string, **extra) 
 Accepts a field name or expression, and a string or expression. Returns the
 trigram similarity between the two arguments.
-Usage example:
 TrigramDistance 
 class TrigramDistance(expression, string, **extra) 
 Accepts a field name or expression, and a string or expression. Returns the
 trigram distance between the two arguments.
-Usage example:

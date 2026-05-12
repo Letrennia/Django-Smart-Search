@@ -15,6 +15,7 @@ Accepts a list of at least two field names or expressions and returns the
 first non-null value (note that an empty string is not considered a null
 value). Each argument must be of a similar type, so mixing text and numbers
 will result in a database error.
+Usage examples:
 Warning
 A Python value passed to Coalesce on MySQL may be converted to an
 incorrect type unless explicitly cast to the correct database type:
@@ -28,28 +29,23 @@ required when concatenating a Value as in the example below.
 This function will never have a null result. On backends where a null argument
 results in the entire expression being null, Django will ensure that each null
 part is converted to an empty string first.
-Usage example:
 Length 
 class Length(expression, **extra)[source] 
 Accepts a single text field or expression and returns the number of characters
 the value has. If the expression is null, then the length will also be null.
-Usage example:
 Lower 
 class Lower(expression, **extra)[source] 
 Accepts a single text field or expression and returns the lowercase
 representation.
-Usage example:
 Substr 
 class Substr(expression, pos, length=None, **extra)[source] 
 Returns a substring of length length from the field or expression starting
 at position pos. The position is 1-indexed, so the position must be greater
 than 0. If length is None, then the rest of the string will be returned.
-Usage example:
 Upper 
 class Upper(expression, **extra)[source] 
 Accepts a single text field or expression and returns the uppercase
 representation.
-Usage example:
 Database Functions 
 New in Django 1.8. 
 The classes documented below provide a way for users to use functions provided
@@ -66,6 +62,7 @@ Accepts a list of at least two field names or expressions and returns the
 first non-null value (note that an empty string is not considered a null
 value). Each argument must be of a similar type, so mixing text and numbers
 will result in a database error.
+Usage examples:
 Warning
 A Python value passed to Coalesce on MySQL may be converted to an
 incorrect type unless explicitly cast to the correct database type:
@@ -79,25 +76,20 @@ required when concatenating a Value as in the example below.
 This function will never have a null result. On backends where a null argument
 results in the entire expression being null, Django will ensure that each null
 part is converted to an empty string first.
-Usage example:
 Length 
 class Length(expression, **extra)[source] 
 Accepts a single text field or expression and returns the number of characters
 the value has. If the expression is null, then the length will also be null.
-Usage example:
 Lower 
 class Lower(expression, **extra)[source] 
 Accepts a single text field or expression and returns the lowercase
 representation.
-Usage example:
 Substr 
 class Substr(expression, pos, length=None, **extra)[source] 
 Returns a substring of length length from the field or expression starting
 at position pos. The position is 1-indexed, so the position must be greater
 than 0. If length is None, then the rest of the string will be returned.
-Usage example:
 Upper 
 class Upper(expression, **extra)[source] 
 Accepts a single text field or expression and returns the uppercase
 representation.
-Usage example:

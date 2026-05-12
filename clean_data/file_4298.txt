@@ -9,7 +9,6 @@ Returns a version 4 UUID.
 The pgcrypto extension must be installed. You can use the
 CryptoExtension migration
 operation to install it.
-Usage example:
 TransactionNow 
 class TransactionNow[source] 
 Returns the date and time on the database server that the current transaction
@@ -21,7 +20,6 @@ Note that only the outermost call to atomic()
 sets up a transaction and thus sets the time that TransactionNow() will
 return; nested calls create savepoints which do not affect the transaction
 time.
-Usage example:
 PostgreSQL specific database functions 
 All of these functions are available from the
 django.contrib.postgres.functions module.
@@ -32,7 +30,6 @@ Returns a version 4 UUID.
 The pgcrypto extension must be installed. You can use the
 CryptoExtension migration
 operation to install it.
-Usage example:
 TransactionNow 
 class TransactionNow[source] 
 Returns the date and time on the database server that the current transaction
@@ -44,4 +41,3 @@ Note that only the outermost call to atomic()
 sets up a transaction and thus sets the time that TransactionNow() will
 return; nested calls create savepoints which do not affect the transaction
 time.
-Usage example:

@@ -14,7 +14,6 @@ Note that only the outermost call to atomic()
 sets up a transaction and thus sets the time that TransactionNow() will
 return; nested calls create savepoints which do not affect the transaction
 time.
-Usage example:
 PostgreSQL specific database functions 
 All of these functions are available from the
 django.contrib.postgres.functions module.
@@ -30,4 +29,3 @@ Note that only the outermost call to atomic()
 sets up a transaction and thus sets the time that TransactionNow() will
 return; nested calls create savepoints which do not affect the transaction
 time.
-Usage example:

@@ -274,7 +274,6 @@ actually tell whether a browser accepted it until the browser's next request.
 It's good practice to use
 delete_test_cookie() to clean up after
 yourself. Do this after you've verified that the test cookie worked.
-Here's a typical usage example:
 Using sessions out of views 
 Note
 The examples in this section import the SessionStore object directly
@@ -748,7 +747,6 @@ actually tell whether a browser accepted it until the browser's next request.
 It's good practice to use
 delete_test_cookie() to clean up after
 yourself. Do this after you've verified that the test cookie worked.
-Here's a typical usage example:
 Using sessions out of views 
 Note
 The examples in this section import the SessionStore object directly

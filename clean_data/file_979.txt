@@ -85,7 +85,6 @@ Set the fragment_delimiter string parameter to configure the delimiter
 between fragments. PostgreSQL's default is " ... ".
 The PostgreSQL documentation has more details on highlighting search
 results.
-Usage example:
 See Changing the search configuration for an explanation of the
 config parameter.
 Changing the search configuration 
@@ -131,12 +130,10 @@ TrigramSimilarity
 class TrigramSimilarity(expression, string, **extra)[source] 
 Accepts a field name or expression, and a string or expression. Returns the
 trigram similarity between the two arguments.
-Usage example:
 TrigramWordSimilarity 
 class TrigramWordSimilarity(string, expression, **extra)[source] 
 Accepts a string or expression, and a field name or expression. Returns the
 trigram word similarity between the two arguments.
-Usage example:
 TrigramStrictWordSimilarity 
 class TrigramStrictWordSimilarity(string, expression, **extra)[source] 
 Accepts a string or expression, and a field name or expression. Returns the
@@ -147,12 +144,10 @@ TrigramDistance
 class TrigramDistance(expression, string, **extra)[source] 
 Accepts a field name or expression, and a string or expression. Returns the
 trigram distance between the two arguments.
-Usage example:
 TrigramWordDistance 
 class TrigramWordDistance(string, expression, **extra)[source] 
 Accepts a string or expression, and a field name or expression. Returns the
 trigram word distance between the two arguments.
-Usage example:
 TrigramStrictWordDistance 
 class TrigramStrictWordDistance(string, expression, **extra)[source] 
 Accepts a string or expression, and a field name or expression. Returns the
@@ -243,7 +238,6 @@ Set the fragment_delimiter string parameter to configure the delimiter
 between fragments. PostgreSQL's default is " ... ".
 The PostgreSQL documentation has more details on highlighting search
 results.
-Usage example:
 See Changing the search configuration for an explanation of the
 config parameter.
 Changing the search configuration 
@@ -289,12 +283,10 @@ TrigramSimilarity
 class TrigramSimilarity(expression, string, **extra)[source] 
 Accepts a field name or expression, and a string or expression. Returns the
 trigram similarity between the two arguments.
-Usage example:
 TrigramWordSimilarity 
 class TrigramWordSimilarity(string, expression, **extra)[source] 
 Accepts a string or expression, and a field name or expression. Returns the
 trigram word similarity between the two arguments.
-Usage example:
 TrigramStrictWordSimilarity 
 class TrigramStrictWordSimilarity(string, expression, **extra)[source] 
 Accepts a string or expression, and a field name or expression. Returns the
@@ -305,12 +297,10 @@ TrigramDistance
 class TrigramDistance(expression, string, **extra)[source] 
 Accepts a field name or expression, and a string or expression. Returns the
 trigram distance between the two arguments.
-Usage example:
 TrigramWordDistance 
 class TrigramWordDistance(string, expression, **extra)[source] 
 Accepts a string or expression, and a field name or expression. Returns the
 trigram word distance between the two arguments.
-Usage example:
 TrigramStrictWordDistance 
 class TrigramStrictWordDistance(string, expression, **extra)[source] 
 Accepts a string or expression, and a field name or expression. Returns the

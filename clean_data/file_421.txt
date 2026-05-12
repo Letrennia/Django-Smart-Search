@@ -41,12 +41,10 @@ BoolAnd
 class BoolAnd(expression, filter=None, default=None, **extra) 
 Returns True, if all input values are true, default if all values
 are null or if there are no values, otherwise False.
-Usage example:
 BoolOr 
 class BoolOr(expression, filter=None, default=None, **extra) 
 Returns True if at least one input value is true, default if all
 values are null or if there are no values, otherwise False.
-Usage example:
 JSONBAgg 
 class JSONBAgg(expressions, distinct=False, filter=None, default=None, order_by=(), **extra) 
 Returns the input values as a JSON array, or default if there are
@@ -61,7 +59,6 @@ which indicates descending order) or an expression (or a tuple or list
 of strings and/or expressions) that specifies the ordering of the
 elements in the result list.
 Examples are the same as for ArrayAgg.order_by.
-Usage example:
 Deprecated since version 5.2: The ordering keyword argument is deprecated. Use
 JSONBAgg.order_by instead.
 StringAgg 
@@ -87,7 +84,6 @@ which indicates descending order) or an expression (or a tuple or list
 of strings and/or expressions) that specifies the ordering of the
 elements in the result string.
 Examples are the same as for ArrayAgg.order_by.
-Usage example:
 Deprecated since version 5.2: The ordering keyword argument is deprecated. Use
 StringAgg.order_by instead.
 Aggregate functions for statistics 
@@ -195,12 +191,10 @@ BoolAnd
 class BoolAnd(expression, filter=None, default=None, **extra) 
 Returns True, if all input values are true, default if all values
 are null or if there are no values, otherwise False.
-Usage example:
 BoolOr 
 class BoolOr(expression, filter=None, default=None, **extra) 
 Returns True if at least one input value is true, default if all
 values are null or if there are no values, otherwise False.
-Usage example:
 JSONBAgg 
 class JSONBAgg(expressions, distinct=False, filter=None, default=None, order_by=(), **extra) 
 Returns the input values as a JSON array, or default if there are
@@ -215,7 +209,6 @@ which indicates descending order) or an expression (or a tuple or list
 of strings and/or expressions) that specifies the ordering of the
 elements in the result list.
 Examples are the same as for ArrayAgg.order_by.
-Usage example:
 Deprecated since version 5.2: The ordering keyword argument is deprecated. Use
 JSONBAgg.order_by instead.
 StringAgg 
@@ -241,7 +234,6 @@ which indicates descending order) or an expression (or a tuple or list
 of strings and/or expressions) that specifies the ordering of the
 elements in the result string.
 Examples are the same as for ArrayAgg.order_by.
-Usage example:
 Deprecated since version 5.2: The ordering keyword argument is deprecated. Use
 StringAgg.order_by instead.
 Aggregate functions for statistics 

@@ -43,12 +43,10 @@ BoolAnd
 class BoolAnd(expression, filter=None, default=None, **extra) 
 Returns True, if all input values are true, default if all values
 are null or if there are no values, otherwise False.
-Usage example:
 BoolOr 
 class BoolOr(expression, filter=None, default=None, **extra) 
 Returns True if at least one input value is true, default if all
 values are null or if there are no values, otherwise False.
-Usage example:
 JSONBAgg 
 class JSONBAgg(expressions, distinct=False, filter=None, default=None, ordering=(), **extra) 
 Returns the input values as a JSON array, or default if there are
@@ -62,7 +60,6 @@ which indicates descending order) or an expression (or a tuple or list
 of strings and/or expressions) that specifies the ordering of the
 elements in the result list.
 Examples are the same as for ArrayAgg.ordering.
-Usage example:
 Deprecated since version 4.0: If there are no rows and default is not provided, JSONBAgg
 returns an empty list instead of None. This behavior is deprecated
 and will be removed in Django 5.0. If you need it, explicitly set
@@ -82,7 +79,6 @@ which indicates descending order) or an expression (or a tuple or list
 of strings and/or expressions) that specifies the ordering of the
 elements in the result string.
 Examples are the same as for ArrayAgg.ordering.
-Usage example:
 Deprecated since version 4.0: If there are no rows and default is not provided, StringAgg
 returns an empty string instead of None. This behavior is
 deprecated and will be removed in Django 5.0. If you need it,
@@ -194,12 +190,10 @@ BoolAnd
 class BoolAnd(expression, filter=None, default=None, **extra) 
 Returns True, if all input values are true, default if all values
 are null or if there are no values, otherwise False.
-Usage example:
 BoolOr 
 class BoolOr(expression, filter=None, default=None, **extra) 
 Returns True if at least one input value is true, default if all
 values are null or if there are no values, otherwise False.
-Usage example:
 JSONBAgg 
 class JSONBAgg(expressions, distinct=False, filter=None, default=None, ordering=(), **extra) 
 Returns the input values as a JSON array, or default if there are
@@ -213,7 +207,6 @@ which indicates descending order) or an expression (or a tuple or list
 of strings and/or expressions) that specifies the ordering of the
 elements in the result list.
 Examples are the same as for ArrayAgg.ordering.
-Usage example:
 Deprecated since version 4.0: If there are no rows and default is not provided, JSONBAgg
 returns an empty list instead of None. This behavior is deprecated
 and will be removed in Django 5.0. If you need it, explicitly set
@@ -233,7 +226,6 @@ which indicates descending order) or an expression (or a tuple or list
 of strings and/or expressions) that specifies the ordering of the
 elements in the result string.
 Examples are the same as for ArrayAgg.ordering.
-Usage example:
 Deprecated since version 4.0: If there are no rows and default is not provided, StringAgg
 returns an empty string instead of None. This behavior is
 deprecated and will be removed in Django 5.0. If you need it,

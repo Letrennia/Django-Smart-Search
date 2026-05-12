@@ -58,9 +58,10 @@ for filename in os.listdir(input_dir):
 
     # Usunięcie luźnych zdań pozostałych po usunięciu kodu
     clean = clean.replace("For example:", "")
-    clean = clean.replace("Usage examples:", "")
+    clean = clean.replace("Usage example:", "")
     clean = clean.replace("Example usage:", "")
     clean = clean.replace("This example would return this HTML:", "")
+    clean = clean.replace("Here's a typical usage example:", "")
 
     # Zdania
     sentences = re.findall(r"[^?.!?]+[?.]", clean)
