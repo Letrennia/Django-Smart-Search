@@ -1,0 +1,100 @@
+https://docs.djangoproject.com/en/3.1/topics/http/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Handling HTTP requests¶
+Information on handling HTTP requests in Django:
+
+
+URL dispatcher
+Writing views
+View decorators
+File Uploads
+Django shortcut functions
+Generic views
+Middleware
+How to use sessions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Handling HTTP requests¶
+Information on handling HTTP requests in Django:
+
+
+URL dispatcher
+Writing views
+View decorators
+File Uploads
+Django shortcut functions
+Generic views
+Middleware
+How to use sessions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

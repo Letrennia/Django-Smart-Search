@@ -1,0 +1,110 @@
+https://docs.djangoproject.com/en/dev/ref/contrib/postgres/expressions/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PostgreSQL specific query expressions¶
+These expressions are available from the
+django.contrib.postgres.expressions module.
+
+ArraySubquery() expressions¶
+
+
+class ArraySubquery(queryset)[source]¶
+
+ArraySubquery is a Subquery that uses the
+PostgreSQL ARRAY constructor to build a list of values from the queryset,
+which must use QuerySet.values() to return only a single column.
+This class differs from ArrayAgg
+in the way that it does not act as an aggregate function and does not require
+an SQL GROUP BY clause to build the list of values.
+For example, if you want to annotate all related books to an author as JSON
+objects:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PostgreSQL specific query expressions¶
+These expressions are available from the
+django.contrib.postgres.expressions module.
+
+ArraySubquery() expressions¶
+
+
+class ArraySubquery(queryset)[source]¶
+
+ArraySubquery is a Subquery that uses the
+PostgreSQL ARRAY constructor to build a list of values from the queryset,
+which must use QuerySet.values() to return only a single column.
+This class differs from ArrayAgg
+in the way that it does not act as an aggregate function and does not require
+an SQL GROUP BY clause to build the list of values.
+For example, if you want to annotate all related books to an author as JSON
+objects:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

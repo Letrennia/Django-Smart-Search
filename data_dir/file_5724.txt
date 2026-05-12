@@ -1,0 +1,76 @@
+https://docs.djangoproject.com/en/1.10/_modules/django/contrib/gis/geos/error/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Source code for django.contrib.gis.geos.error
+[docs]class GEOSException(Exception):
+    "The base GEOS exception, indicates a GEOS-related error."
+    pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Source code for django.contrib.gis.geos.error
+[docs]class GEOSException(Exception):
+    "The base GEOS exception, indicates a GEOS-related error."
+    pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

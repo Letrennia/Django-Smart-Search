@@ -1,0 +1,738 @@
+https://docs.djangoproject.com/en/2.2/internals/contributing/writing-code/unit-tests/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Unit tests¶
+Django comes with a test suite of its own, in the tests directory of the
+code base. It’s our policy to make sure all tests pass at all times.
+We appreciate any and all contributions to the test suite!
+The Django tests all use the testing infrastructure that ships with Django for
+testing applications. See Writing and running tests for an explanation of
+how to write new tests.
+
+Running the unit tests¶
+
+Quickstart¶
+First, fork Django on GitHub.
+Second, create and activate a virtual environment. If you’re not familiar with
+how to do that, read our contributing tutorial.
+Next, clone your fork, install some requirements, and run the tests:
+
+Installing the requirements will likely require some operating system packages
+that your computer doesn’t have installed. You can usually figure out which
+package to install by doing a Web search for the last line or so of the error
+message. Try adding your operating system to the search query if needed.
+If you have trouble installing the requirements, you can skip that step. See
+Running all the tests for details on installing the optional
+test dependencies. If you don’t have an optional dependency installed, the
+tests that require it will be skipped.
+Running the tests requires a Django settings module that defines the databases
+to use. To make it easy to get started, Django provides and uses a sample
+settings module that uses the SQLite database. See
+Using another settings module to learn how to use a different settings
+module to run the tests with a different database.
+
+Windows users
+We recommend something like Git Bash to run
+the tests using the above approach.
+
+Having problems? See Troubleshooting for some common issues.
+
+
+Running tests using tox¶
+Tox is a tool for running tests in different
+virtual environments. Django includes a basic tox.ini that automates some
+checks that our build server performs on pull requests. To run the unit tests
+and other checks (such as import sorting, the
+documentation spelling checker, and
+code formatting), install and run the tox
+command from any place in the Django source tree:
+
+By default, tox runs the test suite with the bundled test settings file for
+SQLite, flake8, isort, and the documentation spelling checker. In
+addition to the system dependencies noted elsewhere in this documentation,
+the command python3 must be on your path and linked to the appropriate
+version of Python. A list of default environments can be seen as follows:
+
+
+Testing other Python versions and database backends¶
+In addition to the default environments, tox supports running unit tests
+for other versions of Python and other database backends. Since Django’s test
+suite doesn’t bundle a settings file for database backends other than SQLite,
+however, you must create and provide your own test settings. For example, to run the tests on Python 3.5
+using PostgreSQL:
+
+This command sets up a Python 3.5 virtual environment, installs Django’s
+test suite dependencies (including those for PostgreSQL), and calls
+runtests.py with the supplied arguments (in this case,
+--settings=my_postgres_settings).
+The remainder of this documentation shows commands for running tests without
+tox, however, any option passed to runtests.py can also be passed to
+tox by prefixing the argument list with --, as above.
+Tox also respects the DJANGO_SETTINGS_MODULE environment variable, if set.
+For example, the following is equivalent to the command above:
+
+
+
+Running the JavaScript tests¶
+Django includes a set of JavaScript unit tests for
+functions in certain contrib apps. The JavaScript tests aren’t run by default
+using tox because they require Node.js to be installed and aren’t
+necessary for the majority of patches. To run the JavaScript tests using
+tox:
+
+This command runs npm install to ensure test requirements are up to
+date and then runs npm test.
+
+
+
+Running tests using django-docker-box¶
+django-docker-box allows you to run the Django’s test suite across all
+supported databases and python versions. See the django-docker-box project
+page for installation and usage instructions.
+
+
+Using another settings module¶
+The included settings module (tests/test_sqlite.py) allows you to run the
+test suite using SQLite. If you want to run the tests using a different
+database, you’ll need to define your own settings file. Some tests, such as
+those for contrib.postgres, are specific to a particular database backend
+and will be skipped if run with a different backend.
+To run the tests with different settings, ensure that the module is on your
+PYTHONPATH and pass the module with --settings.
+The DATABASES setting in any test settings module needs to define
+two databases:
+
+A default database. This database should use the backend that
+you want to use for primary testing.
+A database with the alias other. The other database is used to test
+that queries can be directed to different databases. This database should use
+the same backend as the default, and it must have a different name.
+
+If you’re using a backend that isn’t SQLite, you will need to provide other
+details for each database:
+
+The USER option needs to specify an existing user account
+for the database. That user needs permission to execute CREATE DATABASE
+so that the test database can be created.
+The PASSWORD option needs to provide the password for
+the USER that has been specified.
+
+Test databases get their names by prepending test_ to the value of the
+NAME settings for the databases defined in DATABASES.
+These test databases are deleted when the tests are finished.
+You will also need to ensure that your database uses UTF-8 as the default
+character set. If your database server doesn’t use UTF-8 as a default charset,
+you will need to include a value for CHARSET in the
+test settings dictionary for the applicable database.
+
+
+Running only some of the tests¶
+Django’s entire test suite takes a while to run, and running every single test
+could be redundant if, say, you just added a test to Django that you want to
+run quickly without running everything else. You can run a subset of the unit
+tests by appending the names of the test modules to runtests.py on the
+command line.
+For example, if you’d like to run tests only for generic relations and
+internationalization, type:
+
+How do you find out the names of individual tests? Look in tests/ — each
+directory name there is the name of a test.
+If you just want to run a particular class of tests, you can specify a list of
+paths to individual test classes. For example, to run the TranslationTests
+of the i18n module, type:
+
+Going beyond that, you can specify an individual test method like this:
+
+
+
+Running the Selenium tests¶
+Some tests require Selenium and a Web browser. To run these tests, you must
+install the selenium package and run the tests with the
+--selenium=<BROWSERS> option. For example, if you have Firefox and Google
+Chrome installed:
+
+See the selenium.webdriver package for the list of available browsers.
+Specifying --selenium automatically sets --tags=selenium to run only
+the tests that require selenium.
+
+
+Running all the tests¶
+If you want to run the full suite of tests, you’ll need to install a number of
+dependencies:
+
+argon2-cffi 16.1.0+
+bcrypt
+docutils
+geoip2
+jinja2 2.7+
+numpy
+Pillow 4.2.0+
+PyYAML
+pytz (required)
+pywatchman
+setuptools
+memcached, plus a supported Python binding
+gettext (gettext on Windows)
+selenium
+sqlparse 0.2.2+ (required)
+tblib 1.5.0+
+
+You can find these dependencies in pip requirements files inside the
+tests/requirements directory of the Django source tree and install them
+like so:
+
+If you encounter an error during the installation, your system might be missing
+a dependency for one or more of the Python packages. Consult the failing
+package’s documentation or search the Web with the error message that you
+encounter.
+You can also install the database adapter(s) of your choice using
+oracle.txt, mysql.txt, or postgres.txt.
+If you want to test the memcached cache backend, you’ll also need to define
+a CACHES setting that points at your memcached instance.
+To run the GeoDjango tests, you will need to setup a spatial database
+and install the Geospatial libraries.
+Each of these dependencies is optional. If you’re missing any of them, the
+associated tests will be skipped.
+To run some of the autoreload tests, you’ll need to install the Watchman
+service.
+
+
+Code coverage¶
+Contributors are encouraged to run coverage on the test suite to identify areas
+that need additional tests. The coverage tool installation and use is described
+in testing code coverage.
+Coverage should be run in a single process to obtain accurate statistics. To
+run coverage on the Django test suite using the standard test settings:
+
+After running coverage, generate the html report by running:
+
+When running coverage for the Django tests, the included .coveragerc
+settings file  defines coverage_html as the output directory for the report
+and also excludes several directories not relevant to the results
+(test code or external code included in Django).
+
+
+
+Contrib apps¶
+Tests for contrib apps can be found in the tests/ directory, typically
+under <app_name>_tests. For example, tests for contrib.auth are located
+in tests/auth_tests.
+
+
+Troubleshooting¶
+
+Test suite hangs or shows failures on master branch¶
+Ensure you have the latest point release of a supported Python version, since there are often bugs in earlier versions
+that may cause the test suite to fail or hang.
+On macOS (High Sierra and newer versions), you might see this message
+logged, after which the tests hang:
+
+To avoid this set a OBJC_DISABLE_INITIALIZE_FORK_SAFETY environment
+variable, for example:
+
+Or add export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES to your shell’s
+startup file (e.g. ~/.profile).
+
+
+Many test failures with UnicodeEncodeError¶
+If the locales package is not installed, some tests will fail with a
+UnicodeEncodeError.
+You can resolve this on Debian-based systems, for example, by running:
+
+You can resolve this for macOS systems by configuring your shell’s locale:
+
+Run the locale command to confirm the change. Optionally, add those export
+commands to your shell’s startup file (e.g. ~/.bashrc for Bash) to avoid
+having to retype them.
+
+
+Tests that only fail in combination¶
+In case a test passes when run in isolation but fails within the whole suite,
+we have some tools to help analyze the problem.
+The --bisect option of runtests.py will run the failing test while
+halving the test set it is run together with on each iteration, often making
+it possible to identify a small number of tests that may be related to the
+failure.
+For example, suppose that the failing test that works on its own is
+ModelTest.test_eq, then using:
+
+will try to determine a test that interferes with the given one. First, the
+test is run with the first half of the test suite. If a failure occurs, the
+first half of the test suite is split in two groups and each group is then run
+with the specified test. If there is no failure with the first half of the test
+suite, the second half of the test suite is run with the specified test and
+split appropriately as described earlier. The process repeats until the set of
+failing tests is minimized.
+The --pair option runs the given test alongside every other test from the
+suite, letting you check if another test has side-effects that cause the
+failure. So:
+
+will pair test_eq with every test label.
+With both --bisect and --pair, if you already suspect which cases
+might be responsible for the failure, you may limit tests to be cross-analyzed
+by specifying further test labels after
+the first one:
+
+You can also try running any set of tests in reverse using the --reverse
+option in order to verify that executing tests in a different order does not
+cause any trouble:
+
+
+
+Seeing the SQL queries run during a test¶
+If you wish to examine the SQL being run in failing tests, you can turn on
+SQL logging using the --debug-sql option. If you
+combine this with --verbosity=2, all SQL queries will be output:
+
+
+
+Seeing the full traceback of a test failure¶
+By default tests are run in parallel with one process per core. When the tests
+are run in parallel, however, you’ll only see a truncated traceback for any
+test failures. You can adjust this behavior with the --parallel option:
+
+You can also use the DJANGO_TEST_PROCESSES environment variable for this
+purpose.
+
+
+
+Tips for writing tests¶
+
+Isolating model registration¶
+To avoid polluting the global apps registry and prevent
+unnecessary table creation, models defined in a test method should be bound to
+a temporary Apps instance:
+
+
+
+django.test.utils.isolate_apps(*app_labels, attr_name=None, kwarg_name=None)¶
+
+Since this pattern involves a lot of boilerplate, Django provides the
+isolate_apps() decorator. It’s used like this:
+
+
+Setting app_label
+Models defined in a test method with no explicit
+app_label are automatically assigned the
+label of the app in which their test class is located.
+In order to make sure the models defined within the context of
+isolate_apps() instances are correctly
+installed, you should pass the set of targeted app_label as arguments:
+
+
+
+
+
+The decorator can also be applied to classes:
+
+The temporary Apps instance used to isolate model registration can be
+retrieved as an attribute when used as a class decorator by using the
+attr_name parameter:
+
+Or as an argument on the test method when used as a method decorator by using
+the kwarg_name parameter:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Unit tests¶
+Django comes with a test suite of its own, in the tests directory of the
+code base. It’s our policy to make sure all tests pass at all times.
+We appreciate any and all contributions to the test suite!
+The Django tests all use the testing infrastructure that ships with Django for
+testing applications. See Writing and running tests for an explanation of
+how to write new tests.
+
+Running the unit tests¶
+
+Quickstart¶
+First, fork Django on GitHub.
+Second, create and activate a virtual environment. If you’re not familiar with
+how to do that, read our contributing tutorial.
+Next, clone your fork, install some requirements, and run the tests:
+
+Installing the requirements will likely require some operating system packages
+that your computer doesn’t have installed. You can usually figure out which
+package to install by doing a Web search for the last line or so of the error
+message. Try adding your operating system to the search query if needed.
+If you have trouble installing the requirements, you can skip that step. See
+Running all the tests for details on installing the optional
+test dependencies. If you don’t have an optional dependency installed, the
+tests that require it will be skipped.
+Running the tests requires a Django settings module that defines the databases
+to use. To make it easy to get started, Django provides and uses a sample
+settings module that uses the SQLite database. See
+Using another settings module to learn how to use a different settings
+module to run the tests with a different database.
+
+Windows users
+We recommend something like Git Bash to run
+the tests using the above approach.
+
+Having problems? See Troubleshooting for some common issues.
+
+
+Running tests using tox¶
+Tox is a tool for running tests in different
+virtual environments. Django includes a basic tox.ini that automates some
+checks that our build server performs on pull requests. To run the unit tests
+and other checks (such as import sorting, the
+documentation spelling checker, and
+code formatting), install and run the tox
+command from any place in the Django source tree:
+
+By default, tox runs the test suite with the bundled test settings file for
+SQLite, flake8, isort, and the documentation spelling checker. In
+addition to the system dependencies noted elsewhere in this documentation,
+the command python3 must be on your path and linked to the appropriate
+version of Python. A list of default environments can be seen as follows:
+
+
+Testing other Python versions and database backends¶
+In addition to the default environments, tox supports running unit tests
+for other versions of Python and other database backends. Since Django’s test
+suite doesn’t bundle a settings file for database backends other than SQLite,
+however, you must create and provide your own test settings. For example, to run the tests on Python 3.5
+using PostgreSQL:
+
+This command sets up a Python 3.5 virtual environment, installs Django’s
+test suite dependencies (including those for PostgreSQL), and calls
+runtests.py with the supplied arguments (in this case,
+--settings=my_postgres_settings).
+The remainder of this documentation shows commands for running tests without
+tox, however, any option passed to runtests.py can also be passed to
+tox by prefixing the argument list with --, as above.
+Tox also respects the DJANGO_SETTINGS_MODULE environment variable, if set.
+For example, the following is equivalent to the command above:
+
+
+
+Running the JavaScript tests¶
+Django includes a set of JavaScript unit tests for
+functions in certain contrib apps. The JavaScript tests aren’t run by default
+using tox because they require Node.js to be installed and aren’t
+necessary for the majority of patches. To run the JavaScript tests using
+tox:
+
+This command runs npm install to ensure test requirements are up to
+date and then runs npm test.
+
+
+
+Running tests using django-docker-box¶
+django-docker-box allows you to run the Django’s test suite across all
+supported databases and python versions. See the django-docker-box project
+page for installation and usage instructions.
+
+
+Using another settings module¶
+The included settings module (tests/test_sqlite.py) allows you to run the
+test suite using SQLite. If you want to run the tests using a different
+database, you’ll need to define your own settings file. Some tests, such as
+those for contrib.postgres, are specific to a particular database backend
+and will be skipped if run with a different backend.
+To run the tests with different settings, ensure that the module is on your
+PYTHONPATH and pass the module with --settings.
+The DATABASES setting in any test settings module needs to define
+two databases:
+
+A default database. This database should use the backend that
+you want to use for primary testing.
+A database with the alias other. The other database is used to test
+that queries can be directed to different databases. This database should use
+the same backend as the default, and it must have a different name.
+
+If you’re using a backend that isn’t SQLite, you will need to provide other
+details for each database:
+
+The USER option needs to specify an existing user account
+for the database. That user needs permission to execute CREATE DATABASE
+so that the test database can be created.
+The PASSWORD option needs to provide the password for
+the USER that has been specified.
+
+Test databases get their names by prepending test_ to the value of the
+NAME settings for the databases defined in DATABASES.
+These test databases are deleted when the tests are finished.
+You will also need to ensure that your database uses UTF-8 as the default
+character set. If your database server doesn’t use UTF-8 as a default charset,
+you will need to include a value for CHARSET in the
+test settings dictionary for the applicable database.
+
+
+Running only some of the tests¶
+Django’s entire test suite takes a while to run, and running every single test
+could be redundant if, say, you just added a test to Django that you want to
+run quickly without running everything else. You can run a subset of the unit
+tests by appending the names of the test modules to runtests.py on the
+command line.
+For example, if you’d like to run tests only for generic relations and
+internationalization, type:
+
+How do you find out the names of individual tests? Look in tests/ — each
+directory name there is the name of a test.
+If you just want to run a particular class of tests, you can specify a list of
+paths to individual test classes. For example, to run the TranslationTests
+of the i18n module, type:
+
+Going beyond that, you can specify an individual test method like this:
+
+
+
+Running the Selenium tests¶
+Some tests require Selenium and a Web browser. To run these tests, you must
+install the selenium package and run the tests with the
+--selenium=<BROWSERS> option. For example, if you have Firefox and Google
+Chrome installed:
+
+See the selenium.webdriver package for the list of available browsers.
+Specifying --selenium automatically sets --tags=selenium to run only
+the tests that require selenium.
+
+
+Running all the tests¶
+If you want to run the full suite of tests, you’ll need to install a number of
+dependencies:
+
+argon2-cffi 16.1.0+
+bcrypt
+docutils
+geoip2
+jinja2 2.7+
+numpy
+Pillow 4.2.0+
+PyYAML
+pytz (required)
+pywatchman
+setuptools
+memcached, plus a supported Python binding
+gettext (gettext on Windows)
+selenium
+sqlparse 0.2.2+ (required)
+tblib 1.5.0+
+
+You can find these dependencies in pip requirements files inside the
+tests/requirements directory of the Django source tree and install them
+like so:
+
+If you encounter an error during the installation, your system might be missing
+a dependency for one or more of the Python packages. Consult the failing
+package’s documentation or search the Web with the error message that you
+encounter.
+You can also install the database adapter(s) of your choice using
+oracle.txt, mysql.txt, or postgres.txt.
+If you want to test the memcached cache backend, you’ll also need to define
+a CACHES setting that points at your memcached instance.
+To run the GeoDjango tests, you will need to setup a spatial database
+and install the Geospatial libraries.
+Each of these dependencies is optional. If you’re missing any of them, the
+associated tests will be skipped.
+To run some of the autoreload tests, you’ll need to install the Watchman
+service.
+
+
+Code coverage¶
+Contributors are encouraged to run coverage on the test suite to identify areas
+that need additional tests. The coverage tool installation and use is described
+in testing code coverage.
+Coverage should be run in a single process to obtain accurate statistics. To
+run coverage on the Django test suite using the standard test settings:
+
+After running coverage, generate the html report by running:
+
+When running coverage for the Django tests, the included .coveragerc
+settings file  defines coverage_html as the output directory for the report
+and also excludes several directories not relevant to the results
+(test code or external code included in Django).
+
+
+
+Contrib apps¶
+Tests for contrib apps can be found in the tests/ directory, typically
+under <app_name>_tests. For example, tests for contrib.auth are located
+in tests/auth_tests.
+
+
+Troubleshooting¶
+
+Test suite hangs or shows failures on master branch¶
+Ensure you have the latest point release of a supported Python version, since there are often bugs in earlier versions
+that may cause the test suite to fail or hang.
+On macOS (High Sierra and newer versions), you might see this message
+logged, after which the tests hang:
+
+To avoid this set a OBJC_DISABLE_INITIALIZE_FORK_SAFETY environment
+variable, for example:
+
+Or add export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES to your shell’s
+startup file (e.g. ~/.profile).
+
+
+Many test failures with UnicodeEncodeError¶
+If the locales package is not installed, some tests will fail with a
+UnicodeEncodeError.
+You can resolve this on Debian-based systems, for example, by running:
+
+You can resolve this for macOS systems by configuring your shell’s locale:
+
+Run the locale command to confirm the change. Optionally, add those export
+commands to your shell’s startup file (e.g. ~/.bashrc for Bash) to avoid
+having to retype them.
+
+
+Tests that only fail in combination¶
+In case a test passes when run in isolation but fails within the whole suite,
+we have some tools to help analyze the problem.
+The --bisect option of runtests.py will run the failing test while
+halving the test set it is run together with on each iteration, often making
+it possible to identify a small number of tests that may be related to the
+failure.
+For example, suppose that the failing test that works on its own is
+ModelTest.test_eq, then using:
+
+will try to determine a test that interferes with the given one. First, the
+test is run with the first half of the test suite. If a failure occurs, the
+first half of the test suite is split in two groups and each group is then run
+with the specified test. If there is no failure with the first half of the test
+suite, the second half of the test suite is run with the specified test and
+split appropriately as described earlier. The process repeats until the set of
+failing tests is minimized.
+The --pair option runs the given test alongside every other test from the
+suite, letting you check if another test has side-effects that cause the
+failure. So:
+
+will pair test_eq with every test label.
+With both --bisect and --pair, if you already suspect which cases
+might be responsible for the failure, you may limit tests to be cross-analyzed
+by specifying further test labels after
+the first one:
+
+You can also try running any set of tests in reverse using the --reverse
+option in order to verify that executing tests in a different order does not
+cause any trouble:
+
+
+
+Seeing the SQL queries run during a test¶
+If you wish to examine the SQL being run in failing tests, you can turn on
+SQL logging using the --debug-sql option. If you
+combine this with --verbosity=2, all SQL queries will be output:
+
+
+
+Seeing the full traceback of a test failure¶
+By default tests are run in parallel with one process per core. When the tests
+are run in parallel, however, you’ll only see a truncated traceback for any
+test failures. You can adjust this behavior with the --parallel option:
+
+You can also use the DJANGO_TEST_PROCESSES environment variable for this
+purpose.
+
+
+
+Tips for writing tests¶
+
+Isolating model registration¶
+To avoid polluting the global apps registry and prevent
+unnecessary table creation, models defined in a test method should be bound to
+a temporary Apps instance:
+
+
+
+django.test.utils.isolate_apps(*app_labels, attr_name=None, kwarg_name=None)¶
+
+Since this pattern involves a lot of boilerplate, Django provides the
+isolate_apps() decorator. It’s used like this:
+
+
+Setting app_label
+Models defined in a test method with no explicit
+app_label are automatically assigned the
+label of the app in which their test class is located.
+In order to make sure the models defined within the context of
+isolate_apps() instances are correctly
+installed, you should pass the set of targeted app_label as arguments:
+
+
+
+
+
+The decorator can also be applied to classes:
+
+The temporary Apps instance used to isolate model registration can be
+retrieved as an attribute when used as a class decorator by using the
+attr_name parameter:
+
+Or as an argument on the test method when used as a method decorator by using
+the kwarg_name parameter:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

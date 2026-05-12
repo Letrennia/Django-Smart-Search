@@ -1,0 +1,126 @@
+https://docs.djangoproject.com/en/2.1/misc/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Meta-documentation and miscellany¶
+Documentation that we can’t find a more organized place for. Like that drawer in
+your kitchen with the scissors, batteries, duct tape, and other junk.
+
+
+API stability
+What “stable” means
+Stable APIs
+Exceptions
+
+
+Design philosophies
+Overall
+Models
+Database API
+URL design
+Template system
+Views
+Cache Framework
+
+
+Third-party distributions of Django
+For distributors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Meta-documentation and miscellany¶
+Documentation that we can’t find a more organized place for. Like that drawer in
+your kitchen with the scissors, batteries, duct tape, and other junk.
+
+
+API stability
+What “stable” means
+Stable APIs
+Exceptions
+
+
+Design philosophies
+Overall
+Models
+Database API
+URL design
+Template system
+Views
+Cache Framework
+
+
+Third-party distributions of Django
+For distributors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

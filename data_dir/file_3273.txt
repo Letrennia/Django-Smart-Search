@@ -1,0 +1,158 @@
+https://docs.djangoproject.com/en/3.1/topics/db/examples/one_to_one/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+One-to-one relationships¶
+To define a one-to-one relationship, use
+OneToOneField.
+In this example, a Place optionally can be a Restaurant:
+
+What follows are examples of operations that can be performed using the Python
+API facilities.
+Create a couple of Places:
+
+Create a Restaurant. Pass the “parent” object as this object’s primary key:
+
+A Restaurant can access its place:
+
+A Place can access its restaurant, if available:
+
+p2 doesn’t have an associated restaurant:
+
+You can also use hasattr to avoid the need for exception catching:
+
+Set the place using assignment notation. Because place is the primary key on
+Restaurant, the save will create a new restaurant:
+
+Set the place back again, using assignment in the reverse direction:
+
+Note that you must save an object before it can be assigned to a one-to-one
+relationship. For example, creating a Restaurant with unsaved Place
+raises ValueError:
+
+Restaurant.objects.all() returns the Restaurants, not the Places. Note that
+there are two restaurants - Ace Hardware the Restaurant was created in the call
+to r.place = p2:
+
+Place.objects.all() returns all Places, regardless of whether they have
+Restaurants:
+
+You can query the models using lookups across relationships:
+
+This also works in reverse:
+
+Add a Waiter to the Restaurant:
+
+Query the waiters:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+One-to-one relationships¶
+To define a one-to-one relationship, use
+OneToOneField.
+In this example, a Place optionally can be a Restaurant:
+
+What follows are examples of operations that can be performed using the Python
+API facilities.
+Create a couple of Places:
+
+Create a Restaurant. Pass the “parent” object as this object’s primary key:
+
+A Restaurant can access its place:
+
+A Place can access its restaurant, if available:
+
+p2 doesn’t have an associated restaurant:
+
+You can also use hasattr to avoid the need for exception catching:
+
+Set the place using assignment notation. Because place is the primary key on
+Restaurant, the save will create a new restaurant:
+
+Set the place back again, using assignment in the reverse direction:
+
+Note that you must save an object before it can be assigned to a one-to-one
+relationship. For example, creating a Restaurant with unsaved Place
+raises ValueError:
+
+Restaurant.objects.all() returns the Restaurants, not the Places. Note that
+there are two restaurants - Ace Hardware the Restaurant was created in the call
+to r.place = p2:
+
+Place.objects.all() returns all Places, regardless of whether they have
+Restaurants:
+
+You can query the models using lookups across relationships:
+
+This also works in reverse:
+
+Add a Waiter to the Restaurant:
+
+Query the waiters:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

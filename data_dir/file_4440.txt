@@ -1,0 +1,98 @@
+https://docs.djangoproject.com/en/2.0/howto/deployment/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Deploying Django¶
+Django’s chock-full of shortcuts to make Web developer’s lives easier, but all
+those tools are of no use if you can’t easily deploy your sites. Since Django’s
+inception, ease of deployment has been a major goal.
+
+
+How to deploy with WSGI
+Deployment checklist
+
+
+If you’re new to deploying Django and/or Python, we’d recommend you try
+mod_wsgi first. In most cases it’ll be
+the easiest, fastest, and most stable deployment choice.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Deploying Django¶
+Django’s chock-full of shortcuts to make Web developer’s lives easier, but all
+those tools are of no use if you can’t easily deploy your sites. Since Django’s
+inception, ease of deployment has been a major goal.
+
+
+How to deploy with WSGI
+Deployment checklist
+
+
+If you’re new to deploying Django and/or Python, we’d recommend you try
+mod_wsgi first. In most cases it’ll be
+the easiest, fastest, and most stable deployment choice.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

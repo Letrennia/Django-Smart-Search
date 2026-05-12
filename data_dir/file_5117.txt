@@ -1,0 +1,96 @@
+https://docs.djangoproject.com/en/1.8/ref/forms/formsets/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Formset Functions¶
+Formset API reference. For introductory material about formsets, see the
+Formsets topic guide.
+
+
+formset_factory(form, formset=BaseFormSet, extra=1, can_order=False, can_delete=False, max_num=None, validate_max=False, min_num=None, validate_min=False)[source]¶
+Returns a FormSet class for the given form class.
+See Formsets for example usage.
+
+Changed in Django 1.7: The min_num and validate_min parameters were added.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Formset Functions¶
+Formset API reference. For introductory material about formsets, see the
+Formsets topic guide.
+
+
+formset_factory(form, formset=BaseFormSet, extra=1, can_order=False, can_delete=False, max_num=None, validate_max=False, min_num=None, validate_min=False)[source]¶
+Returns a FormSet class for the given form class.
+See Formsets for example usage.
+
+Changed in Django 1.7: The min_num and validate_min parameters were added.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

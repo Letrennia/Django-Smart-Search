@@ -1,0 +1,1036 @@
+https://docs.djangoproject.com/en/dev/ref/tasks/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tasks¶
+
+New in Django 6.0. 
+The Task framework provides the contract and plumbing for background work, not
+the engine that runs it. The Tasks API defines how work is described, queued,
+and tracked, but leaves actual execution to external infrastructure.
+
+Task definition¶
+
+The task decorator¶
+
+
+task(*, priority=0, queue_name='default', backend='default', takes_context=False, **kwargs)[source]¶
+The @task decorator defines a Task instance. All keyword
+arguments are passed directly to the backend’s task_class (which
+defaults to Task).
+The following standard arguments are supported:
+
+priority: Sets the priority of the Task. Defaults
+to 0.
+queue_name: Sets the queue_name of the Task.
+Defaults to "default".
+backend: Sets the backend of the Task. Defaults to
+"default".
+takes_context: Controls whether the Task function accepts a
+TaskContext. Defaults to False. See Task context for details.
+
+Custom Task backends may define a custom task_class that accepts
+additional arguments. These can be passed through the @task decorator:
+
+
+Changed in Django Development version: Support for passing arbitrary **kwargs to the @task decorator
+is added.
+
+If the defined Task is not valid according to the backend,
+InvalidTask is raised.
+See defining tasks for usage examples.
+
+
+
+Task¶
+
+
+class Task[source]¶
+Represents a Task to be run in the background. Tasks should be defined
+using the task() decorator.
+Attributes of Task cannot be modified. See modifying Tasks for details.
+
+
+priority¶
+The priority of the Task. Priorities must be between -100 and 100,
+where larger numbers are higher priority, and will be run sooner.
+The backend must have supports_priority set to True to use
+this feature.
+
+
+
+backend¶
+The alias of the backend the Task should be enqueued to. This must
+match a backend defined in BACKEND.
+
+
+
+queue_name¶
+The name of the queue the Task will be enqueued on to. Defaults to
+"default". This must match a queue defined in
+QUEUES, unless
+QUEUES is set to [].
+
+
+
+run_after¶
+The earliest time the Task will be executed. This can be a
+timedelta, which is used relative to the
+current time, a timezone-aware datetime,
+or None if not constrained. Defaults to None.
+This attribute can be set using using().
+The backend must have supports_defer set to True to use
+this feature. Otherwise,
+InvalidTask is raised.
+
+
+
+name[source]¶
+The name of the function decorated with task(). This name is not
+necessarily unique.
+
+
+
+using(*, priority=None, backend=None, queue_name=None, run_after=None)[source]¶
+Creates a new Task with modified defaults. The existing Task is
+left unchanged.
+using allows modifying the following attributes:
+
+priority
+backend
+queue_name
+run_after
+
+See modifying Tasks for usage examples.
+
+
+
+enqueue(*args, **kwargs)[source]¶
+Enqueues the Task to the Task backend for later execution.
+Arguments are passed to the Task’s function after a round-trip
+through a json.dumps()/json.loads() cycle. Hence, all
+arguments must be JSON-serializable and preserve their type after the
+round-trip.
+If the Task is not valid according to the backend,
+InvalidTask is raised.
+See enqueueing Tasks for usage examples.
+
+
+
+aenqueue(*args, **kwargs)¶
+The async variant of enqueue.
+
+
+
+get_result(result_id)[source]¶
+Retrieves a result by its id.
+If the result does not exist, TaskResultDoesNotExist is raised. If the
+result is not the same type as the current Task,
+TaskResultMismatch
+is raised. If the backend does not support get_result(),
+NotImplementedError is raised.
+
+
+
+aget_result(*args, **kwargs)¶
+The async variant of get_result.
+
+
+
+
+
+Task context¶
+
+
+class TaskContext[source]¶
+Contains context for the running Task. Context only passed to a
+Task if it was defined with takes_context=True.
+Attributes of TaskContext cannot be modified.
+
+
+task_result¶
+The TaskResult currently being run.
+
+
+
+attempt[source]¶
+The number of the current execution attempts for this Task, starting at
+1.
+
+
+
+
+Task results¶
+
+
+class TaskResultStatus[source]¶
+An Enum representing the status of a TaskResult.
+
+
+READY¶
+The Task has just been enqueued, or is ready to be executed
+again.
+
+
+
+RUNNING¶
+The Task is currently being executed.
+
+
+
+FAILED¶
+The Task raised an exception during execution, or was unable
+to start.
+
+
+
+SUCCESSFUL¶
+The Task has finished executing successfully.
+
+
+
+
+class TaskResult[source]¶
+The TaskResult stores the information about a specific execution of a
+Task.
+Attributes of TaskResult cannot be modified.
+
+
+task¶
+The Task the result was enqueued for.
+
+
+
+id¶
+A unique identifier for the result, which can be passed to
+Task.get_result().
+The format of the id will depend on the backend being used. Task result
+ids are always strings less than 64 characters.
+See Task results for more details.
+
+
+
+status¶
+The status of the result.
+
+
+
+enqueued_at¶
+The time when the Task was enqueued.
+
+
+
+started_at¶
+The time when the Task began execution, on its first attempt.
+
+
+
+last_attempted_at¶
+The time when the most recent Task run began execution.
+
+
+
+finished_at¶
+The time when the Task finished execution, whether it failed or
+succeeded.
+
+
+
+backend¶
+The backend the result is from.
+
+
+
+errors¶
+A list of TaskError instances for the errors raised as part of
+each execution of the Task.
+
+
+
+return_value[source]¶
+The return value from the Task function.
+If the Task did not finish successfully, ValueError is
+raised.
+See return values for usage examples.
+
+
+
+refresh()[source]¶
+Refresh the result’s attributes from the queue store.
+
+
+
+arefresh()¶
+The async variant of TaskResult.refresh().
+
+
+
+is_finished[source]¶
+Whether the Task has finished (successfully or not).
+
+
+
+attempts[source]¶
+The number of times the Task has been run.
+If the task is currently running, it does not count as an attempt.
+
+
+
+worker_ids¶
+The ids of the workers which have executed the Task.
+
+
+
+Task errors¶
+
+
+class TaskError¶
+Contains information about the error raised during the execution of a
+Task.
+
+
+traceback¶
+The traceback (as a string) from the raised exception when the Task
+failed.
+
+
+
+exception_class¶
+The exception class raised when executing the Task.
+
+
+
+
+
+Backends¶
+Backends handle how Tasks are stored and executed. All backends share a common
+interface defined by BaseTaskBackend, which specifies the core methods for
+enqueueing Tasks and retrieving results.
+
+Base backend¶
+
+
+class BaseTaskBackend[source]¶
+BaseTaskBackend is the parent class for all Task backends.
+
+
+task_class¶
+The Task subclass to use when creating tasks
+with the task() decorator. Defaults to
+Task. Custom backends can override this to use
+a custom Task subclass with additional attributes.
+
+
+
+options¶
+A dictionary of extra parameters for the Task backend. These are
+provided using the OPTIONS setting.
+
+
+
+enqueue(task, args, kwargs)[source]¶
+Task backends which subclass BaseTaskBackend should implement this
+method as a minimum.
+When implemented, enqueue() enqueues the task, a Task
+instance, for later execution. args are the positional arguments
+and kwargs are the keyword arguments to be passed to the task.
+Returns a TaskResult.
+
+
+
+aenqueue(task, args, kwargs)¶
+The async variant of BaseTaskBackend.enqueue().
+
+
+
+get_result(result_id)[source]¶
+Retrieve a result by its id. If the result does not exist,
+TaskResultDoesNotExist is raised.
+If the backend does not support get_result(),
+NotImplementedError is raised.
+
+
+
+aget_result(result_id)¶
+The async variant of BaseTaskBackend.get_result().
+
+
+
+validate_task(task)[source]¶
+Validates whether the provided Task is able to be enqueued using
+the backend. If the Task is not valid,
+InvalidTask
+is raised.
+
+
+
+Feature flags¶
+Some backends may not support all features Django provides. It’s possible to
+identify the supported functionality of a backend, and potentially change
+behavior accordingly.
+
+
+BaseTaskBackend.supports_defer¶
+Whether the backend supports enqueueing Tasks to be executed after a
+specific time using the run_after attribute.
+
+
+
+BaseTaskBackend.supports_async_task¶
+Whether the backend supports enqueueing async functions (coroutines).
+
+
+
+BaseTaskBackend.supports_get_result¶
+Whether the backend supports retrieving Task results from another
+thread after they have been enqueued.
+
+
+
+BaseTaskBackend.supports_priority¶
+Whether the backend supports executing Tasks as ordered by their
+priority.
+
+The below table notes which of the built-in backends support which features:
+
+
+Feature
+DummyBackend
+ImmediateBackend
+
+
+
+supports_defer
+Yes
+No
+
+supports_async_task
+Yes
+Yes
+
+supports_get_result
+No
+No [1]
+
+supports_priority
+Yes [2]
+Yes [3]
+
+
+
+
+
+
+Available backends¶
+Django includes only development and testing backends. These support local
+execution and inspection, for production ready backends refer to
+Configuring a Task backend.
+
+Immediate backend¶
+
+
+class ImmediateBackend[source]¶
+The immediate backend executes Tasks
+immediately, rather than in the background.
+
+
+
+Dummy backend¶
+
+
+class DummyBackend[source]¶
+The dummy backend does not execute enqueued
+Tasks. Instead, it stores task results for later inspection.
+
+
+results¶
+A list of results for the enqueued Tasks, in the order they were
+enqueued.
+
+
+
+clear()[source]¶
+Clears the list of stored results.
+
+
+
+
+
+
+Exceptions¶
+
+
+exception InvalidTask[source]¶
+Raised when the Task attempting to be enqueued
+is invalid.
+
+
+
+exception InvalidTaskBackend[source]¶
+Raised when the requested BaseTaskBackend is invalid.
+
+
+
+exception TaskResultDoesNotExist[source]¶
+Raised by get_result()
+when the provided result_id does not exist.
+
+
+
+exception TaskResultMismatch[source]¶
+Raised by get_result() when the provided
+result_id is for a different Task than the current Task.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tasks¶
+
+New in Django 6.0. 
+The Task framework provides the contract and plumbing for background work, not
+the engine that runs it. The Tasks API defines how work is described, queued,
+and tracked, but leaves actual execution to external infrastructure.
+
+Task definition¶
+
+The task decorator¶
+
+
+task(*, priority=0, queue_name='default', backend='default', takes_context=False, **kwargs)[source]¶
+The @task decorator defines a Task instance. All keyword
+arguments are passed directly to the backend’s task_class (which
+defaults to Task).
+The following standard arguments are supported:
+
+priority: Sets the priority of the Task. Defaults
+to 0.
+queue_name: Sets the queue_name of the Task.
+Defaults to "default".
+backend: Sets the backend of the Task. Defaults to
+"default".
+takes_context: Controls whether the Task function accepts a
+TaskContext. Defaults to False. See Task context for details.
+
+Custom Task backends may define a custom task_class that accepts
+additional arguments. These can be passed through the @task decorator:
+
+
+Changed in Django Development version: Support for passing arbitrary **kwargs to the @task decorator
+is added.
+
+If the defined Task is not valid according to the backend,
+InvalidTask is raised.
+See defining tasks for usage examples.
+
+
+
+Task¶
+
+
+class Task[source]¶
+Represents a Task to be run in the background. Tasks should be defined
+using the task() decorator.
+Attributes of Task cannot be modified. See modifying Tasks for details.
+
+
+priority¶
+The priority of the Task. Priorities must be between -100 and 100,
+where larger numbers are higher priority, and will be run sooner.
+The backend must have supports_priority set to True to use
+this feature.
+
+
+
+backend¶
+The alias of the backend the Task should be enqueued to. This must
+match a backend defined in BACKEND.
+
+
+
+queue_name¶
+The name of the queue the Task will be enqueued on to. Defaults to
+"default". This must match a queue defined in
+QUEUES, unless
+QUEUES is set to [].
+
+
+
+run_after¶
+The earliest time the Task will be executed. This can be a
+timedelta, which is used relative to the
+current time, a timezone-aware datetime,
+or None if not constrained. Defaults to None.
+This attribute can be set using using().
+The backend must have supports_defer set to True to use
+this feature. Otherwise,
+InvalidTask is raised.
+
+
+
+name[source]¶
+The name of the function decorated with task(). This name is not
+necessarily unique.
+
+
+
+using(*, priority=None, backend=None, queue_name=None, run_after=None)[source]¶
+Creates a new Task with modified defaults. The existing Task is
+left unchanged.
+using allows modifying the following attributes:
+
+priority
+backend
+queue_name
+run_after
+
+See modifying Tasks for usage examples.
+
+
+
+enqueue(*args, **kwargs)[source]¶
+Enqueues the Task to the Task backend for later execution.
+Arguments are passed to the Task’s function after a round-trip
+through a json.dumps()/json.loads() cycle. Hence, all
+arguments must be JSON-serializable and preserve their type after the
+round-trip.
+If the Task is not valid according to the backend,
+InvalidTask is raised.
+See enqueueing Tasks for usage examples.
+
+
+
+aenqueue(*args, **kwargs)¶
+The async variant of enqueue.
+
+
+
+get_result(result_id)[source]¶
+Retrieves a result by its id.
+If the result does not exist, TaskResultDoesNotExist is raised. If the
+result is not the same type as the current Task,
+TaskResultMismatch
+is raised. If the backend does not support get_result(),
+NotImplementedError is raised.
+
+
+
+aget_result(*args, **kwargs)¶
+The async variant of get_result.
+
+
+
+
+
+Task context¶
+
+
+class TaskContext[source]¶
+Contains context for the running Task. Context only passed to a
+Task if it was defined with takes_context=True.
+Attributes of TaskContext cannot be modified.
+
+
+task_result¶
+The TaskResult currently being run.
+
+
+
+attempt[source]¶
+The number of the current execution attempts for this Task, starting at
+1.
+
+
+
+
+Task results¶
+
+
+class TaskResultStatus[source]¶
+An Enum representing the status of a TaskResult.
+
+
+READY¶
+The Task has just been enqueued, or is ready to be executed
+again.
+
+
+
+RUNNING¶
+The Task is currently being executed.
+
+
+
+FAILED¶
+The Task raised an exception during execution, or was unable
+to start.
+
+
+
+SUCCESSFUL¶
+The Task has finished executing successfully.
+
+
+
+
+class TaskResult[source]¶
+The TaskResult stores the information about a specific execution of a
+Task.
+Attributes of TaskResult cannot be modified.
+
+
+task¶
+The Task the result was enqueued for.
+
+
+
+id¶
+A unique identifier for the result, which can be passed to
+Task.get_result().
+The format of the id will depend on the backend being used. Task result
+ids are always strings less than 64 characters.
+See Task results for more details.
+
+
+
+status¶
+The status of the result.
+
+
+
+enqueued_at¶
+The time when the Task was enqueued.
+
+
+
+started_at¶
+The time when the Task began execution, on its first attempt.
+
+
+
+last_attempted_at¶
+The time when the most recent Task run began execution.
+
+
+
+finished_at¶
+The time when the Task finished execution, whether it failed or
+succeeded.
+
+
+
+backend¶
+The backend the result is from.
+
+
+
+errors¶
+A list of TaskError instances for the errors raised as part of
+each execution of the Task.
+
+
+
+return_value[source]¶
+The return value from the Task function.
+If the Task did not finish successfully, ValueError is
+raised.
+See return values for usage examples.
+
+
+
+refresh()[source]¶
+Refresh the result’s attributes from the queue store.
+
+
+
+arefresh()¶
+The async variant of TaskResult.refresh().
+
+
+
+is_finished[source]¶
+Whether the Task has finished (successfully or not).
+
+
+
+attempts[source]¶
+The number of times the Task has been run.
+If the task is currently running, it does not count as an attempt.
+
+
+
+worker_ids¶
+The ids of the workers which have executed the Task.
+
+
+
+Task errors¶
+
+
+class TaskError¶
+Contains information about the error raised during the execution of a
+Task.
+
+
+traceback¶
+The traceback (as a string) from the raised exception when the Task
+failed.
+
+
+
+exception_class¶
+The exception class raised when executing the Task.
+
+
+
+
+
+Backends¶
+Backends handle how Tasks are stored and executed. All backends share a common
+interface defined by BaseTaskBackend, which specifies the core methods for
+enqueueing Tasks and retrieving results.
+
+Base backend¶
+
+
+class BaseTaskBackend[source]¶
+BaseTaskBackend is the parent class for all Task backends.
+
+
+task_class¶
+The Task subclass to use when creating tasks
+with the task() decorator. Defaults to
+Task. Custom backends can override this to use
+a custom Task subclass with additional attributes.
+
+
+
+options¶
+A dictionary of extra parameters for the Task backend. These are
+provided using the OPTIONS setting.
+
+
+
+enqueue(task, args, kwargs)[source]¶
+Task backends which subclass BaseTaskBackend should implement this
+method as a minimum.
+When implemented, enqueue() enqueues the task, a Task
+instance, for later execution. args are the positional arguments
+and kwargs are the keyword arguments to be passed to the task.
+Returns a TaskResult.
+
+
+
+aenqueue(task, args, kwargs)¶
+The async variant of BaseTaskBackend.enqueue().
+
+
+
+get_result(result_id)[source]¶
+Retrieve a result by its id. If the result does not exist,
+TaskResultDoesNotExist is raised.
+If the backend does not support get_result(),
+NotImplementedError is raised.
+
+
+
+aget_result(result_id)¶
+The async variant of BaseTaskBackend.get_result().
+
+
+
+validate_task(task)[source]¶
+Validates whether the provided Task is able to be enqueued using
+the backend. If the Task is not valid,
+InvalidTask
+is raised.
+
+
+
+Feature flags¶
+Some backends may not support all features Django provides. It’s possible to
+identify the supported functionality of a backend, and potentially change
+behavior accordingly.
+
+
+BaseTaskBackend.supports_defer¶
+Whether the backend supports enqueueing Tasks to be executed after a
+specific time using the run_after attribute.
+
+
+
+BaseTaskBackend.supports_async_task¶
+Whether the backend supports enqueueing async functions (coroutines).
+
+
+
+BaseTaskBackend.supports_get_result¶
+Whether the backend supports retrieving Task results from another
+thread after they have been enqueued.
+
+
+
+BaseTaskBackend.supports_priority¶
+Whether the backend supports executing Tasks as ordered by their
+priority.
+
+The below table notes which of the built-in backends support which features:
+
+
+Feature
+DummyBackend
+ImmediateBackend
+
+
+
+supports_defer
+Yes
+No
+
+supports_async_task
+Yes
+Yes
+
+supports_get_result
+No
+No [1]
+
+supports_priority
+Yes [2]
+Yes [3]
+
+
+
+
+
+
+Available backends¶
+Django includes only development and testing backends. These support local
+execution and inspection, for production ready backends refer to
+Configuring a Task backend.
+
+Immediate backend¶
+
+
+class ImmediateBackend[source]¶
+The immediate backend executes Tasks
+immediately, rather than in the background.
+
+
+
+Dummy backend¶
+
+
+class DummyBackend[source]¶
+The dummy backend does not execute enqueued
+Tasks. Instead, it stores task results for later inspection.
+
+
+results¶
+A list of results for the enqueued Tasks, in the order they were
+enqueued.
+
+
+
+clear()[source]¶
+Clears the list of stored results.
+
+
+
+
+
+
+Exceptions¶
+
+
+exception InvalidTask[source]¶
+Raised when the Task attempting to be enqueued
+is invalid.
+
+
+
+exception InvalidTaskBackend[source]¶
+Raised when the requested BaseTaskBackend is invalid.
+
+
+
+exception TaskResultDoesNotExist[source]¶
+Raised by get_result()
+when the provided result_id does not exist.
+
+
+
+exception TaskResultMismatch[source]¶
+Raised by get_result() when the provided
+result_id is for a different Task than the current Task.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,134 @@
+https://docs.djangoproject.com/en/1.8/topics/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Using Django¶
+Introductions to all the key parts of Django you’ll need to know:
+
+
+How to install Django
+Models and databases
+Handling HTTP requests
+Working with forms
+Templates
+Class-based views
+Migrations
+Managing files
+Testing in Django
+User authentication in Django
+Django’s cache framework
+Conditional View Processing
+Cryptographic signing
+Sending email
+Internationalization and localization
+The “local flavor” add-ons
+Logging
+Pagination
+Porting to Python 3
+Security in Django
+Performance and optimization
+Serializing Django objects
+Django settings
+Signals
+System check framework
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Using Django¶
+Introductions to all the key parts of Django you’ll need to know:
+
+
+How to install Django
+Models and databases
+Handling HTTP requests
+Working with forms
+Templates
+Class-based views
+Migrations
+Managing files
+Testing in Django
+User authentication in Django
+Django’s cache framework
+Conditional View Processing
+Cryptographic signing
+Sending email
+Internationalization and localization
+The “local flavor” add-ons
+Logging
+Pagination
+Porting to Python 3
+Security in Django
+Performance and optimization
+Serializing Django objects
+Django settings
+Signals
+System check framework
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

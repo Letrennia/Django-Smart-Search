@@ -1,0 +1,92 @@
+https://docs.djangoproject.com/en/2.0/_modules/django/contrib/postgres/functions/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Source code for django.contrib.postgres.functions
+from django.db.models import DateTimeField, Func, UUIDField
+
+
+[docs]class RandomUUID(Func):
+    template = 'GEN_RANDOM_UUID()'
+    output_field = UUIDField()
+
+
+[docs]class TransactionNow(Func):
+    template = 'CURRENT_TIMESTAMP'
+    output_field = DateTimeField()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Source code for django.contrib.postgres.functions
+from django.db.models import DateTimeField, Func, UUIDField
+
+
+[docs]class RandomUUID(Func):
+    template = 'GEN_RANDOM_UUID()'
+    output_field = UUIDField()
+
+
+[docs]class TransactionNow(Func):
+    template = 'CURRENT_TIMESTAMP'
+    output_field = DateTimeField()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
