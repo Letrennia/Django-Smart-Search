@@ -3,8 +3,8 @@ import re
 
 import ftfy # fixes text for you <3
 
-input_dir = "data_dir"
-output_dir = "clean_data"
+input_dir = "../data_dir"
+output_dir = "../clean_data"
 
 os.makedirs(output_dir, exist_ok=True)
 
@@ -122,13 +122,13 @@ print("Maximum themes: ", max(count_themes.values()))
 print("Avg keywords:", sum(count_keywords.values()) / len(count_keywords.values()))
 print("Avg themes:", sum(count_themes.values()) / len(count_themes.values()))
 
-with open("keywords.txt", "w", encoding="utf-8") as file:
+with open("../wordlists_dir/keywords.txt", "w", encoding="utf-8") as file:
     file.write("\n".join(all_keywords))
 
-with open("themes.txt", "w", encoding="utf-8") as file:
+with open("../wordlists_dir/themes.txt", "w", encoding="utf-8") as file:
     file.write("\n".join(all_themes))
 
-with open("methods.txt", "w", encoding="utf-8") as file:
+with open("../wordlists_dir/methods.txt", "w", encoding="utf-8") as file:
     file.write("\n".join(all_methods))
 
 count_words = 0
