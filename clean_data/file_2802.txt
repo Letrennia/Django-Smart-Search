@@ -1,4 +1,8 @@
+[ID]
+2802
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/forms/forms/
+[TEXT]
 Source code for django.forms.forms
 """
 Form classes
@@ -865,3 +869,4 @@ class BaseForm:
     # fancy metaclass stuff purely for the semantic sugar -- it allows one
     # to define a form using declarative syntax.
     # BaseForm itself has no way of designating self.fields.
+[VECTOR]

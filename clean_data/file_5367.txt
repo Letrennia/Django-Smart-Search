@@ -1,4 +1,8 @@
+[ID]
+5367
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/db/models/options/
+[TEXT]
 Source code for django.db.models.options
 from __future__ import unicode_literals
 import copy
@@ -1585,3 +1589,4 @@ class Options(object):
                 if isinstance(attr, property):
                     names.append(name)
         return frozenset(names)
+[VECTOR]

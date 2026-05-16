@@ -1,4 +1,8 @@
+[ID]
+3325
+[URL]
 https://docs.djangoproject.com/en/3.0/faq/install/
+[TEXT]
 FAQ: Installation 
 How do I get started? 
 Download the code.
@@ -115,3 +119,4 @@ releases contain the API that is covered by our backwards
 compatibility guarantees; if you write code against stable releases,
 you shouldn't have any problems upgrading when the next official
 version is released.
+[VECTOR]

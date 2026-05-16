@@ -1,4 +1,8 @@
+[ID]
+4864
+[URL]
 https://docs.djangoproject.com/en/1.8/internals/contributing/
+[TEXT]
 Contributing to Django 
 Django is a community that lives on its volunteers. As it keeps growing, we
 always need more people to help others. As soon as you learn Django, you can
@@ -155,3 +159,4 @@ Committing code
 Handling pull requests
 Committing guidelines
 Reverting commits
+[VECTOR]

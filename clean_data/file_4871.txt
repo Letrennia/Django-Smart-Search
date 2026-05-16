@@ -1,4 +1,8 @@
+[ID]
+4871
+[URL]
 https://docs.djangoproject.com/en/1.8/internals/contributing/writing-code/coding-style/
+[TEXT]
 Coding style 
 Please follow these coding standards when writing code for inclusion in Django.
 Python style 
@@ -193,3 +197,4 @@ keep contributors' names in the AUTHORS file distributed with Django
 – not scattered throughout the codebase itself. Feel free to include a
 change to the AUTHORS file in your patch if you make more than a
 single trivial change.
+[VECTOR]

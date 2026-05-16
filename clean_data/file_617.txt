@@ -1,4 +1,8 @@
+[ID]
+617
+[URL]
 https://docs.djangoproject.com/en/5.2/internals/contributing/writing-code/unit-tests/
+[TEXT]
 Unit tests 
 Django comes with a test suite of its own, in the tests directory of the
 code base. It's our policy to make sure all tests pass at all times.
@@ -707,3 +711,4 @@ label of the app in which their test class is located.
 In order to make sure the models defined within the context of
 isolate_apps() instances are correctly
 installed, you should pass the set of targeted app_label as arguments:
+[VECTOR]

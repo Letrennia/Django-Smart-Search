@@ -1,4 +1,8 @@
+[ID]
+4783
+[URL]
 https://docs.djangoproject.com/en/2.0/topics/db/multi-db/
+[TEXT]
 Multiple databases 
 This topic guide describes Django's support for interacting with
 multiple databases. Most of the rest of Django's documentation assumes
@@ -677,3 +681,4 @@ Warning
 If you're synchronizing content types to more than one database, be aware
 that their primary keys may not match across databases. This may result in
 data corruption or data loss.
+[VECTOR]

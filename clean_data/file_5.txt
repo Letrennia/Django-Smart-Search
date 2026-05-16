@@ -1,4 +1,8 @@
+[ID]
+5
+[URL]
 https://docs.djangoproject.com/en/dev/faq/general/
+[TEXT]
 FAQ: General 
 Why does this project exist? 
 Django grew from a very practical need: World Online, a newspaper web
@@ -267,3 +271,4 @@ https://www.djangoproject.com/community/ecosystem/.
 That page will be updated to contain links to various Django content such as
 podcasts, videos, conferences, blogs, books, and learning resources. It also
 features popular, robust, community-maintained packages.
+[VECTOR]

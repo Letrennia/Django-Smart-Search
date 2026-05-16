@@ -1,4 +1,8 @@
+[ID]
+1282
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/db/migrations/operations/special/
+[TEXT]
 Source code for django.db.migrations.operations.special
 from django.db import router
 from .base import Operation, OperationCategory
@@ -365,3 +369,4 @@ class RunPython(Operation):
     @staticmethod
     def noop(apps, schema_editor):
         return None
+[VECTOR]

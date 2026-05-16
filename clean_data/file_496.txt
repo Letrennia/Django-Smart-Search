@@ -1,4 +1,8 @@
+[ID]
+496
+[URL]
 https://docs.djangoproject.com/en/6.0/topics/auth/passwords/
+[TEXT]
 Password management in Django 
 Password management is something that should generally not be reinvented
 unnecessarily, and Django endeavors to provide a secure and flexible set of
@@ -835,3 +839,4 @@ You can also implement password_changed(password, user=None), which will
 be called after a successful password change. That can be used to prevent
 password reuse, for example. However, if you decide to store a user's previous
 passwords, you should never do so in clear text.
+[VECTOR]

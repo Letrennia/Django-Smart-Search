@@ -1,4 +1,8 @@
+[ID]
+4643
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/unittest/loader/
+[TEXT]
 Source code for unittest.loader
 """Loading unittests."""
 import os
@@ -897,3 +901,4 @@ def findTestCases(module, prefix='test', sortUsing=util.three_way_cmp,
                   suiteClass=suite.TestSuite):
     return _makeLoader(prefix, sortUsing, suiteClass).loadTestsFromModule(\
         module)
+[VECTOR]

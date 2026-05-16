@@ -1,4 +1,8 @@
+[ID]
+4531
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/contrib/postgres/indexes/
+[TEXT]
 Source code for django.contrib.postgres.indexes
 from django.db.models import Index
 __all__ = ['BrinIndex', 'GinIndex', 'GistIndex']
@@ -147,3 +151,4 @@ class MaxLengthMixin:
         if with_params:
             statement.parts['extra'] = 'WITH ({}) {}'.format(', '.join(with_params), statement.parts['extra'])
         return statement
+[VECTOR]

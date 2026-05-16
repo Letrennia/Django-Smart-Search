@@ -1,4 +1,8 @@
+[ID]
+3475
+[URL]
 https://docs.djangoproject.com/en/3.0/ref/contrib/gis/tutorial/
+[TEXT]
 GeoDjango Tutorial 
 Introduction 
 GeoDjango is an included contrib module for Django that turns it into a
@@ -679,3 +683,4 @@ Christopher Schmidt.
 [3]This point is the University of Houston Law Center.
 [4]Open Geospatial Consortium, Inc., OpenGIS Simple Feature Specification
 For SQL.
+[VECTOR]

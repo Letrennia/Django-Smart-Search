@@ -1,4 +1,8 @@
+[ID]
+1674
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/auth/tokens/
+[TEXT]
 Source code for django.contrib.auth.tokens
 from datetime import datetime
 from django.conf import settings
@@ -217,3 +221,4 @@ class PasswordResetTokenGenerator:
         # Used for mocking in tests
         return datetime.now()
 default_token_generator = PasswordResetTokenGenerator()
+[VECTOR]

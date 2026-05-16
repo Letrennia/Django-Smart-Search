@@ -1,4 +1,8 @@
+[ID]
+4210
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/urls/converters/
+[TEXT]
 Source code for django.urls.converters
 import uuid
 from django.utils import lru_cache
@@ -81,3 +85,4 @@ def get_converters():
     return {**DEFAULT_CONVERTERS, **REGISTERED_CONVERTERS}
 def get_converter(raw_converter):
     return get_converters()[raw_converter]
+[VECTOR]

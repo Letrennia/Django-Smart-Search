@@ -1,4 +1,8 @@
+[ID]
+5804
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/middleware/locale/
+[TEXT]
 Source code for django.middleware.locale
 "This is the locale selecting middleware that will look at accept headers"
 from django.conf import settings
@@ -117,3 +121,4 @@ from django.utils.deprecation import MiddlewareMixin
         if 'Content-Language' not in response:
             response['Content-Language'] = language
         return response
+[VECTOR]

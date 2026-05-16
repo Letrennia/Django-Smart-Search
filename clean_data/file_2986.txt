@@ -1,4 +1,8 @@
+[ID]
+2986
+[URL]
 https://docs.djangoproject.com/en/3.2/topics/class-based-views/
+[TEXT]
 Class-based views 
 A view is a callable which takes a request and returns a
 response. This can be more than just a function, and Django provides
@@ -113,3 +117,4 @@ the response (using the book_list.html template). But if the client issues
 a HEAD request, the response has an empty body and the Last-Modified
 header indicates when the most recent book was published.  Based on this
 information, the client may or may not download the full object list.
+[VECTOR]

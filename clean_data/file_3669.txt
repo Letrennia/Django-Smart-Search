@@ -1,4 +1,8 @@
+[ID]
+3669
+[URL]
 https://docs.djangoproject.com/en/2.2/internals/security/
+[TEXT]
 Django's security policies 
 Django's development team is strongly committed to responsible
 reporting and disclosure of security-related issues. As such, we've
@@ -311,3 +315,4 @@ Please also bear in mind that for any individual or organization,
 receiving security notifications is a privilege granted at the sole
 discretion of the Django development team, and that this privilege can
 be revoked at any time, with or without explanation.
+[VECTOR]

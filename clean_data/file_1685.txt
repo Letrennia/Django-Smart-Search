@@ -1,4 +1,8 @@
+[ID]
+1685
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/gis/geoip2/
+[TEXT]
 Source code for django.contrib.gis.geoip2
 """
 This module houses the GeoIP2 object, a wrapper for the MaxMind GeoIP2(R)
@@ -399,3 +403,4 @@ class GeoIP2:
         # Allows importing and using GeoIP2() when GEOS is not installed.
         from django.contrib.gis.geos import Point
         return Point(self.lon_lat(query), srid=4326)
+[VECTOR]

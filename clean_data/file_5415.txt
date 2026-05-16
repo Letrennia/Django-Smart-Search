@@ -1,4 +1,8 @@
+[ID]
+5415
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/utils/functional/
+[TEXT]
 Source code for django.utils.functional
 import copy
 import operator
@@ -703,3 +707,4 @@ def partition(predicate, values):
     for item in values:
         results[predicate(item)].append(item)
     return results
+[VECTOR]

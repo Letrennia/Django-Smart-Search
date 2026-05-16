@@ -1,4 +1,8 @@
+[ID]
+1244
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/postgres/search/
+[TEXT]
 Source code for django.contrib.postgres.search
 from django.db.models import (
     CharField,
@@ -643,3 +647,4 @@ class TrigramWordSimilarity(TrigramWordBase):
 [docs]
 class TrigramStrictWordSimilarity(TrigramWordBase):
     function = "STRICT_WORD_SIMILARITY"
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+444
+[URL]
 https://docs.djangoproject.com/en/6.0/ref/files/storage/
+[TEXT]
 File storage API 
 Getting the default storage class 
 Django provides convenient ways to access the default storage class:
@@ -327,3 +331,4 @@ There are community-maintained solutions too!
 Django has a vibrant ecosystem. There are storage backends
 highlighted on the Community Ecosystem page. The Django Packages
 Storage Backends grid has even more options for you!
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+3940
+[URL]
 https://docs.djangoproject.com/en/2.2/ref/template-response/
+[TEXT]
 TemplateResponse and SimpleTemplateResponse 
 Standard HttpResponse objects are static structures.
 They are provided with a block of pre-rendered content at time of
@@ -341,3 +345,4 @@ django.http.HttpResponse can be used. It can also be used as an
 alternative to calling render().
 For example, the following simple view returns a TemplateResponse
 with a simple template and a context containing a queryset:
+[VECTOR]

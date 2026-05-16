@@ -1,4 +1,8 @@
+[ID]
+313
+[URL]
 https://docs.djangoproject.com/en/6.0/howto/deployment/wsgi/modwsgi/
+[TEXT]
 How to use Django with Apache and mod_wsgi 
 Deploying Django with Apache and mod_wsgi is a tried and tested way to get
 Django into production.
@@ -201,3 +205,4 @@ Authenticating against Django's user database from Apache
 Django provides a handler to allow Apache to authenticate users directly
 against Django's authentication backends. See the mod_wsgi authentication
 documentation.
+[VECTOR]

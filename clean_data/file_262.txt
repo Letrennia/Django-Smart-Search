@@ -1,4 +1,8 @@
+[ID]
+262
+[URL]
 https://docs.djangoproject.com/en/dev/topics/i18n/formatting/
+[TEXT]
 Format localization 
 Overview 
 Django's formatting system is capable of displaying dates, times and numbers in
@@ -187,3 +191,4 @@ while measurements often use a comma (22,5 m). Django's localization system
 does not support such context-specific variations automatically.
 The locale format provided by Django uses the generic separators, a comma for
 decimal and a space for thousand separators.
+[VECTOR]

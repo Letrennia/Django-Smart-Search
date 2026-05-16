@@ -1,4 +1,8 @@
+[ID]
+3642
+[URL]
 https://docs.djangoproject.com/en/2.2/howto/overriding-templates/
+[TEXT]
 Overriding templates 
 In your project, you might want to override a template in another Django
 application, whether it be a third-party application or a contrib application
@@ -93,3 +97,4 @@ myapp/
             post.html
 With APP_DIRS set to True, the template
 loader will look in the app's templates directory and find the templates.
+[VECTOR]

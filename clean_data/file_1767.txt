@@ -1,4 +1,8 @@
+[ID]
+1767
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/db/models/options/
+[TEXT]
 Source code for django.db.models.options
 import bisect
 import copy
@@ -1889,3 +1893,4 @@ class Options:
             )
             if getattr(field, "db_returning", False)
         ]
+[VECTOR]

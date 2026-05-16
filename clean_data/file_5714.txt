@@ -1,4 +1,8 @@
+[ID]
+5714
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/gis/db/models/aggregates/
+[TEXT]
 Source code for django.contrib.gis.db.models.aggregates
 from django.contrib.gis.db.models.fields import ExtentField
 from django.db.models.aggregates import Aggregate
@@ -95,3 +99,4 @@ class GeoAggregate(Aggregate):
     name = 'MakeLine'
 [docs]class Union(GeoAggregate):
     name = 'Union'
+[VECTOR]

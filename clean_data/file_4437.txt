@@ -1,4 +1,8 @@
+[ID]
+4437
+[URL]
 https://docs.djangoproject.com/en/2.0/howto/custom-management-commands/
+[TEXT]
 Writing custom django-admin commands 
 Applications can register their own actions with manage.py. For example,
 you might want to add a manage.py action for a Django app that you're
@@ -401,3 +405,4 @@ to indicate that something has gone wrong in the execution of a command.
 If a management command is called from code through
 call_command(), it's up to you to catch the
 exception when needed.
+[VECTOR]

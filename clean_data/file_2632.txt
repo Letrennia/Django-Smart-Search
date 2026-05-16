@@ -1,4 +1,8 @@
+[ID]
+2632
+[URL]
 https://docs.djangoproject.com/en/4.0/topics/signing/
+[TEXT]
 Cryptographic signing 
 The golden rule of web application security is to never trust data from
 untrusted sources. Sometimes it can be useful to pass data through an
@@ -191,3 +195,4 @@ loads(string, key=None, salt='django.core.signing', serializer=JSONSerializer, m
 Reverse of dumps(), raises BadSignature if signature fails.
 Checks max_age (in seconds) if given.
 Changed in Django 3.2: The sign_object() and unsign_object() methods were added.
+[VECTOR]

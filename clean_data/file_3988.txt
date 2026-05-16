@@ -1,4 +1,8 @@
+[ID]
+3988
+[URL]
 https://docs.djangoproject.com/en/2.2/topics/forms/media/
+[TEXT]
 Form Assets (the Media class) 
 Rendering an attractive and easy-to-use Web form requires more than just
 HTML - it also requires CSS stylesheets, and if you want to use fancy
@@ -287,3 +291,4 @@ are part of the form:
 If you want to associate additional assets with a form – for example,
 CSS for form layout – simply add a Media declaration to the
 form:
+[VECTOR]

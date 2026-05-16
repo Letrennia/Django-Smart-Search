@@ -1,4 +1,8 @@
+[ID]
+1297
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/db/models/functions/math/
+[TEXT]
 Source code for django.db.models.functions.math
 import math
 from django.db.models.expressions import Func, Value
@@ -353,3 +357,4 @@ class Sqrt(NumericOutputFieldMixin, Transform):
 class Tan(NumericOutputFieldMixin, Transform):
     function = "TAN"
     lookup_name = "tan"
+[VECTOR]

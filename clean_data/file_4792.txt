@@ -1,4 +1,8 @@
+[ID]
+4792
+[URL]
 https://docs.djangoproject.com/en/2.0/topics/files/
+[TEXT]
 Managing files 
 This document describes Django's file access APIs for files such as those
 uploaded by a user. The lower level APIs are general enough that you could use
@@ -135,3 +139,4 @@ For example, the following code will store uploaded files under
 Custom storage systems work the same way:
 you can pass them in as the storage argument to a
 FileField.
+[VECTOR]

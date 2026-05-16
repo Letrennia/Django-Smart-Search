@@ -1,4 +1,8 @@
+[ID]
+295
+[URL]
 https://docs.djangoproject.com/en/6.0/howto/csrf/
+[TEXT]
 How to use Django's CSRF protection 
 To take advantage of CSRF protection in your views, follow these steps:
 The CSRF middleware is activated by default in the MIDDLEWARE
@@ -281,3 +285,4 @@ CsrfViewMiddleware, all relevant views in contrib apps use the
 csrf_protect decorator to ensure the security of these applications against
 CSRF. It is recommended that the developers of other reusable apps that want
 the same guarantees also use the csrf_protect decorator on their views.
+[VECTOR]

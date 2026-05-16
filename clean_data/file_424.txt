@@ -1,4 +1,8 @@
+[ID]
+424
+[URL]
 https://docs.djangoproject.com/en/6.0/ref/contrib/postgres/fields/
+[TEXT]
 PostgreSQL specific model fields 
 All of these fields are available from the django.contrib.postgres.fields
 module.
@@ -699,3 +703,4 @@ A RangeBoundary() expression represents the range boundaries. It can be
 used with a custom range functions that expected boundaries, for example to
 define ExclusionConstraint. See
 the PostgreSQL documentation for the full details.
+[VECTOR]

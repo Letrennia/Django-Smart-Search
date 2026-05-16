@@ -1,4 +1,8 @@
+[ID]
+5483
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/contrib/gis/serializers/
+[TEXT]
 GeoJSON Serializer 
 GeoDjango provides a specific serializer for the GeoJSON format. See
 Serializing Django objects for more information on serialization.
@@ -51,3 +55,4 @@ When the fields parameter is not specified, the geojson serializer adds
 a pk key to the properties dictionary with the primary key of the
 object as the value.
 Changed in Django 1.10: The pk key was added to the properties dictionary.
+[VECTOR]

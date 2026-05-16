@@ -1,4 +1,8 @@
+[ID]
+233
+[URL]
 https://docs.djangoproject.com/en/dev/topics/db/examples/one_to_one/
+[TEXT]
 One-to-one relationships 
 To define a one-to-one relationship, use
 OneToOneField.
@@ -61,3 +65,4 @@ on_delete set to CASCADE, which is the
 default):
 Add a Waiter to the Restaurant:
 Query the waiters:
+[VECTOR]

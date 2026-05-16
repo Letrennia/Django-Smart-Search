@@ -1,4 +1,8 @@
+[ID]
+2463
+[URL]
 https://docs.djangoproject.com/en/4.0/ref/class-based-views/mixins-date-based/
+[TEXT]
 Date-based mixins 
 Note
 All the date formatting attributes in these mixins use
@@ -435,3 +439,4 @@ date_type isn't provided, the result of
 get_date_list_period() is used. date_type
 and ordering are passed to
 QuerySet.dates().
+[VECTOR]

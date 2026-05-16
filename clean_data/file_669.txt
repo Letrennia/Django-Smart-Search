@@ -1,4 +1,8 @@
+[ID]
+669
+[URL]
 https://docs.djangoproject.com/en/5.2/ref/contrib/flatpages/
+[TEXT]
 The flatpages app 
 Django comes with an optional "flatpages" application. It lets you store "flat"
 HTML content in a database and handles the management for you via Django's
@@ -391,3 +395,4 @@ changefreq or
 priority.
 Example 
 Here's an example of a URLconf using FlatPageSitemap:
+[VECTOR]

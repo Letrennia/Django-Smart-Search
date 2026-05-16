@@ -1,4 +1,8 @@
+[ID]
+3764
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/db/models/options/
+[TEXT]
 Source code for django.db.models.options
 import copy
 import inspect
@@ -1471,3 +1475,4 @@ def make_immutable_fields_list(name, data):
             if isinstance(attr, property):
                 names.append(name)
         return frozenset(names)
+[VECTOR]

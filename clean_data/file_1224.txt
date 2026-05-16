@@ -1,4 +1,8 @@
+[ID]
+1224
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/gis/geoip2/
+[TEXT]
 Source code for django.contrib.gis.geoip2
 """
 This module houses the GeoIP2 object, a wrapper for the MaxMind GeoIP2(R)
@@ -439,3 +443,4 @@ class GeoIP2:
             stacklevel=2,
         )
         return GeoIP2(full_path, cache)
+[VECTOR]

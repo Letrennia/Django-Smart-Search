@@ -1,4 +1,8 @@
+[ID]
+4336
+[URL]
 https://docs.djangoproject.com/en/2.1/ref/models/meta/
+[TEXT]
 Model _meta API 
 class Options[source] 
 The model _meta API is at the core of the Django ORM. It enables other
@@ -177,3 +181,4 @@ field names and attribute names ForeignKeys are included, but fields
 associated with GenericForeignKeys are not. A simpler version would be:
 While this isn't 100% backwards compatible, it may be sufficient in many
 situations.
+[VECTOR]

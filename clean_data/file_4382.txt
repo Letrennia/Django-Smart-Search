@@ -1,4 +1,8 @@
+[ID]
+4382
+[URL]
 https://docs.djangoproject.com/en/2.1/topics/db/queries/
+[TEXT]
 Making queries 
 Once you've created your data models, Django
 automatically gives you a database-abstraction API that lets you create,
@@ -1345,3 +1349,4 @@ Finally, it's important to note that the Django database layer is merely an
 interface to your database. You can access your database via other tools,
 programming languages or database frameworks; there's nothing Django-specific
 about your database.
+[VECTOR]

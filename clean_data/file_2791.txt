@@ -1,4 +1,8 @@
+[ID]
+2791
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/db/models/indexes/
+[TEXT]
 Source code for django.db.models.indexes
 from django.db.backends.utils import names_digest, split_identifier
 from django.db.models.expressions import Col, ExpressionList, F, Func, OrderBy
@@ -493,3 +497,4 @@ class IndexExpression(Func):
     def as_sqlite(self, compiler, connection, **extra_context):
         # Casting to numeric is unnecessary.
         return self.as_sql(compiler, connection, **extra_context)
+[VECTOR]

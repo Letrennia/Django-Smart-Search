@@ -1,4 +1,8 @@
+[ID]
+139
+[URL]
 https://docs.djangoproject.com/en/dev/ref/contrib/gis/utils/
+[TEXT]
 GeoDjango Utilities 
 The django.contrib.gis.utils module contains various utilities that are
 useful in creating geospatial web applications.
@@ -21,3 +25,4 @@ OGR Inspection
 ogrinspect
 mapping
 GeoJSON Serializer
+[VECTOR]

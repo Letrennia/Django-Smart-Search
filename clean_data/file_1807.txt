@@ -1,4 +1,8 @@
+[ID]
+1807
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/test/runner/
+[TEXT]
 Source code for django.test.runner
 import argparse
 import ctypes
@@ -2237,3 +2241,4 @@ def test_match_tags(test, tags, exclude_tags):
 def filter_tests_by_tags(tests, tags, exclude_tags):
     """Return the matching tests as an iterator."""
     return (test for test in tests if test_match_tags(test, tags, exclude_tags))
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5757
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/core/exceptions/
+[TEXT]
 Source code for django.core.exceptions
 """
 Global Django exception and warning classes.
@@ -279,3 +283,4 @@ NON_FIELD_ERRORS = '__all__'
         return repr(list(self))
     def __repr__(self):
         return 'ValidationError(%s)' % self
+[VECTOR]

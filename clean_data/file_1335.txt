@@ -1,4 +1,8 @@
+[ID]
+1335
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/template/loader/
+[TEXT]
 Source code for django.template.loader
 from . import engines
 from .exceptions import TemplateDoesNotExist
@@ -109,3 +113,4 @@ def render_to_string(template_name, context=None, request=None, using=None):
     return template.render(context, request)
 def _engine_list(using=None):
     return engines.all() if using is None else [engines[using]]
+[VECTOR]

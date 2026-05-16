@@ -1,4 +1,8 @@
+[ID]
+680
+[URL]
 https://docs.djangoproject.com/en/5.2/ref/contrib/gis/geoquerysets/
+[TEXT]
 GIS QuerySet API Reference 
 Spatial Lookups 
 The spatial lookups in this section are available for GeometryField
@@ -1129,3 +1133,4 @@ Note
 If the computation time for using this method is too expensive, consider
 using Collect instead.
 Example:
+[VECTOR]

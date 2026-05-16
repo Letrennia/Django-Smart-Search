@@ -1,4 +1,8 @@
+[ID]
+5551
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/views/
+[TEXT]
 Built-in Views 
 Several of Django's built-in views are documented in
 Writing views as well as elsewhere in the documentation.
@@ -177,3 +181,4 @@ context, as the exception message might contain sensitive information like
 filesystem paths.
 bad_request views are also only used when DEBUG is False.
 Changed in Django 1.10: Passing a nonexistent template_name will raise TemplateDoesNotExist.
+[VECTOR]

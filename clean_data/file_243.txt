@@ -1,4 +1,8 @@
+[ID]
+243
+[URL]
 https://docs.djangoproject.com/en/dev/topics/db/sql/
+[TEXT]
 Performing raw SQL queries 
 Django gives you three ways of performing raw SQL queries: you can embed raw
 SQL fragments into ORM queries using
@@ -357,3 +361,4 @@ BEGIN
     ...
 END;
 This will call it:
+[VECTOR]

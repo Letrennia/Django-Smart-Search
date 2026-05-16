@@ -1,4 +1,8 @@
+[ID]
+1746
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/db/migrations/operations/models/
+[TEXT]
 Source code for django.db.migrations.operations.models
 from copy import copy
 from django.db import models
@@ -2223,3 +2227,4 @@ class AlterConstraint(IndexOperation):
         ):
             return [operation]
         return super().reduce(operation, app_label)
+[VECTOR]

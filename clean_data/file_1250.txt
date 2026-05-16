@@ -1,4 +1,8 @@
+[ID]
+1250
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/sessions/exceptions/
+[TEXT]
 Source code for django.contrib.sessions.exceptions
 from django.core.exceptions import BadRequest, SuspiciousOperation
 class InvalidSessionKey(SuspiciousOperation):
@@ -23,3 +27,4 @@ class SuspiciousSession(SuspiciousOperation):
 class SessionInterrupted(BadRequest):
     """The session was interrupted."""
     pass
+[VECTOR]

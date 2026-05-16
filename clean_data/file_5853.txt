@@ -1,4 +1,8 @@
+[ID]
+5853
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/unittest/suite/
+[TEXT]
 Source code for unittest.suite
 """TestSuite"""
 import sys
@@ -525,3 +529,4 @@ class _DebugResult(object):
     _previousTestClass = None
     _moduleSetUpFailed = False
     shouldStop = False
+[VECTOR]

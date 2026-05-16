@@ -1,4 +1,8 @@
+[ID]
+5077
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/contrib/gis/geoquerysets/
+[TEXT]
 GeoQuerySet API Reference 
 class GeoQuerySet(model=None) 
 Spatial Lookups 
@@ -1291,3 +1295,4 @@ Example:
 [2]See SDO_RELATE documentation, from Ch. 11 of the Oracle Spatial User's Guide and Manual.
 [3](1, 2) For an explanation of this routine, read Quirks of the "Contains" Spatial Predicate by Martin Davis (a PostGIS developer).
 [4]Refer to the PostGIS ST_ContainsProperly documentation for more details.
+[VECTOR]

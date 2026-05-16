@@ -1,4 +1,8 @@
+[ID]
+5071
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/contrib/gis/db-api/
+[TEXT]
 GeoDjango Database API 
 Spatial Backends 
 GeoDjango currently provides the following spatial database backends:
@@ -809,3 +813,4 @@ engines that support nonspatial indexing of spatial columns, the engine
 creates a B-tree index. A B-tree index on spatial values will be useful
 for exact-value lookups, but not for range scans.
 [6]Refer MySQL Spatial Limitations section for more details.
+[VECTOR]

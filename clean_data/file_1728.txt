@@ -1,4 +1,8 @@
+[ID]
+1728
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/core/exceptions/
+[TEXT]
 Source code for django.core.exceptions
 """
 Global Django exception classes.
@@ -377,3 +381,4 @@ class FullResultSet(Exception):
 class SynchronousOnlyOperation(Exception):
     """The user tried to call a sync-only function from an async context."""
     pass
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+800
+[URL]
 https://docs.djangoproject.com/en/5.2/topics/files/
+[TEXT]
 Managing files 
 This document describes Django's file access APIs for files such as those
 uploaded by a user. The lower level APIs are general enough that you could use
@@ -181,3 +185,4 @@ need to override the STORAGES setting in tests, you should use a
 LazyObject subclass instead:
 The LazyObject delays the evaluation of the storage until it's actually
 needed, allowing override_settings() to take effect:
+[VECTOR]

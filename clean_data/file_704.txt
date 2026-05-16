@@ -1,4 +1,8 @@
+[ID]
+704
+[URL]
 https://docs.djangoproject.com/en/5.2/ref/contrib/postgres/indexes/
+[TEXT]
 PostgreSQL specific model indexes 
 The following are PostgreSQL specific indexes
 available from the django.contrib.postgres.indexes module.
@@ -159,3 +163,4 @@ creates an index on Lower('username') using varchar_pattern_ops.
 creates a unique constraint on Upper('description') using
 text_pattern_ops.
 creates an exclusion constraint on circle using circle_ops.
+[VECTOR]

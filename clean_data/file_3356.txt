@@ -1,4 +1,8 @@
+[ID]
+3356
+[URL]
 https://docs.djangoproject.com/en/3.0/howto/windows/
+[TEXT]
 How to install Django on Windows 
 This document will guide you through installing Python 3.8 and Django on
 Windows. It also provides instructions for setting up a virtual environment,
@@ -127,3 +131,4 @@ in running the command py -m pip install Django. Set the environment
 variables for proxy configuration in the command prompt as follows:
  set http_proxy=http://username:password@proxyserver:proxyport
  set https_proxy=https://username:password@proxyserver:proxyport
+[VECTOR]

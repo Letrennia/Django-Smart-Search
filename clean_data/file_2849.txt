@@ -1,4 +1,8 @@
+[ID]
+2849
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/utils/timezone/
+[TEXT]
 Source code for django.utils.timezone
 """
 Timezone-related classes and functions.
@@ -413,3 +417,4 @@ def _datetime_ambiguous_or_imaginary(dt, tz):
         else:
             return False
     return tz.utcoffset(dt.replace(fold=not dt.fold)) != tz.utcoffset(dt)
+[VECTOR]

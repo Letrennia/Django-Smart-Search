@@ -1,4 +1,8 @@
+[ID]
+3516
+[URL]
 https://docs.djangoproject.com/en/3.0/ref/models/constraints/
+[TEXT]
 Constraints reference 
 New in Django 2.2. 
 The classes defined in this module create database constraints. They are added
@@ -129,3 +133,4 @@ enforce.
 ensures that each user only has one draft.
 These conditions have the same database restrictions as
 Index.condition.
+[VECTOR]

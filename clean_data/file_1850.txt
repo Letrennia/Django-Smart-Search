@@ -1,4 +1,8 @@
+[ID]
+1850
+[URL]
 https://docs.djangoproject.com/en/4.2/ref/class-based-views/base/
+[TEXT]
 Base views 
 The following three classes provide much of the functionality needed to create
 Django views. You may think of them as parent views, which can be used by
@@ -287,3 +291,4 @@ If requested by query_string, it will also append the query
 string to the generated URL.
 Subclasses may implement any behavior they wish, as long as the method
 returns a redirect-ready URL string.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+1294
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/db/models/functions/comparison/
+[TEXT]
 Source code for django.db.models.functions.comparison
 """Database functions that do comparisons or type conversions."""
 from django.db import NotSupportedError
@@ -389,3 +393,4 @@ class NullIf(Func):
         if isinstance(expression1, Value) and expression1.value is None:
             raise ValueError("Oracle does not allow Value(None) for expression1.")
         return super().as_sql(compiler, connection, **extra_context)
+[VECTOR]

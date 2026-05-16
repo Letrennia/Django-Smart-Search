@@ -1,4 +1,8 @@
+[ID]
+4995
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/middleware/common/
+[TEXT]
 Source code for django.middleware.common
 import hashlib
 import logging
@@ -295,3 +299,4 @@ logger = logging.getLogger('django.request')
                 (not self.is_internal_request(domain, referer) and '?' in referer)):
             return True
         return any(pattern.search(uri) for pattern in settings.IGNORABLE_404_URLS)
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+134
+[URL]
 https://docs.djangoproject.com/en/dev/ref/contrib/gis/ogrinspect/
+[TEXT]
 OGR Inspection 
 ogrinspect 
 ogrinspect(data_source, model_name, **kwargs)[source]
@@ -8,4 +12,5 @@ OGR Inspection
 ogrinspect 
 ogrinspect(data_source, model_name, **kwargs)[source]
 mapping 
-mapping(data_source, geom_name='geom', layer_key=0, multi_geom=False)[source] 
+mapping(data_source, geom_name='geom', layer_key=0, multi_geom=False)[source]
+[VECTOR]

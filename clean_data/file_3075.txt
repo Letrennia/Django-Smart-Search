@@ -1,4 +1,8 @@
+[ID]
+3075
+[URL]
 https://docs.djangoproject.com/en/3.1/howto/legacy-databases/
+[TEXT]
 Integrating Django with a legacy database 
 While Django is best suited for developing new applications, it's quite
 possible to integrate it into legacy databases. Django includes a couple of
@@ -103,3 +107,4 @@ Those are the basic steps – from here you'll want to tweak the models Django
 generated until they work the way you'd like. Try accessing your data via the
 Django database API, and try editing objects via Django's admin site, and edit
 the models file accordingly.
+[VECTOR]

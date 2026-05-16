@@ -1,4 +1,8 @@
+[ID]
+1722
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/staticfiles/storage/
+[TEXT]
 Source code for django.contrib.staticfiles.storage
 import json
 import os
@@ -959,3 +963,4 @@ class ConfiguredStorage(LazyObject):
     def _setup(self):
         self._wrapped = storages[STATICFILES_STORAGE_ALIAS]
 staticfiles_storage = ConfiguredStorage()
+[VECTOR]

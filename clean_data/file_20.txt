@@ -1,4 +1,8 @@
+[ID]
+20
+[URL]
 https://docs.djangoproject.com/en/dev/howto/custom-shell/
+[TEXT]
 How to customize the shell command 
 The Django shell is an interactive Python environment that provides
 access to models and settings, making it useful for testing code, experimenting
@@ -53,3 +57,4 @@ imports are automatically handled.
 Note that automatic imports can be disabled for a specific shell session
 using the --no-imports flag. To permanently
 disable automatic imports, override get_auto_imports() to return None:
+[VECTOR]

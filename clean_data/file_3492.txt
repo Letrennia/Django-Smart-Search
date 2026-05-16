@@ -1,4 +1,8 @@
+[ID]
+3492
+[URL]
 https://docs.djangoproject.com/en/3.0/ref/contrib/sites/
+[TEXT]
 The "sites" framework 
 Django comes with an optional "sites" framework. It's a hook for associating
 objects and functionality to particular websites, and it's a holding place for
@@ -487,3 +491,4 @@ the port is stripped and the lookup is retried with the domain part
 only. This does not apply to
 RequestSite which will always
 use the unmodified host.
+[VECTOR]

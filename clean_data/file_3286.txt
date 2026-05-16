@@ -1,4 +1,8 @@
+[ID]
+3286
+[URL]
 https://docs.djangoproject.com/en/3.1/topics/files/
+[TEXT]
 Managing files 
 This document describes Django's file access APIs for files such as those
 uploaded by a user. The lower level APIs are general enough that you could use
@@ -163,3 +167,4 @@ storage at runtime, selecting different storages for different environments,
 for example.
 Your callable will be evaluated when your models classes are loaded, and must
 return an instance of Storage.
+[VECTOR]

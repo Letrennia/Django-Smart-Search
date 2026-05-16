@@ -1,4 +1,8 @@
+[ID]
+4920
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/auth/views/
+[TEXT]
 Source code for django.contrib.auth.views
 import warnings
 from django.conf import settings
@@ -567,3 +571,4 @@ def password_change_done(request,
     if current_app is not None:
         request.current_app = current_app
     return TemplateResponse(request, template_name, context)
+[VECTOR]

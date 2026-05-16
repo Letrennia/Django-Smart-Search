@@ -1,4 +1,8 @@
+[ID]
+4946
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/sites/models/
+[TEXT]
 Source code for django.contrib.sites.models
 from __future__ import unicode_literals
 import string
@@ -203,3 +207,4 @@ def clear_site_cache(sender, **kwargs):
         pass
 pre_save.connect(clear_site_cache, sender=Site)
 pre_delete.connect(clear_site_cache, sender=Site)
+[VECTOR]

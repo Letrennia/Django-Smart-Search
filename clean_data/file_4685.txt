@@ -1,4 +1,8 @@
+[ID]
+4685
+[URL]
 https://docs.djangoproject.com/en/2.0/ref/contrib/gis/install/spatialite/
+[TEXT]
 Installing SpatiaLite 
 SpatiaLite adds spatial support to SQLite, turning it into a full-featured
 spatial database.
@@ -91,3 +95,4 @@ Homebrew handles all the SpatiaLite related packages on your behalf,
 including SQLite3, SpatiaLite, PROJ, and GEOS. Install them like this:
 Finally, for GeoDjango to be able to find the SpatiaLite library, add the
 following to your settings.py:
+[VECTOR]

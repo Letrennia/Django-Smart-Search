@@ -1,4 +1,8 @@
+[ID]
+4569
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/db/models/indexes/
+[TEXT]
 Source code for django.db.models.indexes
 import hashlib
 from django.db.backends.utils import split_identifier
@@ -207,3 +211,4 @@ __all__ = ['Index']
         return "<%s: fields='%s'>" % (self.__class__.__name__, ', '.join(self.fields))
     def __eq__(self, other):
         return (self.__class__ == other.__class__) and (self.deconstruct() == other.deconstruct())
+[VECTOR]

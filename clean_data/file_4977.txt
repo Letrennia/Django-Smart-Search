@@ -1,4 +1,8 @@
+[ID]
+4977
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/db/models/lookups/
+[TEXT]
 Source code for django.db.models.lookups
 import inspect
 from copy import copy
@@ -801,3 +805,4 @@ default_lookups['regex'] = Regex
 class IRegex(Regex):
     lookup_name = 'iregex'
 default_lookups['iregex'] = IRegex
+[VECTOR]

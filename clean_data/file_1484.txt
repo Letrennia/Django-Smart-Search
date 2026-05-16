@@ -1,4 +1,8 @@
+[ID]
+1484
+[URL]
 https://docs.djangoproject.com/en/5.0/ref/settings/
+[TEXT]
 Settings 
 Warning
 Be careful when you override settings, especially when the default value
@@ -3927,3 +3931,4 @@ URLs
 APPEND_SLASH
 PREPEND_WWW
 ROOT_URLCONF
+[VECTOR]

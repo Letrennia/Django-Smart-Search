@@ -1,4 +1,8 @@
+[ID]
+4352
+[URL]
 https://docs.djangoproject.com/en/2.1/ref/utils/
+[TEXT]
 Django Utils 
 This document covers all stable modules in django.utils. Most of the
 modules in django.utils are designed for internal use and only the
@@ -1199,3 +1203,4 @@ gettext function invocations.
 LANGUAGE_SESSION_KEY 
 Session key under which the active language for the current session is
 stored.
+[VECTOR]

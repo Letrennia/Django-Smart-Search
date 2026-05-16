@@ -1,4 +1,8 @@
+[ID]
+2831
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/test/utils/
+[TEXT]
 Source code for django.test.utils
 import asyncio
 import collections
@@ -1481,3 +1485,4 @@ def register_lookup(field, *lookups, lookup_name=None):
     finally:
         for lookup in lookups:
             field._unregister_lookup(lookup, lookup_name)
+[VECTOR]

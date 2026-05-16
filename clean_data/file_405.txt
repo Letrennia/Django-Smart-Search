@@ -1,4 +1,8 @@
+[ID]
+405
+[URL]
 https://docs.djangoproject.com/en/6.0/ref/contrib/gis/install/
+[TEXT]
 GeoDjango Installation 
 Overview 
 In general, GeoDjango installation requires:
@@ -505,3 +509,4 @@ The psycopg Python module provides the interface between Python and the
 PostgreSQL database. psycopg can be installed via pip within your Python
 virtual environment:
  py -m pip install psycopg
+[VECTOR]

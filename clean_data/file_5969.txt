@@ -1,4 +1,8 @@
+[ID]
+5969
+[URL]
 https://docs.djangoproject.com/en/1.10/topics/auth/
+[TEXT]
 User authentication in Django 
 Django comes with a user authentication system. It handles user accounts,
 groups, permissions and cookie-based user sessions. This section of the
@@ -105,3 +109,4 @@ Managing users in the admin
 API reference for the default implementation
 Customizing Users and authentication
 Password management in Django
+[VECTOR]

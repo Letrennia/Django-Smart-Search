@@ -1,4 +1,8 @@
+[ID]
+2695
+[URL]
 https://docs.djangoproject.com/en/3.2/internals/git/
+[TEXT]
 The Django source code repository 
 When deploying a Django application into a real production environment, you
 will almost always want to use an official packaged release of Django.
@@ -287,3 +291,4 @@ Finally, under the archive/ prefix, the repository contains
 soc20XX/<project> tags referencing the tip of branches that were used by
 students who worked on Django during the 2009 and 2010 Google Summer of Code
 programs.
+[VECTOR]

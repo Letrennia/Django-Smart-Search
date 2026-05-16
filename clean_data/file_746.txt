@@ -1,4 +1,8 @@
+[ID]
+746
+[URL]
 https://docs.djangoproject.com/en/5.2/ref/models/relations/
+[TEXT]
 Related objects reference 
 class RelatedManager 
 A "related manager" is a manager used in a one-to-many or many-to-many
@@ -255,3 +259,4 @@ If you use prefetch_related(),
 the add(), aadd(), remove(), aremove(), clear(),
 aclear(), set(), and aset() methods clear the prefetched
 cache.
+[VECTOR]

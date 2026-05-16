@@ -1,4 +1,8 @@
+[ID]
+437
+[URL]
 https://docs.djangoproject.com/en/6.0/ref/csp/
+[TEXT]
 Content Security Policy 
 New in Django 6.0. 
 Content Security Policy (CSP) is a web security standard that helps prevent
@@ -325,3 +329,4 @@ Avoid caching full responses that include {{ csp_nonce }}.
 If caching is necessary, use a strategy that injects a fresh nonce on each
 request, or consider refactoring your application to avoid inline scripts and
 styles altogether.
+[VECTOR]

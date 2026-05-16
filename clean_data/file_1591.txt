@@ -1,4 +1,8 @@
+[ID]
+1591
+[URL]
 https://docs.djangoproject.com/en/4.2/howto/deployment/asgi/uvicorn/
+[TEXT]
 How to use Django with Uvicorn 
 Uvicorn is an ASGI server based on uvloop and httptools, with an
 emphasis on speed.
@@ -51,3 +55,4 @@ To install Uvicorn and Gunicorn, use the following:
 python -m pip install uvicorn gunicorn
 Then start Gunicorn using the Uvicorn worker class like this:
 python -m gunicorn myproject.asgi:application -k uvicorn.workers.UvicornWorker
+[VECTOR]

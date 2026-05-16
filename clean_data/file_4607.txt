@@ -1,4 +1,8 @@
+[ID]
+4607
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/test/client/
+[TEXT]
 Source code for django.test.client
 import json
 import mimetypes
@@ -1181,3 +1185,4 @@ def encode_file(boundary, key, file):
                 # 20 is the value of "network.http.redirection-limit" from Firefox.
                 raise RedirectCycleError("Too many redirects.", last_response=response)
         return response
+[VECTOR]

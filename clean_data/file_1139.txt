@@ -1,4 +1,8 @@
+[ID]
+1139
+[URL]
 https://docs.djangoproject.com/en/5.0/howto/logging/
+[TEXT]
 How to configure and use logging 
 See also
 Django logging reference
@@ -267,3 +271,4 @@ configuration will only forward records of severity WARNING and above to
 its handler.
 Other options in the configuration (such as the level or formatter
 option of handlers) can be similarly managed.
+[VECTOR]

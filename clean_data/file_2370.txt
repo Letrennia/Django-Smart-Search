@@ -1,4 +1,8 @@
+[ID]
+2370
+[URL]
 https://docs.djangoproject.com/en/4.0/howto/outputting-csv/
+[TEXT]
 How to create CSV output 
 This document explains how to output CSV (Comma Separated Values) dynamically
 using Django views. To do this, you can either use the Python CSV library or the
@@ -105,3 +109,4 @@ Notice that there isn't very much specific to CSV here – just the specific
 output format. You can use either of these techniques to output any text-based
 format you can dream of. You can also use a similar technique to generate
 arbitrary binary data; see How to create PDF files for an example.
+[VECTOR]

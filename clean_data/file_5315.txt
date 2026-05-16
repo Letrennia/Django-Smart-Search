@@ -1,4 +1,8 @@
+[ID]
+5315
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/contrib/postgres/aggregates/general/
+[TEXT]
 Source code for django.contrib.postgres.aggregates.general
 from django.contrib.postgres.fields import JSONField
 from django.db.models import Value
@@ -77,3 +81,4 @@ __all__ = [
         if not value:
             return ''
         return value
+[VECTOR]

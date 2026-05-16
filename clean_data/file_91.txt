@@ -1,4 +1,8 @@
+[ID]
+91
+[URL]
 https://docs.djangoproject.com/en/dev/ref/applications/
+[TEXT]
 Applications 
 Django contains a registry of installed applications that stores configuration
 and provides introspection. It also maintains a list of available models.
@@ -649,3 +653,4 @@ instead:
 To make it easier to find the code that triggered this warning, you can make
 Python treat warnings as errors to reveal the
 stack trace, for example with python -Werror manage.py shell.
+[VECTOR]

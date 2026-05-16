@@ -1,4 +1,8 @@
+[ID]
+2432
+[URL]
 https://docs.djangoproject.com/en/4.0/_modules/django/core/files/uploadhandler/
+[TEXT]
 Source code for django.core.files.uploadhandler
 """
 Base file upload handler classes, and the built-in concrete subclasses
@@ -413,3 +417,4 @@ def load_handler(path, *args, **kwargs):
         <TemporaryFileUploadHandler object at 0x...>
     """
     return import_string(path)(*args, **kwargs)
+[VECTOR]

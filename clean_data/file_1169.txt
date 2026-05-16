@@ -1,4 +1,8 @@
+[ID]
+1169
+[URL]
 https://docs.djangoproject.com/en/5.0/internals/security/
+[TEXT]
 Django's security policies 
 Django's development team is strongly committed to responsible
 reporting and disclosure of security-related issues. As such, we've
@@ -325,3 +329,4 @@ Provide all required information
 A failure to provide the required information in your initial contact
 will count against you when making the decision on whether or not to
 approve your request.
+[VECTOR]

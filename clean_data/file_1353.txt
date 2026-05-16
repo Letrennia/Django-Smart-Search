@@ -1,4 +1,8 @@
+[ID]
+1353
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/utils/feedgenerator/
+[TEXT]
 Source code for django.utils.feedgenerator
 """
 Syndication feed generation library -- used for generating RSS, etc.
@@ -791,3 +795,4 @@ class Atom1Feed(SyndicationFeed):
 # This isolates the decision of what the system default is, so calling code can
 # do "feedgenerator.DefaultFeed" instead of "feedgenerator.Rss201rev2Feed".
 DefaultFeed = Rss201rev2Feed
+[VECTOR]

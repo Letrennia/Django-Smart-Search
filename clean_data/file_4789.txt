@@ -1,4 +1,8 @@
+[ID]
+4789
+[URL]
 https://docs.djangoproject.com/en/2.0/topics/db/transactions/
+[TEXT]
 Database transactions 
 Django gives you a few ways to control how database transactions are managed.
 Managing database transactions 
@@ -703,3 +707,4 @@ you can roll back the single offending operation, rather than the entire
 transaction. 
 In this example, a.save() will not be undone in the case where
 b.save() raises an exception.
+[VECTOR]

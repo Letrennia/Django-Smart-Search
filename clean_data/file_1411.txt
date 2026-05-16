@@ -1,4 +1,8 @@
+[ID]
+1411
+[URL]
 https://docs.djangoproject.com/en/5.0/ref/contrib/gis/functions/
+[TEXT]
 Geographic Database Functions 
 The functions documented on this page allow users to access geographic database
 functions to be used in annotations, aggregations, or filters in Django.
@@ -757,3 +761,4 @@ Availability: MariaDB, MySQL,
 PostGIS, Oracle, SpatiaLite
 Accepts two geographic fields or expressions and returns the union of both
 geometries.
+[VECTOR]

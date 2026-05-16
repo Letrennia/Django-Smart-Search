@@ -1,4 +1,8 @@
+[ID]
+5065
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/contrib/contenttypes/
+[TEXT]
 The contenttypes framework 
 Django includes a contenttypes application that can
 track all of the models installed in your Django-powered project, providing a
@@ -687,3 +691,4 @@ layouts, respectively.
 Deprecated since version 1.7: These classes was moved from django.contrib.contenttypes.generic
 to django.contrib.contenttypes.admin. Support for importing from
 the old location will be removed in Django 1.9.
+[VECTOR]

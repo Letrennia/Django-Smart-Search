@@ -1,4 +1,8 @@
+[ID]
+1151
+[URL]
 https://docs.djangoproject.com/en/5.0/internals/contributing/bugs-and-features/
+[TEXT]
 Reporting bugs and requesting features 
 Important
 Please report security issues only to
@@ -213,3 +217,4 @@ Since this process allows any steering council member to veto a proposal, a
 convert that "-1" into at least a "+0".
 Votes on technical matters should be announced and held in public on the
 django-developers mailing list or on the Django Forum.
+[VECTOR]

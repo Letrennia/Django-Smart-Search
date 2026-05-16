@@ -1,4 +1,8 @@
+[ID]
+710
+[URL]
 https://docs.djangoproject.com/en/5.2/ref/contrib/sitemaps/
+[TEXT]
 The sitemap framework 
 Django comes with a high-level sitemap-generating framework to create sitemap
 XML files.
@@ -591,3 +595,4 @@ generate a Google News compatible sitemap:
 {% endfor %}
 {% endspaceless %}
 </urlset>
+[VECTOR]

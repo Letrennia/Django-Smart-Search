@@ -1,4 +1,8 @@
+[ID]
+3619
+[URL]
 https://docs.djangoproject.com/en/2.2/faq/troubleshooting/
+[TEXT]
 Troubleshooting 
 This page contains some advice about errors and problems commonly encountered
 during the development of Django applications.
@@ -67,3 +71,4 @@ this to a UTF-8 locale.
 Related resources:
 Unicode in Django
 https://wiki.python.org/moin/UnicodeDecodeError
+[VECTOR]

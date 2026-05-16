@@ -1,4 +1,8 @@
+[ID]
+338
+[URL]
 https://docs.djangoproject.com/en/6.0/internals/contributing/writing-code/javascript/
+[TEXT]
 JavaScript code 
 While most of Django core is Python, the admin and gis contrib apps
 contain JavaScript code.
@@ -105,3 +109,4 @@ Then run the tests with:
  
  
  npm test
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+2952
+[URL]
 https://docs.djangoproject.com/en/3.2/ref/models/indexes/
+[TEXT]
 Model index reference 
 Index classes ease creating database indexes. They can be added using the
 Meta.indexes option. This document
@@ -255,3 +259,4 @@ See the PostgreSQL documentation for more details about covering indexes.
 Restrictions on PostgreSQL
 PostgreSQL 11+ only supports covering B-Tree indexes, and PostgreSQL 12+
 also supports covering GiST indexes.
+[VECTOR]

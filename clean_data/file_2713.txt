@@ -1,4 +1,8 @@
+[ID]
+2713
+[URL]
 https://docs.djangoproject.com/en/3.2/intro/whatsnext/
+[TEXT]
 What to read next 
 So you've read all the introductory material and have
 decided you'd like to keep using Django. We've only just scratched the surface
@@ -273,3 +277,4 @@ of the docs won't get any further updates.
 The main documentation Web page includes links to documentation for
 previous versions. Be sure you are using the version of the docs
 corresponding to the version of Django you are using!
+[VECTOR]

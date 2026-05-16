@@ -1,4 +1,8 @@
+[ID]
+3158
+[URL]
 https://docs.djangoproject.com/en/3.1/ref/contrib/contenttypes/
+[TEXT]
 The contenttypes framework 
 Django includes a contenttypes application that can
 track all of the models installed in your Django-powered project, providing a
@@ -637,3 +641,4 @@ class GenericTabularInline
 class GenericStackedInline 
 Subclasses of GenericInlineModelAdmin with stacked and tabular
 layouts, respectively.
+[VECTOR]

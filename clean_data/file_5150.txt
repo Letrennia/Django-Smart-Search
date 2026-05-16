@@ -1,4 +1,8 @@
+[ID]
+5150
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/views/
+[TEXT]
 Built-in Views 
 Several of Django's built-in views are documented in
 Writing views as well as elsewhere in the documentation.
@@ -155,3 +159,4 @@ django.views.defaults.bad_request, is otherwise very similar to the
 server_error view, but returns with the status code 400 indicating that
 the error condition was the result of a client operation.
 bad_request views are also only used when DEBUG is False.
+[VECTOR]

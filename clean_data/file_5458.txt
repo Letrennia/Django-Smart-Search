@@ -1,4 +1,8 @@
+[ID]
+5458
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/contrib/admin/javascript/
+[TEXT]
 JavaScript customizations in the admin 
 Inline form events 
 You may want to execute some JavaScript when an inline form is added or removed
@@ -77,3 +81,4 @@ django.jQuery(document).on('formset:added', function(event, $row, formsetName) {
 django.jQuery(document).on('formset:removed', function(event, $row, formsetName) {
     // Row removed
 });
+[VECTOR]

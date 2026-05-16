@@ -1,4 +1,8 @@
+[ID]
+5725
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/gis/geos/factory/
+[TEXT]
 Source code for django.contrib.gis.geos.factory
 from django.contrib.gis.geos.geometry import GEOSGeometry, hex_regex, wkt_regex
 from django.utils import six
@@ -55,3 +59,4 @@ from django.utils import six
 [docs]def fromstr(string, **kwargs):
     "Given a string value, returns a GEOSGeometry object."
     return GEOSGeometry(string, **kwargs)
+[VECTOR]

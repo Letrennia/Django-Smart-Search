@@ -1,4 +1,8 @@
+[ID]
+5147
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/urls/
+[TEXT]
 django.conf.urls utility functions 
 patterns() 
 patterns(prefix, pattern_description, ...)[source] 
@@ -195,3 +199,4 @@ have runtime errors in view code.
 By default, this is 'django.views.defaults.server_error'. That default
 value should suffice.
 See the documentation about the 500 (HTTP Internal Server Error) view for more information.
+[VECTOR]

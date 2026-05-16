@@ -1,4 +1,8 @@
+[ID]
+1803
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/template/loaders/filesystem/
+[TEXT]
 Source code for django.template.loaders.filesystem
 """
 Wrapper for loading templates from the filesystem.
@@ -75,3 +79,4 @@ class Loader(BaseLoader):
                 template_name=template_name,
                 loader=self,
             )
+[VECTOR]

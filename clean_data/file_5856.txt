@@ -1,4 +1,8 @@
+[ID]
+5856
+[URL]
 https://docs.djangoproject.com/en/1.10/ref/checks/
+[TEXT]
 System check framework 
 The system check framework is a set of static checks for validating Django
 projects. It detects common problems and provides hints for how to fix them.
@@ -1083,3 +1087,4 @@ including a :. Remove the colon, to avoid ambiguous namespace
 references.
 urls.E004: Your URL pattern <pattern> is invalid. Ensure that
 urlpatterns is a list of url() instances.
+[VECTOR]

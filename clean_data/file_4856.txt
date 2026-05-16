@@ -1,4 +1,8 @@
+[ID]
+4856
+[URL]
 https://docs.djangoproject.com/en/1.8/howto/outputting-pdf/
+[TEXT]
 Outputting PDFs with Django 
 This document explains how to output PDF files dynamically using Django views.
 This is made possible by the excellent, open-source ReportLab Python PDF
@@ -135,3 +139,4 @@ bits using reportlab. You can use a similar technique to generate any
 arbitrary format that you can find a Python library for. Also see
 Outputting CSV with Django for another example and some techniques you can use
 when generated text-based formats.
+[VECTOR]

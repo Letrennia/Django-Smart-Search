@@ -1,4 +1,8 @@
+[ID]
+3836
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/unittest/runner/
+[TEXT]
 Source code for unittest.runner
 """Running tests"""
 import sys
@@ -383,3 +387,4 @@ class TextTestRunner(object):
         else:
             self.stream.write("\n")
         return result
+[VECTOR]

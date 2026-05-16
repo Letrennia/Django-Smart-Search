@@ -1,4 +1,8 @@
+[ID]
+2188
+[URL]
 https://docs.djangoproject.com/en/4.1/ref/contrib/gis/install/geolibs/
+[TEXT]
 Installing Geospatial libraries 
 GeoDjango uses and/or provides interfaces for the following open source
 geospatial libraries:
@@ -239,3 +243,4 @@ It is easier to install the shifting files now, then to have debug a
 problem caused by their absence later.
 [2]Specifically, GeoDjango provides support for the OGR library, a component of
 GDAL.
+[VECTOR]

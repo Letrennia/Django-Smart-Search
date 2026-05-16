@@ -1,4 +1,8 @@
+[ID]
+5108
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/django-admin/
+[TEXT]
 django-admin and manage.py 
 django-admin is Django's command-line utility for administrative tasks.
 This document outlines all it can do.
@@ -2159,3 +2163,4 @@ Command options which take multiple options are passed a list:
 Output redirection 
 Note that you can redirect standard output and error streams as all commands
 support the stdout and stderr options. For example, you could write:
+[VECTOR]

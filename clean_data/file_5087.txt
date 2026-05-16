@@ -1,4 +1,8 @@
+[ID]
+5087
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/contrib/gis/serializers/
+[TEXT]
 GeoJSON Serializer 
 New in Django 1.8. 
 GeoDjango provides a specific serializer for the GeoJSON format. The GDAL
@@ -47,3 +51,4 @@ will be present in the properties key, as it works with all other
 serializers.
 Example:
 Would output:
+[VECTOR]

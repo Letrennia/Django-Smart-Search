@@ -1,4 +1,8 @@
+[ID]
+2722
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/conf/urls/
+[TEXT]
 Source code for django.conf.urls
 import warnings
 from django.urls import include, re_path
@@ -35,3 +39,4 @@ handler500 = defaults.server_error
         stacklevel=2,
     )
     return re_path(regex, view, kwargs, name)
+[VECTOR]

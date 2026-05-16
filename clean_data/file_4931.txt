@@ -1,4 +1,8 @@
+[ID]
+4931
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/gis/geoip/base/
+[TEXT]
 Source code for django.contrib.gis.geoip.base
 import os
 import re
@@ -479,3 +483,4 @@ class GeoIPException(Exception):
     country_code_by_name = country_code
     country_name_by_addr = country_name
     country_name_by_name = country_name
+[VECTOR]

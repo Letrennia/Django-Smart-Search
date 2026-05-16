@@ -1,4 +1,8 @@
+[ID]
+5659
+[URL]
 https://docs.djangoproject.com/en/1.10/internals/contributing/committing-code/
+[TEXT]
 Committing code 
 This section is addressed to the Committers and to anyone interested in
 knowing how code gets committed into Django core. If you're a community member
@@ -277,3 +281,4 @@ branch without permission if the commit breaks the release branch.
 If you mistakenly push a topic branch to django/django, just delete it.
 For instance, if you did: git push upstream feature_antigravity,
 just do a reverse push: git push upstream :feature_antigravity.
+[VECTOR]

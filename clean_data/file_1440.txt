@@ -1,4 +1,8 @@
+[ID]
+1440
+[URL]
 https://docs.djangoproject.com/en/5.0/ref/contrib/postgres/operations/
+[TEXT]
 Database migration operations 
 All of these operations are available from
 the django.contrib.postgres.operations module.
@@ -205,3 +209,4 @@ same atomic migration has the same effect as
 AddConstraint, whereas performing
 them in a single non-atomic migration, may leave your database in an
 inconsistent state if the ValidateConstraint operation fails.
+[VECTOR]

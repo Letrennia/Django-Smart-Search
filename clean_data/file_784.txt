@@ -1,4 +1,8 @@
+[ID]
+784
+[URL]
 https://docs.djangoproject.com/en/5.2/topics/db/examples/many_to_many/
+[TEXT]
 Many-to-many relationships 
 To define a many-to-many relationship, use
 ManyToManyField.
@@ -89,3 +93,4 @@ Bulk delete some articles - references to deleted objects should go:
 After the delete(), the
 QuerySet cache needs to be cleared, and the
 referenced objects should be gone:
+[VECTOR]

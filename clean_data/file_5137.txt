@@ -1,4 +1,8 @@
+[ID]
+5137
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/settings/
+[TEXT]
 Settings 
 Core Settings
 Auth
@@ -3479,3 +3483,4 @@ URLs
 APPEND_SLASH
 PREPEND_WWW
 ROOT_URLCONF
+[VECTOR]

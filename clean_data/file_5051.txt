@@ -1,4 +1,8 @@
+[ID]
+5051
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/class-based-views/generic-display/
+[TEXT]
 Generic display views 
 The two following generic class-based views are designed to display data. On
 many projects they are typically the most commonly used views.
@@ -137,3 +141,4 @@ allow_empty
 is True then display an empty list. If
 allow_empty is
 False then raise a 404 error.
+[VECTOR]

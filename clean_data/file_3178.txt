@@ -1,4 +1,8 @@
+[ID]
+3178
+[URL]
 https://docs.djangoproject.com/en/3.1/ref/contrib/gis/model-api/
+[TEXT]
 GeoDjango Model API 
 This document explores the details of the GeoDjango Model API.  Throughout this
 section, we'll be using the following geographic model of a ZIP code and
@@ -287,3 +291,4 @@ determining when to use geography data type over geometry data type.
 [4]Terry A. Slocum, Robert B. McMaster, Fritz C. Kessler, & Hugh H. Howard, Thematic Cartography and Geographic Visualization (Prentice Hall, 2nd edition), at Ch. 7.1.3.
 [5]This limitation does not apply to PostGIS.
 [6]Please refer to the PostGIS Geography Type documentation for more details.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+2718
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/
+[TEXT]
 All modules for which code is available
 asgiref.sync
 django
@@ -283,3 +287,4 @@ django.views.decorators.http
 django.views.decorators.vary
 django.views.generic.dates
 django.views.i18n
+[VECTOR]

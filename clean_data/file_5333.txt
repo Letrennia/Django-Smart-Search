@@ -1,4 +1,8 @@
+[ID]
+5333
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/contrib/sitemaps/
+[TEXT]
 Source code for django.contrib.sitemaps
 from django.apps import apps as django_apps
 from django.conf import settings
@@ -263,3 +267,4 @@ def _get_sitemap_full_url(sitemap_url):
             return getattr(item, self.date_field)
         return None
 default_app_config = 'django.contrib.sitemaps.apps.SiteMapsConfig'
+[VECTOR]

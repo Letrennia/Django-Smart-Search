@@ -1,4 +1,8 @@
+[ID]
+4706
+[URL]
 https://docs.djangoproject.com/en/2.0/ref/contrib/postgres/validators/
+[TEXT]
 Validators 
 KeysValidator 
 class KeysValidator(keys, strict=False, messages=None)[source] 
@@ -37,3 +41,4 @@ RangeMinValueValidator
 class RangeMinValueValidator(limit_value, message=None)[source] 
 Validates that the lower bound of the range is not less than the
 limit_value.
+[VECTOR]

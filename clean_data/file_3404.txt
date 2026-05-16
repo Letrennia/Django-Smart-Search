@@ -1,4 +1,8 @@
+[ID]
+3404
+[URL]
 https://docs.djangoproject.com/en/3.0/_modules/django/contrib/postgres/validators/
+[TEXT]
 Source code for django.contrib.postgres.validators
 from django.core.exceptions import ValidationError
 from django.core.validators import (
@@ -125,3 +129,4 @@ class KeysValidator:
     def compare(self, a, b):
         return a.lower is None or a.lower < b
     message = _('Ensure that this range is completely greater than or equal to %(limit_value)s.')
+[VECTOR]

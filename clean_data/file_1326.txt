@@ -1,4 +1,8 @@
+[ID]
+1326
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/middleware/security/
+[TEXT]
 Source code for django.middleware.security
 import re
 from django.conf import settings
@@ -119,3 +123,4 @@ class SecurityMiddleware(MiddlewareMixin):
                 self.cross_origin_opener_policy,
             )
         return response
+[VECTOR]

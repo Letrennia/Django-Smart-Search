@@ -1,4 +1,8 @@
+[ID]
+1671
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/auth/mixins/
+[TEXT]
 Source code for django.contrib.auth.mixins
 from urllib.parse import urlsplit
 from django.conf import settings
@@ -251,3 +255,4 @@ class UserPassesTestMixin(AccessMixin):
         if not user_test_result:
             return self.handle_no_permission()
         return super().dispatch(request, *args, **kwargs)
+[VECTOR]

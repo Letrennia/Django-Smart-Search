@@ -1,4 +1,8 @@
+[ID]
+2531
+[URL]
 https://docs.djangoproject.com/en/4.0/ref/forms/fields/
+[TEXT]
 Form fields 
 class Field(**kwargs) 
 When you create a Form class, the most important part is defining the
@@ -1577,3 +1581,4 @@ __init__() method accept the core arguments mentioned above (required,
 label, initial, widget, help_text).
 You can also customize how a field will be accessed by overriding
 get_bound_field().
+[VECTOR]

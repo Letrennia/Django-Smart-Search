@@ -1,4 +1,8 @@
+[ID]
+2144
+[URL]
 https://docs.djangoproject.com/en/4.1/_modules/django/utils/html/
+[TEXT]
 Source code for django.utils.html
 """HTML utilities suitable for global use."""
 import html
@@ -697,3 +701,4 @@ def avoid_wrapping(value):
     klass.__str__ = lambda self: mark_safe(klass_str(self))
     klass.__html__ = lambda self: str(self)
     return klass
+[VECTOR]

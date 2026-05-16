@@ -1,4 +1,8 @@
+[ID]
+1866
+[URL]
 https://docs.djangoproject.com/en/4.2/ref/contrib/admin/filters/
+[TEXT]
 ModelAdmin List Filters 
 ModelAdmin classes can define list filters that appear in the right sidebar
 of the change list page of the admin, as illustrated in the following
@@ -125,3 +129,4 @@ filter's has_output() method controls whether or not it appears.
 It is possible to specify a custom template for rendering a list filter:
 See the default template provided by Django (admin/filter.html) for a
 concrete example.
+[VECTOR]

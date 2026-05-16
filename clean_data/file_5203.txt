@@ -1,4 +1,8 @@
+[ID]
+5203
+[URL]
 https://docs.djangoproject.com/en/1.8/topics/migrations/
+[TEXT]
 Migrations 
 New in Django 1.7. 
 Migrations are Django's way of propagating changes you make to your models
@@ -971,3 +975,4 @@ own operations.
 The Writing Migrations "how-to"
 Explains how to structure and write database migrations for different
 scenarios you might encounter.
+[VECTOR]

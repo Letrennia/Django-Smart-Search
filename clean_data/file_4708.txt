@@ -1,4 +1,8 @@
+[ID]
+4708
+[URL]
 https://docs.djangoproject.com/en/2.0/ref/contrib/sitemaps/
+[TEXT]
 The sitemap framework 
 Django comes with a high-level sitemap-generating framework that makes
 creating sitemap XML files easy.
@@ -543,3 +547,4 @@ Pinging Google via manage.py
 django-admin ping_google [sitemap_url] 
 Once the sitemaps application is added to your project, you may also
 ping Google using the ping_google management command:
+[VECTOR]

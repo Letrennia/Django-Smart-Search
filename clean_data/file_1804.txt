@@ -1,4 +1,8 @@
+[ID]
+1804
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/template/response/
+[TEXT]
 Source code for django.template.response
 from django.http import HttpResponse
 from .loader import get_template, select_template
@@ -285,3 +289,4 @@ class TemplateResponse(SimpleTemplateResponse):
             template, context, content_type, status, charset, using, headers=headers
         )
         self._request = request
+[VECTOR]

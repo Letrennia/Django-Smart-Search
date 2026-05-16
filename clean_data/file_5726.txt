@@ -1,4 +1,8 @@
+[ID]
+5726
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/gis/geos/geometry/
+[TEXT]
 Source code for django.contrib.gis.geos.geometry
 """
  This module contains the 'base' GEOSGeometry object -- all GEOS Geometries
@@ -1247,3 +1251,4 @@ class LinearGeometryMixin(object):
         Return whether or not this Geometry is closed.
         """
         return capi.geos_isclosed(self.ptr)
+[VECTOR]

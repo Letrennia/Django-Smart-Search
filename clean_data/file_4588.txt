@@ -1,4 +1,8 @@
+[ID]
+4588
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/middleware/clickjacking/
+[TEXT]
 Source code for django.middleware.clickjacking
 """
 Clickjacking Protection Middleware.
@@ -71,3 +75,4 @@ from django.utils.deprecation import MiddlewareMixin
         the request or response.
         """
         return getattr(settings, 'X_FRAME_OPTIONS', 'SAMEORIGIN').upper()
+[VECTOR]

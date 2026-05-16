@@ -1,4 +1,8 @@
+[ID]
+3953
+[URL]
 https://docs.djangoproject.com/en/2.2/releases/security/
+[TEXT]
 Archive of security issues 
 Django's development team is strongly committed to responsible
 reporting and disclosure of security-related issues, as outlined in
@@ -1265,3 +1269,4 @@ Full description
 Django 4.0 (patch)
 Django 3.2 (patch)
 Django 2.2 (patch)
+[VECTOR]

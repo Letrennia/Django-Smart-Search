@@ -1,4 +1,8 @@
+[ID]
+3748
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/db/models/aggregates/
+[TEXT]
 Source code for django.db.models.aggregates
 """
 Classes to represent the definitions of aggregate functions.
@@ -247,3 +251,4 @@ __all__ = [
         super().__init__(expression, **extra)
     def _get_repr_options(self):
         return {**super()._get_repr_options(), 'sample': self.function == 'VAR_SAMP'}
+[VECTOR]

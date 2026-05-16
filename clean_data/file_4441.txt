@@ -1,4 +1,8 @@
+[ID]
+4441
+[URL]
 https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
+[TEXT]
 Deployment checklist 
 The Internet is a hostile environment. Before deploying your Django project,
 you should take some time to review your settings, with security, performance,
@@ -289,3 +293,4 @@ The 404 (page not found) view
 The 500 (server error) view
 The 403 (HTTP Forbidden) view
 The 400 (bad request) view
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+377
+[URL]
 https://docs.djangoproject.com/en/6.0/ref/class-based-views/mixins/
+[TEXT]
 Class-based views mixins 
 Class-based views API reference. For introductory material, see
 Using mixins with class-based views.
@@ -15,3 +19,4 @@ Single object mixins
 Multiple object mixins
 Editing mixins
 Date-based mixins
+[VECTOR]

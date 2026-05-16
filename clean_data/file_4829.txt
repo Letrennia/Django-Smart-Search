@@ -1,4 +1,8 @@
+[ID]
+4829
+[URL]
 https://docs.djangoproject.com/en/1.8/faq/general/
+[TEXT]
 FAQ: General 
 Why does this project exist? 
 Django grew from a very practical need: World Online, a newspaper Web
@@ -249,3 +253,4 @@ If you need a web address, use https://djangoproject.com.
 If you need a name, just use "Django", without any tagline.
 If you need a publication date, use the year of release of the version you're
 referencing (e.g., 2013 for v1.5)
+[VECTOR]

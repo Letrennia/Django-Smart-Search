@@ -1,4 +1,8 @@
+[ID]
+4585
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/http/request/
+[TEXT]
 Source code for django.http.request
 import copy
 import re
@@ -965,3 +969,4 @@ def validate_host(host, allowed_hosts):
         if pattern == '*' or is_same_domain(host, pattern):
             return True
     return False
+[VECTOR]

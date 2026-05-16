@@ -1,4 +1,8 @@
+[ID]
+1315
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/forms/utils/
+[TEXT]
 Source code for django.forms.utils
 import json
 from collections import UserList
@@ -381,3 +385,4 @@ def to_current_timezone(value):
     if settings.USE_TZ and value is not None and timezone.is_aware(value):
         return timezone.make_naive(value)
     return value
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4793
+[URL]
 https://docs.djangoproject.com/en/2.0/topics/forms/
+[TEXT]
 Working with forms 
 About this document
 This document provides an introduction to the basics of web forms and how
@@ -895,3 +899,4 @@ See also
 The Forms Reference
 Covers the full API reference, including form fields, form widgets,
 and form and field validation.
+[VECTOR]

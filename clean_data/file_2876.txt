@@ -1,4 +1,8 @@
+[ID]
+2876
+[URL]
 https://docs.djangoproject.com/en/3.2/ref/contrib/
+[TEXT]
 contrib packages 
 Django aims to follow Python's "batteries included" philosophy. It ships with a variety of extra, optional tools
 that solve common Web-development problems.
@@ -147,3 +151,4 @@ See the syndication documentation.
 Other add-ons 
 If you have an idea for functionality to include in contrib, let us know!
 Code it up, and post it to the django-users mailing list.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+1970
+[URL]
 https://docs.djangoproject.com/en/4.2/topics/auth/customizing/
+[TEXT]
 Customizing authentication in Django 
 The authentication that comes with Django is good enough for most common cases,
 but you may have needs not met by the out-of-the-box defaults. Customizing
@@ -1155,3 +1159,4 @@ Then, to register this custom user model with Django's admin, the following
 code would be required in the app's admin.py file:
 Finally, specify the custom model as the default user model for your project
 using the AUTH_USER_MODEL setting in your settings.py:
+[VECTOR]

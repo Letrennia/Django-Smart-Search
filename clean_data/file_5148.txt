@@ -1,4 +1,8 @@
+[ID]
+5148
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/utils/
+[TEXT]
 Django Utils 
 This document covers all stable modules in django.utils. Most of the
 modules in django.utils are designed for internal use and only the
@@ -1243,3 +1247,4 @@ Deprecated since version 1.7: Use get_fixed_timezone() instead.
 class LocalTimezone[source] 
 Proxy timezone information from time module.
 Deprecated since version 1.7: Use get_default_timezone() instead.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+1314
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/forms/renderers/
+[TEXT]
 Source code for django.forms.renderers
 import functools
 import warnings
@@ -185,3 +189,4 @@ class TemplatesSetting(BaseRenderer):
     """
     def get_template(self, template_name):
         return get_template(template_name)
+[VECTOR]

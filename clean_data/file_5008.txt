@@ -1,4 +1,8 @@
+[ID]
+5008
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/template/loader/
+[TEXT]
 Source code for django.template.loader
 import warnings
 from django.utils.deprecation import RemovedInDjango110Warning
@@ -261,3 +265,4 @@ class BaseLoader(base.Loader):
             "django.template.loaders.base.Loader.",
             RemovedInDjango110Warning, stacklevel=2)
         super(BaseLoader, self).__init__(*args, **kwargs)
+[VECTOR]

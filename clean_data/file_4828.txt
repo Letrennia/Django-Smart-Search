@@ -1,4 +1,8 @@
+[ID]
+4828
+[URL]
 https://docs.djangoproject.com/en/1.8/faq/contributing/
+[TEXT]
 FAQ: Contributing code 
 How can I get started contributing code to Django? 
 Thanks for asking! We've written an entire document devoted to this question.
@@ -151,3 +155,4 @@ entire community, not just the severity for one particular user. This doesn't
 mean that we think your problem is unimportant – just that in the limited
 time we have available, we will always err on the side of making 10 people
 happy rather than making 1 person happy.
+[VECTOR]

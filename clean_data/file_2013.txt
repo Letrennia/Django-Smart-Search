@@ -1,4 +1,8 @@
+[ID]
+2013
+[URL]
 https://docs.djangoproject.com/en/4.2/topics/http/views/
+[TEXT]
 Writing views 
 A view function, or view for short, is a Python function that takes a
 web request and returns a web response. This response can be the HTML contents
@@ -185,3 +189,4 @@ performance benefits.
 Here's an example of an async view:
 You can read more about Django's async support, and how to best use async
 views, in Asynchronous support.
+[VECTOR]

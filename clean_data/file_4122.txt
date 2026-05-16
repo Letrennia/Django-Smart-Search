@@ -1,4 +1,8 @@
+[ID]
+4122
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/contrib/postgres/forms/array/
+[TEXT]
 Source code for django.contrib.postgres.forms.array
 import copy
 from itertools import chain
@@ -377,3 +381,4 @@ class SplitArrayWidget(forms.Widget):
         if errors:
             raise ValidationError(list(chain.from_iterable(errors)))
         return cleaned_data
+[VECTOR]

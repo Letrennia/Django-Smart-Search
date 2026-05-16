@@ -1,4 +1,8 @@
+[ID]
+4099
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/conf/urls/i18n/
+[TEXT]
 Source code for django.conf.urls.i18n
 import functools
 from django.conf import settings
@@ -65,3 +69,4 @@ def is_language_prefix_patterns_used(urlconf):
 urlpatterns = [
     path('setlang/', set_language, name='set_language'),
 ]
+[VECTOR]

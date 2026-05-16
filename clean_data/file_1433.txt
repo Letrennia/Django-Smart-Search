@@ -1,4 +1,8 @@
+[ID]
+1433
+[URL]
 https://docs.djangoproject.com/en/5.0/ref/contrib/postgres/constraints/
+[TEXT]
 PostgreSQL specific database constraints 
 PostgreSQL supports additional data integrity constraints available from the
 django.contrib.postgres.constraints module. They are added in the model
@@ -158,4 +162,5 @@ function (e.g. TsTzRange()), and use the delimiters for the field. Most
 often, the delimiters will be '[)', meaning that the lower bound is
 inclusive and the upper bound is exclusive. You may use the
 RangeBoundary that provides an
-expression mapping for the range boundaries. 
+expression mapping for the range boundaries.
+[VECTOR]

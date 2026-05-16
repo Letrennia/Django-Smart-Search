@@ -1,4 +1,8 @@
+[ID]
+5374
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/forms/fields/
+[TEXT]
 Source code for django.forms.fields
 """
 Field classes.
@@ -2095,3 +2099,4 @@ class CallableChoiceIterator(object):
             except ValueError:
                 raise ValidationError(self.error_messages['invalid'], code='invalid')
         return value
+[VECTOR]

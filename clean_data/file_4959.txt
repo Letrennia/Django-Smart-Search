@@ -1,4 +1,8 @@
+[ID]
+4959
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/core/mail/message/
+[TEXT]
 Source code for django.core.mail.message
 from __future__ import unicode_literals
 import mimetypes
@@ -767,3 +771,4 @@ class EmailMultiAlternatives(EmailMessage):
             for alternative in self.alternatives:
                 msg.attach(self._create_mime_attachment(*alternative))
         return msg
+[VECTOR]

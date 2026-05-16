@@ -1,4 +1,8 @@
+[ID]
+5300
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/contrib/admin/decorators/
+[TEXT]
 Source code for django.contrib.admin.decorators
 [docs]def register(*models, **kwargs):
     """
@@ -47,3 +51,4 @@ Source code for django.contrib.admin.decorators
         admin_site.register(models, admin_class=admin_class)
         return admin_class
     return _model_admin_wrapper
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4436
+[URL]
 https://docs.djangoproject.com/en/2.0/howto/custom-lookups/
+[TEXT]
 Custom Lookups 
 Django offers a wide variety of built-in lookups for
 filtering (for example, exact and icontains). This documentation
@@ -335,3 +339,4 @@ mytransform.get_lookup('mylookup').
 myfield.get_lookup('mytransform'), which will fail, so it will fall back
 to calling myfield.get_transform('mytransform') and then
 mytransform.get_lookup('exact').
+[VECTOR]

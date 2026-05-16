@@ -1,4 +1,8 @@
+[ID]
+4838
+[URL]
 https://docs.djangoproject.com/en/1.8/howto/custom-file-storage/
+[TEXT]
 Writing a custom storage system 
 If you need to provide custom file storage – a common example is storing files
 on some remote system – you can do so by defining a custom storage class.
@@ -143,3 +147,4 @@ directory was found. A malicious user could exploit this deterministic
 algorithm to create a denial-of-service attack. This change was also made
 in Django 1.6.6, 1.5.9, and 1.4.14.
 Changed in Django 1.8: The max_length argument was added.
+[VECTOR]

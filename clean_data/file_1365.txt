@@ -1,4 +1,8 @@
+[ID]
+1365
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/views/decorators/common/
+[TEXT]
 Source code for django.views.decorators.common
 from functools import wraps
 from asgiref.sync import iscoroutinefunction
@@ -37,3 +41,4 @@ def no_append_slash(view_func):
             return view_func(request, *args, **kwargs)
     _view_wrapper.should_append_slash = False
     return wraps(view_func)(_view_wrapper)
+[VECTOR]

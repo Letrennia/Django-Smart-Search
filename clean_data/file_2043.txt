@@ -1,4 +1,8 @@
+[ID]
+2043
+[URL]
 https://docs.djangoproject.com/en/4.1/glossary/
+[TEXT]
 Glossary 
 concrete model A non-abstract (abstract=False) model.
 field An attribute on a model; a given field usually maps directly to
@@ -69,3 +73,4 @@ template helps to abstract the presentation of data from the data
 itself.
 See Templates.
 view A function responsible for rendering a page.
+[VECTOR]

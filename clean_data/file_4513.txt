@@ -1,4 +1,8 @@
+[ID]
+4513
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/contrib/auth/password_validation/
+[TEXT]
 Source code for django.contrib.auth.password_validation
 import functools
 import gzip
@@ -335,3 +339,4 @@ password_validators_help_text_html = lazy(_password_validators_help_text_html, s
             )
     def get_help_text(self):
         return _("Your password can't be entirely numeric.")
+[VECTOR]

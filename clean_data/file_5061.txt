@@ -1,4 +1,8 @@
+[ID]
+5061
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/contrib/admin/
+[TEXT]
 The Django admin site 
 One of the most powerful parts of Django is the automatic admin interface. It
 reads metadata in your model to provide a powerful and production-ready
@@ -2835,3 +2839,4 @@ The action in the examples above match the last part of the URL names for
 ModelAdmin instances described above. The opts variable can be any
 object which has an app_label and model_name attributes and is usually
 supplied by the admin views for the current model.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4736
+[URL]
 https://docs.djangoproject.com/en/2.0/ref/models/indexes/
+[TEXT]
 Model index reference 
 New in Django 1.11. 
 Index classes ease creating database indexes. They can be added using the
@@ -89,3 +93,4 @@ in the same tablespace as the table.
 See also
 For a list of PostgreSQL-specific indexes, see
 django.contrib.postgres.indexes.
+[VECTOR]

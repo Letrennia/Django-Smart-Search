@@ -1,4 +1,8 @@
+[ID]
+5324
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/contrib/postgres/forms/jsonb/
+[TEXT]
 Source code for django.contrib.postgres.forms.jsonb
 import json
 from django import forms
@@ -89,3 +93,4 @@ class JSONString(six.text_type):
         if isinstance(value, InvalidJSONInput):
             return value
         return json.dumps(value)
+[VECTOR]

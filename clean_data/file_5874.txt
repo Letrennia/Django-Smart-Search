@@ -1,4 +1,8 @@
+[ID]
+5874
+[URL]
 https://docs.djangoproject.com/en/1.10/ref/contrib/admin/javascript/
+[TEXT]
 JavaScript customizations in the admin 
 Inline form events 
 New in Django 1.9. 
@@ -79,3 +83,4 @@ django.jQuery(document).on('formset:added', function(event, $row, formsetName) {
 django.jQuery(document).on('formset:removed', function(event, $row, formsetName) {
     // Row removed
 });
+[VECTOR]

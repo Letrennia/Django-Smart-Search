@@ -1,4 +1,8 @@
+[ID]
+4292
+[URL]
 https://docs.djangoproject.com/en/2.1/ref/contrib/humanize/
+[TEXT]
 django.contrib.humanize 
 A set of Django template filters useful for adding a "human touch" to data.
 To activate these filters, add 'django.contrib.humanize' to your
@@ -165,3 +169,4 @@ Examples:
 2 becomes 2nd.
 3 becomes 3rd.
 You can pass in either an integer or a string representation of an integer.
+[VECTOR]

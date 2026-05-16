@@ -1,4 +1,8 @@
+[ID]
+4813
+[URL]
 https://docs.djangoproject.com/en/2.0/topics/pagination/
+[TEXT]
 Pagination 
 Django provides a few classes that help you manage paginated data – that is,
 data that's split across several pages, with "Previous/Next" links. These
@@ -265,3 +269,4 @@ Page.number
 The 1-based page number for this page.
 Page.paginator 
 The associated Paginator object.
+[VECTOR]

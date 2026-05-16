@@ -1,4 +1,8 @@
+[ID]
+1711
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/sessions/backends/base/
+[TEXT]
 Source code for django.contrib.sessions.backends.base
 import logging
 import string
@@ -865,3 +869,4 @@ class SessionBase:
     @classmethod
     async def aclear_expired(cls):
         return await sync_to_async(cls.clear_expired)()
+[VECTOR]

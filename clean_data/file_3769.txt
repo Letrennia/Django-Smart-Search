@@ -1,4 +1,8 @@
+[ID]
+3769
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/dispatch/dispatcher/
+[TEXT]
 Source code for django.dispatch.dispatcher
 import threading
 import weakref
@@ -475,3 +479,4 @@ NO_RECEIVERS = object()
             signal.connect(func, **kwargs)
         return func
     return _decorator
+[VECTOR]

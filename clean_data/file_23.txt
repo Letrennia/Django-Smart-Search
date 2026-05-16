@@ -1,4 +1,8 @@
+[ID]
+23
+[URL]
 https://docs.djangoproject.com/en/dev/howto/delete-app/
+[TEXT]
 How to delete a Django application 
 Django provides the ability to group sets of features into Python packages
 called applications. When requirements change, apps
@@ -35,3 +39,4 @@ project.
 Deploy/release your updated Django project.
 Remove the app from INSTALLED_APPS.
 Finally, remove the app's directory.
+[VECTOR]

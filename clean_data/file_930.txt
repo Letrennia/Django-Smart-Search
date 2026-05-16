@@ -1,4 +1,8 @@
+[ID]
+930
+[URL]
 https://docs.djangoproject.com/en/5.1/ref/class-based-views/mixins-simple/
+[TEXT]
 Simple mixins 
 ContextMixin 
 class django.views.generic.base.ContextMixin 
@@ -119,3 +123,4 @@ Returns a list of template names to search for when rendering the
 template. The first template that is found will be used.
 The default implementation will return a list containing
 template_name (if it is specified).
+[VECTOR]

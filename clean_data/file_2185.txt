@@ -1,4 +1,8 @@
+[ID]
+2185
+[URL]
 https://docs.djangoproject.com/en/4.1/ref/contrib/gis/geoquerysets/
+[TEXT]
 GIS QuerySet API Reference 
 Spatial Lookups 
 The spatial lookups in this section are available for GeometryField
@@ -1113,3 +1117,4 @@ Example:
 [2]See SDO_RELATE documentation, from the Oracle Spatial and
 Graph Developer's Guide.
 [3](1, 2) For an explanation of this routine, read Quirks of the "Contains" Spatial Predicate by Martin Davis (a PostGIS developer).
+[VECTOR]

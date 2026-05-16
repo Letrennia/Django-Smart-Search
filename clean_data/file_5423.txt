@@ -1,4 +1,8 @@
+[ID]
+5423
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/utils/timezone/
+[TEXT]
 Source code for django.utils.timezone
 """
 Timezone-related classes and functions.
@@ -469,3 +473,4 @@ def template_localtime(value, use_tz=None):
         # This method is available for pytz time zones.
         value = timezone.normalize(value)
     return value.replace(tzinfo=None)
+[VECTOR]

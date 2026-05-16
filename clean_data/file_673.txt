@@ -1,4 +1,8 @@
+[ID]
+673
+[URL]
 https://docs.djangoproject.com/en/5.2/ref/contrib/gis/db-api/
+[TEXT]
 GeoDjango Database API 
 Spatial Backends 
 GeoDjango currently provides the following spatial database backends:
@@ -1023,3 +1027,4 @@ Union
 X
 X
 X
+[VECTOR]

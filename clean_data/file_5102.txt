@@ -1,4 +1,8 @@
+[ID]
+5102
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/contrib/sites/
+[TEXT]
 The "sites" framework 
 Django comes with an optional "sites" framework. It's a hook for associating
 objects and functionality to particular Web sites, and it's a holding place for
@@ -489,3 +493,4 @@ The old import location will work until Django 1.9.
 Changed in Django 1.8: This function will now lookup the current site based on
 request.get_host() if the
 SITE_ID setting is not defined.
+[VECTOR]

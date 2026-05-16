@@ -1,4 +1,8 @@
+[ID]
+5389
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/middleware/security/
+[TEXT]
 Source code for django.middleware.security
 import re
 from django.conf import settings
@@ -77,3 +81,4 @@ from django.utils.deprecation import MiddlewareMixin
         if self.xss_filter and 'x-xss-protection' not in response:
             response["x-xss-protection"] = "1; mode=block"
         return response
+[VECTOR]

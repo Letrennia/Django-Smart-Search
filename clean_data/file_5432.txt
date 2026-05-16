@@ -1,4 +1,8 @@
+[ID]
+5432
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/views/i18n/
+[TEXT]
 Source code for django.views.i18n
 import importlib
 import itertools
@@ -757,3 +761,4 @@ def null_javascript_catalog(request, domain=None, packages=None):
     """
     def render_to_response(self, context, **response_kwargs):
         return http.JsonResponse(context)
+[VECTOR]

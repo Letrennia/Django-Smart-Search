@@ -1,4 +1,8 @@
+[ID]
+4606
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/template/utils/
+[TEXT]
 Source code for django.template.utils
 import functools
 import os
@@ -177,3 +181,4 @@ def get_app_template_dirs(dirname):
             template_dirs.append(template_dir)
     # Immutable return value because it will be cached and shared by callers.
     return tuple(template_dirs)
+[VECTOR]

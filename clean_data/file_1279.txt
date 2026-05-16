@@ -1,4 +1,8 @@
+[ID]
+1279
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/db/backends/base/schema/
+[TEXT]
 Source code for django.db.backends.base.schema
 import logging
 import operator
@@ -3859,3 +3863,4 @@ class BaseDatabaseSchemaEditor:
             "param_types": ",".join(param_types),
         }
         self.execute(sql)
+[VECTOR]

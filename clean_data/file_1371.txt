@@ -1,4 +1,8 @@
+[ID]
+1371
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/views/generic/dates/
+[TEXT]
 Source code for django.views.generic.dates
 import datetime
 from django.conf import settings
@@ -1357,3 +1361,4 @@ def timezone_today():
         return timezone.localdate()
     else:
         return datetime.date.today()
+[VECTOR]

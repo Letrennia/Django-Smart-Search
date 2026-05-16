@@ -1,4 +1,8 @@
+[ID]
+4052
+[URL]
 https://docs.djangoproject.com/en/2.1/howto/upgrade-version/
+[TEXT]
 Upgrading Django to a newer version 
 While it can be a complex process at times, upgrading to the latest Django
 version has several benefits:
@@ -167,3 +171,4 @@ pickle-compatible across Django versions. A past instance of incompatibility
 was caching pickled HttpResponse objects, either
 directly or indirectly via the cache_page()
 decorator.
+[VECTOR]

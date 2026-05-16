@@ -1,4 +1,8 @@
+[ID]
+4023
+[URL]
 https://docs.djangoproject.com/en/2.1/faq/help/
+[TEXT]
 FAQ: Getting Help 
 How do I do X? Why doesn't Y work? Where can I go to get help? 
 If this FAQ doesn't contain an answer to your question, you might want to
@@ -85,3 +89,4 @@ public mailing lists. Django has a
 policy for handling security issues;
 while a defect is outstanding, we would like to minimize any damage that
 could be inflicted through public knowledge of that defect.
+[VECTOR]

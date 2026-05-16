@@ -1,4 +1,8 @@
+[ID]
+5821
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/test/utils/
+[TEXT]
 Source code for django.test.utils
 import logging
 import re
@@ -1153,3 +1157,4 @@ def tag(*tags):
         setattr(obj, 'tags', set(tags))
         return obj
     return decorator
+[VECTOR]

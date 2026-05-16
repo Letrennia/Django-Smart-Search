@@ -1,4 +1,8 @@
+[ID]
+1228
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/messages/storage/base/
+[TEXT]
 Source code for django.contrib.messages.storage.base
 from django.conf import settings
 from django.contrib.messages import constants, utils
@@ -299,3 +303,4 @@ class BaseStorage:
         else:
             self._level = int(value)
     level = property(_get_level, _set_level, _set_level)
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+879
+[URL]
 https://docs.djangoproject.com/en/5.1/internals/contributing/
+[TEXT]
 Contributing to Django 
 Django is a community that lives on its volunteers. As it keeps growing, we
 always need more people to help others. You can contribute in many ways, either
@@ -181,3 +185,4 @@ Closing Tickets
 How can I help with triaging?
 Bisecting a regression
 We're looking forward to working with you. Welcome aboard!
+[VECTOR]

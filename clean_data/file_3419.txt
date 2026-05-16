@@ -1,4 +1,8 @@
+[ID]
+3419
+[URL]
 https://docs.djangoproject.com/en/3.0/_modules/django/utils/decorators/
+[TEXT]
 Source code for django.utils.decorators
 "Functions that help with dynamically creating decorators for views."
 from functools import partial, update_wrapper, wraps
@@ -279,3 +283,4 @@ class classproperty:
     def getter(self, method):
         self.fget = method
         return self
+[VECTOR]

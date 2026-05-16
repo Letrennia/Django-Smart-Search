@@ -1,4 +1,8 @@
+[ID]
+2704
+[URL]
 https://docs.djangoproject.com/en/3.2/intro/overview/
+[TEXT]
 Django at a glance 
 Because Django was developed in a fast-paced newsroom environment, it was
 designed to make common Web-development tasks fast and easy. Here's an informal
@@ -247,3 +251,4 @@ create RSS and Atom feeds by writing a small Python class.
 More attractive automatically-generated admin features – this overview
 barely scratched the surface.
 The next steps are for you to download Django, read the tutorial and join the community. Thanks for your interest!
+[VECTOR]

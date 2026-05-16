@@ -1,4 +1,8 @@
+[ID]
+3166
+[URL]
 https://docs.djangoproject.com/en/3.1/ref/contrib/gis/forms-api/
+[TEXT]
 GeoDjango Forms API 
 GeoDjango provides some specialized form fields and widgets in order to visually
 display and edit geolocalized data on a map. By default, they use
@@ -181,3 +185,4 @@ The default map zoom is 12.
 The OpenLayersWidget note about JavaScript file hosting above also
 applies here. See also this FAQ answer about https access to map
 tiles.
+[VECTOR]

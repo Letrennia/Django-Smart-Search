@@ -1,4 +1,8 @@
+[ID]
+499
+[URL]
 https://docs.djangoproject.com/en/6.0/topics/class-based-views/
+[TEXT]
 Class-based views 
 A view is a callable which takes a request and returns a
 response. This can be more than just a function, and Django provides
@@ -137,3 +141,4 @@ and async def declarations are mixed.
 Django will automatically detect asynchronous views and run them in an
 asynchronous context. You can read more about Django's asynchronous support,
 and how to best use async views, in Asynchronous support.
+[VECTOR]

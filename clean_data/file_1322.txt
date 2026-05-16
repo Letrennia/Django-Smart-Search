@@ -1,4 +1,8 @@
+[ID]
+1322
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/middleware/csrf/
+[TEXT]
 Source code for django.middleware.csrf
 """
 Cross Site Request Forgery Middleware.
@@ -839,3 +843,4 @@ class CsrfViewMiddleware(MiddlewareMixin):
             # by custom middleware but before those subsequent calls.
             request.META["CSRF_COOKIE_NEEDS_UPDATE"] = False
         return response
+[VECTOR]

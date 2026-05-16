@@ -1,4 +1,8 @@
+[ID]
+1360
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/utils/text/
+[TEXT]
 Source code for django.utils.text
 import gzip
 import re
@@ -805,3 +809,4 @@ def _format_lazy(format_string, *args, **kwargs):
     """
     return format_string.format(*args, **kwargs)
 format_lazy = lazy(_format_lazy, str)
+[VECTOR]

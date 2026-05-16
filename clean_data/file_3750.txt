@@ -1,4 +1,8 @@
+[ID]
+3750
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/db/models/constraints/
+[TEXT]
 Source code for django.db.models.constraints
 from django.db.models.query_utils import Q
 from django.db.models.sql.query import Query
@@ -191,3 +195,4 @@ class BaseConstraint:
         if self.condition:
             kwargs['condition'] = self.condition
         return path, args, kwargs
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+3807
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/urls/resolvers/
+[TEXT]
 Source code for django.urls.resolvers
 """
 This module converts requested URLs to callback view functions.
@@ -1205,3 +1209,4 @@ class URLResolver:
                 "a valid view function or pattern name." % {'view': lookup_view_s}
             )
         raise NoReverseMatch(msg)
+[VECTOR]

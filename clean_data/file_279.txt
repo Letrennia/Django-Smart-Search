@@ -1,4 +1,8 @@
+[ID]
+279
+[URL]
 https://docs.djangoproject.com/en/dev/topics/testing/overview/
+[TEXT]
 Writing and running tests 
 See also
 The testing tutorial, the testing tools
@@ -463,3 +467,4 @@ Avoiding disk access for media files
 The InMemoryStorage is a convenient way to
 prevent disk access for media files. All data is kept in memory, then it gets
 discarded after tests run.
+[VECTOR]

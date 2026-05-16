@@ -1,4 +1,8 @@
+[ID]
+5076
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/contrib/gis/geoip/
+[TEXT]
 Geolocation with GeoIP 
 The GeoIP object is a ctypes wrapper for the
 MaxMind GeoIP C API. [1]
@@ -211,3 +215,4 @@ GeoIP.country_code_by_name(query)
 GeoIP.country_name_by_addr(query) 
 GeoIP.country_name_by_name(query) 
 [1]GeoIP(R) is a registered trademark of MaxMind, LLC of Boston, Massachusetts.
+[VECTOR]

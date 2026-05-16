@@ -1,4 +1,8 @@
+[ID]
+2746
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/contrib/postgres/fields/ranges/
+[TEXT]
 Source code for django.contrib.postgres.fields.ranges
 import datetime
 import json
@@ -489,3 +493,4 @@ class UpperInfinite(models.Transform):
     lookup_name = 'upper_inf'
     function = 'UPPER_INF'
     output_field = models.BooleanField()
+[VECTOR]

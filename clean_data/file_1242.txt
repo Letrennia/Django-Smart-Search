@@ -1,4 +1,8 @@
+[ID]
+1242
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/postgres/indexes/
+[TEXT]
 Source code for django.contrib.postgres.indexes
 from django.db import NotSupportedError
 from django.db.models import Func, Index
@@ -427,3 +431,4 @@ class OpClass(Func):
     constraint_validation_compatible = False
     def __init__(self, expression, name):
         super().__init__(expression, name=name)
+[VECTOR]

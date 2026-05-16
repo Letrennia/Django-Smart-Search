@@ -1,4 +1,8 @@
+[ID]
+1345
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/urls/converters/
+[TEXT]
 Source code for django.urls.converters
 import functools
 import uuid
@@ -105,3 +109,4 @@ def register_converter(converter, type_name):
 @functools.cache
 def get_converters():
     return {**DEFAULT_CONVERTERS, **REGISTERED_CONVERTERS}
+[VECTOR]

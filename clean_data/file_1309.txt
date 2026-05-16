@@ -1,4 +1,8 @@
+[ID]
+1309
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/forms/boundfield/
+[TEXT]
 Source code for django.forms.boundfield
 import re
 from django.core.exceptions import ValidationError
@@ -647,3 +651,4 @@ class BoundWidget:
     @property
     def choice_label(self):
         return self.data["label"]
+[VECTOR]

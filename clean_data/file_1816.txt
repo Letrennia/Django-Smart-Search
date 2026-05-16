@@ -1,4 +1,8 @@
+[ID]
+1816
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/utils/datastructures/
+[TEXT]
 Source code for django.utils.datastructures
 import copy
 from collections.abc import Mapping
@@ -593,3 +597,4 @@ class DeferredSubDict:
         self.deferred_key = deferred_key
     def __getitem__(self, key):
         return self.parent_dict[self.deferred_key][key]
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+248
+[URL]
 https://docs.djangoproject.com/en/dev/topics/forms/
+[TEXT]
 Working with forms 
 About this document
 This document provides an introduction to the basics of web forms and how
@@ -823,3 +827,4 @@ The Forms ReferenceCovers the full API reference, including form fields, form wi
 and form and field validation.
 django-formtoolsProvides additional form utilities, such as form previews and wizards
 (documentation).
+[VECTOR]

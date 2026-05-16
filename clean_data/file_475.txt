@@ -1,4 +1,8 @@
+[ID]
+475
+[URL]
 https://docs.djangoproject.com/en/6.0/ref/signals/
+[TEXT]
 Signals 
 A list of all the signals that Django sends. All built-in signals are sent
 using the send() method.
@@ -753,3 +757,4 @@ Sent once a Task has finished executing, successfully or otherwise.
 Arguments sent with this signal:
 senderThe backend class which the Task was enqueued on to.
 task_resultThe finished TaskResult.
+[VECTOR]

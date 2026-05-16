@@ -1,4 +1,8 @@
+[ID]
+3820
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/utils/six/
+[TEXT]
 Source code for django.utils.six
 """Utilities for writing code that runs on Python 2 and 3"""
 # Copyright (c) 2010-2015 Benjamin Peterson
@@ -1423,3 +1427,4 @@ else:
     else:
         memoryview = buffer
     buffer_types = (bytearray, memoryview)
+[VECTOR]

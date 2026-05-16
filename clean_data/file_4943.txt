@@ -1,4 +1,8 @@
+[ID]
+4943
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/sessions/middleware/
+[TEXT]
 Source code for django.contrib.sessions.middleware
 import time
 from importlib import import_module
@@ -105,3 +109,4 @@ from django.utils.http import cookie_date
                                 secure=settings.SESSION_COOKIE_SECURE or None,
                                 httponly=settings.SESSION_COOKIE_HTTPONLY or None)
         return response
+[VECTOR]

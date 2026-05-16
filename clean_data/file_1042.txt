@@ -1,4 +1,8 @@
+[ID]
+1042
+[URL]
 https://docs.djangoproject.com/en/5.1/topics/auth/default/
+[TEXT]
 Using the Django authentication system 
 This document explains the usage of Django's authentication system in its
 default configuration. This configuration has evolved to serve the most common
@@ -1905,3 +1909,4 @@ User passwords are not displayed in the admin (nor stored in the database), but
 the password storage details are displayed.
 Included in the display of this information is a link to
 a password change form that allows admins to change or unset user passwords.
+[VECTOR]

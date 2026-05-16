@@ -1,4 +1,8 @@
+[ID]
+5443
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/class-based-views/flattened-index/
+[TEXT]
 Class-based generic views - flattened index 
 This index provides an alternate organization of the reference documentation
 for class-based views. For each view, the effective attributes and methods from
@@ -989,3 +993,4 @@ get_previous_month()
 head()
 http_method_not_allowed()
 render_to_response()
+[VECTOR]

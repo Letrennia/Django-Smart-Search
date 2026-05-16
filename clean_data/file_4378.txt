@@ -1,4 +1,8 @@
+[ID]
+4378
+[URL]
 https://docs.djangoproject.com/en/2.1/topics/db/managers/
+[TEXT]
 Managers 
 class Manager[source] 
 A Manager is the interface through which database query operations are
@@ -341,3 +345,4 @@ However, if you're overriding __getattr__ or some other private
 method of your Manager object that controls object state, you
 should ensure that you don't affect the ability of your Manager to
 be copied.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4991
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/http/request/
+[TEXT]
 Source code for django.http.request
 from __future__ import unicode_literals
 import copy
@@ -995,3 +999,4 @@ def validate_host(host, allowed_hosts):
         if match:
             return True
     return False
+[VECTOR]

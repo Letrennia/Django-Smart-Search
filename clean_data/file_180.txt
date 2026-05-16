@@ -1,4 +1,8 @@
+[ID]
+180
+[URL]
 https://docs.djangoproject.com/en/dev/ref/models/class/
+[TEXT]
 Model class reference 
 This document covers features of the Model class.
 For more information about models, see the complete list of Model
@@ -87,3 +91,4 @@ Manager instance. If you add your own
 Manager instance attribute, the default one does
 not appear. Consider the following example:
 For more details on model managers see Managers and Retrieving objects.
+[VECTOR]

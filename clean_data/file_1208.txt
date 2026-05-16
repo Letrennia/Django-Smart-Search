@@ -1,4 +1,8 @@
+[ID]
+1208
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/auth/middleware/
+[TEXT]
 Source code for django.contrib.auth.middleware
 from functools import partial
 from urllib.parse import urlparse
@@ -327,3 +331,4 @@ class PersistentRemoteUserMiddleware(RemoteUserMiddleware):
     the application wants to use Django's authentication mechanism.
     """
     force_logout_if_no_header = False
+[VECTOR]

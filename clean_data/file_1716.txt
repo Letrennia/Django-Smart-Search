@@ -1,4 +1,8 @@
+[ID]
+1716
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/sitemaps/
+[TEXT]
 Source code for django.contrib.sitemaps
 from django.apps import apps as django_apps
 from django.conf import settings
@@ -351,3 +355,4 @@ class GenericSitemap(Sitemap):
                 .first()
             )
         return None
+[VECTOR]

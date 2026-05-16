@@ -1,4 +1,8 @@
+[ID]
+4116
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/contrib/postgres/aggregates/statistics/
+[TEXT]
 Source code for django.contrib.postgres.aggregates.statistics
 from django.db.models import FloatField, IntegerField
 from django.db.models.aggregates import Aggregate
@@ -83,3 +87,4 @@ class StatAggregate(Aggregate):
     function = 'REGR_SXY'
 [docs]class RegrSYY(StatAggregate):
     function = 'REGR_SYY'
+[VECTOR]

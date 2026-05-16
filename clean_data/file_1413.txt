@@ -1,4 +1,8 @@
+[ID]
+1413
+[URL]
 https://docs.djangoproject.com/en/5.0/ref/contrib/gis/geoip2/
+[TEXT]
 Geolocation with GeoIP2 
 The GeoIP2 object is a wrapper for the MaxMind geoip2 Python
 library. [1]
@@ -175,3 +179,4 @@ Exceptions
 exception GeoIP2Exception[source] 
 The exception raised when an error occurs in a call to the underlying
 geoip2 library.
+[VECTOR]

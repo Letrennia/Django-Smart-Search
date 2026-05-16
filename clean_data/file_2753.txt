@@ -1,4 +1,8 @@
+[ID]
+2753
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/contrib/postgres/operations/
+[TEXT]
 Source code for django.contrib.postgres.operations
 from django.contrib.postgres.signals import (
     get_citext_oids, get_hstore_oids, register_type_handlers,
@@ -405,3 +409,4 @@ class CollationOperation(Operation):
     @property
     def migration_name_fragment(self):
         return 'remove_collation_%s' % self.name.lower()
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+1616
+[URL]
 https://docs.djangoproject.com/en/4.2/internals/contributing/new-contributors/
+[TEXT]
 Advice for new contributors 
 New contributor and not sure what to do? Want to help but just don't know how
 to get started? This is the section for you.
@@ -199,3 +203,4 @@ improvement flags are unchecked once you've addressed all review comments.
 Remember that Django has an eight-month release cycle, so there's plenty of
 time for your patch to be reviewed.
 Finally, a well-timed reminder can help. See contributing code FAQ for ideas here.
+[VECTOR]

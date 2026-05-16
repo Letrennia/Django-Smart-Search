@@ -1,4 +1,8 @@
+[ID]
+2770
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/core/paginator/
+[TEXT]
 Source code for django.core.paginator
 import collections.abc
 import inspect
@@ -367,3 +371,4 @@ class UnorderedObjectListWarning(RuntimeWarning):
         if self.number == self.paginator.num_pages:
             return self.paginator.count
         return self.number * self.paginator.per_page
+[VECTOR]

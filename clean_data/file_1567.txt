@@ -1,4 +1,8 @@
+[ID]
+1567
+[URL]
 https://docs.djangoproject.com/en/4.2/faq/
+[TEXT]
 Django FAQ 
 FAQ: General
 Why does this project exist?
@@ -121,3 +125,4 @@ I'm sure my ticket is absolutely 100% perfect, can I mark it as "Ready For Check
 Troubleshooting
 Problems running django-admin
 Miscellaneous
+[VECTOR]

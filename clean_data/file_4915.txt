@@ -1,4 +1,8 @@
+[ID]
+4915
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/auth/decorators/
+[TEXT]
 Source code for django.contrib.auth.decorators
 from functools import wraps
 from django.conf import settings
@@ -133,3 +137,4 @@ from django.utils.six.moves.urllib.parse import urlparse
         # As the last resort, show the login form
         return False
     return user_passes_test(check_perms, login_url=login_url)
+[VECTOR]

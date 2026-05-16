@@ -1,4 +1,8 @@
+[ID]
+6009
+[URL]
 https://docs.djangoproject.com/en/1.10/topics/http/shortcuts/
+[TEXT]
 Django shortcut functions 
 The package django.shortcuts collects helper functions and classes that
 "span" multiple levels of MVC. In other words, these functions/classes
@@ -231,3 +235,4 @@ filter().
 Example 
 The following example gets all published objects from MyModel:
 This example is equivalent to:
+[VECTOR]

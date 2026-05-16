@@ -1,4 +1,8 @@
+[ID]
+1232
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/postgres/constraints/
+[TEXT]
 Source code for django.contrib.postgres.constraints
 from types import NoneType
 from django.core.exceptions import ValidationError
@@ -431,3 +435,4 @@ class ExclusionConstraint(BaseConstraint):
                 raise ValidationError(
                     self.get_violation_error_message(), code=self.violation_error_code
                 )
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+3255
+[URL]
 https://docs.djangoproject.com/en/3.1/topics/async/
+[TEXT]
 Asynchronous support 
 New in Django 3.0. 
 Django has support for writing asynchronous ("async") views, along with an
@@ -327,3 +331,4 @@ thread and thus is fully compatible with async mode. Note that sync code will
 always be in a different thread to any async code that is calling it, so you
 should avoid passing raw database handles or other thread-sensitive references
 around.
+[VECTOR]

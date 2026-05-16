@@ -1,4 +1,8 @@
+[ID]
+5413
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/utils/encoding/
+[TEXT]
 Source code for django.utils.encoding
 # -*- encoding: utf-8 -*-
 from __future__ import unicode_literals
@@ -471,3 +475,4 @@ def get_system_encoding():
         encoding = 'ascii'
     return encoding
 DEFAULT_LOCALE_ENCODING = get_system_encoding()
+[VECTOR]

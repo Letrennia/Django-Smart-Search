@@ -1,4 +1,8 @@
+[ID]
+5208
+[URL]
 https://docs.djangoproject.com/en/1.8/topics/serialization/
+[TEXT]
 Serializing Django objects 
 Django's serialization framework provides a mechanism for "translating" Django
 models into other formats. Usually these other formats will be text-based and
@@ -475,3 +479,4 @@ To define this dependency, we add one extra line:
 This definition ensures that all Person objects are serialized before
 any Book objects. In turn, any object referencing Book will be
 serialized after both Person and Book have been serialized.
+[VECTOR]

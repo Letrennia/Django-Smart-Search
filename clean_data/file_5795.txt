@@ -1,4 +1,8 @@
+[ID]
+5795
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/forms/widgets/
+[TEXT]
 Source code for django.forms.widgets
 """
 HTML Widget classes
@@ -1795,3 +1799,4 @@ class RendererMixin(object):
         s = self.select_widget(choices=choices)
         select_html = s.render(field % name, val, local_attrs)
         return select_html
+[VECTOR]

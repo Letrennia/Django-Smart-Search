@@ -1,4 +1,8 @@
+[ID]
+185
+[URL]
 https://docs.djangoproject.com/en/dev/ref/models/fields/
+[TEXT]
 Model field reference 
 This document contains all the API references of Field including the
 field options and field types Django offers.
@@ -2963,3 +2967,4 @@ Field.related_model
 Points to the model the field relates to. For example, Author in
 ForeignKey(Author, on_delete=models.CASCADE). The related_model for
 a GenericForeignKey is always None.
+[VECTOR]

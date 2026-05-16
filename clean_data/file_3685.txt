@@ -1,4 +1,8 @@
+[ID]
+3685
+[URL]
 https://docs.djangoproject.com/en/2.2/misc/design-philosophies/
+[TEXT]
 Design philosophies 
 This document explains some of the fundamental philosophies Django's developers
 have used in creating the framework. Its goal is to explain the past and guide
@@ -331,3 +335,4 @@ cache backends.
 Extensibility 
 The cache API should be extensible at the application level based on the
 developer's needs (for example, see Cache key transformation).
+[VECTOR]

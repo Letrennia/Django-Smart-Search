@@ -1,4 +1,8 @@
+[ID]
+1220
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/flatpages/middleware/
+[TEXT]
 Source code for django.contrib.flatpages.middleware
 from django.conf import settings
 from django.contrib.flatpages.views import flatpage
@@ -39,3 +43,4 @@ class FlatpageFallbackMiddleware(MiddlewareMixin):
             if settings.DEBUG:
                 raise
             return response
+[VECTOR]

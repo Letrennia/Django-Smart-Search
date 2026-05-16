@@ -1,4 +1,8 @@
+[ID]
+4465
+[URL]
 https://docs.djangoproject.com/en/2.0/internals/contributing/new-contributors/
+[TEXT]
 Advice for new contributors 
 New contributor and not sure what to do? Want to help but just don't know how
 to get started? This is the section for you.
@@ -197,3 +201,4 @@ myself?
 Short answer: No. It's always better to get another set of eyes on a
 ticket. If you're having trouble getting that second set of eyes, see
 question 1, above.
+[VECTOR]

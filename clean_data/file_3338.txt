@@ -1,4 +1,8 @@
+[ID]
+3338
+[URL]
 https://docs.djangoproject.com/en/3.0/howto/deployment/asgi/
+[TEXT]
 How to deploy with ASGI 
 As well as WSGI, Django also supports deploying on ASGI, the emerging Python
 standard for asynchronous web servers and applications.
@@ -78,4 +82,5 @@ If this variable isn't set, the default asgi.py sets it to
 mysite.settings, where mysite is the name of your project.
 Applying ASGI middleware 
 To apply ASGI middleware, or to embed Django in another ASGI application, you
-can wrap Django's application object in the asgi.py file. 
+can wrap Django's application object in the asgi.py file.
+[VECTOR]

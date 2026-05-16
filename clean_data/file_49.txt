@@ -1,4 +1,8 @@
+[ID]
+49
+[URL]
 https://docs.djangoproject.com/en/dev/index/
+[TEXT]
 Django documentation 
 First steps 
 Are you new to Django or to programming? This is the place to start!
@@ -495,3 +499,4 @@ Django over time:
 API stability |
 Release notes and upgrading instructions |
 Deprecation Timeline
+[VECTOR]

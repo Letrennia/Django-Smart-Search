@@ -1,4 +1,8 @@
+[ID]
+3491
+[URL]
 https://docs.djangoproject.com/en/3.0/ref/contrib/sitemaps/
+[TEXT]
 The sitemap framework 
 Django comes with a high-level sitemap-generating framework to create sitemap
 XML files.
@@ -555,3 +559,4 @@ ping Google using the ping_google management command:
 --sitemap-uses-http 
 New in Django 2.2. 
 Use this option if your sitemap uses http rather than https.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+871
+[URL]
 https://docs.djangoproject.com/en/5.1/howto/overriding-templates/
+[TEXT]
 How to override templates 
 In your project, you might want to override a template in another Django
 application, whether it be a third-party application or a contrib application
@@ -135,3 +139,4 @@ This technique works because the template loader does not consider the already
 loaded override template (at templates/admin/base_site.html) when
 resolving the extends tag. Combined with block.super it is a powerful
 technique to make small customizations.
+[VECTOR]

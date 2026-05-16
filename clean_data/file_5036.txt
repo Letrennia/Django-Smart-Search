@@ -1,4 +1,8 @@
+[ID]
+5036
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/views/decorators/vary/
+[TEXT]
 Source code for django.views.decorators.vary
 from functools import wraps
 from django.utils.cache import patch_vary_headers
@@ -69,3 +73,4 @@ from django.utils.decorators import available_attrs
         patch_vary_headers(response, ('Cookie',))
         return response
     return inner_func
+[VECTOR]

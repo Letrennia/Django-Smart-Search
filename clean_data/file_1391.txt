@@ -1,4 +1,8 @@
+[ID]
+1391
+[URL]
 https://docs.djangoproject.com/en/5.0/ref/class-based-views/mixins-multiple-object/
+[TEXT]
 Multiple object mixins 
 MultipleObjectMixin 
 class django.views.generic.list.MultipleObjectMixin 
@@ -277,3 +281,4 @@ get_template_names()
 Returns a list of candidate template names. Returns the following list:
 the value of template_name on the view (if provided)
 <app_label>/<model_name><template_name_suffix>.html
+[VECTOR]

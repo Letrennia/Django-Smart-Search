@@ -1,4 +1,8 @@
+[ID]
+1724
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/core/cache/backends/base/
+[TEXT]
 Source code for django.core.cache.backends.base
 "Base Cache class."
 import time
@@ -663,3 +667,4 @@ def memcache_key_warnings(key):
             "Cache key contains characters that will cause errors if used with "
             f"memcached: {key!r}"
         )
+[VECTOR]

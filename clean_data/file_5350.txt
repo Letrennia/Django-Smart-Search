@@ -1,4 +1,8 @@
+[ID]
+5350
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/core/validators/
+[TEXT]
 Source code for django.core.validators
 from __future__ import unicode_literals
 import os
@@ -837,3 +841,4 @@ def get_available_image_extensions():
 validate_image_file_extension = FileExtensionValidator(
     allowed_extensions=get_available_image_extensions(),
 )
+[VECTOR]

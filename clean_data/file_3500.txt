@@ -1,4 +1,8 @@
+[ID]
+3500
+[URL]
 https://docs.djangoproject.com/en/3.0/ref/files/file/
+[TEXT]
 The File object 
 The django.core.files module and its submodules contain built-in classes
 for basic file handling in Django.
@@ -167,3 +171,4 @@ File.delete(save=True)
 Removes the file from the model instance and deletes the underlying file.
 If save is True, the model's save() method will be called once
 the file is deleted.
+[VECTOR]

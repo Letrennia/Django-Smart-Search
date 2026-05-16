@@ -1,4 +1,8 @@
+[ID]
+5363
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/db/models/functions/datetime/
+[TEXT]
 Source code for django.db.models.functions.datetime
 from __future__ import absolute_import
 from datetime import datetime
@@ -427,3 +431,4 @@ class TruncBase(TimezoneMixin, Transform):
     kind = 'second'
 DateTimeField.register_lookup(TruncDate)
 DateTimeField.register_lookup(TruncTime)
+[VECTOR]

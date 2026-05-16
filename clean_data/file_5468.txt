@@ -1,4 +1,8 @@
+[ID]
+5468
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/contrib/gis/forms-api/
+[TEXT]
 GeoDjango Forms API 
 GeoDjango provides some specialized form fields and widgets in order to visually
 display and edit geolocalized data on a map. By default, they use
@@ -191,3 +195,4 @@ tiles.
 Changed in Django 1.11: OpenLayers 2.x has been dropped in favor of OpenLayers 3. If you extend
 the gis/openlayers-osm.html template, please review your custom
 template.
+[VECTOR]

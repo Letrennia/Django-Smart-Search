@@ -1,4 +1,8 @@
+[ID]
+5133
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/models/querysets/
+[TEXT]
 QuerySet API reference 
 This document describes the details of the QuerySet API. It builds on the
 material presented in the model and database
@@ -2961,3 +2965,4 @@ When using to_attr the prefetched result is stored in a list. This can
 provide a significant speed improvement over traditional
 prefetch_related calls which store the cached result within a
 QuerySet instance.
+[VECTOR]

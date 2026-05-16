@@ -1,4 +1,8 @@
+[ID]
+4124
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/contrib/postgres/forms/jsonb/
+[TEXT]
 Source code for django.contrib.postgres.forms.jsonb
 import json
 from django import forms
@@ -101,3 +105,4 @@ class JSONString(str):
         # same as 1 and the order of keys doesn't matter.
         data = self.to_python(data)
         return json.dumps(initial, sort_keys=True) != json.dumps(data, sort_keys=True)
+[VECTOR]

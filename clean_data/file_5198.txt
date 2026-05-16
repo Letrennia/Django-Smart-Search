@@ -1,4 +1,8 @@
+[ID]
+5198
+[URL]
 https://docs.djangoproject.com/en/1.8/topics/i18n/timezones/
+[TEXT]
 Time zones 
 Overview 
 When support for time zones is enabled, Django stores datetime
@@ -687,3 +691,4 @@ How can I see all available time zones?
 pytz provides helpers, including a list of current time zones and a list
 of all available time zones – some of which are only of historical
 interest.
+[VECTOR]

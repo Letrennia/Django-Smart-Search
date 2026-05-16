@@ -1,4 +1,8 @@
+[ID]
+2778
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/db/models/base/
+[TEXT]
 Source code for django.db.models.base
 import copy
 import inspect
@@ -3873,3 +3877,4 @@ def model_unpickle(model_id):
         model = model_id
     return model.__new__(model)
 model_unpickle.__safe_for_unpickle__ = True
+[VECTOR]

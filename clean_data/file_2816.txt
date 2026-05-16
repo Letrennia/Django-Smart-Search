@@ -1,4 +1,8 @@
+[ID]
+2816
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/middleware/security/
+[TEXT]
 Source code for django.middleware.security
 import re
 from django.conf import settings
@@ -97,3 +101,4 @@ from django.utils.deprecation import MiddlewareMixin
                 if isinstance(self.referrer_policy, str) else self.referrer_policy
             ))
         return response
+[VECTOR]

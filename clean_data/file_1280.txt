@@ -1,4 +1,8 @@
+[ID]
+1280
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/db/migrations/operations/fields/
+[TEXT]
 Source code for django.db.migrations.operations.fields
 from django.db.migrations.utils import field_references
 from django.db.models import NOT_PROVIDED
@@ -625,3 +629,4 @@ class RenameField(FieldOperation):
             operation.references_field(self.model_name, self.old_name, app_label)
             or operation.references_field(self.model_name, self.new_name, app_label)
         )
+[VECTOR]

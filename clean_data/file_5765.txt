@@ -1,4 +1,8 @@
+[ID]
+5765
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/core/management/base/
+[TEXT]
 Source code for django.core.management.base
 # -*- coding: utf-8 -*-
 """
@@ -923,3 +927,4 @@ class LabelCommand(BaseCommand):
         string as given on the command line.
         """
         raise NotImplementedError('subclasses of LabelCommand must provide a handle_label() method')
+[VECTOR]

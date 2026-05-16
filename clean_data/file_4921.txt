@@ -1,4 +1,8 @@
+[ID]
+4921
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/contenttypes/admin/
+[TEXT]
 Source code for django.contrib.contenttypes.admin
 from __future__ import unicode_literals
 from functools import partial
@@ -241,3 +245,4 @@ class GenericInlineModelAdminChecks(InlineModelAdminChecks):
     template = 'admin/edit_inline/stacked.html'
 [docs]class GenericTabularInline(GenericInlineModelAdmin):
     template = 'admin/edit_inline/tabular.html'
+[VECTOR]

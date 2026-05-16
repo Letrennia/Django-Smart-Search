@@ -1,4 +1,8 @@
+[ID]
+1974
+[URL]
 https://docs.djangoproject.com/en/4.2/topics/checks/
+[TEXT]
 System check framework 
 The system check framework is a set of static checks for validating Django
 projects. It detects common problems and provides hints for how to fix them.
@@ -161,3 +165,4 @@ If you want to add a check to a model class, the approach is almost the same:
 the only difference is that the check is a classmethod, not an instance method:
 Writing tests 
 Messages are comparable. That allows you to easily write tests:
+[VECTOR]

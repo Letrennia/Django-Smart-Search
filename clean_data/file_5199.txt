@@ -1,4 +1,8 @@
+[ID]
+5199
+[URL]
 https://docs.djangoproject.com/en/1.8/topics/i18n/translation/
+[TEXT]
 Translation 
 Overview 
 In order to make a Django project translatable, you have to add a minimal
@@ -1817,3 +1821,4 @@ to produce the binary .mo files that are used by gettext.
 You can also run django-admin compilemessages
 --settings=path.to.settings to make the compiler process all
 the directories in your LOCALE_PATHS setting.
+[VECTOR]

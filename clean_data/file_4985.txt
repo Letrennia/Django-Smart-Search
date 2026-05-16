@@ -1,4 +1,8 @@
+[ID]
+4985
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/forms/extras/widgets/
+[TEXT]
 Source code for django.forms.extras.widgets
 """
 Extra HTML Widget classes
@@ -257,3 +261,4 @@ def _parse_date_fmt():
         s = Select(choices=choices)
         select_html = s.render(field % name, val, local_attrs)
         return select_html
+[VECTOR]

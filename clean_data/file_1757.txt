@@ -1,4 +1,8 @@
+[ID]
+1757
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/db/models/fields/related_descriptors/
+[TEXT]
 Source code for django.db.models.fields.related_descriptors
 """
 Accessors for related objects.
@@ -2723,3 +2727,4 @@ def create_forward_many_to_many_manager(superclass, rel, reverse):
                     using=db,
                 )
     return ManyRelatedManager
+[VECTOR]

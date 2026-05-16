@@ -1,4 +1,8 @@
+[ID]
+356
+[URL]
 https://docs.djangoproject.com/en/6.0/intro/tutorial02/
+[TEXT]
 Writing your first Django app, part 2 
 This tutorial begins where Tutorial 1 left off.
 We'll set up the database, create your first model, and get a quick
@@ -671,3 +675,4 @@ with the timestamp and username of the person who made the change:
 When you're comfortable with the models API and have familiarized yourself with
 the admin site, read part 3 of this tutorial to learn
 about how to add more views to our polls app.
+[VECTOR]

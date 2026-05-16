@@ -1,4 +1,8 @@
+[ID]
+3224
+[URL]
 https://docs.djangoproject.com/en/3.1/ref/models/constraints/
+[TEXT]
 Constraints reference 
 The classes defined in this module create database constraints. They are added
 in the model Meta.constraints
@@ -155,3 +159,4 @@ Deferrable unique constraints are ignored on MySQL, MariaDB, and SQLite as
 neither supports them.
 Warning
 Deferred unique constraints may lead to a performance penalty.
+[VECTOR]

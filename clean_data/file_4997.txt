@@ -1,4 +1,8 @@
+[ID]
+4997
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/middleware/gzip/
+[TEXT]
 Source code for django.middleware.gzip
 import re
 from django.utils.cache import patch_vary_headers
@@ -75,3 +79,4 @@ re_accepts_gzip = re.compile(r'\bgzip\b')
             response['ETag'] = re.sub('"$', ';gzip"', response['ETag'])
         response['Content-Encoding'] = 'gzip'
         return response
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4787
+[URL]
 https://docs.djangoproject.com/en/2.0/topics/db/sql/
+[TEXT]
 Performing raw SQL queries 
 When the model query APIs don't go far enough, you
 can fall back to writing raw SQL. Django gives you two ways of performing raw
@@ -345,3 +349,4 @@ BEGIN
 END;
 This will call it:
 Changed in Django 2.0: The kparams argument was added.
+[VECTOR]

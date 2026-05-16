@@ -1,4 +1,8 @@
+[ID]
+685
+[URL]
 https://docs.djangoproject.com/en/5.2/ref/contrib/gis/install/spatialite/
+[TEXT]
 Installing SpatiaLite 
 SpatiaLite adds spatial support to SQLite, turning it into a full-featured
 spatial database.
@@ -109,3 +113,4 @@ Finally, for GeoDjango to be able to find the SpatiaLite library, set
 the SPATIALITE_LIBRARY_PATH setting to its path. This will be within
 your brew install path, which you can check with:
 Using this brew install path, the full path can be constructed like this:
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+1261
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/core/checks/messages/
+[TEXT]
 Source code for django.core.checks.messages
 # Levels
 DEBUG = 10
@@ -137,3 +141,4 @@ class Error(CheckMessage):
 class Critical(CheckMessage):
     def __init__(self, *args, **kwargs):
         super().__init__(CRITICAL, *args, **kwargs)
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5671
+[URL]
 https://docs.djangoproject.com/en/1.10/internals/git/
+[TEXT]
 The Django source code repository 
 When deploying a Django application into a real production environment, you
 will almost always want to use an official packaged release of Django.
@@ -301,3 +305,4 @@ branches, used for Google Summer of Code projects.
 Tags 
 Each Django release is tagged and signed by a releaser.
 The tags can be found on GitHub's tags page.
+[VECTOR]

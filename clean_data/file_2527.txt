@@ -1,4 +1,8 @@
+[ID]
+2527
+[URL]
 https://docs.djangoproject.com/en/4.0/ref/files/storage/
+[TEXT]
 File storage API 
 Getting the current storage class 
 Django provides two convenient ways to access the current storage class:
@@ -269,3 +273,4 @@ url(name)
 Returns the URL where the contents of the file referenced by name
 can be accessed. For storage systems that don't support access by URL
 this will raise NotImplementedError instead.
+[VECTOR]

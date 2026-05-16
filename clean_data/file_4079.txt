@@ -1,4 +1,8 @@
+[ID]
+4079
+[URL]
 https://docs.djangoproject.com/en/2.1/intro/install/
+[TEXT]
 Quick install guide 
 Before you can use Django, you'll need to get it installed. We have a
 complete installation guide that covers all the
@@ -83,3 +87,4 @@ Then at the Python prompt, try to import Django:
 You may have another version of Django installed.
 That's it! 
 That's it – you can now move onto the tutorial.
+[VECTOR]

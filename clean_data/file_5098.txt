@@ -1,4 +1,8 @@
+[ID]
+5098
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/contrib/postgres/operations/
+[TEXT]
 Database migration operations 
 All of these operations are available from
 the django.contrib.postgres.operations module.
@@ -33,3 +37,4 @@ UnaccentExtension
 class UnaccentExtension[source] 
 A subclass of CreateExtension
 which will install the unaccent extension.
+[VECTOR]

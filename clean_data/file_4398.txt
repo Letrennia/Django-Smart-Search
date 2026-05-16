@@ -1,4 +1,8 @@
+[ID]
+4398
+[URL]
 https://docs.djangoproject.com/en/2.1/topics/http/middleware/
+[TEXT]
 Middleware 
 Middleware is a framework of hooks into Django's request/response processing.
 It's a light, low-level "plugin" system for globally altering Django's input
@@ -411,3 +415,4 @@ raised from a middleware will immediately be converted to the appropriate
 HTTP response, and then the next middleware in line will see that
 response. Middleware are never skipped due to a middleware raising an
 exception.
+[VECTOR]

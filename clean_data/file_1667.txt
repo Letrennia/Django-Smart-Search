@@ -1,4 +1,8 @@
+[ID]
+1667
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/auth/decorators/
+[TEXT]
 Source code for django.contrib.auth.decorators
 from functools import wraps
 from urllib.parse import urlsplit
@@ -223,3 +227,4 @@ def permission_required(perm, login_url=None, raise_exception=False):
                 return False
         return user_passes_test(check_perms, login_url=login_url)(view_func)
     return decorator
+[VECTOR]

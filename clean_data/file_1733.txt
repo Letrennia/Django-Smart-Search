@@ -1,4 +1,8 @@
+[ID]
+1733
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/core/files/storage/filesystem/
+[TEXT]
 Source code for django.core.files.storage.filesystem
 import os
 from datetime import UTC, datetime
@@ -391,3 +395,4 @@ class FileSystemStorage(Storage, StorageSettingsMixin):
         return self._datetime_from_timestamp(os.path.getctime(self.path(name)))
     def get_modified_time(self, name):
         return self._datetime_from_timestamp(os.path.getmtime(self.path(name)))
+[VECTOR]

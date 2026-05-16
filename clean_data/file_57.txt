@@ -1,4 +1,8 @@
+[ID]
+57
+[URL]
 https://docs.djangoproject.com/en/dev/internals/contributing/triaging-tickets/
+[TEXT]
 Triaging tickets 
 Django uses Trac for managing the work on the code base. Trac is a
 community-tended garden of the bugs people have found and the features Django
@@ -747,3 +751,4 @@ Benchmarking and performance review. There are benchmarking tests, but
 sometimes changes require additional testing.
 Utilize django-asv benchmarks to check performance over time.
 Run benchmark tests by labeling the pull request with "benchmark".
+[VECTOR]

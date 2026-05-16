@@ -1,4 +1,8 @@
+[ID]
+554
+[URL]
 https://docs.djangoproject.com/en/6.0/topics/templates/
+[TEXT]
 Templates 
 Being a web framework, Django needs a convenient way to generate HTML
 dynamically. The most common approach relies on templates. A template contains
@@ -717,3 +721,4 @@ or filter in Django templates can be achieved by calling a function in Jinja2
 templates, as shown in the example above. Jinja2's global namespace removes the
 need for template context processors. The Django template language doesn't have
 an equivalent of Jinja2 tests.
+[VECTOR]

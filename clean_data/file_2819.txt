@@ -1,4 +1,8 @@
+[ID]
+2819
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/template/backends/jinja2/
+[TEXT]
 Source code for django.template.backends.jinja2
 from pathlib import Path
 import jinja2
@@ -207,3 +211,4 @@ def get_exception_info(exception):
         'top': top,
         'bottom': bottom,
     }
+[VECTOR]

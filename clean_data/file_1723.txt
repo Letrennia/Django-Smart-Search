@@ -1,4 +1,8 @@
+[ID]
+1723
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/syndication/views/
+[TEXT]
 Source code for django.contrib.syndication.views
 from inspect import getattr_static, unwrap
 from django.contrib.sites.shortcuts import get_current_site
@@ -415,3 +419,4 @@ class Feed:
                 **self.item_extra_kwargs(item),
             )
         return feed
+[VECTOR]

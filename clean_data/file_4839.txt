@@ -1,4 +1,8 @@
+[ID]
+4839
+[URL]
 https://docs.djangoproject.com/en/1.8/howto/custom-lookups/
+[TEXT]
 Custom Lookups 
 New in Django 1.7. 
 Django offers a wide variety of built-in lookups for
@@ -339,3 +343,4 @@ mytransform.get_lookup('mylookup').
 myfield.get_lookup('mytransform'), which will fail, so it will fall back
 to calling myfield.get_transform('mytransform') and then
 mytransform.get_lookup('exact').
+[VECTOR]

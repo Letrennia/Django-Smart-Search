@@ -1,4 +1,8 @@
+[ID]
+1748
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/db/models/aggregates/
+[TEXT]
 Source code for django.db.models.aggregates
 """
 Classes to represent the definitions of aggregate functions.
@@ -675,3 +679,4 @@ class Variance(NumericOutputFieldMixin, Aggregate):
         super().__init__(expression, **extra)
     def _get_repr_options(self):
         return {**super()._get_repr_options(), "sample": self.function == "VAR_SAMP"}
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5373
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/forms/boundfield/
+[TEXT]
 Source code for django.forms.boundfield
 from __future__ import unicode_literals
 import datetime
@@ -525,3 +529,4 @@ class BoundWidget(object):
     @property
     def choice_label(self):
         return self.data['label']
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+468
+[URL]
 https://docs.djangoproject.com/en/6.0/ref/models/options/
+[TEXT]
 Model Meta options 
 This document explains all the possible metadata options that you can give your model in its internal
 class Meta.
@@ -527,3 +531,4 @@ label_lower
 Options.label_lower 
 Representation of the model, returns app_label.model_name, e.g.
 'polls.question'.
+[VECTOR]

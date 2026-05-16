@@ -1,4 +1,8 @@
+[ID]
+2823
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/template/engine/
+[TEXT]
 Source code for django.template.engine
 import functools
 from django.core.exceptions import ImproperlyConfigured
@@ -319,3 +323,4 @@ from .library import import_library
                 continue
         # If we get here, none of the templates could be loaded
         raise TemplateDoesNotExist(', '.join(not_found))
+[VECTOR]

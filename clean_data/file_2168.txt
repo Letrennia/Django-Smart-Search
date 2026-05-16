@@ -1,4 +1,8 @@
+[ID]
+2168
+[URL]
 https://docs.djangoproject.com/en/4.1/ref/contrib/admin/actions/
+[TEXT]
 Admin actions 
 The basic workflow of Django's admin is, in a nutshell, "select an object,
 then change it." This works well for a majority of use cases. However, if you
@@ -355,3 +359,4 @@ Use of this decorator is not compulsory to make an action function, but it
 can be useful to use it without arguments as a marker in your source to
 identify the purpose of the function:
 In this case it will add no attributes to the function.
+[VECTOR]

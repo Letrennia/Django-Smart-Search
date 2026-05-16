@@ -1,4 +1,8 @@
+[ID]
+1718
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/sites/middleware/
+[TEXT]
 Source code for django.contrib.sites.middleware
 from django.utils.deprecation import MiddlewareMixin
 from .shortcuts import get_current_site
@@ -19,3 +23,4 @@ class CurrentSiteMiddleware(MiddlewareMixin):
     """
     def process_request(self, request):
         request.site = get_current_site(request)
+[VECTOR]

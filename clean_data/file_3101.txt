@@ -1,4 +1,8 @@
+[ID]
+3101
+[URL]
 https://docs.djangoproject.com/en/3.1/internals/howto-release-django/
+[TEXT]
 How is Django Formed? 
 This document explains how to release Django.
 Please, keep these instructions up-to-date if you make changes! The point
@@ -473,3 +477,4 @@ Some examples:
 (1, 2, 1, 'final', 0) → "1.2.1"
 (1, 3, 0, 'alpha', 0) → "1.3 pre-alpha"
 (1, 3, 0, 'beta', 2) → "1.3 beta 2"
+[VECTOR]

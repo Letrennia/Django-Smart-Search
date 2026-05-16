@@ -1,4 +1,8 @@
+[ID]
+5592
+[URL]
 https://docs.djangoproject.com/en/1.11/topics/http/file-uploads/
+[TEXT]
 File Uploads 
 When Django handles a file upload, the file data ends up placed in
 request.FILES (for more on the
@@ -295,3 +299,4 @@ csrf_protect() on the function that
 actually processes the request.  Note that this means that the handlers may
 start receiving the file upload before the CSRF checks have been done.
 Example code:
+[VECTOR]

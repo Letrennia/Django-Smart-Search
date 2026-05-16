@@ -1,4 +1,8 @@
+[ID]
+5211
+[URL]
 https://docs.djangoproject.com/en/1.8/topics/signing/
+[TEXT]
 Cryptographic signing 
 The golden rule of Web application security is to never trust data from
 untrusted sources. Sometimes it can be useful to pass data through an
@@ -151,3 +155,4 @@ object is signed using TimestampSigner.
 loads(string, key=None, salt='django.core.signing', max_age=None)[source] 
 Reverse of dumps(), raises BadSignature if signature fails.
 Checks max_age (in seconds) if given.
+[VECTOR]

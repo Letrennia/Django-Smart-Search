@@ -1,4 +1,8 @@
+[ID]
+2448
+[URL]
 https://docs.djangoproject.com/en/4.0/_modules/django/utils/log/
+[TEXT]
 Source code for django.utils.log
 import logging
 import logging.config  # needed when logging_config doesn't start with logging.config
@@ -423,3 +427,4 @@ def log_response(
         exc_info=exc_info,
     )
     response._has_been_logged = True
+[VECTOR]

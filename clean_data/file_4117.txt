@@ -1,4 +1,8 @@
+[ID]
+4117
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/contrib/postgres/fields/array/
+[TEXT]
 Source code for django.contrib.postgres.fields.array
 import json
 from django.contrib.postgres import lookups
@@ -503,3 +507,4 @@ class SliceTransformFactory:
         self.end = end
     def __call__(self, *args, **kwargs):
         return SliceTransform(self.start, self.end, *args, **kwargs)
+[VECTOR]

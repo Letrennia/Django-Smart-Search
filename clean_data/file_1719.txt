@@ -1,4 +1,8 @@
+[ID]
+1719
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/sites/models/
+[TEXT]
 Source code for django.contrib.sites.models
 import string
 from django.core.exceptions import ImproperlyConfigured, ValidationError
@@ -195,3 +199,4 @@ def clear_site_cache(sender, **kwargs):
         pass
 pre_save.connect(clear_site_cache, sender=Site)
 pre_delete.connect(clear_site_cache, sender=Site)
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5062
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/contrib/admin/actions/
+[TEXT]
 Admin actions 
 The basic workflow of Django's admin is, in a nutshell, "select an object,
 then change it." This works well for a majority of use cases. However, if you
@@ -305,3 +309,4 @@ Most of the time you'll use this method to conditionally remove actions from
 the list gathered by the superclass. For example, if I only wanted users
 whose names begin with 'J' to be able to delete objects in bulk, I could do
 the following:
+[VECTOR]

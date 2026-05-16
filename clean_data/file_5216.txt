@@ -1,4 +1,8 @@
+[ID]
+5216
+[URL]
 https://docs.djangoproject.com/en/1.8/topics/testing/tools/
+[TEXT]
 Testing tools 
 Django provides a small set of tools that come in handy when writing tests.
 The test client 
@@ -1863,3 +1867,4 @@ supports transactions (e.g., it would run under PostgreSQL, but not
 under MySQL with MyISAM tables):
 Changed in Django 1.7: skipUnlessDBFeature can now be used to decorate a TestCase class.
 Changed in Django 1.8: skipUnlessDBFeature can accept multiple feature strings.
+[VECTOR]

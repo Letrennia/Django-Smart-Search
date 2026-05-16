@@ -1,4 +1,8 @@
+[ID]
+170
+[URL]
 https://docs.djangoproject.com/en/dev/ref/forms/fields/
+[TEXT]
 Form fields 
 class Field[source] 
 When you create a Form class, the most important part is defining the
@@ -1733,3 +1737,4 @@ Takes an instance of Form and the name of the field.
 The returned BoundField instance will be used when accessing the
 field in a template.
 See Customizing BoundField for examples of overriding a BoundField.
+[VECTOR]

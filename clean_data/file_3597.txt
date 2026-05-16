@@ -1,4 +1,8 @@
+[ID]
+3597
+[URL]
 https://docs.djangoproject.com/en/3.0/topics/logging/
+[TEXT]
 Logging 
 A quick logging primer 
 Django uses Python's builtin logging module to perform system logging.
@@ -753,3 +757,4 @@ above.
 See also Configuring logging to learn how you can
 complement or replace this default logging configuration defined in
 django/utils/log.py.
+[VECTOR]

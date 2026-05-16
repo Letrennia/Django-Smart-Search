@@ -1,4 +1,8 @@
+[ID]
+2917
+[URL]
 https://docs.djangoproject.com/en/3.2/ref/contrib/postgres/indexes/
+[TEXT]
 PostgreSQL specific model indexes 
 The following are PostgreSQL specific indexes
 available from the django.contrib.postgres.indexes module.
@@ -183,3 +187,4 @@ you need to add 'django.contrib.postgres' in your
 INSTALLED_APPS. Set the name parameter to the name of the
 operator class.
 creates an index on Lower('username') using varchar_pattern_ops.
+[VECTOR]

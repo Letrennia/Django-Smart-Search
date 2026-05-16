@@ -1,4 +1,8 @@
+[ID]
+158
+[URL]
 https://docs.djangoproject.com/en/dev/ref/contrib/syndication/
+[TEXT]
 The syndication feed framework 
 Django comes with a high-level syndication-feed-generating framework for
 creating RSS and Atom feeds.
@@ -597,3 +601,4 @@ Similarly, if you'd like to use a different media attribute than screen
 (Django's default), you can use the
 Stylesheet class again:
 Any of these options can be combined when using multiple stylesheets:
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+2736
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/contrib/gis/measure/
+[TEXT]
 Source code for django.contrib.gis.measure
 # Copyright (c) 2007, Robert Coup <robert.coup@onetrackmind.co.nz>
 # All rights reserved.
@@ -595,3 +599,4 @@ class MeasureBase:
 # Shortcuts
 D = Distance
 A = Area
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+1351
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/utils/decorators/
+[TEXT]
 Source code for django.utils.decorators
 "Functions that help with dynamically creating decorators for views."
 from functools import partial, update_wrapper, wraps
@@ -373,3 +377,4 @@ def async_only_middleware(func):
     func.sync_capable = False
     func.async_capable = True
     return func
+[VECTOR]

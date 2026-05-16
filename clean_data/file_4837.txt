@@ -1,4 +1,8 @@
+[ID]
+4837
+[URL]
 https://docs.djangoproject.com/en/1.8/howto/auth-remote-user/
+[TEXT]
 Authentication using REMOTE_USER 
 This document describes how to make use of external authentication sources
 (where the Web server sets the REMOTE_USER environment variable) in your
@@ -113,3 +117,4 @@ server, not directly from an HTTP request header.
 If you need more control, you can create your own authentication backend
 that inherits from RemoteUserBackend and
 override one or more of its attributes and methods.
+[VECTOR]

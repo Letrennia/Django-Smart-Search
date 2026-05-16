@@ -1,4 +1,8 @@
+[ID]
+1500
+[URL]
 https://docs.djangoproject.com/en/5.0/topics/
+[TEXT]
 Using Django 
 Introductions to all the key parts of Django you'll need to know:
 How to install Django
@@ -337,3 +341,4 @@ Asynchronous support
 Async views
 Async safety
 Async adapter functions
+[VECTOR]

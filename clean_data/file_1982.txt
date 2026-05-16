@@ -1,4 +1,8 @@
+[ID]
+1982
+[URL]
 https://docs.djangoproject.com/en/4.2/topics/db/aggregation/
+[TEXT]
 Aggregation 
 The topic guide on Django's database-abstraction API
 described the way that you can use Django queries that create,
@@ -545,3 +549,4 @@ no books can be found:
 Under the hood, the default argument is implemented
 by wrapping the aggregate function with
 Coalesce.
+[VECTOR]

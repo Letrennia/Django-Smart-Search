@@ -1,5 +1,10 @@
+[ID]
+808
+[URL]
 https://docs.djangoproject.com/en/5.2/topics/http/generic-views/
+[TEXT]
 Generic views 
 See Built-in class-based views API.
 Generic views 
 See Built-in class-based views API.
+[VECTOR]

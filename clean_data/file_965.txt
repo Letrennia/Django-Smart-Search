@@ -1,4 +1,8 @@
+[ID]
+965
+[URL]
 https://docs.djangoproject.com/en/5.1/ref/contrib/gis/tutorial/
+[TEXT]
 GeoDjango Tutorial 
 Introduction 
 GeoDjango is an included contrib module for Django that turns it into a
@@ -735,3 +739,4 @@ The PROJ datum shifting files must be installed (see the PROJ
 installation instructions for more details).
 If you meet this requirement, then use the GISModelAdmin option class
 in your admin.py file:
+[VECTOR]

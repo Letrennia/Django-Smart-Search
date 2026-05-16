@@ -1,4 +1,8 @@
+[ID]
+5382
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/middleware/cache/
+[TEXT]
 Source code for django.middleware.cache
 """
 Cache middleware. If enabled, each Django-powered page will be cached based on
@@ -305,3 +309,4 @@ class CacheMiddleware(UpdateCacheMiddleware, FetchFromCacheMiddleware):
             cache_timeout = settings.CACHE_MIDDLEWARE_SECONDS
         self.cache_timeout = cache_timeout
         self.cache = caches[self.cache_alias]
+[VECTOR]

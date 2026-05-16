@@ -1,4 +1,8 @@
+[ID]
+5013
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/test/runner/
+[TEXT]
 Source code for django.test.runner
 import logging
 import os
@@ -641,3 +645,4 @@ def setup_databases(verbosity, interactive, keepdb=False, debug_sql=False, **kwa
         for alias in connections:
             connections[alias].force_debug_cursor = True
     return old_names, mirrors
+[VECTOR]

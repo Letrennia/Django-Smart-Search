@@ -1,4 +1,8 @@
+[ID]
+5079
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/contrib/gis/install/
+[TEXT]
 GeoDjango Installation 
 Overview 
 In general, GeoDjango installation requires:
@@ -559,3 +563,4 @@ Finally, install Django on your system.
 ctypes.util to locate shared libraries.
 [2]The psycopg2 Windows installers are packaged and maintained by
 Jason Erickson.
+[VECTOR]

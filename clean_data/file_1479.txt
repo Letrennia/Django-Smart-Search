@@ -1,4 +1,8 @@
+[ID]
+1479
+[URL]
 https://docs.djangoproject.com/en/5.0/ref/models/querysets/
+[TEXT]
 QuerySet API reference 
 This document describes the details of the QuerySet API. It builds on the
 material presented in the model and database
@@ -4063,3 +4067,4 @@ FilteredRelation doesn't support:
 QuerySet.only() and prefetch_related().
 A GenericForeignKey
 inherited from a parent model.
+[VECTOR]

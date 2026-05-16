@@ -1,4 +1,8 @@
+[ID]
+4971
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/db/models/deletion/
+[TEXT]
 Source code for django.db.models.deletion
 from collections import OrderedDict
 from itertools import chain
@@ -559,3 +563,4 @@ class Collector(object):
         for model, instances in six.iteritems(self.data):
             for instance in instances:
                 setattr(instance, model._meta.pk.attname, None)
+[VECTOR]

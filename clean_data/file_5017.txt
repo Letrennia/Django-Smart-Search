@@ -1,4 +1,8 @@
+[ID]
+5017
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/utils/datastructures/
+[TEXT]
 Source code for django.utils.datastructures
 import copy
 import warnings
@@ -893,3 +897,4 @@ class DictWrapper(dict):
         if use_func:
             return self.func(value)
         return value
+[VECTOR]

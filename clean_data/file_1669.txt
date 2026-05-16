@@ -1,4 +1,8 @@
+[ID]
+1669
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/auth/hashers/
+[TEXT]
 Source code for django.contrib.auth.hashers
 import base64
 import binascii
@@ -1173,3 +1177,4 @@ class MD5PasswordHasher(BasePasswordHasher):
         return must_update_salt(decoded["salt"], self.salt_entropy)
     def harden_runtime(self, password, encoded):
         pass
+[VECTOR]

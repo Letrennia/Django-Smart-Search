@@ -1,4 +1,8 @@
+[ID]
+2880
+[URL]
 https://docs.djangoproject.com/en/3.2/ref/contrib/admin/javascript/
+[TEXT]
 JavaScript customizations in the admin 
 Inline form events 
 You may want to execute some JavaScript when an inline form is added or removed
@@ -40,4 +44,5 @@ various operations in the change form and we need that to be rendered too.
 Sometimes you'll need to work with jQuery plugins that are not registered
 in the django.jQuery namespace. To do that, change how the code listens for
 events. Instead of wrapping the listener in the django.jQuery namespace,
-listen to the event triggered from there. 
+listen to the event triggered from there.
+[VECTOR]

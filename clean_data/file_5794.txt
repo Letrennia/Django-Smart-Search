@@ -1,4 +1,8 @@
+[ID]
+5794
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/forms/models/
+[TEXT]
 Source code for django.forms.models
 """
 Helper functions for creating Form classes from Django models
@@ -2315,3 +2319,4 @@ def modelform_defines_fields(form_class):
             (form_class._meta.fields is not None or
              form_class._meta.exclude is not None)
             ))
+[VECTOR]

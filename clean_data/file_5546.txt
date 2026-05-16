@@ -1,4 +1,8 @@
+[ID]
+5546
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/unicode/
+[TEXT]
 Unicode data 
 Django natively supports Unicode data everywhere. Providing your database can
 somehow store the data, you can safely pass around Unicode strings to
@@ -535,3 +539,4 @@ you cannot control.
 Django does not decode the data of file uploads, because that data is normally
 treated as collections of bytes, rather than strings. Any automatic decoding
 there would alter the meaning of the stream of bytes.
+[VECTOR]

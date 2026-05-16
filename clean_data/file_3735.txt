@@ -1,4 +1,8 @@
+[ID]
+3735
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/core/files/storage/
+[TEXT]
 Source code for django.core.files.storage
 import os
 import pathlib
@@ -647,3 +651,4 @@ class FileSystemStorage(Storage):
     def _setup(self):
         self._wrapped = get_storage_class()()
 default_storage = DefaultStorage()
+[VECTOR]

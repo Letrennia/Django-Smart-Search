@@ -1,4 +1,8 @@
+[ID]
+4996
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/middleware/csrf/
+[TEXT]
 Source code for django.middleware.csrf
 """
 Cross Site Request Forgery Middleware.
@@ -365,3 +369,4 @@ def _sanitize_token(token):
         patch_vary_headers(response, ('Cookie',))
         response.csrf_processing_done = True
         return response
+[VECTOR]

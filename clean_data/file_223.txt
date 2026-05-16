@@ -1,4 +1,8 @@
+[ID]
+223
+[URL]
 https://docs.djangoproject.com/en/dev/topics/class-based-views/generic-editing/
+[TEXT]
 Form handling with class-based views 
 Form processing generally has 3 paths:
 Initial GET (blank or prepopulated form)
@@ -199,3 +203,4 @@ anything else is fine. This means request.accepts("text/html") will be
 True.
 To determine the correct format, taking into consideration the client's
 preference, use django.http.HttpRequest.get_preferred_type():
+[VECTOR]

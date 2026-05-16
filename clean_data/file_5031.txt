@@ -1,4 +1,8 @@
+[ID]
+5031
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/utils/tzinfo/
+[TEXT]
 Source code for django.utils.tzinfo
 "Implementation of tzinfo classes for use with datetime.datetime."
 from __future__ import unicode_literals
@@ -193,3 +197,4 @@ warnings.warn(
             stamp = time.mktime(tt)
         tt = time.localtime(stamp)
         return tt.tm_isdst > 0
+[VECTOR]

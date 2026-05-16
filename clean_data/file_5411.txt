@@ -1,4 +1,8 @@
+[ID]
+5411
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/utils/dateparse/
+[TEXT]
 Source code for django.utils.dateparse
 """Functions to parse datetime objects."""
 # We're using regular expressions rather than time.strptime because:
@@ -217,3 +221,4 @@ iso8601_duration_re = re.compile(
             kw['microseconds'] = '-' + kw['microseconds']
         kw = {k: float(v) for k, v in six.iteritems(kw) if v is not None}
         return sign * datetime.timedelta(**kw)
+[VECTOR]

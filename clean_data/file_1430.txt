@@ -1,4 +1,8 @@
+[ID]
+1430
+[URL]
 https://docs.djangoproject.com/en/5.0/ref/contrib/messages/
+[TEXT]
 The messages framework 
 Quite commonly in web applications, you need to display a one-time
 notification message (also known as "flash message") to the user after
@@ -479,3 +483,4 @@ expected_messages is a list of
 Message objects.
 By default, the comparison is ordering dependent. You can disable this by
 setting the ordered argument to False.
+[VECTOR]

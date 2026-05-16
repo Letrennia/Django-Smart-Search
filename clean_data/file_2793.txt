@@ -1,4 +1,8 @@
+[ID]
+2793
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/db/models/manager/
+[TEXT]
 Source code for django.db.models.manager
 import copy
 import inspect
@@ -331,3 +335,4 @@ class EmptyManager(Manager):
         self.model = model
     def get_queryset(self):
         return super().get_queryset().none()
+[VECTOR]

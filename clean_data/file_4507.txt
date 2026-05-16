@@ -1,4 +1,8 @@
+[ID]
+4507
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/contrib/admin/sites/
+[TEXT]
 Source code for django.contrib.admin.sites
 from functools import update_wrapper
 from weakref import WeakSet
@@ -889,3 +893,4 @@ class NotRegistered(Exception):
 # This global object represents the default admin site, for the common case.
 # You can instantiate AdminSite in your own code to create a custom admin site.
 site = AdminSite()
+[VECTOR]

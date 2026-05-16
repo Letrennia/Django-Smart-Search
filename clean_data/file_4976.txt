@@ -1,4 +1,8 @@
+[ID]
+4976
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/db/models/functions/
+[TEXT]
 Source code for django.db.models.functions
 """
 Classes that represent database functions.
@@ -221,3 +225,4 @@ class ConcatPair(Func):
     function = 'UPPER'
     def __init__(self, expression, **extra):
         super(Upper, self).__init__(expression, **extra)
+[VECTOR]

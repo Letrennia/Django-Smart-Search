@@ -1,4 +1,8 @@
+[ID]
+1796
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/template/context_processors/
+[TEXT]
 Source code for django.template.context_processors
 """
 A set of request processors that return dictionaries to be merged into a
@@ -155,3 +159,4 @@ def csp(request):
     Add the CSP nonce to the context.
     """
     return {"csp_nonce": get_nonce(request)}
+[VECTOR]

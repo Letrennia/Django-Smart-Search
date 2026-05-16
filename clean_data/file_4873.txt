@@ -1,4 +1,8 @@
+[ID]
+4873
+[URL]
 https://docs.djangoproject.com/en/1.8/internals/contributing/writing-code/unit-tests/
+[TEXT]
 Unit tests 
 Django comes with a test suite of its own, in the tests directory of the
 code base. It's our policy to make sure all tests pass at all times.
@@ -339,3 +343,4 @@ SQL logging using the --debug-sql option. If you
 combine this with --verbosity=2, all SQL queries will be output.
 $ ./runtests.py basic --debug-sql
 New in Django 1.8: The --reverse and --debug-sql options were added.
+[VECTOR]

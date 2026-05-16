@@ -1,4 +1,8 @@
+[ID]
+106
+[URL]
 https://docs.djangoproject.com/en/dev/ref/contrib/
+[TEXT]
 contrib packages 
 Django aims to follow Python's "batteries included" philosophy. It ships with a variety of extra, optional tools
 that solve common web development problems.
@@ -141,3 +145,4 @@ See the sitemaps documentation.
 syndication 
 A framework for generating syndication feeds, in RSS and Atom, quite easily.
 See the syndication documentation.
+[VECTOR]

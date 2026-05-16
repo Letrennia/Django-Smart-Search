@@ -1,4 +1,8 @@
+[ID]
+5730
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/gis/geos/polygon/
+[TEXT]
 Source code for django.contrib.gis.geos.polygon
 from ctypes import byref, c_uint
 from django.contrib.gis.geos import prototypes as capi
@@ -307,3 +311,4 @@ from django.utils.six.moves import range
             for i in range(self.num_interior_rings)
         )
         return "<Polygon><outerBoundaryIs>%s</outerBoundaryIs>%s</Polygon>" % (self[0].kml, inner_kml)
+[VECTOR]

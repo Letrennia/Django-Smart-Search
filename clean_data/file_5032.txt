@@ -1,4 +1,8 @@
+[ID]
+5032
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/views/debug/
+[TEXT]
 Source code for django.views.debug
 from __future__ import unicode_literals
 import os
@@ -1849,3 +1853,4 @@ DEFAULT_URLCONF_TEMPLATE = """
 </div>
 </body></html>
 """
+[VECTOR]

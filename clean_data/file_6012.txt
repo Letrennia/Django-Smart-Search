@@ -1,4 +1,8 @@
+[ID]
+6012
+[URL]
 https://docs.djangoproject.com/en/1.10/topics/i18n/
+[TEXT]
 Internationalization and localization 
 Overview 
 The goal of internationalization and localization is to allow a single Web
@@ -97,3 +101,4 @@ A literal that can be translated.
 format file
 A format file is a Python module that defines the data formats for a given
 locale.
+[VECTOR]

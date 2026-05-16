@@ -1,4 +1,8 @@
+[ID]
+5645
+[URL]
 https://docs.djangoproject.com/en/1.10/howto/initial-data/
+[TEXT]
 Providing initial data for models 
 It's sometimes useful to pre-populate your database with hard-coded data when
 you're first setting up an app. You can provide initial data with fixtures or
@@ -125,3 +129,4 @@ If you want to automatically load initial data for an app, don't use fixtures.
 Instead, create a migration for your application with
 RunPython or
 RunSQL operations.
+[VECTOR]

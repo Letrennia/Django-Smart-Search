@@ -1,4 +1,8 @@
+[ID]
+5126
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/models/database-functions/
+[TEXT]
 Database Functions 
 New in Django 1.8. 
 The classes documented below provide a way for users to use functions provided
@@ -93,3 +97,4 @@ Upper
 class Upper(expression, **extra)[source] 
 Accepts a single text field or expression and returns the uppercase
 representation.
+[VECTOR]

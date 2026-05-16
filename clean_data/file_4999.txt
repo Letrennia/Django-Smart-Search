@@ -1,4 +1,8 @@
+[ID]
+4999
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/middleware/locale/
+[TEXT]
 Source code for django.middleware.locale
 "This is the locale selecting middleware that will look at accept headers"
 from django.conf import settings
@@ -133,3 +137,4 @@ from django.utils.cache import patch_vary_headers
         at root level of the urlpatterns, else it returns `False`.
         """
         return self._is_language_prefix_patterns_used
+[VECTOR]

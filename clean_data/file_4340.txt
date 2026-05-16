@@ -1,4 +1,8 @@
+[ID]
+4340
+[URL]
 https://docs.djangoproject.com/en/2.1/ref/request-response/
+[TEXT]
 Request and response objects 
 Quick overview 
 Django uses request and response objects to pass state through the system.
@@ -1227,3 +1231,4 @@ New in Django 2.1.
 This method is automatically called during the response initialization and
 set various headers (Content-Length, Content-Type, and
 Content-Disposition) depending on open_file.
+[VECTOR]

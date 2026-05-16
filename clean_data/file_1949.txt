@@ -1,4 +1,8 @@
+[ID]
+1949
+[URL]
 https://docs.djangoproject.com/en/4.2/ref/request-response/
+[TEXT]
 Request and response objects 
 Quick overview 
 Django uses request and response objects to pass state through the system.
@@ -1431,3 +1435,4 @@ class HttpResponseBase[source]
 The HttpResponseBase class is common to all Django responses.
 It should not be used to create responses directly, but it can be
 useful for type-checking.
+[VECTOR]

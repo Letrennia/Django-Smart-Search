@@ -1,4 +1,8 @@
+[ID]
+1566
+[URL]
 https://docs.djangoproject.com/en/4.2/contents/
+[TEXT]
 Django documentation contents 
 Getting started
 Django at a glance
@@ -1465,3 +1469,4 @@ Indices, glossary and tables
 Index
 Module Index
 Glossary
+[VECTOR]

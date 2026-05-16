@@ -1,4 +1,8 @@
+[ID]
+5751
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/sitemaps/
+[TEXT]
 Source code for django.contrib.sitemaps
 from django.apps import apps as django_apps
 from django.conf import settings
@@ -259,3 +263,4 @@ class SitemapNotFound(Exception):
             return getattr(item, self.date_field)
         return None
 default_app_config = 'django.contrib.sitemaps.apps.SiteMapsConfig'
+[VECTOR]

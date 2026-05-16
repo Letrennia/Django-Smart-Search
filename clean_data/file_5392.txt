@@ -1,4 +1,8 @@
+[ID]
+5392
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/template/backends/jinja2/
+[TEXT]
 Source code for django.template.backends.jinja2
 # Since this package contains a "django" module, this is required on Python 2.
 from __future__ import absolute_import
@@ -189,3 +193,4 @@ def get_exception_info(exception):
         'top': top,
         'bottom': bottom,
     }
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+68
+[URL]
 https://docs.djangoproject.com/en/dev/internals/mailing-lists/
+[TEXT]
 Mailing lists and Forum 
 Important
 Please report security issues only to
@@ -91,3 +95,4 @@ The Internals category of the official Forum is now the preferred
 venue for discussing the development of Django.
 This was used for discussions about the development of Django itself.
 django-developers mailing archive
+[VECTOR]

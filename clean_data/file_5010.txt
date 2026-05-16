@@ -1,4 +1,8 @@
+[ID]
+5010
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/template/response/
+[TEXT]
 Source code for django.template.response
 import warnings
 from django.http import HttpResponse
@@ -347,3 +351,4 @@ class ContentNotRenderedError(Exception):
         super(TemplateResponse, self).__init__(
             template, context, content_type, status, charset, using)
         self._request = request
+[VECTOR]

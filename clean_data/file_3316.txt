@@ -1,4 +1,8 @@
+[ID]
+3316
+[URL]
 https://docs.djangoproject.com/en/3.1/topics/testing/advanced/
+[TEXT]
 Advanced testing topics 
 The request factory 
 class RequestFactory 
@@ -803,3 +807,4 @@ Note that some Django code was executed while running tests, but it is not
 listed here because of the source flag passed to the previous command.
 For more options like annotated HTML listings detailing missed lines, see the
 coverage.py docs.
+[VECTOR]

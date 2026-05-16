@@ -1,4 +1,8 @@
+[ID]
+2761
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/core/exceptions/
+[TEXT]
 Source code for django.core.exceptions
 """
 Global Django exception and warning classes.
@@ -331,3 +335,4 @@ NON_FIELD_ERRORS = '__all__'
 [docs]class SynchronousOnlyOperation(Exception):
     """The user tried to call a sync-only function from an async context."""
     pass
+[VECTOR]

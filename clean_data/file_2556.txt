@@ -1,4 +1,8 @@
+[ID]
+2556
+[URL]
 https://docs.djangoproject.com/en/4.0/ref/schema-editor/
+[TEXT]
 SchemaEditor 
 class BaseDatabaseSchemaEditor 
 Django's migration system is split into two parts; the logic for calculating
@@ -217,3 +221,4 @@ alias which can be used to determine the name of the database being
 accessed.
 This is useful when doing data migrations for migrations with multiple
 databases.
+[VECTOR]

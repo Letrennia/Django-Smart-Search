@@ -1,4 +1,8 @@
+[ID]
+4726
+[URL]
 https://docs.djangoproject.com/en/2.0/ref/forms/validation/
+[TEXT]
 Form and field validation 
 Form validation happens when the data is cleaned. If you want to customize
 this process, there are various places to make changes, each one serving a
@@ -387,3 +391,4 @@ The second argument of add_error() can be a simple string, or preferably
 an instance of ValidationError. See Raising ValidationError for
 more details. Note that add_error() automatically removes the field
 from cleaned_data.
+[VECTOR]

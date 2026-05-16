@@ -1,4 +1,8 @@
+[ID]
+4956
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/core/files/uploadedfile/
+[TEXT]
 Source code for django.core.files.uploadedfile
 """
 Classes representing uploaded files.
@@ -207,3 +211,4 @@ class SimpleUploadedFile(InMemoryUploadedFile):
         return cls(file_dict['filename'],
                    file_dict['content'],
                    file_dict.get('content-type', 'text/plain'))
+[VECTOR]

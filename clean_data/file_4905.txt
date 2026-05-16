@@ -1,4 +1,8 @@
+[ID]
+4905
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/conf/urls/
+[TEXT]
 Source code for django.conf.urls
 from importlib import import_module
 import warnings
@@ -139,3 +143,4 @@ handler500 = 'django.views.defaults.server_error'
             if prefix:
                 view = prefix + '.' + view
         return RegexURLPattern(regex, view, kwargs, name)
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5165
+[URL]
 https://docs.djangoproject.com/en/1.8/topics/class-based-views/mixins/
+[TEXT]
 Using mixins with class-based views 
 Caution
 This is an advanced topic. A working knowledge of Django's
@@ -785,3 +789,4 @@ super(HybridDetailView, self).render_to_response(context) ends up
 calling the
 render_to_response()
 implementation of TemplateResponseMixin.
+[VECTOR]

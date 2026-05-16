@@ -1,4 +1,8 @@
+[ID]
+5704
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/admin/options/
+[TEXT]
 Source code for django.contrib.admin.options
 from __future__ import unicode_literals
 import copy
@@ -3507,3 +3511,4 @@ class InlineModelAdmin(BaseModelAdmin):
     template = 'admin/edit_inline/stacked.html'
 [docs]class TabularInline(InlineModelAdmin):
     template = 'admin/edit_inline/tabular.html'
+[VECTOR]

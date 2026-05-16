@@ -1,4 +1,8 @@
+[ID]
+5665
+[URL]
 https://docs.djangoproject.com/en/1.10/internals/contributing/writing-code/javascript/
+[TEXT]
 JavaScript 
 While most of Django core is Python, the admin and gis contrib apps
 contain JavaScript code.
@@ -115,3 +119,4 @@ To run the tests from the command line, you need to have Node.js installed.
 After installing Node.js, install the JavaScript test dependencies by running
 the following from the root of your Django checkout:
 Then run the tests with:
+[VECTOR]

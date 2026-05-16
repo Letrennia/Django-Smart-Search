@@ -1,4 +1,8 @@
+[ID]
+4924
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/contenttypes/models/
+[TEXT]
 Source code for django.contrib.contenttypes.models
 from __future__ import unicode_literals
 import warnings
@@ -363,3 +367,4 @@ class ContentType(models.Model):
         return self.model_class()._base_manager.using(self._state.db).filter(**kwargs)
     def natural_key(self):
         return (self.app_label, self.model)
+[VECTOR]

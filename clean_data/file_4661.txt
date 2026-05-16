@@ -1,4 +1,8 @@
+[ID]
+4661
+[URL]
 https://docs.djangoproject.com/en/2.0/ref/clickjacking/
+[TEXT]
 Clickjacking Protection 
 The clickjacking middleware and decorators provide easy-to-use protection
 against clickjacking.  This type of attack occurs when a malicious site
@@ -113,3 +117,4 @@ Safari 4+
 Chrome 4.1+
 See also 
 A complete list of browsers supporting X-Frame-Options.
+[VECTOR]

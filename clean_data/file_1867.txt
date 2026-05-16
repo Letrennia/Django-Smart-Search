@@ -1,4 +1,8 @@
+[ID]
+1867
+[URL]
 https://docs.djangoproject.com/en/4.2/ref/contrib/admin/javascript/
+[TEXT]
 JavaScript customizations in the admin 
 Inline form events 
 You may want to execute some JavaScript when an inline form is added or removed
@@ -45,3 +49,4 @@ to use jQuery to register your event listener. jQuery handles JavaScript events
 but the reverse isn't true.
 You could check for the presence of event.detail.formsetName and fall back
 to the old listener signature as follows:
+[VECTOR]

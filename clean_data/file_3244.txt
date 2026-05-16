@@ -1,4 +1,8 @@
+[ID]
+3244
+[URL]
 https://docs.djangoproject.com/en/3.1/ref/templates/language/
+[TEXT]
 The Django template language 
 This document explains the language syntax of the Django template system. If
 you're looking for a more technical perspective on how it works and how to
@@ -691,3 +695,4 @@ See also
 The Templates Reference
 Covers built-in tags, built-in filters, using an alternative template
 language, and more.
+[VECTOR]

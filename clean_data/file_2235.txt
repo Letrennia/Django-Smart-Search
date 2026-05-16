@@ -1,4 +1,8 @@
+[ID]
+2235
+[URL]
 https://docs.djangoproject.com/en/4.1/ref/logging/
+[TEXT]
 Logging 
 See also
 How to configure and use logging
@@ -309,3 +313,4 @@ error emails to admins when DEBUG is False:
 class RequireDebugTrue 
 This filter is similar to RequireDebugFalse, except that records are
 passed only when DEBUG is True.
+[VECTOR]

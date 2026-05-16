@@ -1,4 +1,8 @@
+[ID]
+284
+[URL]
 https://docs.djangoproject.com/en/6.0/faq/contributing/
+[TEXT]
 FAQ: Contributing code 
 How can I get started contributing code to Django? 
 Thanks for asking! We've written an entire document devoted to this question.
@@ -149,3 +153,4 @@ people happy rather than making a single person happy.
 I'm sure my ticket is absolutely 100% perfect, can I mark it as "Ready For Checkin" myself? 
 Sorry, no. It's always better to get another set of eyes on a ticket. If
 you're having trouble getting that second set of eyes, see questions above.
+[VECTOR]

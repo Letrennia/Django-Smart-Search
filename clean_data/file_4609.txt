@@ -1,4 +1,8 @@
+[ID]
+4609
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/test/testcases/
+[TEXT]
 Source code for django.test.testcases
 import difflib
 import json
@@ -2347,3 +2351,4 @@ class SerializeMixin:
     def tearDownClass(cls):
         super().tearDownClass()
         cls._lockfile.close()
+[VECTOR]

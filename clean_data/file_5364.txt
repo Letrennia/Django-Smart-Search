@@ -1,4 +1,8 @@
+[ID]
+5364
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/db/models/indexes/
+[TEXT]
 Source code for django.db.models.indexes
 from __future__ import unicode_literals
 import hashlib
@@ -229,3 +233,4 @@ __all__ = [str('Index')]
         return (self.__class__ == other.__class__) and (self.deconstruct() == other.deconstruct())
     def __ne__(self, other):
         return not (self == other)
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5769
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/db/backends/base/schema/
+[TEXT]
 Source code for django.db.backends.base.schema
 import hashlib
 import logging
@@ -1769,3 +1773,4 @@ def _related_non_m2m_objects(old_field, new_field):
                     continue
                 result.append(name)
         return result
+[VECTOR]

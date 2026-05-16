@@ -1,4 +1,8 @@
+[ID]
+5022
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/utils/functional/
+[TEXT]
 Source code for django.utils.functional
 import copy
 import operator
@@ -791,3 +795,4 @@ else:
                 opfunc.__doc__ = getattr(int, opname).__doc__
                 setattr(cls, opname, opfunc)
         return cls
+[VECTOR]

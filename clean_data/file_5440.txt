@@ -1,4 +1,8 @@
+[ID]
+5440
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/checks/
+[TEXT]
 System check framework 
 The system check framework is a set of static checks for validating Django
 projects. It detects common problems and provides hints for how to fix them.
@@ -1133,3 +1137,4 @@ sites.E001: CurrentSiteManager could not find a field named
 <field name>.
 sites.E002: CurrentSiteManager cannot use <field> as it is not a
 foreign key or a many-to-many field.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+1270
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/core/files/storage/memory/
+[TEXT]
 Source code for django.core.files.storage.memory
 """
 Based on dj-inmemorystorage (BSD) by Cody Soyland, Seán Hayes, Tore Birkeland,
@@ -477,3 +481,4 @@ class InMemoryStorage(Storage, StorageSettingsMixin):
     def get_modified_time(self, name):
         file_node = self._resolve(name)
         return file_node.modified_time
+[VECTOR]

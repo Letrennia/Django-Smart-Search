@@ -1,4 +1,8 @@
+[ID]
+1964
+[URL]
 https://docs.djangoproject.com/en/4.2/releases/
+[TEXT]
 Release notes 
 Release notes for the official Django releases. Each release note will tell you
 what's new in each version, and will also describe any backwards-incompatible
@@ -735,3 +739,4 @@ Whenever a security issue is disclosed via Django's security
 policies, appropriate release notes are now
 added to all affected release series.
 Additionally, an archive of disclosed security issues is maintained.
+[VECTOR]

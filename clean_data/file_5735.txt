@@ -1,4 +1,8 @@
+[ID]
+5735
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/postgres/aggregates/general/
+[TEXT]
 Source code for django.contrib.postgres.aggregates.general
 from django.db.models.aggregates import Aggregate
 __all__ = [
@@ -55,3 +59,4 @@ __all__ = [
         if not value:
             return ''
         return value
+[VECTOR]

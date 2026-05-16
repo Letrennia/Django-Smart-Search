@@ -85,8 +85,29 @@ for filename in os.listdir(input_dir):
 
     output_path = os.path.join(output_dir, filename)
 
+    # Nagłowki
+    file_id = filename.replace("file_", "").replace(".txt", "")
+    lines = clean.splitlines()
+    url = ""
+    text_start = 0
+
+    if lines and lines[0].startswith("https"):
+        url = lines[0].strip()
+        text_start = 1
+
+    text = "\n".join(lines[text_start:]).strip()
+
+    final_output = (
+        f"[ID]\n"
+        f"{file_id}\n"
+        f"[URL]\n"
+        f"{url}\n"
+        f"[TEXT]\n"
+        f"{text}\n"
+        f"[VECTOR]\n"
+    )
     with open(output_path, "w", encoding="utf-8") as file:
-        file.write(clean)
+        file.write(final_output)
 
 all_methods = sorted(all_methods)
 all_keywords = sorted(all_keywords)

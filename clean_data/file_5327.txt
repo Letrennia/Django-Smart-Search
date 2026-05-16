@@ -1,4 +1,8 @@
+[ID]
+5327
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/contrib/postgres/indexes/
+[TEXT]
 Source code for django.contrib.postgres.indexes
 from __future__ import unicode_literals
 from django.db.models import Index
@@ -79,3 +83,4 @@ __all__ = ['BrinIndex', 'GinIndex']
     suffix = 'gin'
     def create_sql(self, model, schema_editor):
         return super(GinIndex, self).create_sql(model, schema_editor, using=' USING gin')
+[VECTOR]

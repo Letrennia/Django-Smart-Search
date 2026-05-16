@@ -1,4 +1,8 @@
+[ID]
+5040
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/pytz/
+[TEXT]
 Source code for pytz
 '''
 datetime.tzinfo timezone definitions generated from the
@@ -2867,3 +2871,4 @@ common_timezones = LazyList(
             tz for tz in common_timezones if tz in all_timezones)
         
 common_timezones_set = LazySet(common_timezones)
+[VECTOR]

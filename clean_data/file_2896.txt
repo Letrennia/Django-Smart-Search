@@ -1,4 +1,8 @@
+[ID]
+2896
+[URL]
 https://docs.djangoproject.com/en/3.2/ref/contrib/gis/install/
+[TEXT]
 GeoDjango Installation 
 Overview 
 In general, GeoDjango installation requires:
@@ -531,3 +535,4 @@ PostgreSQL database. psycopg2 can be installed via pip within your Python
 virtual environment:
 [1]GeoDjango uses the find_library() routine from
 ctypes.util to locate shared libraries.
+[VECTOR]

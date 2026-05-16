@@ -1,4 +1,8 @@
+[ID]
+1660
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/admin/options/
+[TEXT]
 Source code for django.contrib.admin.options
 import copy
 import enum
@@ -4633,3 +4637,4 @@ class StackedInline(InlineModelAdmin):
 [docs]
 class TabularInline(InlineModelAdmin):
     template = "admin/edit_inline/tabular.html"
+[VECTOR]

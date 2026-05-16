@@ -1,4 +1,8 @@
+[ID]
+4164
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/db/models/functions/text/
+[TEXT]
 Source code for django.db.models.functions.text
 from django.db.models import Func, IntegerField, Transform, Value, fields
 from django.db.models.functions import Coalesce
@@ -349,3 +353,4 @@ class ConcatPair(Func):
 [docs]class Upper(Transform):
     function = 'UPPER'
     lookup_name = 'upper'
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5506
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/databases/
+[TEXT]
 Databases 
 Django attempts to support as many features as possible on all database
 backends. However, not all database backends are alike, and we've had to make
@@ -1089,3 +1093,4 @@ The Django versions and ORM features supported by these unofficial backends
 vary considerably. Queries regarding the specific capabilities of these
 unofficial backends, along with any support queries, should be directed to
 the support channels provided by each 3rd party project.
+[VECTOR]

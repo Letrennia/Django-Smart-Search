@@ -1,4 +1,8 @@
+[ID]
+3000
+[URL]
 https://docs.djangoproject.com/en/3.2/topics/db/models/
+[TEXT]
 Models 
 A model is the single, definitive source of information about your data. It
 contains the essential fields and behaviors of the data you're storing.
@@ -1383,3 +1387,4 @@ and keeping code analysis tools useful.
 See also
 The Models ReferenceCovers all the model related APIs including model fields, related
 objects, and QuerySet.
+[VECTOR]

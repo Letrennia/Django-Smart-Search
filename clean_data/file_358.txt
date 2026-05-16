@@ -1,4 +1,8 @@
+[ID]
+358
+[URL]
 https://docs.djangoproject.com/en/6.0/intro/tutorial04/
+[TEXT]
 Writing your first Django app, part 4 
 This tutorial begins where Tutorial 3 left off.
 We're continuing the web-poll application and will focus on form processing and
@@ -309,3 +313,4 @@ Run the server, and use your new polling app based on generic views.
 For full details on generic views, see the generic views documentation.
 When you're comfortable with forms and generic views, read part 5 of this
 tutorial to learn about testing our polls app.
+[VECTOR]

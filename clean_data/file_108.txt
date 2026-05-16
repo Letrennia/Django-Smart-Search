@@ -1,4 +1,8 @@
+[ID]
+108
+[URL]
 https://docs.djangoproject.com/en/dev/ref/contrib/admin/actions/
+[TEXT]
 Admin actions 
 The basic workflow of Django's admin is, in a nutshell, "select an object,
 then change it." This works well for a majority of use cases. However, if you
@@ -389,3 +393,4 @@ Action descriptions support %-formatting and may include
 These are replaced with the model's
 verbose_name and
 verbose_name_plural.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5297
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/conf/urls/
+[TEXT]
 Source code for django.conf.urls
 import warnings
 from importlib import import_module
@@ -147,3 +151,4 @@ handler500 = 'django.views.defaults.server_error'
         return RegexURLPattern(regex, view, kwargs, name)
     else:
         raise TypeError('view must be a callable or a list/tuple in the case of include().')
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+501
+[URL]
 https://docs.djangoproject.com/en/6.0/topics/class-based-views/generic-editing/
+[TEXT]
 Form handling with class-based views 
 Form processing generally has 3 paths:
 Initial GET (blank or prepopulated form)
@@ -201,3 +205,4 @@ True.
 To determine the correct format, taking into consideration the client's
 preference, use django.http.HttpRequest.get_preferred_type():
 Changed in Django 5.2: The HttpRequest.get_preferred_type() method was added.
+[VECTOR]

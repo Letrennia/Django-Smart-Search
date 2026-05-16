@@ -1,4 +1,8 @@
+[ID]
+5767
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/core/signing/
+[TEXT]
 Source code for django.core.signing
 """
 Functions for creating and restoring url-safe signed JSON objects.
@@ -315,3 +319,4 @@ class JSONSerializer(object):
                 raise SignatureExpired(
                     'Signature age %s > %s seconds' % (age, max_age))
         return value
+[VECTOR]

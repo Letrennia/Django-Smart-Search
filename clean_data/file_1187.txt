@@ -1,4 +1,8 @@
+[ID]
+1187
+[URL]
 https://docs.djangoproject.com/en/5.0/misc/distributions/
+[TEXT]
 Third-party distributions of Django 
 Many third-party distributors are now providing versions of Django integrated
 with their package-management systems. These can make installation and upgrading
@@ -39,3 +43,4 @@ Please join the django-developers mailing list and introduce yourself.
 We also encourage all distributors to subscribe to the django-announce mailing
 list, which is a (very) low-traffic list for announcing new releases of Django
 and important bugfixes.
+[VECTOR]

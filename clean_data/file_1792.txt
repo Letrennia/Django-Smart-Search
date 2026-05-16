@@ -1,4 +1,8 @@
+[ID]
+1792
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/template/backends/django/
+[TEXT]
 Source code for django.template.backends.django
 from collections import defaultdict
 from importlib import import_module
@@ -301,3 +305,4 @@ def get_package_libraries(pkg):
             ) from e
         if hasattr(module, "register"):
             yield entry[1]
+[VECTOR]

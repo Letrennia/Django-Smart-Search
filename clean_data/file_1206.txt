@@ -1,4 +1,8 @@
+[ID]
+1206
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/auth/forms/
+[TEXT]
 Source code for django.contrib.auth.forms
 import logging
 import unicodedata
@@ -1055,3 +1059,4 @@ class AdminUserCreationForm(SetUnusablePasswordMixin, UserCreationForm):
         super().__init__(*args, **kwargs)
         self.fields["password1"].required = False
         self.fields["password2"].required = False
+[VECTOR]

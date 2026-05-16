@@ -1,4 +1,8 @@
+[ID]
+5731
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/gis/geos/prototypes/io/
+[TEXT]
 Source code for django.contrib.gis.geos.prototypes.io
 import threading
 from ctypes import POINTER, Structure, byref, c_char, c_char_p, c_int, c_size_t
@@ -497,3 +501,4 @@ def ewkb_w(dim=2):
     else:
         thread_context.ewkb_w.outdim = dim
     return thread_context.ewkb_w
+[VECTOR]

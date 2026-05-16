@@ -1,4 +1,8 @@
+[ID]
+1656
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/admin/
+[TEXT]
 Source code for django.contrib.admin
 from django.contrib.admin.decorators import action, display, register
 from django.contrib.admin.filters import (
@@ -101,3 +105,4 @@ __all__ = [
 [docs]
 def autodiscover():
     autodiscover_modules("admin", register_to=site)
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+234
+[URL]
 https://docs.djangoproject.com/en/dev/topics/db/fetch-modes/
+[TEXT]
 Fetch modes 
 New in Django Development version. 
 When accessing model fields that were not loaded as part of the original query,
@@ -121,3 +125,4 @@ sections of code.
 Make a fetch mode the default for a model class 
 Set the default fetch mode for a model class with a
 custom manager that overrides get_queryset():
+[VECTOR]

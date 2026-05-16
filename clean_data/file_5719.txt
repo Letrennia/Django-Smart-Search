@@ -1,4 +1,8 @@
+[ID]
+5719
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/gis/forms/fields/
+[TEXT]
 Source code for django.contrib.gis.forms.fields
 from __future__ import unicode_literals
 from django import forms
@@ -197,3 +201,4 @@ from .widgets import OpenLayersWidget
     geom_type = 'POLYGON'
 [docs]class MultiPolygonField(GeometryField):
     geom_type = 'MULTIPOLYGON'
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4964
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/core/validators/
+[TEXT]
 Source code for django.core.validators
 from __future__ import unicode_literals
 import re
@@ -557,3 +561,4 @@ class MaxLengthValidator(BaseValidator):
         'Ensure this value has at most %(limit_value)d characters (it has %(show_value)d).',
         'limit_value')
     code = 'max_length'
+[VECTOR]

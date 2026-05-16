@@ -1,4 +1,8 @@
+[ID]
+1692
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/messages/storage/session/
+[TEXT]
 Source code for django.contrib.messages.storage.session
 import json
 from django.contrib.messages.storage.base import BaseStorage
@@ -87,3 +91,4 @@ class SessionStorage(BaseStorage):
         if data and isinstance(data, str):
             return json.loads(data, cls=MessageDecoder)
         return data
+[VECTOR]

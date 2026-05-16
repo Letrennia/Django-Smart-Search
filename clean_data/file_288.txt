@@ -1,4 +1,8 @@
+[ID]
+288
+[URL]
 https://docs.djangoproject.com/en/6.0/faq/models/
+[TEXT]
 FAQ: Databases and models 
 How can I see the raw SQL queries Django is running? 
 Make sure your Django DEBUG setting is set to True.
@@ -87,3 +91,4 @@ ALTER TABLE statements that do what you want to do.
 For example, if you're using MySQL and want your tables to use the MyISAM table
 type, use the following SQL:
 ALTER TABLE myapp_mytable ENGINE=MyISAM;
+[VECTOR]

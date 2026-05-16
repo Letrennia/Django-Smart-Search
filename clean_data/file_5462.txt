@@ -1,4 +1,8 @@
+[ID]
+5462
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/contrib/gis/
+[TEXT]
 GeoDjango 
 GeoDjango intends to be a world-class geographic Web framework. Its goal is to
 make it as easy as possible to build GIS Web applications and harness the power
@@ -239,3 +243,4 @@ Testing GeoDjango apps
 PostGIS
 GeoDjango tests
 Deploying GeoDjango
+[VECTOR]

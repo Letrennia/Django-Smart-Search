@@ -1,4 +1,8 @@
+[ID]
+5755
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/core/checks/messages/
+[TEXT]
 Source code for django.core.checks.messages
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
@@ -119,3 +123,4 @@ class CheckMessage(object):
 [docs]class Critical(CheckMessage):
     def __init__(self, *args, **kwargs):
         super(Critical, self).__init__(CRITICAL, *args, **kwargs)
+[VECTOR]

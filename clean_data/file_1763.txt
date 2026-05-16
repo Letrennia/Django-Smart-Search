@@ -1,4 +1,8 @@
+[ID]
+1763
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/db/models/functions/window/
+[TEXT]
 Source code for django.db.models.functions.window
 from django.db.models.expressions import Func
 from django.db.models.fields import FloatField, IntegerField
@@ -203,3 +207,4 @@ class RowNumber(Func):
     function = "ROW_NUMBER"
     output_field = IntegerField()
     window_compatible = True
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+1008
+[URL]
 https://docs.djangoproject.com/en/5.1/ref/models/constraints/
+[TEXT]
 Constraints reference 
 The classes defined in this module create database constraints. They are added
 in the model Meta.constraints
@@ -311,3 +315,4 @@ condition. Such UniqueConstraints show the
 same message as constraints defined with
 Field.unique or in
 Meta.unique_together.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+2782
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/db/models/fields/
+[TEXT]
 Source code for django.db.models.fields
 import collections.abc
 import copy
@@ -4411,3 +4415,4 @@ class AutoFieldMeta(type):
         return 'SmallAutoField'
     def rel_db_type(self, connection):
         return SmallIntegerField().db_type(connection=connection)
+[VECTOR]

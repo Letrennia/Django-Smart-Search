@@ -1,4 +1,8 @@
+[ID]
+2939
+[URL]
 https://docs.djangoproject.com/en/3.2/ref/forms/models/
+[TEXT]
 Model Form Functions 
 Model Form API reference. For introductory material about model forms, see the
 Creating forms from models topic guide.
@@ -101,3 +105,4 @@ If your model has more than one ForeignKey to
 the parent_model, you must specify a fk_name.
 See Inline formsets for example usage.
 Changed in Django 3.2: The absolute_max and can_delete_extra arguments were added.
+[VECTOR]

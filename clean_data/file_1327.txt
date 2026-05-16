@@ -1,4 +1,8 @@
+[ID]
+1327
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/shortcuts/
+[TEXT]
 Source code for django.shortcuts
 """
 This module collects helper functions and classes that "span" multiple levels
@@ -327,3 +331,4 @@ def resolve_url(to, *args, **kwargs):
             raise
     # Finally, fall back and assume it's a URL
     return to
+[VECTOR]

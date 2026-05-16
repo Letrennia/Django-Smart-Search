@@ -1,4 +1,8 @@
+[ID]
+5206
+[URL]
 https://docs.djangoproject.com/en/1.8/topics/python3/
+[TEXT]
 Porting to Python 3 
 Django 1.5 is the first version of Django to support Python 3. The same code
 runs both on Python 2 (≥ 2.6.5) and Python 3 (≥ 3.2), thanks to the six
@@ -401,3 +405,4 @@ function.
 Django customized version of six 
 The version of six bundled with Django (django.utils.six) includes a few
 customizations for internal use only.
+[VECTOR]

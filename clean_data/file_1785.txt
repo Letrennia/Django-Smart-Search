@@ -1,4 +1,8 @@
+[ID]
+1785
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/middleware/common/
+[TEXT]
 Source code for django.middleware.common
 import re
 from urllib.parse import urlsplit
@@ -309,3 +313,4 @@ class BrokenLinkEmailsMiddleware(MiddlewareMixin):
         if parsed_referer.netloc in ["", domain] and parsed_referer.path == uri:
             return True
         return any(pattern.search(uri) for pattern in settings.IGNORABLE_404_URLS)
+[VECTOR]

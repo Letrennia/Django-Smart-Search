@@ -1,4 +1,8 @@
+[ID]
+2840
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/utils/encoding/
+[TEXT]
 Source code for django.utils.encoding
 import codecs
 import datetime
@@ -455,3 +459,4 @@ def get_system_encoding():
         encoding = 'ascii'
     return encoding
 DEFAULT_LOCALE_ENCODING = get_system_encoding()
+[VECTOR]

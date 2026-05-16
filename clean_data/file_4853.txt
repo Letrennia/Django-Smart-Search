@@ -1,4 +1,8 @@
+[ID]
+4853
+[URL]
 https://docs.djangoproject.com/en/1.8/howto/jython/
+[TEXT]
 Running Django on Jython 
 Jython is an implementation of Python that runs on the Java platform (JVM).
 This document will get you up and running with Django on top of Jython.
@@ -67,3 +71,4 @@ occurs.
 Similarly, you'll need to use the JYTHONPATH environment variable
 instead of PYTHONPATH.
 Any part of Django that requires Pillow will not work.
+[VECTOR]

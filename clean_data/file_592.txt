@@ -1,4 +1,8 @@
+[ID]
+592
+[URL]
 https://docs.djangoproject.com/en/5.2/howto/error-reporting/
+[TEXT]
 How to manage error reporting 
 When you're running a public site you should always turn off the
 DEBUG setting. That will make your server run much faster, and will
@@ -413,3 +417,4 @@ You can also set up custom error reporting by writing a custom piece of
 exception middleware. If you do write custom
 error handling, it's a good idea to emulate Django's built-in error handling
 and only report/log errors if DEBUG is False.
+[VECTOR]

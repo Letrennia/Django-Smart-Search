@@ -1,4 +1,8 @@
+[ID]
+5014
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/test/testcases/
+[TEXT]
 Source code for django.test.testcases
 from __future__ import unicode_literals
 import difflib
@@ -2219,3 +2223,4 @@ class LiveServerThread(threading.Thread):
     def tearDownClass(cls):
         cls._tearDownClassInternal()
         super(LiveServerTestCase, cls).tearDownClass()
+[VECTOR]

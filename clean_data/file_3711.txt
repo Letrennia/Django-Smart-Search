@@ -1,4 +1,8 @@
+[ID]
+3711
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/contrib/postgres/fields/citext/
+[TEXT]
 Source code for django.contrib.postgres.fields.citext
 from django.db.models import CharField, EmailField, TextField
 __all__ = ['CICharField', 'CIEmailField', 'CIText', 'CITextField']
@@ -27,3 +31,4 @@ __all__ = ['CICharField', 'CIEmailField', 'CIText', 'CITextField']
     pass
 [docs]class CITextField(CIText, TextField):
     pass
+[VECTOR]

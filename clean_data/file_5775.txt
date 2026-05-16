@@ -1,4 +1,8 @@
+[ID]
+5775
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/db/models/deletion/
+[TEXT]
 Source code for django.db.models.deletion
 from collections import Counter, OrderedDict
 from operator import attrgetter
@@ -559,3 +563,4 @@ class Collector(object):
             for instance in instances:
                 setattr(instance, model._meta.pk.attname, None)
         return sum(deleted_counter.values()), dict(deleted_counter)
+[VECTOR]

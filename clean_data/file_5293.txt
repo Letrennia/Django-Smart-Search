@@ -1,4 +1,8 @@
+[ID]
+5293
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/
+[TEXT]
 All modules for which code is available
 django
 django.apps.config
@@ -289,3 +293,4 @@ pytz
 unittest.loader
 unittest.runner
 unittest.suite
+[VECTOR]

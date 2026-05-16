@@ -1,4 +1,8 @@
+[ID]
+98
+[URL]
 https://docs.djangoproject.com/en/dev/ref/class-based-views/generic-editing/
+[TEXT]
 Generic editing views 
 The following views are described on this page and provide a foundation for
 editing content:
@@ -319,3 +323,4 @@ This view inherits methods and attributes from the following views:
 django.views.generic.edit.DeletionMixin
 django.views.generic.edit.FormMixin
 django.views.generic.detail.BaseDetailView
+[VECTOR]

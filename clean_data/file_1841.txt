@@ -1,4 +1,8 @@
+[ID]
+1841
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/functools/
+[TEXT]
 Source code for functools
 """functools.py - Tools for working with functions and callable objects
 """
@@ -1703,3 +1707,4 @@ class cached_property:
                 raise TypeError(msg) from None
         return val
     __class_getitem__ = classmethod(GenericAlias)
+[VECTOR]

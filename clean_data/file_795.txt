@@ -1,4 +1,8 @@
+[ID]
+795
+[URL]
 https://docs.djangoproject.com/en/5.2/topics/db/sql/
+[TEXT]
 Performing raw SQL queries 
 Django gives you two ways of performing raw SQL queries: you can use
 Manager.raw() to perform raw queries and return model instances, or
@@ -347,3 +351,4 @@ BEGIN
     ...
 END;
 This will call it:
+[VECTOR]

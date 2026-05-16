@@ -1,4 +1,8 @@
+[ID]
+512
+[URL]
 https://docs.djangoproject.com/en/6.0/topics/db/fixtures/
+[TEXT]
 Fixtures 
 A fixture is a collection of files that contain the serialized contents of
 the database. Each fixture has a unique name, and the files that comprise the
@@ -181,3 +185,4 @@ For example, if your DATABASES setting has a users database
 defined, name the fixture mydata.users.json or
 mydata.users.json.gz and the fixture will only be loaded when you
 specify you want to load data into the users database.
+[VECTOR]

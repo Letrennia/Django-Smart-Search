@@ -1,4 +1,8 @@
+[ID]
+27
+[URL]
 https://docs.djangoproject.com/en/dev/howto/deployment/asgi/granian/
+[TEXT]
 How to use Django with Granian 
 Granian is a Rust-based high-performance HTTP server for Python applications,
 supporting ASGI and WSGI interfaces.
@@ -33,3 +37,4 @@ This will start one process listening on 127.0.0.1:8000. It requires that
 your project be on the Python path; to ensure that, run this command from the
 same directory as your manage.py file.
 For more advanced usage, please read the Granian documentation.
+[VECTOR]

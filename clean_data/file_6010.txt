@@ -1,4 +1,8 @@
+[ID]
+6010
+[URL]
 https://docs.djangoproject.com/en/1.10/topics/http/urls/
+[TEXT]
 URL dispatcher 
 A clean, elegant URL scheme is an important detail in a high-quality Web
 application. Django lets you design URLs however you want, with no framework
@@ -823,3 +827,4 @@ and the instance namespace in a single place, either by passing them as
 parameters to include() or by including a 3-tuple
 containing
 (<list of url() instances>, <application namespace>, <instance namespace>).
+[VECTOR]

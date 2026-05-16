@@ -1,4 +1,8 @@
+[ID]
+2977
+[URL]
 https://docs.djangoproject.com/en/3.2/releases/security/
+[TEXT]
 Archive of security issues 
 Django's development team is strongly committed to responsible
 reporting and disclosure of security-related issues, as outlined in
@@ -1415,3 +1419,4 @@ Django 0.90 (patch)
 Django 0.91 (patch)
 Django 0.95 (patch)
 (released January 21 2007)
+[VECTOR]

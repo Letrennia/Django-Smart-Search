@@ -1,4 +1,8 @@
+[ID]
+5715
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/gis/db/models/fields/
+[TEXT]
 Source code for django.contrib.gis.db.models.fields
 from django.contrib.gis import forms
 from django.contrib.gis.db.models.lookups import (
@@ -781,3 +785,4 @@ class ExtentField(GeoSelectFormatMixin, Field):
         except ValueError:
             pass
         return super(RasterField, self).get_transform(name)
+[VECTOR]

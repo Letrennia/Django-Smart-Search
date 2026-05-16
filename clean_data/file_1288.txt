@@ -1,4 +1,8 @@
+[ID]
+1288
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/db/models/fields/
+[TEXT]
 Source code for django.db.models.fields
 import copy
 import datetime
@@ -5103,3 +5107,4 @@ class SmallAutoField(AutoFieldMixin, SmallIntegerField):
         return "SmallAutoField"
     def rel_db_type(self, connection):
         return SmallIntegerField().db_type(connection=connection)
+[VECTOR]

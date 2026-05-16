@@ -1,4 +1,8 @@
+[ID]
+5834
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/utils/log/
+[TEXT]
 Source code for django.utils.log
 from __future__ import unicode_literals
 import logging
@@ -327,3 +331,4 @@ class ServerFormatter(logging.Formatter):
         return super(ServerFormatter, self).format(record)
     def uses_server_time(self):
         return self._fmt.find('%(server_time)') >= 0
+[VECTOR]

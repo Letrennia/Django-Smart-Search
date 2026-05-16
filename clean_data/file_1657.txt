@@ -1,4 +1,8 @@
+[ID]
+1657
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/admin/apps/
+[TEXT]
 Source code for django.contrib.admin.apps
 from django.apps import AppConfig
 from django.contrib.admin.checks import check_admin_app, check_dependencies
@@ -39,3 +43,4 @@ class AdminConfig(SimpleAdminConfig):
     def ready(self):
         super().ready()
         self.module.autodiscover()
+[VECTOR]

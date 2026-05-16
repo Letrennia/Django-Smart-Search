@@ -1,4 +1,8 @@
+[ID]
+1487
+[URL]
 https://docs.djangoproject.com/en/5.0/ref/templates/
+[TEXT]
 Templates 
 Django's template engine provides a powerful mini-language for defining the
 user-facing layer of your application, encouraging a clean separation of
@@ -69,3 +73,4 @@ For information on writing your own custom tags and filters, see
 How to create custom template tags and filters.
 To learn how to override templates in other Django applications, see
 How to override templates.
+[VECTOR]

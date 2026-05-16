@@ -1,4 +1,8 @@
+[ID]
+1568
+[URL]
 https://docs.djangoproject.com/en/4.2/faq/admin/
+[TEXT]
 FAQ: The admin 
 I can't log in. When I enter a valid username and password, it just brings up the login page again, with no error messages. 
 The login cookie isn't being set correctly, because the domain of the cookie
@@ -139,3 +143,4 @@ web standards compliant browsers. This includes the major browsers on both
 Android and iOS.
 Depending on feature support, there may be minor stylistic differences
 between browsers. These are considered acceptable variations in rendering.
+[VECTOR]

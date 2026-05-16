@@ -1,4 +1,8 @@
+[ID]
+1375
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/sentry_sdk/integrations/django/views/
+[TEXT]
 Source code for sentry_sdk.integrations.django.views
 import functools
 import sentry_sdk
@@ -145,3 +149,4 @@ def _wrap_sync_view(callback):
         ):
             return callback(request, *args, **kwargs)
     return sentry_wrapped_callback
+[VECTOR]

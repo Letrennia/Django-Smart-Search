@@ -1,4 +1,8 @@
+[ID]
+2721
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/apps/config/
+[TEXT]
 Source code for django.apps.config
 import inspect
 import os
@@ -545,3 +549,4 @@ MODELS_MODULE_NAME = 'models'
         """
         Override this method in subclasses to run code when Django starts.
         """
+[VECTOR]

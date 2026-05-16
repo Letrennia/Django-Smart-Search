@@ -1,4 +1,8 @@
+[ID]
+2411
+[URL]
 https://docs.djangoproject.com/en/4.0/intro/tutorial07/
+[TEXT]
 Writing your first Django app, part 7 
 This tutorial begins where Tutorial 6 left off. We're
 continuing the web-poll application and will focus on customizing Django's
@@ -381,3 +385,4 @@ some pointers on where to go from here.
 If you are familiar with Python packaging and interested in learning how to
 turn polls into a "reusable app", check out Advanced tutorial: How to
 write reusable apps.
+[VECTOR]

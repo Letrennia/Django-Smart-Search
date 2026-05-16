@@ -1,4 +1,8 @@
+[ID]
+2266
+[URL]
 https://docs.djangoproject.com/en/4.1/ref/validators/
+[TEXT]
 Validators 
 Writing validators 
 A validator is a callable that takes a value and raises a
@@ -417,3 +421,4 @@ Raises a ValidationError with a code of
 'step_size' if value is not an integral multiple of
 limit_value, which can be a float, integer or decimal value or a
 callable.
+[VECTOR]

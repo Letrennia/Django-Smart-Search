@@ -1,4 +1,8 @@
+[ID]
+3373
+[URL]
 https://docs.djangoproject.com/en/3.0/internals/deprecation/
+[TEXT]
 Django Deprecation Timeline 
 This document outlines when various pieces of Django will be removed or altered
 in a backward incompatible way, following their deprecation, as per the
@@ -1421,3 +1425,4 @@ Authentication backends need to define the boolean attributes
 supports_object_permissions and supports_anonymous_user until
 version 1.4, at which point it will be assumed that all backends will
 support these options.
+[VECTOR]

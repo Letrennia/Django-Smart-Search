@@ -1,4 +1,8 @@
+[ID]
+3311
+[URL]
 https://docs.djangoproject.com/en/3.1/topics/settings/
+[TEXT]
 Django settings 
 A Django settings file contains all the configuration of your Django
 installation. This document explains how settings work and which settings are
@@ -291,3 +295,4 @@ if block:
 See also
 The Settings Reference
 Contains the complete list of core and contrib app settings.
+[VECTOR]

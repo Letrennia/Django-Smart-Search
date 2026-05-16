@@ -1,4 +1,8 @@
+[ID]
+26
+[URL]
 https://docs.djangoproject.com/en/dev/howto/deployment/asgi/daphne/
+[TEXT]
 How to use Django with Daphne 
 Daphne is a pure-Python ASGI server for UNIX, maintained by
 members of the Django project. It acts as the reference server for ASGI.
@@ -43,3 +47,4 @@ during development.
 This can be enabled by adding daphne to the start of your
 INSTALLED_APPS and adding an ASGI_APPLICATION setting pointing
 to your ASGI application object:
+[VECTOR]

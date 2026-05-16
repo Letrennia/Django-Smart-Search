@@ -1,4 +1,8 @@
+[ID]
+5164
+[URL]
 https://docs.djangoproject.com/en/1.8/topics/class-based-views/intro/
+[TEXT]
 Introduction to class-based views 
 Class-based views provide an alternative way to implement views as Python
 objects instead of functions. They do not replace function-based views, but
@@ -283,3 +287,4 @@ method_decorator passes *args and **kwargs
 as parameters to the decorated method on the class. If your method
 does not accept a compatible set of parameters it will raise a
 TypeError exception.
+[VECTOR]

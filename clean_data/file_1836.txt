@@ -1,4 +1,8 @@
+[ID]
+1836
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/views/decorators/vary/
+[TEXT]
 Source code for django.views.decorators.vary
 from functools import wraps
 from asgiref.sync import iscoroutinefunction
@@ -63,3 +67,4 @@ vary_on_cookie.__doc__ = (
     'A view decorator that adds "Cookie" to the Vary header of a response. This '
     "indicates that a page's contents depends on cookies."
 )
+[VECTOR]

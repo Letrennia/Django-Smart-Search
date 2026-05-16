@@ -1,4 +1,8 @@
+[ID]
+998
+[URL]
 https://docs.djangoproject.com/en/5.1/ref/forms/models/
+[TEXT]
 Model Form Functions 
 Model Form API reference. For introductory material about model forms, see the
 Creating forms from models topic guide.
@@ -101,3 +105,4 @@ can_delete=True, and extra=3.
 If your model has more than one ForeignKey to
 the parent_model, you must specify a fk_name.
 See Inline formsets for example usage.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+121
+[URL]
 https://docs.djangoproject.com/en/dev/ref/contrib/gis/forms-api/
+[TEXT]
 GeoDjango Forms API 
 GeoDjango provides some specialized form fields and widgets in order to
 visually display and edit geolocalized data on a map. By default, they use
@@ -243,3 +247,4 @@ New in Django 6.0.
 To customize the base layer displayed in OpenLayers-based geometry widgets,
 define a new layer builder in a custom JavaScript file. 
 Then, subclass a standard geometry widget and set the base_layer:
+[VECTOR]

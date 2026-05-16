@@ -1,4 +1,8 @@
+[ID]
+2859
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/views/i18n/
+[TEXT]
 Source code for django.views.i18n
 import itertools
 import json
@@ -559,3 +563,4 @@ js_catalog_template = r"""
     """
     def render_to_response(self, context, **response_kwargs):
         return JsonResponse(context)
+[VECTOR]

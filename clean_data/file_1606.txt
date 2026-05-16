@@ -1,4 +1,8 @@
+[ID]
+1606
+[URL]
 https://docs.djangoproject.com/en/4.2/howto/static-files/deployment/
+[TEXT]
 How to deploy static files 
 See also
 For an introduction to the use of django.contrib.staticfiles, see
@@ -137,3 +141,4 @@ Learn more
 For complete details on all the settings, commands, template tags, and other
 pieces included in django.contrib.staticfiles, see the
 staticfiles reference.
+[VECTOR]

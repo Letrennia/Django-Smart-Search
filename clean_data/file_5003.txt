@@ -1,4 +1,8 @@
+[ID]
+5003
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/template/backends/jinja2/
+[TEXT]
 Source code for django.template.backends.jinja2
 # Since this package contains a "django" module, this is required on Python 2.
 from __future__ import absolute_import
@@ -93,3 +97,4 @@ class Template(object):
             context['csrf_input'] = csrf_input_lazy(request)
             context['csrf_token'] = csrf_token_lazy(request)
         return self.template.render(context)
+[VECTOR]

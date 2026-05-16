@@ -1,4 +1,8 @@
+[ID]
+5114
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/forms/
+[TEXT]
 Forms 
 Detailed form API reference. For introductory material, see the
 Working with forms topic guide.
@@ -65,3 +69,4 @@ Built-in widgets
 Form and field validation
 Raising ValidationError
 Using validation in practice
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5417
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/utils/http/
+[TEXT]
 Source code for django.utils.http
 from __future__ import unicode_literals
 import base64
@@ -821,3 +825,4 @@ def escape_leading_slashes(url):
     if url.startswith('//'):
         url = '/%2F{}'.format(url[2:])
     return url
+[VECTOR]

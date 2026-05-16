@@ -1,4 +1,8 @@
+[ID]
+5407
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/urls/exceptions/
+[TEXT]
 Source code for django.urls.exceptions
 from __future__ import unicode_literals
 from django.http import Http404
@@ -13,3 +17,4 @@ from django.http import Http404
     pass
 [docs]class NoReverseMatch(Exception):
     pass
+[VECTOR]

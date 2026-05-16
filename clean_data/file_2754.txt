@@ -1,4 +1,8 @@
+[ID]
+2754
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/contrib/postgres/search/
+[TEXT]
 Source code for django.contrib.postgres.search
 import psycopg2
 from django.db.models import (
@@ -487,3 +491,4 @@ class TrigramBase(Func):
 [docs]class TrigramDistance(TrigramBase):
     function = ''
     arg_joiner = ' <-> '
+[VECTOR]

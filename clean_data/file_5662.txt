@@ -1,4 +1,8 @@
+[ID]
+5662
+[URL]
 https://docs.djangoproject.com/en/1.10/internals/contributing/triaging-tickets/
+[TEXT]
 Triaging tickets 
 Django uses Trac for managing the work on the code base. Trac is a
 community-tended garden of the bugs people have found and the features people
@@ -597,3 +601,4 @@ commit where the test fails.
 Now, report your results on the Trac ticket, and please include the regression
 test as an attachment. When someone writes a fix for the bug, they'll already
 have your test as a starting point.
+[VECTOR]

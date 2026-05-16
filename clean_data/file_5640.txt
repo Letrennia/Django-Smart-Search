@@ -1,4 +1,8 @@
+[ID]
+5640
+[URL]
 https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/apache-auth/
+[TEXT]
 Authenticating against Django's user database from Apache 
 Since keeping multiple authentication databases in sync is a common problem when
 dealing with Apache, you can configure Apache to authenticate against Django's
@@ -105,3 +109,4 @@ mysite.wsgi must also import the groups_for_user function which
 returns a list groups the given user belongs to.
 Requests for /secret/ will now also require user to be a member of the
 "secret-agents" group.
+[VECTOR]

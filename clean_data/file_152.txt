@@ -1,4 +1,8 @@
+[ID]
+152
+[URL]
 https://docs.djangoproject.com/en/dev/ref/contrib/postgres/search/
+[TEXT]
 Full text search 
 The database functions in the django.contrib.postgres.search module ease
 the use of PostgreSQL's full text search engine.
@@ -323,3 +327,4 @@ TrigramStrictWordDistance
 class TrigramStrictWordDistance(string, expression, **extra)[source] 
 Accepts a string or expression, and a field name or expression. Returns the
 trigram strict word distance between the two arguments.
+[VECTOR]

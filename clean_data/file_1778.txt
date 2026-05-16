@@ -1,4 +1,8 @@
+[ID]
+1778
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/forms/renderers/
+[TEXT]
 Source code for django.forms.renderers
 import functools
 from pathlib import Path
@@ -125,3 +129,4 @@ class TemplatesSetting(BaseRenderer):
     """
     def get_template(self, template_name):
         return get_template(template_name)
+[VECTOR]

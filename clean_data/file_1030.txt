@@ -1,4 +1,8 @@
+[ID]
+1030
+[URL]
 https://docs.djangoproject.com/en/5.1/ref/urlresolvers/
+[TEXT]
 django.urls utility functions 
 reverse() 
 If you need to use something similar to the url template tag in
@@ -231,3 +235,4 @@ project is at the root of its web server, this is always "/".
 Warning
 This function cannot be used outside of the request-response cycle
 since it relies on values initialized during that cycle.
+[VECTOR]

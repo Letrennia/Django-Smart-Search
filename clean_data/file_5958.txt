@@ -1,4 +1,8 @@
+[ID]
+5958
+[URL]
 https://docs.djangoproject.com/en/1.10/ref/templates/upgrading/
+[TEXT]
 Upgrading templates to Django 1.8 
 Django's template system was overhauled in Django 1.8 when it gained support
 for multiple template engines. This document complements the release
@@ -163,3 +167,4 @@ DjangoTemplates backend, but
 pluggable applications can't control this requirement.
 The last two solutions described in the previous section are recommended in
 that case.
+[VECTOR]

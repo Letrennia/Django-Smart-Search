@@ -1,4 +1,8 @@
+[ID]
+602
+[URL]
 https://docs.djangoproject.com/en/5.2/howto/windows/
+[TEXT]
 How to install Django on Windows 
 This document will guide you through installing Python 3.14 and Django on
 Windows. It also provides instructions for setting up a virtual environment,
@@ -169,3 +173,4 @@ variable in order to force a UTF-8 encoding. Windows 10 also provides a
 system-wide setting by checking Use Unicode UTF-8 for worldwide language
 support in Language ‣ Administrative Language Settings
 ‣ Change system locale in system settings.
+[VECTOR]

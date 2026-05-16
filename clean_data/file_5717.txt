@@ -1,4 +1,8 @@
+[ID]
+5717
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/gis/db/models/manager/
+[TEXT]
 Source code for django.contrib.gis.db.models.manager
 import warnings
 from django.contrib.gis.db.models.query import GeoQuerySet
@@ -41,3 +45,4 @@ from django.utils.deprecation import RemovedInDjango20Warning
             RemovedInDjango20Warning, stacklevel=2
         )
         super(GeoManager, self).__init__(*args, **kwargs)
+[VECTOR]

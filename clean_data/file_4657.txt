@@ -1,4 +1,8 @@
+[ID]
+4657
+[URL]
 https://docs.djangoproject.com/en/2.0/ref/class-based-views/mixins-editing/
+[TEXT]
 Editing mixins 
 The following mixins are used to construct Django's editing views:
 django.views.generic.edit.FormMixin
@@ -291,3 +295,4 @@ Returns the url to redirect to when the nominated object has been
 successfully deleted. Returns
 success_url by
 default.
+[VECTOR]

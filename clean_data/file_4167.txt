@@ -1,4 +1,8 @@
+[ID]
+4167
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/db/models/lookups/
+[TEXT]
 Source code for django.db.models.lookups
 import itertools
 import math
@@ -887,3 +891,4 @@ class YearLte(YearComparisonLookup):
     lookup_name = 'lte'
     def get_bound(self, start, finish):
         return finish
+[VECTOR]

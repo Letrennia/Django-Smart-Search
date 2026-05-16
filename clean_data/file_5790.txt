@@ -1,4 +1,8 @@
+[ID]
+5790
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/forms/boundfield/
+[TEXT]
 Source code for django.forms.boundfield
 from __future__ import unicode_literals
 import datetime
@@ -423,3 +427,4 @@ class BoundField(object):
         if self.field.disabled:
             attrs['disabled'] = True
         return attrs
+[VECTOR]

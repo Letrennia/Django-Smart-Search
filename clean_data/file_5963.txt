@@ -1,4 +1,8 @@
+[ID]
+5963
+[URL]
 https://docs.djangoproject.com/en/1.10/ref/validators/
+[TEXT]
 Validators 
 Writing validators 
 A validator is a callable that takes a value and raises a
@@ -309,3 +313,4 @@ codes:
 decimal_places.
 'max_whole_digits' if the number of whole digits is larger than
 the difference between max_digits and decimal_places.
+[VECTOR]

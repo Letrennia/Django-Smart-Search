@@ -1,4 +1,8 @@
+[ID]
+4990
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/forms/widgets/
+[TEXT]
 Source code for django.forms.widgets
 """
 HTML Widget classes
@@ -1445,3 +1449,4 @@ class RendererMixin(object):
         super(SplitHiddenDateTimeWidget, self).__init__(attrs, date_format, time_format)
         for widget in self.widgets:
             widget.input_type = 'hidden'
+[VECTOR]

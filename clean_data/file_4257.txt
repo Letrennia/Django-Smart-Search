@@ -1,4 +1,8 @@
+[ID]
+4257
+[URL]
 https://docs.djangoproject.com/en/2.1/ref/class-based-views/mixins-single-object/
+[TEXT]
 Single object mixins 
 SingleObjectMixin 
 class django.views.generic.detail.SingleObjectMixin 
@@ -227,3 +231,4 @@ the value of template_name on the view (if provided)
 the contents of the template_name_field field on the
 object instance that the view is operating upon (if available)
 <app_label>/<model_name><template_name_suffix>.html
+[VECTOR]

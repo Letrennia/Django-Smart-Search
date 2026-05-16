@@ -1,4 +1,8 @@
+[ID]
+1362
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/utils/translation/
+[TEXT]
 Source code for django.utils.translation
 """
 Internationalization support.
@@ -481,3 +485,4 @@ def trim_whitespace(s):
     return trim_whitespace_re.sub(" ", s.strip())
 def round_away_from_one(value):
     return int(Decimal(value - 1).quantize(Decimal("0"), rounding=ROUND_UP)) + 1
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+1593
+[URL]
 https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/
+[TEXT]
 How to deploy with WSGI 
 Django's primary deployment platform is WSGI, the Python standard for web
 servers and applications.
@@ -97,3 +101,4 @@ wsgi.py:
 You could also replace the Django WSGI application with a custom WSGI
 application that later delegates to the Django WSGI application, if you want
 to combine a Django application with a WSGI application of another framework.
+[VECTOR]

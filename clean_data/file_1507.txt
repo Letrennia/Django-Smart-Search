@@ -1,4 +1,8 @@
+[ID]
+1507
+[URL]
 https://docs.djangoproject.com/en/5.0/topics/checks/
+[TEXT]
 System check framework 
 The system check framework is a set of static checks for validating Django
 projects. It detects common problems and provides hints for how to fix them.
@@ -183,3 +187,4 @@ Consider the following check which issues a warning on deployment if a custom
 setting named ENABLE_ANALYTICS is not set to True:
 Given that this check will not raise a SystemCheckError, the presence of
 the warning message in the stderr output can be asserted like so:
+[VECTOR]

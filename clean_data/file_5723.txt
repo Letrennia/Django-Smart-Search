@@ -1,4 +1,8 @@
+[ID]
+5723
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/gis/geos/collections/
+[TEXT]
 Source code for django.contrib.gis.geos.collections
 """
  This module houses the Geometry Collection objects:
@@ -231,3 +235,4 @@ from django.utils.six.moves import range
 # Setting the allowed types here since GeometryCollection is defined before
 # its subclasses.
 GeometryCollection._allowed = (Point, LineString, LinearRing, Polygon, MultiPoint, MultiLineString, MultiPolygon)
+[VECTOR]

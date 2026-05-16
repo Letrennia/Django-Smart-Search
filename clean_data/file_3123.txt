@@ -1,4 +1,8 @@
+[ID]
+3123
+[URL]
 https://docs.djangoproject.com/en/3.1/_modules/
+[TEXT]
 All modules for which code is available
 django
 django.apps.config
@@ -25,3 +29,4 @@ django.utils.decorators
 django.utils.functional
 django.utils.module_loading
 django.utils.safestring
+[VECTOR]

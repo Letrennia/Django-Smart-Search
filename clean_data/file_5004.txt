@@ -1,4 +1,8 @@
+[ID]
+5004
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/template/base/
+[TEXT]
 Source code for django.template.base
 """
 This is the Django template system.
@@ -2417,3 +2421,4 @@ def add_to_builtins(module):
 add_to_builtins('django.template.defaulttags')
 add_to_builtins('django.template.defaultfilters')
 add_to_builtins('django.template.loader_tags')
+[VECTOR]

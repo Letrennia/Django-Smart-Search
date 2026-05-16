@@ -1,4 +1,8 @@
+[ID]
+4563
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/db/models/fields/
+[TEXT]
 Source code for django.db.models.fields
 import collections
 import copy
@@ -4101,3 +4105,4 @@ class PositiveIntegerRelDbTypeMixin:
         }
         defaults.update(kwargs)
         return super().formfield(**defaults)
+[VECTOR]

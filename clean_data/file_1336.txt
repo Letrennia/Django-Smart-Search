@@ -1,4 +1,8 @@
+[ID]
+1336
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/template/loaders/base/
+[TEXT]
 Source code for django.template.loaders.base
 from django.template import Template, TemplateDoesNotExist
 [docs]
@@ -93,3 +97,4 @@ class Loader:
         templates or cached loader modules).
         """
         pass
+[VECTOR]

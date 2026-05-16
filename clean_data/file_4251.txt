@@ -1,4 +1,8 @@
+[ID]
+4251
+[URL]
 https://docs.djangoproject.com/en/2.1/ref/class-based-views/generic-editing/
+[TEXT]
 Generic editing views 
 The following views are described on this page and provide a foundation for
 editing content:
@@ -205,3 +209,4 @@ deleting objects for the example Author model would cause the
 default template_name to be 'myapp/author_check_delete.html'.
 Example myapp/views.py:
 Example myapp/author_confirm_delete.html:
+[VECTOR]

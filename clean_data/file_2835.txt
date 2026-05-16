@@ -1,4 +1,8 @@
+[ID]
+2835
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/urls/exceptions/
+[TEXT]
 Source code for django.urls.exceptions
 from django.http import Http404
 [docs]class Resolver404(Http404):
@@ -11,3 +15,4 @@ from django.http import Http404
     pass
 [docs]class NoReverseMatch(Exception):
     pass
+[VECTOR]

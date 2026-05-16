@@ -1,4 +1,8 @@
+[ID]
+1267
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/core/files/storage/base/
+[TEXT]
 Source code for django.core.files.storage.base
 import os
 import pathlib
@@ -393,3 +397,4 @@ class Storage:
         raise NotImplementedError(
             "subclasses of Storage must provide a get_modified_time() method"
         )
+[VECTOR]

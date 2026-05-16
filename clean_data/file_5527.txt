@@ -1,4 +1,8 @@
+[ID]
+5527
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/models/expressions/
+[TEXT]
 Query Expressions 
 Query expressions describe a value or a computation that can be used as part of
 an update, create, filter, order by, annotation, or aggregate. There are a
@@ -845,3 +849,4 @@ __init__.py file of the backend package or in a top level expressions.py
 file (or package) that is imported from the top level __init__.py.
 For user projects wishing to patch the backend that they're using, this code
 should live in an AppConfig.ready() method.
+[VECTOR]

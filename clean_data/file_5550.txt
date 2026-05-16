@@ -1,4 +1,8 @@
+[ID]
+5550
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/validators/
+[TEXT]
 Validators 
 Writing validators 
 A validator is a callable that takes a value and raises a
@@ -333,3 +337,4 @@ validate_image_file_extension
 New in Django 1.11. 
 Uses Pillow to ensure that value.name (value is a
 File) has a valid image extension.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+2231
+[URL]
 https://docs.djangoproject.com/en/4.1/ref/forms/models/
+[TEXT]
 Model Form Functions 
 Model Form API reference. For introductory material about model forms, see the
 Creating forms from models topic guide.
@@ -109,3 +113,4 @@ the parent_model, you must specify a fk_name.
 See Inline formsets for example usage.
 Changed in Django 4.0: The renderer argument was added.
 Changed in Django 4.1: The edit_only argument was added.
+[VECTOR]

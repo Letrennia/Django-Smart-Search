@@ -1,4 +1,8 @@
+[ID]
+3919
+[URL]
 https://docs.djangoproject.com/en/2.2/ref/forms/widgets/
+[TEXT]
 Widgets 
 A widget is Django's representation of an HTML input element. The widget
 handles the rendering of the HTML, and the extraction of data from a GET/POST
@@ -951,3 +955,4 @@ boxes will each have an empty choice with this label. If empty_label
 is a list or tuple of 3 string elements, the select boxes will
 have their own custom label. The labels should be in this order
 ('year_label', 'month_label', 'day_label').
+[VECTOR]

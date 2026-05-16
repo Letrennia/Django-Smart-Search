@@ -1,4 +1,8 @@
+[ID]
+616
+[URL]
 https://docs.djangoproject.com/en/5.2/internals/contributing/writing-code/submitting-patches/
+[TEXT]
 Submitting contributions 
 We're always grateful for contributions to Django's code. Indeed, bug reports
 with associated contributions will get fixed far more quickly than those
@@ -499,3 +503,4 @@ Are you the patch author and a new contributor? Please add yourself to the
 AUTHORS file and submit a Contributor License Agreement.
 Does this have an accepted ticket on Trac? All contributions require a ticket
 unless the change is considered trivial.
+[VECTOR]

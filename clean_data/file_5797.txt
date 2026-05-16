@@ -1,4 +1,8 @@
+[ID]
+5797
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/http/response/
+[TEXT]
 Source code for django.http.response
 from __future__ import unicode_literals
 import datetime
@@ -827,3 +831,4 @@ class Http404(Exception):
         kwargs.setdefault('content_type', 'application/json')
         data = json.dumps(data, cls=encoder, **json_dumps_params)
         super(JsonResponse, self).__init__(content=data, **kwargs)
+[VECTOR]

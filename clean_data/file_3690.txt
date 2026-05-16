@@ -1,4 +1,8 @@
+[ID]
+3690
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/apps/registry/
+[TEXT]
 Source code for django.apps.registry
 import functools
 import sys
@@ -699,3 +703,4 @@ class Apps:
         for function in self._pending_operations.pop(key, []):
             function(model)
 apps = Apps(installed_apps=None)
+[VECTOR]

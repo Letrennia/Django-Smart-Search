@@ -1,4 +1,8 @@
+[ID]
+240
+[URL]
 https://docs.djangoproject.com/en/dev/topics/db/optimization/
+[TEXT]
 Database access optimization 
 Django's database layer provides various ways to help developers get the most
 out of their databases. This document gathers together links to the relevant
@@ -493,3 +497,4 @@ conditions with Q() objects, you can delete several relationships in a
 single query. 
 …is preferable to:
 …where Pizza and Topping have a many-to-many relationship.
+[VECTOR]

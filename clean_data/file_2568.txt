@@ -1,4 +1,8 @@
+[ID]
+2568
+[URL]
 https://docs.djangoproject.com/en/4.0/ref/validators/
+[TEXT]
 Validators 
 Writing validators 
 A validator is a callable that takes a value and raises a
@@ -385,3 +389,4 @@ Defaults to "Null characters are not allowed.".
 code 
 The error code used by ValidationError
 if validation fails. Defaults to "null_characters_not_allowed".
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4484
+[URL]
 https://docs.djangoproject.com/en/2.0/intro/overview/
+[TEXT]
 Django at a glance 
 Because Django was developed in a fast-paced newsroom environment, it was
 designed to make common Web-development tasks fast and easy. Here's an informal
@@ -363,3 +367,4 @@ scratched the surface.
 The next obvious steps are for you to download Django, read the
 tutorial and join the community. Thanks for your
 interest!
+[VECTOR]

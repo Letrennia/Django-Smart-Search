@@ -1,4 +1,8 @@
+[ID]
+5778
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/db/models/fields/files/
+[TEXT]
 Source code for django.db.models.fields.files
 import datetime
 import os
@@ -819,3 +823,4 @@ class ImageFieldFile(ImageFile, FieldFile):
         defaults = {'form_class': forms.ImageField}
         defaults.update(kwargs)
         return super(ImageField, self).formfield(**defaults)
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5188
+[URL]
 https://docs.djangoproject.com/en/1.8/topics/http/decorators/
+[TEXT]
 View decorators 
 Django provides several decorators that can be applied to views to support
 various HTTP features.
@@ -99,3 +103,4 @@ vary_on_headers(*headers)[source]
 The Vary header defines which request headers a cache mechanism should take
 into account when building its cache key.
 See using vary headers.
+[VECTOR]

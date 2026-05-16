@@ -1,4 +1,8 @@
+[ID]
+1363
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/views/debug/
+[TEXT]
 Source code for django.views.debug
 import functools
 import inspect
@@ -1195,3 +1199,4 @@ def default_urlconf(request):
         }
     )
     return HttpResponse(t.render(c))
+[VECTOR]

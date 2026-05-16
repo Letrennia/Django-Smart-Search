@@ -1,4 +1,8 @@
+[ID]
+4181
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/forms/widgets/
+[TEXT]
 Source code for django.forms.widgets
 """
 HTML Widget classes
@@ -1759,3 +1763,4 @@ class ChoiceWidget(Widget):
             ('{}_{}'.format(name, interval) in data)
             for interval in ('year', 'month', 'day')
         )
+[VECTOR]

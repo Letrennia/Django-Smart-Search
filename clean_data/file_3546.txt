@@ -1,4 +1,8 @@
+[ID]
+3546
+[URL]
 https://docs.djangoproject.com/en/3.0/topics/
+[TEXT]
 Using Django 
 Introductions to all the key parts of Django you'll need to know:
 How to install Django
@@ -329,3 +333,4 @@ Formtools
 Asynchronous support
 Async-safety
 Async adapter functions
+[VECTOR]

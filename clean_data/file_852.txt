@@ -1,4 +1,8 @@
+[ID]
+852
+[URL]
 https://docs.djangoproject.com/en/5.1/howto/custom-template-tags/
+[TEXT]
 How to create custom template tags and filters 
 Django's template language comes with a wide variety of built-in
 tags and filters designed to address the
@@ -1105,3 +1109,4 @@ UpperNode.render().
 For more examples of complex rendering, see the source code of
 {% for %} in django/template/defaulttags.py and
 {% if %} in django/template/smartif.py.
+[VECTOR]

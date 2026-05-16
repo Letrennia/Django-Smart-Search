@@ -1,4 +1,8 @@
+[ID]
+1740
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/core/management/base/
+[TEXT]
 Source code for django.core.management.base
 """
 Base classes for writing management commands (named commands which can
@@ -1239,3 +1243,4 @@ class LabelCommand(BaseCommand):
         raise NotImplementedError(
             "subclasses of LabelCommand must provide a handle_label() method"
         )
+[VECTOR]

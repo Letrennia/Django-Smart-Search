@@ -1,4 +1,8 @@
+[ID]
+2981
+[URL]
 https://docs.djangoproject.com/en/3.2/topics/auth/customizing/
+[TEXT]
 Customizing authentication in Django 
 The authentication that comes with Django is good enough for most common cases,
 but you may have needs not met by the out-of-the-box defaults. Customizing
@@ -1151,3 +1155,4 @@ Changed in Django 3.2: In older versions, ReadOnlyPasswordHashField is not
 disabled by default and
 UserChangeForm.clean_password() is required to return the initial
 value, whatever the user provides.
+[VECTOR]

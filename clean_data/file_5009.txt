@@ -1,4 +1,8 @@
+[ID]
+5009
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/template/loaders/locmem/
+[TEXT]
 Source code for django.template.loaders.locmem
 """
 Wrapper for loading templates from a plain Python dict.
@@ -31,3 +35,4 @@ class Loader(BaseLoader):
             return self.templates_dict[template_name], template_name
         except KeyError:
             raise TemplateDoesNotExist(template_name)
+[VECTOR]

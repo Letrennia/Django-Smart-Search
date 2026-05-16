@@ -1,4 +1,8 @@
+[ID]
+1211
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/auth/password_validation/
+[TEXT]
 Source code for django.contrib.auth.password_validation
 import functools
 import gzip
@@ -453,3 +457,4 @@ class NumericPasswordValidator:
             )
     def get_help_text(self):
         return _("Your password can't be entirely numeric.")
+[VECTOR]

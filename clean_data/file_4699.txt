@@ -1,4 +1,8 @@
+[ID]
+4699
+[URL]
 https://docs.djangoproject.com/en/2.0/ref/contrib/postgres/fields/
+[TEXT]
 PostgreSQL specific model fields 
 All of these fields are available from the django.contrib.postgres.fields
 module.
@@ -695,3 +699,4 @@ base_field
 The form field to use.
 range_type 
 The psycopg2 range type to use.
+[VECTOR]

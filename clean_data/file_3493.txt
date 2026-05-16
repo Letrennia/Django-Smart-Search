@@ -1,4 +1,8 @@
+[ID]
+3493
+[URL]
 https://docs.djangoproject.com/en/3.0/ref/contrib/staticfiles/
+[TEXT]
 The staticfiles app 
 django.contrib.staticfiles collects static files from each of your
 applications (and any other places you specify) into a single location that
@@ -661,3 +665,4 @@ django.contrib.staticfiles.views.serve() view described above, it can
 transparently overlay at test execution-time the assets provided by the
 staticfiles finders. This means you don't need to run
 collectstatic before or as a part of your tests setup.
+[VECTOR]

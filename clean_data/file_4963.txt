@@ -1,4 +1,8 @@
+[ID]
+4963
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/core/urlresolvers/
+[TEXT]
 Source code for django.core.urlresolvers
 """
 This module converts requested URLs to callback view functions.
@@ -1119,3 +1123,4 @@ def is_valid_path(path, urlconf=None):
         return True
     except Resolver404:
         return False
+[VECTOR]

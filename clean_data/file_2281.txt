@@ -1,4 +1,8 @@
+[ID]
+2281
+[URL]
 https://docs.djangoproject.com/en/4.1/topics/class-based-views/generic-editing/
+[TEXT]
 Form handling with class-based views 
 Form processing generally has 3 paths:
 Initial GET (blank or prepopulated form)
@@ -179,3 +183,4 @@ handle unauthorized users in form_valid().
 Content negotiation example 
 Here is an example showing how you might go about implementing a form that
 works with an API-based workflow as well as 'normal' form POSTs:
+[VECTOR]

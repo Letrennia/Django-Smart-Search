@@ -1,4 +1,8 @@
+[ID]
+4161
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/db/models/fields/related/
+[TEXT]
 Source code for django.db.models.fields.related
 import functools
 import inspect
@@ -2877,3 +2881,4 @@ def create_many_to_many_intermediary_model(field, klass):
         return None
     def db_parameters(self, connection):
         return {"type": None, "check": None}
+[VECTOR]

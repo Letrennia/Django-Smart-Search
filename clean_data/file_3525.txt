@@ -1,4 +1,8 @@
+[ID]
+3525
+[URL]
 https://docs.djangoproject.com/en/3.0/ref/models/querysets/
+[TEXT]
 QuerySet API reference 
 This document describes the details of the QuerySet API. It builds on the
 material presented in the model and database
@@ -3597,3 +3601,4 @@ Conditions that span relational fields.
 QuerySet.only() and prefetch_related().
 A GenericForeignKey
 inherited from a parent model.
+[VECTOR]

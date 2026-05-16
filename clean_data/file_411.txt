@@ -1,4 +1,8 @@
+[ID]
+411
+[URL]
 https://docs.djangoproject.com/en/6.0/ref/contrib/gis/model-api/
+[TEXT]
 GeoDjango Model API 
 This document explores the details of the GeoDjango Model API. Throughout this
 section, we'll be using the following geographic model of a ZIP code and
@@ -275,3 +279,4 @@ Cast database function to convert the
 geography column to a geometry type in the query:
 For more information, the PostGIS documentation contains a helpful section on
 determining when to use geography data type over geometry data type.
+[VECTOR]

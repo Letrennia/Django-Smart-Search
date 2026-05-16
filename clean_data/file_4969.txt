@@ -1,4 +1,8 @@
+[ID]
+4969
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/db/models/aggregates/
+[TEXT]
 Source code for django.db.models.aggregates
 """
 Classes to represent the definitions of aggregate functions.
@@ -249,3 +253,4 @@ __all__ = [
         if value is None:
             return value
         return float(value)
+[VECTOR]

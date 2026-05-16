@@ -1,4 +1,8 @@
+[ID]
+351
+[URL]
 https://docs.djangoproject.com/en/6.0/intro/contributing/
+[TEXT]
 Writing your first contribution for Django 
 Introduction 
 Interested in giving back to the community a little? Maybe you've found a bug
@@ -795,3 +799,4 @@ flags on the ticket to say "has patch", "doesn't need tests", etc, so others
 can find it for review. Contributing doesn't necessarily always mean writing
 code from scratch. Reviewing open pull requests is also a very helpful
 contribution. See Triaging tickets for details.
+[VECTOR]

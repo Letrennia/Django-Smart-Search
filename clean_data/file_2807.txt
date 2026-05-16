@@ -1,4 +1,8 @@
+[ID]
+2807
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/http/request/
+[TEXT]
 Source code for django.http.request
 import cgi
 import codecs
@@ -1181,3 +1185,4 @@ def validate_host(host, allowed_hosts):
     return any(pattern == '*' or is_same_domain(host, pattern) for pattern in allowed_hosts)
 def parse_accept_header(header):
     return [MediaType(token) for token in header.split(',') if token.strip()]
+[VECTOR]

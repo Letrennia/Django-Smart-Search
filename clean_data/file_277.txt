@@ -1,4 +1,8 @@
+[ID]
+277
+[URL]
 https://docs.djangoproject.com/en/dev/topics/testing/
+[TEXT]
 Testing in Django 
 Automated testing is an extremely useful bug-killing tool for the modern
 web developer. You can use a collection of tests – a test suite – to
@@ -47,3 +51,4 @@ Using different testing frameworks section of Advanced testing topics.
 Writing and running tests
 Testing tools
 Advanced testing topics
+[VECTOR]

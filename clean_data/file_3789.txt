@@ -1,4 +1,8 @@
+[ID]
+3789
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/template/backends/jinja2/
+[TEXT]
 Source code for django.template.backends.jinja2
 import jinja2
 from django.conf import settings
@@ -173,3 +177,4 @@ def get_exception_info(exception):
         'top': top,
         'bottom': bottom,
     }
+[VECTOR]

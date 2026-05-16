@@ -1,4 +1,8 @@
+[ID]
+919
+[URL]
 https://docs.djangoproject.com/en/5.1/ref/checks/
+[TEXT]
 System check framework 
 The system check framework is a set of static checks for validating Django
 projects. It detects common problems and provides hints for how to fix them.
@@ -1599,3 +1603,4 @@ staticfiles.W004: The directory <directory> in the
 STATICFILES_DIRS does not exist.
 staticfiles.E005: The STORAGES setting must define a
 staticfiles storage.
+[VECTOR]

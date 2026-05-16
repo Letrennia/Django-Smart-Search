@@ -1,4 +1,8 @@
+[ID]
+1036
+[URL]
 https://docs.djangoproject.com/en/5.1/releases/1.0-porting-guide/
+[TEXT]
 Porting your apps from Django 0.96 to 1.0 
 Django 1.0 breaks compatibility with 0.96 in some areas.
 This guide will help you port 0.96 projects and apps to 1.0. The first part of
@@ -789,3 +793,4 @@ backend.uses_case_insensitive_names
 connection.features.uses_case_insensitive_names
 backend.uses_custom_queryset
 connection.features.uses_custom_queryset
+[VECTOR]

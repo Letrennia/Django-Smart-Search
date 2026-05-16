@@ -1,4 +1,8 @@
+[ID]
+471
+[URL]
 https://docs.djangoproject.com/en/6.0/ref/paginator/
+[TEXT]
 Paginator 
 Django provides a few classes that help you manage paginated data – that is,
 data that's split across several pages, with "Previous/Next" links. These
@@ -345,3 +349,4 @@ Raised when page() is given a valid value but no objects
 exist on that page.
 Both of the exceptions are subclasses of InvalidPage, so you can handle
 them both with except InvalidPage.
+[VECTOR]

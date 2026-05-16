@@ -1,4 +1,8 @@
+[ID]
+2621
+[URL]
 https://docs.djangoproject.com/en/4.0/topics/i18n/timezones/
+[TEXT]
 Time zones 
 Overview 
 When support for time zones is enabled, Django stores datetime information in
@@ -651,3 +655,4 @@ How can I see all available time zones?
 zoneinfo.available_timezones() provides the set of all valid keys for
 IANA time zones available to your system. See the docs for usage
 considerations.
+[VECTOR]

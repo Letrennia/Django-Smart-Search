@@ -1,4 +1,8 @@
+[ID]
+5338
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/core/checks/registry/
+[TEXT]
 Source code for django.core.checks.registry
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
@@ -169,3 +173,4 @@ registry = CheckRegistry()
 register = registry.register
 run_checks = registry.run_checks
 tag_exists = registry.tag_exists
+[VECTOR]

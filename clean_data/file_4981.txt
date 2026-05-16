@@ -1,4 +1,8 @@
+[ID]
+4981
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/db/models/query_utils/
+[TEXT]
 Source code for django.db.models.query_utils
 """
 Various data structures used in query construction.
@@ -471,3 +475,4 @@ def refs_expression(lookup_parts, annotations):
         if level_n_lookup in annotations and annotations[level_n_lookup]:
             return annotations[level_n_lookup], lookup_parts[n:]
     return False, ()
+[VECTOR]

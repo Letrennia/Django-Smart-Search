@@ -1,4 +1,8 @@
+[ID]
+4499
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/
+[TEXT]
 Source code for django
 from django.utils.version import get_version
 VERSION = (2, 0, 14, 'alpha', 0)
@@ -39,3 +43,4 @@ __version__ = get_version(VERSION)
             '/' if settings.FORCE_SCRIPT_NAME is None else settings.FORCE_SCRIPT_NAME
         )
     apps.populate(settings.INSTALLED_APPS)
+[VECTOR]

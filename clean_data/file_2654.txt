@@ -1,4 +1,8 @@
+[ID]
+2654
+[URL]
 https://docs.djangoproject.com/en/3.2/howto/custom-model-fields/
+[TEXT]
 Writing custom model fields 
 Introduction 
 The model reference documentation explains how to use
@@ -781,3 +785,4 @@ money, that isn't always necessary. Once a file is retrieved to obtain
 some data about its content, cache as much of that data as possible to
 reduce the number of times the file must be retrieved on subsequent
 calls for that information.
+[VECTOR]

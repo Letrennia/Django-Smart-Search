@@ -1,4 +1,8 @@
+[ID]
+1675
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/auth/validators/
+[TEXT]
 Source code for django.contrib.auth.validators
 import re
 from django.core import validators
@@ -41,3 +45,4 @@ class UnicodeUsernameValidator(validators.RegexValidator):
         "numbers, and @/./+/-/_ characters."
     )
     flags = 0
+[VECTOR]

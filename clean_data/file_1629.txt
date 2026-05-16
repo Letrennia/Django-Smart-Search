@@ -1,4 +1,8 @@
+[ID]
+1629
+[URL]
 https://docs.djangoproject.com/en/4.2/internals/organization/
+[TEXT]
 Organization of the Django Project 
 Principles 
 The Django Project is managed by a team of volunteers pursuing three goals:
@@ -395,3 +399,4 @@ in question is ineligible.
 Changing the organization 
 Changes to this document require the use of the DEP process, with
 modifications described in DEP 0010.
+[VECTOR]

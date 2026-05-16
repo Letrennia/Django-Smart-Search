@@ -1,4 +1,8 @@
+[ID]
+3340
+[URL]
 https://docs.djangoproject.com/en/3.0/howto/deployment/asgi/uvicorn/
+[TEXT]
 How to use Django with Uvicorn 
 Uvicorn is an ASGI server based on uvloop and httptools, with an
 emphasis on speed.
@@ -33,3 +37,4 @@ This will start one process listening on 127.0.0.1:8000. It requires that
 your project be on the Python path; to ensure that run this command from the
 same directory as your manage.py file.
 For more advanced usage, please read the Uvicorn documentation.
+[VECTOR]

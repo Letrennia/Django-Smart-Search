@@ -1,4 +1,8 @@
+[ID]
+5754
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/syndication/views/
+[TEXT]
 Source code for django.contrib.syndication.views
 from __future__ import unicode_literals
 from calendar import timegm
@@ -383,3 +387,4 @@ class Feed(object):
                 **self.item_extra_kwargs(item)
             )
         return feed
+[VECTOR]

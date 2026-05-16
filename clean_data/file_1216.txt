@@ -1,4 +1,8 @@
+[ID]
+1216
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/contenttypes/fields/
+[TEXT]
 Source code for django.contrib.contenttypes.fields
 import functools
 import itertools
@@ -1435,3 +1439,4 @@ def create_generic_related_manager(superclass, rel):
             return await sync_to_async(self.update_or_create)(**kwargs)
         aupdate_or_create.alters_data = True
     return GenericRelatedObjectManager
+[VECTOR]

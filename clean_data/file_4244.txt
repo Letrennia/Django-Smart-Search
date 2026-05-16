@@ -1,4 +1,8 @@
+[ID]
+4244
+[URL]
 https://docs.djangoproject.com/en/2.1/ref/applications/
+[TEXT]
 Applications 
 Django contains a registry of installed applications that stores configuration
 and provides introspection. It also maintains a list of available models.
@@ -571,3 +575,4 @@ modules in installed applications. To prevent it, change your
 INSTALLED_APPS to contain
 'django.contrib.admin.apps.SimpleAdminConfig' instead of
 'django.contrib.admin'.
+[VECTOR]

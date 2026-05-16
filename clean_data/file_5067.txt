@@ -1,4 +1,8 @@
+[ID]
+5067
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/contrib/formtools/
+[TEXT]
 django.contrib.formtools 
 A set of high-level abstractions for Django forms (django.forms).
 Historically, Django shipped with django.contrib.formtools – a collection
@@ -43,3 +47,4 @@ to:
 The code in version 1.0 of the new package is the same (it was copied directly
 from Django), so you don't have to worry about backwards compatibility in terms
 of functionality. Only the imports have changed.
+[VECTOR]

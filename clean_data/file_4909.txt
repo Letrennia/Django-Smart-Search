@@ -1,4 +1,8 @@
+[ID]
+4909
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/admin/models/
+[TEXT]
 Source code for django.contrib.admin.models
 from __future__ import unicode_literals
 from django.conf import settings
@@ -135,3 +139,4 @@ class LogEntry(models.Model):
             except NoReverseMatch:
                 pass
         return None
+[VECTOR]

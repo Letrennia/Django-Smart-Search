@@ -1,4 +1,8 @@
+[ID]
+2674
+[URL]
 https://docs.djangoproject.com/en/3.2/howto/static-files/
+[TEXT]
 Managing static files (e.g. images, JavaScript, CSS) 
 Websites generally need to serve additional files such as images, JavaScript,
 or CSS. In Django, we refer to these files as "static files".  Django provides
@@ -197,3 +201,4 @@ This document has covered the basics and some common usage patterns. For
 complete details on all the settings, commands, template tags, and other pieces
 included in django.contrib.staticfiles, see the staticfiles
 reference.
+[VECTOR]

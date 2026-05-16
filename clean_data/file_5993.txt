@@ -1,4 +1,8 @@
+[ID]
+5993
+[URL]
 https://docs.djangoproject.com/en/1.10/topics/db/sql/
+[TEXT]
 Performing raw SQL queries 
 When the model query APIs don't go far enough, you
 can fall back to writing raw SQL. Django gives you two ways of performing raw
@@ -301,3 +305,4 @@ placeholder, which is used by the SQLite Python bindings. This is for the sake
 of consistency and sanity.
 Using a cursor as a context manager:
 is equivalent to:
+[VECTOR]

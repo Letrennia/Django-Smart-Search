@@ -1,4 +1,8 @@
+[ID]
+2779
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/db/models/constraints/
+[TEXT]
 Source code for django.db.models.constraints
 from enum import Enum
 from django.db.models.query_utils import Q
@@ -333,3 +337,4 @@ class Deferrable(Enum):
         if self.opclasses:
             kwargs['opclasses'] = self.opclasses
         return path, args, kwargs
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5241
+[URL]
 https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/uwsgi/
+[TEXT]
 How to use Django with uWSGI 
 uWSGI is a fast, self-healing and developer/sysadmin-friendly application
 container server coded in pure C.
@@ -127,3 +131,4 @@ See the Files section of the Unicode reference guide for
 details.
 See the uWSGI docs on managing the uWSGI process for information on
 starting, stopping and reloading the uWSGI workers.
+[VECTOR]

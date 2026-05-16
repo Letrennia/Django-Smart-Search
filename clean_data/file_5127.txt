@@ -1,4 +1,8 @@
+[ID]
+5127
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/models/expressions/
+[TEXT]
 Query Expressions 
 Query expressions describe a value or a computation that can be used as part of
 a filter, order by, annotation, or aggregate. There are a number of built-in
@@ -581,3 +585,4 @@ if the Oracle backend is in use.
 Finally, we implement the rest of the methods that allow our query expression
 to play nice with other query expressions:
 Let's see how it works:
+[VECTOR]

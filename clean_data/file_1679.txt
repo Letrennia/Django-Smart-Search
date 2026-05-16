@@ -1,4 +1,8 @@
+[ID]
+1679
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/contenttypes/forms/
+[TEXT]
 Source code for django.contrib.contenttypes.forms
 from django.contrib.contenttypes.models import ContentType
 from django.db import models
@@ -253,3 +257,4 @@ def generic_inlineformset_factory(
     FormSet.ct_fk_field = fk_field
     FormSet.for_concrete_model = for_concrete_model
     return FormSet
+[VECTOR]

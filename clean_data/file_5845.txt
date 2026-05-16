@@ -1,4 +1,8 @@
+[ID]
+5845
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/views/decorators/http/
+[TEXT]
 Source code for django.views.decorators.http
 """
 Decorators for views based on HTTP headers.
@@ -179,3 +183,4 @@ require_safe.__doc__ = "Decorator to require that a view only accepts safe metho
     return condition(etag_func=etag_func)
 [docs]def last_modified(last_modified_func):
     return condition(last_modified_func=last_modified_func)
+[VECTOR]

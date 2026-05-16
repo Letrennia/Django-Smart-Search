@@ -1,4 +1,8 @@
+[ID]
+1985
+[URL]
 https://docs.djangoproject.com/en/4.2/topics/db/examples/many_to_one/
+[TEXT]
 Many-to-one relationships 
 To define a many-to-one relationship, use ForeignKey.
 In this example, a Reporter can be associated with many Article
@@ -67,3 +71,4 @@ If you delete a reporter, their articles will be deleted (assuming that the
 ForeignKey was defined with django.db.models.ForeignKey.on_delete set to
 CASCADE, which is the default):
 You can delete using a JOIN in the query:
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4162
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/db/models/functions/comparison/
+[TEXT]
 Source code for django.db.models.functions.comparison
 """Database functions that do comparisons or type conversions."""
 from django.db.models import Func
@@ -141,3 +145,4 @@ from django.db.models import Func
     def as_sqlite(self, compiler, connection):
         """Use the MIN function on SQLite."""
         return super().as_sqlite(compiler, connection, function='MIN')
+[VECTOR]

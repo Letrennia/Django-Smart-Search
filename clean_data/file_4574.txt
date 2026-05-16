@@ -1,4 +1,8 @@
+[ID]
+4574
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/db/models/query_utils/
+[TEXT]
 Source code for django.db.models.query_utils
 """
 Various data structures used in query construction.
@@ -575,3 +579,4 @@ def check_rel_lookup_compatibility(model, target_opts, field):
         query = compiler.query
         where = query.build_filtered_relation_q(self.condition, reuse=set(self.path))
         return compiler.compile(where)
+[VECTOR]

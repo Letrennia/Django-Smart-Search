@@ -1,4 +1,8 @@
+[ID]
+4890
+[URL]
 https://docs.djangoproject.com/en/1.8/intro/tutorial01/
+[TEXT]
 Writing your first Django app, part 1 
 Let's learn by example.
 Throughout this tutorial, we'll walk you through the creation of a basic
@@ -847,3 +851,4 @@ For more information on model relations, see Accessing related objects. For more
 field lookups via the API, see Field lookups. For
 full details on the database API, see our Database API reference.
 When you're comfortable with the API, read part 2 of this tutorial to get Django's automatic admin working.
+[VECTOR]

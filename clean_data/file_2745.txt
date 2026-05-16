@@ -1,4 +1,8 @@
+[ID]
+2745
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/contrib/postgres/fields/jsonb/
+[TEXT]
 Source code for django.contrib.postgres.fields.jsonb
 import warnings
 from django.db.models import JSONField as BuiltinJSONField
@@ -71,3 +75,4 @@ class KeyTextTransform(BuiltinKeyTextTransform):
             RemovedInDjango40Warning, stacklevel=2,
         )
         super().__init__(*args, **kwargs)
+[VECTOR]

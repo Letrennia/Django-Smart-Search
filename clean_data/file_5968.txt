@@ -1,4 +1,8 @@
+[ID]
+5968
+[URL]
 https://docs.djangoproject.com/en/1.10/topics/
+[TEXT]
 Using Django 
 Introductions to all the key parts of Django you'll need to know:
 How to install Django
@@ -53,3 +57,4 @@ Django settings
 Signals
 System check framework
 External packages
+[VECTOR]

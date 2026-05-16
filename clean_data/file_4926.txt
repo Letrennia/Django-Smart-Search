@@ -1,4 +1,8 @@
+[ID]
+4926
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/flatpages/models/
+[TEXT]
 Source code for django.contrib.flatpages.models
 from __future__ import unicode_literals
 from django.contrib.sites.models import Site
@@ -65,3 +69,4 @@ class FlatPage(models.Model):
     def get_absolute_url(self):
         # Handle script prefix manually because we bypass reverse()
         return iri_to_uri(get_script_prefix().rstrip('/') + self.url)
+[VECTOR]

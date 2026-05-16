@@ -1,4 +1,8 @@
+[ID]
+4178
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/forms/formsets/
+[TEXT]
 Source code for django.forms.formsets
 from django.core.exceptions import ValidationError
 from django.forms import Form
@@ -791,3 +795,4 @@ def all_valid(formsets):
     for formset in formsets:
         valid &= formset.is_valid()
     return valid
+[VECTOR]

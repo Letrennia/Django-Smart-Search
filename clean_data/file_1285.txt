@@ -1,4 +1,8 @@
+[ID]
+1285
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/db/models/constraints/
+[TEXT]
 Source code for django.db.models.constraints
 import warnings
 from enum import Enum
@@ -1285,3 +1289,4 @@ class UniqueConstraint(BaseConstraint):
                     )
             except FieldError:
                 pass
+[VECTOR]

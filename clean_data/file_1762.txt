@@ -1,4 +1,8 @@
+[ID]
+1762
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/db/models/functions/text/
+[TEXT]
 Source code for django.db.models.functions.text
 from django.db import NotSupportedError
 from django.db.models.expressions import Func, Value
@@ -627,3 +631,4 @@ class Trim(Transform):
 class Upper(Transform):
     function = "UPPER"
     lookup_name = "upper"
+[VECTOR]

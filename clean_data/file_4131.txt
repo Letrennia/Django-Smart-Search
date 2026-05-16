@@ -1,4 +1,8 @@
+[ID]
+4131
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/contrib/sessions/backends/base/
+[TEXT]
 Source code for django.contrib.sessions.backends.base
 import base64
 import logging
@@ -581,3 +585,4 @@ class SessionBase:
         a built-in expiration mechanism, it should be a no-op.
         """
         raise NotImplementedError('This backend does not support clear_expired().')
+[VECTOR]

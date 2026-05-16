@@ -1,4 +1,8 @@
+[ID]
+2413
+[URL]
 https://docs.djangoproject.com/en/4.0/misc/
+[TEXT]
 Meta-documentation and miscellany 
 Documentation that we can't find a more organized place for. Like that drawer in
 your kitchen with the scissors, batteries, duct tape, and other junk.
@@ -33,3 +37,4 @@ Views
 Cache Framework
 Third-party distributions of Django
 For distributors
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+3560
+[URL]
 https://docs.djangoproject.com/en/3.0/topics/db/
+[TEXT]
 Models and databases 
 A model is the single, definitive source of data about your data. It contains
 the essential fields and behaviors of the data you're storing. Generally, each
@@ -31,3 +35,4 @@ Tablespaces
 Database access optimization
 Database instrumentation
 Examples of model relationship API usage
+[VECTOR]

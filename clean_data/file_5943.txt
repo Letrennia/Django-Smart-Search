@@ -1,4 +1,8 @@
+[ID]
+5943
+[URL]
 https://docs.djangoproject.com/en/1.10/ref/models/instances/
+[TEXT]
 Model instance reference 
 This document describes the details of the Model API. It builds on the
 material presented in the model and database
@@ -789,3 +793,4 @@ Django provides a DoesNotExist exception as an attribute of each model
 class to identify the class of object that could not be found and to allow
 you to catch a particular model class with try/except. The exception is
 a subclass of django.core.exceptions.ObjectDoesNotExist.
+[VECTOR]

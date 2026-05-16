@@ -1,4 +1,8 @@
+[ID]
+3485
+[URL]
 https://docs.djangoproject.com/en/3.0/ref/contrib/postgres/indexes/
+[TEXT]
 PostgreSQL specific model indexes 
 The following are PostgreSQL specific indexes
 available from the django.contrib.postgres.indexes module.
@@ -119,3 +123,4 @@ New in Django 2.2.
 Creates an SP-GiST index.
 Provide an integer value from 10 to 100 to the fillfactor parameter to
 tune how packed the index pages will be. PostgreSQL's default is 90.
+[VECTOR]

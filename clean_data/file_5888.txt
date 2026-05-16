@@ -1,4 +1,8 @@
+[ID]
+5888
+[URL]
 https://docs.djangoproject.com/en/1.10/ref/contrib/gis/geoip2/
+[TEXT]
 Geolocation with GeoIP2 
 New in Django 1.9. 
 The GeoIP2 object is a wrapper for the MaxMind geoip2 Python
@@ -167,3 +171,4 @@ GeoIP2.geos(query)
 Returns a Point object corresponding to the
 query.
 [1]GeoIP(R) is a registered trademark of MaxMind, Inc.
+[VECTOR]

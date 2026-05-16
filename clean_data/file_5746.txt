@@ -1,4 +1,8 @@
+[ID]
+5746
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/postgres/operations/
+[TEXT]
 Source code for django.contrib.postgres.operations
 from django.contrib.postgres.signals import register_hstore_handler
 from django.db.migrations.operations.base import Operation
@@ -63,3 +67,4 @@ from django.db.migrations.operations.base import Operation
 [docs]class TrigramExtension(CreateExtension):
     def __init__(self):
         self.name = 'pg_trgm'
+[VECTOR]

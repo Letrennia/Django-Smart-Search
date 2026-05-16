@@ -1,4 +1,8 @@
+[ID]
+581
+[URL]
 https://docs.djangoproject.com/en/5.2/howto/deployment/
+[TEXT]
 How to deploy Django 
 Django is full of shortcuts to make web developers' lives easier, but all
 those tools are of no use if you can't easily deploy your sites. Since Django's
@@ -89,3 +93,4 @@ Environment-specific settings
 HTTPS
 Performance optimizations
 Error reporting
+[VECTOR]

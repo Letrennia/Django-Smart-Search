@@ -1,4 +1,8 @@
+[ID]
+5939
+[URL]
 https://docs.djangoproject.com/en/1.10/ref/models/conditional-expressions/
+[TEXT]
 Conditional Expressions 
 Conditional expressions let you use if … elif …
 else logic within filters, annotations, aggregations, and updates. A
@@ -115,3 +119,4 @@ Conditional aggregation
 What if we want to find out how many clients there are for each
 account_type? We can nest conditional expression within
 aggregate functions to achieve this:
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+1599
+[URL]
 https://docs.djangoproject.com/en/4.2/howto/initial-data/
+[TEXT]
 How to provide initial data for models 
 It's sometimes useful to prepopulate your database with hard-coded data when
 you're first setting up an app. You can provide initial data with migrations or
@@ -151,3 +155,4 @@ files. That is, by putting them inside a directory named for their
 application, as in the relative path example above.
 See also
 Fixtures are also used by the testing framework to help set up a consistent test environment.
+[VECTOR]

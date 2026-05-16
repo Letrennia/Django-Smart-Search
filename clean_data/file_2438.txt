@@ -1,4 +1,8 @@
+[ID]
+2438
+[URL]
 https://docs.djangoproject.com/en/4.0/_modules/django/core/validators/
+[TEXT]
 Source code for django.core.validators
 import ipaddress
 import re
@@ -1089,3 +1093,4 @@ class ProhibitNullCharactersValidator:
             and self.message == other.message
             and self.code == other.code
         )
+[VECTOR]

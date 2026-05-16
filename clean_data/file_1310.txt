@@ -1,4 +1,8 @@
+[ID]
+1310
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/forms/fields/
+[TEXT]
 Source code for django.forms.fields
 """
 Field classes.
@@ -2523,3 +2527,4 @@ class JSONField(CharField):
         return json.dumps(initial, sort_keys=True, cls=self.encoder) != json.dumps(
             self.to_python(data), sort_keys=True, cls=self.encoder
         )
+[VECTOR]

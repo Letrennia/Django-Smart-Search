@@ -1,4 +1,8 @@
+[ID]
+5149
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/validators/
+[TEXT]
 Validators 
 Writing validators 
 A validator is a callable that takes a value and raises a
@@ -283,3 +287,4 @@ class MinLengthValidator(min_length, message=None)[source]
 Raises a ValidationError with a code of
 'min_length' if the length of value is less than min_length.
 Changed in Django 1.8: The message parameter was added.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+3606
+[URL]
 https://docs.djangoproject.com/en/3.0/topics/templates/
+[TEXT]
 Templates 
 Being a web framework, Django needs a convenient way to generate HTML
 dynamically. The most common approach relies on templates. A template contains
@@ -807,3 +811,4 @@ Their main use is to add common data shared by all templates to the context
 without repeating code in every view.
 Django provides many built-in context processors,
 and you can implement your own additional context processors, too.
+[VECTOR]

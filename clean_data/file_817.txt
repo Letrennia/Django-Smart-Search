@@ -1,4 +1,8 @@
+[ID]
+817
+[URL]
 https://docs.djangoproject.com/en/5.2/topics/i18n/translation/
+[TEXT]
 Translation 
 Overview 
 In order to make a Django project translatable, you have to add a minimal
@@ -1925,3 +1929,4 @@ fallback language will not be the LANGUAGE_CODE of the project,
 but the original strings. For example, an English user visiting a site with
 LANGUAGE_CODE set to Spanish and original strings written in
 Russian will see Russian text rather than Spanish.
+[VECTOR]

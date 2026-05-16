@@ -1,4 +1,8 @@
+[ID]
+332
+[URL]
 https://docs.djangoproject.com/en/6.0/internals/contributing/committing-code/
+[TEXT]
 Committing code 
 This section is addressed to the mergers and to anyone interested in knowing
 how code gets committed into Django. The Committing guidelines apply
@@ -337,3 +341,4 @@ branch without permission if the commit breaks the release branch.
 If you mistakenly push a topic branch to django/django, delete it.
 For instance, if you did: git push upstream feature_antigravity,
 do a reverse push: git push upstream :feature_antigravity.
+[VECTOR]

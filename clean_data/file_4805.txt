@@ -1,4 +1,8 @@
+[ID]
+4805
+[URL]
 https://docs.djangoproject.com/en/2.0/topics/http/views/
+[TEXT]
 Writing views 
 A view function, or view for short, is simply a Python function that takes a
 Web request and returns a Web response. This response can be the HTML contents
@@ -161,3 +165,4 @@ handler400:
 See also
 Use the CSRF_FAILURE_VIEW setting to override the CSRF error
 view.
+[VECTOR]

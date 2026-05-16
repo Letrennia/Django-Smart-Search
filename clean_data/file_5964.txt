@@ -1,4 +1,8 @@
+[ID]
+5964
+[URL]
 https://docs.djangoproject.com/en/1.10/ref/views/
+[TEXT]
 Built-in Views 
 Several of Django's built-in views are documented in
 Writing views as well as elsewhere in the documentation.
@@ -195,3 +199,4 @@ bad_request views are also only used when DEBUG is False.
 Changed in Django 1.9: The signature of bad_request() changed in Django 1.9. The function
 now accepts a second parameter, the exception that triggered the error.
 Changed in Django 1.10: Passing a nonexistent template_name will raise TemplateDoesNotExist.
+[VECTOR]

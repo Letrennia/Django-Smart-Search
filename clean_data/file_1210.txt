@@ -1,4 +1,8 @@
+[ID]
+1210
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/auth/models/
+[TEXT]
 Source code for django.contrib.auth.models
 from collections.abc import Iterable
 from django.apps import apps
@@ -811,3 +815,4 @@ class AnonymousUser:
         return False
     def get_username(self):
         return self.username
+[VECTOR]

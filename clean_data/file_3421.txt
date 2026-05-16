@@ -1,4 +1,8 @@
+[ID]
+3421
+[URL]
 https://docs.djangoproject.com/en/3.0/_modules/django/utils/functional/
+[TEXT]
 Source code for django.utils.functional
 import copy
 import itertools
@@ -659,3 +663,4 @@ def partition(predicate, values):
     for item in values:
         results[predicate(item)].append(item)
     return results
+[VECTOR]

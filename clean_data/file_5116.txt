@@ -1,4 +1,8 @@
+[ID]
+5116
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/forms/fields/
+[TEXT]
 Form fields 
 class Field(**kwargs)[source] 
 When you create a Form class, the most important part is defining the
@@ -1291,3 +1295,4 @@ django.forms.Field. Its only requirements are that it implement a
 clean() method and that its __init__() method accept the core arguments
 mentioned above (required, label, initial, widget,
 help_text).
+[VECTOR]

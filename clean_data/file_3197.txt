@@ -1,4 +1,8 @@
+[ID]
+3197
+[URL]
 https://docs.djangoproject.com/en/3.1/ref/contrib/postgres/validators/
+[TEXT]
 Validators 
 These validators are available from the django.contrib.postgres.validators
 module.
@@ -41,3 +45,4 @@ RangeMinValueValidator
 class RangeMinValueValidator(limit_value, message=None) 
 Validates that the lower bound of the range is not less than the
 limit_value.
+[VECTOR]

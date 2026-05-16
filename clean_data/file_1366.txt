@@ -1,4 +1,8 @@
+[ID]
+1366
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/views/decorators/csrf/
+[TEXT]
 Source code for django.views.decorators.csrf
 from functools import wraps
 from asgiref.sync import iscoroutinefunction
@@ -99,3 +103,4 @@ def csrf_exempt(view_func):
             return view_func(request, *args, **kwargs)
     _view_wrapper.csrf_exempt = True
     return wraps(view_func)(_view_wrapper)
+[VECTOR]

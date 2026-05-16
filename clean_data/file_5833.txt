@@ -1,4 +1,8 @@
+[ID]
+5833
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/utils/http/
+[TEXT]
 Source code for django.utils.http
 from __future__ import unicode_literals
 import base64
@@ -743,3 +747,4 @@ def limited_parse_qsl(qs, keep_blank_values=False, encoding='utf-8',
                 value = unquote(nv[1].replace(b'+', b' '))
             r.append((name, value))
     return r
+[VECTOR]

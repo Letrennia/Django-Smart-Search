@@ -1,4 +1,8 @@
+[ID]
+3248
+[URL]
 https://docs.djangoproject.com/en/3.1/ref/utils/
+[TEXT]
 Django Utils 
 This document covers all stable modules in django.utils. Most of the
 modules in django.utils are designed for internal use and only the
@@ -1217,3 +1221,4 @@ Session key under which the active language for the current session is
 stored.
 Deprecated since version 3.0: The language won't be stored in the session in Django 4.0. Use the
 LANGUAGE_COOKIE_NAME cookie instead.
+[VECTOR]

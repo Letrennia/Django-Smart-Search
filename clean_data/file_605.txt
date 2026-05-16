@@ -1,4 +1,8 @@
+[ID]
+605
+[URL]
 https://docs.djangoproject.com/en/5.2/internals/
+[TEXT]
 Django internals 
 Documentation for people hacking on Django itself. This is the place to go if
 you'd like to help improve Django or learn about how Django is managed.
@@ -131,3 +135,4 @@ Actually rolling the release
 Making the release(s) available to the public
 Post-release
 Notes on setting the VERSION tuple
+[VECTOR]

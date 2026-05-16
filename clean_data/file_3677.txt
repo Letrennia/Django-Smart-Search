@@ -1,4 +1,8 @@
+[ID]
+3677
+[URL]
 https://docs.djangoproject.com/en/2.2/intro/tutorial03/
+[TEXT]
 Writing your first Django app, part 3 
 This tutorial begins where Tutorial 2 left off. We're
 continuing the Web-poll application and will focus on creating the public
@@ -387,3 +391,4 @@ file, go ahead and add an app_name to set the application namespace:
 Now change your polls/index.html template from:
 to point at the namespaced detail view:
 When you're comfortable with writing views, read part 4 of this tutorial to learn about simple form processing and generic views.
+[VECTOR]

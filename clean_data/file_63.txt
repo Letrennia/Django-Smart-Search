@@ -1,4 +1,8 @@
+[ID]
+63
+[URL]
 https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/working-with-git/
+[TEXT]
 Working with Git and GitHub 
 This section explains how the community can contribute code to Django via pull
 requests. If you're interested in how mergers handle
@@ -377,3 +381,4 @@ When you have something ready, make a pull request.
 Make your pull requests as good as you can.
 When doing fixes to your work, use git rebase -i to squash the commits.
 When upstream has changed, do git fetch upstream; git rebase.
+[VECTOR]

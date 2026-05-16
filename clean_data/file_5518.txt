@@ -1,4 +1,8 @@
+[ID]
+5518
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/forms/renderers/
+[TEXT]
 The form rendering API 
 New in Django 1.11: In older versions, widgets are rendered using Python. All APIs described
 in this document are new.
@@ -155,3 +159,4 @@ See Built-in widgets for the name of each widget's template.
 If you use the TemplatesSetting renderer, overriding widget templates
 works the same as overriding any other template in your project. You can't
 override built-in widget templates using the other built-in renderers.
+[VECTOR]

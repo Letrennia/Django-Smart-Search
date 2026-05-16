@@ -1,4 +1,8 @@
+[ID]
+718
+[URL]
 https://docs.djangoproject.com/en/5.2/ref/files/
+[TEXT]
 File handling 
 The File object
 The File class
@@ -29,3 +33,4 @@ Uploaded Files and Upload Handlers
 Uploaded files
 Built-in upload handlers
 Writing custom upload handlers
+[VECTOR]

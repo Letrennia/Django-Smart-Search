@@ -1,4 +1,8 @@
+[ID]
+5548
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/urls/
+[TEXT]
 django.conf.urls utility functions 
 static() 
 static.static(prefix, view=django.views.static.serve, **kwargs) 
@@ -175,3 +179,4 @@ By default, this is 'django.views.defaults.server_error'. If you
 implement a custom view, be sure it returns an
 HttpResponseServerError.
 See the documentation about the 500 (HTTP Internal Server Error) view for more information.
+[VECTOR]

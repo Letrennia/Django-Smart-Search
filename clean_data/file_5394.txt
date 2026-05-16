@@ -1,4 +1,8 @@
+[ID]
+5394
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/template/context/
+[TEXT]
 Source code for django.template.context
 import warnings
 from contextlib import contextmanager
@@ -489,3 +493,4 @@ def make_context(context, request=None, **kwargs):
         if original_context:
             context.push(original_context)
     return context
+[VECTOR]

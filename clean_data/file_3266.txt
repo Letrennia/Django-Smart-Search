@@ -1,4 +1,8 @@
+[ID]
+3266
+[URL]
 https://docs.djangoproject.com/en/3.1/topics/class-based-views/mixins/
+[TEXT]
 Using mixins with class-based views 
 Caution
 This is an advanced topic. A working knowledge of Django's
@@ -727,3 +731,4 @@ Because of the way that Python resolves method overloading, the call to
 super().render_to_response(context) ends up calling the
 render_to_response()
 implementation of TemplateResponseMixin.
+[VECTOR]

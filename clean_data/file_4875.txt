@@ -1,4 +1,8 @@
+[ID]
+4875
+[URL]
 https://docs.djangoproject.com/en/1.8/internals/contributing/writing-documentation/
+[TEXT]
 Writing documentation 
 We place a high importance on consistency and readability of documentation.
 After all, Django was created in a journalism environment! So we treat our
@@ -467,3 +471,4 @@ updating the documentation, as it's updated once as part of the release process.
 To generate an updated version of the man page, run make man in the
 docs directory. The new man page will be written in
 docs/_build/man/django-admin.1.
+[VECTOR]

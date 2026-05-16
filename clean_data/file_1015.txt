@@ -1,4 +1,8 @@
+[ID]
+1015
+[URL]
 https://docs.djangoproject.com/en/5.1/ref/models/meta/
+[TEXT]
 Model _meta API 
 class Options[source] 
 The model _meta API is at the core of the Django ORM. It enables other
@@ -71,3 +75,4 @@ directly inherit from abstract models or proxy classes are considered
 to be local, not on the parent.
 include_hiddenFalse by default. If set to True, get_fields() will include
 hidden fields.
+[VECTOR]

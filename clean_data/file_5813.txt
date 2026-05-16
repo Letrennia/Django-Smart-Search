@@ -1,4 +1,8 @@
+[ID]
+5813
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/template/exceptions/
+[TEXT]
 Source code for django.template.exceptions
 """
 This module contains generic exceptions used by template backends. Although,
@@ -73,3 +77,4 @@ here.
     The exception used for syntax errors during parsing or rendering.
     """
     pass
+[VECTOR]

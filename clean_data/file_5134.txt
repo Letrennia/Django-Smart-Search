@@ -1,4 +1,8 @@
+[ID]
+5134
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/models/relations/
+[TEXT]
 Related objects reference 
 class RelatedManager 
 A "related manager" is a manager used in a one-to-many or many-to-many
@@ -151,3 +155,4 @@ If the foreign key relationship has null=True, then the related manager
 will first call clear() to disassociate any existing objects in the related
 set before adding the contents of new_list. Otherwise the objects in
 new_list will be added to the existing related object set.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5354
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/db/migrations/operations/special/
+[TEXT]
 Source code for django.db.migrations.operations.special
 from __future__ import unicode_literals
 from django.db import router
@@ -359,3 +363,4 @@ if six.PY2:
     def noop(apps, schema_editor):
         return None
     RunPython.noop = staticmethod(noop)
+[VECTOR]

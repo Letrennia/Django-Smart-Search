@@ -1,4 +1,8 @@
+[ID]
+1769
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/db/models/query_utils/
+[TEXT]
 Source code for django.db.models.query_utils
 """
 Various data structures used in query construction.
@@ -941,3 +945,4 @@ class FilteredRelation:
         return clone
     def as_sql(self, compiler, connection):
         return compiler.compile(self.resolved_condition)
+[VECTOR]

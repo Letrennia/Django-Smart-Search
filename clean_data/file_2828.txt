@@ -1,4 +1,8 @@
+[ID]
+2828
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/test/client/
+[TEXT]
 Source code for django.test.client
 import json
 import mimetypes
@@ -1637,3 +1641,4 @@ class AsyncClient(ClientMixin, AsyncRequestFactory):
         if response.cookies:
             self.cookies.update(response.cookies)
         return response
+[VECTOR]

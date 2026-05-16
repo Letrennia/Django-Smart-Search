@@ -1,4 +1,8 @@
+[ID]
+1203
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/auth/base_user/
+[TEXT]
 Source code for django.contrib.auth.base_user
 """
 This module allows importing AbstractBaseUser even when django.contrib.auth is
@@ -265,3 +269,4 @@ class AbstractBaseUser(models.Model):
             if isinstance(username, str)
             else username
         )
+[VECTOR]

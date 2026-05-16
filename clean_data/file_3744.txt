@@ -1,4 +1,8 @@
+[ID]
+3744
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/db/backends/base/schema/
+[TEXT]
 Source code for django.db.backends.base.schema
 import logging
 from datetime import datetime
@@ -2141,3 +2145,4 @@ def _related_non_m2m_objects(old_field, new_field):
             'param_types': ','.join(param_types),
         }
         self.execute(sql)
+[VECTOR]

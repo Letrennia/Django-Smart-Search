@@ -1,4 +1,8 @@
+[ID]
+5428
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/views/decorators/debug/
+[TEXT]
 Source code for django.views.decorators.debug
 import functools
 from django.http import HttpRequest
@@ -127,3 +131,4 @@ from django.http import HttpRequest
             return view(request, *args, **kwargs)
         return sensitive_post_parameters_wrapper
     return decorator
+[VECTOR]

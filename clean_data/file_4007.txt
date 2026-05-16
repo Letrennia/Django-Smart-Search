@@ -1,4 +1,8 @@
+[ID]
+4007
+[URL]
 https://docs.djangoproject.com/en/2.2/topics/performance/
+[TEXT]
 Performance and optimization 
 This document provides an overview of techniques and tools that can help get
 your Django code running more efficiently - faster, and using fewer system
@@ -529,3 +533,4 @@ C implementations of Python libraries
 Some Python libraries are also implemented in C, and can be much faster. They
 aim to offer the same APIs. Note that compatibility issues and behavior
 differences are not unknown (and not always immediately evident).
+[VECTOR]

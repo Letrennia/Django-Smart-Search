@@ -1,4 +1,8 @@
+[ID]
+275
+[URL]
 https://docs.djangoproject.com/en/dev/topics/tasks/
+[TEXT]
 Django's Tasks framework 
 New in Django 6.0: For older Django versions, the django-tasks backport is available.
 For a web application, there's often more than just turning HTTP requests into
@@ -329,3 +333,4 @@ information about error raised during the execution:
 Note that this is just the type of exception, and contains no other values. The
 traceback information is reduced to a string which you can use to help
 debugging:
+[VECTOR]

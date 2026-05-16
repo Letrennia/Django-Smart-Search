@@ -1,4 +1,8 @@
+[ID]
+5210
+[URL]
 https://docs.djangoproject.com/en/1.8/topics/signals/
+[TEXT]
 Signals 
 Django includes a "signal dispatcher" which helps allow decoupled applications
 get notified when actions occur elsewhere in the framework. In a nutshell,
@@ -301,3 +305,4 @@ True if a receiver was disconnected and False if not.
 The receiver argument indicates the registered receiver to disconnect. It
 may be None if dispatch_uid is used to identify the receiver.
 Changed in Django 1.8: The boolean return value was added.
+[VECTOR]

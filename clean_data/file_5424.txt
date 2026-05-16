@@ -1,4 +1,8 @@
+[ID]
+5424
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/utils/translation/
+[TEXT]
 Source code for django.utils.translation
 """
 Internationalization support.
@@ -375,3 +379,4 @@ string_concat = lazy(_string_concat, six.text_type)
 trim_whitespace_re = re.compile(r'\s*\n\s*')
 def trim_whitespace(s):
     return trim_whitespace_re.sub(' ', s.strip())
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+2918
+[URL]
 https://docs.djangoproject.com/en/3.2/ref/contrib/postgres/lookups/
+[TEXT]
 PostgreSQL specific lookups 
 Trigram similarity 
 The trigram_similar lookup allows you to perform trigram lookups,
@@ -59,3 +63,4 @@ unaccent lookups should perform fine in most use cases. However, queries
 using this filter will generally perform full table scans, which can be slow
 on large tables. In those cases, using dedicated full text indexing tools
 might be appropriate.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5523
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/models/
+[TEXT]
 Models 
 Model API reference. For introductory material, see Models.
 Model field reference
@@ -29,3 +33,4 @@ Lookup API reference
 Query Expressions
 Conditional Expressions
 Database Functions
+[VECTOR]

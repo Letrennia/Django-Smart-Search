@@ -1,4 +1,8 @@
+[ID]
+5132
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/models/options/
+[TEXT]
 Model Meta options 
 This document explains all the possible metadata options that you can give your model in its internal
 class Meta.
@@ -413,3 +417,4 @@ verbose_name_plural
 Options.verbose_name_plural 
 The plural name for the object:
 If this isn't given, Django will use verbose_name + "s".
+[VECTOR]

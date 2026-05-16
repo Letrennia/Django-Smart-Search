@@ -1,4 +1,8 @@
+[ID]
+2821
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/template/context/
+[TEXT]
 Source code for django.template.context
 from contextlib import contextmanager
 from copy import copy
@@ -457,3 +461,4 @@ def make_context(context, request=None, **kwargs):
         if original_context:
             context.push(original_context)
     return context
+[VECTOR]

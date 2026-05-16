@@ -1,4 +1,8 @@
+[ID]
+932
+[URL]
 https://docs.djangoproject.com/en/5.1/ref/clickjacking/
+[TEXT]
 Clickjacking Protection 
 The clickjacking middleware and decorators provide easy-to-use protection
 against clickjacking.  This type of attack occurs when a malicious site
@@ -109,3 +113,4 @@ Changed in Django 5.0: Support for wrapping asynchronous view functions was adde
 Limitations 
 The X-Frame-Options header will only protect against clickjacking in
 modern browsers.
+[VECTOR]

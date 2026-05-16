@@ -1,4 +1,8 @@
+[ID]
+2922
+[URL]
 https://docs.djangoproject.com/en/3.2/ref/contrib/redirects/
+[TEXT]
 The redirects app 
 Django comes with an optional redirects application. It lets you store
 redirects in a database and handles the redirecting for you. It uses the HTTP
@@ -123,3 +127,4 @@ Defaults to HttpResponseGone.
 response_redirect_class 
 The HttpResponse class that handles the redirect.
 Defaults to HttpResponsePermanentRedirect.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+229
+[URL]
 https://docs.djangoproject.com/en/dev/topics/db/aggregation/
+[TEXT]
 Aggregation 
 The topic guide on Django's database-abstraction API described the way that you can use Django queries that
 create, retrieve, update and delete individual objects. However, sometimes you
@@ -603,3 +607,4 @@ AnyValue is useful when dealing with select list columns that involve
 non-aggregate functions or complex expressions not recognized by the database
 as functionally dependent on the columns in the grouping clause.
 Changed in Django 6.0: The AnyValue aggregate was added.
+[VECTOR]

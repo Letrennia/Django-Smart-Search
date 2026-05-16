@@ -1,4 +1,8 @@
+[ID]
+2794
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/db/models/options/
+[TEXT]
 Source code for django.db.models.options
 import bisect
 import copy
@@ -1597,3 +1601,4 @@ def make_immutable_fields_list(name, data):
             field for field in self._get_fields(forward=True, reverse=False, include_parents=PROXY_PARENTS)
             if getattr(field, 'db_returning', False)
         ]
+[VECTOR]

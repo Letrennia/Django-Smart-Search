@@ -1,4 +1,8 @@
+[ID]
+1653
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/apps/config/
+[TEXT]
 Source code for django.apps.config
 import inspect
 import os
@@ -487,3 +491,4 @@ class AppConfig:
         """
         Override this method in subclasses to run code when Django starts.
         """
+[VECTOR]

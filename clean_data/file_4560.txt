@@ -1,4 +1,8 @@
+[ID]
+4560
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/db/models/base/
+[TEXT]
 Source code for django.db.models.base
 import copy
 import inspect
@@ -3023,3 +3027,4 @@ def unpickle_inner_exception(klass, exception_name):
     # Get the exception class from the class it is attached to:
     exception = getattr(klass, exception_name)
     return exception.__new__(exception)
+[VECTOR]

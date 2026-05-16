@@ -1,4 +1,8 @@
+[ID]
+1650
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/
+[TEXT]
 All modules for which code is available
 asgiref.sync
 django
@@ -391,3 +395,4 @@ sentry_sdk.integrations.django.views
 unittest.loader
 unittest.runner
 unittest.suite
+[VECTOR]

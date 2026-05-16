@@ -1,4 +1,8 @@
+[ID]
+5173
+[URL]
 https://docs.djangoproject.com/en/1.8/topics/db/managers/
+[TEXT]
 Managers 
 class Manager[source] 
 A Manager is the interface through which database query operations are
@@ -443,3 +447,4 @@ used in a model, since the attribute's value is processed when the model class
 is created and not subsequently reread. Set the attribute on the manager class
 when it is first defined, as in the initial example of this section and
 everything will work smoothly.
+[VECTOR]

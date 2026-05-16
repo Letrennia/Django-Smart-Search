@@ -1,4 +1,8 @@
+[ID]
+5019
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/utils/decorators/
+[TEXT]
 Source code for django.utils.decorators
 "Functions that help with dynamically creating decorators for views."
 try:
@@ -247,3 +251,4 @@ if ContextDecorator is None:
                 with self:
                     return func(*args, **kwargs)
             return inner
+[VECTOR]

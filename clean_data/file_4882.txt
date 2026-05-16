@@ -1,4 +1,8 @@
+[ID]
+4882
+[URL]
 https://docs.djangoproject.com/en/1.8/internals/roles/
+[TEXT]
 Roles 
 Technical board 
 The technical board for the 1.8 release cycle is:
@@ -71,3 +75,4 @@ Florian Apolloner
 Aymeric Augustin
 Tim Graham
 Jannis Leidel
+[VECTOR]

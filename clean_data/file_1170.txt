@@ -1,4 +1,8 @@
+[ID]
+1170
+[URL]
 https://docs.djangoproject.com/en/5.0/intro/
+[TEXT]
 Getting started 
 New to Django? Or to web development in general? Well, you came to the right
 place: read this material to quickly get up and running.
@@ -53,3 +57,4 @@ Python quickly, we recommend referring the official
 Python documentation, which provides comprehensive and authoritative
 information about the language, as well as links to other resources such as
 a list of books about Python.
+[VECTOR]

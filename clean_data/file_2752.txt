@@ -1,4 +1,8 @@
+[ID]
+2752
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/contrib/postgres/indexes/
+[TEXT]
 Source code for django.contrib.postgres.indexes
 from django.db import NotSupportedError
 from django.db.models import Func, Index
@@ -371,3 +375,4 @@ class PostgresIndex(Index):
     template = '%(expressions)s %(name)s'
     def __init__(self, expression, name):
         super().__init__(expression, name=name)
+[VECTOR]

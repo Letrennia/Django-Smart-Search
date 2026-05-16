@@ -1,4 +1,8 @@
+[ID]
+4545
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/core/files/images/
+[TEXT]
 Source code for django.core.files.images
 """
 Utility functions for handling images.
@@ -143,3 +147,4 @@ def get_image_dimensions(file_or_path, close=False):
             file.close()
         else:
             file.seek(file_pos)
+[VECTOR]

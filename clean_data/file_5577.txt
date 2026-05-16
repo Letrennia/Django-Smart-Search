@@ -1,4 +1,8 @@
+[ID]
+5577
+[URL]
 https://docs.djangoproject.com/en/1.11/topics/db/optimization/
+[TEXT]
 Database access optimization 
 Django's database layer provides various ways to help developers get the most
 out of their databases. This document gathers together links to the relevant
@@ -381,3 +385,4 @@ for your use case.
 This also applies to ManyToManyFields, so doing:
 …is preferable to:
 …where Bands and Artists have a many-to-many relationship.
+[VECTOR]

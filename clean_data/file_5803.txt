@@ -1,4 +1,8 @@
+[ID]
+5803
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/middleware/http/
+[TEXT]
 Source code for django.middleware.http
 from django.utils.cache import get_conditional_response
 from django.utils.deprecation import MiddlewareMixin
@@ -53,3 +57,4 @@ from django.utils.http import http_date, parse_http_date_safe, unquote_etag
                 response=response,
             )
         return response
+[VECTOR]

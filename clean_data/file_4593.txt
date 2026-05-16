@@ -1,4 +1,8 @@
+[ID]
+4593
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/middleware/locale/
+[TEXT]
 Source code for django.middleware.locale
 from django.conf import settings
 from django.conf.urls.i18n import is_language_prefix_patterns_used
@@ -111,3 +115,4 @@ from django.utils.deprecation import MiddlewareMixin
         if 'Content-Language' not in response:
             response['Content-Language'] = language
         return response
+[VECTOR]

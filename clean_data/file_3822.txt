@@ -1,4 +1,8 @@
+[ID]
+3822
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/utils/timezone/
+[TEXT]
 Source code for django.utils.timezone
 """
 Timezone-related classes and functions.
@@ -427,3 +431,4 @@ def template_localtime(value, use_tz=None):
     if is_naive(value):
         raise ValueError("make_naive() cannot be applied to a naive datetime")
     return value.astimezone(timezone).replace(tzinfo=None)
+[VECTOR]

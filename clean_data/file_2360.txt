@@ -1,4 +1,8 @@
+[ID]
+2360
+[URL]
 https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
+[TEXT]
 Deployment checklist 
 The internet is a hostile environment. Before deploying your Django project,
 you should take some time to review your settings, with security, performance,
@@ -291,3 +295,4 @@ in your root template directory: 404.html, 500.html, 403.html, and
 400.html. The default error views that use these
 templates should suffice for 99% of web applications, but you can
 customize them as well.
+[VECTOR]

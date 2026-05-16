@@ -1,4 +1,8 @@
+[ID]
+5906
+[URL]
 https://docs.djangoproject.com/en/1.10/ref/contrib/postgres/
+[TEXT]
 django.contrib.postgres 
 PostgreSQL has a number of features which are not shared by the other databases
 Django supports. This optional module contains model fields and form fields for
@@ -109,3 +113,4 @@ Trigram similarity
 Validators
 KeysValidator
 Range validators
+[VECTOR]

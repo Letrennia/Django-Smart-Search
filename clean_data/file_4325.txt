@@ -1,4 +1,8 @@
+[ID]
+4325
+[URL]
 https://docs.djangoproject.com/en/2.1/ref/middleware/
+[TEXT]
 Middleware 
 This document explains all middleware components that come with Django. For
 information on how to use them and how to write your own middleware, see
@@ -531,3 +535,4 @@ FlatpageFallbackMiddleware
 Should be near the bottom as it's a last-resort type of middleware.
 RedirectFallbackMiddleware
 Should be near the bottom as it's a last-resort type of middleware.
+[VECTOR]

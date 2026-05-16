@@ -1,4 +1,8 @@
+[ID]
+3761
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/db/models/indexes/
+[TEXT]
 Source code for django.db.models.indexes
 from django.db.backends.utils import names_digest, split_identifier
 from django.db.models.query_utils import Q
@@ -235,3 +239,4 @@ __all__ = ['Index']
         )
     def __eq__(self, other):
         return (self.__class__ == other.__class__) and (self.deconstruct() == other.deconstruct())
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5138
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/signals/
+[TEXT]
 Signals 
 A list of all the signals that Django sends.
 See also
@@ -861,3 +865,4 @@ connection
 The database connection that was opened. This can be used in a
 multiple-database configuration to differentiate connection signals
 from different databases.
+[VECTOR]

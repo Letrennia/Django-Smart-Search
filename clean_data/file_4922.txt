@@ -1,4 +1,8 @@
+[ID]
+4922
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/contenttypes/fields/
+[TEXT]
 Source code for django.contrib.contenttypes.fields
 from __future__ import unicode_literals
 from collections import defaultdict
@@ -997,3 +1001,4 @@ class GenericRel(ForeignObjectRel):
         super(GenericRel, self).__init__(field=field, to=to, related_name=related_query_name or '+',
                                          limit_choices_to=limit_choices_to, on_delete=DO_NOTHING,
                                          related_query_name=related_query_name)
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+1987
+[URL]
 https://docs.djangoproject.com/en/4.2/topics/db/fixtures/
+[TEXT]
 Fixtures 
 See also
 How to provide initial data for models
@@ -183,3 +187,4 @@ For example, if your DATABASES setting has a users database
 defined, name the fixture mydata.users.json or
 mydata.users.json.gz and the fixture will only be loaded when you
 specify you want to load data into the users database.
+[VECTOR]

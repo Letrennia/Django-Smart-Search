@@ -1,4 +1,8 @@
+[ID]
+5535
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/models/relations/
+[TEXT]
 Related objects reference 
 class RelatedManager 
 A "related manager" is a manager used in a one-to-many or many-to-many
@@ -195,3 +199,4 @@ added to the existing related object set.
 Deprecated since version 1.10: Direct assignment is deprecated in favor of the
 set() method:
 This prevents confusion about an assignment resulting in an implicit save.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+2678
+[URL]
 https://docs.djangoproject.com/en/3.2/howto/writing-migrations/
+[TEXT]
 Writing database migrations 
 This document explains how to structure and write database migrations for
 different scenarios you might encounter. For introductory material on
@@ -231,3 +235,4 @@ If you want to change an unmanaged model (managed=False) to managed, you must re
 managed=False and generate a migration before making other schema-related
 changes to the model, since schema changes that appear in the migration that
 contains the operation to change Meta.managed may not be applied.
+[VECTOR]

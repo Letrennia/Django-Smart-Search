@@ -1,4 +1,8 @@
+[ID]
+3446
+[URL]
 https://docs.djangoproject.com/en/3.0/ref/contrib/admin/actions/
+[TEXT]
 Admin actions 
 The basic workflow of Django's admin is, in a nutshell, "select an object,
 then change it." This works well for a majority of use cases. However, if you
@@ -327,3 +331,4 @@ checks are:
 'view': ModelAdmin.has_view_permission()
 You can specify any other value as long as you implement a corresponding
 has_<value>_permission(self, request) method on the ModelAdmin.
+[VECTOR]

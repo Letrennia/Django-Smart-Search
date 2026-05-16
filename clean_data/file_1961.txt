@@ -1,4 +1,8 @@
+[ID]
+1961
+[URL]
 https://docs.djangoproject.com/en/4.2/ref/utils/
+[TEXT]
 Django Utils 
 This document covers all stable modules in django.utils. Most of the
 modules in django.utils are designed for internal use and only the
@@ -1233,3 +1237,4 @@ templatize(src)[source]
 Turns a Django template into something that is understood by xgettext.
 It does so by translating the Django translation tags into standard
 gettext function invocations.
+[VECTOR]

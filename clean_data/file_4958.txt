@@ -1,4 +1,8 @@
+[ID]
+4958
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/core/mail/
+[TEXT]
 Source code for django.core.mail
 """
 Tools for sending email.
@@ -183,3 +187,4 @@ __all__ = [
     if html_message:
         mail.attach_alternative(html_message, 'text/html')
     mail.send(fail_silently=fail_silently)
+[VECTOR]

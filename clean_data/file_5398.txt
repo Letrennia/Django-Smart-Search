@@ -1,4 +1,8 @@
+[ID]
+5398
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/template/loader/
+[TEXT]
 Source code for django.template.loader
 from django.utils import six
 from django.utils.deprecation import (
@@ -119,3 +123,4 @@ def _engine_list(using=None):
 class LoaderOrigin(six.with_metaclass(DeprecationInstanceCheck, Origin)):
     alternative = 'django.template.Origin'
     deprecation_warning = RemovedInDjango20Warning
+[VECTOR]

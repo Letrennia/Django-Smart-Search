@@ -1,4 +1,8 @@
+[ID]
+4861
+[URL]
 https://docs.djangoproject.com/en/1.8/howto/writing-migrations/
+[TEXT]
 Writing database migrations 
 This document explains how to structure and write database migrations for
 different scenarios you might encounter. For introductory material on
@@ -237,3 +241,4 @@ Prefer using dependencies over run_before when possible. You should
 only use run_before if it is undesirable or impractical to specify
 dependencies in the migration which you want to run after the one you are
 writing.
+[VECTOR]

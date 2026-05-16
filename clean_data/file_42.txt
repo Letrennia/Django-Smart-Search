@@ -1,4 +1,8 @@
+[ID]
+42
+[URL]
 https://docs.djangoproject.com/en/dev/howto/outputting-pdf/
+[TEXT]
 How to create PDF files 
 This document explains how to output PDF files dynamically using Django views.
 This is made possible by the excellent, open-source ReportLab Python PDF
@@ -115,3 +119,4 @@ use when generated text-based formats.
 See also
 Django Packages provides a comparison of packages that help generate PDF files
 from Django.
+[VECTOR]

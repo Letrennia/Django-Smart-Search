@@ -1,4 +1,8 @@
+[ID]
+129
+[URL]
 https://docs.djangoproject.com/en/dev/ref/contrib/gis/install/postgis/
+[TEXT]
 Installing PostGIS 
 PostGIS adds geographic object support to PostgreSQL, turning it
 into a spatial database. GEOS, PROJ and
@@ -75,3 +79,4 @@ a geodjango spatial database and user, the following may be executed from
 the SQL Shell as the postgres user:
 postgres# CREATE USER geodjango PASSWORD 'my_passwd';
 postgres# CREATE DATABASE geodjango OWNER geodjango;
+[VECTOR]

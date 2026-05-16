@@ -1,4 +1,8 @@
+[ID]
+4401
+[URL]
 https://docs.djangoproject.com/en/2.1/topics/http/urls/
+[TEXT]
 URL dispatcher 
 A clean, elegant URL scheme is an important detail in a high-quality Web
 application. Django lets you design URLs however you want, with no framework
@@ -795,3 +799,4 @@ The instance namespace can be specified using the namespace argument to
 include(). If the instance namespace is not specified,
 it will default to the included URLconf's application namespace. This means
 it will also be the default instance for that namespace.
+[VECTOR]

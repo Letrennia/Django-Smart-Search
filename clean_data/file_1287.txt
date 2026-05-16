@@ -1,4 +1,8 @@
+[ID]
+1287
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/db/models/expressions/
+[TEXT]
 Source code for django.db.models.expressions
 import copy
 import datetime
@@ -3541,3 +3545,4 @@ class ValueRange(WindowFrame):
     frame_type = "RANGE"
     def window_frame_start_end(self, connection, start, end):
         return connection.ops.window_frame_range_start_end(start, end)
+[VECTOR]

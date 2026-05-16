@@ -1,4 +1,8 @@
+[ID]
+1226
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/messages/api/
+[TEXT]
 Source code for django.contrib.messages.api
 from django.contrib.messages import constants
 from django.contrib.messages.storage import default_storage
@@ -213,3 +217,4 @@ def error(request, message, extra_tags="", fail_silently=False):
         extra_tags=extra_tags,
         fail_silently=fail_silently,
     )
+[VECTOR]

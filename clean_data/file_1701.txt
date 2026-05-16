@@ -1,4 +1,8 @@
+[ID]
+1701
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/postgres/forms/array/
+[TEXT]
 Source code for django.contrib.postgres.forms.array
 import copy
 from itertools import chain
@@ -449,3 +453,4 @@ class SplitArrayField(forms.Field):
             if initial in self.empty_values and data in self.empty_values:
                 return False
         return super().has_changed(initial, data)
+[VECTOR]

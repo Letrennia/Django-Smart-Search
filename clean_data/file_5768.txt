@@ -1,4 +1,8 @@
+[ID]
+5768
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/core/validators/
+[TEXT]
 Source code for django.core.validators
 from __future__ import unicode_literals
 import re
@@ -753,3 +757,4 @@ class DecimalValidator(object):
             self.max_digits == other.max_digits and
             self.decimal_places == other.decimal_places
         )
+[VECTOR]

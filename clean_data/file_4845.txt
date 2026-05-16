@@ -1,4 +1,8 @@
+[ID]
+4845
+[URL]
 https://docs.djangoproject.com/en/1.8/howto/deployment/fastcgi/
+[TEXT]
 How to use Django with FastCGI, SCGI, or AJP 
 Deprecated since version 1.7: FastCGI support is deprecated and will be removed in Django 1.9.
 Although WSGI is the preferred deployment
@@ -513,3 +517,4 @@ have different script names in this case, but that is a rare situation.
 As an example of how to use it, if your Django configuration is serving all of
 the URLs under '/' and you wanted to use this setting, you would set
 FORCE_SCRIPT_NAME = '' in your settings file.
+[VECTOR]

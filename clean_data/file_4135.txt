@@ -1,4 +1,8 @@
+[ID]
+4135
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/contrib/sites/shortcuts/
+[TEXT]
 Source code for django.contrib.sites.shortcuts
 from django.apps import apps
 def get_current_site(request):
@@ -29,3 +33,4 @@ def get_current_site(request):
     else:
         from .requests import RequestSite
         return RequestSite(request)
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+847
+[URL]
 https://docs.djangoproject.com/en/5.1/howto/custom-file-storage/
+[TEXT]
 How to write a custom storage class 
 If you need to provide custom file storage – a common example is storing files
 on some remote system – you can do so by defining a custom storage class.
@@ -161,3 +165,4 @@ for that specific storage backend. The settings in the inner dictionaries are
 described fully in the STORAGES documentation.
 Storages are then accessed by alias from the
 django.core.files.storage.storages dictionary:
+[VECTOR]

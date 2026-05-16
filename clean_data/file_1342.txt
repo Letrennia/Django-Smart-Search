@@ -1,4 +1,8 @@
+[ID]
+1342
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/test/utils/
+[TEXT]
 Source code for django.test.utils
 import collections
 import gc
@@ -1631,3 +1635,4 @@ def garbage_collect():
     if PYPY:
         # Collecting weakreferences can take two collections on PyPy.
         gc.collect()
+[VECTOR]

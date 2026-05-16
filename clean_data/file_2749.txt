@@ -1,4 +1,8 @@
+[ID]
+2749
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/contrib/postgres/forms/jsonb/
+[TEXT]
 Source code for django.contrib.postgres.forms.jsonb
 import warnings
 from django.forms import JSONField as BuiltinJSONField
@@ -25,3 +29,4 @@ __all__ = ['JSONField']
             RemovedInDjango40Warning, stacklevel=2,
         )
         super().__init__(*args, **kwargs)
+[VECTOR]

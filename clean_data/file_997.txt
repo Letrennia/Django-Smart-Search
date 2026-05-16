@@ -1,4 +1,8 @@
+[ID]
+997
+[URL]
 https://docs.djangoproject.com/en/5.1/ref/forms/formsets/
+[TEXT]
 Formset Functions 
 Formset API reference. For introductory material about formsets, see the
 Formsets topic guide.
@@ -13,3 +17,4 @@ formset_factory
 formset_factory(form, formset=BaseFormSet, extra=1, can_order=False, can_delete=False, max_num=None, validate_max=False, min_num=None, validate_min=False, absolute_max=None, can_delete_extra=True, renderer=None)[source] 
 Returns a FormSet class for the given form class.
 See formsets for example usage.
+[VECTOR]

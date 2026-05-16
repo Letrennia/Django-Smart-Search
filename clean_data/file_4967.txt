@@ -1,4 +1,8 @@
+[ID]
+4967
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/db/migrations/operations/models/
+[TEXT]
 Source code for django.db.migrations.operations.models
 from __future__ import unicode_literals
 from django.db import models
@@ -963,3 +967,4 @@ from django.utils.functional import cached_property
         return name.lower() == self.name_lower
     def describe(self):
         return "Change managers on %s" % (self.name, )
+[VECTOR]

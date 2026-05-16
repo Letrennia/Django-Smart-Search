@@ -1,4 +1,8 @@
+[ID]
+1202
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/auth/backends/
+[TEXT]
 Source code for django.contrib.auth.backends
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import Permission
@@ -423,3 +427,4 @@ class RemoteUserBackend(ModelBackend):
 class AllowAllUsersRemoteUserBackend(RemoteUserBackend):
     def user_can_authenticate(self, user):
         return True
+[VECTOR]

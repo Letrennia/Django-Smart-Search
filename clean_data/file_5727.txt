@@ -1,4 +1,8 @@
+[ID]
+5727
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/gis/geos/io/
+[TEXT]
 Source code for django.contrib.gis.geos.io
 """
 Module that holds classes for performing I/O operations on GEOS geometry
@@ -39,3 +43,4 @@ __all__ = ['WKBWriter', 'WKTWriter', 'WKBReader', 'WKTReader']
     def read(self, wkt):
         "Returns a GEOSGeometry for the given WKT string."
         return GEOSGeometry(super(WKTReader, self).read(wkt))
+[VECTOR]

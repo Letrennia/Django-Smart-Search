@@ -1,4 +1,8 @@
+[ID]
+4712
+[URL]
 https://docs.djangoproject.com/en/2.0/ref/csrf/
+[TEXT]
 Cross Site Request Forgery protection 
 The CSRF middleware and template tag provides easy-to-use protection against
 Cross Site Request Forgeries.  This type of attack occurs when a malicious
@@ -569,3 +573,4 @@ For security reasons, CSRF tokens are rotated each time a user logs in. Any
 page with a form generated before a login will have an old, invalid CSRF token
 and need to be reloaded. This might happen if a user uses the back button after
 a login or if they log in in a different browser tab.
+[VECTOR]

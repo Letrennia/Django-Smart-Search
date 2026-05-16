@@ -1,4 +1,8 @@
+[ID]
+4195
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/template/base/
+[TEXT]
 Source code for django.template.base
 """
 This is the Django template system.
@@ -1797,3 +1801,4 @@ def token_kwargs(bits, parser, support_legacy=False):
                 return kwargs
             del bits[:1]
     return kwargs
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4902
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/
+[TEXT]
 Source code for django
 from django.utils.version import get_version
 VERSION = (1, 8, 20, 'alpha', 0)
@@ -27,3 +31,4 @@ __version__ = get_version(VERSION)
     from django.utils.log import configure_logging
     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
     apps.populate(settings.INSTALLED_APPS)
+[VECTOR]

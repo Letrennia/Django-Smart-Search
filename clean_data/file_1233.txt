@@ -1,4 +1,8 @@
+[ID]
+1233
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/postgres/expressions/
+[TEXT]
 Source code for django.contrib.postgres.expressions
 from django.contrib.postgres.fields import ArrayField
 from django.db.models import Subquery
@@ -23,3 +27,4 @@ class ArraySubquery(Subquery):
     @cached_property
     def output_field(self):
         return ArrayField(self.query.output_field)
+[VECTOR]

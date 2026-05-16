@@ -1,4 +1,8 @@
+[ID]
+5328
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/contrib/postgres/operations/
+[TEXT]
 Source code for django.contrib.postgres.operations
 from django.contrib.postgres.signals import register_type_handlers
 from django.db.migrations.operations.base import Operation
@@ -71,3 +75,4 @@ from django.db.migrations.operations.base import Operation
 [docs]class UnaccentExtension(CreateExtension):
     def __init__(self):
         self.name = 'unaccent'
+[VECTOR]

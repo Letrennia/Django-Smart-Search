@@ -1,4 +1,8 @@
+[ID]
+4869
+[URL]
 https://docs.djangoproject.com/en/1.8/internals/contributing/triaging-tickets/
+[TEXT]
 Triaging tickets 
 Django uses Trac for managing the work on the code base. Trac is a
 community-tended garden of the bugs people have found and the features people
@@ -545,3 +549,4 @@ If you're unsure if you should be making a change, don't make the
 change but instead leave a comment with your concerns on the ticket,
 or post a message to django-developers. It's okay to be unsure,
 but your input is still valuable.
+[VECTOR]

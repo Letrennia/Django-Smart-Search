@@ -1,4 +1,8 @@
+[ID]
+4566
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/db/models/functions/base/
+[TEXT]
 Source code for django.db.models.functions.base
 """
 Classes that represent database functions.
@@ -321,3 +325,4 @@ class ConcatPair(Func):
 [docs]class Upper(Transform):
     function = 'UPPER'
     lookup_name = 'upper'
+[VECTOR]

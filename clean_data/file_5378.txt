@@ -1,4 +1,8 @@
+[ID]
+5378
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/forms/renderers/
+[TEXT]
 Source code for django.forms.renderers
 import os
 from django.conf import settings
@@ -109,3 +113,4 @@ class EngineMixin(object):
     """
     def get_template(self, template_name):
         return get_template(template_name)
+[VECTOR]

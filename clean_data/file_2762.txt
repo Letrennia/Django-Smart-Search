@@ -1,4 +1,8 @@
+[ID]
+2762
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/core/files/base/
+[TEXT]
 Source code for django.core.files.base
 import os
 from io import BytesIO, StringIO, UnsupportedOperation
@@ -255,3 +259,4 @@ def endswith_lf(line):
 def equals_lf(line):
     """Return True if line (a text or bytestring) equals '\n'."""
     return line == ('\n' if isinstance(line, str) else b'\n')
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+401
+[URL]
 https://docs.djangoproject.com/en/6.0/ref/contrib/gis/gdal/
+[TEXT]
 GDAL API 
 Overview 
 GDAL stands for Geospatial Data Abstraction Library,
@@ -1905,3 +1909,4 @@ The base GDAL exception, indicating a GDAL-related error.
 exception SRSException[source] 
 An exception raised when an error occurs when constructing or using a
 spatial reference system object.
+[VECTOR]

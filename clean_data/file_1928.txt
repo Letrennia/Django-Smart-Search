@@ -1,4 +1,8 @@
+[ID]
+1928
+[URL]
 https://docs.djangoproject.com/en/4.2/ref/forms/renderers/
+[TEXT]
 The form rendering API 
 Django's form widgets are rendered using Django's template engines
 system.
@@ -285,3 +289,4 @@ input.html by defining django/forms/widgets/input.html, for example.
 See Built-in widgets for the name of each widget's template.
 To override widget templates, you must use the TemplatesSetting
 renderer. Then overriding widget templates works the same as overriding any other template in your project.
+[VECTOR]

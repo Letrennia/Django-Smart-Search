@@ -1,4 +1,8 @@
+[ID]
+1361
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/utils/timezone/
+[TEXT]
 Source code for django.utils.timezone
 """
 Timezone-related classes and functions.
@@ -411,3 +415,4 @@ def make_naive(value, timezone=None):
     return value.astimezone(timezone).replace(tzinfo=None)
 def _datetime_ambiguous_or_imaginary(dt, tz):
     return tz.utcoffset(dt.replace(fold=not dt.fold)) != tz.utcoffset(dt)
+[VECTOR]

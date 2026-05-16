@@ -1,4 +1,8 @@
+[ID]
+5620
+[URL]
 https://docs.djangoproject.com/en/1.10/faq/
+[TEXT]
 Django FAQ 
 FAQ: General
 Why does this project exist?
@@ -115,3 +119,4 @@ But I've reminded you several times and you keep ignoring my patch!
 Troubleshooting
 Problems running django-admin
 Miscellaneous
+[VECTOR]

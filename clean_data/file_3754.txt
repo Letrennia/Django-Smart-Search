@@ -1,4 +1,8 @@
+[ID]
+3754
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/db/models/fields/files/
+[TEXT]
 Source code for django.db.models.fields.files
 import datetime
 import posixpath
@@ -779,3 +783,4 @@ class ImageFieldFile(ImageFile, FieldFile):
             'form_class': forms.ImageField,
             **kwargs,
         })
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4209
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/urls/conf/
+[TEXT]
 Source code for django.urls.conf
 """Functions for use in URLsconfs."""
 from functools import partial
@@ -137,3 +141,4 @@ def _path(route, view, kwargs=None, name=None, Pattern=None):
         raise TypeError('view must be a callable or a list/tuple in the case of include().')
 path = partial(_path, Pattern=RoutePattern)
 re_path = partial(_path, Pattern=RegexPattern)
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5838
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/utils/text/
+[TEXT]
 Source code for django.utils.text
 from __future__ import unicode_literals
 import re
@@ -749,3 +753,4 @@ def camel_case_to_spaces(value):
     trailing whitespace.
     """
     return re_camel_case.sub(r' \1', value).strip().lower()
+[VECTOR]

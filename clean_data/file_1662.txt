@@ -1,4 +1,8 @@
+[ID]
+1662
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/admin/views/decorators/
+[TEXT]
 Source code for django.contrib.admin.views.decorators
 from django.contrib.auth import REDIRECT_FIELD_NAME
 from django.contrib.auth.decorators import user_passes_test
@@ -37,3 +41,4 @@ def staff_member_required(
     if view_func:
         return actual_decorator(view_func)
     return actual_decorator
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+1368
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/views/decorators/http/
+[TEXT]
 Source code for django.views.decorators.http
 """
 Decorators for views based on HTTP headers.
@@ -277,3 +281,4 @@ def etag(etag_func):
 [docs]
 def last_modified(last_modified_func):
     return condition(last_modified_func=last_modified_func)
+[VECTOR]

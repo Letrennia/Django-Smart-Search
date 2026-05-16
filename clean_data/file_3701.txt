@@ -1,4 +1,8 @@
+[ID]
+3701
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/contrib/auth/hashers/
+[TEXT]
 Source code for django.contrib.auth.hashers
 import base64
 import binascii
@@ -1047,3 +1051,4 @@ class CryptPasswordHasher(BasePasswordHasher):
         ])
     def harden_runtime(self, password, encoded):
         pass
+[VECTOR]

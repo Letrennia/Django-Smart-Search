@@ -1,4 +1,8 @@
+[ID]
+3623
+[URL]
 https://docs.djangoproject.com/en/2.2/howto/auth-remote-user/
+[TEXT]
 Authentication using REMOTE_USER 
 This document describes how to make use of external authentication sources
 (where the Web server sets the REMOTE_USER environment variable) in your
@@ -151,3 +155,4 @@ provides support for this use case. It will maintain the authenticated session
 until explicit logout by the user. The class can be used as a drop-in
 replacement of RemoteUserMiddleware
 in the documentation above.
+[VECTOR]

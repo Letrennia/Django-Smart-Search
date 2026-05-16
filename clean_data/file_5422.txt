@@ -1,4 +1,8 @@
+[ID]
+5422
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/utils/text/
+[TEXT]
 Source code for django.utils.text
 from __future__ import unicode_literals
 import re
@@ -763,3 +767,4 @@ def _format_lazy(format_string, *args, **kwargs):
     """
     return format_string.format(*args, **kwargs)
 format_lazy = lazy(_format_lazy, six.text_type)
+[VECTOR]

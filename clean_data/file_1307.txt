@@ -1,4 +1,8 @@
+[ID]
+1307
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/db/utils/
+[TEXT]
 Source code for django.db.utils
 import pkgutil
 from importlib import import_module
@@ -471,3 +475,4 @@ class ConnectionRouter:
         """Return app models allowed to be migrated on provided db."""
         models = app_config.get_models(include_auto_created=include_auto_created)
         return [model for model in models if self.allow_migrate_model(db, model)]
+[VECTOR]

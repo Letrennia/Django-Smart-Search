@@ -1,4 +1,8 @@
+[ID]
+2838
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/utils/dateparse/
+[TEXT]
 Source code for django.utils.dateparse
 """Functions to parse datetime objects."""
 # We're using regular expressions rather than time.strptime because:
@@ -251,3 +255,4 @@ postgres_interval_re = _lazy_re_compile(
         if match.re == iso8601_duration_re:
             days *= sign
         return days + sign * datetime.timedelta(**kw)
+[VECTOR]

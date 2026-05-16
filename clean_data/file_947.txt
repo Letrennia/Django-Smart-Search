@@ -1,4 +1,8 @@
+[ID]
+947
+[URL]
 https://docs.djangoproject.com/en/5.1/ref/contrib/gis/feeds/
+[TEXT]
 Geographic Feeds 
 GeoDjango has its own Feed subclass that may embed location information
 in RSS/Atom feeds formatted according to either the Simple GeoRSS or
@@ -59,3 +63,4 @@ class W3CGeoFeed[source]
 Note
 W3C Geo formatted feeds only support
 PointField geometries.
+[VECTOR]

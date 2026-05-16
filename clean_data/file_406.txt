@@ -1,4 +1,8 @@
+[ID]
+406
+[URL]
 https://docs.djangoproject.com/en/6.0/ref/contrib/gis/install/geolibs/
+[TEXT]
 Installing Geospatial libraries 
 Geospatial libraries 
 GeoDjango uses and/or provides interfaces for the following open source
@@ -285,3 +289,4 @@ modify the system's library path then the GDAL_LIBRARY_PATH
 setting may be added to your Django settings file with the full path to
 the GDAL library. 
 GDAL_LIBRARY_PATH = '/home/sue/local/lib/libgdal.so'
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+3447
+[URL]
 https://docs.djangoproject.com/en/3.0/ref/contrib/admin/admindocs/
+[TEXT]
 The Django admin documentation generator 
 Django's admindocs app pulls documentation from the
 docstrings of models, views, template tags, and template filters for any app in
@@ -137,3 +141,4 @@ Using this bookmarklet requires that XViewMiddleware is installed and that
 you are logged into the Django admin as a
 User with
 is_staff set to True.
+[VECTOR]

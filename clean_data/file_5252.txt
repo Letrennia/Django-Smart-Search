@@ -1,4 +1,8 @@
+[ID]
+5252
+[URL]
 https://docs.djangoproject.com/en/1.11/howto/windows/
+[TEXT]
 How to install Django on Windows 
 This document will guide you through installing Python 3.5 and Django on
 Windows. It also provides instructions for installing virtualenv and
@@ -105,3 +109,4 @@ than one Python version installed.
 If you are connecting to the internet behind a proxy, there might be problem
 in running the command pip install django. Set the environment variables
 for proxy configuration in the command prompt as follows:
+[VECTOR]

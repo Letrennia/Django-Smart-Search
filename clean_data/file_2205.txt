@@ -1,4 +1,8 @@
+[ID]
+2205
+[URL]
 https://docs.djangoproject.com/en/4.1/ref/contrib/postgres/expressions/
+[TEXT]
 PostgreSQL specific query expressions 
 These expressions are available from the
 django.contrib.postgres.expressions module.
@@ -27,3 +31,4 @@ in the way that it does not act as an aggregate function and does not require
 an SQL GROUP BY clause to build the list of values.
 For example, if you want to annotate all related books to an author as JSON
 objects:
+[VECTOR]

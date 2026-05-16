@@ -1,4 +1,8 @@
+[ID]
+2624
+[URL]
 https://docs.djangoproject.com/en/4.0/topics/logging/
+[TEXT]
 Logging 
 See also
 How to configure and use logging
@@ -437,3 +441,4 @@ LOGGING_CONFIG once settings are fully-loaded. In contrast, manually
 configuring the logging in your settings file will load your logging config
 immediately. As such, your logging config must appear after any settings on
 which it depends.
+[VECTOR]

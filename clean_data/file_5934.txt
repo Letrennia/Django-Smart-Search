@@ -1,4 +1,8 @@
+[ID]
+5934
+[URL]
 https://docs.djangoproject.com/en/1.10/ref/forms/widgets/
+[TEXT]
 Widgets 
 A widget is Django's representation of an HTML input element. The widget
 handles the rendering of the HTML, and the extraction of data from a GET/POST
@@ -875,3 +879,4 @@ have their own custom label. The labels should be in this order
 Changed in Django 1.9: This widget used to be located in the django.forms.extras.widgets
 package. It is now defined in django.forms.widgets and like the
 other widgets it can be imported directly from django.forms.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+467
+[URL]
 https://docs.djangoproject.com/en/6.0/ref/models/meta/
+[TEXT]
 Model _meta API 
 class Options[source] 
 The model _meta API is at the core of the Django ORM. It enables other
@@ -89,3 +93,4 @@ When a composite primary key is defined on a model it will
 contain all the fields referenced by it.
 Otherwise it will contain the single field declared as the
 primary key of the model.
+[VECTOR]

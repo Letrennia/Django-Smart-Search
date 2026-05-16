@@ -1,4 +1,8 @@
+[ID]
+1071
+[URL]
 https://docs.djangoproject.com/en/5.1/topics/files/
+[TEXT]
 Managing files 
 This document describes Django's file access APIs for files such as those
 uploaded by a user. The lower level APIs are general enough that you could use
@@ -171,3 +175,4 @@ Your callable will be evaluated when your models classes are loaded, and must
 return an instance of Storage.
 In order to set a storage defined in the STORAGES setting you can
 use storages:
+[VECTOR]

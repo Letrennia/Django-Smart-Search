@@ -1,4 +1,8 @@
+[ID]
+5046
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/checks/
+[TEXT]
 System check framework 
 New in Django 1.7. 
 The system check framework is a set of static checks for validating Django
@@ -929,3 +933,4 @@ MySQL
 If you're using MySQL, the following checks will be performed:
 mysql.E001: MySQL does not allow unique CharFields to have a
 max_length > 255.
+[VECTOR]

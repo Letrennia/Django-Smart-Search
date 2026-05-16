@@ -1,4 +1,8 @@
+[ID]
+183
+[URL]
 https://docs.djangoproject.com/en/dev/ref/models/database-functions/
+[TEXT]
 Database Functions 
 The classes documented below provide a way for users to use functions provided
 by the underlying database as annotations, aggregations, or filters in Django.
@@ -1255,3 +1259,4 @@ class RowNumber(*expressions, **extra)[source]
 Computes the row number according to the ordering of either the frame clause
 or the ordering of the whole query if there is no partitioning of the
 window frame.
+[VECTOR]

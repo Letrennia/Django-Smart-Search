@@ -1,4 +1,8 @@
+[ID]
+4409
+[URL]
 https://docs.djangoproject.com/en/2.1/topics/migrations/
+[TEXT]
 Migrations 
 Migrations are Django's way of propagating changes you make to your models
 (adding a field, deleting a model, etc.) into your database schema. They're
@@ -889,3 +893,4 @@ own operations.
 The Writing Migrations "how-to"
 Explains how to structure and write database migrations for different
 scenarios you might encounter.
+[VECTOR]

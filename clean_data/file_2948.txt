@@ -1,4 +1,8 @@
+[ID]
+2948
+[URL]
 https://docs.djangoproject.com/en/3.2/ref/models/constraints/
+[TEXT]
 Constraints reference 
 The classes defined in this module create database constraints. They are added
 in the model Meta.constraints
@@ -189,3 +193,4 @@ this unique index. If you require a custom operator class, you must provide one
 for each field in the index.
 creates a unique index on username using varchar_pattern_ops.
 opclasses are ignored for databases besides PostgreSQL.
+[VECTOR]

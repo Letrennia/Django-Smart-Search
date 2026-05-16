@@ -1,4 +1,8 @@
+[ID]
+1564
+[URL]
 https://docs.djangoproject.com/en/5.0/topics/testing/overview/
+[TEXT]
 Writing and running tests 
 See also
 The testing tutorial, the testing tools
@@ -465,3 +469,4 @@ New in Django 4.2.
 The InMemoryStorage is a convenient way to
 prevent disk access for media files. All data is kept in memory, then it gets
 discarded after tests run.
+[VECTOR]

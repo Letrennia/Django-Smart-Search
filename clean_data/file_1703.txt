@@ -1,4 +1,8 @@
+[ID]
+1703
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/postgres/forms/ranges/
+[TEXT]
 Source code for django.contrib.postgres.forms.ranges
 from django import forms
 from django.core import exceptions
@@ -211,3 +215,4 @@ class DateRangeField(BaseRangeField):
     default_error_messages = {"invalid": _("Enter two valid dates.")}
     base_field = forms.DateField
     range_type = DateRange
+[VECTOR]

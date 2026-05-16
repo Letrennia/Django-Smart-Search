@@ -1,4 +1,8 @@
+[ID]
+4189
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/middleware/http/
+[TEXT]
 Source code for django.middleware.http
 from django.utils.cache import (
     cc_delim_re, get_conditional_response, set_response_etag,
@@ -69,3 +73,4 @@ from django.utils.http import parse_http_date_safe
         """Return True if an ETag header should be added to response."""
         cache_control_headers = cc_delim_re.split(response.get('Cache-Control', ''))
         return all(header.lower() != 'no-store' for header in cache_control_headers)
+[VECTOR]

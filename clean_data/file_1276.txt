@@ -1,4 +1,8 @@
+[ID]
+1276
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/core/paginator/
+[TEXT]
 Source code for django.core.paginator
 import collections.abc
 import inspect
@@ -427,3 +431,4 @@ class Page(collections.abc.Sequence):
         if self.number == self.paginator.num_pages:
             return self.paginator.count
         return self.number * self.paginator.per_page
+[VECTOR]

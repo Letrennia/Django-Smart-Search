@@ -1,4 +1,8 @@
+[ID]
+2574
+[URL]
 https://docs.djangoproject.com/en/4.0/topics/async/
+[TEXT]
 Asynchronous support 
 Django has support for writing asynchronous ("async") views, along with an
 entirely async-enabled request stack if you are running under
@@ -349,3 +353,4 @@ trigger the thread safety checks:
 Rather, you should encapsulate all database access within a helper function
 that can be called with sync_to_async() without relying on the connection
 object in the calling code.
+[VECTOR]

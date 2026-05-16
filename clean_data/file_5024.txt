@@ -1,4 +1,8 @@
+[ID]
+5024
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/utils/http/
+[TEXT]
 Source code for django.utils.http
 from __future__ import unicode_literals
 import base64
@@ -633,3 +637,4 @@ def _is_safe_url(url, host):
         return False
     return ((not url_info.netloc or url_info.netloc == host) and
             (not url_info.scheme or url_info.scheme in ['http', 'https']))
+[VECTOR]

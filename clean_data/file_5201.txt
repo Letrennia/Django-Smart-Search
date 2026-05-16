@@ -1,4 +1,8 @@
+[ID]
+5201
+[URL]
 https://docs.djangoproject.com/en/1.8/topics/localflavor/
+[TEXT]
 The "local flavor" add-ons 
 Historically, Django has shipped with django.contrib.localflavor –
 assorted pieces of code that are useful for particular countries or cultures.
@@ -49,3 +53,4 @@ DeprecationWarning. This means your code will still work, but you should
 change it as soon as possible.
 In Django 1.6, importing from django.contrib.localflavor will no longer
 work.
+[VECTOR]

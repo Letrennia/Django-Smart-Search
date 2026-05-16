@@ -1,4 +1,8 @@
+[ID]
+1738
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/core/mail/
+[TEXT]
 Source code for django.core.mail
 """
 Tools for sending email.
@@ -455,3 +459,4 @@ def __getattr__(name):
         from django.core.mail import message
         warnings.warn(msg, category=RemovedInDjango70Warning)
         return getattr(message, name)
+[VECTOR]

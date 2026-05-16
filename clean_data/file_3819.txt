@@ -1,4 +1,8 @@
+[ID]
+3819
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/utils/safestring/
+[TEXT]
 Source code for django.utils.safestring
 """
 Functions for working with "safe strings": strings that can be displayed safely
@@ -133,3 +137,4 @@ def _safety_decorator(safety_marker, func):
     if callable(s):
         return _safety_decorator(mark_safe, s)
     return SafeText(s)
+[VECTOR]

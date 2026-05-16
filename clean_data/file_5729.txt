@@ -1,4 +1,8 @@
+[ID]
+5729
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/gis/geos/point/
+[TEXT]
 Source code for django.contrib.gis.geos.point
 import warnings
 from ctypes import c_uint
@@ -337,3 +341,4 @@ from django.utils.six.moves import range
         self.tuple = tup
     # The tuple and coords properties
     coords = tuple
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4129
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/contrib/postgres/search/
+[TEXT]
 Source code for django.contrib.postgres.search
 from django.db.models import Field, FloatField
 from django.db.models.expressions import CombinedExpression, Func, Value
@@ -341,3 +345,4 @@ class TrigramBase(Func):
 [docs]class TrigramDistance(TrigramBase):
     function = ''
     arg_joiner = ' <-> '
+[VECTOR]

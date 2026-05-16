@@ -1,4 +1,8 @@
+[ID]
+3929
+[URL]
 https://docs.djangoproject.com/en/2.2/ref/models/indexes/
+[TEXT]
 Model index reference 
 Index classes ease creating database indexes. They can be added using the
 Meta.indexes option. This document
@@ -169,3 +173,4 @@ emulated using functional indexes. Use a migration to add the index using RunSQL
 MySQL and MariaDB
 The condition argument is ignored with MySQL and MariaDB as neither
 supports conditional indexes.
+[VECTOR]

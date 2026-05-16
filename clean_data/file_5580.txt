@@ -1,4 +1,8 @@
+[ID]
+5580
+[URL]
 https://docs.djangoproject.com/en/1.11/topics/db/sql/
+[TEXT]
 Performing raw SQL queries 
 When the model query APIs don't go far enough, you
 can fall back to writing raw SQL. Django gives you two ways of performing raw
@@ -329,3 +333,4 @@ BEGIN
     ...
 END;
 This will call it:
+[VECTOR]

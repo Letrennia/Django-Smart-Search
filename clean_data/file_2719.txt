@@ -1,4 +1,8 @@
+[ID]
+2719
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/asgiref/sync/
+[TEXT]
 Source code for asgiref.sync
 import asyncio.coroutines
 import contextvars
@@ -887,3 +891,4 @@ def sync_to_async(
         thread_sensitive=thread_sensitive,
         executor=executor,
     )
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4142
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/core/files/storage/
+[TEXT]
 Source code for django.core.files.storage
 import os
 from datetime import datetime
@@ -615,3 +619,4 @@ class FileSystemStorage(Storage):
     def _setup(self):
         self._wrapped = get_storage_class()()
 default_storage = DefaultStorage()
+[VECTOR]

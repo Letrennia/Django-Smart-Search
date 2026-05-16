@@ -1,4 +1,8 @@
+[ID]
+4936
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/postgres/fields/hstore/
+[TEXT]
 Source code for django.contrib.postgres.fields.hstore
 import json
 from django.contrib.postgres import forms, lookups
@@ -153,3 +157,4 @@ class ValuesTransform(lookups.FunctionTransform):
     lookup_name = 'values'
     function = 'avals'
     output_field = ArrayField(TextField())
+[VECTOR]

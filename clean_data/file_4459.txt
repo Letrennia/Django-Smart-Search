@@ -1,4 +1,8 @@
+[ID]
+4459
+[URL]
 https://docs.djangoproject.com/en/2.0/index/
+[TEXT]
 Django documentation 
 Getting help 
 Having trouble? We'd like to help!
@@ -485,3 +489,4 @@ Django over time:
 API stability |
 Release notes and upgrading instructions |
 Deprecation Timeline
+[VECTOR]

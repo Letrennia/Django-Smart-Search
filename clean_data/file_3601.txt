@@ -1,4 +1,8 @@
+[ID]
+3601
+[URL]
 https://docs.djangoproject.com/en/3.0/topics/security/
+[TEXT]
 Security in Django 
 This document is an overview of Django's security features. It includes advice
 on securing a Django-powered site.
@@ -397,3 +401,4 @@ Django has tools to address some of the issues, other issues must be
 accounted for in the design of your project.
 Mozilla discusses various topics regarding web security. Their
 pages also include security principles that apply to any system.
+[VECTOR]

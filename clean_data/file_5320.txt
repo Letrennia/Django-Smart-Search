@@ -1,4 +1,8 @@
+[ID]
+5320
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/contrib/postgres/fields/jsonb/
+[TEXT]
 Source code for django.contrib.postgres.fields.jsonb
 import json
 from psycopg2.extras import Json
@@ -267,3 +271,4 @@ class KeyTransformFactory(object):
         self.key_name = key_name
     def __call__(self, *args, **kwargs):
         return KeyTransform(self.key_name, *args, **kwargs)
+[VECTOR]

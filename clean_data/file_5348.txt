@@ -1,4 +1,8 @@
+[ID]
+5348
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/core/paginator/
+[TEXT]
 Source code for django.core.paginator
 import collections
 import warnings
@@ -293,3 +297,4 @@ QuerySetPaginator = Paginator   # For backwards-compatibility.
         if self.number == self.paginator.num_pages:
             return self.paginator.count
         return self.number * self.paginator.per_page
+[VECTOR]

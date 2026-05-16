@@ -1,4 +1,8 @@
+[ID]
+5824
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/urls/resolvers/
+[TEXT]
 Source code for django.urls.resolvers
 """
 This module converts requested URLs to callback view functions.
@@ -749,3 +753,4 @@ class LocaleRegexURLResolver(RegexURLResolver):
                 regex_string = '^%s/' % language_code
             self._regex_dict[language_code] = re.compile(regex_string, re.UNICODE)
         return self._regex_dict[language_code]
+[VECTOR]

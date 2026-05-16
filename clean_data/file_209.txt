@@ -1,4 +1,8 @@
+[ID]
+209
+[URL]
 https://docs.djangoproject.com/en/dev/ref/views/
+[TEXT]
 Built-in Views 
 Several of Django's built-in views are documented in
 Writing views as well as elsewhere in the documentation.
@@ -175,3 +179,4 @@ it may be handled by a component of Django (for example resetting the session
 data). If not specifically handled, Django will consider the current request a
 'bad request' instead of a server error, and handle it with bad_request.
 bad_request views are also only used when DEBUG is False.
+[VECTOR]

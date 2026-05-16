@@ -1,4 +1,8 @@
+[ID]
+4883
+[URL]
 https://docs.djangoproject.com/en/1.8/internals/security/
+[TEXT]
 Django's security policies 
 Django's development team is strongly committed to responsible
 reporting and disclosure of security-related issues. As such, we've
@@ -305,3 +309,4 @@ will be sent to you by Django's release team, and all notification
 emails will be signed with a key authorized to issue Django
 releases. The list of authorized keys is in the Django releasers
 file.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5399
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/template/loaders/base/
+[TEXT]
 Source code for django.template.loaders.base
 import warnings
 from django.template import Origin, Template, TemplateDoesNotExist
@@ -179,3 +183,4 @@ from django.utils.inspect import func_supports_parameter
         ExtendsNode during the deprecation of non-recursive loaders.
         """
         return hasattr(self, 'get_contents')
+[VECTOR]

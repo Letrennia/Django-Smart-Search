@@ -1,4 +1,8 @@
+[ID]
+5835
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/utils/module_loading/
+[TEXT]
 Source code for django.utils.module_loading
 import copy
 import os
@@ -291,3 +295,4 @@ def module_dir(module):
         if filename is not None:
             return os.path.dirname(filename)
     raise ValueError("Cannot determine directory containing %s" % module)
+[VECTOR]

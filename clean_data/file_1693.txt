@@ -1,4 +1,8 @@
+[ID]
+1693
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/postgres/aggregates/general/
+[TEXT]
 Source code for django.contrib.postgres.aggregates.general
 import warnings
 from django.contrib.postgres.fields import ArrayField
@@ -149,3 +153,4 @@ class StringAgg(_DeprecatedOrdering, _StringAgg):
             stacklevel=2,
         )
         super().__init__(expression, delimiter, **extra)
+[VECTOR]

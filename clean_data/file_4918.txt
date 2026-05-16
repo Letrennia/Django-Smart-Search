@@ -1,4 +1,8 @@
+[ID]
+4918
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/auth/middleware/
+[TEXT]
 Source code for django.contrib.auth.middleware
 from django.contrib import auth
 from django.contrib.auth import load_backend
@@ -209,3 +213,4 @@ def get_user(request):
         else:
             if isinstance(stored_backend, RemoteUserBackend):
                 auth.logout(request)
+[VECTOR]

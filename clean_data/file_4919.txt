@@ -1,4 +1,8 @@
+[ID]
+4919
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/auth/models/
+[TEXT]
 Source code for django.contrib.auth.models
 from __future__ import unicode_literals
 from django.contrib import auth
@@ -831,3 +835,4 @@ class AnonymousUser(object):
         return False
     def get_username(self):
         return self.username
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+3577
+[URL]
 https://docs.djangoproject.com/en/3.0/topics/external-packages/
+[TEXT]
 External packages 
 Django ships with a variety of extra, optional tools that solve common
 problems (contrib.*). For easier maintenance and to trim the size of the
@@ -45,3 +49,4 @@ django-formtools is a collection of assorted utilities to work with forms.
 GitHub
 Documentation
 PyPI
+[VECTOR]

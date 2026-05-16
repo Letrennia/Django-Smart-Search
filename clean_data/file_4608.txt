@@ -1,4 +1,8 @@
+[ID]
+4608
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/test/runner/
+[TEXT]
 Source code for django.test.runner
 import ctypes
 import itertools
@@ -1147,3 +1151,4 @@ def filter_tests_by_tags(suite, tags, exclude_tags):
             if (matched_tags or not tags) and not all_tags.intersection(exclude_tags):
                 filtered_suite.addTest(test)
     return filtered_suite
+[VECTOR]

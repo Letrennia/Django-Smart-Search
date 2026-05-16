@@ -1,4 +1,8 @@
+[ID]
+5875
+[URL]
 https://docs.djangoproject.com/en/1.10/ref/contrib/auth/
+[TEXT]
 django.contrib.auth 
 This document provides API reference material for the components of Django's
 authentication system. For more details on the usage of these components or
@@ -799,3 +803,4 @@ if the authentication backend stored in the session is no longer in
 AUTHENTICATION_BACKENDS, if a user isn't returned by the
 backend's get_user() method, or if the session auth hash doesn't
 validate.
+[VECTOR]

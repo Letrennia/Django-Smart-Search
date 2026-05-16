@@ -1,4 +1,8 @@
+[ID]
+293
+[URL]
 https://docs.djangoproject.com/en/6.0/howto/auth-remote-user/
+[TEXT]
 How to authenticate using REMOTE_USER 
 This document describes how to make use of external authentication sources in
 your Django applications. This type of authentication solution is typically
@@ -169,3 +173,4 @@ provides support for this use case. It will maintain the authenticated session
 until explicit logout by the user. The class can be used as a drop-in
 replacement of RemoteUserMiddleware
 in the documentation above.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+715
+[URL]
 https://docs.djangoproject.com/en/5.2/ref/databases/
+[TEXT]
 Databases 
 Django officially supports the following databases:
 PostgreSQL
@@ -1301,3 +1305,4 @@ The Django versions and ORM features supported by these unofficial backends
 vary considerably. Queries regarding the specific capabilities of these
 unofficial backends, along with any support queries, should be directed to
 the support channels provided by each 3rd party project.
+[VECTOR]

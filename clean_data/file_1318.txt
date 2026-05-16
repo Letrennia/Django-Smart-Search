@@ -1,4 +1,8 @@
+[ID]
+1318
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/http/response/
+[TEXT]
 Source code for django.http.response
 import datetime
 import io
@@ -1259,3 +1263,4 @@ class JsonResponse(HttpResponse):
         kwargs.setdefault("content_type", "application/json")
         data = json.dumps(data, cls=encoder, **json_dumps_params)
         super().__init__(content=data, **kwargs)
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4700
+[URL]
 https://docs.djangoproject.com/en/2.0/ref/contrib/postgres/forms/
+[TEXT]
 PostgreSQL specific form fields and widgets 
 All of these fields and widgets are available from the
 django.contrib.postgres.forms module.
@@ -219,3 +223,4 @@ decompress(value)[source]
 Takes a single "compressed" value of a field, for example a
 DateRangeField,
 and returns a tuple representing and lower and upper bound.
+[VECTOR]

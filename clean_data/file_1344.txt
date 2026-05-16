@@ -1,4 +1,8 @@
+[ID]
+1344
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/urls/conf/
+[TEXT]
 Source code for django.urls.conf
 """Functions for use in URLsconfs."""
 from functools import partial
@@ -173,3 +177,4 @@ def _path(route, view, kwargs=None, name=None, Pattern=None):
         )
 path = partial(_path, Pattern=RoutePattern)
 re_path = partial(_path, Pattern=RegexPattern)
+[VECTOR]

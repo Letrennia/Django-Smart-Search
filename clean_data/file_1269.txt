@@ -1,4 +1,8 @@
+[ID]
+1269
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/core/files/storage/handler/
+[TEXT]
 Source code for django.core.files.storage.handler
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
@@ -79,3 +83,4 @@ class StorageHandler:
         except ImportError as e:
             raise InvalidStorageError(f"Could not find backend {backend!r}: {e}") from e
         return storage_cls(**options)
+[VECTOR]

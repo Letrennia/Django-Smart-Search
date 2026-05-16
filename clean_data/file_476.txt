@@ -1,4 +1,8 @@
+[ID]
+476
+[URL]
 https://docs.djangoproject.com/en/6.0/ref/tasks/
+[TEXT]
 Tasks 
 New in Django 6.0. 
 The Task framework provides the contract and plumbing for background work, not
@@ -491,3 +495,4 @@ when the provided result_id does not exist.
 exception TaskResultMismatch[source] 
 Raised by get_result() when the provided
 result_id is for a different Task than the current Task.
+[VECTOR]

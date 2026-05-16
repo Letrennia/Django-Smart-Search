@@ -1,4 +1,8 @@
+[ID]
+205
+[URL]
 https://docs.djangoproject.com/en/dev/ref/urlresolvers/
+[TEXT]
 django.urls utility functions 
 reverse() 
 The reverse() function can be used to return an absolute path reference
@@ -259,3 +263,4 @@ project is at the root of its web server, this is always "/".
 Warning
 This function cannot be used outside of the request-response cycle
 since it relies on values initialized during that cycle.
+[VECTOR]

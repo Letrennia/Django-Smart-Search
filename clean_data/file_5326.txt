@@ -1,4 +1,8 @@
+[ID]
+5326
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/contrib/postgres/functions/
+[TEXT]
 Source code for django.contrib.postgres.functions
 from django.db.models import DateTimeField, Func
 [docs]class TransactionNow(Func):
@@ -15,3 +19,4 @@ from django.db.models import DateTimeField, Func
         if output_field is None:
             output_field = DateTimeField()
         super(TransactionNow, self).__init__(output_field=output_field, **extra)
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+3445
+[URL]
 https://docs.djangoproject.com/en/3.0/ref/contrib/admin/
+[TEXT]
 The Django admin site 
 One of the most powerful parts of Django is the automatic admin interface. It
 reads metadata from your models to provide a quick, model-centric interface
@@ -3279,3 +3283,4 @@ Otherwise, the request will be redirected to the URL specified by the
 login_url parameter, with the originally requested path in a query
 string variable specified by redirect_field_name. 
 /admin/login/?next=/admin/polls/question/3/.
+[VECTOR]

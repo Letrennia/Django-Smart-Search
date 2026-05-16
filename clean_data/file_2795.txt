@@ -1,4 +1,8 @@
+[ID]
+2795
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/db/models/query/
+[TEXT]
 Source code for django.db.models.query
 """
 The main QuerySet implementation. This provides the public API for the ORM.
@@ -3575,3 +3579,4 @@ def get_related_populators(klass_info, select, db):
         rel_cls = RelatedPopulator(rel_klass_info, select, db)
         iterators.append(rel_cls)
     return iterators
+[VECTOR]

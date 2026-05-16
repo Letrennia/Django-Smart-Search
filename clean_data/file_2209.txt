@@ -1,4 +1,8 @@
+[ID]
+2209
+[URL]
 https://docs.djangoproject.com/en/4.1/ref/contrib/postgres/indexes/
+[TEXT]
 PostgreSQL specific model indexes 
 The following are PostgreSQL specific indexes
 available from the django.contrib.postgres.indexes module.
@@ -157,3 +161,4 @@ text_pattern_ops.
 creates an exclusion constraint on circle using circle_ops.
 Changed in Django 4.0: Support for functional unique constraints was added.
 Changed in Django 4.1: Support for exclusion constraints was added.
+[VECTOR]

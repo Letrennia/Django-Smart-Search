@@ -1,4 +1,8 @@
+[ID]
+4333
+[URL]
 https://docs.djangoproject.com/en/2.1/ref/models/indexes/
+[TEXT]
 Model index reference 
 Index classes ease creating database indexes. They can be added using the
 Meta.indexes option. This document
@@ -83,3 +87,4 @@ in the same tablespace as the table.
 See also
 For a list of PostgreSQL-specific indexes, see
 django.contrib.postgres.indexes.
+[VECTOR]

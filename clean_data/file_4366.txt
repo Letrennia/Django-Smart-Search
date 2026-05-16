@@ -1,4 +1,8 @@
+[ID]
+4366
+[URL]
 https://docs.djangoproject.com/en/2.1/topics/class-based-views/generic-display/
+[TEXT]
 Built-in class-based generic views 
 Writing Web applications can be monotonous, because we repeat certain patterns
 again and again. Django tries to take away some of that monotony at the model
@@ -365,3 +369,4 @@ filter the queryset.
 If you want to call the group something else, you can set pk_url_kwarg
 on the view. More details can be found in the reference for
 DetailView
+[VECTOR]

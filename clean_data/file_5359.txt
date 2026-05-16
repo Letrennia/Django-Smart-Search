@@ -1,4 +1,8 @@
+[ID]
+5359
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/db/models/fields/
+[TEXT]
 Source code for django.db.models.fields
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
@@ -4159,3 +4163,4 @@ class PositiveIntegerRelDbTypeMixin(object):
         }
         defaults.update(kwargs)
         return super(UUIDField, self).formfield(**defaults)
+[VECTOR]

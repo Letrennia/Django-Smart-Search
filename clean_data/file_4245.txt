@@ -1,4 +1,8 @@
+[ID]
+4245
+[URL]
 https://docs.djangoproject.com/en/2.1/ref/checks/
+[TEXT]
 System check framework 
 The system check framework is a set of static checks for validating Django
 projects. It detects common problems and provides hints for how to fix them.
@@ -1173,3 +1177,4 @@ staticfiles.E001: The STATICFILES_DIRS setting is not a tuple
 or list.
 staticfiles.E002: The STATICFILES_DIRS setting should not
 contain the STATIC_ROOT setting.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4686
+[URL]
 https://docs.djangoproject.com/en/2.0/ref/contrib/gis/layermapping/
+[TEXT]
 LayerMapping data import utility 
 The LayerMapping class provides a way to map the contents of
 vector spatial data files (e.g. shapefiles) into GeoDjango models.
@@ -269,3 +273,4 @@ Then the solution is to increase the value of the max_allowed_packet
 setting in your MySQL configuration.  For example, the default value may
 be something low like one megabyte – the setting may be modified in MySQL's
 configuration file (my.cnf) in the [mysqld] section:
+[VECTOR]

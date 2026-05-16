@@ -1,4 +1,8 @@
+[ID]
+5744
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/postgres/forms/ranges/
+[TEXT]
 Source code for django.contrib.postgres.forms.ranges
 from psycopg2.extras import DateRange, DateTimeTZRange, NumericRange
 from django import forms
@@ -149,3 +153,4 @@ class RangeWidget(MultiWidget):
         if value:
             return (value.lower, value.upper)
         return (None, None)
+[VECTOR]

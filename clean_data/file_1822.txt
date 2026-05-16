@@ -1,4 +1,8 @@
+[ID]
+1822
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/utils/html/
+[TEXT]
 Source code for django.utils.html
 """HTML utilities suitable for global use."""
 import html
@@ -899,3 +903,4 @@ def html_safe(klass):
     klass.__str__ = lambda self: mark_safe(klass_str(self))
     klass.__html__ = lambda self: str(self)
     return klass
+[VECTOR]

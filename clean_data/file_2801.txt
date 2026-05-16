@@ -1,4 +1,8 @@
+[ID]
+2801
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/forms/fields/
+[TEXT]
 Source code for django.forms.fields
 """
 Field classes.
@@ -2199,3 +2203,4 @@ class JSONString(str):
             json.dumps(initial, sort_keys=True, cls=self.encoder) !=
             json.dumps(self.to_python(data), sort_keys=True, cls=self.encoder)
         )
+[VECTOR]

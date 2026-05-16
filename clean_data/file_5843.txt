@@ -1,4 +1,8 @@
+[ID]
+5843
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/views/decorators/csrf/
+[TEXT]
 Source code for django.views.decorators.csrf
 from functools import wraps
 from django.middleware.csrf import CsrfViewMiddleware, get_token
@@ -95,3 +99,4 @@ uses the csrf_token template tag, or the CsrfViewMiddleware is used.
         return view_func(*args, **kwargs)
     wrapped_view.csrf_exempt = True
     return wraps(view_func, assigned=available_attrs(view_func))(wrapped_view)
+[VECTOR]

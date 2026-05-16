@@ -1,4 +1,8 @@
+[ID]
+3932
+[URL]
 https://docs.djangoproject.com/en/2.2/ref/models/meta/
+[TEXT]
 Model _meta API 
 class Options[source] 
 The model _meta API is at the core of the Django ORM. It enables other
@@ -81,3 +85,4 @@ fields that are used to back other field's functionality. This will
 also include any fields that have a related_name (such
 as ManyToManyField, or
 ForeignKey) that start with a "+".
+[VECTOR]

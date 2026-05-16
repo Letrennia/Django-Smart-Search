@@ -1,4 +1,8 @@
+[ID]
+5469
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/contrib/gis/functions/
+[TEXT]
 Geographic Database Functions 
 The functions documented on this page allow users to access geographic database
 functions to be used in annotations, aggregations, or filters in Django.
@@ -639,3 +643,4 @@ class Union(expr1, expr2, **extra)
 Availability: MySQL (≥ 5.6.1), PostGIS, Oracle, SpatiaLite
 Accepts two geographic fields or expressions and returns the union of both
 geometries.
+[VECTOR]

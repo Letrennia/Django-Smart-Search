@@ -1,4 +1,8 @@
+[ID]
+5025
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/utils/log/
+[TEXT]
 Source code for django.utils.log
 from __future__ import unicode_literals
 import logging
@@ -287,3 +291,4 @@ def configure_logging(logging_config, logging_settings):
 [docs]class RequireDebugTrue(logging.Filter):
     def filter(self, record):
         return settings.DEBUG
+[VECTOR]

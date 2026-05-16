@@ -1,4 +1,8 @@
+[ID]
+1230
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/postgres/aggregates/general/
+[TEXT]
 Source code for django.contrib.postgres.aggregates.general
 from django.contrib.postgres.fields import ArrayField
 from django.db.models import Aggregate, BooleanField, JSONField, TextField, Value
@@ -107,3 +111,4 @@ class StringAgg(OrderableAggMixin, Aggregate):
     def __init__(self, expression, delimiter, **extra):
         delimiter_expr = Value(str(delimiter))
         super().__init__(expression, delimiter_expr, **extra)
+[VECTOR]

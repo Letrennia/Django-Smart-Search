@@ -1,4 +1,8 @@
+[ID]
+3035
+[URL]
 https://docs.djangoproject.com/en/3.2/topics/settings/
+[TEXT]
 Django settings 
 A Django settings file contains all the configuration of your Django
 installation. This document explains how settings work and which settings are
@@ -289,3 +293,4 @@ If you can't avoid that, put the call to django.setup() inside an
 if block:
 See also
 The Settings ReferenceContains the complete list of core and contrib app settings.
+[VECTOR]

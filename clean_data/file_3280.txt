@@ -1,4 +1,8 @@
+[ID]
+3280
+[URL]
 https://docs.djangoproject.com/en/3.1/topics/db/search/
+[TEXT]
 Search 
 A common task for web applications is to search some data in the database with
 user input. In a simple case, this could be filtering a list of objects by a
@@ -143,3 +147,4 @@ queries. For example, a query might select all the blog entries which mention
 You can also filter on a combination of fields and on related models:
 See the contrib.postgres Full text search document for
 complete details.
+[VECTOR]

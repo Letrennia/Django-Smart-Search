@@ -1,4 +1,8 @@
+[ID]
+1246
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/redirects/middleware/
+[TEXT]
 Source code for django.contrib.redirects.middleware
 from django.apps import apps
 from django.conf import settings
@@ -87,3 +91,4 @@ class RedirectFallbackMiddleware(MiddlewareMixin):
             return self.response_redirect_class(r.new_path)
         # No redirect was found. Return the response.
         return response
+[VECTOR]

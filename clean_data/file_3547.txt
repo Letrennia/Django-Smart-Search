@@ -1,4 +1,8 @@
+[ID]
+3547
+[URL]
 https://docs.djangoproject.com/en/3.0/topics/async/
+[TEXT]
 Asynchronous support 
 New in Django 3.0. 
 Django has developing support for asynchronous ("async") Python, but does not
@@ -183,3 +187,4 @@ same thread and thus is fully compatible with asynchronous mode. Note, that
 synchronous code will always be in a different thread to any async code that
 is calling it, so you should avoid passing raw database handles or other
 thread-sensitive references around in any new code you write.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+2832
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/urls/base/
+[TEXT]
 Source code for django.urls.base
 from urllib.parse import unquote, urlsplit, urlunsplit
 from asgiref.local import Local
@@ -291,3 +295,4 @@ def translate_url(url, lang_code):
             else:
                 url = urlunsplit((parsed.scheme, parsed.netloc, url, parsed.query, parsed.fragment))
     return url
+[VECTOR]

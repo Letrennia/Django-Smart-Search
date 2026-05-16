@@ -1,4 +1,8 @@
+[ID]
+5294
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/
+[TEXT]
 Source code for django
 from __future__ import unicode_literals
 from django.utils.version import get_version
@@ -43,3 +47,4 @@ __version__ = get_version(VERSION)
             '/' if settings.FORCE_SCRIPT_NAME is None else force_text(settings.FORCE_SCRIPT_NAME)
         )
     apps.populate(settings.INSTALLED_APPS)
+[VECTOR]

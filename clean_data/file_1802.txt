@@ -1,4 +1,8 @@
+[ID]
+1802
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/template/loaders/cached/
+[TEXT]
 Source code for django.template.loaders.cached
 """
 Wrapper class that takes a list of template loaders as an argument and attempts
@@ -161,3 +165,4 @@ class Loader(BaseLoader):
     def reset(self):
         "Empty the template cache."
         self.get_template_cache.clear()
+[VECTOR]

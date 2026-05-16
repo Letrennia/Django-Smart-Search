@@ -1,4 +1,8 @@
+[ID]
+1214
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/auth/views/
+[TEXT]
 Source code for django.contrib.auth.views
 from urllib.parse import urlparse, urlunparse
 from django.conf import settings
@@ -661,3 +665,4 @@ class PasswordChangeDoneView(PasswordContextMixin, TemplateView):
     @method_decorator(login_required)
     def dispatch(self, *args, **kwargs):
         return super().dispatch(*args, **kwargs)
+[VECTOR]

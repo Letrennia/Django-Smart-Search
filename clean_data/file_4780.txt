@@ -1,4 +1,8 @@
+[ID]
+4780
+[URL]
 https://docs.djangoproject.com/en/2.0/topics/db/instrumentation/
+[TEXT]
 Database instrumentation 
 New in Django 2.0. 
 To help you understand and control the queries issued by your code, Django
@@ -83,3 +87,4 @@ execution in the scope of the context manager, with arguments execute,
 sql, params, many, and context as described above. It's
 expected to call execute(sql, params, many, context) and return the return
 value of that call.
+[VECTOR]

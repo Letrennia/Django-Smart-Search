@@ -1,4 +1,8 @@
+[ID]
+5789
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/dispatch/dispatcher/
+[TEXT]
 Source code for django.dispatch.dispatcher
 import sys
 import threading
@@ -525,3 +529,4 @@ NO_RECEIVERS = object()
             signal.connect(func, **kwargs)
         return func
     return _decorator
+[VECTOR]

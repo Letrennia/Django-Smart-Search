@@ -1,4 +1,8 @@
+[ID]
+294
+[URL]
 https://docs.djangoproject.com/en/6.0/howto/csp/
+[TEXT]
 How to use Django's Content Security Policy 
 Basic config 
 To enable Content Security Policy (CSP) in your Django project:
@@ -53,3 +57,4 @@ To ensure correct behavior, make sure both the HTML and the header are
 generated within the same request and not served from cache. See the
 reference documentation on Nonce usage for implementation details and
 important caching considerations.
+[VECTOR]

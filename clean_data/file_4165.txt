@@ -1,4 +1,8 @@
+[ID]
+4165
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/db/models/functions/window/
+[TEXT]
 Source code for django.db.models.functions.window
 from django.db.models import FloatField, Func, IntegerField
 __all__ = [
@@ -177,3 +181,4 @@ class LagLeadFunction(Func):
     name = 'RowNumber'
     output_field = IntegerField()
     window_compatible = True
+[VECTOR]

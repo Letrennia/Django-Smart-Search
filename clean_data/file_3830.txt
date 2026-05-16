@@ -1,4 +1,8 @@
+[ID]
+3830
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/views/defaults/
+[TEXT]
 Source code for django.views.defaults
 from urllib.parse import quote
 from django.http import (
@@ -221,3 +225,4 @@ def permission_denied(request, exception, template_name=ERROR_403_TEMPLATE_NAME)
     return HttpResponseForbidden(
         template.render(request=request, context={'exception': str(exception)})
     )
+[VECTOR]

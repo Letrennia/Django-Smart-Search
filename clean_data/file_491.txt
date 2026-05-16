@@ -1,4 +1,8 @@
+[ID]
+491
+[URL]
 https://docs.djangoproject.com/en/6.0/topics/
+[TEXT]
 Using Django 
 Introductions to all the key parts of Django you'll need to know:
 How to install Django
@@ -369,3 +373,4 @@ Configuring a Task backend
 Defining Tasks
 Enqueueing Tasks
 Task results
+[VECTOR]

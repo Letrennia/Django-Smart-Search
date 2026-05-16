@@ -1,4 +1,8 @@
+[ID]
+2919
+[URL]
 https://docs.djangoproject.com/en/3.2/ref/contrib/postgres/operations/
+[TEXT]
 Database migration operations 
 All of these operations are available from
 the django.contrib.postgres.operations module.
@@ -173,3 +177,4 @@ of when using this option, see the PostgreSQL documentation.
 Note
 The CONCURRENTLY option is not supported inside a transaction (see
 non-atomic migration).
+[VECTOR]

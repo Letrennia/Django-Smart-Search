@@ -1,4 +1,8 @@
+[ID]
+4308
+[URL]
 https://docs.djangoproject.com/en/2.1/ref/contrib/syndication/
+[TEXT]
 The syndication feed framework 
 Django comes with a high-level syndication-feed-generating framework
 that makes creating RSS and Atom feeds easy.
@@ -569,3 +573,4 @@ since they add the required elements for each feed format.
 For example, you might start implementing an iTunes RSS feed generator like so:
 Obviously there's a lot more work to be done for a complete custom feed class,
 but the above example should demonstrate the basic idea.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5887
+[URL]
 https://docs.djangoproject.com/en/1.10/ref/contrib/gis/geoip/
+[TEXT]
 Geolocation with GeoIP 
 Deprecated since version 1.9: This module is deprecated in favor of django.contrib.gis.geoip2, which supports IPv6 and the GeoLite2 database
 format.
@@ -215,3 +219,4 @@ GeoIP.country_code_by_name(query)
 GeoIP.country_name_by_addr(query) 
 GeoIP.country_name_by_name(query) 
 [1]GeoIP(R) is a registered trademark of MaxMind, LLC of Boston, Massachusetts.
+[VECTOR]

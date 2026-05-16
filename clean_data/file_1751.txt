@@ -1,4 +1,8 @@
+[ID]
+1751
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/db/models/deletion/
+[TEXT]
 Source code for django.db.models.deletion
 from collections import Counter, defaultdict
 from functools import partial, reduce
@@ -929,3 +933,4 @@ class Collector:
             for instance in instances:
                 setattr(instance, model._meta.pk.attname, None)
         return sum(deleted_counter.values()), dict(deleted_counter)
+[VECTOR]

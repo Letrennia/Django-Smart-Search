@@ -1,4 +1,8 @@
+[ID]
+5807
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/template/backends/django/
+[TEXT]
 Source code for django.template.backends.django
 # Since this package contains a "django" module, this is required on Python 2.
 from __future__ import absolute_import
@@ -215,3 +219,4 @@ def get_package_libraries(pkg):
             )
         if hasattr(module, 'register'):
             yield entry[1]
+[VECTOR]

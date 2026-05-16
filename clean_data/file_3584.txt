@@ -1,4 +1,8 @@
+[ID]
+3584
+[URL]
 https://docs.djangoproject.com/en/3.0/topics/http/decorators/
+[TEXT]
 View decorators 
 Django provides several decorators that can be applied to views to support
 various HTTP features.
@@ -129,3 +133,4 @@ This decorator adds a Cache-Control: max-age=0, no-cache, no-store,
 must-revalidate, private header to a response to indicate that a page
 should never be cached.
 Changed in Django 3.0: private directive was added.
+[VECTOR]

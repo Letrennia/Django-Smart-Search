@@ -1,4 +1,8 @@
+[ID]
+1577
+[URL]
 https://docs.djangoproject.com/en/4.2/howto/
+[TEXT]
 "How-to" guides 
 Here you'll find short answers to "How do I….?" types of questions. These
 how-to guides don't cover topics in depth – you'll find that material in the
@@ -61,3 +65,4 @@ See also
 The Django community aggregator, where we aggregate content from the
 global Django community. Many writers in the aggregator write this sort of
 how-to material.
+[VECTOR]

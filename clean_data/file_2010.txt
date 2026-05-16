@@ -1,4 +1,8 @@
+[ID]
+2010
+[URL]
 https://docs.djangoproject.com/en/4.2/topics/http/sessions/
+[TEXT]
 How to use sessions 
 Django provides full support for anonymous sessions. The session framework
 lets you store and retrieve arbitrary data on a per-site-visitor basis. It
@@ -961,3 +965,4 @@ not fall back to putting session IDs in URLs as a last resort, as PHP does.
 This is an intentional design decision. Not only does that behavior make URLs
 ugly, it makes your site vulnerable to session-ID theft via the "Referer"
 header.
+[VECTOR]

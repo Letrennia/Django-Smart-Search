@@ -1,4 +1,8 @@
+[ID]
+5063
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/contrib/admin/admindocs/
+[TEXT]
 The Django admin documentation generator 
 Django's admindocs app pulls documentation from the
 docstrings of models, views, template tags, and template filters for any app in
@@ -167,3 +171,4 @@ User with
 is_staff set to True, or that the
 XViewMiddleware is installed and you are accessing the site from an IP
 address listed in INTERNAL_IPS.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+1372
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/views/i18n/
+[TEXT]
 Source code for django.views.i18n
 import json
 import os
@@ -447,3 +451,4 @@ class JSONCatalog(JavaScriptCatalog):
     """
     def render_to_response(self, context, **response_kwargs):
         return JsonResponse(context)
+[VECTOR]

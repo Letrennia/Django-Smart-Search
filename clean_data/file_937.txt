@@ -1,4 +1,8 @@
+[ID]
+937
+[URL]
 https://docs.djangoproject.com/en/5.1/ref/contrib/admin/filters/
+[TEXT]
 ModelAdmin List Filters 
 ModelAdmin classes can define list filters that appear in the right sidebar
 of the change list page of the admin, as illustrated in the following
@@ -135,3 +139,4 @@ New in Django 5.0.
 By default, counts for each filter, known as facets, can be shown by toggling
 on via the admin UI. These counts will update according to the currently
 applied filters. See ModelAdmin.show_facets for more details.
+[VECTOR]

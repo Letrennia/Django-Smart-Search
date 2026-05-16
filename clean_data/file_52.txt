@@ -1,4 +1,8 @@
+[ID]
+52
+[URL]
 https://docs.djangoproject.com/en/dev/internals/contributing/accessibility/
+[TEXT]
 Accessibility 
 The Django project is committed to ensuring that websites built with Django are
 usable by everyone, including people with disabilities. Django's built-in
@@ -179,3 +183,4 @@ The Accessibility Django forum topic.
 Accessibility issues on the ticket tracker.
 Our django accessibility improvements project board.
 The Accessibility team.
+[VECTOR]

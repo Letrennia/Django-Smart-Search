@@ -1,4 +1,8 @@
+[ID]
+4904
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/apps/registry/
+[TEXT]
 Source code for django.apps.registry
 import os
 import sys
@@ -737,3 +741,4 @@ class Apps(object):
         for model in models:
             self.register_model(app_label, model)
 apps = Apps(installed_apps=None)
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+1227
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/messages/middleware/
+[TEXT]
 Source code for django.contrib.messages.middleware
 from django.conf import settings
 from django.contrib.messages.storage import default_storage
@@ -45,3 +49,4 @@ class MessageMiddleware(MiddlewareMixin):
             if unstored_messages and settings.DEBUG:
                 raise ValueError("Not all temporary messages could be stored.")
         return response
+[VECTOR]

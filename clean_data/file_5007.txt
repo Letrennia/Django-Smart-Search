@@ -1,4 +1,8 @@
+[ID]
+5007
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/template/engine/
+[TEXT]
 Source code for django.template.engine
 import warnings
 from django.core.exceptions import ImproperlyConfigured
@@ -475,3 +479,4 @@ _dirs_undefined = object()
             return LoaderOrigin(display_name, loader, name, dirs)
         else:
             return None
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+331
+[URL]
 https://docs.djangoproject.com/en/6.0/internals/contributing/bugs-and-features/
+[TEXT]
 Reporting bugs and requesting features 
 Important
 Please report security issues only to
@@ -307,3 +311,4 @@ If you suspect a regression, it's helpful to report the specific commit that
 caused it. See Bisecting a regression for instructions.
 You can also discuss any issues or share feedback in the Pre-releases category
 on the Django Forum.
+[VECTOR]

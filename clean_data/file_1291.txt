@@ -1,4 +1,8 @@
+[ID]
+1291
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/db/models/fields/json/
+[TEXT]
 Source code for django.db.models.fields.json
 import json
 from django import forms
@@ -1063,3 +1067,4 @@ class KeyTransformFactory:
         self.key_name = key_name
     def __call__(self, *args, **kwargs):
         return KeyTransform(self.key_name, *args, **kwargs)
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4966
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/db/migrations/operations/fields/
+[TEXT]
 Source code for django.db.migrations.operations.fields
 from __future__ import unicode_literals
 from django.db.models.fields import NOT_PROVIDED
@@ -495,3 +499,4 @@ from .base import Operation
             name.lower() == self.old_name_lower or
             name.lower() == self.new_name_lower
         )
+[VECTOR]

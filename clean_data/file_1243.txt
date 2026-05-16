@@ -1,4 +1,8 @@
+[ID]
+1243
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/postgres/operations/
+[TEXT]
 Source code for django.contrib.postgres.operations
 from django.contrib.postgres.signals import (
     get_citext_oids,
@@ -567,3 +571,4 @@ class ValidateConstraint(Operation):
                 "name": self.name,
             },
         )
+[VECTOR]

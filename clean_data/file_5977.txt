@@ -1,4 +1,8 @@
+[ID]
+5977
+[URL]
 https://docs.djangoproject.com/en/1.10/topics/class-based-views/generic-editing/
+[TEXT]
 Form handling with class-based views 
 Form processing generally has 3 paths:
 Initial GET (blank or prepopulated form)
@@ -313,3 +317,4 @@ form_valid().
 AJAX example 
 Here is a simple example showing how you might go about implementing a form that
 works for AJAX requests as well as 'normal' form POSTs:
+[VECTOR]

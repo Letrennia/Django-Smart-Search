@@ -1,4 +1,8 @@
+[ID]
+1205
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/auth/decorators/
+[TEXT]
 Source code for django.contrib.auth.decorators
 import asyncio
 from functools import wraps
@@ -225,3 +229,4 @@ def permission_required(perm, login_url=None, raise_exception=False):
                 return False
         return user_passes_test(check_perms, login_url=login_url)(view_func)
     return decorator
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4268
+[URL]
 https://docs.djangoproject.com/en/2.1/ref/contrib/gis/admin/
+[TEXT]
 GeoDjango's admin site 
 GeoModelAdmin 
 class GeoModelAdmin 
@@ -71,3 +75,4 @@ A subclass of GeoModelAdmin that uses a Spherical Mercator projection
 with OpenStreetMap street data tiles.
 See the OSMGeoAdmin introduction
 in the tutorial for a usage example.
+[VECTOR]

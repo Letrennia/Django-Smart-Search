@@ -1,4 +1,8 @@
+[ID]
+3816
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/utils/http/
+[TEXT]
 Source code for django.utils.http
 import base64
 import calendar
@@ -783,3 +787,4 @@ def escape_leading_slashes(url):
     if url.startswith('//'):
         url = '/%2F{}'.format(url[2:])
     return url
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+504
+[URL]
 https://docs.djangoproject.com/en/6.0/topics/composite-primary-key/
+[TEXT]
 Composite primary keys 
 New in Django 5.2. 
 In Django, each model has a primary key. By default, this primary key consists
@@ -179,3 +183,4 @@ have this attribute set to True:
 In order to build application code that properly handles composite primary
 keys the _meta.pk_fields
 attribute should be used instead:
+[VECTOR]

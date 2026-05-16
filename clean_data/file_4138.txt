@@ -1,4 +1,8 @@
+[ID]
+4138
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/core/checks/registry/
+[TEXT]
 Source code for django.core.checks.registry
 from itertools import chain
 from django.utils.itercompat import is_iterable
@@ -157,3 +161,4 @@ registry = CheckRegistry()
 register = registry.register
 run_checks = registry.run_checks
 tag_exists = registry.tag_exists
+[VECTOR]

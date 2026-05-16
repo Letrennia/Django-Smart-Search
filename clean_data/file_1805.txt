@@ -1,4 +1,8 @@
+[ID]
+1805
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/template/utils/
+[TEXT]
 Source code for django.template.utils
 import functools
 from collections import Counter
@@ -183,3 +187,4 @@ def get_app_template_dirs(dirname):
         for app_config in apps.get_app_configs()
         if app_config.path and (path := Path(app_config.path) / dirname).is_dir()
     )
+[VECTOR]

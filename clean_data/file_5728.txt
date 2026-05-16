@@ -1,4 +1,8 @@
+[ID]
+5728
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/gis/geos/linestring/
+[TEXT]
 Source code for django.contrib.gis.geos.linestring
 from django.contrib.gis.geos import prototypes as capi
 from django.contrib.gis.geos.coordseq import GEOSCoordSeq
@@ -295,3 +299,4 @@ from django.utils.six.moves import range
 [docs]class LinearRing(LineString):
     _minlength = 4
     _init_func = capi.create_linearring
+[VECTOR]

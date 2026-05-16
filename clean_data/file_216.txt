@@ -1,4 +1,8 @@
+[ID]
+216
+[URL]
 https://docs.djangoproject.com/en/dev/topics/auth/customizing/
+[TEXT]
 Customizing authentication in Django 
 The authentication that comes with Django is good enough for most common cases,
 but you may have needs not met by the out-of-the-box defaults. Customizing
@@ -1173,3 +1177,4 @@ async interface is implemented.
 Django's out-of-the-box authentication backends have native async support. If
 these native backends are extended take special care to make sure the async
 versions of modified functions are modified as well.
+[VECTOR]

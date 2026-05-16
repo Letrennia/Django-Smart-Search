@@ -1,4 +1,8 @@
+[ID]
+1182
+[URL]
 https://docs.djangoproject.com/en/5.0/intro/tutorial08/
+[TEXT]
 Writing your first Django app, part 8 
 This tutorial begins where Tutorial 7 left off. We've
 built our web-poll application and will now look at third-party packages. One of
@@ -133,3 +137,4 @@ some pointers on where to go from here.
 If you are familiar with Python packaging and interested in learning how to
 turn polls into a "reusable app", check out Advanced tutorial: How to
 write reusable apps.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+2860
+[URL]
 https://docs.djangoproject.com/en/3.2/ref/
+[TEXT]
 API Reference 
 Applications
 System check framework
@@ -59,3 +63,4 @@ django.conf.urls functions for use in URLconfs
 Django Utils
 Validators
 Built-in Views
+[VECTOR]

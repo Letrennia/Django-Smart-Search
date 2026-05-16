@@ -1,4 +1,8 @@
+[ID]
+1077
+[URL]
 https://docs.djangoproject.com/en/5.1/topics/http/decorators/
+[TEXT]
 View decorators 
 Django provides several decorators that can be applied to views to support
 various HTTP features.
@@ -165,3 +169,4 @@ no_append_slash()[source]
 This decorator allows individual views to be excluded from
 APPEND_SLASH URL normalization.
 Changed in Django 5.0: Support for wrapping asynchronous view functions was added.
+[VECTOR]

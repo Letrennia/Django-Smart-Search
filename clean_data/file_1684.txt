@@ -1,4 +1,8 @@
+[ID]
+1684
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/gis/feeds/
+[TEXT]
 Source code for django.contrib.gis.feeds
 from django.contrib.syndication.views import Feed as BaseFeed
 from django.utils.feedgenerator import Atom1Feed, Rss201rev2Feed
@@ -267,3 +271,4 @@ class Feed(BaseFeed):
         return {"geometry": self._get_dynamic_attr("geometry", obj)}
     def item_extra_kwargs(self, item):
         return {"geometry": self._get_dynamic_attr("item_geometry", item)}
+[VECTOR]

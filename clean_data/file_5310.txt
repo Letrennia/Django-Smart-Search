@@ -1,4 +1,8 @@
+[ID]
+5310
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/contrib/gis/feeds/
+[TEXT]
 Source code for django.contrib.gis.feeds
 from __future__ import unicode_literals
 from django.contrib.syndication.views import Feed as BaseFeed
@@ -245,3 +249,4 @@ class GeoFeedMixin(object):
         return {'geometry': self._get_dynamic_attr('geometry', obj)}
     def item_extra_kwargs(self, item):
         return {'geometry': self._get_dynamic_attr('item_geometry', item)}
+[VECTOR]

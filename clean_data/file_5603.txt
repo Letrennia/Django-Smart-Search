@@ -1,4 +1,8 @@
+[ID]
+5603
+[URL]
 https://docs.djangoproject.com/en/1.11/topics/install/
+[TEXT]
 How to install Django 
 This document will get you up and running with Django.
 Install Python 
@@ -273,3 +277,4 @@ set!
 When you want to update your copy of the Django source code, just run the
 command git pull from within the django directory. When you do this,
 Git will automatically download any changes.
+[VECTOR]

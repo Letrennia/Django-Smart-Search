@@ -1,4 +1,8 @@
+[ID]
+5276
+[URL]
 https://docs.djangoproject.com/en/1.11/intro/
+[TEXT]
 Getting started 
 New to Django? Or to Web development in general? Well, you came to the right
 place: read this material to quickly get up and running.
@@ -47,3 +51,4 @@ list of Python resources for non-programmers
 If you already know a few other languages and want to get up to speed with
 Python quickly, we recommend Dive Into Python. If that's not quite your
 style, there are many other books about Python.
+[VECTOR]

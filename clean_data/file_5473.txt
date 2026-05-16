@@ -1,4 +1,8 @@
+[ID]
+5473
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/contrib/gis/geoquerysets/
+[TEXT]
 GeoQuerySet API Reference 
 class GeoQuerySet(model=None) 
 Spatial Lookups 
@@ -1551,3 +1555,4 @@ Example:
 [1]See OpenGIS Simple Feature Specification For SQL, at Ch. 2.1.13.2, p. 2-13 (The Dimensionally Extended Nine-Intersection Model).
 [2]See SDO_RELATE documentation, from the Oracle Spatial and Graph Developer's Guide.
 [3](1, 2) For an explanation of this routine, read Quirks of the "Contains" Spatial Predicate by Martin Davis (a PostGIS developer).
+[VECTOR]

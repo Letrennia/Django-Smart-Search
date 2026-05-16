@@ -1,4 +1,8 @@
+[ID]
+2895
+[URL]
 https://docs.djangoproject.com/en/3.2/ref/contrib/gis/geos/
+[TEXT]
 GEOS API 
 Background 
 What is GEOS? 
@@ -1095,3 +1099,4 @@ other words you want to use libgeos_c.so, not libgeos.so.
 Exceptions 
 exception GEOSException 
 The base GEOS exception, indicates a GEOS-related error.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4556
+[URL]
 https://docs.djangoproject.com/en/2.0/_modules/django/db/migrations/operations/fields/
+[TEXT]
 Source code for django.db.migrations.operations.fields
 from django.core.exceptions import FieldDoesNotExist
 from django.db.models.fields import NOT_PROVIDED
@@ -591,3 +595,4 @@ class FieldOperation(Operation):
             super(FieldOperation, self).reduce(operation, in_between, app_label=app_label) or
             not operation.references_field(self.model_name, self.new_name, app_label)
         )
+[VECTOR]

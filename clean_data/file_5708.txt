@@ -1,4 +1,8 @@
+[ID]
+5708
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/auth/context_processors/
+[TEXT]
 Source code for django.contrib.auth.context_processors
 # PermWrapper and PermLookupDict proxy the permissions system into objects that
 # the template system can understand.
@@ -101,3 +105,4 @@ class PermWrapper(object):
         'user': user,
         'perms': PermWrapper(user),
     }
+[VECTOR]

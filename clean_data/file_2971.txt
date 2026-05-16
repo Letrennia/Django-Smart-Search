@@ -1,4 +1,8 @@
+[ID]
+2971
+[URL]
 https://docs.djangoproject.com/en/3.2/ref/urls/
+[TEXT]
 django.urls functions for use in URLconfs 
 path() 
 path(route, view, kwargs=None, name=None) 
@@ -211,3 +215,4 @@ have runtime errors in view code.
 By default, this is django.views.defaults.server_error(). If you
 implement a custom view, be sure it accepts a request argument and returns
 an HttpResponseServerError.
+[VECTOR]

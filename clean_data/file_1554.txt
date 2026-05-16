@@ -1,4 +1,8 @@
+[ID]
+1554
+[URL]
 https://docs.djangoproject.com/en/5.0/topics/pagination/
+[TEXT]
 Pagination 
 Django provides high-level and low-level ways to help you manage paginated data
 – that is, data that's split across several pages, with "Previous/Next" links.
@@ -65,3 +69,4 @@ Here's an example using Paginator in a view
 function to paginate a queryset:
 In the template list.html, you can include navigation between pages in
 the same way as in the template for the ListView above.
+[VECTOR]

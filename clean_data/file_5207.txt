@@ -1,4 +1,8 @@
+[ID]
+5207
+[URL]
 https://docs.djangoproject.com/en/1.8/topics/security/
+[TEXT]
 Security in Django 
 This document is an overview of Django's security features. It includes advice
 on securing a Django-powered site.
@@ -369,3 +373,4 @@ deploying a Django plugin or Web server module to throttle these requests.
 Keep your SECRET_KEY a secret.
 It is a good idea to limit the accessibility of your caching system and
 database using a firewall.
+[VECTOR]

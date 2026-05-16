@@ -1,4 +1,8 @@
+[ID]
+5178
+[URL]
 https://docs.djangoproject.com/en/1.8/topics/db/sql/
+[TEXT]
 Performing raw SQL queries 
 When the model query APIs don't go far enough, you
 can fall back to writing raw SQL. Django gives you two ways of performing raw
@@ -313,3 +317,4 @@ Django 1.7 explicitly added support to allow using a cursor as context
 manager.
 Using a cursor as a context manager:
 is equivalent to:
+[VECTOR]

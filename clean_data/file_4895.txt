@@ -1,4 +1,8 @@
+[ID]
+4895
+[URL]
 https://docs.djangoproject.com/en/1.8/intro/tutorial06/
+[TEXT]
 Writing your first Django app, part 6 
 This tutorial begins where Tutorial 5 left off.
 We've built a tested Web-poll application, and we'll now add a stylesheet and
@@ -175,3 +179,4 @@ want to check out some pointers on where to go from here.
 If you are familiar with Python packaging and interested in learning how to
 turn polls into a "reusable app", check out Advanced tutorial: How to
 write reusable apps.
+[VECTOR]

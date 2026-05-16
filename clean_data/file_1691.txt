@@ -1,4 +1,8 @@
+[ID]
+1691
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/messages/storage/fallback/
+[TEXT]
 Source code for django.contrib.messages.storage.fallback
 from django.contrib.messages.storage.base import BaseStorage
 from django.contrib.messages.storage.cookie import CookieStorage
@@ -99,3 +103,4 @@ class FallbackStorage(BaseStorage):
                 storage._store([], response)
                 self._used_storages.remove(storage)
         return messages
+[VECTOR]

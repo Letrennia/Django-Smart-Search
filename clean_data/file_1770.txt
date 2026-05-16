@@ -1,4 +1,8 @@
+[ID]
+1770
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/db/transaction/
+[TEXT]
 Source code for django.db.transaction
 from contextlib import ContextDecorator, contextmanager
 from django.db import (
@@ -579,3 +583,4 @@ def non_atomic_requests(using=None):
         if using is None:
             using = DEFAULT_DB_ALIAS
         return lambda view: _non_atomic_requests(view, using)
+[VECTOR]

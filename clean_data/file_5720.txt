@@ -1,4 +1,8 @@
+[ID]
+5720
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/gis/gdal/envelope/
+[TEXT]
 Source code for django.contrib.gis.gdal.envelope
 """
  The GDAL/OGR library uses an Envelope structure to hold the bounding
@@ -315,3 +319,4 @@ class OGREnvelope(Structure):
                (self.min_x, self.min_y, self.min_x, self.max_y,
                 self.max_x, self.max_y, self.max_x, self.min_y,
                 self.min_x, self.min_y)
+[VECTOR]

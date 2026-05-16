@@ -1,4 +1,8 @@
+[ID]
+3693
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/contrib/admin/
+[TEXT]
 Source code for django.contrib.admin
 # ACTION_CHECKBOX_NAME is unused, but should stay since its import from here
 # has been referenced in documentation.
@@ -49,3 +53,4 @@ __all__ = [
 [docs]def autodiscover():
     autodiscover_modules('admin', register_to=site)
 default_app_config = 'django.contrib.admin.apps.AdminConfig'
+[VECTOR]

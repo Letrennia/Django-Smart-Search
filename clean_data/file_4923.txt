@@ -1,4 +1,8 @@
+[ID]
+4923
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/contenttypes/forms/
+[TEXT]
 Source code for django.contrib.contenttypes.forms
 from __future__ import unicode_literals
 from django.contrib.contenttypes.models import ContentType
@@ -161,3 +165,4 @@ from django.forms.models import BaseModelFormSet
     FormSet.ct_fk_field = fk_field
     FormSet.for_concrete_model = for_concrete_model
     return FormSet
+[VECTOR]

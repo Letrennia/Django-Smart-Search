@@ -1,4 +1,8 @@
+[ID]
+2837
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/utils/cache/
+[TEXT]
 Source code for django.utils.cache
 """
 This module contains helper functions for controlling caching. It does so by
@@ -701,3 +705,4 @@ def _to_tuple(s):
     if len(t) == 2:
         return t[0].lower(), t[1]
     return t[0].lower(), True
+[VECTOR]

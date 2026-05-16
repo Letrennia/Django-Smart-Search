@@ -1,4 +1,8 @@
+[ID]
+736
+[URL]
 https://docs.djangoproject.com/en/5.2/ref/models/constraints/
+[TEXT]
 Constraints reference 
 The classes defined in this module create database constraints. They are added
 in the model Meta.constraints
@@ -317,3 +321,4 @@ Changed in Django 5.2: In older versions, the provided
 UniqueConstraint.violation_error_message was not used when
 UniqueConstraint.fields was set without a
 UniqueConstraint.condition.
+[VECTOR]

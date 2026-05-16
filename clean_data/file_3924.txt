@@ -1,4 +1,8 @@
+[ID]
+3924
+[URL]
 https://docs.djangoproject.com/en/2.2/ref/models/conditional-expressions/
+[TEXT]
 Conditional Expressions 
 Conditional expressions let you use if … elif …
 else logic within filters, annotations, aggregations, and updates. A
@@ -141,3 +145,4 @@ SELECT count(CASE WHEN account_type=1 THEN id ELSE null) as regular,
 FROM clients;
 The two SQL statements are functionally equivalent but the more explicit
 FILTER may perform better.
+[VECTOR]

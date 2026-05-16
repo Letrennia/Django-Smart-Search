@@ -1,4 +1,8 @@
+[ID]
+4998
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/middleware/http/
+[TEXT]
 Source code for django.middleware.http
 from django.utils.http import http_date, parse_http_date_safe
 [docs]class ConditionalGetMiddleware(object):
@@ -71,3 +75,4 @@ from django.utils.http import http_date, parse_http_date_safe
                     # above).
                     response.status_code = 304
         return response
+[VECTOR]

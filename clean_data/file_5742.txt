@@ -1,4 +1,8 @@
+[ID]
+5742
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/postgres/forms/hstore/
+[TEXT]
 Source code for django.contrib.postgres.forms.hstore
 import json
 from django import forms
@@ -97,3 +101,4 @@ __all__ = ['HStoreField']
         # is None, replace it w/ {}.
         initial_value = self.to_python(initial)
         return super(HStoreField, self).has_changed(initial_value, data)
+[VECTOR]

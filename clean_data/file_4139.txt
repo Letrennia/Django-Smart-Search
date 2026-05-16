@@ -1,4 +1,8 @@
+[ID]
+4139
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/core/exceptions/
+[TEXT]
 Source code for django.core.exceptions
 """
 Global Django exception and warning classes.
@@ -269,3 +273,4 @@ NON_FIELD_ERRORS = '__all__'
 [docs]class EmptyResultSet(Exception):
     """A database query predicate is impossible."""
     pass
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+992
+[URL]
 https://docs.djangoproject.com/en/5.1/ref/files/storage/
+[TEXT]
 File storage API 
 Getting the default storage class 
 Django provides convenient ways to access the default storage class:
@@ -321,3 +325,4 @@ url(name)[source]
 Returns the URL where the contents of the file referenced by name
 can be accessed. For storage systems that don't support access by URL
 this will raise NotImplementedError instead.
+[VECTOR]

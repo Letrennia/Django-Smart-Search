@@ -1,4 +1,8 @@
+[ID]
+3042
+[URL]
 https://docs.djangoproject.com/en/3.2/topics/testing/tools/
+[TEXT]
 Testing tools 
 Django provides a small set of tools that come in handy when writing tests.
 The test client 
@@ -2065,3 +2069,4 @@ are not supported.
 For example, the following test will only be executed if the database
 supports transactions (e.g., it would run under PostgreSQL, but not
 under MySQL with MyISAM tables):
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5396
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/template/engine/
+[TEXT]
 Source code for django.template.engine
 from django.core.exceptions import ImproperlyConfigured
 from django.utils import lru_cache, six
@@ -357,3 +361,4 @@ from .library import import_library
                 continue
         # If we get here, none of the templates could be loaded
         raise TemplateDoesNotExist(', '.join(not_found))
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5170
+[URL]
 https://docs.djangoproject.com/en/1.8/topics/db/examples/many_to_many/
+[TEXT]
 Many-to-many relationships 
 To define a many-to-many relationship, use ManyToManyField.
 In this example, an Article can be published in multiple Publication
@@ -93,3 +97,4 @@ referenced objects should be gone:
 An alternate to calling
 clear() is to assign the
 empty set:
+[VECTOR]

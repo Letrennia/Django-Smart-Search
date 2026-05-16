@@ -1,4 +1,8 @@
+[ID]
+1764
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/db/models/indexes/
+[TEXT]
 Source code for django.db.models.indexes
 from types import NoneType
 from django.core import checks
@@ -737,3 +741,4 @@ class IndexExpression(Func):
     def as_sqlite(self, compiler, connection, **extra_context):
         # Casting to numeric is unnecessary.
         return self.as_sql(compiler, connection, **extra_context)
+[VECTOR]

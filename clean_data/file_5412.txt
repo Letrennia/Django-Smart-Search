@@ -1,4 +1,8 @@
+[ID]
+5412
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/utils/decorators/
+[TEXT]
 Source code for django.utils.decorators
 "Functions that help with dynamically creating decorators for views."
 try:
@@ -339,3 +343,4 @@ class classproperty(object):
     def getter(self, method):
         self.fget = method
         return self
+[VECTOR]

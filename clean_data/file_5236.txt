@@ -1,4 +1,8 @@
+[ID]
+5236
+[URL]
 https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
+[TEXT]
 Deployment checklist 
 The Internet is a hostile environment. Before deploying your Django project,
 you should take some time to review your settings, with security, performance,
@@ -307,3 +311,4 @@ These options help protect your site from denial-of-service (DoS)
 attacks triggered by carefully crafted inputs. Such an attack can
 drastically increase CPU usage by causing worst-case performance when
 creating dict instances. See oCERT advisory #2011-003 for more information.
+[VECTOR]

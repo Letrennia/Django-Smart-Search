@@ -1,4 +1,8 @@
+[ID]
+6017
+[URL]
 https://docs.djangoproject.com/en/1.10/topics/logging/
+[TEXT]
 Logging 
 A quick logging primer 
 Django uses Python's builtin logging module to perform system logging.
@@ -733,3 +737,4 @@ level or higher to the console.
 Changed in Django 1.9: Django's default logging configuration changed. See the release notes for a description of the changes.
 See also Configuring logging to learn how you can
 complement or replace this default logging configuration.
+[VECTOR]

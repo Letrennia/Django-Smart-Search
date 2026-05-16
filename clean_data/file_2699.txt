@@ -1,4 +1,8 @@
+[ID]
+2699
+[URL]
 https://docs.djangoproject.com/en/3.2/internals/release-process/
+[TEXT]
 Django's release process 
 Official releases 
 Since version 1.0, Django's release numbering works as follows:
@@ -305,3 +309,4 @@ include bugfixes. Critical bugs fixed on main must also be fixed on the
 bugfix branch; this means that commits need to cleanly separate bug fixes from
 feature additions. The developer who commits a fix to main will be
 responsible for also applying the fix to the current bugfix branch.
+[VECTOR]

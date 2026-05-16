@@ -1,4 +1,8 @@
+[ID]
+5433
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/views/static/
+[TEXT]
 Source code for django.views.static
 """
 Views and functions for serving static files. These are only to be used
@@ -247,3 +251,4 @@ def was_modified_since(header=None, mtime=0, size=0):
     except (AttributeError, ValueError, OverflowError):
         return True
     return False
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+1680
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/contenttypes/models/
+[TEXT]
 Source code for django.contrib.contenttypes.models
 from collections import defaultdict
 from django.apps import apps
@@ -349,3 +353,4 @@ class ContentType(models.Model):
         return self.model_class()._base_manager.filter(**kwargs)
     def natural_key(self):
         return (self.app_label, self.model)
+[VECTOR]

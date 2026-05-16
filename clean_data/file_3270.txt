@@ -1,4 +1,8 @@
+[ID]
+3270
+[URL]
 https://docs.djangoproject.com/en/3.1/topics/db/examples/
+[TEXT]
 Examples of model relationship API usage 
 Many-to-many relationships
 Many-to-one relationships
@@ -7,3 +11,4 @@ Examples of model relationship API usage
 Many-to-many relationships
 Many-to-one relationships
 One-to-one relationships
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+2026
+[URL]
 https://docs.djangoproject.com/en/4.2/topics/signals/
+[TEXT]
 Signals 
 Django includes a "signal dispatcher" which helps decoupled applications get
 notified when actions occur elsewhere in the framework. In a nutshell, signals
@@ -297,3 +301,4 @@ is passed as a lazy reference to <app label>.<model>, this method always
 returns None.
 The receiver argument indicates the registered receiver to disconnect. It
 may be None if dispatch_uid is used to identify the receiver.
+[VECTOR]

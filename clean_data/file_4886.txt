@@ -1,4 +1,8 @@
+[ID]
+4886
+[URL]
 https://docs.djangoproject.com/en/1.8/intro/contributing/
+[TEXT]
 Writing your first patch for Django 
 Introduction 
 Interested in giving back to the community a little? Maybe you've found a bug
@@ -711,3 +715,4 @@ ticket metadata by setting the flags on the ticket to say "has patch",
 doesn't necessarily always mean writing a patch from scratch. Reviewing
 existing patches is also a very helpful contribution. See
 Triaging tickets for details.
+[VECTOR]

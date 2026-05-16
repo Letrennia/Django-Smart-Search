@@ -1,4 +1,8 @@
+[ID]
+3102
+[URL]
 https://docs.djangoproject.com/en/3.1/internals/mailing-lists/
+[TEXT]
 Mailing lists 
 Important
 Please report security issues only to
@@ -93,3 +97,4 @@ by developers and interested community members.
 django-updates mailing archive
 django-updates subscription email address
 django-updates posting email
+[VECTOR]

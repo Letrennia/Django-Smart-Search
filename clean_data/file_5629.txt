@@ -1,4 +1,8 @@
+[ID]
+5629
+[URL]
 https://docs.djangoproject.com/en/1.10/glossary/
+[TEXT]
 Glossary 
 concrete model
 A non-abstract (abstract=False) model.
@@ -93,3 +97,4 @@ itself.
 See Templates.
 view
 A function responsible for rendering a page.
+[VECTOR]

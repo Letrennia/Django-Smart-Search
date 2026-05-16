@@ -1,4 +1,8 @@
+[ID]
+1676
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/auth/views/
+[TEXT]
 Source code for django.contrib.auth.views
 from urllib.parse import urlsplit, urlunsplit
 from django.conf import settings
@@ -643,3 +647,4 @@ class PasswordChangeView(PasswordContextMixin, FormView):
 class PasswordChangeDoneView(PasswordContextMixin, TemplateView):
     template_name = "registration/password_change_done.html"
     title = _("Password change successful")
+[VECTOR]

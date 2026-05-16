@@ -1,4 +1,8 @@
+[ID]
+465
+[URL]
 https://docs.djangoproject.com/en/6.0/ref/models/instances/
+[TEXT]
 Model instance reference 
 This document describes the details of the Model API. It builds on the
 material presented in the model and database
@@ -933,3 +937,4 @@ New in Django 5.2.
 The _is_pk_set() method returns whether the model instance's pk is set.
 It abstracts the model's primary key definition, ensuring consistent behavior
 regardless of the specific pk configuration.
+[VECTOR]

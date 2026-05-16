@@ -1,4 +1,8 @@
+[ID]
+1364
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/views/decorators/cache/
+[TEXT]
 Source code for django.views.decorators.cache
 from functools import wraps
 from asgiref.sync import iscoroutinefunction
@@ -129,3 +133,4 @@ def never_cache(view_func):
             add_never_cache_headers(response)
             return response
     return wraps(view_func)(_view_wrapper)
+[VECTOR]

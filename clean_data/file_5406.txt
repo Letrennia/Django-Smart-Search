@@ -1,4 +1,8 @@
+[ID]
+5406
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/urls/base/
+[TEXT]
 Source code for django.urls.base
 from __future__ import unicode_literals
 from threading import local
@@ -301,3 +305,4 @@ def translate_url(url, lang_code):
             else:
                 url = urlunsplit((parsed.scheme, parsed.netloc, url, parsed.query, parsed.fragment))
     return url
+[VECTOR]

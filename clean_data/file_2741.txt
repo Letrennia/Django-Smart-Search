@@ -1,4 +1,8 @@
+[ID]
+2741
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/contrib/postgres/constraints/
+[TEXT]
 Source code for django.contrib.postgres.constraints
 from django.db import NotSupportedError
 from django.db.backends.ddl_references import Statement, Table
@@ -307,3 +311,4 @@ __all__ = ['ExclusionConstraint']
             '' if not self.include else ', include=%s' % repr(self.include),
             '' if not self.opclasses else ', opclasses=%s' % repr(self.opclasses),
         )
+[VECTOR]

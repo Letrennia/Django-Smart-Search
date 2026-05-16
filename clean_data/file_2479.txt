@@ -1,4 +1,8 @@
+[ID]
+2479
+[URL]
 https://docs.djangoproject.com/en/4.0/ref/contrib/gis/commands/
+[TEXT]
 GeoDjango Management Commands 
 inspectdb 
 django-admin inspectdb
@@ -103,3 +107,4 @@ all applicable fields.
 --srid SRID 
 The SRID to use for the geometry field.  If not set, ogrinspect attempts
 to automatically determine of the SRID of the data source.
+[VECTOR]

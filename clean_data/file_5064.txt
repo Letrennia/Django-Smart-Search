@@ -1,4 +1,8 @@
+[ID]
+5064
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/contrib/auth/
+[TEXT]
 django.contrib.auth 
 This document provides API reference material for the components of Django's
 authentication system. For more details on the usage of these components or
@@ -663,3 +667,4 @@ Configures a newly created user.  This method is called immediately after a
 new user is created, and can be used to perform custom setup actions, such
 as setting the user's groups based on attributes in an LDAP directory.
 Returns the user object.
+[VECTOR]

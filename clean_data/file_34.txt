@@ -1,4 +1,8 @@
+[ID]
+34
+[URL]
 https://docs.djangoproject.com/en/dev/howto/deployment/wsgi/gunicorn/
+[TEXT]
 How to use Django with Gunicorn 
 Gunicorn ('Green Unicorn') is a pure-Python WSGI server for UNIX. It has no
 dependencies and can be installed using pip.
@@ -31,3 +35,4 @@ This will start one process running one thread listening on 127.0.0.1:8000.
 It requires that your project be on the Python path; the simplest way to ensure
 that is to run this command from the same directory as your manage.py file.
 See Gunicorn's deployment documentation for additional tips.
+[VECTOR]

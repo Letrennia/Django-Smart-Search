@@ -1,4 +1,8 @@
+[ID]
+4852
+[URL]
 https://docs.djangoproject.com/en/1.8/howto/initial-data/
+[TEXT]
 Providing initial data for models 
 It's sometimes useful to pre-populate your database with hard-coded data when
 you're first setting up an app. There's a couple of ways you can have Django
@@ -241,3 +245,4 @@ data. For example, if your app contains the files sql/person.sql
 and sql/person.sqlite3.sql and you're installing the app on
 SQLite, Django will execute the contents of
 sql/person.sqlite3.sql first, then sql/person.sql.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+4464
+[URL]
 https://docs.djangoproject.com/en/2.0/internals/contributing/localizing/
+[TEXT]
 Localizing Django 
 Various parts of Django, such as the admin site and validation error messages,
 are internationalized. This means they display differently depending on each
@@ -107,3 +111,4 @@ huge undertaking to complete entirely (you have been warned!). We use the same
 Transifex tool. The
 translations will appear at https://docs.djangoproject.com/<language_code>/
 when at least the docs/intro/* files are fully translated in your language.
+[VECTOR]

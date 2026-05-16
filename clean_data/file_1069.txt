@@ -1,4 +1,8 @@
+[ID]
+1069
+[URL]
 https://docs.djangoproject.com/en/5.1/topics/email/
+[TEXT]
 Sending email 
 Although Python provides a mail sending interface via the smtplib
 module, Django provides a couple of light wrappers over it. These wrappers are
@@ -743,3 +747,4 @@ EMAIL_PORT accordingly. For a more detailed discussion of SMTP
 server options, see the documentation of the aiosmtpd module.
 For information about unit-testing the sending of emails in your application,
 see the Email services section of the testing documentation.
+[VECTOR]

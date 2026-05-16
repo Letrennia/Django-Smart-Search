@@ -1,4 +1,8 @@
+[ID]
+1349
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/utils/datastructures/
+[TEXT]
 Source code for django.utils.datastructures
 import copy
 from collections.abc import Mapping
@@ -563,3 +567,4 @@ class CaseInsensitiveMapping(Mapping):
                     "Element key %r invalid, only strings are allowed" % elem[0]
                 )
             yield elem
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5093
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/contrib/messages/
+[TEXT]
 The messages framework 
 Quite commonly in web applications, you need to display a one-time
 notification message (also known as "flash message") to the user after
@@ -461,3 +465,4 @@ the session cookie settings:
 SESSION_COOKIE_DOMAIN
 SESSION_COOKIE_SECURE
 SESSION_COOKIE_HTTPONLY
+[VECTOR]

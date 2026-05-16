@@ -1,4 +1,8 @@
+[ID]
+5006
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/template/context_processors/
+[TEXT]
 Source code for django.template.context_processors
 """
 A set of request processors that return dictionaries to be merged into a
@@ -127,3 +131,4 @@ def media(request):
     return {'MEDIA_URL': settings.MEDIA_URL}
 def request(request):
     return {'request': request}
+[VECTOR]

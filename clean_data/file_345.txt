@@ -1,4 +1,8 @@
+[ID]
+345
+[URL]
 https://docs.djangoproject.com/en/6.0/internals/howto-release-django/
+[TEXT]
 How to release Django 
 This document explains how to release Django.
 Please, keep these instructions up-to-date if you make changes! The point
@@ -875,3 +879,4 @@ Some examples:
 (4, 1, 1, "final", 0) → "4.1.1"
 (4, 2, 0, "alpha", 0) → "4.2 pre-alpha"
 (4, 2, 0, "beta", 1) → "4.2 beta 1"
+[VECTOR]

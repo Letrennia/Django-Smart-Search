@@ -1,4 +1,8 @@
+[ID]
+4916
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/auth/forms/
+[TEXT]
 Source code for django.contrib.auth.forms
 from __future__ import unicode_literals
 from collections import OrderedDict
@@ -627,3 +631,4 @@ PasswordChangeForm.base_fields = OrderedDict(
                 return []
         return ['password']
     changed_data = property(_get_changed_data)
+[VECTOR]

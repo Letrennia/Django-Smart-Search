@@ -1,4 +1,8 @@
+[ID]
+1705
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/postgres/indexes/
+[TEXT]
 Source code for django.contrib.postgres.indexes
 from django.db.models import Func, Index
 from django.utils.functional import cached_property
@@ -415,3 +419,4 @@ class OpClass(Func):
     constraint_validation_compatible = False
     def __init__(self, expression, name):
         super().__init__(expression, name=name)
+[VECTOR]

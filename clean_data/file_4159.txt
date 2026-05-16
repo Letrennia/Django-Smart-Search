@@ -1,4 +1,8 @@
+[ID]
+4159
+[URL]
 https://docs.djangoproject.com/en/2.1/_modules/django/db/models/fields/
+[TEXT]
 Source code for django.db.models.fields
 import collections.abc
 import copy
@@ -4031,3 +4035,4 @@ class PositiveIntegerRelDbTypeMixin:
             'form_class': forms.UUIDField,
             **kwargs,
         })
+[VECTOR]

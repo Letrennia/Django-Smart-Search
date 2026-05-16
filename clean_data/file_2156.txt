@@ -1,4 +1,8 @@
+[ID]
+2156
+[URL]
 https://docs.djangoproject.com/en/4.1/ref/class-based-views/generic-date-based/
+[TEXT]
 Generic date views 
 Date-based generic views, provided in django.views.generic.dates, are
 views for displaying drilldown pages for date-based data.
@@ -560,4 +564,5 @@ class BaseMonthArchiveView
 class BaseWeekArchiveView 
 class BaseDayArchiveView 
 class BaseTodayArchiveView 
-class BaseDateDetailView 
+class BaseDateDetailView
+[VECTOR]

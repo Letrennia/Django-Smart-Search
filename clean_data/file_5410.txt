@@ -1,4 +1,8 @@
+[ID]
+5410
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/utils/datastructures/
+[TEXT]
 Source code for django.utils.datastructures
 import copy
 from collections import OrderedDict
@@ -537,3 +541,4 @@ class DictWrapper(dict):
         if use_func:
             return self.func(value)
         return value
+[VECTOR]

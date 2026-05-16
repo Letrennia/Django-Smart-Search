@@ -1,4 +1,8 @@
+[ID]
+1784
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/middleware/clickjacking/
+[TEXT]
 Source code for django.middleware.clickjacking
 """
 Clickjacking Protection Middleware.
@@ -77,3 +81,4 @@ class XFrameOptionsMiddleware(MiddlewareMixin):
         the request or response.
         """
         return getattr(settings, "X_FRAME_OPTIONS", "DENY").upper()
+[VECTOR]

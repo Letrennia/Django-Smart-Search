@@ -1,4 +1,8 @@
+[ID]
+2263
+[URL]
 https://docs.djangoproject.com/en/4.1/ref/urlresolvers/
+[TEXT]
 django.urls utility functions 
 reverse() 
 If you need to use something similar to the url template tag in
@@ -229,3 +233,4 @@ its web server (normally, reverse() takes care of this for
 you). In that case, you can call get_script_prefix(), which will return
 the script prefix portion of the URL for your Django project. If your Django
 project is at the root of its web server, this is always "/".
+[VECTOR]

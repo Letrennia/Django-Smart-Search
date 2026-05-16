@@ -1,4 +1,8 @@
+[ID]
+1197
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/admin/models/
+[TEXT]
 Source code for django.contrib.admin.models
 import json
 import warnings
@@ -439,3 +443,4 @@ class LogEntry(models.Model):
             except NoReverseMatch:
                 pass
         return None
+[VECTOR]

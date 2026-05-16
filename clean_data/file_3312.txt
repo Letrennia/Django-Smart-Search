@@ -1,4 +1,8 @@
+[ID]
+3312
+[URL]
 https://docs.djangoproject.com/en/3.1/topics/signals/
+[TEXT]
 Signals 
 Django includes a "signal dispatcher" which helps allow decoupled applications
 get notified when actions occur elsewhere in the framework. In a nutshell,
@@ -303,3 +307,4 @@ arguments are as described in Signal.connect(). The method returns
 True if a receiver was disconnected and False if not.
 The receiver argument indicates the registered receiver to disconnect. It
 may be None if dispatch_uid is used to identify the receiver.
+[VECTOR]

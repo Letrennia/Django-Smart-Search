@@ -1,4 +1,8 @@
+[ID]
+2042
+[URL]
 https://docs.djangoproject.com/en/4.1/faq/usage/
+[TEXT]
 FAQ: Using Django 
 Why do I get an error about importing DJANGO_SETTINGS_MODULE? 
 Make sure that:
@@ -87,3 +91,4 @@ dynamically generated menus. At first glance, it seems logical to add a common
 dictionary to the template context.
 The best way to do this in Django is to use a RequestContext. Details on
 how to do this are here: Using RequestContext.
+[VECTOR]

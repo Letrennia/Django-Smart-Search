@@ -1,4 +1,8 @@
+[ID]
+751
+[URL]
 https://docs.djangoproject.com/en/5.2/ref/signals/
+[TEXT]
 Signals 
 A list of all the signals that Django sends. All built-in signals are sent
 using the send() method.
@@ -707,3 +711,4 @@ django.db.backends.mysql.DatabaseWrapper, etc.
 connectionThe database connection that was opened. This can be used in a
 multiple-database configuration to differentiate connection signals
 from different databases.
+[VECTOR]

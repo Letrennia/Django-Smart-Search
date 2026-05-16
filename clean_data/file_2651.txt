@@ -1,4 +1,8 @@
+[ID]
+2651
+[URL]
 https://docs.djangoproject.com/en/3.2/howto/custom-file-storage/
+[TEXT]
 Writing a custom storage system 
 If you need to provide custom file storage – a common example is storing files
 on some remote system – you can do so by defining a custom storage class.
@@ -141,3 +145,4 @@ The length of the filename will not exceed max_length, if provided. If a
 free unique filename cannot be found, a SuspiciousFileOperation exception is raised.
 If a file with name already exists, get_alternative_name() is called to
 obtain an alternative name.
+[VECTOR]

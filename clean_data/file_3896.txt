@@ -1,4 +1,8 @@
+[ID]
+3896
+[URL]
 https://docs.djangoproject.com/en/2.2/ref/contrib/postgres/operations/
+[TEXT]
 Database migration operations 
 All of these operations are available from
 the django.contrib.postgres.operations module.
@@ -85,3 +89,4 @@ Installs the pg_trgm extension.
 UnaccentExtension 
 class UnaccentExtension[source] 
 Installs the unaccent extension.
+[VECTOR]

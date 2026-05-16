@@ -1,4 +1,8 @@
+[ID]
+4987
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/forms/forms/
+[TEXT]
 Source code for django.forms.forms
 """
 Form classes
@@ -1253,3 +1257,4 @@ class BoundField(object):
         widget = self.field.widget
         id_ = widget.attrs.get('id') or self.auto_id
         return widget.id_for_label(id_)
+[VECTOR]

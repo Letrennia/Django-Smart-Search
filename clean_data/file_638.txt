@@ -1,4 +1,8 @@
+[ID]
+638
+[URL]
 https://docs.djangoproject.com/en/5.2/intro/tutorial07/
+[TEXT]
 Writing your first Django app, part 7 
 This tutorial begins where Tutorial 6 left off. We're
 continuing the web-poll application and will focus on customizing Django's
@@ -373,3 +377,4 @@ installed Django app. Instead of using that, you can hard-code links to
 object-specific admin pages in whatever way you think is best.
 When you're comfortable with the admin, read part 8 of this
 tutorial to learn how to use third-party packages.
+[VECTOR]

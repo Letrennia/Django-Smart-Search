@@ -1,4 +1,8 @@
+[ID]
+5290
+[URL]
 https://docs.djangoproject.com/en/1.11/misc/api-stability/
+[TEXT]
 API stability 
 Django promises API stability and forwards-compatibility since version 1.0. In
 a nutshell, this means that code you develop against a version of Django will
@@ -81,3 +85,4 @@ change it.
 Functions, methods, and other objects prefixed by a leading underscore
 (_). This is the standard Python way of indicating that something is
 private; if any method starts with a single _, it's an internal API.
+[VECTOR]

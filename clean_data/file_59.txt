@@ -1,4 +1,8 @@
+[ID]
+59
+[URL]
 https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/
+[TEXT]
 Coding style 
 Please follow these coding standards when writing code for inclusion in Django.
 Pre-commit checks 
@@ -383,3 +387,4 @@ single trivial change.
 JavaScript style 
 For details about the JavaScript code style used by Django, see
 JavaScript code.
+[VECTOR]

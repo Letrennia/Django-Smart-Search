@@ -1,4 +1,8 @@
+[ID]
+391
+[URL]
 https://docs.djangoproject.com/en/6.0/ref/contrib/contenttypes/
+[TEXT]
 The contenttypes framework 
 Django includes a contenttypes application that can
 track all of the models installed in your Django-powered project, providing a
@@ -671,3 +675,4 @@ This lookup is similar to Prefetch() and it should only be used on
 GenericForeignKey. The querysets argument accepts a list of querysets,
 each for a different ContentType. This is useful for GenericForeignKey
 with non-homogeneous set of results.
+[VECTOR]

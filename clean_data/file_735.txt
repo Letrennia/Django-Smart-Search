@@ -1,4 +1,8 @@
+[ID]
+735
+[URL]
 https://docs.djangoproject.com/en/5.2/ref/models/conditional-expressions/
+[TEXT]
 Conditional Expressions 
 Conditional expressions let you use if … elif …
 else logic within filters, annotations, aggregations, and updates. A
@@ -169,3 +173,4 @@ WHERE NOT EXISTS (
   FROM client c1
   WHERE c1.account_type = c0.account_type AND NOT c1.id = c0.id
 )
+[VECTOR]

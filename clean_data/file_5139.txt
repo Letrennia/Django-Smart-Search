@@ -1,4 +1,8 @@
+[ID]
+5139
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/template-response/
+[TEXT]
 TemplateResponse and SimpleTemplateResponse 
 Standard HttpResponse objects are static structures.
 They are provided with a block of pre-rendered content at time of
@@ -387,3 +391,4 @@ alternative to calling render() or
 render_to_response().
 For example, the following simple view returns a TemplateResponse
 with a simple template and a context containing a queryset:
+[VECTOR]

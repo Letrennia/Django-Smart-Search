@@ -1,4 +1,8 @@
+[ID]
+4912
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/auth/
+[TEXT]
 Source code for django.contrib.auth
 import inspect
 import re
@@ -345,3 +349,4 @@ def update_session_auth_hash(request, user):
     if hasattr(user, 'get_session_auth_hash') and request.user == user:
         request.session[HASH_SESSION_KEY] = user.get_session_auth_hash()
 default_app_config = 'django.contrib.auth.apps.AuthConfig'
+[VECTOR]

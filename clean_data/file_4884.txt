@@ -1,4 +1,8 @@
+[ID]
+4884
+[URL]
 https://docs.djangoproject.com/en/1.8/internals/team/
+[TEXT]
 Django Software Foundation
 Teams
     
@@ -295,3 +299,4 @@ Sarah Abderemane
 Storm Heg
 Tobias McNulty
 Ülgen Sarıkavak
+[VECTOR]

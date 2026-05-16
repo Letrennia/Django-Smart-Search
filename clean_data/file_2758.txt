@@ -1,4 +1,8 @@
+[ID]
+2758
+[URL]
 https://docs.djangoproject.com/en/3.2/_modules/django/contrib/sitemaps/
+[TEXT]
 Source code for django.contrib.sitemaps
 from urllib.parse import urlencode
 from urllib.request import urlopen
@@ -351,3 +355,4 @@ def _get_sitemap_full_url(sitemap_url, sitemap_uses_https=True):
         if self.date_field is not None:
             return getattr(item, self.date_field)
         return None
+[VECTOR]

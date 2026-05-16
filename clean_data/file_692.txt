@@ -1,4 +1,8 @@
+[ID]
+692
+[URL]
 https://docs.djangoproject.com/en/5.2/ref/contrib/gis/testing/
+[TEXT]
 Testing GeoDjango apps 
 Included in this documentation are some additional notes and settings
 for PostGIS users.
@@ -109,3 +113,4 @@ be performed when executing the command:
 $ ./runtests.py --settings=postgis
 To run only the GeoDjango test suite, specify gis_tests:
 $ ./runtests.py --settings=postgis gis_tests
+[VECTOR]

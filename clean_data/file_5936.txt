@@ -1,4 +1,8 @@
+[ID]
+5936
+[URL]
 https://docs.djangoproject.com/en/1.10/ref/migration-operations/
+[TEXT]
 Migration Operations 
 Migration files are composed of one or more Operations, objects that
 declaratively record what the migration should do to your database.
@@ -513,3 +517,4 @@ ModelState.managers.
 As a simple example, let's make an operation that loads PostgreSQL extensions
 (which contain some of PostgreSQL's more exciting features). It's simple enough;
 there's no model state changes, and all it does is run one command:
+[VECTOR]

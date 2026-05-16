@@ -1,4 +1,8 @@
+[ID]
+2552
+[URL]
 https://docs.djangoproject.com/en/4.0/ref/models/querysets/
+[TEXT]
 QuerySet API reference 
 This document describes the details of the QuerySet API. It builds on the
 material presented in the model and database
@@ -3853,3 +3857,4 @@ QuerySet.only() and prefetch_related().
 A GenericForeignKey
 inherited from a parent model.
 Changed in Django 3.2: Support for nested relations was added.
+[VECTOR]

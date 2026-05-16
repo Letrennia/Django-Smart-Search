@@ -1,4 +1,8 @@
+[ID]
+4779
+[URL]
 https://docs.djangoproject.com/en/2.0/topics/db/examples/one_to_one/
+[TEXT]
 One-to-one relationships 
 To define a one-to-one relationship, use
 OneToOneField.
@@ -53,3 +57,4 @@ You can query the models using lookups across relationships:
 This of course works in reverse:
 Add a Waiter to the Restaurant:
 Query the waiters:
+[VECTOR]

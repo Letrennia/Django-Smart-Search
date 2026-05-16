@@ -1,4 +1,8 @@
+[ID]
+5663
+[URL]
 https://docs.djangoproject.com/en/1.10/internals/contributing/writing-code/
+[TEXT]
 Writing code 
 So you'd like to write some code to improve Django. Awesome! Browse the
 following sections to find out how to give your code patches the best
@@ -17,3 +21,4 @@ Unit tests
 Submitting patches
 Working with Git and GitHub
 JavaScript
+[VECTOR]

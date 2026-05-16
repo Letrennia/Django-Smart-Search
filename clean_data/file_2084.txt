@@ -1,4 +1,8 @@
+[ID]
+2084
+[URL]
 https://docs.djangoproject.com/en/4.1/internals/contributing/writing-code/
+[TEXT]
 Writing code 
 So you'd like to write some code to improve Django? Awesome! There are several
 ways you can help Django's development:
@@ -47,3 +51,4 @@ Unit tests
 Submitting patches
 Working with Git and GitHub
 JavaScript
+[VECTOR]

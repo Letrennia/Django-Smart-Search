@@ -1,4 +1,8 @@
+[ID]
+5103
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/contrib/staticfiles/
+[TEXT]
 The staticfiles app 
 django.contrib.staticfiles collects static files from each of your
 applications (and any other places you specify) into a single location that
@@ -557,3 +561,4 @@ staticfiles finders. This means you don't need to run
 collectstatic before or as a part of your tests setup.
 New in Django 1.7: StaticLiveServerTestCase is new in Django 1.7. Previously its
 functionality was provided by django.test.LiveServerTestCase.
+[VECTOR]

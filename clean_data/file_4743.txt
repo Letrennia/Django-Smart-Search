@@ -1,4 +1,8 @@
+[ID]
+4743
+[URL]
 https://docs.djangoproject.com/en/2.0/ref/request-response/
+[TEXT]
 Request and response objects 
 Quick overview 
 Django uses request and response objects to pass state through the system.
@@ -1177,3 +1181,4 @@ for binary files. It uses wsgi.file_wrapper if provided by the wsgi server,
 otherwise it streams the file out in small chunks.
 FileResponse expects a file open in binary mode like so:
 The file will be closed automatically, so don't open it with a context manager.
+[VECTOR]

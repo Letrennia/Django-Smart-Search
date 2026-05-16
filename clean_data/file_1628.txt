@@ -1,4 +1,8 @@
+[ID]
+1628
+[URL]
 https://docs.djangoproject.com/en/4.2/internals/mailing-lists/
+[TEXT]
 Mailing lists and Forum 
 Important
 Please report security issues only to
@@ -105,3 +109,4 @@ by developers and interested community members.
 django-updates mailing archive
 django-updates subscription email address
 django-updates posting email
+[VECTOR]

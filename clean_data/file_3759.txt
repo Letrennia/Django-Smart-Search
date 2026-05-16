@@ -1,4 +1,8 @@
+[ID]
+3759
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/db/models/functions/text/
+[TEXT]
 Source code for django.db.models.functions.text
 from django.db.models.expressions import Func, Value
 from django.db.models.fields import IntegerField
@@ -403,3 +407,4 @@ class ConcatPair(Func):
 [docs]class Upper(Transform):
     function = 'UPPER'
     lookup_name = 'upper'
+[VECTOR]

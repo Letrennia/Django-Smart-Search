@@ -1,4 +1,8 @@
+[ID]
+5800
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/middleware/common/
+[TEXT]
 Source code for django.middleware.common
 import logging
 import re
@@ -313,3 +317,4 @@ logger = logging.getLogger('django.request')
         if parsed_referer.netloc in ['', domain] and parsed_referer.path == uri:
             return True
         return any(pattern.search(uri) for pattern in settings.IGNORABLE_404_URLS)
+[VECTOR]

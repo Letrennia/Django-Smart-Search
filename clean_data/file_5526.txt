@@ -1,4 +1,8 @@
+[ID]
+5526
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/models/database-functions/
+[TEXT]
 Database Functions 
 The classes documented below provide a way for users to use functions provided
 by the underlying database as annotations, aggregations, or filters in Django.
@@ -527,3 +531,4 @@ These are logically equivalent to Trunc('datetime_field', kind). They
 truncate all parts of the date up to kind and allow grouping or filtering
 datetimes with less precision. expression must have an output_field of
 DateTimeField.
+[VECTOR]

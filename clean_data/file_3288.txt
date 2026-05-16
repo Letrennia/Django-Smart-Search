@@ -1,4 +1,8 @@
+[ID]
+3288
+[URL]
 https://docs.djangoproject.com/en/3.1/topics/forms/formsets/
+[TEXT]
 Formsets 
 class BaseFormSet 
 A formset is a layer of abstraction to work with multiple forms on the same
@@ -467,3 +471,4 @@ that you need to pass prefix on both the POST and non-POST cases so that
 it is rendered and processed correctly.
 Each formset's prefix replaces the default form
 prefix that's added to each field's name and id HTML attributes.
+[VECTOR]

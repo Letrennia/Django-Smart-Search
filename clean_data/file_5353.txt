@@ -1,4 +1,8 @@
+[ID]
+5353
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/db/migrations/operations/models/
+[TEXT]
 Source code for django.db.migrations.operations.models
 from __future__ import unicode_literals
 from django.db import models
@@ -1469,3 +1473,4 @@ class IndexOperation(Operation):
         )
     def describe(self):
         return 'Remove index %s from %s' % (self.name, self.model_name)
+[VECTOR]

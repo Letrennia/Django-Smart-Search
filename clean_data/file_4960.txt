@@ -1,4 +1,8 @@
+[ID]
+4960
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/core/management/base/
+[TEXT]
 Source code for django.core.management.base
 # -*- coding: utf-8 -*-
 """
@@ -1129,3 +1133,4 @@ class NoArgsCommand(BaseCommand):
         Perform this command's actions.
         """
         raise NotImplementedError('subclasses of NoArgsCommand must provide a handle_noargs() method')
+[VECTOR]

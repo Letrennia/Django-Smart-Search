@@ -1,4 +1,8 @@
+[ID]
+5973
+[URL]
 https://docs.djangoproject.com/en/1.10/topics/cache/
+[TEXT]
 Django's cache framework 
 A fundamental trade-off in dynamic websites is, well, they're dynamic. Each
 time a user requests a page, the Web server makes all sorts of calculations –
@@ -1237,3 +1241,4 @@ where middleware is applied first-to-last, so an item at the top of the list
 runs first during the request phase. The FetchFromCacheMiddleware also
 needs to run after other middleware updates the Vary header, so
 FetchFromCacheMiddleware must be after any item that does so.
+[VECTOR]

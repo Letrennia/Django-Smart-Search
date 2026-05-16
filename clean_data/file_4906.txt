@@ -1,4 +1,8 @@
+[ID]
+4906
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/conf/urls/i18n/
+[TEXT]
 Source code for django.conf.urls.i18n
 import warnings
 from django.conf import settings
@@ -61,3 +65,4 @@ from django.views.i18n import set_language
 urlpatterns = [
     url(r'^setlang/$', set_language, name='set_language'),
 ]
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5784
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/db/models/options/
+[TEXT]
 Source code for django.db.models.options
 from __future__ import unicode_literals
 import copy
@@ -1453,3 +1457,4 @@ class Options(object):
         # Store result into cache for later access
         self._get_fields_cache[cache_key] = fields
         return fields
+[VECTOR]

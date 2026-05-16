@@ -1,4 +1,8 @@
+[ID]
+5787
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/db/transaction/
+[TEXT]
 Source code for django.db.transaction
 from django.db import (
     DEFAULT_DB_ALIAS, DatabaseError, Error, ProgrammingError, connections,
@@ -493,3 +497,4 @@ def _non_atomic_requests(view, using):
         if using is None:
             using = DEFAULT_DB_ALIAS
         return lambda view: _non_atomic_requests(view, using)
+[VECTOR]

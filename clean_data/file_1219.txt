@@ -1,4 +1,8 @@
+[ID]
+1219
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/contrib/contenttypes/prefetch/
+[TEXT]
 Source code for django.contrib.contenttypes.prefetch
 from django.db.models import Prefetch
 from django.db.models.query import ModelIterable, RawQuerySet
@@ -67,3 +71,4 @@ class GenericPrefetch(Prefetch):
         if self.get_current_prefetch_to(level) == self.prefetch_to:
             return self.querysets
         return None
+[VECTOR]

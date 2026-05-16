@@ -1,4 +1,8 @@
+[ID]
+5534
+[URL]
 https://docs.djangoproject.com/en/1.11/ref/models/querysets/
+[TEXT]
 QuerySet API reference 
 This document describes the details of the QuerySet API. It builds on the
 material presented in the model and database
@@ -3194,4 +3198,5 @@ Prefetches the given lookups on an iterable of model instances. This is useful
 in code that receives a list of model instances as opposed to a QuerySet;
 for example, when fetching models from a cache or instantiating them manually.
 Pass an iterable of model instances (must all be of the same class) and the
-lookups or Prefetch objects you want to prefetch for. 
+lookups or Prefetch objects you want to prefetch for.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+1690
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/messages/storage/cookie/
+[TEXT]
 Source code for django.contrib.messages.storage.cookie
 import binascii
 import json
@@ -423,3 +427,4 @@ def bisect_keep_right(a, fn):
         else:
             hi = mid
     return lo
+[VECTOR]

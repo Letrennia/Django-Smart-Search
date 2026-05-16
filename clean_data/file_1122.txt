@@ -1,4 +1,8 @@
+[ID]
+1122
+[URL]
 https://docs.djangoproject.com/en/5.0/howto/custom-template-backend/
+[TEXT]
 How to implement a custom template backend 
 Custom backends 
 Here's how to implement a custom template backend in order to use another
@@ -105,3 +109,4 @@ creating an object that specifies the following attributes:
 template loading methods.
 'loader_name': An optional string identifying the function or class used
 to load the template, e.g. django.template.loaders.filesystem.Loader.
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5094
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/contrib/postgres/
+[TEXT]
 django.contrib.postgres 
 New in Django 1.8. 
 PostgreSQL has a number of features which are not shared by the other databases
@@ -77,3 +81,4 @@ UnaccentExtension
 Validators
 KeysValidator
 Range validators
+[VECTOR]

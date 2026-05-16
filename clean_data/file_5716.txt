@@ -1,4 +1,8 @@
+[ID]
+5716
+[URL]
 https://docs.djangoproject.com/en/1.10/_modules/django/contrib/gis/db/models/functions/
+[TEXT]
 Source code for django.contrib.gis.db.models.functions
 from decimal import Decimal
 from django.contrib.gis.db.models.fields import GeometryField
@@ -689,3 +693,4 @@ class DistanceResultMixin(object):
         return super(Translate, self).as_sqlite(compiler, connection)
 [docs]class Union(OracleToleranceMixin, GeoFuncWithGeoParam):
     arity = 2
+[VECTOR]

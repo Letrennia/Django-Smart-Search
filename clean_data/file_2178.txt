@@ -1,4 +1,8 @@
+[ID]
+2178
+[URL]
 https://docs.djangoproject.com/en/4.1/ref/contrib/gis/db-api/
+[TEXT]
 GeoDjango Database API 
 Spatial Backends 
 GeoDjango currently provides the following spatial database backends:
@@ -1181,3 +1185,4 @@ X
 [2]See PostGIS EWKB, EWKT and Canonical Forms, PostGIS documentation at Ch. 4.1.2.
 [3]See PostGIS documentation on ST_DistanceSphere.
 [4]Refer MySQL Spatial Limitations section for more details.
+[VECTOR]

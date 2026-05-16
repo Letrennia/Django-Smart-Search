@@ -1,4 +1,8 @@
+[ID]
+4891
+[URL]
 https://docs.djangoproject.com/en/1.8/intro/tutorial02/
+[TEXT]
 Writing your first Django app, part 2 
 This tutorial begins where Tutorial 1 left off. We're
 continuing the Web-poll application and will focus on Django's
@@ -687,3 +691,4 @@ object-specific admin pages in whatever way you think is best. Again,
 don't worry if you can't understand the template language – we'll cover that
 in more detail in Tutorial 3.
 When you're comfortable with the admin site, read part 3 of this tutorial to start working on public poll views.
+[VECTOR]

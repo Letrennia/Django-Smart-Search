@@ -1,4 +1,8 @@
+[ID]
+5385
+[URL]
 https://docs.djangoproject.com/en/1.11/_modules/django/middleware/csrf/
+[TEXT]
 Source code for django.middleware.csrf
 """
 Cross Site Request Forgery Middleware.
@@ -563,3 +567,4 @@ def _compare_salted_tokens(request_csrf_token, csrf_token):
         self._set_token(request, response)
         response.csrf_cookie_set = True
         return response
+[VECTOR]

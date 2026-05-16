@@ -1,4 +1,8 @@
+[ID]
+1760
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/db/models/functions/json/
+[TEXT]
 Source code for django.db.models.functions.json
 from django.db import NotSupportedError
 from django.db.models.expressions import Func, Value
@@ -213,3 +217,4 @@ class JSONObject(Func):
         )
     def as_oracle(self, compiler, connection, **extra_context):
         return self.as_native(compiler, connection, returning="CLOB", **extra_context)
+[VECTOR]

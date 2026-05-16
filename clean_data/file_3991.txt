@@ -1,4 +1,8 @@
+[ID]
+3991
+[URL]
 https://docs.djangoproject.com/en/2.2/topics/http/decorators/
+[TEXT]
 View decorators 
 Django provides several decorators that can be applied to views to support
 various HTTP features.
@@ -127,3 +131,4 @@ never_cache(view_func)[source]
 This decorator adds a Cache-Control: max-age=0, no-cache, no-store,
 must-revalidate header to a response to indicate that a page should never
 be cached.
+[VECTOR]

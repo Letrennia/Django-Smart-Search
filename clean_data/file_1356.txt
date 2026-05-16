@@ -1,4 +1,8 @@
+[ID]
+1356
+[URL]
 https://docs.djangoproject.com/en/5.0/_modules/django/utils/http/
+[TEXT]
 Source code for django.utils.http
 import base64
 import re
@@ -665,3 +669,4 @@ def content_disposition_header(as_attachment, filename):
         return "attachment"
     else:
         return None
+[VECTOR]

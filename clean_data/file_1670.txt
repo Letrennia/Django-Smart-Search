@@ -1,4 +1,8 @@
+[ID]
+1670
+[URL]
 https://docs.djangoproject.com/en/4.2/_modules/django/contrib/auth/middleware/
+[TEXT]
 Source code for django.contrib.auth.middleware
 import warnings
 from functools import partial
@@ -509,3 +513,4 @@ class PersistentRemoteUserMiddleware(RemoteUserMiddleware):
     Django's authentication mechanism.
     """
     force_logout_if_no_header = False
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+5125
+[URL]
 https://docs.djangoproject.com/en/1.8/ref/models/conditional-expressions/
+[TEXT]
 Conditional Expressions 
 New in Django 1.8. 
 Conditional expressions let you use if … elif …
@@ -111,3 +115,4 @@ Conditional aggregation
 What if we want to find out how many clients there are for each
 account_type? We can nest conditional expression within
 aggregate functions to achieve this:
+[VECTOR]

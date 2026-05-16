@@ -1,4 +1,8 @@
+[ID]
+4945
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/sites/middleware/
+[TEXT]
 Source code for django.contrib.sites.middleware
 from .shortcuts import get_current_site
 [docs]class CurrentSiteMiddleware(object):
@@ -15,3 +19,4 @@ from .shortcuts import get_current_site
     """
     def process_request(self, request):
         request.site = get_current_site(request)
+[VECTOR]

@@ -1,4 +1,8 @@
+[ID]
+3802
+[URL]
 https://docs.djangoproject.com/en/2.2/_modules/django/test/utils/
+[TEXT]
 Source code for django.test.utils
 import collections
 import logging
@@ -1441,3 +1445,4 @@ def register_lookup(field, *lookups, lookup_name=None):
     finally:
         for lookup in lookups:
             field._unregister_lookup(lookup, lookup_name)
+[VECTOR]

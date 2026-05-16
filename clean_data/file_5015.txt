@@ -1,4 +1,8 @@
+[ID]
+5015
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/test/utils/
+[TEXT]
 Source code for django.test.utils
 import logging
 import re
@@ -999,3 +1003,4 @@ def require_jinja2(test_func):
         'OPTIONS': {'keep_trailing_newline': True},
     }])(test_func)
     return test_func
+[VECTOR]

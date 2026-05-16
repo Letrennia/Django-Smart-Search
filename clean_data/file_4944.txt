@@ -1,4 +1,8 @@
+[ID]
+4944
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/contrib/sitemaps/
+[TEXT]
 Source code for django.contrib.sitemaps
 import warnings
 from django.apps import apps as django_apps
@@ -295,3 +299,4 @@ class SitemapNotFound(Exception):
             return getattr(item, self.date_field)
         return None
 default_app_config = 'django.contrib.sitemaps.apps.SiteMapsConfig'
+[VECTOR]

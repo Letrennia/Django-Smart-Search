@@ -1,4 +1,8 @@
+[ID]
+5026
+[URL]
 https://docs.djangoproject.com/en/1.8/_modules/django/utils/module_loading/
+[TEXT]
 Source code for django.utils.module_loading
 # Avoid importing `importlib` from this package.
 from __future__ import absolute_import
@@ -309,3 +313,4 @@ else:
         else:
             # Exhausted the search, so the module cannot be found.
             return False
+[VECTOR]

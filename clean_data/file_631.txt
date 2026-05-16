@@ -1,4 +1,8 @@
+[ID]
+631
+[URL]
 https://docs.djangoproject.com/en/5.2/intro/reusable-apps/
+[TEXT]
 Advanced tutorial: How to write reusable apps 
 This advanced tutorial begins where Tutorial 8
 left off. We'll be turning our web-poll into a standalone Python package
@@ -403,3 +407,4 @@ Typically, these situations only arise once you're maintaining several Django
 projects. When they do, the best solution is to use venv. This tool allows you to maintain multiple isolated
 Python environments, each with its own copy of the libraries and package
 namespace.
+[VECTOR]

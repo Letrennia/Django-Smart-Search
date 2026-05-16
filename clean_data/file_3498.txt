@@ -1,4 +1,8 @@
+[ID]
+3498
+[URL]
 https://docs.djangoproject.com/en/3.0/ref/exceptions/
+[TEXT]
 Django Exceptions 
 Django raises some of its own exceptions as well as standard Python exceptions.
 Django Core Exceptions 
@@ -343,3 +347,4 @@ loop or an overly long chain of redirects.
 Python Exceptions 
 Django raises built-in Python exceptions when appropriate as well. See the
 Python documentation for further information on the Built-in Exceptions.
+[VECTOR]

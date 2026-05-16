@@ -1,4 +1,8 @@
+[ID]
+466
+[URL]
 https://docs.djangoproject.com/en/6.0/ref/models/lookups/
+[TEXT]
 Lookup API reference 
 This document has the API references of lookups, the Django API for building
 the WHERE clause of a database query. To learn how to use lookups, see
@@ -303,3 +307,4 @@ can be used for compiling vendor specific SQL. If lhs is not
 None, use it as the processed lhs instead of self.lhs.
 process_rhs(compiler, connection)[source] 
 Behaves the same way as process_lhs(), for the right-hand side.
+[VECTOR]
