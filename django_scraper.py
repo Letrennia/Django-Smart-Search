@@ -14,8 +14,6 @@ for item in soup.find_all('loc'):
     if not re.search(pattern, item.text.strip()):
         all_urls.append(item.text)
 
-
-
 num = 1
 for url in all_urls:
     django_text = requests.get(url, verify=False).text
@@ -27,12 +25,16 @@ for url in all_urls:
     for tag in django_soup.find_all('div', {'role': 'complementary'}):
         tag.decompose()
 
-    for tag in django_soup.find_all('div', class_=['doc-floating-warning', 'skip-link', 'container container--flex container--flex--wrap--mobile',
-                                                   'highlight-default notranslate', 'highlight-apache notranslate', 'highlight-pycon notranslate',
-                                                   'highlight-console notranslate', 'highlight-text notranslate', 'code-block-caption',
-                                                   'highlight-python notranslate', 'highlight-html+django notranslate',
-                                                   'highlight-javascript notranslate', 'highlight-html+jinja notranslate',
-                                                   'last highlight-default notranslate']):
+    for tag in django_soup.find_all('div', class_=[
+        'doc-floating-warning', 'skip-link',
+        'container container--flex container--flex--wrap--mobile',
+        'highlight-default notranslate', 'highlight-apache notranslate',
+        'highlight-pycon notranslate', 'highlight-console notranslate',
+        'highlight-text notranslate', 'code-block-caption',
+        'highlight-python notranslate', 'highlight-html+django notranslate',
+        'highlight-javascript notranslate', 'highlight-html+jinja notranslate',
+       'last highlight-default notranslate'
+    ]):
         tag.decompose()
 
     for tag in django_soup.find_all('div', id=['billboard', 'version-switcher']):
@@ -46,8 +48,6 @@ for url in all_urls:
 
     for tag in django_soup.find_all('p', class_=['rubric']):
         tag.decompose()
-
-
 
 
     # text = django_soup
