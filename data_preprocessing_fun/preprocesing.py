@@ -2,11 +2,14 @@ import os
 import re
 
 import ftfy # fixes text for you <3
+import spacy
 
 input_dir = "../data_dir"
 output_dir = "../clean_data"
 
 os.makedirs(output_dir, exist_ok=True)
+
+nlp = spacy.load("en_core_web_sm")
 
 all = set()
 all_keywords = set()
@@ -15,8 +18,14 @@ all_methods = set()
 
 count_keywords = {}
 count_themes = {}
+all_sentences = []
+
+all_t = 0
+max_t = 0
+min_t = 1000000
 
 for filename in os.listdir(input_dir):
+    count_t = 0
 
     if not filename.endswith(".txt"):
         continue
@@ -63,9 +72,6 @@ for filename in os.listdir(input_dir):
     clean = clean.replace("This example would return this HTML:", "")
     clean = clean.replace("Here's a typical usage example:", "")
 
-    # Zdania
-    sentences = re.findall(r"[^?.!?]+[?.]", clean)
-
     # Terminal
     clean = re.sub(r"\.\.\.\\>", "", clean)
 
@@ -83,31 +89,52 @@ for filename in os.listdir(input_dir):
     # clean = re.sub(r"<style[\s\S]*?</style>", "", clean)
     # clean = re.sub(r"<script[\s\S]*?</script>", "", clean)
 
+    # Bardzo długie
+    # doc = nlp(clean)
+    # # Wyrazy - tokeny
+    # for token in doc:
+    #     if token.is_space or token.is_punct:
+    #         continue
+    #     count_t += 1
+    #     all_t += 1
+    #     # print(token)
+
+    # count_t = len(re.findall(r"\b[\w_]+\b", clean))
+    #
+    # all_t += count_t
+    #
+    # max_t = count_t if max_t < count_t else max_t
+    # min_t = count_t if min_t > count_t else min_t
+
+    # Zdania
+    sentences = re.findall(r"[^.!?]+[.!?](?=\s|$)", clean.strip())
+    all_sentences.extend(sentences)
+
     output_path = os.path.join(output_dir, filename)
 
-    # Nagłowki
-    file_id = filename.replace("file_", "").replace(".txt", "")
-    lines = clean.splitlines()
-    url = ""
-    text_start = 0
-
-    if lines and lines[0].startswith("https"):
-        url = lines[0].strip()
-        text_start = 1
-
-    text = "\n".join(lines[text_start:]).strip()
-
-    final_output = (
-        f"[ID]\n"
-        f"{file_id}\n"
-        f"[URL]\n"
-        f"{url}\n"
-        f"[TEXT]\n"
-        f"{text}\n"
-        f"[VECTOR]\n"
-    )
-    with open(output_path, "w", encoding="utf-8") as file:
-        file.write(final_output)
+    # # Nagłowki
+    # file_id = filename.replace("file_", "").replace(".txt", "")
+    # lines = clean.splitlines()
+    # url = ""
+    # text_start = 0
+    #
+    # if lines and lines[0].startswith("https"):
+    #     url = lines[0].strip()
+    #     text_start = 1
+    #
+    # text = "\n".join(lines[text_start:]).strip()
+    #
+    # final_output = (
+    #     f"[ID]\n"
+    #     f"{file_id}\n"
+    #     f"[URL]\n"
+    #     f"{url}\n"
+    #     f"[TEXT]\n"
+    #     f"{text}\n"
+    #     f"[VECTOR]\n"
+    # )
+    # with open(output_path, "w", encoding="utf-8") as file:
+    #     file.write(final_output)
 
 all_methods = sorted(all_methods)
 all_keywords = sorted(all_keywords)
@@ -122,28 +149,39 @@ print("Maximum themes: ", max(count_themes.values()))
 print("Avg keywords:", sum(count_keywords.values()) / len(count_keywords.values()))
 print("Avg themes:", sum(count_themes.values()) / len(count_themes.values()))
 
-with open("../wordlists_dir/keywords.txt", "w", encoding="utf-8") as file:
-    file.write("\n".join(all_keywords))
-
-with open("../wordlists_dir/themes.txt", "w", encoding="utf-8") as file:
-    file.write("\n".join(all_themes))
-
-with open("../wordlists_dir/methods.txt", "w", encoding="utf-8") as file:
-    file.write("\n".join(all_methods))
+# with open("../wordlists_dir/keywords.txt", "w", encoding="utf-8") as file:
+#     file.write("\n".join(all_keywords))
+#
+# with open("../wordlists_dir/themes.txt", "w", encoding="utf-8") as file:
+#     file.write("\n".join(all_themes))
+#
+# with open("../wordlists_dir/methods.txt", "w", encoding="utf-8") as file:
+#     file.write("\n".join(all_methods))
 
 count_words = 0
 mini = 60000
 maks = 0
 
-for sentence in sentences:
-    words = re.findall(r"\b\w+\b", sentence)
-    mini = len(words) if len(words) < mini else mini
-    maks = len(words) if len(words) >= maks else maks
+for sentence in all_sentences:
+    words = re.findall(r"[A-Za-z_][A-Za-z0-9_\.]*\(?\)?", sentence)
+
+    if (len(words)) == 0:
+        continue
+
+    mini = min(mini, len(words))
+    maks = max(maks, len(words))
     count_words += len(words)
+    # if(len(words) == 1):
+    #     print(sentence)
 
 print("Minimalna ilość słów w zdaniu:", mini)
 print("Maksumalna ilość słów w zdaniu:", maks)
-print("Avg słów w zdaniu: ", count_words / len(sentences))
+print("Avg słów w zdaniu: ", count_words / len(all_sentences))
+# print(count_words)
+
+# print("Najmniejsza ilość słów w artykule: ", min_t)
+# print("Największa ilość słów w artykule: ", max_t)
+# print("Średnia ilość słów w artykule: ", round((all_t // 6031), 2))
 
 # print(all_keywords)
 # print(all_methods)
