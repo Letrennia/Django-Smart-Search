@@ -1,3 +1,6 @@
+# ocenia trudność (wagę) keyword lub method
+# zapis do pliku txt w formacie (keyword waga) lub (method waga)
+
 from collections import Counter
 import ast
 
@@ -60,18 +63,18 @@ with open('../wordlists_dir/weights_dir/keywords_weights.txt', 'w') as f:
 
 # THEMES
 
-theme = read_words('../wordlists_dir/weights_dir/themes_duplicate.txt')
-theme_unique = read_words('../wordlists_dir/themes.txt')
-
-count_theme = Counter(theme)
-sorted_theme = count_theme.most_common()
-all_themes = len(theme_unique)
-
-weights_theme = ranking(sorted_theme, all_themes)
-
-with open('../wordlists_dir/weights_dir/themes_weights.txt', 'w') as f:
-    for theme, weight in weights_theme.items():
-        f.write(f'{theme} {weight}\n')
+# theme = read_words('../wordlists_dir/weights_dir/themes_duplicate.txt')
+# theme_unique = read_words('../wordlists_dir/themes.txt')
+#
+# count_theme = Counter(theme)
+# sorted_theme = count_theme.most_common()
+# all_themes = len(theme_unique)
+#
+# weights_theme = ranking(sorted_theme, all_themes)
+#
+# with open('../wordlists_dir/weights_dir/themes_weights.txt', 'w') as f:
+#     for theme, weight in weights_theme.items():
+#         f.write(f'{theme} {weight}\n')
 
 
 # METHODS

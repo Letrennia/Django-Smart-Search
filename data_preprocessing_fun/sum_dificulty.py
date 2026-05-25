@@ -1,5 +1,6 @@
-import os
+# suma wag keyword lub method
 
+import os
 
 def read_weights(filename):
     items_pair = {}

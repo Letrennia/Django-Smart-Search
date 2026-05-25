@@ -1,3 +1,5 @@
+# zliczanie duplikatów
+
 import os
 import re
 
@@ -8,7 +10,7 @@ input_dir = "../data_dir"
 
 all_ = []
 all_keywords = []
-all_themes = []
+# all_themes = []
 all_methods = []
 
 
@@ -29,13 +31,13 @@ for filename in os.listdir(input_dir):
         thing = thing.strip()
         if len(thing.split()) == 1:
             all_keywords.append(thing)
-        else:
-            all_themes.append(thing)
+        # else:
+        #     all_themes.append(thing)
 
     all_methods.append(re.findall(r"\b[A-Za-z_][A-Za-z0-9_]*\(\)", content))
 
 print(f' keywords: {len(all_keywords)}')
-print(f'themes: {len(all_themes)}')
+# print(f'themes: {len(all_themes)}')
 print(f'methods: {len(all_methods)}')
 
 
@@ -44,9 +46,9 @@ with open('../wordlists_dir/weights_dir/keywords_duplicate.txt', 'w') as file:
     for item in all_keywords:
         file.write(str(item) + '\n')
 
-with open('../wordlists_dir/weights_dir/themes_duplicate.txt', 'w') as file:
-    for item in all_themes:
-        file.write(str(item) + '\n')
+# with open('../wordlists_dir/weights_dir/themes_duplicate.txt', 'w') as file:
+#     for item in all_themes:
+#         file.write(str(item) + '\n')
 
 with open('../wordlists_dir/weights_dir/methods_duplicate.txt', 'w') as file:
     for item in all_methods:
