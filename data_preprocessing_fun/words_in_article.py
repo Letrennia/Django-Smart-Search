@@ -41,7 +41,7 @@ for word in sorted(magic_word_dictionary.keys()):
     for doc in sorted(magic_word_dictionary[word].keys()):
         sorted_dict[word][doc] = magic_word_dictionary[word][doc]
 
-with open("keyword_document_count.json", "w", encoding="utf-8") as file:
+with open("../BM25_data/keyword_document_count.json", "w", encoding="utf-8") as file:
     json.dump(sorted_dict, file, ensure_ascii=False, indent=4)
 
 # for word, articles in magic_word_dictionary.items():
@@ -50,7 +50,7 @@ with open("keyword_document_count.json", "w", encoding="utf-8") as file:
 #         print(" ", article, ": ", count)
 
 
-with open("keyword_document_count.json", "r", encoding="utf-8") as file:
+with open("../BM25_data/keyword_document_count.json", "r", encoding="utf-8") as file:
     data = json.load(file)
 
 print(len(data))

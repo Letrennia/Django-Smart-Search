@@ -3,7 +3,7 @@ import json
 with open("../wordlists_dir/keywords.txt", "r", encoding="utf-8") as file:
     all_keywords = set(line.strip().lower() for line in file)
 
-with open("keyword_document_count.json", "r", encoding="utf-8") as file:
+with open("../BM25_data/keyword_document_count.json", "r", encoding="utf-8") as file:
     data = json.load(file)
 
 found_keywords = set(data.keys())

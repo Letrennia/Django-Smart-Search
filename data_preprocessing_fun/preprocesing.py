@@ -3,6 +3,7 @@ import re
 
 import ftfy # fixes text for you <3
 import spacy
+import json
 
 input_dir = "../data_dir"
 output_dir = "../clean_data"
@@ -23,6 +24,8 @@ all_sentences = []
 all_t = 0
 max_t = 0
 min_t = 1000000
+
+article_lenght = {}
 
 for filename in os.listdir(input_dir):
     count_t = 0
@@ -100,6 +103,7 @@ for filename in os.listdir(input_dir):
     #     # print(token)
 
     count_t = len(re.findall(r"\b[\w_]+\b", clean))
+    article_lenght[filename] = count_t
 
     all_t += count_t
 
@@ -157,6 +161,11 @@ print("Avg themes:", sum(count_themes.values()) / len(count_themes.values()))
 #
 # with open("../wordlists_dir/methods.txt", "w", encoding="utf-8") as file:
 #     file.write("\n".join(all_methods))
+
+sorted_article_lenght = dict(sorted(article_lenght.items()))
+
+with open("../BM25_data/document_count_words.json", "w", encoding="utf-8") as file:
+    json.dump(sorted_article_lenght, file, ensure_ascii=False, indent=4)
 
 count_words = 0
 mini = 60000
