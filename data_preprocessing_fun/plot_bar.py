@@ -38,10 +38,10 @@ def plot_bar_chart(data, x_label, y_label, title):
 
 
 # KEYWORDS
-# keywords = read_words('../wordlists_dir/weights_dir/keywords_duplicate.txt')
-# count_keywords = Counter(keywords)
-# sorted_keywords = count_keywords.most_common()
-# plot_bar_chart(sorted_keywords, 'Keywords', 'Quantity', 'Top 50 keywords')
+keywords = read_words('../wordlists_dir/weights_dir/keywords_duplicate.txt')
+count_keywords = Counter(keywords)
+sorted_keywords = count_keywords.most_common()
+plot_bar_chart(sorted_keywords, 'Keywords', 'Quantity', 'Top 50 keywords')
 
 # METHODS
 methods = read_methods('../wordlists_dir/weights_dir/methods_duplicate.txt')
@@ -49,7 +49,3 @@ count_methods = Counter(methods)
 sorted_methods = count_methods.most_common()
 plot_bar_chart(sorted_methods, 'Methods', 'Quantity', 'Top 50 methods')
 
-
-# print(sorted_keywords)
-
-# print(len(count_keywords))
