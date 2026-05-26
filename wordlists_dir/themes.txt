@@ -601,7 +601,6 @@ Displaying registration_required flatpages
 Distance Lookups
 Distance Queries
 Django Core Exceptions
-Django Deprecation Timeline
 Django Exceptions
 Django FAQ
 Django Fellows

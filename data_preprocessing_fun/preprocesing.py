@@ -99,12 +99,12 @@ for filename in os.listdir(input_dir):
     #     all_t += 1
     #     # print(token)
 
-    # count_t = len(re.findall(r"\b[\w_]+\b", clean))
-    #
-    # all_t += count_t
-    #
-    # max_t = count_t if max_t < count_t else max_t
-    # min_t = count_t if min_t > count_t else min_t
+    count_t = len(re.findall(r"\b[\w_]+\b", clean))
+
+    all_t += count_t
+
+    max_t = count_t if max_t < count_t else max_t
+    min_t = count_t if min_t > count_t else min_t
 
     # Zdania
     sentences = re.findall(r"[^.!?]+[.!?](?=\s|$)", clean.strip())
@@ -177,11 +177,11 @@ for sentence in all_sentences:
 print("Minimalna ilość słów w zdaniu:", mini)
 print("Maksumalna ilość słów w zdaniu:", maks)
 print("Avg słów w zdaniu: ", count_words / len(all_sentences))
-# print(count_words)
+print(count_words)
 
-# print("Najmniejsza ilość słów w artykule: ", min_t)
-# print("Największa ilość słów w artykule: ", max_t)
-# print("Średnia ilość słów w artykule: ", round((all_t // 6031), 2))
+print("Najmniejsza ilość słów w artykule: ", min_t)
+print("Największa ilość słów w artykule: ", max_t)
+print("Średnia ilość słów w artykule: ", round((all_t // 6031), 2))
 
 # print(all_keywords)
 # print(all_methods)
