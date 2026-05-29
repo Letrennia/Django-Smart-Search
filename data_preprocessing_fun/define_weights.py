@@ -45,6 +45,14 @@ def read_methods(filename):
 
     return count_
 
+
+def write_into_file(filepath, phrases):
+    with open(filepath, 'w') as f:
+        for phrase, weight in phrases.items():
+            f.write(f'{phrase} {weight}\n')
+
+
+
 # KEYWORDS
 
 words = read_words('../wordlists_dir/weights_dir/keywords_duplicate.txt')
@@ -55,10 +63,8 @@ sorted_words = count_words.most_common()
 all_words = len(words_unique)
 
 weights_key = ranking(sorted_words, all_words)
+write_into_file('../wordlists_dir/weights_dir/keywords_weights.txt', weights_key)
 
-with open('../wordlists_dir/weights_dir/keywords_weights.txt', 'w') as f:
-    for word, weight in weights_key.items():
-        f.write(f'{word} {weight}\n')
 
 
 # THEMES
@@ -71,10 +77,8 @@ with open('../wordlists_dir/weights_dir/keywords_weights.txt', 'w') as f:
 # all_themes = len(theme_unique)
 #
 # weights_theme = ranking(sorted_theme, all_themes)
-#
-# with open('../wordlists_dir/weights_dir/themes_weights.txt', 'w') as f:
-#     for theme, weight in weights_theme.items():
-#         f.write(f'{theme} {weight}\n')
+# write_into_file('../wordlists_dir/weights_dir/themes_weights.txt', weights_theme)
+
 
 
 # METHODS
@@ -86,11 +90,7 @@ methods_unique = read_words('../wordlists_dir/methods.txt')
 count_methods = Counter(methods)
 sorted_methods = count_methods.most_common()
 all_methods = len(methods_unique)
+
 weights_method = ranking(sorted_methods, all_methods)
-
-with open('../wordlists_dir/weights_dir/methods_weights.txt', 'w') as f:
-    for meth, weight in weights_method.items():
-        f.write(f'{meth} {weight}\n')
-
-
+write_into_file('../wordlists_dir/weights_dir/methods_weights.txt', weights_method)
 
