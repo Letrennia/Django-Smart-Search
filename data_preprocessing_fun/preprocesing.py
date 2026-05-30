@@ -30,9 +30,6 @@ article_lenght = {}
 for filename in os.listdir(input_dir):
     count_t = 0
 
-    if not filename.endswith(".txt"):
-        continue
-
     input_path = os.path.join(input_dir, filename)
 
     with open(input_path, "r", encoding="utf-8") as file:

@@ -1,0 +1,5135 @@
+{
+    "dev": {
+        "faq": {
+            "usage": {},
+            "admin": {},
+            "contributing": {},
+            "general": {},
+            "help": {},
+            "install": {},
+            "models": {},
+            "troubleshooting": {}
+        },
+        "ref": {
+            "class-based-views": {
+                "mixins-date-based": {},
+                "mixins-editing": {},
+                "mixins-multiple-object": {},
+                "mixins-simple": {},
+                "mixins-single-object": {},
+                "base": {},
+                "flattened-index": {},
+                "generic-date-based": {},
+                "generic-display": {},
+                "generic-editing": {},
+                "mixins": {}
+            },
+            "clickjacking": {},
+            "contrib": {
+                "admin": {
+                    "actions": {},
+                    "admindocs": {},
+                    "filters": {},
+                    "javascript": {}
+                },
+                "auth": {},
+                "contenttypes": {},
+                "flatpages": {},
+                "gis": {
+                    "admin": {},
+                    "commands": {},
+                    "db-api": {},
+                    "deployment": {},
+                    "feeds": {},
+                    "forms-api": {},
+                    "functions": {},
+                    "gdal": {},
+                    "geoip2": {},
+                    "geoquerysets": {},
+                    "geos": {},
+                    "install": {
+                        "geolibs": {},
+                        "postgis": {},
+                        "spatialite": {}
+                    },
+                    "layermapping": {},
+                    "measure": {},
+                    "model-api": {},
+                    "ogrinspect": {},
+                    "serializers": {},
+                    "sitemaps": {},
+                    "testing": {},
+                    "tutorial": {},
+                    "utils": {}
+                },
+                "humanize": {},
+                "messages": {},
+                "postgres": {
+                    "aggregates": {},
+                    "constraints": {},
+                    "expressions": {},
+                    "fields": {},
+                    "forms": {},
+                    "functions": {},
+                    "indexes": {},
+                    "lookups": {},
+                    "operations": {},
+                    "search": {},
+                    "validators": {}
+                },
+                "redirects": {},
+                "sitemaps": {},
+                "sites": {},
+                "staticfiles": {},
+                "syndication": {}
+            },
+            "csp": {},
+            "csrf": {},
+            "databases": {},
+            "django-admin": {},
+            "exceptions": {},
+            "files": {
+                "file": {},
+                "storage": {},
+                "uploads": {}
+            },
+            "forms": {
+                "api": {},
+                "fields": {},
+                "formsets": {},
+                "models": {},
+                "renderers": {},
+                "validation": {},
+                "widgets": {}
+            },
+            "logging": {},
+            "middleware": {},
+            "migration-operations": {},
+            "models": {
+                "class": {},
+                "conditional-expressions": {},
+                "constraints": {},
+                "database-functions": {},
+                "expressions": {},
+                "fields": {},
+                "indexes": {},
+                "instances": {},
+                "lookups": {},
+                "meta": {},
+                "options": {},
+                "querysets": {},
+                "relations": {}
+            },
+            "paginator": {},
+            "request-response": {},
+            "schema-editor": {},
+            "settings": {},
+            "signals": {},
+            "tasks": {},
+            "template-response": {},
+            "templates": {
+                "api": {},
+                "builtins": {},
+                "language": {}
+            },
+            "unicode": {},
+            "urlresolvers": {},
+            "urls": {},
+            "utils": {},
+            "validators": {},
+            "views": {},
+            "applications": {},
+            "checks": {}
+        },
+        "glossary": {},
+        "howto": {
+            "auth-remote-user": {},
+            "csp": {},
+            "csrf": {},
+            "custom-file-storage": {},
+            "custom-lookups": {},
+            "custom-management-commands": {},
+            "custom-model-fields": {},
+            "custom-shell": {},
+            "custom-template-backend": {},
+            "custom-template-tags": {},
+            "delete-app": {},
+            "deployment": {
+                "asgi": {
+                    "daphne": {},
+                    "granian": {},
+                    "hypercorn": {},
+                    "uvicorn": {}
+                },
+                "checklist": {},
+                "wsgi": {
+                    "apache-auth": {},
+                    "granian": {},
+                    "gunicorn": {},
+                    "modwsgi": {},
+                    "uwsgi": {}
+                }
+            },
+            "error-reporting": {},
+            "initial-data": {},
+            "legacy-databases": {},
+            "logging": {},
+            "outputting-csv": {},
+            "outputting-pdf": {},
+            "overriding-templates": {},
+            "static-files": {
+                "deployment": {}
+            },
+            "upgrade-version": {},
+            "windows": {},
+            "writing-migrations": {}
+        },
+        "releases": {
+            "1.0-porting-guide": {},
+            "security": {}
+        },
+        "topics": {
+            "async": {},
+            "auth": {
+                "customizing": {},
+                "default": {},
+                "passwords": {}
+            },
+            "cache": {},
+            "checks": {},
+            "class-based-views": {
+                "generic-display": {},
+                "generic-editing": {},
+                "intro": {},
+                "mixins": {}
+            },
+            "composite-primary-key": {},
+            "conditional-view-processing": {},
+            "db": {
+                "aggregation": {},
+                "examples": {
+                    "many_to_many": {},
+                    "many_to_one": {},
+                    "one_to_one": {}
+                },
+                "fetch-modes": {},
+                "fixtures": {},
+                "instrumentation": {},
+                "managers": {},
+                "models": {},
+                "multi-db": {},
+                "optimization": {},
+                "queries": {},
+                "search": {},
+                "sql": {},
+                "tablespaces": {},
+                "transactions": {}
+            },
+            "email": {},
+            "files": {},
+            "forms": {
+                "formsets": {},
+                "media": {},
+                "modelforms": {}
+            },
+            "http": {
+                "decorators": {},
+                "file-uploads": {},
+                "generic-views": {},
+                "middleware": {},
+                "sessions": {},
+                "shortcuts": {},
+                "urls": {},
+                "views": {}
+            },
+            "i18n": {
+                "formatting": {},
+                "timezones": {},
+                "translation": {}
+            },
+            "install": {},
+            "logging": {},
+            "migrations": {},
+            "pagination": {},
+            "performance": {},
+            "security": {},
+            "serialization": {},
+            "settings": {},
+            "signals": {},
+            "signing": {},
+            "tasks": {},
+            "templates": {},
+            "testing": {
+                "advanced": {},
+                "overview": {},
+                "tools": {}
+            }
+        },
+        "index": {},
+        "internals": {
+            "contributing": {
+                "accessibility": {},
+                "bugs-and-features": {},
+                "committing-code": {},
+                "localizing": {},
+                "new-contributors": {},
+                "triaging-tickets": {},
+                "writing-code": {
+                    "coding-style": {},
+                    "javascript": {},
+                    "submitting-patches": {},
+                    "unit-tests": {},
+                    "working-with-git": {}
+                },
+                "writing-documentation": {}
+            },
+            "git": {},
+            "howto-release-django": {},
+            "mailing-lists": {},
+            "organization": {},
+            "release-process": {},
+            "security": {}
+        },
+        "intro": {
+            "contributing": {},
+            "install": {},
+            "overview": {},
+            "reusable-apps": {},
+            "tutorial01": {},
+            "tutorial02": {},
+            "tutorial03": {},
+            "tutorial04": {},
+            "tutorial05": {},
+            "tutorial06": {},
+            "tutorial07": {},
+            "tutorial08": {},
+            "whatsnext": {}
+        },
+        "misc": {
+            "api-stability": {},
+            "design-philosophies": {},
+            "distributions": {}
+        }
+    },
+    "5.1": {
+        "ref": {
+            "forms": {
+                "validation": {},
+                "widgets": {},
+                "api": {},
+                "fields": {},
+                "formsets": {},
+                "models": {},
+                "renderers": {}
+            },
+            "logging": {},
+            "middleware": {},
+            "migration-operations": {},
+            "models": {
+                "class": {},
+                "conditional-expressions": {},
+                "constraints": {},
+                "database-functions": {},
+                "expressions": {},
+                "fields": {},
+                "indexes": {},
+                "instances": {},
+                "lookups": {},
+                "meta": {},
+                "options": {},
+                "querysets": {},
+                "relations": {}
+            },
+            "paginator": {},
+            "request-response": {},
+            "schema-editor": {},
+            "settings": {},
+            "signals": {},
+            "template-response": {},
+            "templates": {
+                "api": {},
+                "builtins": {},
+                "language": {}
+            },
+            "unicode": {},
+            "urlresolvers": {},
+            "urls": {},
+            "utils": {},
+            "validators": {},
+            "views": {},
+            "applications": {},
+            "checks": {},
+            "class-based-views": {
+                "base": {},
+                "flattened-index": {},
+                "generic-date-based": {},
+                "generic-display": {},
+                "generic-editing": {},
+                "mixins": {},
+                "mixins-date-based": {},
+                "mixins-editing": {},
+                "mixins-multiple-object": {},
+                "mixins-simple": {},
+                "mixins-single-object": {}
+            },
+            "clickjacking": {},
+            "contrib": {
+                "admin": {
+                    "actions": {},
+                    "admindocs": {},
+                    "filters": {},
+                    "javascript": {}
+                },
+                "auth": {},
+                "contenttypes": {},
+                "flatpages": {},
+                "gis": {
+                    "admin": {},
+                    "commands": {},
+                    "db-api": {},
+                    "deployment": {},
+                    "feeds": {},
+                    "forms-api": {},
+                    "functions": {},
+                    "gdal": {},
+                    "geoip2": {},
+                    "geoquerysets": {},
+                    "geos": {},
+                    "install": {
+                        "geolibs": {},
+                        "postgis": {},
+                        "spatialite": {}
+                    },
+                    "layermapping": {},
+                    "measure": {},
+                    "model-api": {},
+                    "ogrinspect": {},
+                    "serializers": {},
+                    "sitemaps": {},
+                    "testing": {},
+                    "tutorial": {},
+                    "utils": {}
+                },
+                "humanize": {},
+                "messages": {},
+                "postgres": {
+                    "aggregates": {},
+                    "constraints": {},
+                    "expressions": {},
+                    "fields": {},
+                    "forms": {},
+                    "functions": {},
+                    "indexes": {},
+                    "lookups": {},
+                    "operations": {},
+                    "search": {},
+                    "validators": {}
+                },
+                "redirects": {},
+                "sitemaps": {},
+                "sites": {},
+                "staticfiles": {},
+                "syndication": {}
+            },
+            "csrf": {},
+            "databases": {},
+            "django-admin": {},
+            "exceptions": {},
+            "files": {
+                "file": {},
+                "storage": {},
+                "uploads": {}
+            }
+        },
+        "releases": {
+            "1.0-porting-guide": {},
+            "security": {}
+        },
+        "topics": {
+            "async": {},
+            "auth": {
+                "customizing": {},
+                "default": {},
+                "passwords": {}
+            },
+            "cache": {},
+            "checks": {},
+            "class-based-views": {
+                "generic-display": {},
+                "generic-editing": {},
+                "intro": {},
+                "mixins": {}
+            },
+            "conditional-view-processing": {},
+            "db": {
+                "aggregation": {},
+                "examples": {
+                    "many_to_many": {},
+                    "many_to_one": {},
+                    "one_to_one": {}
+                },
+                "fixtures": {},
+                "instrumentation": {},
+                "managers": {},
+                "models": {},
+                "multi-db": {},
+                "optimization": {},
+                "queries": {},
+                "search": {},
+                "sql": {},
+                "tablespaces": {},
+                "transactions": {}
+            },
+            "email": {},
+            "external-packages": {},
+            "files": {},
+            "forms": {
+                "formsets": {},
+                "media": {},
+                "modelforms": {}
+            },
+            "http": {
+                "decorators": {},
+                "file-uploads": {},
+                "generic-views": {},
+                "middleware": {},
+                "sessions": {},
+                "shortcuts": {},
+                "urls": {},
+                "views": {}
+            },
+            "i18n": {
+                "formatting": {},
+                "timezones": {},
+                "translation": {}
+            },
+            "install": {},
+            "logging": {},
+            "migrations": {},
+            "pagination": {},
+            "performance": {},
+            "security": {},
+            "serialization": {},
+            "settings": {},
+            "signals": {},
+            "signing": {},
+            "templates": {},
+            "testing": {
+                "advanced": {},
+                "overview": {},
+                "tools": {}
+            }
+        },
+        "contents": {},
+        "faq": {
+            "admin": {},
+            "contributing": {},
+            "general": {},
+            "help": {},
+            "install": {},
+            "models": {},
+            "troubleshooting": {},
+            "usage": {}
+        },
+        "glossary": {},
+        "howto": {
+            "auth-remote-user": {},
+            "csrf": {},
+            "custom-file-storage": {},
+            "custom-lookups": {},
+            "custom-management-commands": {},
+            "custom-model-fields": {},
+            "custom-template-backend": {},
+            "custom-template-tags": {},
+            "delete-app": {},
+            "deployment": {
+                "asgi": {
+                    "daphne": {},
+                    "hypercorn": {},
+                    "uvicorn": {}
+                },
+                "checklist": {},
+                "wsgi": {
+                    "apache-auth": {},
+                    "gunicorn": {},
+                    "modwsgi": {},
+                    "uwsgi": {}
+                }
+            },
+            "error-reporting": {},
+            "initial-data": {},
+            "legacy-databases": {},
+            "logging": {},
+            "outputting-csv": {},
+            "outputting-pdf": {},
+            "overriding-templates": {},
+            "static-files": {
+                "deployment": {}
+            },
+            "upgrade-version": {},
+            "windows": {},
+            "writing-migrations": {}
+        },
+        "index": {},
+        "internals": {
+            "contributing": {
+                "bugs-and-features": {},
+                "committing-code": {},
+                "localizing": {},
+                "new-contributors": {},
+                "triaging-tickets": {},
+                "writing-code": {
+                    "coding-style": {},
+                    "javascript": {},
+                    "submitting-patches": {},
+                    "unit-tests": {},
+                    "working-with-git": {}
+                },
+                "writing-documentation": {}
+            },
+            "git": {},
+            "howto-release-django": {},
+            "mailing-lists": {},
+            "organization": {},
+            "release-process": {},
+            "security": {}
+        },
+        "intro": {
+            "contributing": {},
+            "install": {},
+            "overview": {},
+            "reusable-apps": {},
+            "tutorial01": {},
+            "tutorial02": {},
+            "tutorial03": {},
+            "tutorial04": {},
+            "tutorial05": {},
+            "tutorial06": {},
+            "tutorial07": {},
+            "tutorial08": {},
+            "whatsnext": {}
+        },
+        "misc": {
+            "api-stability": {},
+            "design-philosophies": {},
+            "distributions": {}
+        }
+    },
+    "5.0": {
+        "contents": {},
+        "faq": {
+            "admin": {},
+            "contributing": {},
+            "general": {},
+            "help": {},
+            "install": {},
+            "models": {},
+            "troubleshooting": {},
+            "usage": {}
+        },
+        "glossary": {},
+        "howto": {
+            "auth-remote-user": {},
+            "csrf": {},
+            "custom-file-storage": {},
+            "custom-lookups": {},
+            "custom-management-commands": {},
+            "custom-model-fields": {},
+            "custom-template-backend": {},
+            "custom-template-tags": {},
+            "delete-app": {},
+            "deployment": {
+                "asgi": {
+                    "daphne": {},
+                    "hypercorn": {},
+                    "uvicorn": {}
+                },
+                "checklist": {},
+                "wsgi": {
+                    "apache-auth": {},
+                    "gunicorn": {},
+                    "modwsgi": {},
+                    "uwsgi": {}
+                }
+            },
+            "error-reporting": {},
+            "initial-data": {},
+            "legacy-databases": {},
+            "logging": {},
+            "outputting-csv": {},
+            "outputting-pdf": {},
+            "overriding-templates": {},
+            "static-files": {
+                "deployment": {}
+            },
+            "upgrade-version": {},
+            "windows": {},
+            "writing-migrations": {}
+        },
+        "index": {},
+        "internals": {
+            "contributing": {
+                "bugs-and-features": {},
+                "committing-code": {},
+                "localizing": {},
+                "new-contributors": {},
+                "triaging-tickets": {},
+                "writing-code": {
+                    "coding-style": {},
+                    "javascript": {},
+                    "submitting-patches": {},
+                    "unit-tests": {},
+                    "working-with-git": {}
+                },
+                "writing-documentation": {}
+            },
+            "git": {},
+            "howto-release-django": {},
+            "mailing-lists": {},
+            "organization": {},
+            "release-process": {},
+            "security": {}
+        },
+        "intro": {
+            "contributing": {},
+            "install": {},
+            "overview": {},
+            "reusable-apps": {},
+            "tutorial01": {},
+            "tutorial02": {},
+            "tutorial03": {},
+            "tutorial04": {},
+            "tutorial05": {},
+            "tutorial06": {},
+            "tutorial07": {},
+            "tutorial08": {},
+            "whatsnext": {}
+        },
+        "misc": {
+            "api-stability": {},
+            "design-philosophies": {},
+            "distributions": {}
+        },
+        "_modules": {
+            "asgiref": {
+                "sync": {}
+            }
+        },
+        "ref": {
+            "applications": {},
+            "checks": {},
+            "class-based-views": {
+                "base": {},
+                "flattened-index": {},
+                "generic-date-based": {},
+                "generic-display": {},
+                "generic-editing": {},
+                "mixins": {},
+                "mixins-date-based": {},
+                "mixins-editing": {},
+                "mixins-multiple-object": {},
+                "mixins-simple": {},
+                "mixins-single-object": {}
+            },
+            "clickjacking": {},
+            "contrib": {
+                "admin": {
+                    "actions": {},
+                    "admindocs": {},
+                    "filters": {},
+                    "javascript": {}
+                },
+                "auth": {},
+                "contenttypes": {},
+                "flatpages": {},
+                "gis": {
+                    "admin": {},
+                    "commands": {},
+                    "db-api": {},
+                    "deployment": {},
+                    "feeds": {},
+                    "forms-api": {},
+                    "functions": {},
+                    "gdal": {},
+                    "geoip2": {},
+                    "geoquerysets": {},
+                    "geos": {},
+                    "install": {
+                        "geolibs": {},
+                        "postgis": {},
+                        "spatialite": {}
+                    },
+                    "layermapping": {},
+                    "measure": {},
+                    "model-api": {},
+                    "ogrinspect": {},
+                    "serializers": {},
+                    "sitemaps": {},
+                    "testing": {},
+                    "tutorial": {},
+                    "utils": {}
+                },
+                "humanize": {},
+                "messages": {},
+                "postgres": {
+                    "aggregates": {},
+                    "constraints": {},
+                    "expressions": {},
+                    "fields": {},
+                    "forms": {},
+                    "functions": {},
+                    "indexes": {},
+                    "lookups": {},
+                    "operations": {},
+                    "search": {},
+                    "validators": {}
+                },
+                "redirects": {},
+                "sitemaps": {},
+                "sites": {},
+                "staticfiles": {},
+                "syndication": {}
+            },
+            "csrf": {},
+            "databases": {},
+            "django-admin": {},
+            "exceptions": {},
+            "files": {
+                "file": {},
+                "storage": {},
+                "uploads": {}
+            },
+            "forms": {
+                "api": {},
+                "fields": {},
+                "formsets": {},
+                "models": {},
+                "renderers": {},
+                "validation": {},
+                "widgets": {}
+            },
+            "logging": {},
+            "middleware": {},
+            "migration-operations": {},
+            "models": {
+                "class": {},
+                "conditional-expressions": {},
+                "constraints": {},
+                "database-functions": {},
+                "expressions": {},
+                "fields": {},
+                "indexes": {},
+                "instances": {},
+                "lookups": {},
+                "meta": {},
+                "options": {},
+                "querysets": {},
+                "relations": {}
+            },
+            "paginator": {},
+            "request-response": {},
+            "schema-editor": {},
+            "settings": {},
+            "signals": {},
+            "template-response": {},
+            "templates": {
+                "api": {},
+                "builtins": {},
+                "language": {}
+            },
+            "unicode": {},
+            "urlresolvers": {},
+            "urls": {},
+            "utils": {},
+            "validators": {},
+            "views": {}
+        },
+        "releases": {
+            "1.0-porting-guide": {},
+            "security": {}
+        },
+        "topics": {
+            "async": {},
+            "auth": {
+                "customizing": {},
+                "default": {},
+                "passwords": {}
+            },
+            "cache": {},
+            "checks": {},
+            "class-based-views": {
+                "generic-display": {},
+                "generic-editing": {},
+                "intro": {},
+                "mixins": {}
+            },
+            "conditional-view-processing": {},
+            "db": {
+                "aggregation": {},
+                "examples": {
+                    "many_to_many": {},
+                    "many_to_one": {},
+                    "one_to_one": {}
+                },
+                "fixtures": {},
+                "instrumentation": {},
+                "managers": {},
+                "models": {},
+                "multi-db": {},
+                "optimization": {},
+                "queries": {},
+                "search": {},
+                "sql": {},
+                "tablespaces": {},
+                "transactions": {}
+            },
+            "email": {},
+            "external-packages": {},
+            "files": {},
+            "forms": {
+                "formsets": {},
+                "media": {},
+                "modelforms": {}
+            },
+            "http": {
+                "decorators": {},
+                "file-uploads": {},
+                "generic-views": {},
+                "middleware": {},
+                "sessions": {},
+                "shortcuts": {},
+                "urls": {},
+                "views": {}
+            },
+            "i18n": {
+                "formatting": {},
+                "timezones": {},
+                "translation": {}
+            },
+            "install": {},
+            "logging": {},
+            "migrations": {},
+            "pagination": {},
+            "performance": {},
+            "security": {},
+            "serialization": {},
+            "settings": {},
+            "signals": {},
+            "signing": {},
+            "templates": {},
+            "testing": {
+                "advanced": {},
+                "overview": {},
+                "tools": {}
+            }
+        }
+    },
+    "4.2": {
+        "contents": {},
+        "faq": {
+            "admin": {},
+            "contributing": {},
+            "general": {},
+            "help": {},
+            "install": {},
+            "models": {},
+            "troubleshooting": {},
+            "usage": {}
+        },
+        "glossary": {},
+        "howto": {
+            "auth-remote-user": {},
+            "csrf": {},
+            "custom-file-storage": {},
+            "custom-lookups": {},
+            "custom-management-commands": {},
+            "custom-model-fields": {},
+            "custom-template-backend": {},
+            "custom-template-tags": {},
+            "delete-app": {},
+            "deployment": {
+                "asgi": {
+                    "daphne": {},
+                    "hypercorn": {},
+                    "uvicorn": {}
+                },
+                "checklist": {},
+                "wsgi": {
+                    "apache-auth": {},
+                    "gunicorn": {},
+                    "modwsgi": {},
+                    "uwsgi": {}
+                }
+            },
+            "error-reporting": {},
+            "initial-data": {},
+            "legacy-databases": {},
+            "logging": {},
+            "outputting-csv": {},
+            "outputting-pdf": {},
+            "overriding-templates": {},
+            "static-files": {
+                "deployment": {}
+            },
+            "upgrade-version": {},
+            "windows": {},
+            "writing-migrations": {}
+        },
+        "index": {},
+        "internals": {
+            "contributing": {
+                "bugs-and-features": {},
+                "committing-code": {},
+                "localizing": {},
+                "new-contributors": {},
+                "triaging-tickets": {},
+                "writing-code": {
+                    "coding-style": {},
+                    "javascript": {},
+                    "submitting-patches": {},
+                    "unit-tests": {},
+                    "working-with-git": {}
+                },
+                "writing-documentation": {}
+            },
+            "git": {},
+            "howto-release-django": {},
+            "mailing-lists": {},
+            "organization": {},
+            "release-process": {},
+            "security": {}
+        },
+        "intro": {
+            "contributing": {},
+            "install": {},
+            "overview": {},
+            "reusable-apps": {},
+            "tutorial01": {},
+            "tutorial02": {},
+            "tutorial03": {},
+            "tutorial04": {},
+            "tutorial05": {},
+            "tutorial06": {},
+            "tutorial07": {},
+            "tutorial08": {},
+            "whatsnext": {}
+        },
+        "misc": {
+            "api-stability": {},
+            "design-philosophies": {},
+            "distributions": {}
+        },
+        "_modules": {},
+        "ref": {
+            "contrib": {
+                "admin": {
+                    "admindocs": {},
+                    "filters": {},
+                    "javascript": {}
+                },
+                "auth": {},
+                "contenttypes": {},
+                "flatpages": {},
+                "gis": {
+                    "admin": {},
+                    "commands": {},
+                    "db-api": {},
+                    "deployment": {},
+                    "feeds": {},
+                    "forms-api": {},
+                    "functions": {},
+                    "gdal": {},
+                    "geoip2": {},
+                    "geoquerysets": {},
+                    "geos": {},
+                    "install": {
+                        "geolibs": {},
+                        "postgis": {},
+                        "spatialite": {}
+                    },
+                    "layermapping": {},
+                    "measure": {},
+                    "model-api": {},
+                    "ogrinspect": {},
+                    "serializers": {},
+                    "sitemaps": {},
+                    "testing": {},
+                    "tutorial": {},
+                    "utils": {}
+                },
+                "humanize": {},
+                "messages": {},
+                "postgres": {
+                    "aggregates": {},
+                    "constraints": {},
+                    "expressions": {},
+                    "fields": {},
+                    "forms": {},
+                    "functions": {},
+                    "indexes": {},
+                    "lookups": {},
+                    "operations": {},
+                    "search": {},
+                    "validators": {}
+                },
+                "redirects": {},
+                "sitemaps": {},
+                "sites": {},
+                "staticfiles": {},
+                "syndication": {}
+            },
+            "csrf": {},
+            "databases": {},
+            "django-admin": {},
+            "exceptions": {},
+            "files": {
+                "file": {},
+                "storage": {},
+                "uploads": {}
+            },
+            "forms": {
+                "api": {},
+                "fields": {},
+                "formsets": {},
+                "models": {},
+                "renderers": {},
+                "validation": {},
+                "widgets": {}
+            },
+            "logging": {},
+            "middleware": {},
+            "migration-operations": {},
+            "models": {
+                "class": {},
+                "conditional-expressions": {},
+                "constraints": {},
+                "database-functions": {},
+                "expressions": {},
+                "fields": {},
+                "indexes": {},
+                "instances": {},
+                "lookups": {},
+                "meta": {},
+                "options": {},
+                "querysets": {},
+                "relations": {}
+            },
+            "paginator": {},
+            "request-response": {},
+            "schema-editor": {},
+            "settings": {},
+            "signals": {},
+            "template-response": {},
+            "templates": {
+                "api": {},
+                "builtins": {},
+                "language": {}
+            },
+            "unicode": {},
+            "urlresolvers": {},
+            "urls": {},
+            "utils": {},
+            "validators": {},
+            "views": {}
+        },
+        "releases": {
+            "1.0-porting-guide": {},
+            "security": {}
+        },
+        "topics": {
+            "async": {},
+            "auth": {
+                "customizing": {},
+                "default": {},
+                "passwords": {}
+            },
+            "cache": {},
+            "checks": {},
+            "class-based-views": {
+                "generic-display": {},
+                "generic-editing": {},
+                "intro": {},
+                "mixins": {}
+            },
+            "conditional-view-processing": {},
+            "db": {
+                "aggregation": {},
+                "examples": {
+                    "many_to_many": {},
+                    "many_to_one": {},
+                    "one_to_one": {}
+                },
+                "fixtures": {},
+                "instrumentation": {},
+                "managers": {},
+                "models": {},
+                "multi-db": {},
+                "optimization": {},
+                "queries": {},
+                "search": {},
+                "sql": {},
+                "tablespaces": {},
+                "transactions": {}
+            },
+            "email": {},
+            "external-packages": {},
+            "files": {},
+            "forms": {
+                "formsets": {},
+                "media": {},
+                "modelforms": {}
+            },
+            "http": {
+                "decorators": {},
+                "file-uploads": {},
+                "generic-views": {},
+                "middleware": {},
+                "sessions": {},
+                "shortcuts": {},
+                "urls": {},
+                "views": {}
+            },
+            "i18n": {
+                "formatting": {},
+                "timezones": {},
+                "translation": {}
+            },
+            "install": {},
+            "logging": {},
+            "migrations": {},
+            "pagination": {},
+            "performance": {},
+            "security": {},
+            "serialization": {},
+            "settings": {},
+            "signals": {},
+            "signing": {},
+            "templates": {},
+            "testing": {
+                "advanced": {},
+                "overview": {},
+                "tools": {}
+            }
+        }
+    },
+    "4.1": {
+        "contents": {},
+        "faq": {
+            "admin": {},
+            "contributing": {},
+            "general": {},
+            "help": {},
+            "install": {},
+            "models": {},
+            "troubleshooting": {},
+            "usage": {}
+        },
+        "glossary": {},
+        "howto": {
+            "auth-remote-user": {},
+            "csrf": {},
+            "custom-file-storage": {},
+            "custom-lookups": {},
+            "custom-management-commands": {},
+            "custom-model-fields": {},
+            "custom-template-backend": {},
+            "custom-template-tags": {},
+            "deployment": {
+                "asgi": {
+                    "daphne": {},
+                    "hypercorn": {},
+                    "uvicorn": {}
+                },
+                "checklist": {},
+                "wsgi": {
+                    "apache-auth": {},
+                    "gunicorn": {},
+                    "modwsgi": {},
+                    "uwsgi": {}
+                }
+            },
+            "error-reporting": {},
+            "initial-data": {},
+            "legacy-databases": {},
+            "logging": {},
+            "outputting-csv": {},
+            "outputting-pdf": {},
+            "overriding-templates": {},
+            "static-files": {
+                "deployment": {}
+            },
+            "upgrade-version": {},
+            "windows": {},
+            "writing-migrations": {}
+        },
+        "index": {},
+        "internals": {
+            "contributing": {
+                "bugs-and-features": {},
+                "committing-code": {},
+                "localizing": {},
+                "new-contributors": {},
+                "triaging-tickets": {},
+                "writing-code": {
+                    "coding-style": {},
+                    "javascript": {},
+                    "submitting-patches": {},
+                    "unit-tests": {},
+                    "working-with-git": {}
+                },
+                "writing-documentation": {}
+            },
+            "git": {},
+            "howto-release-django": {},
+            "mailing-lists": {},
+            "organization": {},
+            "release-process": {},
+            "security": {}
+        },
+        "intro": {
+            "contributing": {},
+            "install": {},
+            "overview": {},
+            "reusable-apps": {},
+            "tutorial01": {},
+            "tutorial02": {},
+            "tutorial03": {},
+            "tutorial04": {},
+            "tutorial05": {},
+            "tutorial06": {},
+            "tutorial07": {},
+            "whatsnext": {}
+        },
+        "misc": {
+            "api-stability": {},
+            "design-philosophies": {},
+            "distributions": {}
+        },
+        "_modules": {
+            "asgiref": {
+                "sync": {}
+            },
+            "django": {
+                "apps": {
+                    "config": {}
+                },
+                "contrib": {
+                    "gis": {
+                        "measure": {}
+                    },
+                    "messages": {
+                        "api": {},
+                        "middleware": {}
+                    },
+                    "postgres": {
+                        "validators": {}
+                    },
+                    "sessions": {
+                        "exceptions": {}
+                    },
+                    "sites": {
+                        "middleware": {}
+                    }
+                },
+                "core": {
+                    "exceptions": {},
+                    "files": {
+                        "base": {},
+                        "images": {},
+                        "storage": {},
+                        "uploadedfile": {},
+                        "uploadhandler": {}
+                    },
+                    "mail": {
+                        "message": {}
+                    },
+                    "paginator": {},
+                    "signing": {},
+                    "validators": {}
+                },
+                "db": {
+                    "transaction": {},
+                    "utils": {}
+                },
+                "dispatch": {
+                    "dispatcher": {}
+                },
+                "middleware": {
+                    "clickjacking": {}
+                },
+                "utils": {
+                    "decorators": {},
+                    "encoding": {},
+                    "feedgenerator": {},
+                    "functional": {},
+                    "html": {},
+                    "http": {},
+                    "module_loading": {},
+                    "safestring": {},
+                    "text": {},
+                    "translation": {}
+                }
+            }
+        },
+        "ref": {
+            "applications": {},
+            "checks": {},
+            "class-based-views": {
+                "base": {},
+                "generic-date-based": {},
+                "generic-display": {},
+                "generic-editing": {},
+                "mixins": {},
+                "mixins-date-based": {},
+                "mixins-editing": {},
+                "mixins-multiple-object": {},
+                "mixins-simple": {},
+                "mixins-single-object": {}
+            },
+            "clickjacking": {},
+            "contrib": {
+                "admin": {
+                    "actions": {},
+                    "admindocs": {},
+                    "filters": {},
+                    "javascript": {}
+                },
+                "auth": {},
+                "contenttypes": {},
+                "flatpages": {},
+                "gis": {
+                    "admin": {},
+                    "commands": {},
+                    "db-api": {},
+                    "deployment": {},
+                    "feeds": {},
+                    "forms-api": {},
+                    "functions": {},
+                    "gdal": {},
+                    "geoip2": {},
+                    "geoquerysets": {},
+                    "geos": {},
+                    "install": {
+                        "geolibs": {},
+                        "postgis": {},
+                        "spatialite": {}
+                    },
+                    "layermapping": {},
+                    "measure": {},
+                    "model-api": {},
+                    "ogrinspect": {},
+                    "serializers": {},
+                    "sitemaps": {},
+                    "testing": {},
+                    "tutorial": {},
+                    "utils": {}
+                },
+                "humanize": {},
+                "messages": {},
+                "postgres": {
+                    "aggregates": {},
+                    "constraints": {},
+                    "expressions": {},
+                    "fields": {},
+                    "forms": {},
+                    "functions": {},
+                    "indexes": {},
+                    "lookups": {},
+                    "operations": {},
+                    "search": {},
+                    "validators": {}
+                },
+                "redirects": {},
+                "sitemaps": {},
+                "sites": {},
+                "staticfiles": {},
+                "syndication": {}
+            },
+            "csrf": {},
+            "databases": {},
+            "django-admin": {},
+            "exceptions": {},
+            "files": {
+                "file": {},
+                "storage": {},
+                "uploads": {}
+            },
+            "forms": {
+                "api": {},
+                "fields": {},
+                "formsets": {},
+                "models": {},
+                "renderers": {},
+                "validation": {},
+                "widgets": {}
+            },
+            "logging": {},
+            "middleware": {},
+            "migration-operations": {},
+            "models": {
+                "class": {},
+                "conditional-expressions": {},
+                "constraints": {},
+                "database-functions": {},
+                "expressions": {},
+                "fields": {},
+                "indexes": {},
+                "instances": {},
+                "lookups": {},
+                "meta": {},
+                "options": {},
+                "querysets": {},
+                "relations": {}
+            },
+            "paginator": {},
+            "request-response": {},
+            "schema-editor": {},
+            "settings": {},
+            "signals": {},
+            "template-response": {},
+            "templates": {
+                "api": {},
+                "builtins": {},
+                "language": {}
+            },
+            "unicode": {},
+            "urlresolvers": {},
+            "urls": {},
+            "utils": {},
+            "validators": {},
+            "views": {}
+        },
+        "releases": {
+            "1.0-porting-guide": {},
+            "security": {}
+        },
+        "topics": {
+            "async": {},
+            "auth": {
+                "customizing": {},
+                "default": {},
+                "passwords": {}
+            },
+            "cache": {},
+            "checks": {},
+            "class-based-views": {
+                "generic-display": {},
+                "generic-editing": {},
+                "intro": {},
+                "mixins": {}
+            },
+            "conditional-view-processing": {},
+            "db": {
+                "aggregation": {},
+                "examples": {
+                    "many_to_many": {},
+                    "many_to_one": {},
+                    "one_to_one": {}
+                },
+                "instrumentation": {},
+                "managers": {},
+                "models": {},
+                "multi-db": {},
+                "optimization": {},
+                "queries": {},
+                "search": {},
+                "sql": {},
+                "tablespaces": {},
+                "transactions": {}
+            },
+            "email": {},
+            "external-packages": {},
+            "files": {},
+            "forms": {
+                "formsets": {},
+                "media": {},
+                "modelforms": {}
+            },
+            "http": {
+                "decorators": {},
+                "file-uploads": {},
+                "middleware": {},
+                "sessions": {},
+                "shortcuts": {},
+                "urls": {},
+                "views": {}
+            },
+            "i18n": {
+                "formatting": {},
+                "timezones": {},
+                "translation": {}
+            },
+            "install": {},
+            "logging": {},
+            "migrations": {},
+            "pagination": {},
+            "performance": {},
+            "security": {},
+            "serialization": {},
+            "settings": {},
+            "signals": {},
+            "signing": {},
+            "templates": {},
+            "testing": {
+                "advanced": {},
+                "overview": {},
+                "tools": {}
+            }
+        }
+    },
+    "4.0": {
+        "contents": {},
+        "faq": {
+            "admin": {},
+            "contributing": {},
+            "general": {},
+            "help": {},
+            "install": {},
+            "models": {},
+            "troubleshooting": {},
+            "usage": {}
+        },
+        "glossary": {},
+        "howto": {
+            "auth-remote-user": {},
+            "custom-file-storage": {},
+            "custom-lookups": {},
+            "custom-management-commands": {},
+            "custom-model-fields": {},
+            "custom-template-backend": {},
+            "custom-template-tags": {},
+            "deployment": {
+                "asgi": {
+                    "daphne": {},
+                    "hypercorn": {},
+                    "uvicorn": {}
+                },
+                "checklist": {},
+                "wsgi": {
+                    "apache-auth": {},
+                    "gunicorn": {},
+                    "modwsgi": {},
+                    "uwsgi": {}
+                }
+            },
+            "error-reporting": {},
+            "initial-data": {},
+            "legacy-databases": {},
+            "logging": {},
+            "outputting-csv": {},
+            "outputting-pdf": {},
+            "overriding-templates": {},
+            "static-files": {
+                "deployment": {}
+            },
+            "upgrade-version": {},
+            "windows": {},
+            "writing-migrations": {}
+        },
+        "index": {},
+        "internals": {
+            "contributing": {
+                "bugs-and-features": {},
+                "committing-code": {},
+                "localizing": {},
+                "new-contributors": {},
+                "triaging-tickets": {},
+                "writing-code": {
+                    "coding-style": {},
+                    "javascript": {},
+                    "submitting-patches": {},
+                    "unit-tests": {},
+                    "working-with-git": {}
+                },
+                "writing-documentation": {}
+            },
+            "git": {},
+            "howto-release-django": {},
+            "mailing-lists": {},
+            "organization": {},
+            "release-process": {},
+            "security": {}
+        },
+        "intro": {
+            "contributing": {},
+            "install": {},
+            "overview": {},
+            "reusable-apps": {},
+            "tutorial01": {},
+            "tutorial02": {},
+            "tutorial03": {},
+            "tutorial04": {},
+            "tutorial05": {},
+            "tutorial06": {},
+            "tutorial07": {},
+            "whatsnext": {}
+        },
+        "misc": {
+            "api-stability": {},
+            "design-philosophies": {},
+            "distributions": {}
+        },
+        "_modules": {
+            "asgiref": {
+                "sync": {}
+            },
+            "django": {
+                "apps": {
+                    "config": {}
+                },
+                "contrib": {
+                    "gis": {
+                        "measure": {}
+                    },
+                    "messages": {
+                        "api": {},
+                        "middleware": {}
+                    },
+                    "postgres": {
+                        "validators": {}
+                    }
+                }
+            }
+        },
+        "ref": {
+            "applications": {},
+            "checks": {},
+            "class-based-views": {
+                "base": {},
+                "flattened-index": {},
+                "generic-date-based": {},
+                "generic-display": {},
+                "generic-editing": {},
+                "mixins": {},
+                "mixins-date-based": {},
+                "mixins-editing": {},
+                "mixins-multiple-object": {},
+                "mixins-simple": {},
+                "mixins-single-object": {}
+            },
+            "clickjacking": {},
+            "contrib": {
+                "admin": {
+                    "actions": {},
+                    "admindocs": {},
+                    "javascript": {}
+                },
+                "auth": {},
+                "contenttypes": {},
+                "flatpages": {},
+                "gis": {
+                    "admin": {},
+                    "commands": {},
+                    "db-api": {},
+                    "deployment": {},
+                    "feeds": {},
+                    "forms-api": {},
+                    "functions": {},
+                    "gdal": {},
+                    "geoip2": {},
+                    "geoquerysets": {},
+                    "geos": {},
+                    "install": {
+                        "geolibs": {},
+                        "postgis": {},
+                        "spatialite": {}
+                    },
+                    "layermapping": {},
+                    "measure": {},
+                    "model-api": {},
+                    "ogrinspect": {},
+                    "serializers": {},
+                    "sitemaps": {},
+                    "testing": {},
+                    "tutorial": {},
+                    "utils": {}
+                },
+                "humanize": {},
+                "messages": {},
+                "postgres": {
+                    "aggregates": {},
+                    "constraints": {},
+                    "expressions": {},
+                    "fields": {},
+                    "forms": {},
+                    "functions": {},
+                    "indexes": {},
+                    "lookups": {},
+                    "operations": {},
+                    "search": {},
+                    "validators": {}
+                },
+                "redirects": {},
+                "sitemaps": {},
+                "sites": {},
+                "staticfiles": {},
+                "syndication": {}
+            },
+            "csrf": {},
+            "databases": {},
+            "django-admin": {},
+            "exceptions": {},
+            "files": {
+                "file": {},
+                "storage": {},
+                "uploads": {}
+            },
+            "forms": {
+                "api": {},
+                "fields": {},
+                "formsets": {},
+                "models": {},
+                "renderers": {},
+                "validation": {},
+                "widgets": {}
+            },
+            "logging": {},
+            "middleware": {},
+            "migration-operations": {},
+            "models": {
+                "class": {},
+                "conditional-expressions": {},
+                "constraints": {},
+                "database-functions": {},
+                "expressions": {},
+                "fields": {},
+                "indexes": {},
+                "instances": {},
+                "lookups": {},
+                "meta": {},
+                "options": {},
+                "querysets": {},
+                "relations": {}
+            },
+            "paginator": {},
+            "request-response": {},
+            "schema-editor": {},
+            "settings": {},
+            "signals": {},
+            "template-response": {},
+            "templates": {
+                "api": {},
+                "builtins": {},
+                "language": {}
+            },
+            "unicode": {},
+            "urlresolvers": {},
+            "urls": {},
+            "utils": {},
+            "validators": {},
+            "views": {}
+        },
+        "releases": {
+            "1.0-porting-guide": {},
+            "security": {}
+        },
+        "topics": {
+            "async": {},
+            "auth": {
+                "customizing": {},
+                "default": {},
+                "passwords": {}
+            },
+            "cache": {},
+            "checks": {},
+            "class-based-views": {
+                "generic-display": {},
+                "generic-editing": {},
+                "intro": {},
+                "mixins": {}
+            },
+            "conditional-view-processing": {},
+            "db": {
+                "aggregation": {},
+                "examples": {
+                    "many_to_many": {},
+                    "many_to_one": {},
+                    "one_to_one": {}
+                },
+                "instrumentation": {},
+                "managers": {},
+                "models": {},
+                "multi-db": {},
+                "optimization": {},
+                "queries": {},
+                "search": {},
+                "sql": {},
+                "tablespaces": {},
+                "transactions": {}
+            },
+            "email": {},
+            "external-packages": {},
+            "files": {},
+            "forms": {
+                "formsets": {},
+                "media": {},
+                "modelforms": {}
+            },
+            "http": {
+                "decorators": {},
+                "file-uploads": {},
+                "generic-views": {},
+                "middleware": {},
+                "sessions": {},
+                "shortcuts": {},
+                "urls": {},
+                "views": {}
+            },
+            "i18n": {
+                "formatting": {},
+                "timezones": {},
+                "translation": {}
+            },
+            "install": {},
+            "logging": {},
+            "migrations": {},
+            "pagination": {},
+            "performance": {},
+            "security": {},
+            "serialization": {},
+            "settings": {},
+            "signals": {},
+            "signing": {},
+            "templates": {},
+            "testing": {
+                "advanced": {},
+                "overview": {},
+                "tools": {}
+            }
+        }
+    },
+    "3.2": {
+        "contents": {},
+        "faq": {
+            "admin": {},
+            "contributing": {},
+            "general": {},
+            "help": {},
+            "install": {},
+            "models": {},
+            "troubleshooting": {},
+            "usage": {}
+        },
+        "glossary": {},
+        "howto": {
+            "auth-remote-user": {},
+            "custom-file-storage": {},
+            "custom-lookups": {},
+            "custom-management-commands": {},
+            "custom-model-fields": {},
+            "custom-template-backend": {},
+            "custom-template-tags": {},
+            "deployment": {
+                "asgi": {
+                    "daphne": {},
+                    "hypercorn": {},
+                    "uvicorn": {}
+                },
+                "checklist": {},
+                "wsgi": {
+                    "apache-auth": {},
+                    "gunicorn": {},
+                    "modwsgi": {},
+                    "uwsgi": {}
+                }
+            },
+            "error-reporting": {},
+            "initial-data": {},
+            "legacy-databases": {},
+            "outputting-csv": {},
+            "outputting-pdf": {},
+            "overriding-templates": {},
+            "static-files": {
+                "deployment": {}
+            },
+            "upgrade-version": {},
+            "windows": {},
+            "writing-migrations": {}
+        },
+        "index": {},
+        "internals": {
+            "contributing": {
+                "bugs-and-features": {},
+                "committing-code": {},
+                "localizing": {},
+                "new-contributors": {},
+                "triaging-tickets": {},
+                "writing-code": {
+                    "coding-style": {},
+                    "javascript": {},
+                    "submitting-patches": {},
+                    "unit-tests": {},
+                    "working-with-git": {}
+                },
+                "writing-documentation": {}
+            },
+            "git": {},
+            "howto-release-django": {},
+            "mailing-lists": {},
+            "organization": {},
+            "release-process": {},
+            "security": {}
+        },
+        "intro": {
+            "contributing": {},
+            "install": {},
+            "overview": {},
+            "reusable-apps": {},
+            "tutorial01": {},
+            "tutorial02": {},
+            "tutorial03": {},
+            "tutorial04": {},
+            "tutorial05": {},
+            "tutorial06": {},
+            "tutorial07": {},
+            "whatsnext": {}
+        },
+        "misc": {
+            "api-stability": {},
+            "design-philosophies": {},
+            "distributions": {}
+        },
+        "ref": {
+            "applications": {},
+            "checks": {},
+            "class-based-views": {
+                "base": {},
+                "flattened-index": {},
+                "generic-date-based": {},
+                "generic-display": {},
+                "generic-editing": {},
+                "mixins-date-based": {},
+                "mixins-editing": {},
+                "mixins-multiple-object": {},
+                "mixins-simple": {},
+                "mixins-single-object": {}
+            },
+            "clickjacking": {},
+            "contrib": {
+                "admin": {
+                    "actions": {},
+                    "admindocs": {},
+                    "javascript": {}
+                },
+                "auth": {},
+                "contenttypes": {},
+                "flatpages": {},
+                "gis": {
+                    "admin": {},
+                    "commands": {},
+                    "db-api": {},
+                    "deployment": {},
+                    "feeds": {},
+                    "forms-api": {},
+                    "functions": {},
+                    "gdal": {},
+                    "geoip2": {},
+                    "geoquerysets": {},
+                    "geos": {},
+                    "install": {
+                        "geolibs": {},
+                        "postgis": {},
+                        "spatialite": {}
+                    },
+                    "layermapping": {},
+                    "measure": {},
+                    "model-api": {},
+                    "ogrinspect": {},
+                    "serializers": {},
+                    "sitemaps": {},
+                    "testing": {},
+                    "tutorial": {},
+                    "utils": {}
+                },
+                "humanize": {},
+                "messages": {},
+                "postgres": {
+                    "aggregates": {},
+                    "constraints": {},
+                    "fields": {},
+                    "forms": {},
+                    "functions": {},
+                    "indexes": {},
+                    "lookups": {},
+                    "operations": {},
+                    "search": {},
+                    "validators": {}
+                },
+                "redirects": {},
+                "sitemaps": {},
+                "sites": {},
+                "staticfiles": {},
+                "syndication": {}
+            },
+            "csrf": {},
+            "databases": {},
+            "django-admin": {},
+            "exceptions": {},
+            "files": {
+                "file": {},
+                "storage": {},
+                "uploads": {}
+            },
+            "forms": {
+                "api": {},
+                "fields": {},
+                "formsets": {},
+                "models": {},
+                "renderers": {},
+                "validation": {},
+                "widgets": {}
+            },
+            "middleware": {},
+            "migration-operations": {},
+            "models": {
+                "class": {},
+                "conditional-expressions": {},
+                "constraints": {},
+                "database-functions": {},
+                "expressions": {},
+                "fields": {},
+                "indexes": {},
+                "instances": {},
+                "lookups": {},
+                "meta": {},
+                "options": {},
+                "querysets": {},
+                "relations": {}
+            },
+            "paginator": {},
+            "request-response": {},
+            "schema-editor": {},
+            "settings": {},
+            "signals": {},
+            "template-response": {},
+            "templates": {
+                "api": {},
+                "builtins": {},
+                "language": {}
+            },
+            "unicode": {},
+            "urlresolvers": {},
+            "urls": {},
+            "utils": {},
+            "validators": {},
+            "views": {}
+        },
+        "releases": {
+            "1.0-porting-guide": {},
+            "security": {}
+        },
+        "topics": {
+            "async": {},
+            "auth": {
+                "customizing": {},
+                "default": {},
+                "passwords": {}
+            },
+            "cache": {},
+            "checks": {},
+            "class-based-views": {
+                "generic-display": {},
+                "generic-editing": {},
+                "intro": {},
+                "mixins": {}
+            },
+            "conditional-view-processing": {},
+            "db": {
+                "aggregation": {},
+                "examples": {
+                    "many_to_many": {},
+                    "many_to_one": {},
+                    "one_to_one": {}
+                },
+                "instrumentation": {},
+                "managers": {},
+                "models": {},
+                "multi-db": {},
+                "optimization": {},
+                "queries": {},
+                "search": {},
+                "sql": {},
+                "tablespaces": {},
+                "transactions": {}
+            },
+            "email": {},
+            "external-packages": {},
+            "files": {},
+            "forms": {
+                "formsets": {},
+                "media": {},
+                "modelforms": {}
+            },
+            "http": {
+                "decorators": {},
+                "file-uploads": {},
+                "generic-views": {},
+                "middleware": {},
+                "sessions": {},
+                "shortcuts": {},
+                "urls": {},
+                "views": {}
+            },
+            "i18n": {
+                "formatting": {},
+                "timezones": {},
+                "translation": {}
+            },
+            "install": {},
+            "logging": {},
+            "migrations": {},
+            "pagination": {},
+            "performance": {},
+            "security": {},
+            "serialization": {},
+            "settings": {},
+            "signals": {},
+            "signing": {},
+            "templates": {},
+            "testing": {
+                "advanced": {},
+                "overview": {},
+                "tools": {}
+            }
+        }
+    },
+    "6.0": {
+        "contents": {},
+        "faq": {
+            "admin": {},
+            "contributing": {},
+            "general": {},
+            "help": {},
+            "install": {},
+            "models": {},
+            "troubleshooting": {},
+            "usage": {}
+        },
+        "glossary": {},
+        "howto": {
+            "auth-remote-user": {},
+            "csp": {},
+            "csrf": {},
+            "custom-file-storage": {},
+            "custom-lookups": {},
+            "custom-management-commands": {},
+            "custom-model-fields": {},
+            "custom-shell": {},
+            "custom-template-backend": {},
+            "custom-template-tags": {},
+            "delete-app": {},
+            "deployment": {
+                "asgi": {
+                    "daphne": {},
+                    "hypercorn": {},
+                    "uvicorn": {}
+                },
+                "checklist": {},
+                "wsgi": {
+                    "apache-auth": {},
+                    "gunicorn": {},
+                    "modwsgi": {},
+                    "uwsgi": {}
+                }
+            },
+            "error-reporting": {},
+            "initial-data": {},
+            "legacy-databases": {},
+            "logging": {},
+            "outputting-csv": {},
+            "outputting-pdf": {},
+            "overriding-templates": {},
+            "static-files": {
+                "deployment": {}
+            },
+            "upgrade-version": {},
+            "windows": {},
+            "writing-migrations": {}
+        },
+        "index": {},
+        "internals": {
+            "contributing": {
+                "accessibility": {},
+                "bugs-and-features": {},
+                "committing-code": {},
+                "localizing": {},
+                "new-contributors": {},
+                "triaging-tickets": {},
+                "writing-code": {
+                    "coding-style": {},
+                    "javascript": {},
+                    "submitting-patches": {},
+                    "unit-tests": {},
+                    "working-with-git": {}
+                },
+                "writing-documentation": {}
+            },
+            "git": {},
+            "howto-release-django": {},
+            "mailing-lists": {},
+            "organization": {},
+            "release-process": {},
+            "security": {}
+        },
+        "intro": {
+            "contributing": {},
+            "install": {},
+            "overview": {},
+            "reusable-apps": {},
+            "tutorial01": {},
+            "tutorial02": {},
+            "tutorial03": {},
+            "tutorial04": {},
+            "tutorial05": {},
+            "tutorial06": {},
+            "tutorial07": {},
+            "tutorial08": {},
+            "whatsnext": {}
+        },
+        "misc": {
+            "api-stability": {},
+            "design-philosophies": {},
+            "distributions": {}
+        },
+        "ref": {
+            "applications": {},
+            "checks": {},
+            "class-based-views": {
+                "base": {},
+                "flattened-index": {},
+                "generic-date-based": {},
+                "generic-display": {},
+                "generic-editing": {},
+                "mixins": {},
+                "mixins-date-based": {},
+                "mixins-editing": {},
+                "mixins-multiple-object": {},
+                "mixins-simple": {},
+                "mixins-single-object": {}
+            },
+            "clickjacking": {},
+            "contrib": {
+                "admin": {
+                    "actions": {},
+                    "admindocs": {},
+                    "filters": {},
+                    "javascript": {}
+                },
+                "auth": {},
+                "contenttypes": {},
+                "flatpages": {},
+                "gis": {
+                    "admin": {},
+                    "commands": {},
+                    "db-api": {},
+                    "deployment": {},
+                    "feeds": {},
+                    "forms-api": {},
+                    "functions": {},
+                    "gdal": {},
+                    "geoip2": {},
+                    "geoquerysets": {},
+                    "geos": {},
+                    "install": {
+                        "geolibs": {},
+                        "postgis": {},
+                        "spatialite": {}
+                    },
+                    "layermapping": {},
+                    "measure": {},
+                    "model-api": {},
+                    "ogrinspect": {},
+                    "serializers": {},
+                    "sitemaps": {},
+                    "testing": {},
+                    "tutorial": {},
+                    "utils": {}
+                },
+                "humanize": {},
+                "messages": {},
+                "postgres": {
+                    "aggregates": {},
+                    "constraints": {},
+                    "expressions": {},
+                    "fields": {},
+                    "forms": {},
+                    "functions": {},
+                    "indexes": {},
+                    "lookups": {},
+                    "operations": {},
+                    "search": {},
+                    "validators": {}
+                },
+                "redirects": {},
+                "sitemaps": {},
+                "sites": {},
+                "staticfiles": {},
+                "syndication": {}
+            },
+            "csp": {},
+            "csrf": {},
+            "databases": {},
+            "django-admin": {},
+            "exceptions": {},
+            "files": {
+                "file": {},
+                "storage": {},
+                "uploads": {}
+            },
+            "forms": {
+                "api": {},
+                "fields": {},
+                "formsets": {},
+                "models": {},
+                "renderers": {},
+                "validation": {},
+                "widgets": {}
+            },
+            "logging": {},
+            "middleware": {},
+            "migration-operations": {},
+            "models": {
+                "class": {},
+                "conditional-expressions": {},
+                "constraints": {},
+                "database-functions": {},
+                "expressions": {},
+                "fields": {},
+                "indexes": {},
+                "instances": {},
+                "lookups": {},
+                "meta": {},
+                "options": {},
+                "querysets": {},
+                "relations": {}
+            },
+            "paginator": {},
+            "request-response": {},
+            "schema-editor": {},
+            "settings": {},
+            "signals": {},
+            "tasks": {},
+            "template-response": {},
+            "templates": {
+                "api": {},
+                "builtins": {},
+                "language": {}
+            },
+            "unicode": {},
+            "urlresolvers": {},
+            "urls": {},
+            "utils": {},
+            "validators": {},
+            "views": {}
+        },
+        "releases": {
+            "1.0-porting-guide": {},
+            "security": {}
+        },
+        "topics": {
+            "async": {},
+            "auth": {
+                "customizing": {},
+                "default": {},
+                "passwords": {}
+            },
+            "cache": {},
+            "checks": {},
+            "class-based-views": {
+                "generic-display": {},
+                "generic-editing": {},
+                "intro": {},
+                "mixins": {}
+            },
+            "composite-primary-key": {},
+            "conditional-view-processing": {},
+            "db": {
+                "aggregation": {},
+                "examples": {
+                    "many_to_many": {},
+                    "many_to_one": {},
+                    "one_to_one": {}
+                },
+                "fixtures": {},
+                "instrumentation": {},
+                "managers": {},
+                "models": {},
+                "multi-db": {},
+                "optimization": {},
+                "queries": {},
+                "search": {},
+                "sql": {},
+                "tablespaces": {},
+                "transactions": {}
+            },
+            "email": {},
+            "external-packages": {},
+            "files": {},
+            "forms": {
+                "formsets": {},
+                "media": {},
+                "modelforms": {}
+            },
+            "http": {
+                "decorators": {},
+                "file-uploads": {},
+                "generic-views": {},
+                "middleware": {},
+                "sessions": {},
+                "shortcuts": {},
+                "urls": {},
+                "views": {}
+            },
+            "i18n": {
+                "formatting": {},
+                "timezones": {},
+                "translation": {}
+            },
+            "install": {},
+            "logging": {},
+            "migrations": {},
+            "pagination": {},
+            "performance": {},
+            "security": {},
+            "serialization": {},
+            "settings": {},
+            "signals": {},
+            "signing": {},
+            "tasks": {},
+            "templates": {},
+            "testing": {
+                "advanced": {},
+                "overview": {},
+                "tools": {}
+            }
+        }
+    },
+    "3.1": {
+        "faq": {
+            "admin": {},
+            "contributing": {},
+            "general": {},
+            "help": {},
+            "install": {},
+            "models": {},
+            "troubleshooting": {},
+            "usage": {}
+        },
+        "glossary": {},
+        "howto": {
+            "auth-remote-user": {},
+            "custom-file-storage": {},
+            "custom-lookups": {},
+            "custom-management-commands": {},
+            "custom-model-fields": {},
+            "custom-template-backend": {},
+            "custom-template-tags": {},
+            "deployment": {
+                "asgi": {
+                    "daphne": {},
+                    "hypercorn": {},
+                    "uvicorn": {}
+                },
+                "checklist": {},
+                "wsgi": {
+                    "apache-auth": {},
+                    "gunicorn": {},
+                    "modwsgi": {},
+                    "uwsgi": {}
+                }
+            },
+            "error-reporting": {},
+            "initial-data": {},
+            "legacy-databases": {},
+            "outputting-csv": {},
+            "outputting-pdf": {},
+            "overriding-templates": {},
+            "static-files": {
+                "deployment": {}
+            },
+            "upgrade-version": {},
+            "windows": {},
+            "writing-migrations": {}
+        },
+        "index": {},
+        "internals": {
+            "contributing": {
+                "bugs-and-features": {},
+                "committing-code": {},
+                "localizing": {},
+                "new-contributors": {},
+                "triaging-tickets": {},
+                "writing-code": {
+                    "coding-style": {},
+                    "javascript": {},
+                    "submitting-patches": {},
+                    "unit-tests": {},
+                    "working-with-git": {}
+                },
+                "writing-documentation": {}
+            },
+            "git": {},
+            "howto-release-django": {},
+            "mailing-lists": {},
+            "organization": {},
+            "release-process": {},
+            "security": {}
+        },
+        "intro": {
+            "contributing": {},
+            "install": {},
+            "overview": {},
+            "reusable-apps": {},
+            "tutorial01": {},
+            "tutorial02": {},
+            "tutorial03": {},
+            "tutorial04": {},
+            "tutorial05": {},
+            "tutorial06": {},
+            "tutorial07": {},
+            "whatsnext": {}
+        },
+        "misc": {
+            "api-stability": {},
+            "design-philosophies": {},
+            "distributions": {}
+        },
+        "_modules": {
+            "django": {
+                "apps": {
+                    "config": {},
+                    "registry": {}
+                },
+                "contrib": {
+                    "gis": {
+                        "measure": {}
+                    },
+                    "sites": {
+                        "shortcuts": {}
+                    }
+                },
+                "core": {
+                    "exceptions": {},
+                    "files": {
+                        "base": {},
+                        "images": {}
+                    }
+                },
+                "utils": {
+                    "decorators": {},
+                    "functional": {},
+                    "module_loading": {},
+                    "safestring": {}
+                }
+            }
+        },
+        "ref": {
+            "applications": {},
+            "checks": {},
+            "class-based-views": {
+                "base": {},
+                "flattened-index": {},
+                "generic-date-based": {},
+                "generic-display": {},
+                "generic-editing": {},
+                "mixins-date-based": {},
+                "mixins-editing": {},
+                "mixins-multiple-object": {},
+                "mixins-simple": {},
+                "mixins-single-object": {}
+            },
+            "clickjacking": {},
+            "contrib": {
+                "admin": {
+                    "actions": {},
+                    "admindocs": {},
+                    "javascript": {}
+                },
+                "auth": {},
+                "contenttypes": {},
+                "flatpages": {},
+                "gis": {
+                    "admin": {},
+                    "commands": {},
+                    "db-api": {},
+                    "deployment": {},
+                    "feeds": {},
+                    "forms-api": {},
+                    "functions": {},
+                    "gdal": {},
+                    "geoip2": {},
+                    "geoquerysets": {},
+                    "geos": {},
+                    "install": {
+                        "geolibs": {},
+                        "postgis": {},
+                        "spatialite": {}
+                    },
+                    "layermapping": {},
+                    "measure": {},
+                    "model-api": {},
+                    "ogrinspect": {},
+                    "serializers": {},
+                    "sitemaps": {},
+                    "testing": {},
+                    "tutorial": {},
+                    "utils": {}
+                },
+                "humanize": {},
+                "messages": {},
+                "postgres": {
+                    "aggregates": {},
+                    "constraints": {},
+                    "fields": {},
+                    "forms": {},
+                    "functions": {},
+                    "indexes": {},
+                    "lookups": {},
+                    "operations": {},
+                    "search": {},
+                    "validators": {}
+                },
+                "redirects": {},
+                "sitemaps": {},
+                "sites": {},
+                "staticfiles": {},
+                "syndication": {}
+            },
+            "csrf": {},
+            "databases": {},
+            "django-admin": {},
+            "exceptions": {},
+            "files": {
+                "file": {},
+                "storage": {},
+                "uploads": {}
+            },
+            "forms": {
+                "api": {},
+                "fields": {},
+                "formsets": {},
+                "models": {},
+                "renderers": {},
+                "validation": {},
+                "widgets": {}
+            },
+            "middleware": {},
+            "migration-operations": {},
+            "models": {
+                "class": {},
+                "conditional-expressions": {},
+                "constraints": {},
+                "database-functions": {},
+                "expressions": {},
+                "fields": {},
+                "indexes": {},
+                "instances": {},
+                "lookups": {},
+                "meta": {},
+                "options": {},
+                "querysets": {},
+                "relations": {}
+            },
+            "paginator": {},
+            "request-response": {},
+            "schema-editor": {},
+            "settings": {},
+            "signals": {},
+            "template-response": {},
+            "templates": {
+                "api": {},
+                "builtins": {},
+                "language": {}
+            },
+            "unicode": {},
+            "urlresolvers": {},
+            "urls": {},
+            "utils": {},
+            "validators": {},
+            "views": {}
+        },
+        "releases": {
+            "1.0-porting-guide": {},
+            "security": {}
+        },
+        "topics": {
+            "async": {},
+            "auth": {
+                "customizing": {},
+                "default": {},
+                "passwords": {}
+            },
+            "cache": {},
+            "checks": {},
+            "class-based-views": {
+                "generic-display": {},
+                "generic-editing": {},
+                "intro": {},
+                "mixins": {}
+            },
+            "conditional-view-processing": {},
+            "db": {
+                "aggregation": {},
+                "examples": {
+                    "many_to_many": {},
+                    "many_to_one": {},
+                    "one_to_one": {}
+                },
+                "instrumentation": {},
+                "managers": {},
+                "models": {},
+                "multi-db": {},
+                "optimization": {},
+                "queries": {},
+                "search": {},
+                "sql": {},
+                "tablespaces": {},
+                "transactions": {}
+            },
+            "email": {},
+            "external-packages": {},
+            "files": {},
+            "forms": {
+                "formsets": {},
+                "media": {},
+                "modelforms": {}
+            },
+            "http": {
+                "decorators": {},
+                "file-uploads": {},
+                "middleware": {},
+                "sessions": {},
+                "shortcuts": {},
+                "urls": {},
+                "views": {}
+            },
+            "i18n": {
+                "formatting": {},
+                "timezones": {},
+                "translation": {}
+            },
+            "install": {},
+            "logging": {},
+            "migrations": {},
+            "pagination": {},
+            "performance": {},
+            "security": {},
+            "serialization": {},
+            "settings": {},
+            "signals": {},
+            "signing": {},
+            "templates": {},
+            "testing": {
+                "advanced": {},
+                "overview": {},
+                "tools": {}
+            }
+        }
+    },
+    "3.0": {
+        "contents": {},
+        "faq": {
+            "admin": {},
+            "contributing": {},
+            "general": {},
+            "help": {},
+            "install": {},
+            "models": {},
+            "troubleshooting": {},
+            "usage": {}
+        },
+        "glossary": {},
+        "howto": {
+            "auth-remote-user": {},
+            "custom-file-storage": {},
+            "custom-lookups": {},
+            "custom-management-commands": {},
+            "custom-model-fields": {},
+            "custom-template-tags": {},
+            "deployment": {
+                "asgi": {
+                    "daphne": {},
+                    "uvicorn": {}
+                },
+                "checklist": {},
+                "wsgi": {
+                    "apache-auth": {},
+                    "gunicorn": {},
+                    "modwsgi": {},
+                    "uwsgi": {}
+                }
+            },
+            "error-reporting": {},
+            "initial-data": {},
+            "legacy-databases": {},
+            "outputting-csv": {},
+            "outputting-pdf": {},
+            "overriding-templates": {},
+            "static-files": {
+                "deployment": {}
+            },
+            "upgrade-version": {},
+            "windows": {},
+            "writing-migrations": {}
+        },
+        "index": {},
+        "internals": {
+            "contributing": {
+                "bugs-and-features": {},
+                "committing-code": {},
+                "localizing": {},
+                "new-contributors": {},
+                "triaging-tickets": {},
+                "writing-code": {
+                    "coding-style": {},
+                    "javascript": {},
+                    "submitting-patches": {},
+                    "unit-tests": {},
+                    "working-with-git": {}
+                },
+                "writing-documentation": {}
+            },
+            "git": {},
+            "howto-release-django": {},
+            "mailing-lists": {},
+            "organization": {},
+            "release-process": {},
+            "security": {}
+        },
+        "intro": {
+            "contributing": {},
+            "install": {},
+            "overview": {},
+            "reusable-apps": {},
+            "tutorial01": {},
+            "tutorial02": {},
+            "tutorial03": {},
+            "tutorial04": {},
+            "tutorial05": {},
+            "tutorial06": {},
+            "tutorial07": {},
+            "whatsnext": {}
+        },
+        "misc": {
+            "api-stability": {},
+            "design-philosophies": {},
+            "distributions": {}
+        },
+        "ref": {
+            "applications": {},
+            "checks": {},
+            "class-based-views": {
+                "base": {},
+                "generic-date-based": {},
+                "generic-display": {},
+                "generic-editing": {},
+                "mixins": {},
+                "mixins-date-based": {},
+                "mixins-editing": {},
+                "mixins-multiple-object": {},
+                "mixins-simple": {},
+                "mixins-single-object": {}
+            },
+            "clickjacking": {},
+            "contrib": {
+                "admin": {
+                    "actions": {},
+                    "admindocs": {},
+                    "javascript": {}
+                },
+                "auth": {},
+                "contenttypes": {},
+                "flatpages": {},
+                "gis": {
+                    "admin": {},
+                    "commands": {},
+                    "db-api": {},
+                    "deployment": {},
+                    "feeds": {},
+                    "forms-api": {},
+                    "functions": {},
+                    "gdal": {},
+                    "geoip2": {},
+                    "geoquerysets": {},
+                    "geos": {},
+                    "install": {
+                        "geolibs": {},
+                        "postgis": {},
+                        "spatialite": {}
+                    },
+                    "layermapping": {},
+                    "measure": {},
+                    "model-api": {},
+                    "ogrinspect": {},
+                    "serializers": {},
+                    "sitemaps": {},
+                    "testing": {},
+                    "tutorial": {},
+                    "utils": {}
+                },
+                "humanize": {},
+                "messages": {},
+                "postgres": {
+                    "aggregates": {},
+                    "constraints": {},
+                    "fields": {},
+                    "forms": {},
+                    "functions": {},
+                    "indexes": {},
+                    "lookups": {},
+                    "operations": {},
+                    "search": {},
+                    "validators": {}
+                },
+                "redirects": {},
+                "sitemaps": {},
+                "sites": {},
+                "staticfiles": {},
+                "syndication": {}
+            },
+            "csrf": {},
+            "databases": {},
+            "django-admin": {},
+            "exceptions": {},
+            "files": {
+                "file": {},
+                "storage": {},
+                "uploads": {}
+            },
+            "forms": {
+                "api": {},
+                "fields": {},
+                "formsets": {},
+                "models": {},
+                "renderers": {},
+                "validation": {},
+                "widgets": {}
+            },
+            "middleware": {},
+            "migration-operations": {},
+            "models": {
+                "class": {},
+                "conditional-expressions": {},
+                "constraints": {},
+                "database-functions": {},
+                "expressions": {},
+                "fields": {},
+                "indexes": {},
+                "instances": {},
+                "lookups": {},
+                "meta": {},
+                "options": {},
+                "querysets": {},
+                "relations": {}
+            },
+            "paginator": {},
+            "request-response": {},
+            "schema-editor": {},
+            "settings": {},
+            "signals": {},
+            "template-response": {},
+            "templates": {
+                "api": {},
+                "builtins": {},
+                "language": {}
+            },
+            "unicode": {},
+            "urlresolvers": {},
+            "urls": {},
+            "utils": {},
+            "validators": {},
+            "views": {}
+        },
+        "releases": {
+            "1.0-porting-guide": {},
+            "security": {}
+        },
+        "topics": {
+            "async": {},
+            "auth": {
+                "customizing": {},
+                "default": {},
+                "passwords": {}
+            },
+            "cache": {},
+            "checks": {},
+            "class-based-views": {
+                "generic-display": {},
+                "generic-editing": {},
+                "intro": {},
+                "mixins": {}
+            },
+            "conditional-view-processing": {},
+            "db": {
+                "aggregation": {},
+                "examples": {
+                    "many_to_many": {},
+                    "many_to_one": {},
+                    "one_to_one": {}
+                },
+                "instrumentation": {},
+                "managers": {},
+                "models": {},
+                "multi-db": {},
+                "optimization": {},
+                "queries": {},
+                "search": {},
+                "sql": {},
+                "tablespaces": {},
+                "transactions": {}
+            },
+            "email": {},
+            "external-packages": {},
+            "files": {},
+            "forms": {
+                "formsets": {},
+                "media": {},
+                "modelforms": {}
+            },
+            "http": {
+                "decorators": {},
+                "file-uploads": {},
+                "middleware": {},
+                "sessions": {},
+                "shortcuts": {},
+                "urls": {},
+                "views": {}
+            },
+            "i18n": {
+                "formatting": {},
+                "timezones": {},
+                "translation": {}
+            },
+            "install": {},
+            "logging": {},
+            "migrations": {},
+            "pagination": {},
+            "performance": {},
+            "security": {},
+            "serialization": {},
+            "settings": {},
+            "signals": {},
+            "signing": {},
+            "templates": {},
+            "testing": {
+                "advanced": {},
+                "overview": {},
+                "tools": {}
+            }
+        }
+    },
+    "2.2": {
+        "contents": {},
+        "faq": {
+            "admin": {},
+            "contributing": {},
+            "general": {},
+            "help": {},
+            "install": {},
+            "models": {},
+            "troubleshooting": {},
+            "usage": {}
+        },
+        "glossary": {},
+        "howto": {
+            "auth-remote-user": {},
+            "custom-file-storage": {},
+            "custom-lookups": {},
+            "custom-management-commands": {},
+            "custom-model-fields": {},
+            "custom-template-tags": {},
+            "deployment": {
+                "checklist": {},
+                "wsgi": {
+                    "apache-auth": {},
+                    "gunicorn": {},
+                    "modwsgi": {},
+                    "uwsgi": {}
+                }
+            },
+            "error-reporting": {},
+            "initial-data": {},
+            "jython": {},
+            "legacy-databases": {},
+            "outputting-csv": {},
+            "outputting-pdf": {},
+            "overriding-templates": {},
+            "static-files": {
+                "deployment": {}
+            },
+            "upgrade-version": {},
+            "windows": {},
+            "writing-migrations": {}
+        },
+        "index": {},
+        "internals": {
+            "contributing": {
+                "bugs-and-features": {},
+                "committing-code": {},
+                "localizing": {},
+                "new-contributors": {},
+                "triaging-tickets": {},
+                "writing-code": {
+                    "coding-style": {},
+                    "javascript": {},
+                    "submitting-patches": {},
+                    "unit-tests": {},
+                    "working-with-git": {}
+                },
+                "writing-documentation": {}
+            },
+            "git": {},
+            "howto-release-django": {},
+            "mailing-lists": {},
+            "organization": {},
+            "release-process": {},
+            "security": {}
+        },
+        "intro": {
+            "contributing": {},
+            "install": {},
+            "overview": {},
+            "reusable-apps": {},
+            "tutorial01": {},
+            "tutorial02": {},
+            "tutorial03": {},
+            "tutorial04": {},
+            "tutorial05": {},
+            "tutorial06": {},
+            "tutorial07": {},
+            "whatsnext": {}
+        },
+        "misc": {
+            "api-stability": {},
+            "design-philosophies": {},
+            "distributions": {}
+        },
+        "_modules": {
+            "unittest": {
+                "suite": {}
+            }
+        },
+        "ref": {
+            "applications": {},
+            "checks": {},
+            "class-based-views": {
+                "base": {},
+                "generic-date-based": {},
+                "generic-display": {},
+                "generic-editing": {},
+                "mixins": {},
+                "mixins-date-based": {},
+                "mixins-editing": {},
+                "mixins-multiple-object": {},
+                "mixins-simple": {},
+                "mixins-single-object": {}
+            },
+            "clickjacking": {},
+            "contrib": {
+                "admin": {
+                    "actions": {},
+                    "admindocs": {},
+                    "javascript": {}
+                },
+                "auth": {},
+                "contenttypes": {},
+                "flatpages": {},
+                "gis": {
+                    "admin": {},
+                    "commands": {},
+                    "db-api": {},
+                    "deployment": {},
+                    "feeds": {},
+                    "forms-api": {},
+                    "functions": {},
+                    "gdal": {},
+                    "geoip2": {},
+                    "geoquerysets": {},
+                    "geos": {},
+                    "install": {
+                        "geolibs": {},
+                        "postgis": {},
+                        "spatialite": {}
+                    },
+                    "layermapping": {},
+                    "measure": {},
+                    "model-api": {},
+                    "serializers": {},
+                    "sitemaps": {},
+                    "testing": {},
+                    "tutorial": {},
+                    "utils": {}
+                },
+                "humanize": {},
+                "messages": {},
+                "postgres": {
+                    "aggregates": {},
+                    "fields": {},
+                    "forms": {},
+                    "functions": {},
+                    "indexes": {},
+                    "lookups": {},
+                    "operations": {},
+                    "search": {},
+                    "validators": {}
+                },
+                "redirects": {},
+                "sitemaps": {},
+                "sites": {},
+                "staticfiles": {},
+                "syndication": {}
+            },
+            "csrf": {},
+            "databases": {},
+            "django-admin": {},
+            "exceptions": {},
+            "files": {
+                "file": {},
+                "storage": {},
+                "uploads": {}
+            },
+            "forms": {
+                "api": {},
+                "fields": {},
+                "formsets": {},
+                "models": {},
+                "renderers": {},
+                "validation": {},
+                "widgets": {}
+            },
+            "middleware": {},
+            "migration-operations": {},
+            "models": {
+                "class": {},
+                "conditional-expressions": {},
+                "constraints": {},
+                "database-functions": {},
+                "expressions": {},
+                "fields": {},
+                "indexes": {},
+                "instances": {},
+                "lookups": {},
+                "meta": {},
+                "options": {},
+                "querysets": {},
+                "relations": {}
+            },
+            "request-response": {},
+            "schema-editor": {},
+            "settings": {},
+            "signals": {},
+            "template-response": {},
+            "templates": {
+                "api": {},
+                "builtins": {},
+                "language": {}
+            },
+            "unicode": {},
+            "urlresolvers": {},
+            "urls": {},
+            "utils": {},
+            "validators": {},
+            "views": {}
+        },
+        "releases": {
+            "1.0-porting-guide": {},
+            "security": {}
+        },
+        "topics": {
+            "auth": {
+                "customizing": {},
+                "default": {},
+                "passwords": {}
+            },
+            "cache": {},
+            "checks": {},
+            "class-based-views": {
+                "generic-display": {},
+                "generic-editing": {},
+                "intro": {},
+                "mixins": {}
+            },
+            "conditional-view-processing": {},
+            "db": {
+                "aggregation": {},
+                "examples": {
+                    "many_to_many": {},
+                    "many_to_one": {},
+                    "one_to_one": {}
+                },
+                "instrumentation": {},
+                "managers": {},
+                "models": {},
+                "multi-db": {},
+                "optimization": {},
+                "queries": {},
+                "search": {},
+                "sql": {},
+                "tablespaces": {},
+                "transactions": {}
+            },
+            "email": {},
+            "external-packages": {},
+            "files": {},
+            "forms": {
+                "formsets": {},
+                "media": {},
+                "modelforms": {}
+            },
+            "http": {
+                "decorators": {},
+                "file-uploads": {},
+                "middleware": {},
+                "sessions": {},
+                "shortcuts": {},
+                "urls": {},
+                "views": {}
+            },
+            "i18n": {
+                "formatting": {},
+                "timezones": {},
+                "translation": {}
+            },
+            "install": {},
+            "logging": {},
+            "migrations": {},
+            "pagination": {},
+            "performance": {},
+            "security": {},
+            "serialization": {},
+            "settings": {},
+            "signals": {},
+            "signing": {},
+            "templates": {},
+            "testing": {
+                "advanced": {},
+                "overview": {},
+                "tools": {}
+            }
+        }
+    },
+    "2.1": {
+        "contents": {},
+        "faq": {
+            "admin": {},
+            "contributing": {},
+            "general": {},
+            "help": {},
+            "install": {},
+            "models": {},
+            "troubleshooting": {},
+            "usage": {}
+        },
+        "glossary": {},
+        "howto": {
+            "auth-remote-user": {},
+            "custom-file-storage": {},
+            "custom-lookups": {},
+            "custom-management-commands": {},
+            "custom-model-fields": {},
+            "custom-template-tags": {},
+            "deployment": {
+                "checklist": {},
+                "wsgi": {
+                    "apache-auth": {},
+                    "gunicorn": {},
+                    "modwsgi": {},
+                    "uwsgi": {}
+                }
+            },
+            "error-reporting": {},
+            "initial-data": {},
+            "jython": {},
+            "legacy-databases": {},
+            "outputting-csv": {},
+            "outputting-pdf": {},
+            "overriding-templates": {},
+            "static-files": {
+                "deployment": {}
+            },
+            "upgrade-version": {},
+            "windows": {},
+            "writing-migrations": {}
+        },
+        "index": {},
+        "internals": {
+            "contributing": {
+                "bugs-and-features": {},
+                "committing-code": {},
+                "localizing": {},
+                "new-contributors": {},
+                "triaging-tickets": {},
+                "writing-code": {
+                    "coding-style": {},
+                    "javascript": {},
+                    "submitting-patches": {},
+                    "unit-tests": {},
+                    "working-with-git": {}
+                },
+                "writing-documentation": {}
+            },
+            "git": {},
+            "howto-release-django": {},
+            "mailing-lists": {},
+            "organization": {},
+            "release-process": {},
+            "security": {}
+        },
+        "intro": {
+            "contributing": {},
+            "install": {},
+            "overview": {},
+            "reusable-apps": {},
+            "tutorial01": {},
+            "tutorial02": {},
+            "tutorial03": {},
+            "tutorial04": {},
+            "tutorial05": {},
+            "tutorial06": {},
+            "tutorial07": {},
+            "whatsnext": {}
+        },
+        "misc": {
+            "api-stability": {},
+            "design-philosophies": {},
+            "distributions": {}
+        },
+        "ref": {
+            "applications": {},
+            "checks": {},
+            "class-based-views": {
+                "base": {},
+                "flattened-index": {},
+                "generic-date-based": {},
+                "generic-display": {},
+                "generic-editing": {},
+                "mixins-date-based": {},
+                "mixins-editing": {},
+                "mixins-multiple-object": {},
+                "mixins-simple": {},
+                "mixins-single-object": {}
+            },
+            "clickjacking": {},
+            "contrib": {
+                "admin": {
+                    "actions": {},
+                    "admindocs": {},
+                    "javascript": {}
+                },
+                "auth": {},
+                "contenttypes": {},
+                "flatpages": {},
+                "gis": {
+                    "admin": {},
+                    "commands": {},
+                    "db-api": {},
+                    "deployment": {},
+                    "feeds": {},
+                    "forms-api": {},
+                    "functions": {},
+                    "gdal": {},
+                    "geoip2": {},
+                    "geoquerysets": {},
+                    "geos": {},
+                    "install": {
+                        "geolibs": {},
+                        "postgis": {},
+                        "spatialite": {}
+                    },
+                    "layermapping": {},
+                    "measure": {},
+                    "model-api": {},
+                    "ogrinspect": {},
+                    "serializers": {},
+                    "sitemaps": {},
+                    "testing": {},
+                    "tutorial": {},
+                    "utils": {}
+                },
+                "humanize": {},
+                "messages": {},
+                "postgres": {
+                    "aggregates": {},
+                    "fields": {},
+                    "forms": {},
+                    "functions": {},
+                    "indexes": {},
+                    "lookups": {},
+                    "operations": {},
+                    "search": {},
+                    "validators": {}
+                },
+                "redirects": {},
+                "sitemaps": {},
+                "sites": {},
+                "staticfiles": {},
+                "syndication": {}
+            },
+            "csrf": {},
+            "databases": {},
+            "django-admin": {},
+            "exceptions": {},
+            "files": {
+                "file": {},
+                "storage": {},
+                "uploads": {}
+            },
+            "forms": {
+                "api": {},
+                "fields": {},
+                "formsets": {},
+                "models": {},
+                "renderers": {},
+                "validation": {},
+                "widgets": {}
+            },
+            "middleware": {},
+            "migration-operations": {},
+            "models": {
+                "class": {},
+                "conditional-expressions": {},
+                "database-functions": {},
+                "expressions": {},
+                "fields": {},
+                "indexes": {},
+                "instances": {},
+                "lookups": {},
+                "meta": {},
+                "options": {},
+                "querysets": {},
+                "relations": {}
+            },
+            "request-response": {},
+            "schema-editor": {},
+            "settings": {},
+            "signals": {},
+            "template-response": {},
+            "templates": {
+                "api": {},
+                "builtins": {},
+                "language": {}
+            },
+            "unicode": {},
+            "urlresolvers": {},
+            "urls": {},
+            "utils": {},
+            "validators": {},
+            "views": {}
+        },
+        "releases": {
+            "1.0-porting-guide": {},
+            "security": {}
+        },
+        "topics": {
+            "auth": {
+                "customizing": {},
+                "default": {},
+                "passwords": {}
+            },
+            "cache": {},
+            "checks": {},
+            "class-based-views": {
+                "generic-display": {},
+                "generic-editing": {},
+                "intro": {},
+                "mixins": {}
+            },
+            "conditional-view-processing": {},
+            "db": {
+                "aggregation": {},
+                "examples": {
+                    "many_to_many": {},
+                    "many_to_one": {},
+                    "one_to_one": {}
+                },
+                "instrumentation": {},
+                "managers": {},
+                "models": {},
+                "multi-db": {},
+                "optimization": {},
+                "queries": {},
+                "search": {},
+                "sql": {},
+                "tablespaces": {},
+                "transactions": {}
+            },
+            "email": {},
+            "external-packages": {},
+            "files": {},
+            "forms": {
+                "formsets": {},
+                "media": {},
+                "modelforms": {}
+            },
+            "http": {
+                "decorators": {},
+                "file-uploads": {},
+                "middleware": {},
+                "sessions": {},
+                "shortcuts": {},
+                "urls": {},
+                "views": {}
+            },
+            "i18n": {
+                "formatting": {},
+                "timezones": {},
+                "translation": {}
+            },
+            "install": {},
+            "logging": {},
+            "migrations": {},
+            "pagination": {},
+            "performance": {},
+            "security": {},
+            "serialization": {},
+            "settings": {},
+            "signals": {},
+            "signing": {},
+            "templates": {},
+            "testing": {
+                "advanced": {},
+                "overview": {},
+                "tools": {}
+            }
+        }
+    },
+    "2.0": {
+        "contents": {},
+        "faq": {
+            "admin": {},
+            "contributing": {},
+            "general": {},
+            "help": {},
+            "install": {},
+            "models": {},
+            "troubleshooting": {},
+            "usage": {}
+        },
+        "glossary": {},
+        "howto": {
+            "auth-remote-user": {},
+            "custom-file-storage": {},
+            "custom-lookups": {},
+            "custom-management-commands": {},
+            "custom-model-fields": {},
+            "custom-template-tags": {},
+            "deployment": {
+                "checklist": {},
+                "wsgi": {
+                    "apache-auth": {},
+                    "gunicorn": {},
+                    "modwsgi": {},
+                    "uwsgi": {}
+                }
+            },
+            "error-reporting": {},
+            "initial-data": {},
+            "jython": {},
+            "legacy-databases": {},
+            "outputting-csv": {},
+            "outputting-pdf": {},
+            "overriding-templates": {},
+            "static-files": {
+                "deployment": {}
+            },
+            "upgrade-version": {},
+            "windows": {},
+            "writing-migrations": {}
+        },
+        "index": {},
+        "internals": {
+            "contributing": {
+                "bugs-and-features": {},
+                "committing-code": {},
+                "localizing": {},
+                "new-contributors": {},
+                "triaging-tickets": {},
+                "writing-code": {
+                    "coding-style": {},
+                    "javascript": {},
+                    "submitting-patches": {},
+                    "unit-tests": {},
+                    "working-with-git": {}
+                },
+                "writing-documentation": {}
+            },
+            "git": {},
+            "howto-release-django": {},
+            "mailing-lists": {},
+            "organization": {},
+            "release-process": {},
+            "security": {}
+        },
+        "intro": {
+            "contributing": {},
+            "install": {},
+            "overview": {},
+            "reusable-apps": {},
+            "tutorial01": {},
+            "tutorial02": {},
+            "tutorial03": {},
+            "tutorial04": {},
+            "tutorial05": {},
+            "tutorial06": {},
+            "tutorial07": {},
+            "whatsnext": {}
+        },
+        "misc": {
+            "api-stability": {},
+            "design-philosophies": {},
+            "distributions": {}
+        },
+        "ref": {
+            "applications": {},
+            "checks": {},
+            "class-based-views": {
+                "base": {},
+                "flattened-index": {},
+                "generic-date-based": {},
+                "generic-display": {},
+                "generic-editing": {},
+                "mixins": {},
+                "mixins-date-based": {},
+                "mixins-editing": {},
+                "mixins-multiple-object": {},
+                "mixins-simple": {},
+                "mixins-single-object": {}
+            },
+            "clickjacking": {},
+            "contrib": {
+                "admin": {
+                    "actions": {},
+                    "admindocs": {},
+                    "javascript": {}
+                },
+                "auth": {},
+                "contenttypes": {},
+                "flatpages": {},
+                "gis": {
+                    "admin": {},
+                    "commands": {},
+                    "db-api": {},
+                    "deployment": {},
+                    "feeds": {},
+                    "forms-api": {},
+                    "functions": {},
+                    "gdal": {},
+                    "geoip2": {},
+                    "geoquerysets": {},
+                    "geos": {},
+                    "install": {
+                        "geolibs": {},
+                        "postgis": {},
+                        "spatialite": {}
+                    },
+                    "layermapping": {},
+                    "measure": {},
+                    "model-api": {},
+                    "ogrinspect": {},
+                    "serializers": {},
+                    "sitemaps": {},
+                    "testing": {},
+                    "tutorial": {},
+                    "utils": {}
+                },
+                "humanize": {},
+                "messages": {},
+                "postgres": {
+                    "aggregates": {},
+                    "fields": {},
+                    "forms": {},
+                    "functions": {},
+                    "indexes": {},
+                    "lookups": {},
+                    "operations": {},
+                    "search": {},
+                    "validators": {}
+                },
+                "redirects": {},
+                "sitemaps": {},
+                "sites": {},
+                "staticfiles": {},
+                "syndication": {}
+            },
+            "csrf": {},
+            "databases": {},
+            "django-admin": {},
+            "exceptions": {},
+            "files": {
+                "file": {},
+                "storage": {},
+                "uploads": {}
+            },
+            "forms": {
+                "api": {},
+                "fields": {},
+                "formsets": {},
+                "models": {},
+                "renderers": {},
+                "validation": {},
+                "widgets": {}
+            },
+            "middleware": {},
+            "migration-operations": {},
+            "models": {
+                "class": {},
+                "conditional-expressions": {},
+                "database-functions": {},
+                "expressions": {},
+                "fields": {},
+                "indexes": {},
+                "instances": {},
+                "lookups": {},
+                "meta": {},
+                "options": {},
+                "querysets": {},
+                "relations": {}
+            },
+            "request-response": {},
+            "schema-editor": {},
+            "settings": {},
+            "signals": {},
+            "template-response": {},
+            "templates": {
+                "api": {},
+                "builtins": {},
+                "language": {}
+            },
+            "unicode": {},
+            "urlresolvers": {},
+            "urls": {},
+            "utils": {},
+            "validators": {},
+            "views": {}
+        },
+        "releases": {
+            "1.0-porting-guide": {},
+            "security": {}
+        },
+        "topics": {
+            "auth": {
+                "customizing": {},
+                "default": {},
+                "passwords": {}
+            },
+            "cache": {},
+            "checks": {},
+            "class-based-views": {
+                "generic-display": {},
+                "generic-editing": {},
+                "intro": {},
+                "mixins": {}
+            },
+            "conditional-view-processing": {},
+            "db": {
+                "aggregation": {},
+                "examples": {
+                    "many_to_many": {},
+                    "many_to_one": {},
+                    "one_to_one": {}
+                },
+                "instrumentation": {},
+                "managers": {},
+                "models": {},
+                "multi-db": {},
+                "optimization": {},
+                "queries": {},
+                "search": {},
+                "sql": {},
+                "tablespaces": {},
+                "transactions": {}
+            },
+            "email": {},
+            "external-packages": {},
+            "files": {},
+            "forms": {
+                "formsets": {},
+                "media": {},
+                "modelforms": {}
+            },
+            "http": {
+                "decorators": {},
+                "file-uploads": {},
+                "middleware": {},
+                "sessions": {},
+                "shortcuts": {},
+                "urls": {},
+                "views": {}
+            },
+            "i18n": {
+                "formatting": {},
+                "timezones": {},
+                "translation": {}
+            },
+            "install": {},
+            "logging": {},
+            "migrations": {},
+            "pagination": {},
+            "performance": {},
+            "security": {},
+            "serialization": {},
+            "settings": {},
+            "signals": {},
+            "signing": {},
+            "templates": {},
+            "testing": {
+                "advanced": {},
+                "overview": {},
+                "tools": {}
+            }
+        }
+    },
+    "1.8": {
+        "faq": {
+            "admin": {},
+            "contributing": {},
+            "general": {},
+            "help": {},
+            "install": {},
+            "models": {},
+            "troubleshooting": {},
+            "usage": {}
+        },
+        "glossary": {},
+        "howto": {
+            "auth-remote-user": {},
+            "custom-file-storage": {},
+            "custom-lookups": {},
+            "custom-management-commands": {},
+            "custom-model-fields": {},
+            "custom-template-tags": {},
+            "deployment": {
+                "checklist": {},
+                "fastcgi": {},
+                "wsgi": {
+                    "apache-auth": {},
+                    "gunicorn": {},
+                    "modwsgi": {},
+                    "uwsgi": {}
+                }
+            },
+            "error-reporting": {},
+            "initial-data": {},
+            "jython": {},
+            "legacy-databases": {},
+            "outputting-csv": {},
+            "outputting-pdf": {},
+            "static-files": {
+                "deployment": {}
+            },
+            "upgrade-version": {},
+            "windows": {},
+            "writing-migrations": {}
+        },
+        "index": {},
+        "internals": {
+            "contributing": {
+                "bugs-and-features": {},
+                "committing-code": {},
+                "localizing": {},
+                "new-contributors": {},
+                "triaging-tickets": {},
+                "writing-code": {
+                    "coding-style": {},
+                    "submitting-patches": {},
+                    "unit-tests": {},
+                    "working-with-git": {}
+                },
+                "writing-documentation": {}
+            },
+            "git": {},
+            "howto-release-django": {},
+            "mailing-lists": {},
+            "organization": {},
+            "release-process": {},
+            "roles": {},
+            "security": {},
+            "team": {}
+        },
+        "intro": {
+            "contributing": {},
+            "install": {},
+            "overview": {},
+            "reusable-apps": {},
+            "tutorial01": {},
+            "tutorial02": {},
+            "tutorial03": {},
+            "tutorial04": {},
+            "tutorial05": {},
+            "tutorial06": {},
+            "whatsnext": {}
+        },
+        "misc": {
+            "api-stability": {},
+            "design-philosophies": {},
+            "distributions": {}
+        },
+        "ref": {
+            "applications": {},
+            "checks": {},
+            "class-based-views": {
+                "base": {},
+                "flattened-index": {},
+                "generic-date-based": {},
+                "generic-display": {},
+                "generic-editing": {},
+                "mixins": {},
+                "mixins-date-based": {},
+                "mixins-editing": {},
+                "mixins-multiple-object": {},
+                "mixins-simple": {},
+                "mixins-single-object": {}
+            },
+            "clickjacking": {},
+            "contrib": {
+                "admin": {
+                    "actions": {},
+                    "admindocs": {}
+                },
+                "auth": {},
+                "contenttypes": {},
+                "flatpages": {},
+                "formtools": {},
+                "gis": {
+                    "admin": {},
+                    "commands": {},
+                    "db-api": {},
+                    "deployment": {},
+                    "feeds": {},
+                    "forms-api": {},
+                    "gdal": {},
+                    "geoip": {},
+                    "geoquerysets": {},
+                    "geos": {},
+                    "install": {
+                        "geolibs": {},
+                        "postgis": {},
+                        "spatialite": {}
+                    },
+                    "layermapping": {},
+                    "measure": {},
+                    "model-api": {},
+                    "serializers": {},
+                    "sitemaps": {},
+                    "testing": {},
+                    "tutorial": {},
+                    "utils": {}
+                },
+                "humanize": {},
+                "messages": {},
+                "postgres": {
+                    "fields": {},
+                    "forms": {},
+                    "lookups": {},
+                    "operations": {},
+                    "validators": {}
+                },
+                "redirects": {},
+                "sitemaps": {},
+                "sites": {},
+                "staticfiles": {},
+                "syndication": {},
+                "webdesign": {}
+            },
+            "csrf": {},
+            "databases": {},
+            "django-admin": {},
+            "exceptions": {},
+            "files": {
+                "file": {},
+                "storage": {},
+                "uploads": {}
+            },
+            "forms": {
+                "api": {},
+                "fields": {},
+                "formsets": {},
+                "models": {},
+                "validation": {},
+                "widgets": {}
+            },
+            "middleware": {},
+            "migration-operations": {},
+            "models": {
+                "class": {},
+                "conditional-expressions": {},
+                "database-functions": {},
+                "expressions": {},
+                "fields": {},
+                "instances": {},
+                "lookups": {},
+                "meta": {},
+                "options": {},
+                "querysets": {},
+                "relations": {}
+            },
+            "request-response": {},
+            "schema-editor": {},
+            "settings": {},
+            "signals": {},
+            "template-response": {},
+            "templates": {
+                "api": {},
+                "builtins": {},
+                "language": {},
+                "upgrading": {}
+            },
+            "unicode": {},
+            "urlresolvers": {},
+            "urls": {},
+            "utils": {},
+            "validators": {},
+            "views": {}
+        },
+        "releases": {
+            "1.0-porting-guide": {},
+            "security": {}
+        },
+        "topics": {
+            "auth": {
+                "customizing": {},
+                "default": {},
+                "passwords": {}
+            },
+            "cache": {},
+            "checks": {},
+            "class-based-views": {
+                "generic-display": {},
+                "generic-editing": {},
+                "intro": {},
+                "mixins": {}
+            },
+            "conditional-view-processing": {},
+            "db": {
+                "aggregation": {},
+                "examples": {
+                    "many_to_many": {},
+                    "many_to_one": {},
+                    "one_to_one": {}
+                },
+                "managers": {},
+                "models": {},
+                "multi-db": {},
+                "optimization": {},
+                "queries": {},
+                "sql": {},
+                "tablespaces": {},
+                "transactions": {}
+            },
+            "email": {},
+            "files": {},
+            "forms": {
+                "formsets": {},
+                "media": {},
+                "modelforms": {}
+            },
+            "http": {
+                "decorators": {},
+                "file-uploads": {},
+                "middleware": {},
+                "sessions": {},
+                "shortcuts": {},
+                "urls": {},
+                "views": {}
+            },
+            "i18n": {
+                "formatting": {},
+                "timezones": {},
+                "translation": {}
+            },
+            "install": {},
+            "localflavor": {},
+            "logging": {},
+            "migrations": {},
+            "pagination": {},
+            "performance": {},
+            "python3": {},
+            "security": {},
+            "serialization": {},
+            "settings": {},
+            "signals": {},
+            "signing": {},
+            "templates": {},
+            "testing": {
+                "advanced": {},
+                "overview": {},
+                "tools": {}
+            }
+        }
+    },
+    "1.11": {
+        "contents": {},
+        "faq": {
+            "admin": {},
+            "contributing": {},
+            "general": {},
+            "help": {},
+            "install": {},
+            "models": {},
+            "troubleshooting": {},
+            "usage": {}
+        },
+        "glossary": {},
+        "howto": {
+            "auth-remote-user": {},
+            "custom-file-storage": {},
+            "custom-lookups": {},
+            "custom-management-commands": {},
+            "custom-model-fields": {},
+            "custom-template-tags": {},
+            "deployment": {
+                "checklist": {},
+                "wsgi": {
+                    "apache-auth": {},
+                    "gunicorn": {},
+                    "modwsgi": {},
+                    "uwsgi": {}
+                }
+            },
+            "error-reporting": {},
+            "initial-data": {},
+            "jython": {},
+            "legacy-databases": {},
+            "outputting-csv": {},
+            "outputting-pdf": {},
+            "overriding-templates": {},
+            "static-files": {
+                "deployment": {}
+            },
+            "upgrade-version": {},
+            "windows": {},
+            "writing-migrations": {}
+        },
+        "index": {},
+        "internals": {
+            "contributing": {
+                "bugs-and-features": {},
+                "committing-code": {},
+                "localizing": {},
+                "new-contributors": {},
+                "triaging-tickets": {},
+                "writing-code": {
+                    "coding-style": {},
+                    "javascript": {},
+                    "submitting-patches": {},
+                    "unit-tests": {},
+                    "working-with-git": {}
+                },
+                "writing-documentation": {}
+            },
+            "git": {},
+            "howto-release-django": {},
+            "mailing-lists": {},
+            "organization": {},
+            "release-process": {},
+            "security": {}
+        },
+        "intro": {
+            "contributing": {},
+            "install": {},
+            "overview": {},
+            "reusable-apps": {},
+            "tutorial01": {},
+            "tutorial02": {},
+            "tutorial03": {},
+            "tutorial04": {},
+            "tutorial05": {},
+            "tutorial06": {},
+            "tutorial07": {},
+            "whatsnext": {}
+        },
+        "misc": {
+            "api-stability": {},
+            "design-philosophies": {},
+            "distributions": {}
+        },
+        "ref": {
+            "applications": {},
+            "checks": {},
+            "class-based-views": {
+                "base": {},
+                "flattened-index": {},
+                "generic-date-based": {},
+                "generic-display": {},
+                "generic-editing": {},
+                "mixins": {},
+                "mixins-date-based": {},
+                "mixins-editing": {},
+                "mixins-multiple-object": {},
+                "mixins-simple": {},
+                "mixins-single-object": {}
+            },
+            "clickjacking": {},
+            "contrib": {
+                "admin": {
+                    "actions": {},
+                    "admindocs": {},
+                    "javascript": {}
+                },
+                "auth": {},
+                "contenttypes": {},
+                "flatpages": {},
+                "gis": {
+                    "admin": {},
+                    "commands": {},
+                    "db-api": {},
+                    "deployment": {},
+                    "feeds": {},
+                    "forms-api": {},
+                    "gdal": {},
+                    "geoip": {},
+                    "geoip2": {},
+                    "geoquerysets": {},
+                    "geos": {},
+                    "install": {
+                        "geolibs": {},
+                        "postgis": {},
+                        "spatialite": {}
+                    },
+                    "layermapping": {},
+                    "measure": {},
+                    "model-api": {},
+                    "serializers": {},
+                    "sitemaps": {},
+                    "testing": {},
+                    "tutorial": {},
+                    "utils": {}
+                },
+                "humanize": {},
+                "messages": {},
+                "postgres": {
+                    "aggregates": {},
+                    "fields": {},
+                    "forms": {},
+                    "functions": {},
+                    "indexes": {},
+                    "lookups": {},
+                    "operations": {},
+                    "search": {},
+                    "validators": {}
+                },
+                "redirects": {},
+                "sitemaps": {},
+                "sites": {},
+                "staticfiles": {},
+                "syndication": {}
+            },
+            "csrf": {},
+            "databases": {},
+            "django-admin": {},
+            "exceptions": {},
+            "files": {
+                "file": {},
+                "storage": {},
+                "uploads": {}
+            },
+            "forms": {
+                "api": {},
+                "fields": {},
+                "formsets": {},
+                "models": {},
+                "renderers": {},
+                "validation": {},
+                "widgets": {}
+            },
+            "middleware": {},
+            "migration-operations": {},
+            "models": {
+                "class": {},
+                "conditional-expressions": {},
+                "database-functions": {},
+                "expressions": {},
+                "fields": {},
+                "indexes": {},
+                "instances": {},
+                "lookups": {},
+                "meta": {},
+                "options": {},
+                "querysets": {},
+                "relations": {}
+            },
+            "request-response": {},
+            "schema-editor": {},
+            "settings": {},
+            "signals": {},
+            "template-response": {},
+            "templates": {
+                "api": {},
+                "builtins": {},
+                "language": {},
+                "upgrading": {}
+            },
+            "unicode": {},
+            "urlresolvers": {},
+            "urls": {},
+            "utils": {},
+            "validators": {},
+            "views": {}
+        },
+        "releases": {
+            "1.0-porting-guide": {},
+            "security": {}
+        },
+        "topics": {
+            "auth": {
+                "customizing": {},
+                "default": {},
+                "passwords": {}
+            },
+            "cache": {},
+            "checks": {},
+            "class-based-views": {
+                "generic-display": {},
+                "generic-editing": {},
+                "intro": {},
+                "mixins": {}
+            },
+            "conditional-view-processing": {},
+            "db": {
+                "aggregation": {},
+                "examples": {
+                    "many_to_many": {},
+                    "many_to_one": {},
+                    "one_to_one": {}
+                },
+                "managers": {},
+                "models": {},
+                "multi-db": {},
+                "optimization": {},
+                "queries": {},
+                "search": {},
+                "sql": {},
+                "tablespaces": {},
+                "transactions": {}
+            },
+            "email": {},
+            "files": {},
+            "forms": {
+                "formsets": {},
+                "media": {},
+                "modelforms": {}
+            },
+            "http": {
+                "decorators": {},
+                "file-uploads": {},
+                "middleware": {},
+                "sessions": {},
+                "shortcuts": {},
+                "urls": {},
+                "views": {}
+            },
+            "i18n": {
+                "formatting": {},
+                "timezones": {},
+                "translation": {}
+            },
+            "install": {},
+            "logging": {},
+            "migrations": {},
+            "pagination": {},
+            "performance": {},
+            "python3": {},
+            "security": {},
+            "serialization": {},
+            "settings": {},
+            "signals": {},
+            "signing": {},
+            "templates": {},
+            "testing": {
+                "advanced": {},
+                "overview": {},
+                "tools": {}
+            }
+        }
+    },
+    "5.2": {
+        "contents": {},
+        "faq": {
+            "admin": {},
+            "contributing": {},
+            "general": {},
+            "help": {},
+            "install": {},
+            "models": {},
+            "troubleshooting": {},
+            "usage": {}
+        },
+        "glossary": {},
+        "howto": {
+            "auth-remote-user": {},
+            "csrf": {},
+            "custom-file-storage": {},
+            "custom-lookups": {},
+            "custom-management-commands": {},
+            "custom-model-fields": {},
+            "custom-shell": {},
+            "custom-template-backend": {},
+            "custom-template-tags": {},
+            "delete-app": {},
+            "deployment": {
+                "asgi": {
+                    "daphne": {},
+                    "hypercorn": {},
+                    "uvicorn": {}
+                },
+                "checklist": {},
+                "wsgi": {
+                    "apache-auth": {},
+                    "gunicorn": {},
+                    "modwsgi": {},
+                    "uwsgi": {}
+                }
+            },
+            "error-reporting": {},
+            "initial-data": {},
+            "legacy-databases": {},
+            "logging": {},
+            "outputting-csv": {},
+            "outputting-pdf": {},
+            "overriding-templates": {},
+            "static-files": {
+                "deployment": {}
+            },
+            "upgrade-version": {},
+            "windows": {},
+            "writing-migrations": {}
+        },
+        "index": {},
+        "internals": {
+            "contributing": {
+                "accessibility": {},
+                "bugs-and-features": {},
+                "committing-code": {},
+                "localizing": {},
+                "new-contributors": {},
+                "triaging-tickets": {},
+                "writing-code": {
+                    "coding-style": {},
+                    "javascript": {},
+                    "submitting-patches": {},
+                    "unit-tests": {},
+                    "working-with-git": {}
+                },
+                "writing-documentation": {}
+            },
+            "git": {},
+            "howto-release-django": {},
+            "mailing-lists": {},
+            "organization": {},
+            "release-process": {},
+            "security": {}
+        },
+        "intro": {
+            "contributing": {},
+            "install": {},
+            "overview": {},
+            "reusable-apps": {},
+            "tutorial01": {},
+            "tutorial02": {},
+            "tutorial03": {},
+            "tutorial04": {},
+            "tutorial05": {},
+            "tutorial06": {},
+            "tutorial07": {},
+            "tutorial08": {},
+            "whatsnext": {}
+        },
+        "misc": {
+            "api-stability": {},
+            "design-philosophies": {},
+            "distributions": {}
+        },
+        "ref": {
+            "applications": {},
+            "checks": {},
+            "class-based-views": {
+                "base": {},
+                "flattened-index": {},
+                "generic-date-based": {},
+                "generic-display": {},
+                "generic-editing": {},
+                "mixins": {},
+                "mixins-date-based": {},
+                "mixins-editing": {},
+                "mixins-multiple-object": {},
+                "mixins-simple": {},
+                "mixins-single-object": {}
+            },
+            "clickjacking": {},
+            "contrib": {
+                "admin": {
+                    "actions": {},
+                    "admindocs": {},
+                    "filters": {},
+                    "javascript": {}
+                },
+                "auth": {},
+                "contenttypes": {},
+                "flatpages": {},
+                "gis": {
+                    "admin": {},
+                    "commands": {},
+                    "db-api": {},
+                    "deployment": {},
+                    "feeds": {},
+                    "forms-api": {},
+                    "functions": {},
+                    "gdal": {},
+                    "geoip2": {},
+                    "geoquerysets": {},
+                    "geos": {},
+                    "install": {
+                        "geolibs": {},
+                        "postgis": {},
+                        "spatialite": {}
+                    },
+                    "layermapping": {},
+                    "measure": {},
+                    "model-api": {},
+                    "ogrinspect": {},
+                    "serializers": {},
+                    "sitemaps": {},
+                    "testing": {},
+                    "tutorial": {},
+                    "utils": {}
+                },
+                "humanize": {},
+                "messages": {},
+                "postgres": {
+                    "aggregates": {},
+                    "constraints": {},
+                    "expressions": {},
+                    "fields": {},
+                    "forms": {},
+                    "functions": {},
+                    "indexes": {},
+                    "lookups": {},
+                    "operations": {},
+                    "search": {},
+                    "validators": {}
+                },
+                "redirects": {},
+                "sitemaps": {},
+                "sites": {},
+                "staticfiles": {},
+                "syndication": {}
+            },
+            "csrf": {},
+            "databases": {},
+            "django-admin": {},
+            "exceptions": {},
+            "files": {
+                "file": {},
+                "storage": {},
+                "uploads": {}
+            },
+            "forms": {
+                "api": {},
+                "fields": {},
+                "formsets": {},
+                "models": {},
+                "renderers": {},
+                "validation": {},
+                "widgets": {}
+            },
+            "logging": {},
+            "middleware": {},
+            "migration-operations": {},
+            "models": {
+                "class": {},
+                "conditional-expressions": {},
+                "constraints": {},
+                "database-functions": {},
+                "expressions": {},
+                "fields": {},
+                "indexes": {},
+                "instances": {},
+                "lookups": {},
+                "meta": {},
+                "options": {},
+                "querysets": {},
+                "relations": {}
+            },
+            "paginator": {},
+            "request-response": {},
+            "schema-editor": {},
+            "settings": {},
+            "signals": {},
+            "template-response": {},
+            "templates": {
+                "api": {},
+                "builtins": {},
+                "language": {}
+            },
+            "unicode": {},
+            "urlresolvers": {},
+            "urls": {},
+            "utils": {},
+            "validators": {},
+            "views": {}
+        },
+        "releases": {
+            "1.0-porting-guide": {},
+            "security": {}
+        },
+        "topics": {
+            "async": {},
+            "auth": {
+                "customizing": {},
+                "default": {},
+                "passwords": {}
+            },
+            "cache": {},
+            "checks": {},
+            "class-based-views": {
+                "generic-display": {},
+                "generic-editing": {},
+                "intro": {},
+                "mixins": {}
+            },
+            "composite-primary-key": {},
+            "conditional-view-processing": {},
+            "db": {
+                "aggregation": {},
+                "examples": {
+                    "many_to_many": {},
+                    "many_to_one": {},
+                    "one_to_one": {}
+                },
+                "fixtures": {},
+                "instrumentation": {},
+                "managers": {},
+                "models": {},
+                "multi-db": {},
+                "optimization": {},
+                "queries": {},
+                "search": {},
+                "sql": {},
+                "tablespaces": {},
+                "transactions": {}
+            },
+            "email": {},
+            "external-packages": {},
+            "files": {},
+            "forms": {
+                "formsets": {},
+                "media": {},
+                "modelforms": {}
+            },
+            "http": {
+                "decorators": {},
+                "file-uploads": {},
+                "generic-views": {},
+                "middleware": {},
+                "sessions": {},
+                "shortcuts": {},
+                "urls": {},
+                "views": {}
+            },
+            "i18n": {
+                "formatting": {},
+                "timezones": {},
+                "translation": {}
+            },
+            "install": {},
+            "logging": {},
+            "migrations": {},
+            "pagination": {},
+            "performance": {},
+            "security": {},
+            "serialization": {},
+            "settings": {},
+            "signals": {},
+            "signing": {},
+            "templates": {},
+            "testing": {
+                "advanced": {},
+                "overview": {},
+                "tools": {}
+            }
+        }
+    },
+    "1.10": {
+        "contents": {},
+        "faq": {
+            "admin": {},
+            "contributing": {},
+            "general": {},
+            "help": {},
+            "install": {},
+            "models": {},
+            "troubleshooting": {},
+            "usage": {}
+        },
+        "glossary": {},
+        "howto": {
+            "auth-remote-user": {},
+            "custom-file-storage": {},
+            "custom-lookups": {},
+            "custom-management-commands": {},
+            "custom-model-fields": {},
+            "custom-template-tags": {},
+            "deployment": {
+                "checklist": {},
+                "wsgi": {
+                    "apache-auth": {},
+                    "gunicorn": {},
+                    "modwsgi": {},
+                    "uwsgi": {}
+                }
+            },
+            "error-reporting": {},
+            "initial-data": {},
+            "jython": {},
+            "legacy-databases": {},
+            "outputting-csv": {},
+            "outputting-pdf": {},
+            "static-files": {
+                "deployment": {}
+            },
+            "upgrade-version": {},
+            "windows": {},
+            "writing-migrations": {}
+        },
+        "index": {},
+        "internals": {
+            "contributing": {
+                "bugs-and-features": {},
+                "committing-code": {},
+                "localizing": {},
+                "new-contributors": {},
+                "triaging-tickets": {},
+                "writing-code": {
+                    "coding-style": {},
+                    "javascript": {},
+                    "submitting-patches": {},
+                    "unit-tests": {},
+                    "working-with-git": {}
+                },
+                "writing-documentation": {}
+            },
+            "git": {},
+            "howto-release-django": {},
+            "mailing-lists": {},
+            "organization": {},
+            "release-process": {},
+            "security": {}
+        },
+        "intro": {
+            "contributing": {},
+            "install": {},
+            "overview": {},
+            "reusable-apps": {},
+            "tutorial01": {},
+            "tutorial02": {},
+            "tutorial03": {},
+            "tutorial04": {},
+            "tutorial05": {},
+            "tutorial06": {},
+            "tutorial07": {},
+            "whatsnext": {}
+        },
+        "misc": {
+            "api-stability": {},
+            "design-philosophies": {},
+            "distributions": {}
+        },
+        "ref": {
+            "applications": {},
+            "checks": {},
+            "class-based-views": {
+                "base": {},
+                "flattened-index": {},
+                "generic-date-based": {},
+                "generic-display": {},
+                "generic-editing": {},
+                "mixins": {},
+                "mixins-date-based": {},
+                "mixins-editing": {},
+                "mixins-multiple-object": {},
+                "mixins-simple": {},
+                "mixins-single-object": {}
+            },
+            "clickjacking": {},
+            "contrib": {
+                "admin": {
+                    "actions": {},
+                    "admindocs": {},
+                    "javascript": {}
+                },
+                "auth": {},
+                "contenttypes": {},
+                "flatpages": {},
+                "gis": {
+                    "admin": {},
+                    "commands": {},
+                    "db-api": {},
+                    "deployment": {},
+                    "feeds": {},
+                    "forms-api": {},
+                    "functions": {},
+                    "gdal": {},
+                    "geoip": {},
+                    "geoip2": {},
+                    "geoquerysets": {},
+                    "geos": {},
+                    "install": {
+                        "geolibs": {},
+                        "postgis": {},
+                        "spatialite": {}
+                    },
+                    "layermapping": {},
+                    "measure": {},
+                    "model-api": {},
+                    "serializers": {},
+                    "sitemaps": {},
+                    "testing": {},
+                    "tutorial": {},
+                    "utils": {}
+                },
+                "humanize": {},
+                "messages": {},
+                "postgres": {
+                    "aggregates": {},
+                    "fields": {},
+                    "forms": {},
+                    "functions": {},
+                    "lookups": {},
+                    "operations": {},
+                    "search": {},
+                    "validators": {}
+                },
+                "redirects": {},
+                "sitemaps": {},
+                "sites": {},
+                "staticfiles": {},
+                "syndication": {}
+            },
+            "csrf": {},
+            "databases": {},
+            "django-admin": {},
+            "exceptions": {},
+            "files": {
+                "file": {},
+                "storage": {},
+                "uploads": {}
+            },
+            "forms": {
+                "api": {},
+                "fields": {},
+                "formsets": {},
+                "models": {},
+                "validation": {},
+                "widgets": {}
+            },
+            "middleware": {},
+            "migration-operations": {},
+            "models": {
+                "class": {},
+                "conditional-expressions": {},
+                "database-functions": {},
+                "expressions": {},
+                "fields": {},
+                "instances": {},
+                "lookups": {},
+                "meta": {},
+                "options": {},
+                "querysets": {},
+                "relations": {}
+            },
+            "request-response": {},
+            "schema-editor": {},
+            "settings": {},
+            "signals": {},
+            "template-response": {},
+            "templates": {
+                "api": {},
+                "builtins": {},
+                "language": {},
+                "upgrading": {}
+            },
+            "unicode": {},
+            "urlresolvers": {},
+            "urls": {},
+            "utils": {},
+            "validators": {},
+            "views": {}
+        },
+        "releases": {
+            "1.0-porting-guide": {},
+            "security": {}
+        },
+        "topics": {
+            "auth": {
+                "customizing": {},
+                "default": {},
+                "passwords": {}
+            },
+            "cache": {},
+            "checks": {},
+            "class-based-views": {
+                "generic-display": {},
+                "generic-editing": {},
+                "intro": {},
+                "mixins": {}
+            },
+            "conditional-view-processing": {},
+            "db": {
+                "aggregation": {},
+                "examples": {
+                    "many_to_many": {},
+                    "many_to_one": {},
+                    "one_to_one": {}
+                },
+                "managers": {},
+                "models": {},
+                "multi-db": {},
+                "optimization": {},
+                "queries": {},
+                "search": {},
+                "sql": {},
+                "tablespaces": {},
+                "transactions": {}
+            },
+            "email": {},
+            "external-packages": {},
+            "files": {},
+            "forms": {
+                "formsets": {},
+                "media": {},
+                "modelforms": {}
+            },
+            "http": {
+                "decorators": {},
+                "file-uploads": {},
+                "middleware": {},
+                "sessions": {},
+                "shortcuts": {},
+                "urls": {},
+                "views": {}
+            },
+            "i18n": {
+                "formatting": {},
+                "timezones": {},
+                "translation": {}
+            },
+            "install": {},
+            "logging": {},
+            "migrations": {},
+            "pagination": {},
+            "performance": {},
+            "python3": {},
+            "security": {},
+            "serialization": {},
+            "settings": {},
+            "signals": {},
+            "signing": {},
+            "templates": {},
+            "testing": {
+                "advanced": {},
+                "overview": {},
+                "tools": {}
+            }
+        }
+    }
+}
