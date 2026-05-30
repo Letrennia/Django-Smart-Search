@@ -6,7 +6,6 @@ input_dir = "../clean_data"
 input_keywords = "../wordlists_dir/keywords.txt"
 input_methods = "../wordlists_dir/methods.txt"
 
-
 magic_word_dictionary = {}
 
 # Wyrazy z pliku keywords
@@ -23,7 +22,11 @@ for filename in os.listdir(input_dir):
 
     if "[TEXT]" in content:
         text = content.split("[TEXT]")[1].split("[VECTOR]")[0].strip()
+        # keywords
         words = re.findall(r"[A-Za-z0-9_.]+", text.lower())
+        # # methods
+        # words = re.findall(r"[\w.]+\(\)", text.lower())
+        # words = [word.split(".")[-1] for word in words]
 
         for word in words:
             if word in magic_words:
@@ -43,6 +46,8 @@ for word in sorted(magic_word_dictionary.keys()):
 
 with open("../BM25/keyword_document_count.json", "w", encoding="utf-8") as file:
     json.dump(sorted_dict, file, ensure_ascii=False, indent=4)
+
+print(len(sorted_dict.items()))
 
 # for word, articles in magic_word_dictionary.items():
 #     print(word)
