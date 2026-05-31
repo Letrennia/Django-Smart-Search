@@ -1,0 +1,62 @@
+[ID]
+2649
+[URL]
+https://docs.djangoproject.com/en/3.2/howto/
+[TEXT]
+"How-to" guides 
+Here you'll find short answers to "How do I….?" types of questions. These
+how-to guides don't cover topics in depth – you'll find that material in the
+Using Django and the API Reference. However, these guides will help
+you quickly accomplish common tasks.
+Authentication using REMOTE_USER
+Writing custom django-admin commands
+Writing custom model fields
+Custom Lookups
+Custom template backend
+Custom template tags and filters
+Writing a custom storage system
+Deploying Django
+Upgrading Django to a newer version
+Error reporting
+Providing initial data for models
+Integrating Django with a legacy database
+Outputting CSV with Django
+Outputting PDFs with Django
+Overriding templates
+Managing static files (e.g. images, JavaScript, CSS)
+Deploying static files
+How to install Django on Windows
+Writing database migrations
+See also
+The Django community aggregator, where we aggregate content from the
+global Django community. Many writers in the aggregator write this sort of
+how-to material.
+"How-to" guides 
+Here you'll find short answers to "How do I….?" types of questions. These
+how-to guides don't cover topics in depth – you'll find that material in the
+Using Django and the API Reference. However, these guides will help
+you quickly accomplish common tasks.
+Authentication using REMOTE_USER
+Writing custom django-admin commands
+Writing custom model fields
+Custom Lookups
+Custom template backend
+Custom template tags and filters
+Writing a custom storage system
+Deploying Django
+Upgrading Django to a newer version
+Error reporting
+Providing initial data for models
+Integrating Django with a legacy database
+Outputting CSV with Django
+Outputting PDFs with Django
+Overriding templates
+Managing static files (e.g. images, JavaScript, CSS)
+Deploying static files
+How to install Django on Windows
+Writing database migrations
+See also
+The Django community aggregator, where we aggregate content from the
+global Django community. Many writers in the aggregator write this sort of
+how-to material.
+[VECTOR]

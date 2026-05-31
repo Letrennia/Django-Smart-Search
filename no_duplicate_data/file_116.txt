@@ -1,0 +1,26 @@
+[ID]
+116
+[URL]
+https://docs.djangoproject.com/en/dev/ref/contrib/gis/admin/
+[TEXT]
+GeoDjango's admin site 
+GISModelAdmin 
+class GISModelAdmin[source] 
+gis_widget 
+The widget class to be used for
+GeometryField. Defaults to
+OSMWidget.
+gis_widget_kwargs 
+The keyword arguments that would be passed to the gis_widget.
+Defaults to an empty dictionary.
+GeoDjango's admin site 
+GISModelAdmin 
+class GISModelAdmin[source] 
+gis_widget 
+The widget class to be used for
+GeometryField. Defaults to
+OSMWidget.
+gis_widget_kwargs 
+The keyword arguments that would be passed to the gis_widget.
+Defaults to an empty dictionary.
+[VECTOR]

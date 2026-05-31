@@ -1,0 +1,74 @@
+[ID]
+5529
+[URL]
+https://docs.djangoproject.com/en/1.11/ref/models/indexes/
+[TEXT]
+Model index reference 
+New in Django 1.11. 
+Index classes ease creating database indexes. They can be added using the
+Meta.indexes option. This document
+explains the API references of Index which includes the index
+options.
+Referencing built-in indexes
+Indexes are defined in django.db.models.indexes, but for convenience
+they're imported into django.db.models. The standard convention is
+to use from django.db import models and refer to the indexes as
+models.<IndexClass>.
+Index options 
+class Index(fields=[], name=None)[source] 
+Creates an index (B-Tree) in the database.
+fields 
+Index.fields 
+A list of the name of the fields on which the index is desired.
+By default, indexes are created with an ascending order for each column. To
+define an index with a descending order for a column, add a hyphen before the
+field's name.
+For example Index(fields=['headline', '-pub_date']) would create SQL with
+(headline, pub_date DESC). Index ordering isn't supported on MySQL. In that
+case, a descending index is created as a normal index.
+Support for column ordering on SQLite
+Column ordering is supported on SQLite 3.3.0+ and only for some database
+file formats. Refer to the SQLite docs for specifics.
+name 
+Index.name 
+The name of the index. If name isn't provided Django will auto-generate a
+name. For compatibility with different databases, index names cannot be longer
+than 30 characters and shouldn't start with a number (0-9) or underscore (_).
+See also
+For a list of PostgreSQL-specific indexes, see
+django.contrib.postgres.indexes.
+Model index reference 
+New in Django 1.11. 
+Index classes ease creating database indexes. They can be added using the
+Meta.indexes option. This document
+explains the API references of Index which includes the index
+options.
+Referencing built-in indexes
+Indexes are defined in django.db.models.indexes, but for convenience
+they're imported into django.db.models. The standard convention is
+to use from django.db import models and refer to the indexes as
+models.<IndexClass>.
+Index options 
+class Index(fields=[], name=None)[source] 
+Creates an index (B-Tree) in the database.
+fields 
+Index.fields 
+A list of the name of the fields on which the index is desired.
+By default, indexes are created with an ascending order for each column. To
+define an index with a descending order for a column, add a hyphen before the
+field's name.
+For example Index(fields=['headline', '-pub_date']) would create SQL with
+(headline, pub_date DESC). Index ordering isn't supported on MySQL. In that
+case, a descending index is created as a normal index.
+Support for column ordering on SQLite
+Column ordering is supported on SQLite 3.3.0+ and only for some database
+file formats. Refer to the SQLite docs for specifics.
+name 
+Index.name 
+The name of the index. If name isn't provided Django will auto-generate a
+name. For compatibility with different databases, index names cannot be longer
+than 30 characters and shouldn't start with a number (0-9) or underscore (_).
+See also
+For a list of PostgreSQL-specific indexes, see
+django.contrib.postgres.indexes.
+[VECTOR]

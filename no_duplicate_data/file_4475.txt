@@ -1,0 +1,308 @@
+[ID]
+4475
+[URL]
+https://docs.djangoproject.com/en/2.0/internals/git/
+[TEXT]
+The Django source code repository 
+When deploying a Django application into a real production environment, you
+will almost always want to use an official packaged release of Django.
+However, if you'd like to try out in-development code from an upcoming release
+or contribute to the development of Django, you'll need to obtain a clone of
+Django's source code repository.
+This document covers the way the code repository is laid out and how to work
+with and find things in it.
+High-level overview 
+The Django source code repository uses Git to track changes to the code
+over time, so you'll need a copy of the Git client (a program called git)
+on your computer, and you'll want to familiarize yourself with the basics of
+how Git works.
+Git's website offers downloads for various operating systems. The site also
+contains vast amounts of documentation.
+The Django Git repository is located online at github.com/django/django. It contains the full source code for all
+Django releases, which you can browse online.
+The Git repository includes several branches:
+master contains the main in-development code which will become
+the next packaged release of Django. This is where most development
+activity is focused.
+stable/A.B.x are the branches where release preparation work happens.
+They are also used for bugfix and security releases which occur as necessary
+after the initial release of a feature version.
+soc20XX/<project> branches were used by students who worked on Django
+during the 2009 and 2010 Google Summer of Code programs.
+attic/<project> branches were used to develop major or experimental new
+features without affecting the rest of Django's code.
+The Git repository also contains tags. These are the exact revisions from
+which packaged Django releases were produced, since version 1.0.
+The source code for the Djangoproject.com
+website can be found at github.com/django/djangoproject.com.
+The master branch 
+If you'd like to try out the in-development code for the next release of
+Django, or if you'd like to contribute to Django by fixing bugs or developing
+new features, you'll want to get the code from the master branch.
+Note that this will get all of Django: in addition to the top-level
+django module containing Python code, you'll also get a copy of Django's
+documentation, test suite, packaging scripts and other miscellaneous bits.
+Django's code will be present in your clone as a directory named
+django.
+To try out the in-development code with your own applications, simply place
+the directory containing your clone on your Python import path. Then
+import statements which look for Django will find the django module
+within your clone.
+If you're going to be working on Django's code (say, to fix a bug or
+develop a new feature), you can probably stop reading here and move
+over to the documentation for contributing to Django, which covers things like the preferred
+coding style and how to generate and submit a patch.
+Other branches 
+Django uses branches to prepare for releases of Django.
+In the past when Django was hosted on Subversion, branches were also used for
+feature development. Now Django is hosted on Git and feature development is
+done on contributor's forks, but the Subversion feature branches remain in Git
+for historical reference.
+Stable branches 
+These branches can be found in the repository as stable/A.B.x
+branches and will be created right after the first alpha is tagged.
+For example, immediately after Django 1.5 alpha 1 was tagged, the branch
+stable/1.5.x was created and all further work on preparing the code for the
+final 1.5 release was done there.
+These branches also provide limited bugfix support for the most recent released
+version of Django and security support for the two most recently-released
+versions of Django.
+For example, after the release of Django 1.5, the branch stable/1.5.x
+receives only fixes for security and critical stability bugs, which are
+eventually released as Django 1.5.1 and so on, stable/1.4.x receives only
+security fixes, and stable/1.3.x no longer receives any updates.
+Historical information
+This policy for handling stable/A.B.x branches was adopted starting
+with the Django 1.5 release cycle.
+Previously, these branches weren't created until right after the releases
+and the stabilization work occurred on the main repository branch. Thus,
+no new features development work for the next release of Django could be
+committed until the final release happened.
+For example, shortly after the release of Django 1.3 the branch
+stable/1.3.x was created. Official support for that release has expired,
+and so it no longer receives direct maintenance from the Django project.
+However, that and all other similarly named branches continue to exist and
+interested community members have occasionally used them to provide
+unofficial support for old Django releases.
+Feature-development branches 
+Historical information
+Since Django moved to Git in 2012, anyone can clone the repository and
+create their own branches, alleviating the need for official branches in
+the source code repository.
+The following section is mostly useful if you're exploring the repository's
+history, for example if you're trying to understand how some features were
+designed.
+Feature-development branches tend by their nature to be temporary. Some
+produce successful features which are merged back into Django's master to
+become part of an official release, but others do not; in either case there
+comes a time when the branch is no longer being actively worked on by any
+developer. At this point the branch is considered closed.
+Unfortunately, Django used to be maintained with the Subversion revision
+control system, that has no standard way of indicating this. As a workaround,
+branches of Django which are closed and no longer maintained were moved into
+attic.
+For reference, the following are branches whose code eventually became
+part of Django itself, and so are no longer separately maintained:
+boulder-oracle-sprint: Added support for Oracle databases to
+Django's object-relational mapper. This has been part of Django
+since the 1.0 release.
+gis: Added support for geographic/spatial queries to Django's
+object-relational mapper. This has been part of Django since the 1.0
+release, as the bundled application django.contrib.gis.
+i18n: Added internationalization support to
+Django. This has been part of Django since the 0.90 release.
+magic-removal: A major refactoring of both the internals and
+public APIs of Django's object-relational mapper. This has been part
+of Django since the 0.95 release.
+multi-auth: A refactoring of Django's bundled
+authentication framework which added support for
+authentication backends. This has
+been part of Django since the 0.95 release.
+new-admin: A refactoring of Django's bundled
+administrative application. This became part of
+Django as of the 0.91 release, but was superseded by another
+refactoring (see next listing) prior to the Django 1.0 release.
+newforms-admin: The second refactoring of Django's bundled
+administrative application. This became part of Django as of the 1.0
+release, and is the basis of the current incarnation of
+django.contrib.admin.
+queryset-refactor: A refactoring of the internals of Django's
+object-relational mapper. This became part of Django as of the 1.0
+release.
+unicode: A refactoring of Django's internals to consistently use
+Unicode-based strings in most places within Django and Django
+applications. This became part of Django as of the 1.0 release.
+When Django moved from SVN to Git, the information about branch merges wasn't
+preserved in the source code repository. This means that the master branch
+of Django doesn't contain merge commits for the above branches.
+However, this information is available as a grafts file. You can restore it
+by putting the following lines in .git/info/grafts in your local clone:
+Additionally, the following branches are closed, but their code was
+never merged into Django and the features they aimed to implement
+were never finished:
+full-history
+generic-auth
+multiple-db-support
+per-object-permissions
+schema-evolution
+schema-evolution-ng
+search-api
+sqlalchemy
+All of the above-mentioned branches now reside in attic.
+Finally, the repository contains soc2009/xxx and soc2010/xxx feature
+branches, used for Google Summer of Code projects.
+Tags 
+Each Django release is tagged and signed by the releaser.
+The tags can be found on GitHub's tags page.
+The Django source code repository 
+When deploying a Django application into a real production environment, you
+will almost always want to use an official packaged release of Django.
+However, if you'd like to try out in-development code from an upcoming release
+or contribute to the development of Django, you'll need to obtain a clone of
+Django's source code repository.
+This document covers the way the code repository is laid out and how to work
+with and find things in it.
+High-level overview 
+The Django source code repository uses Git to track changes to the code
+over time, so you'll need a copy of the Git client (a program called git)
+on your computer, and you'll want to familiarize yourself with the basics of
+how Git works.
+Git's website offers downloads for various operating systems. The site also
+contains vast amounts of documentation.
+The Django Git repository is located online at github.com/django/django. It contains the full source code for all
+Django releases, which you can browse online.
+The Git repository includes several branches:
+master contains the main in-development code which will become
+the next packaged release of Django. This is where most development
+activity is focused.
+stable/A.B.x are the branches where release preparation work happens.
+They are also used for bugfix and security releases which occur as necessary
+after the initial release of a feature version.
+soc20XX/<project> branches were used by students who worked on Django
+during the 2009 and 2010 Google Summer of Code programs.
+attic/<project> branches were used to develop major or experimental new
+features without affecting the rest of Django's code.
+The Git repository also contains tags. These are the exact revisions from
+which packaged Django releases were produced, since version 1.0.
+The source code for the Djangoproject.com
+website can be found at github.com/django/djangoproject.com.
+The master branch 
+If you'd like to try out the in-development code for the next release of
+Django, or if you'd like to contribute to Django by fixing bugs or developing
+new features, you'll want to get the code from the master branch.
+Note that this will get all of Django: in addition to the top-level
+django module containing Python code, you'll also get a copy of Django's
+documentation, test suite, packaging scripts and other miscellaneous bits.
+Django's code will be present in your clone as a directory named
+django.
+To try out the in-development code with your own applications, simply place
+the directory containing your clone on your Python import path. Then
+import statements which look for Django will find the django module
+within your clone.
+If you're going to be working on Django's code (say, to fix a bug or
+develop a new feature), you can probably stop reading here and move
+over to the documentation for contributing to Django, which covers things like the preferred
+coding style and how to generate and submit a patch.
+Other branches 
+Django uses branches to prepare for releases of Django.
+In the past when Django was hosted on Subversion, branches were also used for
+feature development. Now Django is hosted on Git and feature development is
+done on contributor's forks, but the Subversion feature branches remain in Git
+for historical reference.
+Stable branches 
+These branches can be found in the repository as stable/A.B.x
+branches and will be created right after the first alpha is tagged.
+For example, immediately after Django 1.5 alpha 1 was tagged, the branch
+stable/1.5.x was created and all further work on preparing the code for the
+final 1.5 release was done there.
+These branches also provide limited bugfix support for the most recent released
+version of Django and security support for the two most recently-released
+versions of Django.
+For example, after the release of Django 1.5, the branch stable/1.5.x
+receives only fixes for security and critical stability bugs, which are
+eventually released as Django 1.5.1 and so on, stable/1.4.x receives only
+security fixes, and stable/1.3.x no longer receives any updates.
+Historical information
+This policy for handling stable/A.B.x branches was adopted starting
+with the Django 1.5 release cycle.
+Previously, these branches weren't created until right after the releases
+and the stabilization work occurred on the main repository branch. Thus,
+no new features development work for the next release of Django could be
+committed until the final release happened.
+For example, shortly after the release of Django 1.3 the branch
+stable/1.3.x was created. Official support for that release has expired,
+and so it no longer receives direct maintenance from the Django project.
+However, that and all other similarly named branches continue to exist and
+interested community members have occasionally used them to provide
+unofficial support for old Django releases.
+Feature-development branches 
+Historical information
+Since Django moved to Git in 2012, anyone can clone the repository and
+create their own branches, alleviating the need for official branches in
+the source code repository.
+The following section is mostly useful if you're exploring the repository's
+history, for example if you're trying to understand how some features were
+designed.
+Feature-development branches tend by their nature to be temporary. Some
+produce successful features which are merged back into Django's master to
+become part of an official release, but others do not; in either case there
+comes a time when the branch is no longer being actively worked on by any
+developer. At this point the branch is considered closed.
+Unfortunately, Django used to be maintained with the Subversion revision
+control system, that has no standard way of indicating this. As a workaround,
+branches of Django which are closed and no longer maintained were moved into
+attic.
+For reference, the following are branches whose code eventually became
+part of Django itself, and so are no longer separately maintained:
+boulder-oracle-sprint: Added support for Oracle databases to
+Django's object-relational mapper. This has been part of Django
+since the 1.0 release.
+gis: Added support for geographic/spatial queries to Django's
+object-relational mapper. This has been part of Django since the 1.0
+release, as the bundled application django.contrib.gis.
+i18n: Added internationalization support to
+Django. This has been part of Django since the 0.90 release.
+magic-removal: A major refactoring of both the internals and
+public APIs of Django's object-relational mapper. This has been part
+of Django since the 0.95 release.
+multi-auth: A refactoring of Django's bundled
+authentication framework which added support for
+authentication backends. This has
+been part of Django since the 0.95 release.
+new-admin: A refactoring of Django's bundled
+administrative application. This became part of
+Django as of the 0.91 release, but was superseded by another
+refactoring (see next listing) prior to the Django 1.0 release.
+newforms-admin: The second refactoring of Django's bundled
+administrative application. This became part of Django as of the 1.0
+release, and is the basis of the current incarnation of
+django.contrib.admin.
+queryset-refactor: A refactoring of the internals of Django's
+object-relational mapper. This became part of Django as of the 1.0
+release.
+unicode: A refactoring of Django's internals to consistently use
+Unicode-based strings in most places within Django and Django
+applications. This became part of Django as of the 1.0 release.
+When Django moved from SVN to Git, the information about branch merges wasn't
+preserved in the source code repository. This means that the master branch
+of Django doesn't contain merge commits for the above branches.
+However, this information is available as a grafts file. You can restore it
+by putting the following lines in .git/info/grafts in your local clone:
+Additionally, the following branches are closed, but their code was
+never merged into Django and the features they aimed to implement
+were never finished:
+full-history
+generic-auth
+multiple-db-support
+per-object-permissions
+schema-evolution
+schema-evolution-ng
+search-api
+sqlalchemy
+All of the above-mentioned branches now reside in attic.
+Finally, the repository contains soc2009/xxx and soc2010/xxx feature
+branches, used for Google Summer of Code projects.
+Tags 
+Each Django release is tagged and signed by the releaser.
+The tags can be found on GitHub's tags page.
+[VECTOR]

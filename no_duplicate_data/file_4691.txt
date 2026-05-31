@@ -1,0 +1,24 @@
+[ID]
+4691
+[URL]
+https://docs.djangoproject.com/en/2.0/ref/contrib/gis/sitemaps/
+[TEXT]
+Geographic Sitemaps 
+KML is an XML language focused on geographic visualization [1]. KMLSitemap
+and its compressed counterpart KMZSitemap allow you to present geolocated
+data in a machine-readable format.
+Example 
+Reference 
+KMLSitemap 
+KMZSitemap 
+[1]http://www.opengeospatial.org/standards/kml
+Geographic Sitemaps 
+KML is an XML language focused on geographic visualization [1]. KMLSitemap
+and its compressed counterpart KMZSitemap allow you to present geolocated
+data in a machine-readable format.
+Example 
+Reference 
+KMLSitemap 
+KMZSitemap 
+[1]http://www.opengeospatial.org/standards/kml
+[VECTOR]

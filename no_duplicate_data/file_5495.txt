@@ -1,0 +1,38 @@
+[ID]
+5495
+[URL]
+https://docs.djangoproject.com/en/1.11/ref/contrib/postgres/indexes/
+[TEXT]
+PostgreSQL specific model indexes 
+New in Django 1.11. 
+The following are PostgreSQL specific indexes
+available from the django.contrib.postgres.indexes module.
+BrinIndex 
+class BrinIndex(fields=[], name=None, pages_per_range=None)[source] 
+Creates a BRIN index.
+The pages_per_range argument takes a positive integer.
+GinIndex 
+class GinIndex[source] 
+Creates a gin index.
+To use this index on data types not in the built-in operator classes,
+you need to activate the btree_gin extension on
+PostgreSQL. You can install it using the
+BtreeGinExtension migration
+operation.
+PostgreSQL specific model indexes 
+New in Django 1.11. 
+The following are PostgreSQL specific indexes
+available from the django.contrib.postgres.indexes module.
+BrinIndex 
+class BrinIndex(fields=[], name=None, pages_per_range=None)[source] 
+Creates a BRIN index.
+The pages_per_range argument takes a positive integer.
+GinIndex 
+class GinIndex[source] 
+Creates a gin index.
+To use this index on data types not in the built-in operator classes,
+you need to activate the btree_gin extension on
+PostgreSQL. You can install it using the
+BtreeGinExtension migration
+operation.
+[VECTOR]

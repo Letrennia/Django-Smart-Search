@@ -1,0 +1,292 @@
+[ID]
+406
+[URL]
+https://docs.djangoproject.com/en/6.0/ref/contrib/gis/install/geolibs/
+[TEXT]
+Installing Geospatial libraries 
+Geospatial libraries 
+GeoDjango uses and/or provides interfaces for the following open source
+geospatial libraries:
+Program
+Description
+Required
+Supported Versions
+GEOS
+Geometry Engine Open Source
+Yes
+3.14, 3.13, 3.12, 3.11, 3.10, 3.9, 3.8
+PROJ
+Cartographic Projections library
+Yes (PostgreSQL and SQLite only)
+9.x, 8.x, 7.x, 6.x
+GDAL
+Geospatial Data Abstraction Library
+Yes
+3.11, 3.10, 3.9, 3.8, 3.7, 3.6, 3.5, 3.4, 3.3, 3.2, 3.1
+GeoIP
+IP-based geolocation library
+No
+2
+PostGIS
+Spatial extensions for PostgreSQL
+Yes (PostgreSQL only)
+3.5, 3.4, 3.3, 3.2, 3.1
+SpatiaLite
+Spatial extensions for SQLite
+Yes (SQLite only)
+5.1, 5.0, 4.3
+Note that older or more recent versions of these libraries may also work
+totally fine with GeoDjango. Your mileage may vary.
+Note
+The GeoDjango interfaces to GEOS, GDAL, and GeoIP may be used
+independently of Django. In other words, no database or settings file
+required – import them as normal from django.contrib.gis.
+On Debian/Ubuntu, you are advised to install the following packages which will
+install, directly or by dependency, the required geospatial libraries:
+Please also consult platform-specific instructions if you are on macOS
+or Windows.
+Building from source 
+When installing from source on UNIX and GNU/Linux systems, please follow
+the installation instructions carefully, and install the libraries in the
+given order. If using MySQL or Oracle as the spatial database, only GEOS
+is required.
+Note
+On Linux platforms, it may be necessary to run the ldconfig command
+after installing each library. 
+$ sudo make install
+$ sudo ldconfig
+Note
+macOS users must install Xcode in order to compile software from source.
+GEOS 
+GEOS is a C++ library for performing geometric operations, and is the default
+internal geometry representation used by GeoDjango (it's behind the "lazy"
+geometries). Specifically, the C API library is called (e.g., libgeos_c.so)
+directly from Python using ctypes.
+First, download GEOS from the GEOS website and untar the source archive:
+$ wget https://download.osgeo.org/geos/geos-X.Y.Z.tar.bz2
+$ tar xjf geos-X.Y.Z.tar.bz2
+Then step into the GEOS directory, create a build folder, and step into
+it:
+$ cd geos-X.Y.Z
+$ mkdir build
+$ cd build
+Then build and install the package:
+$ cmake -DCMAKE_BUILD_TYPE=Release ..
+$ cmake --build .
+$ sudo cmake --build . --target install
+Troubleshooting 
+Can't find GEOS library 
+When GeoDjango can't find GEOS, this error is raised:
+The most common solution is to properly configure your Library environment settings or
+set GEOS_LIBRARY_PATH in your settings.
+If using a binary package of GEOS (e.g., on Ubuntu), you may need to
+Install binutils.
+GEOS_LIBRARY_PATH 
+If your GEOS library is in a non-standard location, or you don't want to
+modify the system's library path then the GEOS_LIBRARY_PATH
+setting may be added to your Django settings file with the full path to the
+GEOS C library. 
+GEOS_LIBRARY_PATH = '/home/bob/local/lib/libgeos_c.so'
+Note
+The setting must be the full path to the C shared library; in
+other words you want to use libgeos_c.so, not libgeos.so.
+See also My logs are filled with GEOS-related errors.
+PROJ 
+PROJ is a library for converting geospatial data to different coordinate
+reference systems.
+First, download the PROJ source code:
+$ wget https://download.osgeo.org/proj/proj-X.Y.Z.tar.gz
+… and datum shifting files (download proj-datumgrid-X.Y.tar.gz for
+PROJ < 7.x) [1]:
+$ wget https://download.osgeo.org/proj/proj-data-X.Y.tar.gz
+Next, untar the source code archive, and extract the datum shifting files in
+the data subdirectory. This must be done prior to configuration:
+$ tar xzf proj-X.Y.Z.tar.gz
+$ cd proj-X.Y.Z/data
+$ tar xzf ../../proj-data-X.Y.tar.gz
+$ cd ../..
+For PROJ 9.x and greater, releases only support builds using CMake (see
+PROJ RFC-7).
+To build with CMake ensure your system meets the build requirements.
+Then create a build folder in the PROJ directory, and step into it:
+$ cd proj-X.Y.Z
+$ mkdir build
+$ cd build
+Finally, configure, make and install PROJ:
+$ cmake ..
+$ cmake --build .
+$ sudo cmake --build . --target install
+GDAL 
+GDAL is an excellent open source geospatial library that has support for
+reading most vector and raster spatial data formats. Currently, GeoDjango only
+supports GDAL's vector data capabilities [2].
+GEOS and PROJ should be installed prior to building GDAL.
+First download the latest GDAL release version and untar the archive:
+$ wget https://download.osgeo.org/gdal/X.Y.Z/gdal-X.Y.Z.tar.gz
+$ tar xzf gdal-X.Y.Z.tar.gz
+For GDAL 3.6.x and greater, releases only support builds using CMake. To
+build with CMake create a build folder in the GDAL directory, and step
+into it:
+$ cd gdal-X.Y.Z
+$ mkdir build
+$ cd build
+Finally, configure, make and install GDAL:
+$ cmake ..
+$ cmake --build .
+$ sudo cmake --build . --target install
+If you have any problems, please see the troubleshooting section below for
+suggestions and solutions.
+Troubleshooting 
+Can't find GDAL library 
+When GeoDjango can't find the GDAL library, configure your Library environment settings
+or set GDAL_LIBRARY_PATH in your settings.
+GDAL_LIBRARY_PATH 
+If your GDAL library is in a non-standard location, or you don't want to
+modify the system's library path then the GDAL_LIBRARY_PATH
+setting may be added to your Django settings file with the full path to
+the GDAL library. 
+GDAL_LIBRARY_PATH = '/home/sue/local/lib/libgdal.so'
+Installing Geospatial libraries 
+Geospatial libraries 
+GeoDjango uses and/or provides interfaces for the following open source
+geospatial libraries:
+Program
+Description
+Required
+Supported Versions
+GEOS
+Geometry Engine Open Source
+Yes
+3.14, 3.13, 3.12, 3.11, 3.10, 3.9, 3.8
+PROJ
+Cartographic Projections library
+Yes (PostgreSQL and SQLite only)
+9.x, 8.x, 7.x, 6.x
+GDAL
+Geospatial Data Abstraction Library
+Yes
+3.11, 3.10, 3.9, 3.8, 3.7, 3.6, 3.5, 3.4, 3.3, 3.2, 3.1
+GeoIP
+IP-based geolocation library
+No
+2
+PostGIS
+Spatial extensions for PostgreSQL
+Yes (PostgreSQL only)
+3.5, 3.4, 3.3, 3.2, 3.1
+SpatiaLite
+Spatial extensions for SQLite
+Yes (SQLite only)
+5.1, 5.0, 4.3
+Note that older or more recent versions of these libraries may also work
+totally fine with GeoDjango. Your mileage may vary.
+Note
+The GeoDjango interfaces to GEOS, GDAL, and GeoIP may be used
+independently of Django. In other words, no database or settings file
+required – import them as normal from django.contrib.gis.
+On Debian/Ubuntu, you are advised to install the following packages which will
+install, directly or by dependency, the required geospatial libraries:
+Please also consult platform-specific instructions if you are on macOS
+or Windows.
+Building from source 
+When installing from source on UNIX and GNU/Linux systems, please follow
+the installation instructions carefully, and install the libraries in the
+given order. If using MySQL or Oracle as the spatial database, only GEOS
+is required.
+Note
+On Linux platforms, it may be necessary to run the ldconfig command
+after installing each library. 
+$ sudo make install
+$ sudo ldconfig
+Note
+macOS users must install Xcode in order to compile software from source.
+GEOS 
+GEOS is a C++ library for performing geometric operations, and is the default
+internal geometry representation used by GeoDjango (it's behind the "lazy"
+geometries). Specifically, the C API library is called (e.g., libgeos_c.so)
+directly from Python using ctypes.
+First, download GEOS from the GEOS website and untar the source archive:
+$ wget https://download.osgeo.org/geos/geos-X.Y.Z.tar.bz2
+$ tar xjf geos-X.Y.Z.tar.bz2
+Then step into the GEOS directory, create a build folder, and step into
+it:
+$ cd geos-X.Y.Z
+$ mkdir build
+$ cd build
+Then build and install the package:
+$ cmake -DCMAKE_BUILD_TYPE=Release ..
+$ cmake --build .
+$ sudo cmake --build . --target install
+Troubleshooting 
+Can't find GEOS library 
+When GeoDjango can't find GEOS, this error is raised:
+The most common solution is to properly configure your Library environment settings or
+set GEOS_LIBRARY_PATH in your settings.
+If using a binary package of GEOS (e.g., on Ubuntu), you may need to
+Install binutils.
+GEOS_LIBRARY_PATH 
+If your GEOS library is in a non-standard location, or you don't want to
+modify the system's library path then the GEOS_LIBRARY_PATH
+setting may be added to your Django settings file with the full path to the
+GEOS C library. 
+GEOS_LIBRARY_PATH = '/home/bob/local/lib/libgeos_c.so'
+Note
+The setting must be the full path to the C shared library; in
+other words you want to use libgeos_c.so, not libgeos.so.
+See also My logs are filled with GEOS-related errors.
+PROJ 
+PROJ is a library for converting geospatial data to different coordinate
+reference systems.
+First, download the PROJ source code:
+$ wget https://download.osgeo.org/proj/proj-X.Y.Z.tar.gz
+… and datum shifting files (download proj-datumgrid-X.Y.tar.gz for
+PROJ < 7.x) [1]:
+$ wget https://download.osgeo.org/proj/proj-data-X.Y.tar.gz
+Next, untar the source code archive, and extract the datum shifting files in
+the data subdirectory. This must be done prior to configuration:
+$ tar xzf proj-X.Y.Z.tar.gz
+$ cd proj-X.Y.Z/data
+$ tar xzf ../../proj-data-X.Y.tar.gz
+$ cd ../..
+For PROJ 9.x and greater, releases only support builds using CMake (see
+PROJ RFC-7).
+To build with CMake ensure your system meets the build requirements.
+Then create a build folder in the PROJ directory, and step into it:
+$ cd proj-X.Y.Z
+$ mkdir build
+$ cd build
+Finally, configure, make and install PROJ:
+$ cmake ..
+$ cmake --build .
+$ sudo cmake --build . --target install
+GDAL 
+GDAL is an excellent open source geospatial library that has support for
+reading most vector and raster spatial data formats. Currently, GeoDjango only
+supports GDAL's vector data capabilities [2].
+GEOS and PROJ should be installed prior to building GDAL.
+First download the latest GDAL release version and untar the archive:
+$ wget https://download.osgeo.org/gdal/X.Y.Z/gdal-X.Y.Z.tar.gz
+$ tar xzf gdal-X.Y.Z.tar.gz
+For GDAL 3.6.x and greater, releases only support builds using CMake. To
+build with CMake create a build folder in the GDAL directory, and step
+into it:
+$ cd gdal-X.Y.Z
+$ mkdir build
+$ cd build
+Finally, configure, make and install GDAL:
+$ cmake ..
+$ cmake --build .
+$ sudo cmake --build . --target install
+If you have any problems, please see the troubleshooting section below for
+suggestions and solutions.
+Troubleshooting 
+Can't find GDAL library 
+When GeoDjango can't find the GDAL library, configure your Library environment settings
+or set GDAL_LIBRARY_PATH in your settings.
+GDAL_LIBRARY_PATH 
+If your GDAL library is in a non-standard location, or you don't want to
+modify the system's library path then the GDAL_LIBRARY_PATH
+setting may be added to your Django settings file with the full path to
+the GDAL library. 
+GDAL_LIBRARY_PATH = '/home/sue/local/lib/libgdal.so'
+[VECTOR]

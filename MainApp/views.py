@@ -18,11 +18,11 @@ def home(request):
         for doc, score in scores.items():
             file_path = os.path.join(DOC_BASE_PATH, doc)
             title, url = parse_file(file_path)
-
-            title_score = (title, round(score,2))
-            if title_score in not_dublicate:
-                continue
-            not_dublicate.add(title_score)
+            #
+            # title_score = (title, round(score,2))
+            # if title_score in not_dublicate:
+            #     continue
+            # not_dublicate.add(title_score)
 
             results.append({"title": title,
                             "url": url,

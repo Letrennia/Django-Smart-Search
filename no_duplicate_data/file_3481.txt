@@ -1,0 +1,106 @@
+[ID]
+3481
+[URL]
+https://docs.djangoproject.com/en/3.0/ref/contrib/postgres/constraints/
+[TEXT]
+PostgreSQL specific database constraints 
+PostgreSQL supports additional data integrity constraints available from the
+django.contrib.postgres.constraints module. They are added in the model
+Meta.constraints option.
+ExclusionConstraint 
+New in Django 3.0. 
+class ExclusionConstraint(*, name, expressions, index_type=None, condition=None) 
+Creates an exclusion constraint in the database. Internally, PostgreSQL
+implements exclusion constraints using indexes. The default index type is
+GiST. To use them,
+you need to activate the btree_gist extension on PostgreSQL.
+You can install it using the
+BtreeGistExtension migration
+operation.
+If you attempt to insert a new row that conflicts with an existing row, an
+IntegrityError is raised. Similarly, when update
+conflicts with an existing row.
+name 
+ExclusionConstraint.name 
+The name of the constraint.
+expressions 
+ExclusionConstraint.expressions 
+An iterable of 2-tuples. The first element is an expression or string. The
+second element is an SQL operator represented as a string. To avoid typos, you
+may use RangeOperators which maps the
+operators with strings. 
+Restrictions on operators.
+Only commutative operators can be used in exclusion constraints.
+index_type 
+ExclusionConstraint.index_type 
+The index type of the constraint. Accepted values are GIST or SPGIST.
+Matching is case insensitive. If not provided, the default index type is
+GIST.
+condition 
+ExclusionConstraint.condition 
+A Q object that specifies the condition to restrict
+a constraint to a subset of rows. For example,
+condition=Q(cancelled=False).
+These conditions have the same database restrictions as
+django.db.models.Index.condition.
+Examples 
+The following example restricts overlapping reservations in the same room, not
+taking canceled reservations into account:
+In case your model defines a range using two fields, instead of the native
+PostgreSQL range types, you should write an expression that uses the equivalent
+function (e.g. TsTzRange()), and use the delimiters for the field. Most
+often, the delimiters will be '[)', meaning that the lower bound is
+inclusive and the upper bound is exclusive. You may use the
+RangeBoundary that provides an
+expression mapping for the range boundaries. 
+PostgreSQL specific database constraints 
+PostgreSQL supports additional data integrity constraints available from the
+django.contrib.postgres.constraints module. They are added in the model
+Meta.constraints option.
+ExclusionConstraint 
+New in Django 3.0. 
+class ExclusionConstraint(*, name, expressions, index_type=None, condition=None) 
+Creates an exclusion constraint in the database. Internally, PostgreSQL
+implements exclusion constraints using indexes. The default index type is
+GiST. To use them,
+you need to activate the btree_gist extension on PostgreSQL.
+You can install it using the
+BtreeGistExtension migration
+operation.
+If you attempt to insert a new row that conflicts with an existing row, an
+IntegrityError is raised. Similarly, when update
+conflicts with an existing row.
+name 
+ExclusionConstraint.name 
+The name of the constraint.
+expressions 
+ExclusionConstraint.expressions 
+An iterable of 2-tuples. The first element is an expression or string. The
+second element is an SQL operator represented as a string. To avoid typos, you
+may use RangeOperators which maps the
+operators with strings. 
+Restrictions on operators.
+Only commutative operators can be used in exclusion constraints.
+index_type 
+ExclusionConstraint.index_type 
+The index type of the constraint. Accepted values are GIST or SPGIST.
+Matching is case insensitive. If not provided, the default index type is
+GIST.
+condition 
+ExclusionConstraint.condition 
+A Q object that specifies the condition to restrict
+a constraint to a subset of rows. For example,
+condition=Q(cancelled=False).
+These conditions have the same database restrictions as
+django.db.models.Index.condition.
+Examples 
+The following example restricts overlapping reservations in the same room, not
+taking canceled reservations into account:
+In case your model defines a range using two fields, instead of the native
+PostgreSQL range types, you should write an expression that uses the equivalent
+function (e.g. TsTzRange()), and use the delimiters for the field. Most
+often, the delimiters will be '[)', meaning that the lower bound is
+inclusive and the upper bound is exclusive. You may use the
+RangeBoundary that provides an
+expression mapping for the range boundaries.
+[VECTOR]

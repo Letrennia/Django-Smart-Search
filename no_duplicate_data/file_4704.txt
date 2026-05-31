@@ -1,0 +1,100 @@
+[ID]
+4704
+[URL]
+https://docs.djangoproject.com/en/2.0/ref/contrib/postgres/operations/
+[TEXT]
+Database migration operations 
+All of these operations are available from
+the django.contrib.postgres.operations module.
+Creating extension using migrations 
+You can create a PostgreSQL extension in your database using a migration file.
+This example creates an hstore extension, but the same principles apply for
+other extensions.
+Set up the hstore extension in PostgreSQL before the first CreateModel
+or AddField operation that involves
+HStoreField by adding a migration with
+the HStoreExtension operation.
+Creating the extension requires a database user with superuser privileges.
+If the Django database user doesn't have superuser privileges, you'll have
+to create the extension outside of Django migrations with a user that has
+the appropriate privileges. In that case, connect to your Django database and
+run the query CREATE EXTENSION IF NOT EXISTS hstore;.
+CreateExtension 
+class CreateExtension(name)[source] 
+An Operation subclass which installs PostgreSQL extensions.
+name 
+This is a required argument. The name of the extension to be installed.
+BtreeGinExtension 
+class BtreeGinExtension[source] 
+New in Django 1.11. 
+Install the btree_gin extension.
+BtreeGistExtension 
+class BtreeGistExtension[source] 
+New in Django 2.0. 
+Install the btree_gist extension.
+CITextExtension 
+class CITextExtension[source] 
+New in Django 1.11. 
+Installs the citext extension.
+CryptoExtension 
+class CryptoExtension[source] 
+New in Django 2.0. 
+Installs the pgcrypto extension.
+HStoreExtension 
+class HStoreExtension[source] 
+Installs the hstore extension and also sets up the connection to
+interpret hstore data for possible use in subsequent migrations.
+TrigramExtension 
+class TrigramExtension[source] 
+Installs the pg_trgm extension.
+UnaccentExtension 
+class UnaccentExtension[source] 
+Installs the unaccent extension.
+Database migration operations 
+All of these operations are available from
+the django.contrib.postgres.operations module.
+Creating extension using migrations 
+You can create a PostgreSQL extension in your database using a migration file.
+This example creates an hstore extension, but the same principles apply for
+other extensions.
+Set up the hstore extension in PostgreSQL before the first CreateModel
+or AddField operation that involves
+HStoreField by adding a migration with
+the HStoreExtension operation.
+Creating the extension requires a database user with superuser privileges.
+If the Django database user doesn't have superuser privileges, you'll have
+to create the extension outside of Django migrations with a user that has
+the appropriate privileges. In that case, connect to your Django database and
+run the query CREATE EXTENSION IF NOT EXISTS hstore;.
+CreateExtension 
+class CreateExtension(name)[source] 
+An Operation subclass which installs PostgreSQL extensions.
+name 
+This is a required argument. The name of the extension to be installed.
+BtreeGinExtension 
+class BtreeGinExtension[source] 
+New in Django 1.11. 
+Install the btree_gin extension.
+BtreeGistExtension 
+class BtreeGistExtension[source] 
+New in Django 2.0. 
+Install the btree_gist extension.
+CITextExtension 
+class CITextExtension[source] 
+New in Django 1.11. 
+Installs the citext extension.
+CryptoExtension 
+class CryptoExtension[source] 
+New in Django 2.0. 
+Installs the pgcrypto extension.
+HStoreExtension 
+class HStoreExtension[source] 
+Installs the hstore extension and also sets up the connection to
+interpret hstore data for possible use in subsequent migrations.
+TrigramExtension 
+class TrigramExtension[source] 
+Installs the pg_trgm extension.
+UnaccentExtension 
+class UnaccentExtension[source] 
+Installs the unaccent extension.
+[VECTOR]

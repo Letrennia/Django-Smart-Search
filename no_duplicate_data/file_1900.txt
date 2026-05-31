@@ -1,0 +1,186 @@
+[ID]
+1900
+[URL]
+https://docs.djangoproject.com/en/4.2/ref/contrib/postgres/constraints/
+[TEXT]
+PostgreSQL specific database constraints 
+PostgreSQL supports additional data integrity constraints available from the
+django.contrib.postgres.constraints module. They are added in the model
+Meta.constraints option.
+ExclusionConstraint 
+class ExclusionConstraint(*, name, expressions, index_type=None, condition=None, deferrable=None, include=None, opclasses=(), violation_error_message=None)[source] 
+Creates an exclusion constraint in the database. Internally, PostgreSQL
+implements exclusion constraints using indexes. The default index type is
+GiST. To use them,
+you need to activate the btree_gist extension on PostgreSQL.
+You can install it using the
+BtreeGistExtension migration
+operation.
+If you attempt to insert a new row that conflicts with an existing row, an
+IntegrityError is raised. Similarly, when update
+conflicts with an existing row.
+Exclusion constraints are checked during the model validation.
+Changed in Django 4.1: In older versions, exclusion constraints were not checked during model
+validation.
+name 
+ExclusionConstraint.name 
+See BaseConstraint.name.
+expressions 
+ExclusionConstraint.expressions 
+An iterable of 2-tuples. The first element is an expression or string. The
+second element is an SQL operator represented as a string. To avoid typos, you
+may use RangeOperators which maps the
+operators with strings. 
+Restrictions on operators.
+Only commutative operators can be used in exclusion constraints.
+The OpClass() expression can
+be used to specify a custom operator class for the constraint expressions.
+creates an exclusion constraint on circle using circle_ops.
+Changed in Django 4.1: Support for the OpClass() expression was added.
+index_type 
+ExclusionConstraint.index_type 
+The index type of the constraint. Accepted values are GIST or SPGIST.
+Matching is case insensitive. If not provided, the default index type is
+GIST.
+condition 
+ExclusionConstraint.condition 
+A Q object that specifies the condition to restrict
+a constraint to a subset of rows. For example,
+condition=Q(cancelled=False).
+These conditions have the same database restrictions as
+django.db.models.Index.condition.
+deferrable 
+ExclusionConstraint.deferrable 
+Set this parameter to create a deferrable exclusion constraint. Accepted values
+are Deferrable.DEFERRED or Deferrable.IMMEDIATE. 
+By default constraints are not deferred. A deferred constraint will not be
+enforced until the end of the transaction. An immediate constraint will be
+enforced immediately after every command.
+Warning
+Deferred exclusion constraints may lead to a performance penalty.
+include 
+ExclusionConstraint.include 
+A list or tuple of the names of the fields to be included in the covering
+exclusion constraint as non-key columns. This allows index-only scans to be
+used for queries that select only included fields
+(include) and filter only by indexed fields
+(expressions).
+include is supported for GiST indexes. PostgreSQL 14+ also supports
+include for SP-GiST indexes.
+Changed in Django 4.1: Support for covering exclusion constraints using SP-GiST indexes on
+PostgreSQL 14+ was added.
+opclasses 
+ExclusionConstraint.opclasses 
+The names of the PostgreSQL operator classes to use for
+this constraint. If you require a custom operator class, you must provide one
+for each expression in the constraint.
+creates an exclusion constraint on circle using circle_ops.
+Deprecated since version 4.1: The opclasses parameter is deprecated in favor of using
+OpClass() in
+expressions.
+violation_error_message 
+New in Django 4.1. 
+The error message used when ValidationError is raised during
+model validation. Defaults to
+BaseConstraint.violation_error_message.
+Examples 
+The following example restricts overlapping reservations in the same room, not
+taking canceled reservations into account:
+In case your model defines a range using two fields, instead of the native
+PostgreSQL range types, you should write an expression that uses the equivalent
+function (e.g. TsTzRange()), and use the delimiters for the field. Most
+often, the delimiters will be '[)', meaning that the lower bound is
+inclusive and the upper bound is exclusive. You may use the
+RangeBoundary that provides an
+expression mapping for the range boundaries. 
+PostgreSQL specific database constraints 
+PostgreSQL supports additional data integrity constraints available from the
+django.contrib.postgres.constraints module. They are added in the model
+Meta.constraints option.
+ExclusionConstraint 
+class ExclusionConstraint(*, name, expressions, index_type=None, condition=None, deferrable=None, include=None, opclasses=(), violation_error_message=None)[source] 
+Creates an exclusion constraint in the database. Internally, PostgreSQL
+implements exclusion constraints using indexes. The default index type is
+GiST. To use them,
+you need to activate the btree_gist extension on PostgreSQL.
+You can install it using the
+BtreeGistExtension migration
+operation.
+If you attempt to insert a new row that conflicts with an existing row, an
+IntegrityError is raised. Similarly, when update
+conflicts with an existing row.
+Exclusion constraints are checked during the model validation.
+Changed in Django 4.1: In older versions, exclusion constraints were not checked during model
+validation.
+name 
+ExclusionConstraint.name 
+See BaseConstraint.name.
+expressions 
+ExclusionConstraint.expressions 
+An iterable of 2-tuples. The first element is an expression or string. The
+second element is an SQL operator represented as a string. To avoid typos, you
+may use RangeOperators which maps the
+operators with strings. 
+Restrictions on operators.
+Only commutative operators can be used in exclusion constraints.
+The OpClass() expression can
+be used to specify a custom operator class for the constraint expressions.
+creates an exclusion constraint on circle using circle_ops.
+Changed in Django 4.1: Support for the OpClass() expression was added.
+index_type 
+ExclusionConstraint.index_type 
+The index type of the constraint. Accepted values are GIST or SPGIST.
+Matching is case insensitive. If not provided, the default index type is
+GIST.
+condition 
+ExclusionConstraint.condition 
+A Q object that specifies the condition to restrict
+a constraint to a subset of rows. For example,
+condition=Q(cancelled=False).
+These conditions have the same database restrictions as
+django.db.models.Index.condition.
+deferrable 
+ExclusionConstraint.deferrable 
+Set this parameter to create a deferrable exclusion constraint. Accepted values
+are Deferrable.DEFERRED or Deferrable.IMMEDIATE. 
+By default constraints are not deferred. A deferred constraint will not be
+enforced until the end of the transaction. An immediate constraint will be
+enforced immediately after every command.
+Warning
+Deferred exclusion constraints may lead to a performance penalty.
+include 
+ExclusionConstraint.include 
+A list or tuple of the names of the fields to be included in the covering
+exclusion constraint as non-key columns. This allows index-only scans to be
+used for queries that select only included fields
+(include) and filter only by indexed fields
+(expressions).
+include is supported for GiST indexes. PostgreSQL 14+ also supports
+include for SP-GiST indexes.
+Changed in Django 4.1: Support for covering exclusion constraints using SP-GiST indexes on
+PostgreSQL 14+ was added.
+opclasses 
+ExclusionConstraint.opclasses 
+The names of the PostgreSQL operator classes to use for
+this constraint. If you require a custom operator class, you must provide one
+for each expression in the constraint.
+creates an exclusion constraint on circle using circle_ops.
+Deprecated since version 4.1: The opclasses parameter is deprecated in favor of using
+OpClass() in
+expressions.
+violation_error_message 
+New in Django 4.1. 
+The error message used when ValidationError is raised during
+model validation. Defaults to
+BaseConstraint.violation_error_message.
+Examples 
+The following example restricts overlapping reservations in the same room, not
+taking canceled reservations into account:
+In case your model defines a range using two fields, instead of the native
+PostgreSQL range types, you should write an expression that uses the equivalent
+function (e.g. TsTzRange()), and use the delimiters for the field. Most
+often, the delimiters will be '[)', meaning that the lower bound is
+inclusive and the upper bound is exclusive. You may use the
+RangeBoundary that provides an
+expression mapping for the range boundaries.
+[VECTOR]

@@ -1,0 +1,62 @@
+[ID]
+3629
+[URL]
+https://docs.djangoproject.com/en/2.2/howto/deployment/
+[TEXT]
+Deploying Django 
+Django's chock-full of shortcuts to make Web developer's lives easier, but all
+those tools are of no use if you can't easily deploy your sites. Since Django's
+inception, ease of deployment has been a major goal.
+How to deploy with WSGI
+How to use Django with Gunicorn
+How to use Django with uWSGI
+How to use Django with Apache and mod_wsgi
+Authenticating against Django's user database from Apache
+The application object
+Configuring the settings module
+Applying WSGI middleware
+Deploying static files
+Serving static files in production
+Learn more
+Error reporting
+Email reports
+Filtering error reports
+Deployment checklist
+Run manage.py check --deploy
+Critical settings
+Environment-specific settings
+HTTPS
+Performance optimizations
+Error reporting
+If you're new to deploying Django and/or Python, we'd recommend you try
+mod_wsgi first. In most cases it'll be
+the easiest, fastest, and most stable deployment choice.
+Deploying Django 
+Django's chock-full of shortcuts to make Web developer's lives easier, but all
+those tools are of no use if you can't easily deploy your sites. Since Django's
+inception, ease of deployment has been a major goal.
+How to deploy with WSGI
+How to use Django with Gunicorn
+How to use Django with uWSGI
+How to use Django with Apache and mod_wsgi
+Authenticating against Django's user database from Apache
+The application object
+Configuring the settings module
+Applying WSGI middleware
+Deploying static files
+Serving static files in production
+Learn more
+Error reporting
+Email reports
+Filtering error reports
+Deployment checklist
+Run manage.py check --deploy
+Critical settings
+Environment-specific settings
+HTTPS
+Performance optimizations
+Error reporting
+If you're new to deploying Django and/or Python, we'd recommend you try
+mod_wsgi first. In most cases it'll be
+the easiest, fastest, and most stable deployment choice.
+[VECTOR]

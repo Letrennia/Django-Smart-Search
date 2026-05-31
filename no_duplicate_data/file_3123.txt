@@ -1,0 +1,32 @@
+[ID]
+3123
+[URL]
+https://docs.djangoproject.com/en/3.1/_modules/
+[TEXT]
+All modules for which code is available
+django
+django.apps.config
+django.apps.registry
+django.contrib.gis.measure
+django.contrib.sites.shortcuts
+django.core.exceptions
+django.core.files.base
+django.core.files.images
+django.utils.decorators
+django.utils.functional
+django.utils.module_loading
+django.utils.safestring
+All modules for which code is available
+django
+django.apps.config
+django.apps.registry
+django.contrib.gis.measure
+django.contrib.sites.shortcuts
+django.core.exceptions
+django.core.files.base
+django.core.files.images
+django.utils.decorators
+django.utils.functional
+django.utils.module_loading
+django.utils.safestring
+[VECTOR]
