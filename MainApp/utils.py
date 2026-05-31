@@ -10,4 +10,10 @@ def parse_file(file_path):
     text_match = re.search(r"\[TEXT\]\s*(.+)", content)
     title = text_match.group(1).strip()
 
+    version = re.search(r"/en/([^/]+)/", url)
+    version = version.group(1) if version else ""
+
+    if version:
+        title = f"{title} {version}"
+
     return title, url

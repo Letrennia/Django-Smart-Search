@@ -7,10 +7,14 @@ import json
 
 input_dir = "../data_dir"
 output_dir = "../clean_data"
+comper_dir = "./duplicates.txt"
+
+with open(comper_dir, "r", encoding="utf-8") as file:
+    duplicates = set(line.strip() for line in file)
 
 os.makedirs(output_dir, exist_ok=True)
 
-nlp = spacy.load("en_core_web_sm")
+# nlp = spacy.load("en_core_web_sm")
 
 all = set()
 all_keywords = set()
@@ -29,6 +33,9 @@ article_lenght = {}
 
 for filename in os.listdir(input_dir):
     count_t = 0
+
+    if filename in duplicates:
+        continue
 
     input_path = os.path.join(input_dir, filename)
 

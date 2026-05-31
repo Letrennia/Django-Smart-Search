@@ -5,7 +5,7 @@ import os
 
 from BM25.BM25_score_function import query_score
 
-DOC_BASE_PATH = os.path.join(settings.BASE_DIR, "clean_data")
+DOC_BASE_PATH = os.path.join(settings.BASE_DIR, "no_duplicate_data")
 
 def home(request):
     query = request.GET.get('q', '')

@@ -1,9 +1,9 @@
 import json
 
-with open("../wordlists_dir/methods.txt", "r", encoding="utf-8") as file:
+with open("../wordlists_dir/keywords.txt", "r", encoding="utf-8") as file:
     all_keywords = set(line.strip() for line in file)
 
-with open("../BM25/methods_document_count.json", "r", encoding="utf-8") as file:
+with open("../BM25/keyword_document_count.json", "r", encoding="utf-8") as file:
     data = json.load(file)
 
 found_keywords = set(data.keys())

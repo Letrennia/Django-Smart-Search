@@ -2,16 +2,19 @@ import os
 import re
 import json
 
-input_dir = "../clean_data"
+input_dir = "../no_duplicate_data"
 input_keywords = "../wordlists_dir/keywords.txt"
 input_methods = "../wordlists_dir/methods.txt"
+
+# def norm(w):
+#     return w.strip().lower()
 
 magic_word_dictionary = {}
 
 # Wyrazy z pliku keywords
 input_path = os.path.join(input_keywords)
 with open(input_path, "r", encoding="utf-8") as file:
-    magic_words = [line.strip().lower() for line in file]
+    magic_words = [line.strip() for line in file]
 
 
 for filename in os.listdir(input_dir):
@@ -23,7 +26,7 @@ for filename in os.listdir(input_dir):
     if "[TEXT]" in content:
         text = content.split("[TEXT]")[1].split("[VECTOR]")[0].strip()
         # keywords
-        words = re.findall(r"[A-Za-z0-9_.]+", text.lower())
+        words = re.findall(r"[A-Za-z0-9_.]+", text)
         # # methods
         # words = re.findall(r"[\w.]+\(\)", text.lower())
         # words = [word.split(".")[-1] for word in words]

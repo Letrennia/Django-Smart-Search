@@ -2,7 +2,7 @@ import os
 import re
 import json
 
-input_dir = "../clean_data"
+input_dir = "../no_duplicate_data"
 input_methods = "../wordlists_dir/methods.txt"
 
 method_map = {}

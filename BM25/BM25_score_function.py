@@ -18,7 +18,12 @@ with open(input_document_word_count, "r", encoding="utf-8") as file:
     document_word_count = json.load(file)
 
 with open(input_keyword_document_count, "r", encoding="utf-8") as file:
-    keyword_document_count = json.load(file)
+    raw = json.load(file)
+
+keyword_document_count = {
+    k.strip().lower(): v
+    for k, v in raw.items()
+}
 
 with open(input_methods_document_count, "r", encoding="utf-8") as file:
     methods_document_count = json.load(file)
@@ -68,8 +73,8 @@ def query_score(query):
     for word in query_words:
         # print(word)
         word_lower = word.lower()
-        if word_lower not in magic_words_keywords and word not in magic_words_methods:
-            continue
+        # if word_lower not in magic_words_keywords and word not in magic_words_methods:
+        #     continue
 
         if word_lower in magic_words_keywords:
             document_list = keyword_document_count[word_lower]
@@ -83,7 +88,7 @@ def query_score(query):
 
     return BM25_score
 
-# scores = query_score("abs()")
+# scores = query_score("migrations")
 #
 # items = scores.items()
 # sorted_items = sorted(items, key=lambda x: x[1], reverse=True)

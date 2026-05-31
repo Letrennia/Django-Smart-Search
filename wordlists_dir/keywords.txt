@@ -1959,7 +1959,6 @@ message
 messages
 metadata
 method
-methods
 middleware
 migrate
 migration_name
