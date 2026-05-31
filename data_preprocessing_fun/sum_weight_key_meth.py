@@ -52,7 +52,7 @@ keywords_pair = read_weights('../wordlists_dir/weights_dir/keywords_weights.txt'
 methods_pair = read_weights('../wordlists_dir/weights_dir/methods_weights.txt')
 
 
-input_dir = "../clean_data"
+input_dir = "../no_duplicate_data"
 
 for file in os.listdir(input_dir):
     if not file.endswith(".txt"):

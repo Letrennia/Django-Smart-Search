@@ -24,11 +24,11 @@ def read_methods(filename):
 
 
 def plot_bar_chart(data, x_label, y_label, title):
-    data = data[:50]
+    data = data[:20]
     labels = [x for x, _ in data]
     counts = [y for _, y in data]
 
-    plt.bar(labels, counts)
+    plt.bar(labels, counts, color='green')
     plt.yscale('log')
     plt.title(title)
     plt.ylabel(y_label)
@@ -41,11 +41,11 @@ def plot_bar_chart(data, x_label, y_label, title):
 keywords = read_words('../wordlists_dir/weights_dir/keywords_duplicate.txt')
 count_keywords = Counter(keywords)
 sorted_keywords = count_keywords.most_common()
-plot_bar_chart(sorted_keywords, 'Keywords', 'Quantity', 'Top 50 keywords')
+plot_bar_chart(sorted_keywords, 'Keywords', 'Quantity', 'Top 20 keywords')
 
 # METHODS
 methods = read_methods('../wordlists_dir/weights_dir/methods_duplicate.txt')
 count_methods = Counter(methods)
 sorted_methods = count_methods.most_common()
-plot_bar_chart(sorted_methods, 'Methods', 'Quantity', 'Top 50 methods')
+plot_bar_chart(sorted_methods, 'Methods', 'Quantity', 'Top 20 methods')
 

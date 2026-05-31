@@ -45,7 +45,7 @@ def calculate_final_weight(items_tuple):
 
 def plot_graph(value_data, x_label, y_label, bins_val=200):
     plt.figure(figsize=(10, 6), dpi=200)
-    plt.hist(value_data, color='pink', bins=bins_val)
+    plt.hist(value_data, color='green', bins=bins_val)
     # plt.yscale('log')
     plt.title(f'Rozkład wag ')
     plt.xlabel(x_label)
@@ -66,7 +66,7 @@ def weights_to_labels(data):
 
 
 
-
+# MERGE FILES
 # merge_files(
 #     '../wordlists_dir/weights_dir/file_weights_updated.txt',
 #     '../wordlists_dir/weights_dir/file_words_sentences.txt',
@@ -74,7 +74,7 @@ def weights_to_labels(data):
 # )
 
 
-
+#FINAL WEIGHT SCORE +/- SCORE(SENTENCE)
 # tuple_data = read_tuple_data('../wordlists_dir/weights_dir/merged_weights_sentences.txt')
 # calculate_final_weight(tuple_data)
 
@@ -85,4 +85,6 @@ pair_data = read_weights('../wordlists_dir/weights_dir/file_final_weights.txt')
 # weights = list(pair_data.values())
 # plot_graph(weights, 'Waga', 'Ilość artykułów')
 
+
+#CREAT LABELS (EASY, ADVANCED HARD)
 weights_to_labels(pair_data)

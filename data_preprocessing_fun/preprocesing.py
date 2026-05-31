@@ -7,7 +7,7 @@ import json
 
 input_dir = "../data_dir"
 output_dir = "../clean_data"
-comper_dir = "./duplicates.txt"
+comper_dir = "../duplicates.txt"
 
 with open(comper_dir, "r", encoding="utf-8") as file:
     duplicates = set(line.strip() for line in file)
