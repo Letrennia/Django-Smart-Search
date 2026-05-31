@@ -16,6 +16,11 @@ Django Smart Search is a web application that allows users to easily find answer
 - Django (ver. 5.2.14)
 - Supabase (PostgreSQL)
 
+## Embedding Model
+- Django-Smart-Search uses 'granite-embedding-english-small-r2' from Hugging Face developed by IBM team.
+
+- The model can be found at https://huggingface.co/ibm-granite/granite-embedding-small-english-r2
+
 ## Requirements
 All dependencies are specified in the requirements.txt file. 
 
