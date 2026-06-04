@@ -88,7 +88,7 @@ def query_score(query):
 
     return BM25_score
 
-# scores = query_score("migrations")
+# scores = query_score("how do i create automated tests")
 #
 # items = scores.items()
 # sorted_items = sorted(items, key=lambda x: x[1], reverse=True)
