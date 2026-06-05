@@ -2,35 +2,30 @@ from django.shortcuts import render
 from django.conf import settings
 from .utils import parse_file
 import os
-
-from BM25.BM25_score_function import query_score
+from hybrid_search.hybrid_search_fun import hybrid_search
+from hybrid_search.find_difficulty_lvl import find_difficulty
 
 DOC_BASE_PATH = os.path.join(settings.BASE_DIR, "no_duplicate_data")
 
 def home(request):
     query = request.GET.get('q', '')
+
     results = []
 
     if query:
-        scores = query_score(query)
-        not_dublicate = set()
+        final_scores = hybrid_search(query)
 
-        for doc, score in scores.items():
+        for doc, score in final_scores[:30]:
             file_path = os.path.join(DOC_BASE_PATH, doc)
             title, url = parse_file(file_path)
-            #
-            # title_score = (title, round(score,2))
-            # if title_score in not_dublicate:
-            #     continue
-            # not_dublicate.add(title_score)
 
+            difficulty_lvl = find_difficulty(doc)
             results.append({"title": title,
                             "url": url,
                             "file": doc,
-                            "score": score})
+                            "score": score,
+                            "difficulty": difficulty_lvl})
 
-        results.sort(key=lambda x: x["score"], reverse=True)
-        results = results[:50]
 
     return render(request, "home.html", {"query": query, "results": results})
 

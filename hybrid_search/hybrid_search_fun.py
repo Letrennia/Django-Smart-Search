@@ -48,8 +48,8 @@ def hybrid_search(ask):
 
 
 # TEST
-hybrid_results = hybrid_search('should i change debug before the deploy')
-
-for file, score in hybrid_results[:20]:
-    print(f'{file} {score}')
+# hybrid_results = hybrid_search('should i change debug before the deploy')
+#
+# for file, score in hybrid_results[:20]:
+#     print(f'{file} {score}')
 

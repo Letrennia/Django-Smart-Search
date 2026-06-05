@@ -76,3 +76,36 @@ body {
     font-size: 12px;
     opacity: 0.7;
 }
+
+.difficulty {
+    margin-left: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.difficulty {
+    margin-left: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.difficulty-easy {
+    background: #28a745;
+    color: white;
+}
+
+.difficulty-hard {
+    background: #dc3545;
+    color: white;
+}
+
+.difficulty-advanced {
+    background: #ffc107;
+    color: black;
+}
