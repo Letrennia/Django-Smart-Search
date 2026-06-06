@@ -8,6 +8,7 @@ import re
 
 DOC_BASE_PATH = os.path.join(settings.BASE_DIR, "no_duplicate_data")
 WORDLIST_PATH = os.path.join(settings.BASE_DIR, "wordlists_dir")
+CHUNK_SIZE = 1950
 
 with open(os.path.join(WORDLIST_PATH, "keywords.txt"), "r", encoding="utf-8") as f:
     keyword_list = [line.strip().lower() for line in f if line.strip()]
@@ -24,11 +25,11 @@ def home(request):
     if query:
         final_scores = hybrid_search(query)
 
-        for doc, score in final_scores[:30]:
+        for doc, score, chunk in final_scores[:30]:
             file_path = os.path.join(DOC_BASE_PATH, doc)
             title, url = parse_file(file_path)
             difficulty_lvl = find_difficulty(doc)
-            text_excerpt = text_part(file_path, query)
+            text_excerpt = text_part(file_path, query, chunk)
 
             results.append({"title": title,
                             "url": url,
@@ -39,9 +40,9 @@ def home(request):
 
     return render(request, "home.html", {"query": query, "results": results})
 
-def text_part(file_path, query):
-    with open(file_path, "r", encoding="utf-8") as f:
-        text = f.read()
+def text_part(file_path, query, chunk):
+    with open(file_path, "r", encoding="utf-8") as file:
+        text = file.read()
 
     text = text.split("[TEXT]")[1].split("[VECTOR]")[0]
     lines = [l.strip() for l in text.splitlines() if l.strip()]
@@ -55,11 +56,18 @@ def text_part(file_path, query):
 
     matched_keywords = [k for k in keyword_list if k in query_lower]
     matched_methods = [m for m in methods_list if m in query]
+    words = text.split()
+
+    # print(file_path, (matched_keywords), len(matched_methods))
 
     if not matched_keywords and not matched_methods:
-        return ""
+        chunk = int(chunk)
+        start = (chunk - 1) * CHUNK_SIZE
+        end = start + 64
+        snippet_words = words[start:end]
+        snippet = " ".join(snippet_words)
 
-    words = text.split()
+        return snippet + "..."
 
     for i, word in enumerate(words):
         word_clean_lower = word.lower().strip(".,!?;:")
@@ -77,5 +85,4 @@ def text_part(file_path, query):
                 snippet += "..."
 
             return snippet
-
     return ""

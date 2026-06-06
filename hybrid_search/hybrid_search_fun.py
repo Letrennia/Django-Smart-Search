@@ -13,7 +13,8 @@ def hybrid_search(ask):
     if values is None or len(values) == 0:
         scores_embeddings = find_similar_embeddings(ask)
         sorted_final_scores = sorted(scores_embeddings, key=lambda x: x['score'], reverse=True)
-        return [(item['file'], item['score']) for item in sorted_final_scores]
+        return [(item['file'], item["chunk"], item['score']) for item in sorted_final_scores]
+        # return [(item['file'], item['score']) for item in sorted_final_scores]
 
 
     min_score = min(values)
@@ -39,11 +40,13 @@ def hybrid_search(ask):
         for doc, score_bm25 in scaled_scores_bm25.items():
             if file_emb['file'] == doc:
                 final_score = (bm25_weight * score_bm25) + (vector_weight * file_emb['score'])
-                final_scores[doc] = final_score
+                # final_scores[doc] = final_score
+                final_scores[doc] = (final_score, file_emb["chunk"])
 
 
     sorted_final_scores = sorted(final_scores.items(), key=lambda x: x[1], reverse=True)
-    return sorted_final_scores
+    return [(doc, score, chunk) for doc, (score, chunk) in sorted_final_scores]
+    # return sorted_final_scores
 
 
 
