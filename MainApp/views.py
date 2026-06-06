@@ -4,8 +4,17 @@ from .utils import parse_file
 import os
 from hybrid_search.hybrid_search_fun import hybrid_search
 from hybrid_search.find_difficulty_lvl import find_difficulty
+import re
 
 DOC_BASE_PATH = os.path.join(settings.BASE_DIR, "no_duplicate_data")
+WORDLIST_PATH = os.path.join(settings.BASE_DIR, "wordlists_dir")
+
+with open(os.path.join(WORDLIST_PATH, "keywords.txt"), "r", encoding="utf-8") as f:
+    keyword_list = [line.strip().lower() for line in f if line.strip()]
+
+with open(os.path.join(WORDLIST_PATH, "methods.txt"), "r", encoding="utf-8") as f:
+    methods_list = [line.strip() for line in f if line.strip()]
+
 
 def home(request):
     query = request.GET.get('q', '')
@@ -18,14 +27,55 @@ def home(request):
         for doc, score in final_scores[:30]:
             file_path = os.path.join(DOC_BASE_PATH, doc)
             title, url = parse_file(file_path)
-
             difficulty_lvl = find_difficulty(doc)
+            text_excerpt = text_part(file_path, query)
+
             results.append({"title": title,
                             "url": url,
                             "file": doc,
                             "score": score,
-                            "difficulty": difficulty_lvl})
-
+                            "difficulty": difficulty_lvl,
+                            "text_excerpt": text_excerpt})
 
     return render(request, "home.html", {"query": query, "results": results})
 
+def text_part(file_path, query):
+    with open(file_path, "r", encoding="utf-8") as f:
+        text = f.read()
+
+    text = text.split("[TEXT]")[1].split("[VECTOR]")[0]
+    lines = [l.strip() for l in text.splitlines() if l.strip()]
+    if len(lines) > 1:
+        lines = lines[1:]
+
+    text = " ".join(lines)
+
+    query_lower = set(query.lower().split())
+    query = set(query.split())
+
+    matched_keywords = [k for k in keyword_list if k in query_lower]
+    matched_methods = [m for m in methods_list if m in query]
+
+    if not matched_keywords and not matched_methods:
+        return ""
+
+    words = text.split()
+
+    for i, word in enumerate(words):
+        word_clean_lower = word.lower().strip(".,!?;:")
+        word_clean = word.strip(".,!?;:")
+
+        if word_clean_lower in matched_keywords or word_clean in matched_methods:
+            start = max(0, i - 32)
+            end = min(len(words), i + 32)
+
+            snippet_words = words[start:end]
+            snippet_words[i - start] = f"<span class='highlight'>{words[i]}</span>"
+            snippet = " ".join(snippet_words)
+
+            if end < len(words):
+                snippet += "..."
+
+            return snippet
+
+    return ""

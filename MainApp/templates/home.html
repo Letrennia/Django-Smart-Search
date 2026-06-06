@@ -48,10 +48,14 @@
                             <h3>{{ r.title }}</h3>
                         {% endif %}
 
-                        <p>File: {{ r.file }}</p>
+<!--                        <p>File: {{ r.file }}</p>-->
                         <p>Hybrid Score: {{ r.score|floatformat:2 }}</p>
 <!--                        <p>{{ r.difficulty }}</p>-->
-
+                        {% if r.text_excerpt %}
+                            <p class="text_excerpt">
+                                {{ r.text_excerpt|safe }}
+                            </p>
+                        {% endif %}
                     </div>
                 {% endfor %}
             {% else %}
