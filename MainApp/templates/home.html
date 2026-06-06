@@ -23,7 +23,9 @@
             placeholder="Search..."
             value="{{ query }}"
         >
-        <button type="submit">Search</button>
+        <button type="submit" class="search-btn">
+            <img src="{% static 'icon/dj_smart_search_logo.png' %}" alt="Search">
+        </button>
     </form>
 
     <div class="results">
@@ -62,6 +64,15 @@
     </div>
 
 </div>
-
+<div id="loading-overlay">
+    <div class="orbit">
+        <img src="{% static 'icon/dj_smart_search_logo.png' %}" alt="Loading">
+    </div>
+</div>
+<script>
+document.querySelector(".search-bar").addEventListener("submit", function () {
+    document.getElementById("loading-overlay").style.display = "flex";
+});
+</script>
 </body>
 </html>
