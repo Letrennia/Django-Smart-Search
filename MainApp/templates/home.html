@@ -16,16 +16,44 @@
         Django Smart Search
     </div>
 
-    <form method="GET" class="search-bar">
-        <input
-            type="text"
-            name="q"
-            placeholder="Search..."
-            value="{{ query }}"
-        >
-        <button type="submit" class="search-btn">
-            <img src="{% static 'icon/dj_smart_search_logo.png' %}" alt="Search">
-        </button>
+    <form method="GET">
+
+        <div class="search-bar">
+            <input type="text" name="q" value="{{ query }}" placeholder="Search...">
+
+            <button type="submit" class="search-btn">
+                <img src="{% static 'icon/dj_smart_search_logo.png' %}" alt="Search">
+            </button>
+        </div>
+
+        <div class="filters">
+            <label>
+                <input type="checkbox" name="cluster" value="0" {% if "0" in selected_clusters %}checked{% endif %}>
+                <span>Templates</span>
+            </label>
+            <label>
+                <input type="checkbox" name="cluster" value="1" {% if "1" in selected_clusters %}checked{% endif %}>
+                <span>Views & rendering</span>
+            </label>
+            <label>
+                <input type="checkbox" name="cluster" value="2" {% if "2" in selected_clusters %}checked{% endif %}>
+                <span>Python & django code</span>
+            </label>
+            <label>
+                <input type="checkbox" name="cluster" value="3" {% if "3" in selected_clusters %}checked{% endif %}>
+                <span>Files & data structure</span>
+            </label>
+            <label>
+                <input type="checkbox" name="cluster" value="4" {% if "4" in selected_clusters %}checked{% endif %}>
+                <span>Models & fields</span>
+            </label>
+            <label>
+                <input type="checkbox" name="cluster" value="5" {% if "5" in selected_clusters %}checked{% endif %}>
+                <span>Database</span>
+            </label>
+            <button type="submit" class="filter-btn">Apply</button>
+        </div>
+
     </form>
 
     <div class="results">
@@ -74,8 +102,10 @@
     </div>
 </div>
 <script>
-document.querySelector(".search-bar").addEventListener("submit", function () {
-    document.getElementById("loading-overlay").style.display = "flex";
+document.querySelectorAll("form").forEach(form => {
+    form.addEventListener("submit", function () {
+        document.getElementById("loading-overlay").style.display = "flex";
+    });
 });
 </script>
 </body>

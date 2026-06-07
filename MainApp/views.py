@@ -10,22 +10,34 @@ DOC_BASE_PATH = os.path.join(settings.BASE_DIR, "no_duplicate_data")
 WORDLIST_PATH = os.path.join(settings.BASE_DIR, "wordlists_dir")
 CHUNK_SIZE = 1950
 
+CLUSTER_MAP = {}
+
 with open(os.path.join(WORDLIST_PATH, "keywords.txt"), "r", encoding="utf-8") as f:
     keyword_list = [line.strip().lower() for line in f if line.strip()]
 
 with open(os.path.join(WORDLIST_PATH, "methods.txt"), "r", encoding="utf-8") as f:
     methods_list = [line.strip() for line in f if line.strip()]
 
+with open(os.path.join(settings.BASE_DIR, "Topic_filter", "file_clusters.txt"), "r", encoding="utf-8") as f:
+    for line in f:
+        file, cluster = line.strip().split(";")
+        CLUSTER_MAP[file] = cluster
+
 
 def home(request):
     query = request.GET.get('q', '')
-
+    selected_clusters = request.GET.getlist("cluster")
     results = []
 
     if query:
         final_scores = hybrid_search(query)
 
         for doc, score, chunk in final_scores[:30]:
+            cluster = CLUSTER_MAP[doc]
+
+            if selected_clusters and cluster not in selected_clusters:
+                continue
+
             file_path = os.path.join(DOC_BASE_PATH, doc)
             title, url = parse_file(file_path)
             difficulty_lvl = find_difficulty(doc)
@@ -38,7 +50,7 @@ def home(request):
                             "difficulty": difficulty_lvl,
                             "text_excerpt": text_excerpt})
 
-    return render(request, "home.html", {"query": query, "results": results})
+    return render(request, "home.html", {"query": query, "results": results, "selected_clusters": selected_clusters})
 
 def text_part(file_path, query, chunk):
     with open(file_path, "r", encoding="utf-8") as file:
@@ -67,7 +79,7 @@ def text_part(file_path, query, chunk):
         snippet_words = words[start:end]
         snippet = " ".join(snippet_words)
 
-        return snippet + "..."
+        return "..." + snippet + "..."
 
     for i, word in enumerate(words):
         word_clean_lower = word.lower().strip(".,!?;:")

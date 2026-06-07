@@ -185,3 +185,51 @@ body {
         transform: rotate(360deg);
     }
 }
+
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    flex-wrap: wrap;
+    font-size: 12px;
+}
+.filters input {
+    display: none;
+}
+
+.filters label span {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 2px solid #00B050;
+    border-radius: 20px;
+    color: #00B050;
+    font-weight: bold;
+    cursor: pointer;
+    min-width: 40px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.filters input:checked + span {
+    background: #00B050;
+    color: black;
+}
+
+.filters label span:hover {
+    background: rgba(0, 176, 80, 0.15);
+    color: #00B050;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    border-radius: 20px;
+    border: 2px solid #00B050;
+    background: transparent;
+    color: #00B050;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 0;
+}
