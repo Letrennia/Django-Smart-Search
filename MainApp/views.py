@@ -97,4 +97,5 @@ def text_part(file_path, query, chunk):
                 snippet += "..."
 
             return snippet
+
     return ""
