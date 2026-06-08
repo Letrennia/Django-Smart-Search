@@ -13,7 +13,7 @@ def hybrid_search(ask):
     if values is None or len(values) == 0:
         scores_embeddings = find_similar_embeddings(ask)
         sorted_final_scores = sorted(scores_embeddings, key=lambda x: x['score'], reverse=True)
-        return [(item['file'], item["chunk"], item['score']) for item in sorted_final_scores]
+        return [(item['file'], item['score'], item["chunk"]) for item in sorted_final_scores]
         # return [(item['file'], item['score']) for item in sorted_final_scores]
 
 
@@ -52,7 +52,8 @@ def hybrid_search(ask):
 
 # TEST
 # hybrid_results = hybrid_search('should i change debug before the deploy')
+# hybrid_results = hybrid_search('how to prevent clickjacking')
 #
-# for file, score in hybrid_results[:20]:
-#     print(f'{file} {score}')
+# for file, score, chunk in hybrid_results[:20]:
+#     print(f'{file} {score} {chunk}')
 
