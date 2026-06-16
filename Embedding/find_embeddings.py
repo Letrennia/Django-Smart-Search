@@ -5,18 +5,29 @@ import numpy as np
 from transformers import AutoModel, AutoTokenizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 input_articles = os.path.join(BASE_DIR, "clean_embeddings.jsonl")
 
+# MODEL READING
+model = None
+tokenizer = None
+model_path = "ibm-granite/granite-embedding-small-english-r2"
+
+def load_model():
+    global model, tokenizer
+    if model is None:
+        model = AutoModel.from_pretrained(model_path)
+        tokenizer = AutoTokenizer.from_pretrained(model_path)
+        model.eval()
+
 def find_similar_embeddings(query):
-    # MODEL READING
-    model_path = "ibm-granite/granite-embedding-small-english-r2"
+    # model_path = "ibm-granite/granite-embedding-small-english-r2"
+    #
+    # model = AutoModel.from_pretrained(model_path)
+    # tokenizer = AutoTokenizer.from_pretrained(model_path)
+    # model.eval()
 
-    model = AutoModel.from_pretrained(model_path)
-    tokenizer = AutoTokenizer.from_pretrained(model_path)
-    model.eval()
-
+    load_model()
     tokenized_queries = tokenizer([query], padding=True, truncation=True, return_tensors="pt")
 
     with torch.no_grad():
