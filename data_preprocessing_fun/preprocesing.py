@@ -118,7 +118,7 @@ for filename in os.listdir(input_dir):
     sentences = re.findall(r"[^.!?]+[.!?](?=\s|$)", clean.strip())
     all_sentences.extend(sentences)
 
-    output_path = os.path.join(output_dir, filename)
+    # output_path = os.path.join(output_dir, filename)
 
     # # Nagłowki
     # file_id = filename.replace("file_", "").replace(".txt", "")
@@ -157,19 +157,19 @@ print("Maximum themes: ", max(count_themes.values()))
 print("Avg keywords:", sum(count_keywords.values()) / len(count_keywords.values()))
 print("Avg themes:", sum(count_themes.values()) / len(count_themes.values()))
 
-with open("../wordlists_dir/keywords.txt", "w", encoding="utf-8") as file:
-    file.write("\n".join(all_keywords))
-
-with open("../wordlists_dir/themes.txt", "w", encoding="utf-8") as file:
-    file.write("\n".join(all_themes))
-
-with open("../wordlists_dir/methods.txt", "w", encoding="utf-8") as file:
-    file.write("\n".join(all_methods))
+# with open("../wordlists_dir/keywords.txt", "w", encoding="utf-8") as file:
+#     file.write("\n".join(all_keywords))
+#
+# with open("../wordlists_dir/themes.txt", "w", encoding="utf-8") as file:
+#     file.write("\n".join(all_themes))
+#
+# with open("../wordlists_dir/methods.txt", "w", encoding="utf-8") as file:
+#     file.write("\n".join(all_methods))
 
 sorted_article_lenght = dict(sorted(article_lenght.items()))
 
-with open("../BM25/document_count_words.json", "w", encoding="utf-8") as file:
-    json.dump(sorted_article_lenght, file, ensure_ascii=False, indent=4)
+# with open("../BM25/document_count_words.json", "w", encoding="utf-8") as file:
+#     json.dump(sorted_article_lenght, file, ensure_ascii=False, indent=4)
 
 count_words = 0
 mini = 60000
