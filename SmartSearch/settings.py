@@ -31,7 +31,7 @@ SECRET_KEY = SECRET_KEY_ENV
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "django-smart-serach.onrender.com",
+    "django-smart-search.onrender.com",
     "localhost",
     "127.0.0.1",
 ]

@@ -12,7 +12,6 @@ plotly
 python-dotenv
 scikit-learn
 
-spacy
 torch
 sentence-transformers
 transformers
